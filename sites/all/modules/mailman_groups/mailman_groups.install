@@ -1,0 +1,59 @@
+<?php
+
+function mailman_groups_schema() {
+  $uint = array('type' => 'int', 'unsigned' => TRUE);
+  $schema['mailman_groups'] = array(
+    'description' => t('Defines relationships between Groups and Mailing Lists.'),
+    // List id, Group id, hide, sync (auto-subscribe on join).
+    // hide == 0 -- Not hidden ("public")
+    // hide == 1 -- Hidden unless user is Group Member
+    // hide == 2 -- Hidden unless user has domain-based access to linked Group.
+    'fields' => array('lid' => $uint, 'gid' => $uint, 'hide' => $uint, 'sync' => $uint),
+    'primary key' => array('lid', 'gid'),
+  );
+
+  return $schema;
+}
+
+/**
+ * Implementation of hook_uninstall().
+ */
+function mailman_groups_uninstall() {
+  $tname = 'mailman_groups';
+  if (db_table_exists($tname)) {
+    drupal_uninstall_schema($tname);
+    if (!db_error()) {
+      $msg = sprintf('Mailman Groups ' . t('uninstall: table %s has been removed.'), $tname);
+      drupal_set_message($msg);
+    }
+  }
+}
+
+/**
+ * Implementation of hook_install().
+ */
+function mailman_groups_install() {
+  $tname = 'mailman_groups';
+  if (!db_table_exists($tname)) {
+    // Create table if it doesn't exist.
+    drupal_install_schema($tname);
+    if (!db_error()) {
+      $msg = sprintf('Mailman Groups ' . t('install: table %s has been created.'), $tname);
+      drupal_set_message($msg);
+    }
+  }
+  else {
+    // Warn if table already exists (it could be some old data, or worse, some table from another module etc.)
+    $msg = sprintf('Mailman Groups ' . t('install: table %s already exists.'), $tname);
+    drupal_set_message($msg, 'warning');
+  }
+}
+
+/**
+ * Implementation of hook_update()
+ */
+/*
+function mailman_groups_update_1() {
+}
+*/
+

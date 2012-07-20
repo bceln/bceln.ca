@@ -1,0 +1,472 @@
+<?php
+
+/**
+ * @file
+ * Mailman Groups module for Drupal 6.x
+ */
+
+// Check if a required function exists, display an error message if not.
+function _mailman_groups_checkfunc($func_name) {
+  if (is_callable($func_name)) {
+    return TRUE;
+  }
+
+  $mod_name = 'Mailman Groups';
+  $msg = sprintf(t('[%s] Required function %s() does not exist.'), $mod_name, $func_name);
+  drupal_set_message($msg, 'error');
+  return FALSE;
+}
+
+/**
+ * Process the groups/lists relationship data for all lists and return an array
+ * of lid => TRUE for all accessible lists.
+ */
+function _mailman_groups_getlists() {
+  $access = array();
+
+  // Values used to check against the "hide" field.
+  $hide_by_member = is_callable('og_is_group_member') ? 1 : 0;
+  $hide_by_domain = is_callable('og_abt_domain_group_in_domain') ? 2 : 0;
+
+  // Process group->list relationships...
+  $result = db_query('SELECT * FROM {mailman_groups}');
+  while ($link = db_fetch_array($result)) {
+    // Extract ($gid, $lid, $hide)
+    extract($link);
+
+    if ($access[$lid]) {
+      continue;
+    }
+    elseif (!$hide) {
+      $access[$lid] = TRUE;
+    }
+    elseif ($hide == $hide_by_member && og_is_group_member($gid)) {
+      $access[$lid] = TRUE;
+    }
+    elseif ($hide == $hide_by_domain && og_abt_domain_group_in_domain($gid)) {
+      $access[$lid] = TRUE;
+    }
+  }
+  return $access;
+}
+
+/**
+ * Get array of Mailing Lists (lid) for specified gid where 'sync' is set.
+ */
+function _mailman_groups_getsynclists($gid) {
+  $lists = array();
+
+  //$tname = 'mailman_groups';
+  //$result = db_query("SELECT lid FROM {$tname} WHERE gid = $gid AND sync");
+  
+  $result = db_query("SELECT lid FROM {mailman_groups} WHERE gid = $gid AND sync");
+
+  while ($link = db_fetch_array($result)) {
+    $lists[] = $link['lid'];
+  }
+  return $lists;
+}
+
+/**
+ * Get an array of all Groups (id and name).
+ *
+ * This was not easy, based on scrutinizing OG module code. It may not be the
+ * best approach! Maybe better to call a higher-level function in OG module if
+ * there is one (I can't find it!)
+ *
+ * @todo Options to get only groups (1) for which user is a member (2) for which user is owner.
+ */
+function _mailman_groups_get_groups() {
+  $groups = array();
+  if (!_mailman_groups_checkfunc('og_is_group_type')) {
+    return $groups;
+  }
+
+  // Get a list of node types then test each one to see if it can be a Group.
+  $node_types = node_get_types('names');
+
+  // Loop through all node types, checking if it may define Groups...
+  foreach ($node_types as $type => $name) {
+    $is_group = og_is_group_type($type);
+
+    // If this node type is for Groups, fetch all nodes of this type, i.e. fetch Groups.
+    if ($is_group) {
+      $result = db_query("SELECT nid, title FROM {node} WHERE type = '$type'");
+      while ($node = db_fetch_array($result)) {
+        $groups[$node['nid']] = $node['title'];
+      }
+    }
+  }
+  return $groups;
+}
+
+/**
+ * Integration with the og_abt_domain module...
+ *
+ * Return an array of "domains" (taxonomy terms) for Group specified by $nid
+ */
+function _mailman_groups_domains($nid) {
+  $domains = array();
+
+  if (!is_callable('og_abt_domain_group_in_domain')) {
+    return $domains;
+  }
+  if (!_mailman_groups_checkfunc('og_abt_domain_node_load')) {
+    return $domains;
+  }
+
+  // Logic from og_abt_domain.module -- og_abt_domain_group_in_domain() function (line #65)
+  $vid     = variable_get('og_abt_domain_vid', 0);
+  $node    = og_abt_domain_node_load($nid);
+  $domains = taxonomy_node_get_terms_by_vocabulary($node, $vid);
+  return $domains;
+}
+
+function _mailman_groups_update($lid, $gid, $hide = 1, $sync = 0) {
+  // Try to update the mailman_groups table.
+  $query = 'UPDATE {mailman_groups} SET hide = %d, sync = %d WHERE lid = %d AND gid = %d';
+  db_query($query, $hide, $sync, $lid, $gid);
+  $rows = db_affected_rows();
+
+  // If no rows were updated, we need to add a new row.
+  if ($rows == 0) {
+    $query = 'INSERT INTO {mailman_groups} (lid, gid, hide, sync) VALUES (%d, %d, %d, %d)';
+    db_query($query, $lid, $gid, $hide, $sync);
+  }
+}
+
+/**
+ * Delete an entry from the mailman_groups table.
+ */
+function _mailman_groups_unlink($lid, $gid) {
+  // Tranform these strings into integers to go into the database
+  $lid = intval($lid);
+  $gid = intval($gid);
+  $query = 'DELETE FROM {mailman_groups} WHERE lid = %d AND gid = %d';
+  db_query($query, $lid, $gid);
+}
+
+/**
+ * Handle submits from the admin form when a new Linked Group is added.
+ */
+function _mailman_groups_submit_add($form, &$form_state) {
+  $lid  = $form_state['values']['lid'];
+  $vars = &$form_state['values']['mailman_groups'];
+  $gid  = $vars['gid'];
+  _mailman_groups_update($lid, $gid);
+}
+
+/**
+ * When a Linked Group is updated.  $n is an array index to the correct element.
+ */
+function _mailman_groups_submit_save($form, &$form_state, $n) {
+  $lid   = $form_state['values']['lid'];
+  $vars  = &$form_state['values']['mailman_groups'][$n];
+  extract($vars);
+  if ($unlink) {
+    dpm('got here');
+    _mailman_groups_unlink($lid, $gid);
+    return;
+  }
+  _mailman_groups_update($lid, $gid, $hide, $sync);
+}
+
+/**
+ * Alter the Mailman Manager admin form - add a fieldset for 'Linked Groups'
+ * containing our form elements.
+ *
+ * @todo Consider using our own form rather than modifying Mailman Manager's form.
+ */
+function _mailman_groups_alter_mailman_manager_admin_form(&$form, $form_state) {
+  // Create a fieldset for Linked Groups.
+  $fset = &$form['mailman_groups'];
+  $fset = array(
+    '#type' => 'fieldset',
+    '#title' => t('Linked Groups'),
+    '#collapsible' => TRUE,
+    '#weight' => 0,
+    '#tree' => TRUE,
+  );
+
+  if (!$form['lid']) {
+    // Adding a new List, can't do anything else right now.
+    $desc = t('Linked Groups can be defined after this Mailing List has been added.');
+    $fset['text'] = array('#value' => $desc);
+    return;
+  }
+
+  // We have $form['lid'] so we are editing an existing List.
+  $lid = $form['lid']['#value'];
+
+  // Get array of all available groups (use it later to build a select-list.)
+  $groups = _mailman_groups_get_groups();
+
+  // Get (any) existing linked groups...
+  $result = db_query("SELECT * FROM {mailman_groups} WHERE lid = $lid");
+
+  $hide_opt[1] = t('Hidden if the User is not a member of the Group');
+  if (is_callable('og_abt_domain_group_in_domain')) {
+    $hide_opt[2] = t('Hidden if the User does not have access to the Group due to domain-based restrictions');
+  }
+  $hide_opt[0] = t('Not hidden');
+
+  for ($n = 0; $n < db_affected_rows(); $n++) {
+    // Get $lid, $gid, $hide, $sync
+    extract(db_fetch_array($result));
+
+    // Get the name of the Group.
+    $group = t($groups[$gid]);
+    if (!$groups[$gid]) {
+      // Looks like we found a link to a deleted Group, etc.
+      $message = sprintf("Linked Group %d (gid: %d) was not found.", $n, $gid);
+      drupal_set_message($message, 'warning');
+      $group = 'Group'. $gid;
+    }
+
+    // Set up a fieldset for each linked Group...
+    // Note: We must use #tree to keep the array structure in place for the #submit function.
+    $gset = &$fset[$n];
+    $gset = array(
+      '#type' => 'fieldset',
+      '#title' => $group,
+      '#collapsible' => TRUE,
+      '#collapsed' => TRUE,
+      '#tree' => TRUE,
+    );
+
+    // Store the $gid for later reference.
+    $gset['gid'] = array('#type' => 'value', '#value' => $gid);
+
+    // Set checkbox for 'auto-subscribe'.
+    $title        = t('Auto-subscribe');
+    $desc         = t('If set, new members joining the Group will be automatically subscribed to this Mailing List.');
+    $gset['sync'] = array(
+      '#type' => 'checkbox',
+      '#title' => $title,
+      '#description' => $desc,
+      '#default_value' => $sync,
+    );
+
+    // Set radios for 'hide' options.
+    $title = t('Mailing List visibility');
+    $gset['hide'] = array('#title' => $title, '#type' => 'radios', '#default_value' => $hide, '#options' => $hide_opt);
+
+    $title = t('Unlink this Group');
+    $gset['unlink'] = array('#title' => $title, '#type' => 'checkbox');
+
+    // Create a function to handle form submit.
+    $func    = '_mailman_groups_submit_save';
+    $args    = '$form, $form_state';
+    $subfunc = create_function($args, sprintf('return %s(%s, %d);', $func, $args, $n));
+
+    // NOTE: Due to an apparent Drupal FormAPI limitation (bug?), submit buttons
+    // need a unique #value otherwise the #submit value is "shared" among all
+    // buttons which have the same #value.
+    $title = $n ? sprintf('%s [%d]', t('Save'), $n) : t('Save');
+    $gset['save'. $n] = array('#type' => 'submit', '#value' => $title, '#submit' => array($subfunc));
+
+    // Remove this Group from the list of Groups that can be added as links.
+    unset($groups[$gid]);
+  }
+
+  // If there are groups which are not currently linked we can add them, so show
+  // the select list...
+  if (count($groups)) {
+    asort($groups);
+
+    $desc = t('Select a Group to link to this Mailing List.');
+    $fset['gid'] = array('#description' => $desc, '#type' => 'select', '#options' => $groups);
+
+    $title = t('Add Linked Group');
+    $fset['add_group'] = array('#type' => 'submit', '#value' => $title, '#submit' => array('_mailman_groups_submit_add'));
+  }
+  else {
+    $msg = sprintf('(%s.)', t('There are no more Groups available to link to'));
+    $fset['msg'] = array('#value' => $msg);
+  }
+}
+
+/**
+ * Trap the event of a user joining or leaving a Group, and subscribe/unsubscribe to all linked
+ * Mailing Lists which have "sync" set.
+ *
+ */
+ 
+function mailman_groups_og($op, $gid, $uid, $args) {
+  $account = user_load($uid);
+  switch ($op) {
+    case 'user insert': 
+    // Fall through to next case
+    case 'user update':
+      $lists = _mailman_groups_getsynclists($gid);
+      foreach ($lists as $n => $lid) {
+        // Need to get the corresponding list object and convert to array.
+        if (!_mailman_groups_checkfunc('mailman_manager_get_list')) {
+          return;
+        }
+        $list = get_object_vars(mailman_manager_get_list($lid));
+        $msg = t('Subscribing %mail to Group Mailing List %listname.', array(
+          '%mail' => $account->mail,
+          '%listname' => $list['name'],
+          ));
+        drupal_set_message($msg);
+  
+        // Do the subscribe via User Mailman Register if available, otherwise use Mailman Manager function.
+        if (is_callable('_user_mailman_register_subscribe_update')) {
+          _user_mailman_register_subscribe_update($account, $list, 3, 0, $account->mail, NULL);
+        }
+        else {
+          if (!_mailman_groups_checkfunc('_mailman_manager_subscribe')) {
+            return;
+          }
+          // First create the subscription..this is necessary as there is nothing doing this already.
+          // This function creates a subscription if one doesn't already exist and sets its status to 0.
+          _mailman_manager_get_subscriptions($account->uid, $lid);
+          // Then update the new or existing subscription to '3' - One email, not digest.
+          _mailman_manager_update_subscriptions($account->uid, $lid, '3', '0', $account->mail, '');
+        }
+      }
+    break;
+    case 'user delete':
+      $lists = _mailman_groups_getsynclists($gid);
+      foreach ($lists as $n => $lid) {
+        // Need to get the corresponding list object and convert to array.
+        if (!_mailman_groups_checkfunc('mailman_manager_get_list')) {
+          return;
+        }
+        $list = get_object_vars(mailman_manager_get_list($lid)); 
+        // mailman_manager doesn't have an API function for unsubscribing. 
+        // So, we need to pull some data directly from the db
+        $query = 'SELECT * FROM {mailman_users} WHERE uid = %d AND lid = %d';
+        $result = db_query($query, $account->uid, $lid);
+        $subscrip = db_fetch_object($result);
+        if (isset($subscrip->lpass)) {
+          _mailman_manager_update_subscriptions($uid, $lid, 0, 0, $account->mail, $subscrip->lpass);
+          $msg = t('Removing %mail from Group Mailing List %listname.', array(
+          '%mail' => $subscrip->lmail,
+          '%listname' => $list['name'],
+          ));
+        drupal_set_message($msg);
+        }        
+      }
+
+      
+    default:
+    // Do Nothing      
+  }  
+}
+
+/**
+ * Check if current user is a member of the Group linked to list $lid.
+ *
+ * Because this may get called repeatedly for many lists, we cache the result
+ * on the first call.
+ */
+function _mailman_groups_access($lid) {
+  static $list_access;
+  if (!isset($list_access)) {
+    $list_access = _mailman_groups_getlists();
+  }
+  return isset($list_access[$lid]);
+}
+
+/**
+ * This gets called from _mailman_groups_alter_user_profile_form() via
+ * array_walk() for each element of the form. Here we remove the fieldsets
+ * for any lists which should be hidden from this user. If we return without
+ * modifying the form element, nothing changes.
+ *
+ * @see _mailman_groups_alter_user_profile_form()
+ */
+function _mailman_groups_hide_list_fieldset(&$element, $key) {
+  // Pre-checks to make sure we're sane...
+  // element should be of #type fieldset - mailman_manager.module line #127.
+  if ($element['#type'] != 'fieldset') {
+    return;
+  }
+  // key is expected to be in the format 'list'. trim($list['lid'] - mailman_manager.module line #126.
+  if (substr($key, 0, 4) != 'list') {
+    return;
+  }
+
+  // Extract the lid value from $key.
+  $lid = substr($key, 4);
+  $listname = $element['#title'];
+
+  // Special case - if user is already subscribed, always keep the List visible (otherwise user can't unsubscribe easily!)
+  global $user;
+  if (!_mailman_groups_checkfunc('_mailman_manager_get_subscriptions')) {
+    return;
+  }
+  $sub = _mailman_manager_get_subscriptions($user->uid, $lid);
+  if ($sub['lstatus'] != 0) {
+    return;
+  }
+
+  // Check if access is allowed via linked groups (membership and domain rules.)
+  if (_mailman_groups_access($lid)) {
+    return;
+  }
+
+  // If we get this far, none of the conditions which could allow access to this
+  // List have been met, so remove it from the form.
+  $element = NULL;
+}
+
+/**
+ * Alter the user profile form. We need to deal with both the Mailing Lists" tab
+ * created by Mailman Manager and the "Mailing Lists register" tab created by
+ * User Mailman Register.
+ *
+ * @todo This functionality would be better provided by direct communication
+ * with those modules, but that will require them to be updated accordingly.
+ */
+function _mailman_groups_alter_user_profile_form(&$form, $form_state) {
+  // This id is used by Mailman Manager (line #119).
+  $mmid = 'mman';
+  // This id is used by User Mailman Register.
+  $umr = 'user_mailman_register';
+  // See if we're dealing with one of the tabs we need to process, otherwise exit.
+  if (isset($form[$mmid])) {
+    $element = &$form[$mmid];
+    // Remove the message shown by Mailman Manager (lines #175-182), e.g. 'Your
+    // current email address is not subscribed to 6 list(s).'
+    $form['lists']['subinfo']['#value'] = NULL;
+  }
+  elseif (isset($form[$umr])) {
+    $element = &$form[$umr]['lists'];
+  }
+  else {
+    return;
+  }
+
+  // Walk the array, disabling the fieldsets for lists which should not be visible.
+  array_walk($element, '_mailman_groups_hide_list_fieldset');
+}
+
+/**
+ * The User Registration form will show any Lists set for "anonymous" access, so
+ * we need to process that form too.
+ */
+function _mailman_groups_alter_user_register(&$form, $form_state) {
+  return _mailman_groups_alter_user_profile_form($form, $form_state);
+}
+
+/**
+ * Implement hook_form_alter to process several forms.
+ */
+function mailman_groups_form_alter(&$form, $form_state, $form_id) {
+  // Define an array of form_ids for forms we want to modify.
+  $forms = array('user_profile_form', 'user_register', 'mailman_manager_admin_form', 'og_confirm_subscribe');
+  // If this is not one of the forms we want to process, quick exit.
+  if (!in_array($form_id, $forms)) {
+    return;
+  }
+
+  // Call the matching form alter function.
+  $alter = '_mailman_groups_alter_'. $form_id;
+  if (_mailman_groups_checkfunc($alter)) {
+    $alter($form, $form_state);
+  }
+}
+

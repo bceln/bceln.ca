@@ -1,0 +1,127 @@
+body {
+  background: #fff;
+	color:#2a2724;
+	font:.938em/1.385 "minion-pro-1","minion-pro-2", Georgia, 'Times New Roman', serif; /* 15px */
+	overflow-x: hidden;
+}
+
+body.admin-menu {
+    background-position: 0 20px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: Helvetica, Arial, sans-serif;
+  margin: 0.3em 0 0.69em;
+}
+
+h1 {
+  font-size: 2.267; /* 34px relative to 15px */
+}
+
+h2 {
+	color: #F68115;
+	font-size: 1.133em; /* 17px relative to 15px */
+}
+
+h3 {
+	color: #18729d;
+	font-size: 1em; /* 15px */
+}
+
+h4 {
+	color: #2a2724;
+	font-size: 0.800em; /* 12px relative to 15px */
+	text-transform: uppercase;
+}
+
+h5 {
+	color: #2a2724;
+	font-size: 0.800em; /* 12px relative to 15px */
+}
+
+h6 {
+	color: #2a2724;
+	font-size: 0.800em; /* 12px relative to 15px */
+}
+
+
+p {
+	margin-bottom:0.69em;	/*9px*/
+}
+
+a, li a {
+  color: #18729d;
+}
+
+a:active, a:hover,
+li a.active {
+  color: #f68115;
+}
+
+
+.with-block-editing a:hover {
+	background: none;
+}
+
+fieldset {
+	-moz-border-radius:10px;
+  background:#f8f8f8;
+  padding:10px;
+}
+
+/* Tables */
+table {
+  border: 1px solid #BEBFB9;
+  margin: 1.75em 0;
+}
+
+table tr {
+  background: url('/profiles/re_profile/themes/descartes/images/dashed-border.png') repeat-x 0 bottom;
+}
+
+table tr.odd { background: none; border: 0; }
+
+table thead tr,
+table tr.even { background: none; border: 0; }
+
+
+
+table th {
+  background: #E1E2DC;
+  font-weight: normal;
+  padding: 3px 10px;
+  text-transform: uppercase;
+}
+
+table td, table th {
+  padding: 8px 10px;
+  vertical-align: middle;
+}
+
+.node ul, ol {
+	padding: 5px 0;
+  margin-bottom: 13px;
+  font-family: "minion-pro-1","minion-pro-2", Georgia, 'Times New Roman', serif;
+  /* font-size: 1.154em;  17px relative to 15 */
+}
+
+.content li,
+.views-field li {
+	margin: 0 0 0 30px;
+}
+
+blockquote {
+  background: #fffaed;
+  border: 1px solid #fddb74;
+	margin: 10px 30px;
+	padding: 15px;
+}
+
+dt {
+	font-weight: bold;
+}
+
+dd {
+	margin:0 0 1.5em 1.75em;
+}
+

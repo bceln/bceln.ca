@@ -1,0 +1,14 @@
+name = Select Other Widget
+description = Adds a new select widget for CCK text (and related field types) that allows users to input either with a select list or a text input box.
+package = CCK
+dependencies[] = content
+dependencies[] = optionwidgets
+core = 6.x
+
+
+; Information added by drupal.org packaging script on 2011-02-25
+version = "6.x-1.x-dev"
+core = "6.x"
+project = "cck_select_other"
+datestamp = "1298618948"
+

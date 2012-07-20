@@ -1,0 +1,24 @@
+Wed 23 Sep 2009 07:03:04 PM CEST 
+
+* Fixed http://drupal.org/node/366154
+
+Wed 23 Sep 2009 06:32:10 PM CEST 
+
+* Implemented sun's "cleanup patch" http://drupal.org/node/349294 - thanks for the help!
+
+Tue 02 Sep 2008 10:04:14 PM CEST 
+
+* Minor: remove code and comment about linking a list to gid==0 as this is no longer possible.
+* Default to "hidden for non-member" when adding new linked Group.
+
+Tue 02 Sep 2008 09:40:42 PM CEST 
+
+* Extensive changes for "domain-based" lists/groups and multiple groups per list.
+* Completely re-designed UI for configuring list-group relationships and settings.
+* Now integrates with og_abt_domains module, but should gracefully downgrade if that module is not installed.
+
+Sat 09 Aug 2008 10:46:36 PM CEST 
+
+* Module name changed to "Mailman Groups".
+* Added "hide" feature ("hide" was effectively the default setting in the prior version.)
+

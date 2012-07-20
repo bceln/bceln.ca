@@ -1,0 +1,11 @@
+; $Id: typekit.info,v 1.2 2009/10/01 22:36:32 zzolo Exp $
+name = "Typekit"
+description = "Makes it easy to include Typekit in your site."
+core = 6.x
+
+; Information added by drupal.org packaging script on 2010-12-24
+version = "6.x-1.1"
+core = "6.x"
+project = "typekit"
+datestamp = "1293207087"
+

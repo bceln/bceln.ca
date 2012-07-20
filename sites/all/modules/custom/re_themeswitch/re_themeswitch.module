@@ -1,0 +1,22 @@
+<?php
+/**
+ * Implementation of hook_init()
+ *
+ * This function checks to see if the currently loaded page
+ * is the node edit screen for the Contact node type.
+ * If true then it switches the theme to descartes
+ *
+ * Created by Colin Calnan - July 25, 2011
+ *
+ */
+function re_themeswitch_init() {
+  // get global variable to override Drupal theme
+  global $custom_theme;
+  // check if the current page needs to have its to theme changed
+  $path = explode('/', $_GET['q']);
+  if($path[0] == 'node' && $path[2] == 'edit' && node_load($path[1])->type == 'contact') {
+    // set the custom theme and initialize theme system
+    $custom_theme = 'descartes';
+    init_theme();
+  }
+}

@@ -1,0 +1,29 @@
+<?php
+// $Id: typekit.install,v 1.1 2009/10/01 22:16:50 zzolo Exp $
+
+/**
+ * @file
+ * This file holds the functions for the installing
+ * and enabling of the typekit module.
+ *
+ * @ingroup typekit
+ */
+
+/**
+ * Implementation of hook_install().
+ */
+function typekit_install() {
+  // Do install stuff
+}
+
+/**
+ * Implementation of hook_uninstall().
+ */
+function typekit_uninstall() {
+  // Get module variables
+  $results = db_query("SELECT v.name FROM {variable} AS v WHERE v.name LIKE '%s%%'", 'typekit_');
+  // Remove variables
+  while ($row = db_fetch_array($results)) {
+    variable_del($row['name']);
+  }
+}

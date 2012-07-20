@@ -1,0 +1,30 @@
+; Raised Eyebrow Tabula Rasa Theme
+;
+; Based on Drupal 6 default phptemplate files. See http://drupal.org/node/190815 for details. Original files located at:
+;
+;	http://drupal.org/node/171205
+;	http://api.drupal.org/api/file/themes/pushbutton/block.tpl.php/6/source
+;	http://api.drupal.org/api/file/modules/node/node.tpl.php/6/source
+;
+; Metadata:
+name = Tabula Rasa
+description = Sub theme to Descartes
+version = 0.1
+base theme = descartes
+core = 6.x
+
+; Stylesheets:
+stylesheets[all][] = tabularasa.css
+
+; Regions (layout):
+regions[notice] = Notice
+regions[header] = Header
+regions[left] = Left sidebar
+regions[pre_content] = Pre-content
+regions[post_content] = Post-content
+regions[in_content_left] = In content left
+regions[in_content_right] = In content right
+regions[right] = Right sidebar
+regions[footer] = Footer
+regions[ghost] = Ghost region/admin only
+regions[development] = Development only

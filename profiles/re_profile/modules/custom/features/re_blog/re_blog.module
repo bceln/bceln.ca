@@ -1,0 +1,3 @@
+<?php
+
+include_once('re_blog.features.inc');

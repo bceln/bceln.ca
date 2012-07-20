@@ -1,0 +1,35 @@
+<?php
+/**
+ * This function is called via the video_filter.module file
+ * $codecs = module_invoke_all('codec_info');
+ *
+ * This defines the filter codec name and what 
+ */
+function re_filter_codec_info() {
+  $codecs = array();
+  // You can offer multiple video formats in one module.
+  $codecs['local'] = array(
+    // Will be used some day in user information.
+    'name' => t('Local'),
+    'sample_url' => '130',
+    // Special instructions for end users. Optional.
+    'instructions' => t('Place the id of the content you want to embed after the [video: part.'),
+    // The callback that will output the right embed code.
+    'callback' => 're_filter_local',
+
+    // Regexp can be an array. $video['codec']['delta'] will be set to the key.
+    //'regexp' => '/sites\/default\/files\/uploads\/multimedia\/[a-z0-9-]+\.flv/i',
+    'regexp' => '/^\d+$/',  // Match one or more digits
+  );
+  
+  return $codecs;
+}
+
+/**
+ * Callback function for the codec
+ *
+ */
+function re_filter_local($video) {
+  // In our case the $video['source'] element is actually a Node ID.
+  return video_filter_flash($video, $params = array('width' => $video['width']));
+}
