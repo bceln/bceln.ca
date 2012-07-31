@@ -87,7 +87,7 @@ function re_utilities_form_alter(&$form, &$form_state, $form_id) {
     case 'contact_node_form':
         $form['account_link'] = array(
           '#type'   => 'item',
-          '#value'  => l('Change username / password / email address', 'user/' . $user->uid . '/edit', $options = array('query' => drupal_get_destination())),
+          '#value'  => l('Change username / password / email address', 'user/' . $form['uid']['#value'] . '/edit', $options = array('query' => drupal_get_destination())),
           '#weight' => -50,
         );
       break;
