@@ -4,14 +4,8 @@
 
 // valid referring URLs list - new metod - MP 12/17/2010
 $refurls = array(
- 'http://www.massagetherapy.bc.ca/members',
- 'http://massagetherapy.bc.ca/members',
- 'http://www.massagetherapy.bc.ca/members/research/library',
- 'http://massagetherapy.bc.ca/members/research/library',
- 'http://www.massagetherapy.bc.ca/members/research/resources',
- 'http://massagetherapy.bc.ca/members/research/resources',
- 'http://massagetherapy.bc.ca/research/database-library',
- 'http://www.massagetherapy.bc.ca/research/database-library',
+ 'http://massagetherapy.bc.ca/research/library',
+ 'http://www.massagetherapy.bc.ca/research/library',
 );
 
 // standard components of all Ovid jumpstart URLs for e-HLbc
