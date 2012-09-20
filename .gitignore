@@ -41,5 +41,5 @@ drush*
 *.sql
 mailmantest/
 test/
-
+error_log
 
