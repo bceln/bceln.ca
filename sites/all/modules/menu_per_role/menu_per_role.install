@@ -1,4 +1,9 @@
 <?php
+/**
+ * @file
+ * Initialize and clean up the Menu per role module.
+ */
+
 /*
  * Implementation of hook_install();
  */
@@ -60,11 +65,11 @@ function menu_per_role_update_6000() {
 
   // read the old data in memory (assuming it is not extra large, we should be fine)
   $result = db_query('SELECT mid, rid FROM {menu_per_role} WHERE mid IS NOT NULL');
-  while($row = db_fetch_array($result)) {
+  while ($row = db_fetch_array($result)) {
     $mid[$row['mid']][] = $row['rid'];
   }
 
-  db_query('DELETE FROM {menu_per_role}');
+  $ret[] = update_sql('DELETE FROM {menu_per_role}');
 
   // create new fields right there
   db_add_field($ret, 'menu_per_role', 'mlid', array(
@@ -141,7 +146,7 @@ function menu_per_role_update_6003() {
 
   // We do not need to have empty entries, this will accelerate total
   // processing time on every page load
-  db_query("DELETE FROM {menu_per_role} WHERE rids = '' AND hrids = ''");
+  $ret[] = update_sql("DELETE FROM {menu_per_role} WHERE rids = '' AND hrids = ''");
 
   return $ret;
 }

@@ -134,8 +134,7 @@ function menu_per_role_nodeapi(&$node, $op, $teaser, $page) {
  * ready for display but was not yet displayed. At that time we
  * can mark the access as FALSE.
  */
-function menu_per_role_menu_link_alter(&$item, $menu)
-{
+function menu_per_role_menu_link_alter(&$item, $menu) {
   // TODO: The following marks ALL menu items as alterable.
   //       Any time a menu item is saved, it is marked as
   //       such. I have no clue, at this time, of a way to
@@ -152,8 +151,7 @@ function menu_per_role_menu_link_alter(&$item, $menu)
  * This function is used to alter the access right based on
  * the role definition of the item.
  */
-function menu_per_role_translated_menu_link_alter(&$item, $map)
-{
+function menu_per_role_translated_menu_link_alter(&$item, $map) {
   // avoid checking the role if the item access is already false
   if ($item['access'] && _menu_per_role_access($item) === FALSE) {
     $item['access'] = FALSE;

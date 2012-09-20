@@ -5,9 +5,9 @@ package = Menu
 core = 6.x
 
 
-; Information added by drupal.org packaging script on 2011-06-27
-version = "6.x-1.10"
+; Information added by drupal.org packaging script on 2011-11-13
+version = "6.x-1.11"
 core = "6.x"
 project = "menu_per_role"
-datestamp = "1309207618"
+datestamp = "1321226140"
 

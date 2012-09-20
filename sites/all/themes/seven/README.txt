@@ -1,8 +1,7 @@
-; $Id: README.txt,v 1.2 2009/11/06 16:00:43 mcrittenden Exp $
 
-This theme is just a backport of the Drupal 7 admin theme (designed by Mark and Leisa).
+This theme is a direct backport of the Drupal 7 core admin theme "Seven".
 
-The only changes are small API changes between Drupal 6 and 7 for compatibility.
+Only small changes have been made for core API and markup compatibility.
 
-Please post any issues to the issue queue at http://drupal.org/project/issues/seven
+Please report any issues at http://drupal.org/project/issues/seven.
 

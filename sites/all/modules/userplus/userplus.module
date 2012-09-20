@@ -1,5 +1,5 @@
 <?php
-// $Id: userplus.module,v 1.8.2.14 2009/11/17 22:16:34 marcp Exp $
+// $Id: userplus.module,v 1.8.2.19 2011/01/26 00:45:34 marcp Exp $
 
 /**
  * @file
@@ -13,7 +13,7 @@
 function userplus_help($path, $arg) {
   switch ($path) {
     case 'admin/user/userplus':
-      return t('<p>This web page allows you to register new users and assign their roles.  Note that you may not have a user where either the e-mail address or the username match another user in the system. Leave any surplus rows blank if you are only adding a few users.</p><p>It may take several runs through this page if you need to add a lot of users, however you may change the number of rows that appear on this page on the !settings page.</p>', array('!settings' => l(t('userplus settings'), 'admin/settings/userplus')));
+      return t('<p>This web page allows you to register new users and assign their roles.  Note that you may not add a user where either the e-mail address or the username match another user already in the system. Leave any surplus rows blank if you are only adding a few users.</p><p>It may take several runs through this page if you need to add a lot of users, however you may change the number of rows and the role names that appear on this page on the !settings page.</p>', array('!settings' => l(t('userplus settings'), 'admin/settings/userplus')));
     case 'admin/user/userplus/userperms':
       return t('<p>This web page allows you to set role membership for all users at once.  You may change the number of rows that appear on this page on the !settings page.</p>', array('!settings' => l(t('userplus settings'), 'admin/settings/userplus')));
     case 'admin/user/userplus/config':
@@ -30,7 +30,7 @@ function userplus_help($path, $arg) {
  *   The permission to check for if the user does not have
  *   'administer users' rights.
  */
-function userplus_access($perm) {
+function userplus_access_callback($perm) {
   return user_access('administer users') || user_access($perm);
 }
 
@@ -45,7 +45,7 @@ function userplus_menu() {
     'description' => 'Settings for the userplus module.',
     'page callback' => 'drupal_get_form',
     'page arguments' => array('userplus_admin_settings'),
-    'access callback' => 'userplus_access',
+    'access callback' => 'userplus_access_callback',
     'access arguments' => array('administer userplus settings'),
     'type' => MENU_NORMAL_ITEM
   );
@@ -55,13 +55,13 @@ function userplus_menu() {
     'description' => 'Add multiple users; assign roles to multiple users.',
     'page callback' => 'drupal_get_form',
     'page arguments' => array('userplus_add_users'),
-    'access callback' => 'userplus_access',
+    'access callback' => 'userplus_access_callback',
     'access arguments' => array('add users via userplus')
   );
 
   $items['admin/user/userplus/addmultiple'] = array(
     'title' => 'add multiple users',
-    'access callback' => 'userplus_access',
+    'access callback' => 'userplus_access_callback',
     'access arguments' => array('add users via userplus'),
     'type' => MENU_DEFAULT_LOCAL_TASK,
     'weight' => -2
@@ -71,7 +71,7 @@ function userplus_menu() {
     'title' => 'assign user roles',
     'page callback' => 'drupal_get_form',
     'page arguments' => array('userplus_admin_userperms'),
-    'access callback' => 'userplus_access',
+    'access callback' => 'userplus_access_callback',
     'access arguments' => array('assign roles via userplus'),
     'type' => MENU_LOCAL_TASK,
     'weight' => 0
@@ -82,7 +82,7 @@ function userplus_menu() {
       'title' => 'assign user groups',
       'page callback' => 'drupal_get_form',
       'page arguments' => array('userplus_admin_usergroups'),
-      'access callback' => 'userplus_access',
+      'access callback' => 'userplus_access_callback',
       'access arguments' => array('assign groups via userplus'),
       'type' => MENU_LOCAL_TASK,
       'weight' => 1
@@ -524,6 +524,15 @@ function userplus_admin_userperms_submit($form, &$form_state) {
 }
 
 function userplus_admin_userperms() {
+  // Get the list of role ids that has been configured to appear
+  // on this form (from admin/settings/userplus)
+  $allowable_roles = variable_get('userplus_assign_roles', array());
+
+  if (empty($allowable_roles)) {
+    $form['#theme'] = 'userplus_empty_userperms';
+    return $form;
+  }
+
   // Compile user/role array:
   $result = pager_query('SELECT u.uid, u.name FROM {users} u WHERE u.uid > 0 ORDER BY u.name', variable_get('userplus_max_show_user_roles', 25));
   $users = array();
@@ -541,31 +550,33 @@ function userplus_admin_userperms() {
   $roles = user_roles(1);
   unset($roles[DRUPAL_AUTHENTICATED_RID]);
 
-  // Get the list of role ids that has been configured to appear
-  // on this form (from admin/settings/userplus)
-  $allowable_roles = variable_get('userplus_assign_roles', array());
-
   // Fix the allowable roles array so that it contains role ids mapping to role names
   $allowable_roles = array_intersect_key($roles, $allowable_roles);
-  
-  $form['user'] = array('#tree' => TRUE);
 
-  $weight = 1;
-  foreach ($users as $uid => $user_name) {
-    foreach ($allowable_roles as $rid => $role_name) {
-      $checked = array_key_exists($uid, $users_roles) && is_array($users_roles[$uid]) ? in_array($rid, $users_roles[$uid]) : FALSE;
-      $form['user'][$uid][$rid] = array('#type' => 'checkbox', '#title' => $role_name, '#default_value' => $checked, '#weight' => $weight++);
-    }
-  }
+  $form['user'] = array('#tree' => TRUE);
 
   // Stick the role names in the form so we can use them in the theme function...
   $form['roles'] = array('#type' => 'value', '#value' => $allowable_roles);
   // Stick the user names in the form so we can use them in the theme function...
   $form['usernames'] = array('#type' => 'value', '#value' => $users);
-
+  
+  if (!empty($allowable_roles)) {
+    $weight = 1;
+    foreach ($users as $uid => $user_name) {
+      foreach ($allowable_roles as $rid => $role_name) {
+        $checked = array_key_exists($uid, $users_roles) && is_array($users_roles[$uid]) ? in_array($rid, $users_roles[$uid]) : FALSE;
+        $form['user'][$uid][$rid] = array('#type' => 'checkbox', '#title' => $role_name, '#default_value' => $checked, '#weight' => $weight++);
+      }
+    }
+  }
   $form['submit'] = array('#type' => 'submit', '#value' => t('Save permissions'));
 
   return $form;
+}
+
+function theme_userplus_empty_userperms($form) {
+  $output = t('There are no roles configured to appear on this form at this time.  Please visit the !settings page to configure some roles to appear here.', array('!settings' => l(t('userplus settings'), 'admin/settings/userplus')));
+  return $output;
 }
 
 function theme_userplus_admin_userperms($form) {
@@ -641,6 +652,22 @@ function userplus_admin_usergroups_submit($form, &$form_state) {
 }
 
 function userplus_admin_usergroups() {
+  $result = db_query('SELECT ug.nid AS nid, n.title AS title, n.uid AS uid
+                      FROM {og} ug
+                      INNER JOIN {node} n
+                      ON ug.nid = n.nid
+                      ORDER BY n.title');
+  $group_names = array();
+  while ($group = db_fetch_object($result)) {
+    $group_names[$group->nid] = $group->title;
+    $group_owners[$group->nid] = $group->uid;
+  }
+
+  if (empty($group_names)) {
+    $form['#theme'] = 'userplus_empty_usergroups';
+    return $form;
+  }
+
   // Compile user/group array:
   $result = pager_query('SELECT u.uid, u.name
                          FROM {users} u
@@ -665,17 +692,6 @@ function userplus_admin_usergroups() {
   $users_groups = array();
   while ($user_group = db_fetch_object($result)) {
     $users_groups[$user_group->uid][$user_group->nid] = 0;
-  }
-
-  $result = db_query('SELECT ug.nid AS nid, n.title AS title, n.uid AS uid
-                      FROM {og} ug
-                      INNER JOIN {node} n
-                      ON ug.nid = n.nid
-                      ORDER BY n.title');
-  $group_names = array();
-  while ($group = db_fetch_object($result)) {
-    $group_names[$group->nid] = $group->title;
-    $group_owners[$group->nid] = $group->uid;
   }
 
   $form['user'] = array('#tree' => TRUE);
@@ -703,6 +719,11 @@ function userplus_admin_usergroups() {
   $form['submit'] = array('#type' => 'submit', '#value' => t('Save groups'));
 
   return $form;
+}
+
+function theme_userplus_empty_usergroups($form) {
+  $output = t('There are no groups on the site at this time.  Please create one or more groups in order to use this form.');
+  return $output;
 }
 
 function theme_userplus_admin_usergroups($form) {
@@ -898,7 +919,13 @@ function userplus_theme() {
     ),
     'userplus_admin_userperms' => array(
       'arguments' => array('edit')
-    )
+    ),
+    'userplus_empty_userperms' => array(
+      'arguments' => array('form')
+    ),
+    'userplus_empty_usergroups' => array(
+      'arguments' => array('form')
+    ),
   );
 }
 
@@ -943,7 +970,7 @@ function userplus_user_operations_enable_contact_form($accounts) {
     // Skip enabling contact form if it's already enabled.
     if ($account !== FALSE && !$account->contact) {
       user_save($account, array('contact' => TRUE));
-      watchdog('user', 'User %name can now be contacted via their contact form.', array('%name' => $account->name));
+      watchdog('user', "User %name's contact form has been enabled.", array('%name' => $account->name));
     }
   }
 }
@@ -954,10 +981,10 @@ function userplus_user_operations_enable_contact_form($accounts) {
 function userplus_user_operations_disable_contact_form($accounts) {
   foreach ($accounts as $uid) {
     $account = user_load(array('uid' => (int)$uid));
-    // Skip disabling contact form if it's already enabled.
+    // Skip disabling contact form if it's already disabled.
     if ($account !== FALSE && $account->contact) {
       user_save($account, array('contact' => FALSE));
-      watchdog('user', 'User %name can now be contacted via their contact form.', array('%name' => $account->name));
+      watchdog('user', "User %name's contact form has been disabled.", array('%name' => $account->name));
     }
   }
 }

@@ -125,23 +125,28 @@ function _menu_per_role_form_submit($form, &$form_state) {
     if ($mlid) {
       // hide but to those roles
       $rids = array();
-      $roles = isset($form_state['values']['menu_per_role_roles']) ?
-                     $form_state['values']['menu_per_role_roles']
-                     : $form_state['values']['menu']['menu_per_role']['menu_per_role_roles'];
-      foreach ($roles as $rid => $checked) {
-        if ($checked) {
-          $rids[] = $rid;
+      $hide_show = variable_get('menu_per_role_hide_show', 0);
+      if ($hide_show == 0 || $hide_show == 2) {
+        $roles = isset($form_state['values']['menu_per_role_roles']) ?
+                       $form_state['values']['menu_per_role_roles']
+                       : $form_state['values']['menu']['menu_per_role']['menu_per_role_roles'];
+        foreach ($roles as $rid => $checked) {
+          if ($checked) {
+            $rids[] = $rid;
+          }
         }
       }
       $rids_str = implode(',', $rids);
       // show but to those roles
       $hrids = array();
-      $roles = isset($form_state['values']['menu_per_role_hide_from_roles']) ?
-                     $form_state['values']['menu_per_role_hide_from_roles']
-                     : $form_state['values']['menu']['menu_per_role']['menu_per_role_hide_from_roles'];
-      foreach ($roles as $rid => $checked) {
-        if ($checked) {
-          $hrids[] = $rid;
+      if ($hide_show == 0 || $hide_show == 1) {
+        $roles = isset($form_state['values']['menu_per_role_hide_from_roles']) ?
+                       $form_state['values']['menu_per_role_hide_from_roles']
+                       : $form_state['values']['menu']['menu_per_role']['menu_per_role_hide_from_roles'];
+        foreach ($roles as $rid => $checked) {
+          if ($checked) {
+            $hrids[] = $rid;
+          }
         }
       }
       $hrids_str = implode(',', $hrids);
@@ -154,6 +159,7 @@ function _menu_per_role_form_submit($form, &$form_state) {
           // (although with MySQL this may fail because db_affected_rows() may only return
           // rows that have been changed instead of the # of rows that match the WHERE clause.)
           if ($db_type != 'pgsql') {
+            // MySQL hack
             $insert = !db_result(db_query("SELECT 1 FROM {menu_per_role} WHERE mlid = %d", $mlid));
           }
           else {
@@ -172,7 +178,7 @@ function _menu_per_role_form_submit($form, &$form_state) {
       // reset the menus
       menu_cache_clear_all();
     }
-    else if (isset($form_state['values']['menu_per_role_roles'])) {
+    elseif (isset($form_state['values']['menu_per_role_roles'])) {
       drupal_set_message(t('The menu link identifier was not defined on Submit in <b>Menu per Role</b>. You are most certainly adding a new menu item. For this feature to work when adding a menu item, you must apply the patch defined in <a href="http://drupal.org/node/326210" target="_blank">node #326210</a>. That patch is included in this module for that purpose.'), 'error');
     }
   }
