@@ -58,9 +58,19 @@ function droptor_uninstall() {
    variable_del('droptor_hash');
 }
 
+/**
+ * Create table needed for memory tracking
+ */
 function droptor_update_6200() {
   $schema = droptor_schema();
   $ret = array();
   db_create_table($ret, 'droptor_memory', $schema['droptor_memory']);
   return $ret;
+}
+
+/**
+ * File names have changed, so make sure we clear the cache
+ */
+function droptor_update_6201() {
+  cache_clear_all();
 }

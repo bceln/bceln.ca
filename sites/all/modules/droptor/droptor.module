@@ -1,6 +1,5 @@
 <?php
 
-// $Id: droptor.module,v 1.1.2.15 2011/02/02 20:21:14 urbanjustin Exp $ 
 
 /* 
  * The Droptor bridge module  
@@ -28,15 +27,18 @@
  */
 
 /**
- * Startup routine for module; Droptor should never cache b/c if it did the data would be out of sync
+ * Implements hook_boot()
+ * Startup routine for module to capture memory logging time
  *
  * @param n/a
  *
  * @return n/a
  */
-function droptor_init() {
-  global $script_start_time;
-  $script_start_time = microtime(true);
+function droptor_boot() {
+   if(variable_get('droptor_memory_monitoring', 0) == 1) {
+      global $script_start_time;
+      $script_start_time = microtime(true);
+   }
 }
 
 /**
@@ -53,9 +55,9 @@ function droptor_menu() {
     'title' => 'Droptor', 
     'description' => 'Plug-in for Droptor.com, the Drupal monitoring service.', 
     'page callback' => 'droptor_settings', 
-    'access arguments' => array('administer site configuration'), 
+    'access arguments' => array('administer droptor'), 
     'type' => MENU_NORMAL_ITEM, 
-    'file' => 'droptor_form.inc'
+    'file' => 'droptor.admin.inc'
   );
   
   // the actual data feed that Droptor.con consumes
@@ -65,10 +67,17 @@ function droptor_menu() {
     'page callback' => 'droptor_feed', 
     'access callback' => TRUE, 
     'type' => MENU_CALLBACK, 
-    'file' => 'droptor_feed.inc'
+    'file' => 'droptor.feed.inc'
   );
   
   return $items;
+}
+
+/**
+ * Implements hook_perm().
+ */
+function droptor_perm() {
+  return array('administer droptor');
 }
 
 /**
@@ -158,7 +167,7 @@ function droptor_exit() {
  * @param n/a
  *
  * @return
-	TRUE if the site supports SSL
+ * 	 TRUE if the site supports SSL
  */
 function droptor_ssl_enabled() {
   // thank you secure pages module

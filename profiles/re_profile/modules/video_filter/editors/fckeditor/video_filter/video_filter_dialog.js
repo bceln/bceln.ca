@@ -1,13 +1,13 @@
 
-var dialog	= window.parent ;
-var oEditor = dialog.InnerDialogLoaded() ;
+var dialog  = window.parent;
+var oEditor = dialog.InnerDialogLoaded();
 
-var FCK			  = oEditor.FCK ;
+var FCK     = oEditor.FCK;
 
-dialog.SetAutoSize( true ) ;
+dialog.SetAutoSize(true);
 
 // Activate the "OK" button.
-dialog.SetOkButton( true ) ;
+dialog.SetOkButton(true);
 
 $(document).ready(function() {
   $('#edit-cancel, #edit-insert').hide();
@@ -23,8 +23,8 @@ $(document).ready(function() {
 
 // The OK button was hit.
 function Ok() {
-  var sInnerHtml ;
-  
+  var sInnerHtml;
+
   var file_url = $('#edit-file-url').val();
 
   if(file_url == "") {
@@ -48,8 +48,6 @@ function Ok() {
 
   oEditor.FCKUndo.SaveUndoStep();
 
-	var text = oEditor.FCK.InsertHtml(str);
-	return true ;
+  var text = oEditor.FCK.InsertHtml(str);
+  return true;
 }
-
-

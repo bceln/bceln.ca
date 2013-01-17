@@ -1,3 +1,9 @@
+# deny access to shadowke trying to log in.
+order allow,deny
+deny from 91.236.74.137
+allow from all
+
+
 #
 # Apache/PHP/Drupal settings:
 #

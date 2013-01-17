@@ -1,3 +1,4 @@
+.cl.selector
 dbrestore.sh
 dbdump.sh
 private
@@ -42,4 +43,4 @@ drush*
 mailmantest/
 test/
 error_log
-
+sites/*/error_log

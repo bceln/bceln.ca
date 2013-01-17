@@ -150,7 +150,7 @@
     <?php if(!user_access('view field_trial_pricing', $user) && !user_access('view field_trial_access', $user)): ?>
  			<h2>Pricing and Trial Access</h2>
 			<div class="trial_pricing field">
-        <p>To view pricing info and a link to the free trial, please log into the e-HLbc site using the orange LOGIN button at the top of this page or <a href="/user" title="Link to login page">follow this link.</a></p>
+        <p>To view pricing info and a link to the free trial, please log into the e-HLbc site using the orange LOGIN button at the top of this page.</a></p>
 			</div>
     <?php endif; ?>
      

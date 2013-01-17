@@ -37,8 +37,8 @@ var video_filter_dialog = {
       ed.execCommand('mceInsertContent', false, str);
     }
 
-		tinyMCEPopup.execCommand("mceEndUndoLevel");
-		tinyMCEPopup.close();
+    tinyMCEPopup.execCommand("mceEndUndoLevel");
+    tinyMCEPopup.close();
   }
 };
 
