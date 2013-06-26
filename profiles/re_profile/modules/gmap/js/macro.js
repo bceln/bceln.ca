@@ -1,4 +1,3 @@
-/* $Id: macro.js,v 1.3 2009/02/11 18:53:18 bdragon Exp $ */
 
 /**
  * @file

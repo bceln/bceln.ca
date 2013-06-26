@@ -1,4 +1,3 @@
-/* $Id: address.js,v 1.4 2009/02/11 20:50:44 bdragon Exp $ */
 
 /**
  * @file
@@ -14,7 +13,7 @@
 Drupal.gmap.geocoder = function () {
   var theGeocoder;
   if (!theGeocoder) {
-    theGeocoder = new GClientGeocoder();
+    theGeocoder = new google.maps.Geocoder();
   }
   return theGeocoder;
 };
@@ -23,10 +22,10 @@ Drupal.gmap.addHandler('gmap', function (elem) {
   var obj = this;
 
   obj.bind('geocode_pan', function (addr) {
-    Drupal.gmap.geocoder().getLatLng(addr, function (point) {
-      if (point) {
-        obj.vars.latitude = point.lat();
-        obj.vars.longitude = point.lng();
+     Drupal.gmap.geocoder().geocode({'address': addr}, function (results, status) {
+      if (status == google.maps.GeocoderStatus.OK) {
+        obj.vars.latitude = results[0].geometry.location.lat();
+        obj.vars.longitude = results[0].geometry.location.lng();
         obj.change("move", -1);
       }
       else {
@@ -36,11 +35,11 @@ Drupal.gmap.addHandler('gmap', function (elem) {
   });
 
   obj.bind('geocode_panzoom', function (addr) {
-    Drupal.gmap.geocoder().getLocations(addr, function (response) {
-      if (response && response.Status.code === 200) {
-        var place = response.Placemark[0];
-        obj.vars.latitude = place.Point.coordinates[1];
-        obj.vars.longitude = place.Point.coordinates[0];
+    Drupal.gmap.geocoder().geocode({'address': addr}, function (results, status) {
+      if (status == google.maps.GeocoderStatus.OK) {
+        var place = results[0];
+        obj.vars.latitude = results[0].geometry.location.lat();
+        obj.vars.longitude = results[0].geometry.location.lng();
 
         // This is, of course, temporary.
 
@@ -68,10 +67,10 @@ Drupal.gmap.addHandler('gmap', function (elem) {
 
   obj.bind('preparemarker', function (marker) {
     if (marker.address && (!marker.latitude || !marker.longitude)) {
-      Drupal.gmap.geocoder().getLatLng(marker.address, function (point) {
-        if (point) {
-          marker.latitude = point.lat();
-          marker.longitude = point.lng();
+      Drupal.gmap.geocoder().geocode({'address': marker.address}, function (results, status) {
+        if (status == google.maps.GeocoderStatus.OK) {
+          marker.latitude = results[0].geometry.lat();
+          marker.longitude = results[0].geometry.lng();
         }
       });
     }
@@ -99,10 +98,10 @@ Drupal.gmap.addHandler('address', function (elem) {
   // This happens ASYNC!!!
   $(elem).change(function () {
     if (elem.value.length > 0) {
-      Drupal.gmap.geocoder().getLatLng(elem.value, function (point) {
-        if (point) {
-          obj.vars.latitude = point.lat();
-          obj.vars.longitude = point.lng();
+      Drupal.gmap.geocoder().geocode({'address': elem.value}, function (results, status) {
+        if (status == google.maps.GeocoderStatus.OK) {
+          obj.vars.latitude = results[0].geometry.location.lat();
+          obj.vars.longitude = results[0].geometry.location.lng();
           obj.change("move", binding);
         }
         else {
@@ -139,9 +138,9 @@ Drupal.gmap.addHandler('locpick_address', function (elem) {
   // This happens ASYNC!!!
   $(elem).change(function () {
     if (elem.value.length > 0) {
-      Drupal.gmap.geocoder().getLatLng(elem.value, function (point) {
-        if (point) {
-          obj.locpick_coord = point;
+      Drupal.gmap.geocoder().geocode({'address': elem.value}, function (results, status) {
+        if (status == google.maps.GeocoderStatus.OK) {
+          obj.locpick_coord = results[0];
           obj.change("locpickchange", binding);
         }
         else {

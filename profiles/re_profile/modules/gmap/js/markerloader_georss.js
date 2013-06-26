@@ -1,4 +1,3 @@
-/* $Id: markerloader_georss.js,v 1.3 2009/02/11 19:27:13 bdragon Exp $ */
 
 /**
  * @file

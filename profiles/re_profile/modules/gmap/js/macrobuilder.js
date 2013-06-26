@@ -1,4 +1,3 @@
-/* $Id: macrobuilder.js,v 1.3 2009/02/11 19:59:45 bdragon Exp $ */
 
 /**
  * @file

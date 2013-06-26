@@ -1,4 +1,3 @@
-/* $Id: poly.js,v 1.3 2009/02/11 18:36:04 bdragon Exp $ */
 
 /**
  * @file

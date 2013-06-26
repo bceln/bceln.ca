@@ -1,18 +1,10 @@
-<?php
-
-// referring URLs
-$refurl1 = 'http://www.bcaslpa.ca/ehl';
-$refurl2 = 'http://bcaslpa.ca/ehl';
-
-// Ebsco URL
-$ebsco_url = 'http://search.ebscohost.com/login.aspx?authtype=url';
-
-// check if coming from the permitted referring URL,
-// then pass jumpstart URL (as constructed above) to server
-if ( preg_match("|^$refurl1|", $_SERVER['HTTP_REFERER']) || preg_match("|^$refurl2|", $_SERVER['HTTP_REFERER']) ) {
-  header("Location: $ebsco_url");
-} else {
-  die("You are not authorized to view this page.");
-}
-
-?>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>Contact your library for assistance</title>
+</head>
+<body>
+<strong>This link is no longer active. Please contact your library for assistance.</strong>
+</body>
+</html>

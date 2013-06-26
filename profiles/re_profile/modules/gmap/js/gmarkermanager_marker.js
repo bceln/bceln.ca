@@ -1,4 +1,3 @@
-/* $Id: gmarkermanager_marker.js,v 1.3 2009/02/11 18:45:50 bdragon Exp $ */
 
 /**
  * @file

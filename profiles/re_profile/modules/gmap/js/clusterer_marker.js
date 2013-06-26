@@ -1,4 +1,3 @@
-/* $Id: clusterer_marker.js,v 1.4 2009/02/12 23:45:23 bdragon Exp $ */
 
 /**
  * @file

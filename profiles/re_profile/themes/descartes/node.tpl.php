@@ -61,5 +61,5 @@
 	<div class="content">
 		<?php print $content; ?>
 	</div>
-    <?php dcpr($node); ?>
+    <?php //dcpr($node); ?>
 </div>

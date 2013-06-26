@@ -1,4 +1,3 @@
-/* $Id: gmap.css,v 1.7.2.1 2010/04/08 13:40:19 rooby Exp $ */
 
 /**
  * @file
@@ -40,4 +39,33 @@
 
 .gmap-map .gmnoprint tbody {
   border-top: none;
+}
+
+.gmap-custom-control-button {
+  position: absolute;
+  background-color: white;
+  border: 1px solid black;
+  text-align: center;
+  width: 5em;
+  cursor: pointer;
+}
+
+.gmap-custom-control-button div {
+  font-size: 12px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: white rgb(176, 176, 176) rgb(176, 176, 176) white;
+}
+
+.gmap-custom-control-button-disabled {
+  color: grey;
+}
+
+/* Fix grey map bug in Firefox when img { max-width: 100% } is set */
+.gmap img,
+.view-gmap img,
+.openlayers-map img,
+.YMaps img,
+#getlocations_map_canvas img {
+  max-width: none !important;
 }

@@ -1,5 +1,3 @@
-/* $Id: icon.js,v 1.6 2009/02/11 20:14:39 bdragon Exp $ */
-
 /**
  * @file
  * GIcon manager for GMap.
@@ -18,10 +16,13 @@ Drupal.gmap.getIcon = function (setname, sequence) {
   var othimg = ['printImage', 'mozPrintImage', 'printShadow', 'transparent'];
   // If no setname, return google's default icon.
   if (!setname) {
-    return G_DEFAULT_ICON;
+    return;
   }
   if (!this.gicons) {
     this.gicons = {};
+  }
+  if (!this.gshadows) {
+    this.gshadows = {};
   }
 
   // If no sequence, synthesise one.
@@ -42,9 +43,11 @@ Drupal.gmap.getIcon = function (setname, sequence) {
       alert('Request for invalid marker set ' + setname + '!');
     }
     this.gicons[setname] = [];
+    this.gshadows[setname] = [];
     var q = Drupal.gmap.icons[setname];
     var p, t;
     for (var i = 0; i < q.sequence.length; i++) {
+      /*
       t = new GIcon();
       p = Drupal.gmap.iconpath + q.path;
       t.image = p + q.sequence[i].f;
@@ -55,6 +58,24 @@ Drupal.gmap.getIcon = function (setname, sequence) {
       t.iconSize = new GSize(q.sequence[i].w, q.sequence[i].h);
       t.iconAnchor = new GPoint(q.anchorX, q.anchorY);
       t.infoWindowAnchor = new GPoint(q.infoX, q.infoY);
+      */
+      p = Drupal.gmap.iconpath + q.path;
+      t = new google.maps.MarkerImage(p + q.sequence[i].f,
+        new google.maps.Size(q.sequence[i].w, q.sequence[i].h),
+        null,
+        new google.maps.Point(q.anchorX, q.anchorY)
+      );
+      if (q.shadow.f !== '') {
+        this.gshadows[setname][i] = new google.maps.MarkerImage(p + q.shadow.f,
+          new google.maps.Size(q.shadow.w, q.shadow.h),
+          null,
+          new google.maps.Point(q.anchorX, q.anchorY)
+        );
+      }
+      else {
+        this.gshadows[setname][i] = null;
+      }
+
       for (var j = 0; j < othimg.length; j++) {
         if (q[othimg[j]] !== '') {
           t[othimg[j]] = p + q[othimg[j]];
@@ -67,6 +88,10 @@ Drupal.gmap.getIcon = function (setname, sequence) {
   }
   // TODO: Random, other cycle methods.
   return this.gicons[setname][sequence % this.gicons[setname].length];
+};
+
+Drupal.gmap.getShadow = function (setname, sequence) {
+  if (this.gshadows) return this.gshadows[setname][sequence % this.gicons[setname].length];
 };
 
 /**
@@ -203,6 +228,7 @@ Drupal.gmap.addHandler('gmap', function (elem) {
     // Provide icons to markers.
     obj.bind('preparemarker', function (marker) {
       marker.opts.icon = Drupal.gmap.getIcon(marker.markername, marker.offset);
+      marker.opts.shadow = Drupal.gmap.getShadow(marker.markername, marker.offset);
     });
   }
 });

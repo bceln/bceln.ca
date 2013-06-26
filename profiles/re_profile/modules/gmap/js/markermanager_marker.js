@@ -1,4 +1,3 @@
-/* $Id: markermanager_marker.js,v 1.1 2009/02/12 23:45:23 bdragon Exp $ */
 
 /**
  * @file

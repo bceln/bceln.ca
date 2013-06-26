@@ -1,4 +1,3 @@
-/* $Id: shapeloader_static.js,v 1.3 2009/02/11 19:35:34 bdragon Exp $ */
 
 /**
  * @file

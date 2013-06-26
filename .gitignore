@@ -19,6 +19,7 @@ public_html/backup
 .drush/
 .ftpquota
 .gitconfig
+.htpasswds
 .lastlogin
 .ssh/
 CPanel-restores/
@@ -44,3 +45,5 @@ mailmantest/
 test/
 error_log
 sites/*/error_log
+public_html/login
+public_html/newsletter.ehlbc*

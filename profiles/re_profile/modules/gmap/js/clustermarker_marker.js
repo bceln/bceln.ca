@@ -1,4 +1,3 @@
-/* $Id: clustermarker_marker.js,v 1.2 2009/12/12 00:14:17 bdragon Exp $ */
 
 /**
  * @file
@@ -17,12 +16,13 @@ Drupal.gmap.addHandler('gmap', function (elem) {
   var obj = this;
 
   obj.bind('init', function () {
-    obj.clustermarker = 0;
+    obj.clusterMarker = 0;
   });
 
   obj.bind('iconsready', function () {
-    if (!obj.clustermarker) {
-      var options = Drupal.settings.gmap_markermanager;
+    if (!obj.clusterMarker) {
+      // Force copying the settings so we don't overwrite them.
+      var options = jQuery.extend(true, {}, Drupal.settings.gmap_markermanager);
       if (options.clusterMarkerIcon.length) {
         options.clusterMarkerIcon = Drupal.gmap.getIcon(options.clusterMarkerIcon, 0);
       }

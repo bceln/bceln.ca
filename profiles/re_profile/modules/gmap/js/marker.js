@@ -1,4 +1,3 @@
-/* $Id: marker.js,v 1.4.2.1 2010/04/08 13:40:19 rooby Exp $ */
 
 /**
  * @file
@@ -10,35 +9,39 @@
 Drupal.gmap.addHandler('gmap', function (elem) {
   var obj = this;
 
+  var infowindow = new google.maps.InfoWindow();
+
   obj.bind('init', function () {
     if (obj.vars.behavior.autozoom) {
-      obj.bounds = new GLatLngBounds();
+      obj.bounds = new google.maps.LatLngBounds();
     }
   });
 
   obj.bind('addmarker', function (marker) {
-    var m = Drupal.gmap.factory.marker(new GLatLng(marker.latitude, marker.longitude), marker.opts);
+    marker.opts.position = new google.maps.LatLng(marker.latitude, marker.longitude);
+    marker.opts.map = obj.map;
+    var m = Drupal.gmap.factory.marker(marker.opts);
     marker.marker = m;
-    GEvent.addListener(m, 'click', function () {
+    google.maps.event.addListener(m, 'click', function () {
       obj.change('clickmarker', -1, marker);
     });
     if (obj.vars.behavior.highlight) {
-      GEvent.addListener(m, 'mouseover', function () {
+      google.maps.event.addListener(m, 'mouseover', function () {
         var highlightColor = '#' + obj.vars.styles.highlight_color;
         highlightMarker(obj.map, marker, 'hoverHighlight', highlightColor);
       });
-      GEvent.addListener(m, 'mouseout', function () {
+      google.maps.event.addListener(m, 'mouseout', function () {
         unHighlightMarker(obj.map, marker, 'hoverHighlight');
       });
     }
     if (obj.vars.behavior.extramarkerevents) {
-      GEvent.addListener(m, 'mouseover', function () {
+      google.maps.event.addListener(m, 'mouseover', function () {
         obj.change('mouseovermarker', -1, marker);
       });
-      GEvent.addListener(m, 'mouseout', function () {
+      google.maps.event.addListener(m, 'mouseout', function () {
         obj.change('mouseoutmarker', -1, marker);
       });
-      GEvent.addListener(m, 'dblclick', function () {
+      google.maps.event.addListener(m, 'dblclick', function () {
         obj.change('dblclickmarker', -1, marker);
       });
     }
@@ -49,7 +52,7 @@ Drupal.gmap.addHandler('gmap', function (elem) {
       obj.deferChange('clickmarker', -1, marker);
     }
     if (obj.vars.behavior.autozoom) {
-      obj.bounds.extend(marker.marker.getPoint());
+      obj.bounds.extend(new google.maps.LatLng(marker.latitude, marker.longitude));
     }
     // If the highlight arg option is used in views highlight the marker.
     if (marker.opts.highlight == 1) {
@@ -59,38 +62,72 @@ Drupal.gmap.addHandler('gmap', function (elem) {
 
   // Default marker actions.
   obj.bind('clickmarker', function (marker) {
-    // Local/stored content
+    // Close infowindow if open to prevent multiple windows
+    if (infowindow != null){
+      infowindow.close();
+    }
     if (marker.text) {
-      marker.marker.openInfoWindowHtml(marker.text);
+      infowindow.setContent(marker.text);
+      infowindow.open(obj.map, marker.marker);
+    }
+    // Info Window Query / Info Window Offset
+    else if (marker.iwq || (obj.vars.iwq && typeof marker.iwo != 'undefined')) {
+      var iwq, iwo;
+      if (obj.vars.iwq) {
+        iwq = obj.vars.iwq;
+      }
+      if (marker.iwq) {
+        iwq = marker.iwq;
+      }
+      iwo = 0;
+      if (marker.iwo) {
+        iwo = marker.iwo;
+      }
+      // Create a container to store the cloned DOM elements.
+      var el = document.createElement('div');
+      // Clone the matched object, run through the clone, stripping off ids, and move the clone into the container.
+      jQuery(iwq).eq(iwo).clone(false).find('*').removeAttr('id').appendTo(jQuery(el));
+      marker.setContent(el);
+      infowindow.open(obj.map, marker.marker);
     }
     // AJAX content
-    if (marker.rmt) {
-      var uri = marker.rmt;
-      // If there was a callback, prefix that.
-      // (If there wasn't, marker.rmt was the FULL path.)
-      if (obj.vars.rmtcallback) {
-        uri = obj.vars.rmtcallback + '/' + marker.rmt;
+    else if (marker.rmt) {
+      obj.rmtcache = obj.rmtcache || {};
+      
+      // Cached RMT.
+      if (obj.rmtcache[marker.rmt]) {
+        infowindow.setContent(data);
+        infowindow.open(obj.map, marker.marker);
       }
-      // @Bevan: I think it makes more sense to do it in this order.
-      // @Bevan: I don't like your choice of variable btw, seems to me like
-      // @Bevan: it belongs in the map object, or at *least* somewhere in
-      // @Bevan: the gmap settings proper...
-      //if (!marker.text && Drupal.settings.loadingImage) {
-      //  marker.marker.openInfoWindowHtml(Drupal.settings.loadingImage);
-      //}
-      $.get(uri, {}, function (data) {
-        marker.marker.openInfoWindowHtml(data);
-      });
+      else {
+        var uri = marker.rmt;
+        // If there was a callback, prefix that.
+        // (If there wasn't, marker.rmt was the FULL path.)
+        if (obj.vars.rmtcallback) {
+          uri = obj.vars.rmtcallback + '/' + marker.rmt;
+        }
+        // @Bevan: I think it makes more sense to do it in this order.
+        // @Bevan: I don't like your choice of variable btw, seems to me like
+        // @Bevan: it belongs in the map object, or at *least* somewhere in
+        // @Bevan: the gmap settings proper...
+        //if (!marker.text && Drupal.settings.loadingImage) {
+        //  marker.marker.openInfoWindowHtml(Drupal.settings.loadingImage);
+        //}
+        $.get(uri, {}, function (data) {
+          obj.rmtcache[marker.rmt] = data;
+          marker.marker.openInfoWindowHtml(data);
+        });
+      }
     }
     // Tabbed content
     else if (marker.tabs) {
-      var infoWinTabs = [];
+      var data = "";
+      //tabs in an infowindow is no longer supported in API ver3.
       for (var m in marker.tabs) {
-        if (marker.tabs.hasOwnProperty(m)) {
-          infoWinTabs.push(new GInfoWindowTab(m, marker.tabs[m]));
-        }
+        data += marker.tabs[m];
       }
-      marker.marker.openInfoWindowTabsHtml(infoWinTabs);
+      infowindow.setContent(data);
+      infowindow.open(obj.map, marker.marker);
     }
     // No content -- marker is a link
     else if (marker.link) {
@@ -102,7 +139,14 @@ Drupal.gmap.addHandler('gmap', function (elem) {
     // If we are autozooming, set the map center at this time.
     if (obj.vars.behavior.autozoom) {
       if (!obj.bounds.isEmpty()) {
-        obj.map.setCenter(obj.bounds.getCenter(), Math.min(obj.map.getBoundsZoomLevel(obj.bounds), obj.vars.maxzoom));
+        obj.map.fitBounds(obj.bounds);
+        var listener = google.maps.event.addListener(obj.map, "idle", function() {
+          if (obj.vars.maxzoom) {
+            var maxzoom = parseInt(obj.vars.maxzoom)
+            if (obj.map.getZoom() > maxzoom) obj.map.setZoom(maxzoom);
+            google.maps.event.removeListener(listener);
+          }
+        });
       }
     }
   });
@@ -111,9 +155,13 @@ Drupal.gmap.addHandler('gmap', function (elem) {
     // Reset bounds if autozooming
     // @@@ Perhaps we should have a bounds for both markers and shapes?
     if (obj.vars.behavior.autozoom) {
-      obj.bounds = new GLatLngBounds();
+      obj.bounds = new google.maps.LatLngBounds();
     }
   });
+
+  Drupal.gmap.getInfoWindow = function() {
+    return infowindow;
+  };
 
   // @@@ TODO: Some sort of bounds handling for deletemarker? We'd have to walk the whole thing to figure out the new bounds...
 });

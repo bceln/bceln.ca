@@ -10,9 +10,9 @@ regions[content] = Content
 regions[page_top] = Page top
 regions[page_bottom] = Page bottom
 
-; Information added by drupal.org packaging script on 2012-08-24
-version = "6.x-1.0-rc2"
+; Information added by drupal.org packaging script on 2013-02-04
+version = "6.x-1.0"
 core = "6.x"
 project = "seven"
-datestamp = "1345821455"
+datestamp = "1360013591"
 
