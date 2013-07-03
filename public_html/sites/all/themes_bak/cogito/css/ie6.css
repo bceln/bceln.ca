@@ -1,0 +1,19 @@
+.small.button {
+  font-size: 11px;
+  margin-left: 0;
+  padding: 8px 20px 10px;
+  width: auto;
+}
+
+form {
+  background: #eee!important;
+  border: 0!important;
+}
+
+.row {
+  width: 980px;
+}
+
+.columns {
+  margin-left: 0;
+}

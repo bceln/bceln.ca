@@ -1,0 +1,167 @@
+@import "settings";
+@import "compass/css3";
+@import "compass/css3/pie";
+
+// $social-spacing: 15px;
+// @import "icons/social/*.png";
+// @include all-social-sprites;
+
+
+/********************************************
+
+  Page.scss
+
+  All styles for any page.tpl.php templates.
+  This file will include background styles
+  gradients, headers, footers etc.
+
+********************************************/
+
+  //DEBUG. REMOVE THIS!!!!!!!
+/*
+    #page:before{
+      content: " 5 ";
+      display: block;
+      position: absolute;
+      background: white;
+      height: rem(4); width: rem(4); left: rem(1); top: rem(4);      
+      font-size: rem(4);
+      color: black;
+      line-height: rem(3.6);
+      border: 4px solid black;
+      text-align: center;
+      z-index: 500;
+    }
+  @include mq(5) { }
+  @include mq(4) { #page:before{ content: "4";} }
+  @include mq(3) { #page:before{ content: "3";} }
+  @include mq(2) { #page:before{ content: "2";} }
+  @include mq(1) { #page:before{ content: "1";} }
+
+*/
+
+/* -----------------------------------------
+   General Page Styling
+----------------------------------------- */
+
+  html, body {
+    overflow-x: hidden;
+  }
+
+  table {
+    width: 100%;
+    border: 1px solid #eee;
+  }
+  
+  #access {
+    position:relative;
+  }
+
+  #main {
+    margin-top: 40px;
+  }
+
+  .access-outer {
+    background: $mainColor;
+    border-bottom: 3px solid lighten($mainColor, 10%);
+  }
+
+/* -----------------------------------------
+   Header / Footer & logo
+----------------------------------------- */
+
+.header-outer {
+    background: url('../images/header-background.png') repeat;
+}
+
+#header-wrapper {
+    background: url('../images/header-molecules4.png') no-repeat center top;    
+}
+
+#logo {
+  margin: 29px 0;
+}
+
+#footer {
+  border-top: 2px dotted #ddd;
+  margin-top: 20px;
+  padding-top: 20px;
+}
+
+/* -----------------------------------------
+   Common spacings
+----------------------------------------- */
+
+  #sidebar-right .block { margin-bottom: $gutter; }
+
+
+
+/* -----------------------------------------
+   UI Elements
+----------------------------------------- */
+  //until further notice all buttons will be green
+  .button{
+
+  }
+
+  #breadcrumb{
+    height: $gutter;
+    padding-top: rem(0.7);
+    padding-left: $gutter;
+  }
+
+  ul.pagination{
+    text-align: center;
+    li {
+      float: none;
+      display: inline-block;
+    }
+  }
+
+
+/* -----------------------------------------
+   Sprites
+----------------------------------------- */
+
+  // .social {
+  //   width: 30px; height: 30px;
+  //   overflow: hidden;
+  //   display: inline-block;
+  //   text-indent: -(999em);
+  //   margin-right: rem(0.5);
+  // }
+
+  // .province {
+  //   width: 40px; height: 26px;
+  //   overflow: hidden;
+  //   display: inline-block;
+  //   text-indent: -(999em);
+  //   margin-right: rem(0.5);
+  // }
+
+  // //our social icons
+  // @each $social in facebook, twitter, youtube, this-site, googleplus {
+  //   $socialgreen: #{$social}_green;
+  //   $socialgrey: #{$social}_grey;
+  //   a.follow-link-#{$social} { 
+  //     @extend .social, .social-#{$social};
+  //     @include resize-sprite($social-sprites, $social, 42); 
+
+  //     //Something isn't working with the media queries. come back to this.
+  //     @include mq(2) {  @include resize-sprite($social-sprites, $social, 240);}
+  //   }
+  //   a.green-social.#{$social} {
+  //     @extend .social, .social-#{$socialgreen};
+  //     @include resize-sprite($social-sprites, $socialgreen, 42); 
+  //     //@include mq(2) {  @include resize-sprite($social-sprites, $social, 240);}
+  //   }
+  //   // Now hover colours:;
+  //   a.green-social.#{$social}, 
+  //   a.follow-link-#{$social} {
+  //     &:hover { 
+  //       @extend .social-#{$socialgrey};
+  //       @include resize-sprite($social-sprites, $socialgrey, 42); 
+  //     };
+  //   }
+  // }
+

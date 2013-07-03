@@ -1,0 +1,75 @@
+@import "settings";
+/********************************************
+
+  A special stylesheet for TinyMCE
+
+  Just import a few pieces of Foundation 
+  and the custom typography we wrote .
+
+********************************************/
+
+    // /********* A Few pieces of Foundation *********/
+
+    @import "foundation/settings";
+    @import "foundation/functions/all";
+
+    // Control which mixins you have access too
+    @import "foundation/mixins/clearfix";
+    @import "foundation/mixins/css-triangle";
+    @import "foundation/mixins/font-size";
+
+    // Must include next two for semantic grid to work
+    @import "foundation/mixins/respond-to";
+    @import "foundation/mixins/semantic-grid";
+
+    @import "modular-scale";
+    @import "foundation/common/globals";
+
+    // Must include the grid for any responsiveness
+    @import "foundation/components/grid";
+
+    // Control which common styles get compiled
+    @import "foundation/common/typography";
+    // @import "foundation/common/forms";
+
+    // Control which components you get if customizing
+    @import "foundation/components/modules/buttons";
+
+/****************** END FOUNDATION ******************/
+
+    @import "typography";
+    @import "page";
+    @import "block";
+
+    // Make sure the size is set for rems = px and 
+    // that the background is white
+    html { font-size: 10px; }
+    body { background: white; }
+
+
+    body#tinymce {
+        div{
+            border: 1px dashed #ccc;
+            position: relative;
+            &:before {
+                content: "DIV";
+                display: block;
+                font-family: arial;
+                font-weight: bold;
+                background: black;
+                color: white;
+                font-size: rem(0.9);
+                position: absolute;
+                top: 0; left: 0;
+                padding: rem(0.1) rem(0.3);
+            }
+            &.column, &.columns { 
+                &:before{ content:  "DIV.COLUMN"; }
+            }
+        }
+        background: $white; 
+        padding: rem(1);
+        @extend article;
+    }
+
+

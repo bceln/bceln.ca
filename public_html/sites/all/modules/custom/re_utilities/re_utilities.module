@@ -1,0 +1,202 @@
+<?php
+
+// $Id$
+
+/**
+ * Implements hook_block_info().
+ */
+function re_utilities_block_info() {
+  $blocks = array();
+
+  $blocks['utility_nav'] = array(
+      'info' => t('Utility Nav'),
+      'cache' => DRUPAL_NO_CACHE,
+  );
+
+  return $blocks;
+}
+
+/**
+ * Implements hook_block_view().
+ */
+function re_utilities_block_view($block_name = '') {
+  if ($block_name == 'utility_nav') {
+
+    $block = array(
+        'subject' => null,
+        'content' => re_utilities_block_content(),
+    );
+
+    return $block;
+  }
+}
+
+function re_utilities_block_content() {
+  if (!user_is_logged_in()) {
+    $content .= '';
+    $links = array(
+        /* array(
+          'title' => t('Register'),
+          'href' => 'user/register',
+          'attributes' => array('class' => 'register'),
+          ), */
+        array(
+            'title' => t('Login'),
+            'href' => 'user',
+            'attributes' => array('class' => 'login'),
+        ),
+    );
+  } 
+  else 
+  {
+    global $user;
+    // Just double checking the user is authenticated...
+    foreach ($user->roles as $role) {
+      if ($role == 'authenticated user' || $user->name == 'reyebrow_ehlbc') {
+        // Load the related content profile for this user, to get the Full Name...
+        $profile = profile2_load_by_user($user->uid, 'contact');
+        $user_name = ($profile->field_contact_first_name['und'][0]['value']);
+
+        // Profile link...
+        $links = array(
+            array(
+                'title' => t('View Your Dashboard'),
+                'href' => drupal_get_path_alias('dashboard'),
+                'attributes' => array('class' => 'dashboard'),
+            ),
+            array(
+                'title' => t('Logout'),
+                'href' => 'user/logout',
+                'attributes' => array('class' => 'logout'),
+            ),
+        );
+        break;
+      }
+    }
+  }
+  $links[] = array(
+    'title' => t('Search'),
+    'href' => drupal_get_path_alias('search'),
+    'attributes' => array('class' => 'search'),
+  );
+  
+  $variables = array('links' => $links, 'attributes' => array('class' => 'links inline'));
+  if (isset($user_name)) {
+    $variables['heading'] = array( 'text' => 'Welcome ' . $user_name, 'level' => 'h3', 'class' => 'welcome' );
+  }
+
+  $content .= theme_links($variables);
+  return $content;
+}
+
+/**
+ * Implements hook_block().
+ 
+function re_utilities_block($op='list', $delta=0, $edit=array()) {
+  switch ($op) {
+    case 'list':
+      $blocks[0] = array(
+        'info' => t('Utility Nav'),
+        'cache' => BLOCK_NO_CACHE,  // Do not cache this block as it contains links to user info...
+      );
+
+	   return $blocks;
+	
+  case 'view':
+    $blocks['subject'] = t('Utility Nav');
+    $blocks['content'] = re_utilities_block_content();
+    return $blocks;
+	}
+}*/
+
+/**
+ * Generating the block content here. 
+ 
+function re_utilities_block_content() {
+  if(!user_is_logged_in()) {
+    $content .= '';
+    $links = array(
+      /*array(
+        'title' => t('Register'),
+        'href' => 'user/register',
+        'attributes' => array('class' => 'register'),
+      ),
+      array(
+        'title' => t('Login'),
+        'href' => 'user',
+        'attributes' => array('class' => 'login'),
+      ),
+    );
+  } else {
+    $content .= '<span>' . t('Welcome ');
+    // Get the current user and current language...
+    global $user;
+    // Just double checking the user is authenticated...
+    foreach($user->roles as $role) {
+      if($role == 'authenticated user' || $user->name == 'reyebrow_ehlbc') {
+        // Load the related content profile for this user, to get the Full Name...
+        $user_node = content_profile_load('contact', $user->uid);
+        $user_name = ($user_node->title) ? $user_node->title : $user->name;
+        $content .= $user_name . '</span>';
+        
+        // Profile link...
+        $links = array(
+          array(
+            'title' => t('View Your Dashboard'),
+            'href' => drupal_get_path_alias('dashboard'),
+            'attributes' => array('class' => 'dashboard'),
+          ),
+          array(
+            'title' => t('Logout'),
+            'href' => 'logout',
+            'attributes' => array('class' => 'logout'),
+          ),
+        );
+        break;
+      }
+    }
+  }
+  $links[] = array (
+    'title' => t('Search'),
+    'href' => drupal_get_path_alias('search'),
+    'attributes' => array('class' => 'search'),
+  );
+  $content .= theme('links', $links, array('class' => 'links inline'));
+  return $content;
+}
+
+/**
+ * Implementation of hook_form_alter()
+ 
+function re_utilities_form_alter(&$form, &$form_state, $form_id) {
+  global $user;
+  switch($form_id) {
+    // We need to create a link to the user account edit screen to allow for changing of password and email address
+    case 'contact_node_form':
+        $form['account_link'] = array(
+          '#type'   => 'item',
+          '#value'  => l('Change username / password / email address', 'user/' . $form['uid']['#value'] . '/edit', $options = array('query' => drupal_get_destination())),
+          '#weight' => -50,
+        );
+      break;
+    
+    case 'contact_mail_user':
+        // As the user contact form is in a modal/overlay window, we want to keep the user on the same page once the form is submitted...
+        $form['#redirect'] = $_GET['q'];
+      break;
+
+    case 'views_exposed_form':
+      switch($form['#id']) {
+        case 'views-exposed-form-resources-page-3':
+          $form['header'] = array(
+            '#value' => t('Search Publications'),
+            '#type' => 'item',
+            '#weight' =>-50,
+          );
+          $form['submit']['#value'] = t('Search');
+          break;
+      }
+      break;
+  }
+  //drupal_render($form);
+}*/

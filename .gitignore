@@ -3,11 +3,11 @@ dbrestore.sh
 dbdump.sh
 private
 public_html/error_log
-sites/*/settings.php
-sites/*/default.settings.php
-sites/*/files
-sites/*/privatei
-sites/*.local
+public_html/sites/*/settings.php
+public_html/sites/*/default.settings.php
+public_html/sites/*/files
+public_html/sites/*/privatei
+public_html/sites/*.local
 public_html/backup
 .bash_history
 .bash_logout

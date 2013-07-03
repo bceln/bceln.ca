@@ -1,0 +1,259 @@
+@import "foundation/common/ratios"; 
+@import "compass/css3";
+
+/********************************************
+
+  Settings.scss
+
+  DO NOT PUT ANY CSS RULES IN THIS FILE.
+  It is meant for constants, functions,
+  mixins etc.
+
+********************************************/
+
+
+$ie: 99!default;
+
+// This is an important function.
+@function rem($size){
+  @if $ie >= 9 { @return $size+0rem; }
+  @else { @return ($size * 10)+0px; }
+}
+
+//This only works on base sizes like BODY
+@function rem2em($size){
+  @if $ie >= 9 { @return ($size * 0.6666666) + 0em; }
+  @else { @return ($size * 10) + 0px; }
+}
+
+/* -----------------------------------------
+   Our Colours
+----------------------------------------- */
+
+  // ADD YOUR CUSTOM COLOURS BELOW:
+
+  $white:       #ffffff;
+  $black:       #000000;
+  $txtColor:    #2a2724;
+  $h3Color:     #333333;
+
+  //Now how our colours apply to foundation
+  $mainColor:       #18729d;
+  $secondaryColor:  #f68115;
+  // $alertColor:    $red;
+  $successColor:    #5da423;
+
+  $highlightColor: #ffff99;
+  $shinyEdge:      rgba( $white, .5 );
+  $darkEdge:       rgba( $black, .2 );
+
+/* -----------------------------------------
+   IE uses pie for some of its effects
+   this won't get used unless we detect
+   that we're using IE
+----------------------------------------- */
+
+  $pie-behavior: url("/css/PIE.htc");
+  $pie-base-class: pie-element;
+
+/* -----------------------------------------
+   Set theme constants here
+----------------------------------------- */
+
+  // Settings file containing Foundation defaults
+  $gutter: rem(3);
+  $bigGutter: rem(4.5);
+  $littleGutter: rem(2);
+  $defaultFloat: left;
+
+/* -----------------------------------------
+   Foundation Grid and typography Settings
+----------------------------------------- */
+
+  $totalColumns: 12;
+  $mobileTotalColumns: 12; // I don't like just having 4 for mobile
+
+  // Foundation Initial Typography Settings
+  // We can leave this mostly as is as a fallback stack
+  // Then do the rest of the typography simply in typography.scss
+  $headerFontFamily: "Helvetica Neue", "Helvetica", Arial, sans-serif;
+  $headerFontWeight: normal;
+  $headerFontColor: $txtColor;
+  $bodyFontFamily: "Helvetica Neue", "Helvetica", Arial, sans-serif;
+  $bodyFontWeight: normal;
+  $bodyFontColor: $txtColor;
+
+// Button Settings
+
+$buttonRadius: 7px;
+$btnBase: 10px;
+
+// $tinyBtnBase: $btnBase - 5;
+// $smallBtnBase: $btnBase - 3;
+// $largeBtnBase: $btnBase + 5;
+
+// Form Settings
+
+// $formSpacing: 12px;
+
+// Tab Settings
+
+  $tabHeight: $gutter;
+
+// Nav Bar Settings
+$navBarHeight: rem(3);
+$navFlyoutBaseWidth: rem(23);
+
+// UI Settings
+
+// $thumbRadius: 3px;
+
+// $progBarHeight: 25px;
+// $progBarBorderColor: darken($white, 20%);
+// $progBarBorderSize: 1px;
+// $progBarPad: 2px;
+
+// Modular Scale
+
+//$ratio: $golden;
+$baseFontSize: 15px;
+$importantModNum: 44px;
+
+// Tooltip Settings
+
+// $hasTipBorderBottom: dotted 1px #ccc;
+// $hasTipFontWeight: bold;
+// $hasTipFontColor: #333;
+// $hasTipBorderBottomHover: dotted 1px darken($mainColor, 20%);
+// $hasTipFontColorHover: $mainColor;
+// $tooltipBackgroundColor: #000;
+// $tooltipBackgroundOpacity: 0.85;
+// $tooltipFontSize: 12;
+// $tooltipFontWeight: bold;
+// $tooltipFontColor: #fff;
+// $tapToCloseFontSize: 10;
+// $tapToCloseFontWeight: normal;
+// $tapToCloseFontColor: #888;
+// $tooltipFontSizeScreenSmall: 14;
+// $tooltipBackgroundOpacityScreenSmall: 0.85;
+
+
+/***********************/
+// @MEDIA Breakpoints
+/***********************/
+
+// We need to re-think breakpoints slightly
+// Here's what Jenn came up with:
+
+  $mq4: rem2em(101);
+  $mq3: rem2em(86.1);
+  $mq2: rem2em(70);
+  $mq1: rem2em(50);
+
+//Foundation needs to know some of this
+
+  $screenSmall: $mq1 !default;
+  $screenMedium: $mq3 !default;
+  $screenXlarge: $mq4 !default;
+  $rowWidth: rem(95); //980 + 30 for gutters 
+
+// output ems or px if it's IE
+// A little mixin to make things easier for us. This means we don't need
+// to add media queries all over the place in the sass file
+
+  @mixin mq($media) {
+
+    //START OF THE NEW WAY
+    @if $media == 1 {
+      @media only screen and (max-width: $mq1) { @content; }
+    }
+    @else if $media == 2 {
+      @media only screen and (min-width: $mq1 + 0.01) and (max-width: $mq2 - 0.01) { @content; }
+    }
+    @else if $media == 3 {
+      @media only screen and (min-width: $mq2 + 0.01) and (max-width: $mq3 - 0.01) { @content; }
+    }
+    @else if $media == 4 {
+      @media only screen and (min-width: $mq3 + 0.01) and (max-width: $mq4 - 0.01) { @content; }
+    }
+    @else if $media == lte2 {
+      @media only screen and (max-width: $mq2 - 0.01) { @content; }
+    }
+    @else if $media == gte2 {
+      @media only screen and (min-width: $mq2 + 0.01) { @content; }
+    }
+    @else if $media == lte3 {
+      @media only screen and (max-width: $mq3 - 0.01) { @content; }
+    }
+    @else if $media == lte4 {
+      @media only screen and (max-width: $mq4 - 0.01) { @content; }
+    }
+    // The large media query is special because it's the default so we 
+    // include a fallback for lesser browsers
+    @else if $media == 5 {
+      @if $ie >= 9 {
+        @media only screen and (min-width: $mq4) { @content; }
+      }
+      //if it's an old browser then do nothing.
+      @else { @content; }
+    }
+    @else if $media == print {
+      @media only print { @content; }
+    }
+  }
+
+/* -----------------------------------------
+   Useful mixins
+----------------------------------------- */
+
+@mixin hide-text{
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
+@mixin resize-sprite($map, $sprite, $percent) {
+  $spritePath:    sprite-path($map);
+  $spriteWidth:   image-width($spritePath);
+  $spriteHeight:  image-height($spritePath);
+  $width: image-width(sprite-file($map, $sprite));
+  $height: image-height(sprite-file($map, $sprite));
+ 
+  @include background-size(ceil($spriteWidth * ($percent/100)) ceil($spriteHeight * ($percent/100)));
+  width: ceil($width*($percent/100));
+  height: ceil($height*($percent/100));
+  background-position: 0 floor(nth(sprite-position($map, $sprite), 2)  * ($percent/100) );
+}
+
+
+/* -----------------------------------------
+   Buttons and mixins Etc.
+----------------------------------------- */
+
+// Sometimes fields like to snuggle with buttons
+@mixin field-next-to-button{
+  @include border-radius( rem(0.5) 0 0 0);
+  font-size: rem(1.4);
+  line-height: rem(2.3);
+  font-family: "s_regular";
+  padding: 4px 10px;
+  height: rem(2.3);
+  border: medium none;
+}
+
+
+// This is for buttons snuggling next to fields
+// This assumes the following structure:
+// <button><span>   </span></button>;
+@mixin button-next-to-field{
+  @include border-radius( 0 0 rem(0.5) 0);
+  border: medium none;
+  color: white;
+  padding: 0;
+  font: normal rem(2.3)/1 Arial;
+  height: rem(2.3);
+  text-align: center;
+  //the character we're using isn't 1 line-height big
+  .button-text { position: relative; top: rem(-0.4); }
+  &:hover { background-color: $txtColor; }
+}

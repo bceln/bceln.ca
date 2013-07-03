@@ -1,0 +1,192 @@
+/******************************************************************************
+
+    COGITO Wireframe Theme:
+
+    Basically just a few lines of presentation on top of Foundation.css to
+    bridge the gap between foundation and drupal CSS.
+
+
+    WARNING!!!! WE RECOMMEND THAT YOU NOT CHANGE ANYTHING IN THIS FILE OR EVEN
+    THIS FOLDER!!! USE A CHILD THEME! CHECK OUT README.TXT AND "STARTER-CHILD"
+    FOLDER FOR INSTRUCTIONS
+
+******************************************************************************/
+/* -----------------------------------------
+   Global CSS for Cogito
+----------------------------------------- */
+
+table {
+  width: 99%;
+}
+
+div.alert-box.success .krumo-root{
+color: black;
+text-shadow: none;
+}
+
+.page-admin .row {
+  width: 1300px;
+  max-width: 100%;
+  min-width: 767px;
+  margin: 0 auto;
+}
+
+.nav-bar { margin: 0 0 0 0;}
+
+.nav-bar > li.active a {
+  color: inherit;
+  cursor: default;
+}
+.nav-bar > li.active > a {
+ color: white;
+}
+.search-form .form-type-textfield{float: left;}
+
+/* -----------------------------------------
+   Breadcrumbs
+----------------------------------------- */
+#breadcrumb-row {
+  padding-bottom: 18px;
+}
+
+#breadcrumb-row #breadcrumb {
+  background-color: #f5f5f5;
+  padding: 7px 14px;
+  text-shadow: 0 1px 0 #ffffff;
+}
+
+#breadcrumb .divider {
+  color: #bfbfbf;
+  padding: 0 5px;
+}
+
+#breadcrumb .active a {
+  color: #404040;
+}
+
+/* -----------------------------------------
+   FIX THE ADMIN MENU
+----------------------------------------- */
+body.admin-menu {
+  position: static!important;
+}
+
+/* -----------------------------------------
+   Drupal Fixes for forms and autocomplete 
+   throbber
+----------------------------------------- */
+
+html.js input.form-autocomplete { background-position: 100% 12px; }
+form.custom span.custom.checkbox,
+
+form.custom span.custom.radio { margin-right: 5px;}
+
+form .control-label { 
+  font-weight: bold;
+  margin: 5px 0;
+  color: #333;
+}
+
+
+/* -----------------------------------------
+  OVERRIDES
+  Some of the admin doesn't play nice with
+  foundation so we need overrides
+  ----------------------------------------- */
+.views-admin .label,
+.context-plugin-form .label {
+  background: transparent;
+  bottom: auto;
+  color: #777;
+  display: inline;
+  font-weight: bold;
+  line-height: 2.0rem;
+  padding: 0;
+  position: static;
+  text-align: left;
+  text-decoration: none;
+  vertical-align: baseline;
+  white-space: normal;
+}
+
+
+/* -----------------------------------------
+   Mobile Menu
+----------------------------------------- */
+@media only screen and (max-width: 767px) {
+
+  body {
+    background: white;
+  }
+  #mobile-nav-trigger {
+    background-color: #000;
+    padding: 15px 0;
+  }
+  #mobile-nav-trigger a {
+    color: white;
+    margin: 13px 20px;
+    text-decoration: none;
+  }
+  #mobile-nav-trigger {
+    color: white;
+  }
+  #mobile-nav-trigger #menu-link:before {
+    content: "≡ ";
+    font-weight: normal;
+  }
+
+  #mobile-nav {
+    background-color: #fff;
+    top: 60px;
+  }
+
+  #mobile-nav ul {
+    margin-bottom: 0;
+  }
+
+  #mobile-nav li {
+    list-style-image: none;
+    list-style-type: none;
+    margin-bottom: 2px;
+  }
+
+  #mobile-nav li a {
+    background-color: #ddd;
+    display: block;
+    padding: 12px;
+    text-align: left;
+    text-decoration: none;
+  }
+  #mobile-nav li li a {
+    background-color: #eee;
+    margin-left: 16px;
+    margin-top: 2px;
+  }
+
+  #mobile-nav li a:focus,
+  #mobile-nav li a:hover {
+    background-color: #aaa;
+    color: black;
+  }
+
+  #mobile-nav li {
+    text-transform: uppercase;
+  }
+  #mobile-nav .close-reveal-modal {
+    background: #666;
+    border-radius: 15px;
+    -moz-border-radius: 15px;
+    -webkit-border-radius: 15px;
+    color: #fff;
+    cursor: pointer;
+    font-weight: bold;
+    line-height: .5;
+    padding: 3px 5px 9px 5px;
+    position: absolute;
+    right: -10px;
+    text-decoration: none;
+    text-shadow: 0 -1px 1px rbga(0,0,0,.6);
+    top: -10px;
+  }
+
+}

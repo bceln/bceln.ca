@@ -1,0 +1,10 @@
+name = "Content management filter"
+description = "This module adds an easier way for administrators to filter the content on a Drupal site for administration purposes."
+package = "Administration"
+core = 6.x
+; Information added by drupal.org packaging script on 2012-08-27
+version = "7.x-1.x-dev"
+core = "7.x"
+project = "cmf"
+datestamp = "1346026183"
+

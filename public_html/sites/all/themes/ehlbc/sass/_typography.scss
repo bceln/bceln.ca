@@ -1,0 +1,121 @@
+@import "settings";
+
+/********************************************
+
+  Let's talk about Type:
+
+  Anything to do with font size/face or colour
+  is in this file.
+
+********************************************/
+
+/* -----------------------------------------
+   Our Fonts
+----------------------------------------- */
+// @include font-face ( "s_regular", font-files('sourcesanspro-regular-webfont.woff', 'woff','sourcesanspro-regular-webfont.ttf', 'truetype', 'sourcesanspro-regular-webfont.svg', 'svg'), 'sourcesanspro-regular-webfont.eot');
+
+/* -----------------------------------------
+   Global Rules and the article type:
+
+   This is the core of the taxonomy of the 
+   site so we put it right up at the top
+
+   Everything else will derive from this
+----------------------------------------- */
+
+// ------- <Reusable types> ------- //
+
+a {
+  text-decoration: underline;
+  &:hover {}
+}
+
+
+// ------- </Reusable types> ------- //
+
+body, p {
+    font-family: minion-pro-1, minion-pro-2, Georgia, 'Times New Roman', serif;
+}
+
+h1#page-title{ 
+
+}
+
+article {
+  
+
+  #{headers(6)} {  }
+
+  h1 { }
+  h2 { 
+    font-size: 1.133em;
+    color: $secondaryColor;
+    font-weight: bold;
+  }
+  h3 { 
+    color: $mainColor;
+    font-size: 1em;
+    font-weight: bold;
+  }
+  h4 { }
+
+  blockquote {
+    p { }
+  }
+
+}
+
+
+
+/* -----------------------------------------
+   NAV typography:
+----------------------------------------- */
+nav {
+  ul.menu{
+    &>li.active-trail{
+      a { }
+    }
+    &>li:hover{
+      a { }
+    }
+  }
+  a { 
+    font: {    };
+  }
+  .flyout {
+    a {
+    }
+    a:hover{
+    }
+
+  }
+}
+
+ 
+/* -----------------------------------------
+   Block typography:
+----------------------------------------- */
+
+
+
+/* -----------------------------------------
+   UI Elements (pagination, breadcrumbs etc.)
+----------------------------------------- */
+
+ul.pagination {
+  li a{
+  }
+  li.current a{
+  }
+}
+
+#breadcrumb {
+  a {}
+}
+
+.more-link { 
+  a{ 
+    &:hover { }
+  }
+
+}
