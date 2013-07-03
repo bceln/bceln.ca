@@ -1,0 +1,292 @@
+@import "foundation/common/ratios"; 
+
+// Settings file containing Foundation defaults
+
+// Grid Settings
+
+// $rowWidth: 1000px;
+// $columnGutter: 30px;
+// $totalColumns: 12;
+// $mobileTotalColumns: 4;
+
+// Text Direction Settings
+
+// $textDirection: ltr; // Controls default global text direction, 'rtl' or 'ltr'
+
+// Colors Settings
+
+// $mainColor: #2ba6cb;
+// $secondaryColor: #e9e9e9;
+// $alertColor: #c60f13;
+// $successColor: #5da423;
+// $txtColor: #222;
+// $highlightColor: #ffff99;
+// $black: #000;
+// $white: #fff;
+// $shinyEdge: rgba(#fff, .5);
+// $darkEdge: rgba(#000, .2);
+
+// Typography Settings
+
+// $headerFontFamily: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+// $headerFontWeight: bold;
+// $headerFontColor: #222;
+// $bodyFontFamily: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+// $bodyFontWeight: normal;
+// $bodyFontColor: $txtColor;
+
+// Button Settings
+
+// $buttonRadius: 3px;
+// $btnBase: 10px;
+
+// $tinyBtnBase: $btnBase - 5;
+// $smallBtnBase: $btnBase - 3;
+// $largeBtnBase: $btnBase + 5;
+
+// Form Settings
+
+// $formSpacing: 12px;
+
+// Tab Settings
+
+// $tabHeight: 40px;
+
+// Nav Bar Settings
+
+// $navBarHeight: 40px;
+// $navFlyoutBaseWidth: 250px;
+
+// UI Settings
+
+// $thumbRadius: 3px;
+
+// $progBarHeight: 25px;
+// $progBarBorderColor: darken($white, 20%);
+// $progBarBorderSize: 1px;
+// $progBarPad: 2px;
+
+// Modular Scale
+
+// $ratio: $golden;
+// $baseFontSize: 12px;
+// $importantModNum: 24px;
+
+// Tooltip Settings
+
+// $hasTipBorderBottom: dotted 1px #ccc;
+// $hasTipFontWeight: bold;
+// $hasTipFontColor: #333;
+// $hasTipBorderBottomHover: dotted 1px darken($mainColor, 20%);
+// $hasTipFontColorHover: $mainColor;
+// $tooltipBackgroundColor: #000;
+// $tooltipBackgroundOpacity: 0.85;
+// $tooltipFontSize: 12;
+// $tooltipFontWeight: bold;
+// $tooltipFontColor: #fff;
+// $tapToCloseFontSize: 10;
+// $tapToCloseFontWeight: normal;
+// $tapToCloseFontColor: #888;
+// $tooltipFontSizeScreenSmall: 14;
+// $tooltipBackgroundOpacityScreenSmall: 0.85;
+
+// Top Bar Settings
+
+// $topBarBgColor: #222;
+// $topBarHeight: 45px;
+// $topBarBtmMargin: 30px;
+// $topBarTitleWeight: bold;
+// $topBarTitleSize: ms(1);
+// $topBarLinkColor: $white;
+// $topBarLinkWeight: bold;
+// $topBarLinkSize: ms(0) - 1;
+// $topBarDropToggleSize: 5px;
+// $topBarSearchWidth: 200px;
+// $topBarBreakPoint: 940px; // Change to 9999px for always mobile layout
+// $topBarNavToggleSize: 8px;
+
+
+/******************************************************************************
+
+    COGITO Wireframe Theme:
+
+    Basically just a few lines of presentation on top of Foundation.css to
+    bridge the gap between foundation and drupal CSS.
+
+
+    WARNING!!!! WE RECOMMEND THAT YOU NOT CHANGE ANYTHING IN THIS FILE OR EVEN
+    THIS FOLDER!!! USE A CHILD THEME! CHECK OUT README.TXT AND "STARTER-CHILD"
+    FOLDER FOR INSTRUCTIONS
+
+******************************************************************************/
+
+/* -----------------------------------------
+   Global CSS for Cogito
+----------------------------------------- */
+
+div.alert-box.success .krumo-root{
+color: black;
+text-shadow: none;
+}
+
+.page-admin .row {
+  width: 1300px;
+  max-width: 100%;
+  min-width: 767px;
+  margin: 0 auto;
+}
+
+.nav-bar { margin: 0 0 0 0;}
+
+.nav-bar > li.active a {
+  color: inherit;
+  cursor: default;
+}
+.nav-bar > li.active > a {
+ color: white;
+}
+.search-form .form-type-textfield{float: left;}
+
+/* -----------------------------------------
+   Breadcrumbs
+----------------------------------------- */
+#breadcrumb-row {
+  padding-bottom: 18px;
+
+  #breadcrumb {
+    background-color: #f5f5f5;
+    padding: 7px 14px;
+    text-shadow: 0 1px 0 #ffffff;
+
+    .active a {
+      color: #404040;
+    }
+
+    .divider {
+      color: #bfbfbf;
+      padding: 0 5px;
+    }
+  }
+}
+
+/* -----------------------------------------
+   FIX THE ADMIN MENU
+----------------------------------------- */
+body.admin-menu {
+  position: static!important;
+}
+
+/* -----------------------------------------
+   Drupal Fixes for forms and autocomplete 
+   throbber
+----------------------------------------- */
+
+html.js input.form-autocomplete { background-position: 100% 12px; }
+form.custom span.custom.checkbox,
+
+form.custom span.custom.radio { margin-right: 5px;}
+
+form .control-label { 
+  font-weight: bold;
+  margin: 5px 0;
+  color: #333;
+}
+
+
+/* -----------------------------------------
+  OVERRIDES
+  Some of the admin doesn't play nice with
+  foundation so we need overrides
+  ----------------------------------------- */
+.views-admin .label,
+.context-plugin-form .label {
+  background: transparent;
+  bottom: auto;
+  color: #777;
+  display: inline;
+  font-weight: bold;
+  line-height: 2.0rem;
+  padding: 0;
+  position: static;
+  text-align: left;
+  text-decoration: none;
+  vertical-align: baseline;
+  white-space: normal;
+}
+
+
+/* -----------------------------------------
+   Mobile Menu
+----------------------------------------- */
+@media only screen and (max-width: 767px) {
+
+  body {
+    background: white;
+  }
+
+  #mobile-nav-trigger { 
+    color: white;
+    background-color: #000;
+    padding: 15px 0;
+
+    #menu-link:before {
+      content: "≡ ";
+      font-weight: normal;
+    }
+    a {
+      color: white;
+      margin: 13px 20px;
+      text-decoration: none;
+    }
+  }
+
+
+  #mobile-nav {
+    background-color: #fff;
+    top: 60px; 
+    ul {
+      margin-bottom: 0;
+      li {
+        list-style-image: none;
+        list-style-type: none;
+        text-transform: uppercase;
+        margin-bottom: 2px;
+
+        a {
+          background-color: #ddd;
+          display: block;
+          padding: 12px;
+          text-align: left;
+          text-decoration: none;
+        }
+
+        a:focus, a:hover {
+          background-color: #aaa;
+          color: black;
+        }
+        li a {
+          background-color: #eee;
+          margin-left: 16px;
+          margin-top: 2px;
+        }
+      }
+    }
+    .close-reveal-modal {
+      background: #666;
+      border-radius: 15px;
+      -moz-border-radius: 15px;
+      -webkit-border-radius: 15px;
+      color: #fff;
+      cursor: pointer;
+      font-weight: bold;
+      line-height: .5;
+      padding: 3px 5px 9px 5px;
+      position: absolute;
+      right: -10px;
+      text-decoration: none;
+      text-shadow: 0 -1px 1px rbga(0,0,0,.6);
+      top: -10px;
+    }
+  }
+
+}
