@@ -1,6 +1,0 @@
-; $Id$
-name = "Custom Multimedia Filter"
-description = "Adds a custom filter to the Video Filter module."
-core = 6.x
-package = Raised Eyebrow Custom Modules
-dependencies[] = video_filter

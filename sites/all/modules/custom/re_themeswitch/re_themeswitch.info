@@ -1,6 +1,0 @@
-;$Id$
-name = "RE Theme Switch"
-description = "As context theme switching does not seem to work for node edit screen, I created a module that switched themes on Node Edit for Contact nodes."
-package = "Raised Eyebrow Custom Modules"
-core = 6.x
-version = 6.x-1.0

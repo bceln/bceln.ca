@@ -1,7 +1,0 @@
-;$Id$
-name = "RE Utilities"
-description = "Creating the Utilities Nav across the site"
-package = "Raised Eyebrow Custom Modules"
-core = 6.x
-php = 5
-version = 6.x-1.0
