@@ -43,7 +43,7 @@ function re_utilities_block_content() {
         array(
             'title' => t('Login'),
             'href' => 'user',
-            'attributes' => array('class' => 'login'),
+            'attributes' => array('class' => array('login')),
         ),
     );
   } 
@@ -62,12 +62,12 @@ function re_utilities_block_content() {
             array(
                 'title' => t('View Your Dashboard'),
                 'href' => drupal_get_path_alias('dashboard'),
-                'attributes' => array('class' => 'dashboard'),
+                'attributes' => array('class' => array('dashboard')),
             ),
             array(
                 'title' => t('Logout'),
                 'href' => 'user/logout',
-                'attributes' => array('class' => 'logout'),
+                'attributes' => array('class' => array('logout')),
             ),
         );
         break;
@@ -80,7 +80,7 @@ function re_utilities_block_content() {
     'attributes' => array('class' => 'search'),
   );
   
-  $variables = array('links' => $links, 'attributes' => array('class' => 'links inline'));
+  $variables = array('links' => $links, 'attributes' => array('class' => array('links', 'inline')));
   if (isset($user_name)) {
     $variables['heading'] = array( 'text' => 'Welcome ' . $user_name, 'level' => 'h3', 'class' => 'welcome' );
   }
@@ -124,7 +124,7 @@ function re_utilities_block_content() {
       array(
         'title' => t('Login'),
         'href' => 'user',
-        'attributes' => array('class' => 'login'),
+        'attributes' => array('class' => array('login')),
       ),
     );
   } else {
@@ -144,12 +144,12 @@ function re_utilities_block_content() {
           array(
             'title' => t('View Your Dashboard'),
             'href' => drupal_get_path_alias('dashboard'),
-            'attributes' => array('class' => 'dashboard'),
+            'attributes' => array('class' => array('dashboard')),
           ),
           array(
             'title' => t('Logout'),
             'href' => 'logout',
-            'attributes' => array('class' => 'logout'),
+            'attributes' => array('class' => array('logout')),
           ),
         );
         break;
@@ -161,7 +161,7 @@ function re_utilities_block_content() {
     'href' => drupal_get_path_alias('search'),
     'attributes' => array('class' => 'search'),
   );
-  $content .= theme('links', $links, array('class' => 'links inline'));
+  $content .= theme('links', $links, array('class' => array('links', 'inline')));
   return $content;
 }
 
