@@ -1,0 +1,12 @@
+name = ehlbc_rules
+description = Provides rules for the EHLBC website.
+core = 7.x
+package = Raised Eyebrow Custom Modules
+version = 7.x-0.1
+project = ehlbc_rules
+dependencies[] = entity
+dependencies[] = php
+dependencies[] = rules
+features[features_api][] = api:2
+features[rules_config][] = rules_force_profile_creation
+features[rules_config][] = rules_user_profile_reminder

@@ -1,0 +1,63 @@
+<?php
+/**
+ * @file
+ * Provides custom functions needed by the rules in ehlbc_rules.rules_defaults.
+ */
+
+/**
+ * This function returns FALSE if any of the defined fields contains absolutely
+ * anything. This is a very low threshhold for 'not empty', but it matches the
+ * previous D6 rule condition it replaces.
+ *
+ * @param object $account
+ *   Account object available during 'user has logged in' event in Rules.
+ * @return bool $empty_profile
+ *   Returns FALSE if any field contains anything, TRUE if none does.
+ */
+function ehlbc_rules_condition_profile_empty($account) {
+  // Load the profile--it seems there is ALWAYS a profile, even though its fields may all be empty:
+  $profile = profile2_load_by_user($account, 'contact');
+  // Fields we'll check for content in profile:
+  $fields = array(
+    'field_contact_last_name',
+    'field_contact_photo',
+    'field_organization_ref',
+    'field_contact_fax',
+    'field_contact_jobtitle',
+    'field_contact_phone',
+    'field_contact_first_name',
+  );
+  // Assume nothing (literally...)
+  $empty_profile = TRUE;
+  // Loop through the fields in question:
+  foreach ($fields as $field_name) {
+    // If this (field) array has more than zero items:
+    if (count($profile->{$field_name}) > 0) {
+      // Then the profile is not empty (this is a pretty darned low bar, but it seems to agree
+      // with the D6 version of this site...)
+      $empty_profile = FALSE;
+      // If the profile is not empty, break the loop--it's not going to get any MORE empty...
+      break;
+    }
+  }
+  // Return the boolean:
+  return $empty_profile;
+} // ehlbc_rules_condition_profile_empty()
+
+
+/**
+ * This function returns TRUE if the current user profile is over one year old.
+ * Note that since timestamps are numeric, the function tests if the account
+ * creation timesttamp is LESS THAN (i.e. older than) 'now - 1year'.
+ *
+ * @param object $account
+ *   Account object available during 'user has logged in' event in Rules.
+ * @return bool
+ *   Returns TRUE if the current account was created more than one year ago.
+ */
+function ehlbc_rules_condition_profile_over_one_year_old($account) {
+  // Returns whether account creation date is greater than or equal to one year
+  // ago (but timestamps are numeric, so the comparison operator is 'less-than':
+  return ($account->created < strtotime("-1 year", time()));
+} // ehlbc_rules_condition_profile_over_one_year_old()
+
