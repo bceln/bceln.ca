@@ -17,6 +17,7 @@ public_html/backup
 .cpanel/
 .dns
 .drush/
+.sass-cache/
 .ftpquota
 .gitconfig
 .htpasswds

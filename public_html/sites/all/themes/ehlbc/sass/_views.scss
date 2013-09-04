@@ -95,6 +95,11 @@
   .view-og-mytracker .row {
     color: #f68115;
   }
+
+  #content .view-Blog ul.row,
+  #content .view-events ul.row{
+    list-style: none;
+  }
   
     #content .view-Blog .views-field-title a,
     #content .view-events .views-field-title a,
@@ -105,6 +110,7 @@
       font-weight: bold;
       text-decoration: none;
       text-transform: none;
+      line-height: 1;
     }
 
     #content .view-events .views-field-title a {
@@ -312,6 +318,13 @@
 .view-trials th  {
   color: #2a2724;
   font-weight: bold;
+}
+
+.view-resources .view-header {
+  position: absolute;
+  top: 0;
+  right: 15px;
+  a.button { @include le-bouton; } 
 }
 
 
@@ -671,3 +684,83 @@ h2.pane-title {
 
 /* Recent Group Wiki Activity */
 
+/* Tabs Styles */
+
+.page-organizations dl.primary,
+.page-resources-databases dl.primary,
+.page-licenses dl.primary {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+.page-organizations dl.tabs.primary dd,
+.page-resources-databases dl.tabs.primary dd,
+.page-licenses dl.tabs.primary dd {
+  /* display: block; */
+  position: relative;
+  margin: -2px 0 0;
+}
+
+.page-organizations div.drupal_tabs,
+.page-resources-databases div.drupal_tabs,
+.page-licenses div.drupal_tabs {
+  border-top: 1px dotted #ddd;
+  border-bottom: 1px dotted #efefef;
+  background: transparent;
+  border-radius: 0;
+  overflow: hidden;
+  padding-top: 3px;
+  width: 689px;
+}
+
+
+.page-organizations dl.tabs.primary,
+.page-resources-databases dl.tabs.primary,
+.page-licenses dl.tabs.primary {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 0.867em; /* 13px relative to 15px */
+  float: left;
+  height: 40px;
+  margin-bottom: 5px;
+
+  padding: 0 0 7px 0;
+  position: relative;
+  width: 100%;
+}
+
+li.btn {
+  width: 168px;
+}
+
+
+.page-organizations dl.tabs.primary dd a,
+.page-resources-databases dl.tabs.primary dd a,
+.page-licenses dl.tabs.primary dd a {
+  background: none;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  border: none;
+  color: #9e9993;
+  float: left;
+  height: 40px;
+  margin: 2px 2px 0 0;
+  padding: 12px 10px 0;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.page-organizations dl.tabs.primary dd.active a,
+.page-resources-databases dl.tabs.primary dd.active a,
+.page-licenses dl.tabs.primary dd.active a {
+  background: #efefef;
+  color: #2a2724;
+}
+
+.page-organizations dl.tabs.primary dd a:hover,
+.page-resources-databases dl.tabs.primary dd a:hover,
+.page-licenses dl.tabs.primary dd a:hover {
+  background: #efefef;
+  color: #2a2724;
+}

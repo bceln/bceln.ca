@@ -33,12 +33,20 @@ a {
 
 // ------- </Reusable types> ------- //
 
+body{ color: #2a2724; }
+
 body, p {
     font-family: minion-pro-1, minion-pro-2, Georgia, 'Times New Roman', serif;
+    font-size: rem(1.5);
+    line-height: 1.385;
 }
 
 h1#page-title{ 
-
+  color: #18729d;
+  font-size: 2.267em;
+  font-weight: normal;
+  margin-top: 0;
+  padding: 0;
 }
 
 article {
@@ -63,9 +71,16 @@ article {
     p { }
   }
 
+  ul { 
+    padding-left: 40px;
+  }
+ 
 }
 
-
+aside p {
+  font-style: inherit;
+  font-size: rem(1.5);
+}
 
 /* -----------------------------------------
    NAV typography:

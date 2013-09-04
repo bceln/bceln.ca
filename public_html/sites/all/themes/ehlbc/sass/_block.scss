@@ -109,6 +109,17 @@
   padding: 0;
 }
 
+
+/* Front page access block */
+
+.front .node .entry-content h2 {
+  color: #18729d;
+  font-size: 1.333em; /* 20px relative to 15px */
+  padding-bottom: 20px;
+}
+
+
+
 /* Do I have Access Block */
 
 
@@ -128,8 +139,8 @@
   font-family: "minion-pro-1","minion-pro-2", Georgia, 'Times New Roman', serif;
   font-size: 1.00em; /* 18px relative to 15px */
   font-weight: bold;
-  height: 40px;
-  line-height: 1;
+  height: 50px;
+  line-height: 1.2;
   padding: 8px 20px 0;
   text-align: center;
   text-decoration: none;
@@ -153,7 +164,7 @@
 }
 
 .not-front #block-menu-block-1 li {
-  padding: 4px 20px 4px;
+  padding: 4px 0px 4px 20px;
   margin-left: -20px;
 }
 
@@ -316,22 +327,28 @@
 }
 
 /* Footer Text */
-
 #block-block-10 {
-  float:right;
+  display: block;
+  width: 75%;
+  float: right;
 }
 
 #block-block-10 p {
   color: #807b77;
   margin-bottom: 0.5em;
-  text-align: right;
+  text-align: left;
+}
+#block-block-10 p a{
+  text-decoration: none;
 }
 
 
 /* Footer menu */
 
 #block-menu-menu-footer {
-  float: left;
+  display: block;
+  width: 75%;
+  float: right;
 }
 
 
@@ -385,6 +402,7 @@
 
 #block-user-login label {
   font-family: Helvetica, Arial, sans-serif;
+  font-weight: bold;
 }
 
 #block-user-login .form-text {

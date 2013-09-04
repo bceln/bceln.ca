@@ -66,6 +66,12 @@
     border-bottom: 3px solid lighten($mainColor, 10%);
   }
 
+  ul.links {
+   list-style: none; 
+   padding-left: 0px;
+   .print_html { margin-left: 0; }
+  }
+
 /* -----------------------------------------
    Header / Footer & logo
 ----------------------------------------- */
@@ -119,49 +125,52 @@
   }
 
 
-/* -----------------------------------------
-   Sprites
------------------------------------------ */
 
-  // .social {
-  //   width: 30px; height: 30px;
-  //   overflow: hidden;
-  //   display: inline-block;
-  //   text-indent: -(999em);
-  //   margin-right: rem(0.5);
-  // }
+/* Tab styling */
+div.drupal_tabs {
+  background:#ddd; overflow:auto; margin:18px 0; padding:4px 2px;
+  -moz-border-radius:6px; -webkit-border-radius:6px;
+}
 
-  // .province {
-  //   width: 40px; height: 26px;
-  //   overflow: hidden;
-  //   display: inline-block;
-  //   text-indent: -(999em);
-  //   margin-right: rem(0.5);
-  // }
+  dl.tabs.primary,
+  dl.tabs.secondary {
+    border-style:none; margin:0; padding:0;
+  }
 
-  // //our social icons
-  // @each $social in facebook, twitter, youtube, this-site, googleplus {
-  //   $socialgreen: #{$social}_green;
-  //   $socialgrey: #{$social}_grey;
-  //   a.follow-link-#{$social} { 
-  //     @extend .social, .social-#{$social};
-  //     @include resize-sprite($social-sprites, $social, 42); 
-
-  //     //Something isn't working with the media queries. come back to this.
-  //     @include mq(2) {  @include resize-sprite($social-sprites, $social, 240);}
-  //   }
-  //   a.green-social.#{$social} {
-  //     @extend .social, .social-#{$socialgreen};
-  //     @include resize-sprite($social-sprites, $socialgreen, 42); 
-  //     //@include mq(2) {  @include resize-sprite($social-sprites, $social, 240);}
-  //   }
-  //   // Now hover colours:;
-  //   a.green-social.#{$social}, 
-  //   a.follow-link-#{$social} {
-  //     &:hover { 
-  //       @extend .social-#{$socialgrey};
-  //       @include resize-sprite($social-sprites, $socialgrey, 42); 
-  //     };
-  //   }
-  // }
+  dl.tabs.primary {
+    float:left;
+  }
+  
+    dl.tabs.primary dd {
+      display:inline;margin:0;padding:0;
+    }
+    
+      dl.tabs.primary dd a {
+        background:#fff;border-style:none;color:#877f77; display:block; font-weight:bold; float:left; margin:0 2px; padding:6px 12px; text-transform:uppercase;
+        -moz-border-radius:4px; -webkit-border-radius:4px;
+        text-decoration: none;
+      }
+      
+      dl.tabs.primary dd a:hover,
+      dl.tabs.primary dd a:active {
+        background:#877f77;
+        color:#fff;
+      }
+      
+      dl.tabs.primary dd.active a {
+        background:#877f77; color:#fff;
+      }
+      
+    dl.tabs.secondary {
+      border-top:1px solid #fff; clear:both; display:block; margin:0 2px; padding:0 0 4px 0; position:relative; top:4px;
+    }
+    
+      dl.tabs.secondary dd {
+        border-style:none; display:block; float:left; margin:0 !important; padding:6px 0;
+      }
+      
+        dl.tabs.secondary dd a {
+          border-bottom-style:none; border-right:1px solid #fff; display:block; float:left; font-weight:bold; margin-right:9px; padding:0 9px 0 0;
+        }
+        
 

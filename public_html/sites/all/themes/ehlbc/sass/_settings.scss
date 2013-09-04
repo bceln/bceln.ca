@@ -101,7 +101,7 @@ $btnBase: 10px;
   $tabHeight: $gutter;
 
 // Nav Bar Settings
-$navBarHeight: rem(3);
+$navBarHeight: rem(4);
 $navFlyoutBaseWidth: rem(23);
 
 // UI Settings
@@ -256,4 +256,25 @@ $importantModNum: 44px;
   //the character we're using isn't 1 line-height big
   .button-text { position: relative; top: rem(-0.4); }
   &:hover { background-color: $txtColor; }
+}
+
+
+@mixin le-bouton{
+  cursor: pointer;
+  padding: 4px 17px;
+  margin-bottom: 1em;
+  color: #5a5a5a;
+  display: inline-block;
+  text-align: center;
+  font-weight: normal;
+  font-size: 1.1em;
+  font-family: "Lucida Grande",Verdana,sans-serif;
+  border: 1px solid #e4e4e4;
+  border-bottom: 1px solid #b4b4b4;
+  border-left-color: #D2D2D2;
+  border-right-color: #D2D2D2;
+  background: url('/sites/all/themes/seven/images/buttons.png') 0 0 repeat-x;
+  border-radius: 15px;
+  -moz-border-radius: 20px;
+  -webkit-border-radius: 15px;
 }
