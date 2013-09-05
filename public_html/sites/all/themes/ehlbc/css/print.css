@@ -2809,47 +2809,106 @@ dl.tabs.secondary dd a {
   border-bottom: 1px solid #b4b4b4;
   border-left-color: #D2D2D2;
   border-right-color: #D2D2D2;
-  background: url("/sites/all/themes/seven/images/buttons.png") 0 0 repeat-x;
+  background: #ebebeb;
   border-radius: 15px;
   -moz-border-radius: 20px;
   -webkit-border-radius: 15px;
 }
 
+/* line 332, ../sass/_views.scss */
+.view-contacts .view-header a.button,
+.view-organizations .view-header a.button {
+  cursor: pointer;
+  padding: 4px 17px;
+  margin-bottom: 1em;
+  color: #5a5a5a;
+  display: inline-block;
+  text-align: center;
+  font-weight: normal;
+  font-size: 1.1em;
+  font-family: "Lucida Grande",Verdana,sans-serif;
+  border: 1px solid #e4e4e4;
+  border-bottom: 1px solid #b4b4b4;
+  border-left-color: #D2D2D2;
+  border-right-color: #D2D2D2;
+  background: #ebebeb;
+  border-radius: 15px;
+  -moz-border-radius: 20px;
+  -webkit-border-radius: 15px;
+}
+
+/* line 336, ../sass/_views.scss */
+.view-resources .views-exposed-form input.button,
+.view-contacts .views-exposed-form input.button {
+  cursor: pointer;
+  padding: 4px 17px;
+  margin-bottom: 1em;
+  color: #5a5a5a;
+  display: inline-block;
+  text-align: center;
+  font-weight: normal;
+  font-size: 1.1em;
+  font-family: "Lucida Grande",Verdana,sans-serif;
+  border: 1px solid #e4e4e4;
+  border-bottom: 1px solid #b4b4b4;
+  border-left-color: #D2D2D2;
+  border-right-color: #D2D2D2;
+  background: #ebebeb;
+  border-radius: 15px;
+  -moz-border-radius: 20px;
+  -webkit-border-radius: 15px;
+}
+
+/* line 338, ../sass/_views.scss */
+label.expand-btn {
+  position: absolute;
+  top: 1.2rem;
+  right: 0rem;
+  padding-right: 44px;
+  background: url("../images/resources-gear.png") no-repeat right 0px;
+  color: #8c8b89;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: bold;
+  height: 30px;
+  line-height: 30px;
+}
+
 /* Dashboard */
-/* line 333, ../sass/_views.scss */
+/* line 355, ../sass/_views.scss */
 #dashboard {
   margin-top: 36px;
 }
 
-/* line 337, ../sass/_views.scss */
+/* line 359, ../sass/_views.scss */
 .panel-3col-33 .panel-col {
   margin-right: 32px;
   width: 445px;
 }
 
-/* line 342, ../sass/_views.scss */
+/* line 364, ../sass/_views.scss */
 .panel-3col-33 .panel-col-first {
   margin-right: 30px;
   width: 221px;
 }
 
-/* line 347, ../sass/_views.scss */
+/* line 369, ../sass/_views.scss */
 .panel-3col-33 .panel-col-last {
   width: 221px;
 }
 
 /* Dashboard - col-first */
-/* line 353, ../sass/_views.scss */
+/* line 375, ../sass/_views.scss */
 .page-dashboard a {
   text-decoration: none;
 }
 
-/* line 357, ../sass/_views.scss */
+/* line 379, ../sass/_views.scss */
 #dashboard .panel-pane, #og-page .panel-pane {
   border: none;
 }
 
-/* line 361, ../sass/_views.scss */
+/* line 383, ../sass/_views.scss */
 h2.pane-title {
   color: #2a2724;
   font-size: 1.000em;
@@ -2857,7 +2916,7 @@ h2.pane-title {
 }
 
 /* Profile */
-/* line 368, ../sass/_views.scss */
+/* line 390, ../sass/_views.scss */
 #dashboard .pane-profile {
   background: #e0e0e0;
   border-bottom: 5px solid #c5c5c5;
@@ -2866,17 +2925,17 @@ h2.pane-title {
   margin-bottom: 30px;
 }
 
-/* line 376, ../sass/_views.scss */
+/* line 398, ../sass/_views.scss */
 #dashboard .pane-profile a {
   color: #18729d;
 }
 
-/* line 380, ../sass/_views.scss */
+/* line 402, ../sass/_views.scss */
 #dashboard .pane-profile h2 {
   display: none;
 }
 
-/* line 384, ../sass/_views.scss */
+/* line 406, ../sass/_views.scss */
 #dashboard .pane-profile h4 {
   color: #2a2724;
   font-size: 1.333em;
@@ -2886,29 +2945,29 @@ h2.pane-title {
   text-transform: none;
 }
 
-/* line 392, ../sass/_views.scss */
+/* line 414, ../sass/_views.scss */
 #dashboard .pane-profile .job-title {
   color: #f68115;
   font-family: Helvetica, Arial, sans-serif;
 }
 
-/* line 397, ../sass/_views.scss */
+/* line 419, ../sass/_views.scss */
 #dashboard .pane-profile .email {
   margin-top: 12px;
   word-wrap: break-word;
 }
 
-/* line 402, ../sass/_views.scss */
+/* line 424, ../sass/_views.scss */
 #dashboard .pane-profile .org {
   margin-bottom: 15px;
 }
 
-/* line 407, ../sass/_views.scss */
+/* line 429, ../sass/_views.scss */
 #dashboard .pane-profile .groups {
   margin-bottom: 15px;
 }
 
-/* line 411, ../sass/_views.scss */
+/* line 433, ../sass/_views.scss */
 #dashboard .pane-profile .edit-profile a {
   background: #939290;
   color: #fff;
@@ -2928,13 +2987,13 @@ h2.pane-title {
   text-transform: uppercase;
 }
 
-/* line 430, ../sass/_views.scss */
+/* line 452, ../sass/_views.scss */
 #dashboard .pane-profile img.imagefield {
   float: right;
 }
 
 /* My Event Signups */
-/* line 436, ../sass/_views.scss */
+/* line 458, ../sass/_views.scss */
 #dashboard .pane-signup-current-signups {
   background: #f68115;
   border-bottom: 5px solid #ff932f;
@@ -2943,7 +3002,7 @@ h2.pane-title {
   padding-left: 20px;
 }
 
-/* line 444, ../sass/_views.scss */
+/* line 466, ../sass/_views.scss */
 #dashboard .pane-signup-current-signups h2 {
   color: #fff;
   font-size: 1.000em;
@@ -2951,7 +3010,7 @@ h2.pane-title {
   margin: 20px 0 5px 0;
 }
 
-/* line 450, ../sass/_views.scss */
+/* line 472, ../sass/_views.scss */
 #dashboard .pane-signup-current-signups .item-list ul li {
   list-style: none;
   list-style-image: none;
@@ -2959,24 +3018,24 @@ h2.pane-title {
   padding-left: 0;
 }
 
-/* line 457, ../sass/_views.scss */
+/* line 479, ../sass/_views.scss */
 #dashboard .pane-signup-current-signups .views-field-title {
   font-size: 1.133em;
   /* 17px relative to 15px */
 }
 
-/* line 461, ../sass/_views.scss */
+/* line 483, ../sass/_views.scss */
 #dashboard .pane-signup-current-signups .views-field-title a {
   color: #fff;
 }
 
-/* line 465, ../sass/_views.scss */
+/* line 487, ../sass/_views.scss */
 #dashboard .pane-signup-current-signups .view-signup-current-signups {
   color: #fff;
 }
 
 /* My Colleagues */
-/* line 471, ../sass/_views.scss */
+/* line 493, ../sass/_views.scss */
 #dashboard .pane-colleagues {
   background: #f7f7f7;
   border-bottom: 5px solid #efefef;
@@ -2985,53 +3044,53 @@ h2.pane-title {
   word-wrap: break-word;
 }
 
-/* line 479, ../sass/_views.scss */
+/* line 501, ../sass/_views.scss */
 #dashboard .pane-colleagues h2 {
   margin: 20px 0 3px;
 }
 
-/* line 483, ../sass/_views.scss */
+/* line 505, ../sass/_views.scss */
 #dashboard .pane-colleagues .view-colleagues .view-content {
   font-size: 0.867em;
   /* 13px relative to 15px */
 }
 
-/* line 487, ../sass/_views.scss */
+/* line 509, ../sass/_views.scss */
 #dashboard .pane-colleagues .view-colleagues h4 {
   font-size: 1.000em;
   /* 15px relative to 15px */
 }
 
-/* line 491, ../sass/_views.scss */
+/* line 513, ../sass/_views.scss */
 #dashboard .pane-colleagues .view-colleagues h4 a {
   color: #2a2724;
 }
 
-/* line 495, ../sass/_views.scss */
+/* line 517, ../sass/_views.scss */
 #dashboard .pane-colleagues .view-colleagues .position {
   color: #939290;
 }
 
-/* line 499, ../sass/_views.scss */
+/* line 521, ../sass/_views.scss */
 #dashboard .pane-colleagues .view-colleagues .email a {
   color: #18729d;
 }
 
 /* Dashboard - Center Column */
 /* My Organization Resources */
-/* line 508, ../sass/_views.scss */
+/* line 530, ../sass/_views.scss */
 #dashboard .pane-resources h2 {
   background: url("../images/dashed-border.png") repeat-x 0 bottom;
   color: #18729d;
   padding-bottom: 10px;
 }
 
-/* line 515, ../sass/_views.scss */
+/* line 537, ../sass/_views.scss */
 #dashboard .pane-resources .view-resources .row {
   background: url("../images/dashed-border.png") repeat-x 0 bottom;
 }
 
-/* line 519, ../sass/_views.scss */
+/* line 541, ../sass/_views.scss */
 #dashboard .pane-resources .view-resources .row h4 {
   color: #2a2724;
   font-family: "minion-pro-1","minion-pro-2", Georgia, 'Times New Roman', serif;
@@ -3040,13 +3099,13 @@ h2.pane-title {
   font-weight: 300;
 }
 
-/* line 526, ../sass/_views.scss */
+/* line 548, ../sass/_views.scss */
 #dashboard .pane-resources .view-resources .row h4 a {
   color: #2a2724;
   text-transform: none;
 }
 
-/* line 532, ../sass/_views.scss */
+/* line 554, ../sass/_views.scss */
 #dashboard .pane-resources .more-link {
   background: #18729d;
   -moz-border-radius: 5px;
@@ -3069,7 +3128,7 @@ h2.pane-title {
 }
 
 /* Dashboard - My Groups */
-/* line 554, ../sass/_views.scss */
+/* line 576, ../sass/_views.scss */
 #dashboard .pane-og-my {
   background: #f7f7f7;
   border-bottom: 5px solid #efefef;
@@ -3077,18 +3136,18 @@ h2.pane-title {
   margin-bottom: 30px;
 }
 
-/* line 561, ../sass/_views.scss */
+/* line 583, ../sass/_views.scss */
 #dashboard .pane-og-my h2 {
   margin: 20px 0 4px 0;
   padding: 0 20px;
 }
 
-/* line 570, ../sass/_views.scss */
+/* line 592, ../sass/_views.scss */
 #dashboard .pane-og-my .view-empty {
   padding-left: 20px;
 }
 
-/* line 577, ../sass/_views.scss */
+/* line 599, ../sass/_views.scss */
 #dashboard .pane-og-my .view-og-my table,
 #dashboard .pane-og-my .view-og-my table th,
 #dashboard .pane-og-my .view-og-my table tr,
@@ -3097,7 +3156,7 @@ h2.pane-title {
   border: none;
 }
 
-/* line 582, ../sass/_views.scss */
+/* line 604, ../sass/_views.scss */
 #dashboard .pane-og-my .view-og-my table th {
   background: #e6e6e6;
   color: #939290;
@@ -3107,44 +3166,44 @@ h2.pane-title {
   text-transform: none;
 }
 
-/* line 590, ../sass/_views.scss */
+/* line 612, ../sass/_views.scss */
 #dashboard .pane-og-my .view-og-my th.views-field-member-count {
   padding-right: 10px;
 }
 
-/* line 595, ../sass/_views.scss */
+/* line 617, ../sass/_views.scss */
 #dashboard .pane-og-my .view-og-my table td {
   color: #18729d;
   padding-left: 20px;
 }
 
-/* line 600, ../sass/_views.scss */
+/* line 622, ../sass/_views.scss */
 #dashboard .pane-og-my .view-og-my table td a {
   color: #18729d;
 }
 
-/* line 605, ../sass/_views.scss */
+/* line 627, ../sass/_views.scss */
 #dashboard .pane-og-my .view-id-og_my {
   /* padding-left: 20px; */
 }
 
-/* line 609, ../sass/_views.scss */
+/* line 631, ../sass/_views.scss */
 #dashboard .pane-og-my .view-id-og_my .view-footer {
   height: 0px;
 }
 
-/* line 613, ../sass/_views.scss */
+/* line 635, ../sass/_views.scss */
 #og-page .pane-content {
   margin-left: 20px;
 }
 
 /* Recent Group Forum/Wiki Activity */
-/* line 620, ../sass/_views.scss */
+/* line 642, ../sass/_views.scss */
 .pane-og-which-gorups .view-content .row {
   padding-right: 20px;
 }
 
-/* line 627, ../sass/_views.scss */
+/* line 649, ../sass/_views.scss */
 #dashboard .pane-og-which-gorups,
 .node-type-group #og-page .pane-og-mytracker,
 .node-type-group #og-page .pane-events,
@@ -3156,7 +3215,7 @@ h2.pane-title {
   position: relative;
 }
 
-/* line 636, ../sass/_views.scss */
+/* line 658, ../sass/_views.scss */
 #dashboard .pane-og-which-gorups h2,
 #og-page h2.pane-title {
   line-height: 1.3em;
@@ -3164,7 +3223,7 @@ h2.pane-title {
   padding: 0 20px;
 }
 
-/* line 642, ../sass/_views.scss */
+/* line 664, ../sass/_views.scss */
 #dashboard .pane-og-which-gorups h3.group-title {
   background: #e6e6e6;
   font-size: 1em;
@@ -3174,26 +3233,26 @@ h2.pane-title {
   text-transform: none;
 }
 
-/* line 650, ../sass/_views.scss */
+/* line 672, ../sass/_views.scss */
 #dashboard .pane-og-which-gorups h3.group-title a {
   color: #939290;
   font-size: 0.867em;
   /* 13px relative to 15px */
 }
 
-/* line 655, ../sass/_views.scss */
+/* line 677, ../sass/_views.scss */
 #dashboard .pane-og-which-gorups .view-content .row {
   font-family: "minion-pro-1","minion-pro-2", Georgia, 'Times New Roman', serif;
   padding-left: 20px;
 }
 
-/* line 662, ../sass/_views.scss */
+/* line 684, ../sass/_views.scss */
 #dashboard .pane-og-which-gorups .view-content .first,
 .pane-og-mytracker .view-content .first {
   padding-top: 10px;
 }
 
-/* line 667, ../sass/_views.scss */
+/* line 689, ../sass/_views.scss */
 #dashboard .pane-og-which-gorups .view-content .row h4,
 .pane-og-mytracker .view-content .row h4 {
   font-family: "minion-pro-1","minion-pro-2", Georgia, 'Times New Roman', serif;
@@ -3202,14 +3261,14 @@ h2.pane-title {
   text-transform: none;
 }
 
-/* line 674, ../sass/_views.scss */
+/* line 696, ../sass/_views.scss */
 #dashboard .pane-og-which-gorups .view-content .row h4 a,
 .pane-og-mytracker .view-content .row h4 a {
   color: #18729d;
   font-weight: 400;
 }
 
-/* line 679, ../sass/_views.scss */
+/* line 701, ../sass/_views.scss */
 #dashboard .pane-og-which-gorups .view-content .row .updated {
   color: #939290;
   font-style: italic;
@@ -3219,7 +3278,7 @@ h2.pane-title {
 
 /* Recent Group Wiki Activity */
 /* Tabs Styles */
-/* line 691, ../sass/_views.scss */
+/* line 713, ../sass/_views.scss */
 .page-organizations dl.primary,
 .page-resources-databases dl.primary,
 .page-licenses dl.primary {
@@ -3228,7 +3287,7 @@ h2.pane-title {
   padding: 0;
 }
 
-/* line 699, ../sass/_views.scss */
+/* line 721, ../sass/_views.scss */
 .page-organizations dl.tabs.primary dd,
 .page-resources-databases dl.tabs.primary dd,
 .page-licenses dl.tabs.primary dd {
@@ -3237,7 +3296,7 @@ h2.pane-title {
   margin: -2px 0 0;
 }
 
-/* line 707, ../sass/_views.scss */
+/* line 729, ../sass/_views.scss */
 .page-organizations div.drupal_tabs,
 .page-resources-databases div.drupal_tabs,
 .page-licenses div.drupal_tabs {
@@ -3248,9 +3307,10 @@ h2.pane-title {
   overflow: hidden;
   padding-top: 3px;
   width: 689px;
+  position: relative;
 }
 
-/* line 720, ../sass/_views.scss */
+/* line 743, ../sass/_views.scss */
 .page-organizations dl.tabs.primary,
 .page-resources-databases dl.tabs.primary,
 .page-licenses dl.tabs.primary {
@@ -3265,12 +3325,12 @@ h2.pane-title {
   width: 100%;
 }
 
-/* line 732, ../sass/_views.scss */
+/* line 755, ../sass/_views.scss */
 li.btn {
   width: 168px;
 }
 
-/* line 739, ../sass/_views.scss */
+/* line 762, ../sass/_views.scss */
 .page-organizations dl.tabs.primary dd a,
 .page-resources-databases dl.tabs.primary dd a,
 .page-licenses dl.tabs.primary dd a {
@@ -3288,7 +3348,7 @@ li.btn {
   text-decoration: none;
 }
 
-/* line 756, ../sass/_views.scss */
+/* line 779, ../sass/_views.scss */
 .page-organizations dl.tabs.primary dd.active a,
 .page-resources-databases dl.tabs.primary dd.active a,
 .page-licenses dl.tabs.primary dd.active a {
@@ -3296,7 +3356,7 @@ li.btn {
   color: #2a2724;
 }
 
-/* line 763, ../sass/_views.scss */
+/* line 786, ../sass/_views.scss */
 .page-organizations dl.tabs.primary dd a:hover,
 .page-resources-databases dl.tabs.primary dd a:hover,
 .page-licenses dl.tabs.primary dd a:hover {

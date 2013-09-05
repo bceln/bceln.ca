@@ -327,6 +327,28 @@
   a.button { @include le-bouton; } 
 }
 
+.view-contacts .view-header,
+.view-organizations .view-header{
+  a.button { @include le-bouton; } 
+}
+
+.view-resources .views-exposed-form input.button,
+.view-contacts .views-exposed-form input.button{ @include le-bouton; } 
+
+label.expand-btn{
+  position: absolute;
+  top: 1.2rem;
+  right: 0rem;
+  padding-right: 44px;
+  background: url("../images/resources-gear.png") no-repeat right 0px;
+  color: #8c8b89;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: bold;
+  height: 30px;
+  line-height: 30px;
+}
+
 
 /* Dashboard */
 
@@ -712,6 +734,7 @@ h2.pane-title {
   overflow: hidden;
   padding-top: 3px;
   width: 689px;
+  position: relative;
 }
 
 

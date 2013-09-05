@@ -95,16 +95,13 @@
     attach: function(context) {
 
       // If the filter has already been used we need to make sure it's visible.
-      if ($(location).attr('search').search(new RegExp(/organization/i)) > 0) {
-        $('.view-resources .view-filters').slideToggle('400');
+      if ($(location).attr('search').search(new RegExp(/organization/i)) == -1) {
+        $('.view-resources .view-filters').hide();
       }
 
-      // if $('#views-exposed-form-resources-page-1').length > 0 {
+      $('#edit-organization-wrapper label').appendTo('.drupal_tabs').addClass('expand-btn');
 
-      $('<li />').addClass('btn').appendTo('ul.tabs');
-      $('#views-exposed-form-resources-page-1 label').appendTo('li.btn');
-
-      $('li.btn label').click(function() {
+      $('.expand-btn').click(function() {
         $('.view-resources .view-filters').slideToggle('400');
       });
     }
