@@ -69,6 +69,8 @@
 
       $('.login').click(function() {
         $lblock.slideToggle('200');
+            $('#edit-name').focus();
+            console.log('focus set');
         return false;
       });
 
