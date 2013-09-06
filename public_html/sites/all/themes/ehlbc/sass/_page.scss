@@ -121,39 +121,28 @@
 }
 
 /* -----------------------------------------
-   Resource Content Type
+   Content Types
 ----------------------------------------- */
 
 
 body.node-type-resource article{
   @extend .content-article;
-
   .row.field-group-table-group-license .columns{ @extend .four; }
   .row.field-group-table-group-vendor .columns{ @extend .four; }
   .row.field-group-table-group-resource-group .columns{ @extend .three; }
-
 }
-
-
-
-/* -----------------------------------------
-   Contact Content Type
------------------------------------------ */
 
 body.node-type-organization article{
   @extend .content-article;
-
   .row.field-group-table-group-info .columns{ @extend .four; }
-
 }
-
-/* -----------------------------------------
-   Contact Content Type
------------------------------------------ */
 
 body.node-type-license article{
   @extend .content-article;
-  
+}
+
+body.node-type-event article{
+  @extend .content-article;
 }
 
 /* -----------------------------------------
