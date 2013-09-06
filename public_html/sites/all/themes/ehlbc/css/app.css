@@ -4724,6 +4724,13 @@ aside p {
   font-size: 1.5rem;
 }
 
+/* line 92, ../sass/_typography.scss */
+#main section .block-title {
+  font-size: 1.133em;
+  color: #f68115;
+  font-weight: bold;
+}
+
 /* -----------------------------------------
    NAV typography:
 ----------------------------------------- */
@@ -5462,61 +5469,53 @@ ul.links .print_html {
 }
 
 /* -----------------------------------------
-   Resource Content Type
+   Generic content type formatting
 ----------------------------------------- */
-/* line 115, ../sass/_page.scss */
-body.node-type-resource article .columns:last-child {
+/* line 114, ../sass/_page.scss */
+.content-article .columns:last-child, body.node-type-resource article .columns:last-child, body.node-type-organization article .columns:last-child, body.node-type-license article .columns:last-child {
   float: left;
 }
-/* line 121, ../sass/_page.scss */
-body.node-type-resource article .field-item, body.node-type-resource article .row {
+/* line 116, ../sass/_page.scss */
+.content-article .field-item, body.node-type-resource article .field-item, body.node-type-organization article .field-item, body.node-type-license article .field-item, .content-article .row, body.node-type-resource article .row, body.node-type-organization article .row, body.node-type-license article .row {
   border-bottom: 1px dotted #ccc;
   margin-bottom: 2rem;
 }
-/* line 124, ../sass/_page.scss */
-body.node-type-resource article .field-item .field-item, body.node-type-resource article .row .field-item {
+/* line 119, ../sass/_page.scss */
+.content-article .field-item .field-item, body.node-type-resource article .field-item .field-item, body.node-type-organization article .field-item .field-item, body.node-type-license article .field-item .field-item, .content-article .row .field-item, body.node-type-resource article .row .field-item, body.node-type-organization article .row .field-item, body.node-type-license article .row .field-item {
   border-bottom: none;
 }
 
+/* -----------------------------------------
+   Resource Content Type
+----------------------------------------- */
 /* -----------------------------------------
    Contact Content Type
 ----------------------------------------- */
-/* line 138, ../sass/_page.scss */
-body.node-type-organization article .columns:last-child {
-  float: left;
-}
-/* line 142, ../sass/_page.scss */
-body.node-type-organization article .field-item, body.node-type-organization article .row {
-  border-bottom: 1px dotted #ccc;
-  margin-bottom: 2rem;
-}
-/* line 145, ../sass/_page.scss */
-body.node-type-organization article .field-item .field-item, body.node-type-organization article .row .field-item {
-  border-bottom: none;
-}
-
+/* -----------------------------------------
+   Contact Content Type
+----------------------------------------- */
 /* -----------------------------------------
    UI Elements
 ----------------------------------------- */
-/* line 158, ../sass/_page.scss */
+/* line 167, ../sass/_page.scss */
 #breadcrumb {
   height: 3rem;
   padding-top: 0.7rem;
   padding-left: 3rem;
 }
 
-/* line 164, ../sass/_page.scss */
+/* line 173, ../sass/_page.scss */
 ul.pagination {
   text-align: center;
 }
-/* line 166, ../sass/_page.scss */
+/* line 175, ../sass/_page.scss */
 ul.pagination li {
   float: none;
   display: inline-block;
 }
 
 /* Tab styling */
-/* line 175, ../sass/_page.scss */
+/* line 184, ../sass/_page.scss */
 div.drupal_tabs {
   background: #ddd;
   overflow: auto;
@@ -5526,7 +5525,7 @@ div.drupal_tabs {
   -webkit-border-radius: 6px;
 }
 
-/* line 181, ../sass/_page.scss */
+/* line 190, ../sass/_page.scss */
 dl.tabs.primary,
 dl.tabs.secondary {
   border-style: none;
@@ -5534,19 +5533,19 @@ dl.tabs.secondary {
   padding: 0;
 }
 
-/* line 185, ../sass/_page.scss */
+/* line 194, ../sass/_page.scss */
 dl.tabs.primary {
   float: left;
 }
 
-/* line 189, ../sass/_page.scss */
+/* line 198, ../sass/_page.scss */
 dl.tabs.primary dd {
   display: inline;
   margin: 0;
   padding: 0;
 }
 
-/* line 193, ../sass/_page.scss */
+/* line 202, ../sass/_page.scss */
 dl.tabs.primary dd a {
   background: #fff;
   border-style: none;
@@ -5562,20 +5561,20 @@ dl.tabs.primary dd a {
   text-decoration: none;
 }
 
-/* line 200, ../sass/_page.scss */
+/* line 209, ../sass/_page.scss */
 dl.tabs.primary dd a:hover,
 dl.tabs.primary dd a:active {
   background: #877f77;
   color: #fff;
 }
 
-/* line 205, ../sass/_page.scss */
+/* line 214, ../sass/_page.scss */
 dl.tabs.primary dd.active a {
   background: #877f77;
   color: #fff;
 }
 
-/* line 209, ../sass/_page.scss */
+/* line 218, ../sass/_page.scss */
 dl.tabs.secondary {
   border-top: 1px solid #fff;
   clear: both;
@@ -5586,7 +5585,7 @@ dl.tabs.secondary {
   top: 4px;
 }
 
-/* line 213, ../sass/_page.scss */
+/* line 222, ../sass/_page.scss */
 dl.tabs.secondary dd {
   border-style: none;
   display: block;
@@ -5595,7 +5594,7 @@ dl.tabs.secondary dd {
   padding: 6px 0;
 }
 
-/* line 217, ../sass/_page.scss */
+/* line 226, ../sass/_page.scss */
 dl.tabs.secondary dd a {
   border-bottom-style: none;
   border-right: 1px solid #fff;

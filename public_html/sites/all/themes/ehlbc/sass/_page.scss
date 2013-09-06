@@ -106,23 +106,31 @@
 
 
 /* -----------------------------------------
-   Resource Content Type
+   Generic content type formatting
 ----------------------------------------- */
 
-
-body.node-type-resource article{
+.content-article {
 
   .columns:last-child { float: left; }
-
-  .row.field-group-table-group-license .columns{ @extend .four; }
-  .row.field-group-table-group-vendor .columns{ @extend .four; }
-  .row.field-group-table-group-resource-group .columns{ @extend .three; }
 
   .field-item, .row{
     border-bottom: 1px dotted #ccc;
     margin-bottom: rem(2);
     .field-item{ border-bottom: none; }
   }
+}
+
+/* -----------------------------------------
+   Resource Content Type
+----------------------------------------- */
+
+
+body.node-type-resource article{
+  @extend .content-article;
+
+  .row.field-group-table-group-license .columns{ @extend .four; }
+  .row.field-group-table-group-vendor .columns{ @extend .four; }
+  .row.field-group-table-group-resource-group .columns{ @extend .three; }
 
 }
 
@@ -133,18 +141,19 @@ body.node-type-resource article{
 ----------------------------------------- */
 
 body.node-type-organization article{
-
-
-  .columns:last-child { float: left; }
+  @extend .content-article;
 
   .row.field-group-table-group-info .columns{ @extend .four; }
 
-  .field-item, .row{
-    border-bottom: 1px dotted #ccc;
-    margin-bottom: rem(2);
-    .field-item{ border-bottom: none; }
-  }
+}
 
+/* -----------------------------------------
+   Contact Content Type
+----------------------------------------- */
+
+body.node-type-license article{
+  @extend .content-article;
+  
 }
 
 /* -----------------------------------------
