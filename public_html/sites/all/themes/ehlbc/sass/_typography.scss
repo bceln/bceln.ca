@@ -74,17 +74,15 @@ article {
   ul { 
     padding-left: 40px;
   }
- 
-}
 
-body.node-type-resource article,
-body.node-type-contact article  {
   .field-label, label{
     font-size: 1.133em;
     color: $secondaryColor;
     font-weight: bold;
   }
+ 
 }
+
 
 aside p {
   font-style: inherit;

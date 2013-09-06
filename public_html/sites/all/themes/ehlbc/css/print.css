@@ -2079,17 +2079,14 @@ article h3 {
 article ul {
   padding-left: 40px;
 }
-
-/* line 82, ../sass/_typography.scss */
-body.node-type-resource article .field-label, body.node-type-resource article label,
-body.node-type-contact article .field-label,
-body.node-type-contact article label {
+/* line 78, ../sass/_typography.scss */
+article .field-label, article label {
   font-size: 1.133em;
   color: #f68115;
   font-weight: bold;
 }
 
-/* line 89, ../sass/_typography.scss */
+/* line 87, ../sass/_typography.scss */
 aside p {
   font-style: inherit;
   font-size: 1.5rem;
