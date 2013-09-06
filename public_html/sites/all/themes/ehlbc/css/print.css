@@ -2080,14 +2080,16 @@ article ul {
   padding-left: 40px;
 }
 
-/* line 81, ../sass/_typography.scss */
-body.node-type-resource article .field-label, body.node-type-resource article label {
+/* line 82, ../sass/_typography.scss */
+body.node-type-resource article .field-label, body.node-type-resource article label,
+body.node-type-contact article .field-label,
+body.node-type-contact article label {
   font-size: 1.133em;
   color: #f68115;
   font-weight: bold;
 }
 
-/* line 88, ../sass/_typography.scss */
+/* line 89, ../sass/_typography.scss */
 aside p {
   font-style: inherit;
   font-size: 1.5rem;
@@ -2172,38 +2174,43 @@ html, body {
 }
 
 /* line 51, ../sass/_page.scss */
+.three, body.node-type-resource article .row.field-group-table-group-resource-group .columns, .four, body.node-type-resource article .row.field-group-table-group-license .columns, body.node-type-resource article .row.field-group-table-group-vendor .columns, body.node-type-organization article .row.field-group-table-group-info .columns {
+  min-height: 1px;
+}
+
+/* line 53, ../sass/_page.scss */
 table {
   width: 100%;
   border: 1px solid #eee;
 }
 
-/* line 56, ../sass/_page.scss */
+/* line 58, ../sass/_page.scss */
 #access {
   position: relative;
 }
 
-/* line 60, ../sass/_page.scss */
+/* line 62, ../sass/_page.scss */
 #main {
   margin-top: 40px;
 }
 
-/* line 64, ../sass/_page.scss */
+/* line 66, ../sass/_page.scss */
 .access-outer {
   background: #18729d;
   border-bottom: 3px solid #1f92c9;
 }
 
-/* line 69, ../sass/_page.scss */
+/* line 71, ../sass/_page.scss */
 ul.links {
   list-style: none;
   padding-left: 0px;
 }
-/* line 72, ../sass/_page.scss */
+/* line 74, ../sass/_page.scss */
 ul.links .print_html {
   margin-left: 0;
 }
 
-/* line 75, ../sass/_page.scss */
+/* line 77, ../sass/_page.scss */
 .button {
   cursor: pointer;
   padding: 4px 17px;
@@ -2227,22 +2234,22 @@ ul.links .print_html {
 /* -----------------------------------------
    Header / Footer & logo
 ----------------------------------------- */
-/* line 81, ../sass/_page.scss */
+/* line 83, ../sass/_page.scss */
 .header-outer {
   background: url("../images/header-background.png") repeat;
 }
 
-/* line 85, ../sass/_page.scss */
+/* line 87, ../sass/_page.scss */
 #header-wrapper {
   background: url("../images/header-molecules4.png") no-repeat center top;
 }
 
-/* line 89, ../sass/_page.scss */
+/* line 91, ../sass/_page.scss */
 #logo {
   margin: 29px 0;
 }
 
-/* line 93, ../sass/_page.scss */
+/* line 95, ../sass/_page.scss */
 #footer {
   border-top: 2px dotted #ddd;
   margin-top: 20px;
@@ -2252,7 +2259,7 @@ ul.links .print_html {
 /* -----------------------------------------
    Common spacings
 ----------------------------------------- */
-/* line 103, ../sass/_page.scss */
+/* line 105, ../sass/_page.scss */
 #sidebar-right .block {
   margin-bottom: 3rem;
 }
@@ -2260,47 +2267,59 @@ ul.links .print_html {
 /* -----------------------------------------
    Resource Content Type
 ----------------------------------------- */
-/* line 109, ../sass/_page.scss */
-.three, body.node-type-resource article .row.field-group-table-group-resource-group .columns, .four, body.node-type-resource article .row.field-group-table-group-license .columns, body.node-type-resource article .row.field-group-table-group-vendor .columns {
-  min-height: 1px;
-}
-
-/* line 113, ../sass/_page.scss */
+/* line 115, ../sass/_page.scss */
 body.node-type-resource article .columns:last-child {
   float: left;
 }
-/* line 119, ../sass/_page.scss */
+/* line 121, ../sass/_page.scss */
 body.node-type-resource article .field-item, body.node-type-resource article .row {
   border-bottom: 1px dotted #ccc;
   margin-bottom: 2rem;
 }
-/* line 122, ../sass/_page.scss */
+/* line 124, ../sass/_page.scss */
 body.node-type-resource article .field-item .field-item, body.node-type-resource article .row .field-item {
+  border-bottom: none;
+}
+
+/* -----------------------------------------
+   Contact Content Type
+----------------------------------------- */
+/* line 138, ../sass/_page.scss */
+body.node-type-organization article .columns:last-child {
+  float: left;
+}
+/* line 142, ../sass/_page.scss */
+body.node-type-organization article .field-item, body.node-type-organization article .row {
+  border-bottom: 1px dotted #ccc;
+  margin-bottom: 2rem;
+}
+/* line 145, ../sass/_page.scss */
+body.node-type-organization article .field-item .field-item, body.node-type-organization article .row .field-item {
   border-bottom: none;
 }
 
 /* -----------------------------------------
    UI Elements
 ----------------------------------------- */
-/* line 137, ../sass/_page.scss */
+/* line 158, ../sass/_page.scss */
 #breadcrumb {
   height: 3rem;
   padding-top: 0.7rem;
   padding-left: 3rem;
 }
 
-/* line 143, ../sass/_page.scss */
+/* line 164, ../sass/_page.scss */
 ul.pagination {
   text-align: center;
 }
-/* line 145, ../sass/_page.scss */
+/* line 166, ../sass/_page.scss */
 ul.pagination li {
   float: none;
   display: inline-block;
 }
 
 /* Tab styling */
-/* line 154, ../sass/_page.scss */
+/* line 175, ../sass/_page.scss */
 div.drupal_tabs {
   background: #ddd;
   overflow: auto;
@@ -2310,7 +2329,7 @@ div.drupal_tabs {
   -webkit-border-radius: 6px;
 }
 
-/* line 160, ../sass/_page.scss */
+/* line 181, ../sass/_page.scss */
 dl.tabs.primary,
 dl.tabs.secondary {
   border-style: none;
@@ -2318,19 +2337,19 @@ dl.tabs.secondary {
   padding: 0;
 }
 
-/* line 164, ../sass/_page.scss */
+/* line 185, ../sass/_page.scss */
 dl.tabs.primary {
   float: left;
 }
 
-/* line 168, ../sass/_page.scss */
+/* line 189, ../sass/_page.scss */
 dl.tabs.primary dd {
   display: inline;
   margin: 0;
   padding: 0;
 }
 
-/* line 172, ../sass/_page.scss */
+/* line 193, ../sass/_page.scss */
 dl.tabs.primary dd a {
   background: #fff;
   border-style: none;
@@ -2346,20 +2365,20 @@ dl.tabs.primary dd a {
   text-decoration: none;
 }
 
-/* line 179, ../sass/_page.scss */
+/* line 200, ../sass/_page.scss */
 dl.tabs.primary dd a:hover,
 dl.tabs.primary dd a:active {
   background: #877f77;
   color: #fff;
 }
 
-/* line 184, ../sass/_page.scss */
+/* line 205, ../sass/_page.scss */
 dl.tabs.primary dd.active a {
   background: #877f77;
   color: #fff;
 }
 
-/* line 188, ../sass/_page.scss */
+/* line 209, ../sass/_page.scss */
 dl.tabs.secondary {
   border-top: 1px solid #fff;
   clear: both;
@@ -2370,7 +2389,7 @@ dl.tabs.secondary {
   top: 4px;
 }
 
-/* line 192, ../sass/_page.scss */
+/* line 213, ../sass/_page.scss */
 dl.tabs.secondary dd {
   border-style: none;
   display: block;
@@ -2379,7 +2398,7 @@ dl.tabs.secondary dd {
   padding: 6px 0;
 }
 
-/* line 196, ../sass/_page.scss */
+/* line 217, ../sass/_page.scss */
 dl.tabs.secondary dd a {
   border-bottom-style: none;
   border-right: 1px solid #fff;

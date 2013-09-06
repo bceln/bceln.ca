@@ -63,15 +63,14 @@ function ehlbc_preprocess_node(&$variables){
 
   global $user;
 
-  switch ($variables['type']) {
-    case 'resource':
-      if (!user_access('view field_private_note', $user)){
+      if (isset($variables['content']['field_private_note']) && !user_access('view field_private_note', $user)){
         hide($variables['content']['field_private_note']);
       }
 
+  switch ($variables['type']) {
+    case 'resource':
 
-      $variables['content']['field_resource_title_lists']['#formatter']['list'];
-      kpr($variables['content']);
+
       break;
 
   }
@@ -99,7 +98,7 @@ function ehlbc_preprocess_field(&$variables) {
  */
 function ehlbc_preprocess_field__field_resource_title_lists(&$variables){
 
-kpr($variables);
+
 // theme_item_list(array('items' => $variables['items'], 'title' => $variables['label'], 'type' => 'ul'));
 
 // 
