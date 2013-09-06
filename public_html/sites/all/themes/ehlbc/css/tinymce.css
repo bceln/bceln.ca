@@ -224,12 +224,12 @@ figure {
 }
 
 /* line 23, ../../../../../../../../../../Users/matthewreimer/.rbenv/versions/1.9.3-p286/lib/ruby/gems/1.9.1/gems/zurb-foundation-3.2.5/scss/foundation/components/_grid.scss */
-.three, .row .three {
+.three, .row .three, body.node-type-resource article .row.field-group-table-group-resource-group .columns, body.node-type-resource body#tinymce .row.field-group-table-group-resource-group .columns {
   width: 25%;
 }
 
 /* line 23, ../../../../../../../../../../Users/matthewreimer/.rbenv/versions/1.9.3-p286/lib/ruby/gems/1.9.1/gems/zurb-foundation-3.2.5/scss/foundation/components/_grid.scss */
-.four, .row .four {
+.four, .row .four, body.node-type-resource article .row.field-group-table-group-license .columns, body.node-type-resource body#tinymce .row.field-group-table-group-license .columns, body.node-type-resource article .row.field-group-table-group-vendor .columns, body.node-type-resource body#tinymce .row.field-group-table-group-vendor .columns {
   width: 33.33333%;
 }
 
@@ -1687,7 +1687,14 @@ article ul, body#tinymce ul {
   padding-left: 40px;
 }
 
-/* line 80, ../sass/_typography.scss */
+/* line 81, ../sass/_typography.scss */
+body.node-type-resource article .field-label, body.node-type-resource body#tinymce .field-label, body.node-type-resource article label, body.node-type-resource body#tinymce label {
+  font-size: 1.133em;
+  color: #f68115;
+  font-weight: bold;
+}
+
+/* line 88, ../sass/_typography.scss */
 aside p {
   font-style: inherit;
   font-size: 1.5rem;
@@ -1803,25 +1810,46 @@ ul.links .print_html {
   margin-left: 0;
 }
 
+/* line 75, ../sass/_page.scss */
+.button {
+  cursor: pointer;
+  padding: 4px 17px;
+  margin-bottom: 1em;
+  color: #5a5a5a;
+  display: inline-block;
+  text-align: center;
+  font-weight: normal;
+  font-size: 1.1em;
+  font-family: "Lucida Grande",Verdana,sans-serif;
+  border: 1px solid #e4e4e4;
+  border-bottom: 1px solid #b4b4b4;
+  border-left-color: #D2D2D2;
+  border-right-color: #D2D2D2;
+  background: #ebebeb;
+  border-radius: 15px;
+  -moz-border-radius: 20px;
+  -webkit-border-radius: 15px;
+}
+
 /* -----------------------------------------
    Header / Footer & logo
 ----------------------------------------- */
-/* line 79, ../sass/_page.scss */
+/* line 81, ../sass/_page.scss */
 .header-outer {
   background: url("../images/header-background.png") repeat;
 }
 
-/* line 83, ../sass/_page.scss */
+/* line 85, ../sass/_page.scss */
 #header-wrapper {
   background: url("../images/header-molecules4.png") no-repeat center top;
 }
 
-/* line 87, ../sass/_page.scss */
+/* line 89, ../sass/_page.scss */
 #logo {
   margin: 29px 0;
 }
 
-/* line 91, ../sass/_page.scss */
+/* line 93, ../sass/_page.scss */
 #footer {
   border-top: 2px dotted #ddd;
   margin-top: 20px;
@@ -1831,33 +1859,55 @@ ul.links .print_html {
 /* -----------------------------------------
    Common spacings
 ----------------------------------------- */
-/* line 101, ../sass/_page.scss */
+/* line 103, ../sass/_page.scss */
 #sidebar-right .block {
   margin-bottom: 3rem;
 }
 
 /* -----------------------------------------
+   Resource Content Type
+----------------------------------------- */
+/* line 109, ../sass/_page.scss */
+.three, .row .three, body.node-type-resource article .row.field-group-table-group-resource-group .columns, body.node-type-resource body#tinymce .row.field-group-table-group-resource-group .columns, .four, .row .four, body.node-type-resource article .row.field-group-table-group-license .columns, body.node-type-resource body#tinymce .row.field-group-table-group-license .columns, body.node-type-resource article .row.field-group-table-group-vendor .columns, body.node-type-resource body#tinymce .row.field-group-table-group-vendor .columns {
+  min-height: 1px;
+}
+
+/* line 113, ../sass/_page.scss */
+body.node-type-resource article .columns:last-child, body.node-type-resource body#tinymce .columns:last-child {
+  float: left;
+}
+/* line 119, ../sass/_page.scss */
+body.node-type-resource article .field-item, body.node-type-resource body#tinymce .field-item, body.node-type-resource article .row, body.node-type-resource body#tinymce .row {
+  border-bottom: 1px dotted #ccc;
+  margin-bottom: 2rem;
+}
+/* line 122, ../sass/_page.scss */
+body.node-type-resource article .field-item .field-item, body.node-type-resource body#tinymce .field-item .field-item, body.node-type-resource article .row .field-item, body.node-type-resource body#tinymce .row .field-item {
+  border-bottom: none;
+}
+
+/* -----------------------------------------
    UI Elements
 ----------------------------------------- */
-/* line 113, ../sass/_page.scss */
+/* line 137, ../sass/_page.scss */
 #breadcrumb {
   height: 3rem;
   padding-top: 0.7rem;
   padding-left: 3rem;
 }
 
-/* line 119, ../sass/_page.scss */
+/* line 143, ../sass/_page.scss */
 ul.pagination {
   text-align: center;
 }
-/* line 121, ../sass/_page.scss */
+/* line 145, ../sass/_page.scss */
 ul.pagination li {
   float: none;
   display: inline-block;
 }
 
 /* Tab styling */
-/* line 130, ../sass/_page.scss */
+/* line 154, ../sass/_page.scss */
 div.drupal_tabs {
   background: #ddd;
   overflow: auto;
@@ -1867,7 +1917,7 @@ div.drupal_tabs {
   -webkit-border-radius: 6px;
 }
 
-/* line 136, ../sass/_page.scss */
+/* line 160, ../sass/_page.scss */
 dl.tabs.primary,
 dl.tabs.secondary {
   border-style: none;
@@ -1875,19 +1925,19 @@ dl.tabs.secondary {
   padding: 0;
 }
 
-/* line 140, ../sass/_page.scss */
+/* line 164, ../sass/_page.scss */
 dl.tabs.primary {
   float: left;
 }
 
-/* line 144, ../sass/_page.scss */
+/* line 168, ../sass/_page.scss */
 dl.tabs.primary dd {
   display: inline;
   margin: 0;
   padding: 0;
 }
 
-/* line 148, ../sass/_page.scss */
+/* line 172, ../sass/_page.scss */
 dl.tabs.primary dd a {
   background: #fff;
   border-style: none;
@@ -1903,20 +1953,20 @@ dl.tabs.primary dd a {
   text-decoration: none;
 }
 
-/* line 155, ../sass/_page.scss */
+/* line 179, ../sass/_page.scss */
 dl.tabs.primary dd a:hover,
 dl.tabs.primary dd a:active {
   background: #877f77;
   color: #fff;
 }
 
-/* line 160, ../sass/_page.scss */
+/* line 184, ../sass/_page.scss */
 dl.tabs.primary dd.active a {
   background: #877f77;
   color: #fff;
 }
 
-/* line 164, ../sass/_page.scss */
+/* line 188, ../sass/_page.scss */
 dl.tabs.secondary {
   border-top: 1px solid #fff;
   clear: both;
@@ -1927,7 +1977,7 @@ dl.tabs.secondary {
   top: 4px;
 }
 
-/* line 168, ../sass/_page.scss */
+/* line 192, ../sass/_page.scss */
 dl.tabs.secondary dd {
   border-style: none;
   display: block;
@@ -1936,7 +1986,7 @@ dl.tabs.secondary dd {
   padding: 6px 0;
 }
 
-/* line 172, ../sass/_page.scss */
+/* line 196, ../sass/_page.scss */
 dl.tabs.secondary dd a {
   border-bottom-style: none;
   border-right: 1px solid #fff;

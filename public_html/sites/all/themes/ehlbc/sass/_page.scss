@@ -72,6 +72,8 @@
    .print_html { margin-left: 0; }
   }
 
+  .button { @include le-bouton; }
+
 /* -----------------------------------------
    Header / Footer & logo
 ----------------------------------------- */
@@ -99,6 +101,28 @@
 ----------------------------------------- */
 
   #sidebar-right .block { margin-bottom: $gutter; }
+
+
+/* -----------------------------------------
+   Resource Content Type
+----------------------------------------- */
+.three, .four{ min-height: 1px; }
+
+body.node-type-resource article{
+
+  .columns:last-child { float: left; }
+
+  .row.field-group-table-group-license .columns{ @extend .four; }
+  .row.field-group-table-group-vendor .columns{ @extend .four; }
+  .row.field-group-table-group-resource-group .columns{ @extend .three; }
+
+  .field-item, .row{
+    border-bottom: 1px dotted #ccc;
+    margin-bottom: rem(2);
+    .field-item{ border-bottom: none; }
+  }
+
+}
 
 
 

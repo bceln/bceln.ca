@@ -77,6 +77,14 @@ article {
  
 }
 
+body.node-type-resource article {
+  .field-label, label{
+    font-size: 1.133em;
+    color: $secondaryColor;
+    font-weight: bold;
+  }
+}
+
 aside p {
   font-style: inherit;
   font-size: rem(1.5);

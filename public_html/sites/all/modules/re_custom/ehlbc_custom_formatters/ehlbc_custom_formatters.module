@@ -1,0 +1,101 @@
+<?php
+
+/**
+ * hook_field_group_formatter_info().
+ */
+function ehlbc_custom_formatters_field_group_formatter_info(){
+  return array(
+    'display' => array(
+      'f_row' => array(
+        'label' => t('Foundation Row'),
+        'description' => t('This fieldgroup renders the field labels and values as foundation rows'),
+        'format_types' => array('f_row'),
+        'instance_settings' => array('classes' => ''),
+        'default_formatter' => 'f_row',
+      ),
+  ));
+}
+
+
+/**
+ * Implements hook_field_group_pre_render().
+ * 
+ * @param Array $elements by address.
+ * @param Object $group The Field group info.
+ */
+function ehlbc_custom_formatters_field_group_pre_render(&$element, $group, &$form) {
+
+  switch ($group->format_type) {
+    // Table formatter
+    case 'f_row':
+      
+      // Sanity check, check group has field elements
+      if ( ! is_array($element) || ! count($element) ) return FALSE;
+      // Sort the grouped fields by #weight
+      uasort($element, 'element_sort');
+      // Build table options
+      $options = array();
+
+      // Two column header, value is group label
+      // $options['header'] = array();
+      // $options['header'][] = array(
+      //   'data' => $group->label ? check_plain(t($group->label)) : '',
+      //   'colspan' => 2
+      // );
+
+      $columns = array();
+
+
+      // Loop over group elements and add to table rows
+      foreach ($element as $field_name => $field) {
+
+        $columns[] = array(
+          'data' =>  render($field),
+          'class' => array('field-value-' . drupal_html_class($field_name)),
+        );
+
+
+      }
+      // Finish off table options
+
+      $options['columns'] = $columns;
+
+      // Build element merge array
+      $row_class = 'field-group-table-' . drupal_html_class($group->group_name);
+      $field = array(
+        '#type' => 'markup',
+        '#prefix' => "<div class='row $row_class'>",
+        '#markup' => theme('ehlbc_foundation_rows', $options),
+        '#suffix' => '</div>',
+        '#weight' => $group->weight,
+      );
+      // Merge our table into the element
+      $element += $field;
+
+      break;
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function ehlbc_custom_formatters_theme() {
+  return array(
+    'ehlbc_foundation_rows' => array(),
+  );
+} // re_hours_theme()
+
+
+/**
+ * 
+ */
+function theme_ehlbc_foundation_rows($variables) {
+
+  foreach ($variables['columns'] as $key => $col) {
+    $output .= "<div class='columns'>". $col['data']. "</div>";
+  }
+
+
+  return $output; 
+} // theme_re_hours_default_hours()
+

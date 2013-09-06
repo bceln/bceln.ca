@@ -1,0 +1,4 @@
+name = "ehlbc_custom_formatters"
+description = "Custom formatters for different content types"
+core = 7.x
+files[] = ehlbc_custom_formatters.module

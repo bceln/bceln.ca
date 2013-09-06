@@ -56,3 +56,52 @@ function ehlbc_preprocess_views_view(&$variables) {
   }
 } // ehlbc_preprocess_views_view()
 
+
+
+
+function ehlbc_preprocess_node(&$variables){
+
+  global $user;
+
+  switch ($variables['type']) {
+    case 'resource':
+      if (!user_access('view field_private_note', $user)){
+        hide($variables['content']['field_private_note']);
+      }
+
+
+      $variables['content']['field_resource_title_lists']['#formatter']['list'];
+      kpr($variables['content']);
+      break;
+
+  }
+}
+
+
+
+/**
+ * Implements theme_preprocess_field().
+ * This way we can theme any field with its own function
+ */
+function ehlbc_preprocess_field(&$variables) {
+  //Allow for separate theming functions
+
+  $function = 'ehlbc_preprocess_field__'. $variables['element']['#field_name'];
+  if(function_exists($function)) {
+    $function($variables);
+  }
+}
+
+
+/**
+ * Implements theme_preprocess_field().
+ * This way we can theme any field with its own function
+ */
+function ehlbc_preprocess_field__field_resource_title_lists(&$variables){
+
+kpr($variables);
+// theme_item_list(array('items' => $variables['items'], 'title' => $variables['label'], 'type' => 'ul'));
+
+// 
+
+}
