@@ -10,6 +10,43 @@
 
 
 /**
+ * Implements template_preprocess_field().
+ * This way we can theme any field with its own function
+ */
+function ehlbc_preprocess_field(&$variables) {
+  // Allow for separate theming functions
+  $function = 'ehlbc_preprocess_field__' . $variables['element']['#field_name'];
+  if(function_exists($function)) {
+    $function($variables);
+  }
+} // ehlbc_preprocess_field()
+
+
+/**
+ * Implements template_preprocess_field() for field_resource_title_lists().
+ */
+function ehlbc_preprocess_field__field_resource_title_lists(&$variables){
+// theme_item_list(array('items' => $variables['items'], 'title' => $variables['label'], 'type' => 'ul'));
+// 
+} // ehlbc_preprocess_field__field_resource_title_lists()
+
+
+/**
+ * Implements template_preprocess_node().
+ */
+function ehlbc_preprocess_node(&$variables){
+  global $user;
+  if (isset($variables['content']['field_private_note']) && !user_access('view field_private_note', $user)){
+    hide($variables['content']['field_private_note']);
+  }
+  switch ($variables['type']) {
+    case 'resource':
+      break;
+  }
+} // ehlbc_preprocess_node()
+
+
+/**
  * Implements template_preprocess_page().
  */
 function ehlbc_preprocess_page(&$variables) {
@@ -56,51 +93,3 @@ function ehlbc_preprocess_views_view(&$variables) {
   }
 } // ehlbc_preprocess_views_view()
 
-
-
-
-function ehlbc_preprocess_node(&$variables){
-
-  global $user;
-
-      if (isset($variables['content']['field_private_note']) && !user_access('view field_private_note', $user)){
-        hide($variables['content']['field_private_note']);
-      }
-
-  switch ($variables['type']) {
-    case 'resource':
-
-
-      break;
-
-  }
-}
-
-
-
-/**
- * Implements theme_preprocess_field().
- * This way we can theme any field with its own function
- */
-function ehlbc_preprocess_field(&$variables) {
-  //Allow for separate theming functions
-
-  $function = 'ehlbc_preprocess_field__'. $variables['element']['#field_name'];
-  if(function_exists($function)) {
-    $function($variables);
-  }
-}
-
-
-/**
- * Implements theme_preprocess_field().
- * This way we can theme any field with its own function
- */
-function ehlbc_preprocess_field__field_resource_title_lists(&$variables){
-
-
-// theme_item_list(array('items' => $variables['items'], 'title' => $variables['label'], 'type' => 'ul'));
-
-// 
-
-}
