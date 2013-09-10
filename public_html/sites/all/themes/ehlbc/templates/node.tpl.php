@@ -10,7 +10,7 @@
 ?>
 <article id="node-<?php print $node->nid; ?>" class=" <?php print $classes; ?>"<?php print $attributes; ?>>
 
-  <?php if ($user_picture || !$page || $display_submitted): ?>
+  <?php if ($user_picture || !$page): ?>
     <header class="entry-header">
       <?php print $user_picture; ?>
 
@@ -59,4 +59,7 @@
 
   <?php print render($content['comments']); ?>
 
+  <?php if ($display_submitted): ?>
+  <p class="submitted"><?php print t('Last Updated %datetime', array('%datetime' => $date)); ?></p>
+  <?php endif; ?>
 </article>
