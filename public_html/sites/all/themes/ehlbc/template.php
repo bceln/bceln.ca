@@ -32,6 +32,17 @@ function ehlbc_preprocess_field__field_resource_title_lists(&$variables){
 
 
 /**
+ *
+ */
+function ehlbc_preprocess_field__field_resources_generic_url(&$variables) {
+  // There's a help message as part of the field--insert it here:
+  $variables['items'][0]['#suffix'] = '<div class="help">'
+             . l(t("Why can't I connect to the database?"), 'node/114')
+             . '</div>';
+} // ehlbc_preprocess_field__field_resources_generic_url()
+
+
+/**
  * Implements template_preprocess_node().
  */
 function ehlbc_preprocess_node(&$variables){
@@ -41,6 +52,7 @@ function ehlbc_preprocess_node(&$variables){
   }
   switch ($variables['type']) {
     case 'resource':
+
       break;
   }
 } // ehlbc_preprocess_node()
