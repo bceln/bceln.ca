@@ -4,6 +4,7 @@
  * hook_field_group_formatter_info().
  */
 function ehlbc_custom_formatters_field_group_formatter_info(){
+  kpr('ehlbc_custom_formatters_field_group_formatter_info() read!');
   return array(
     'display' => array(
       'f_row' => array(
@@ -24,11 +25,9 @@ function ehlbc_custom_formatters_field_group_formatter_info(){
  * @param Object $group The Field group info.
  */
 function ehlbc_custom_formatters_field_group_pre_render(&$element, $group, &$form) {
-
   switch ($group->format_type) {
     // Table formatter
     case 'f_row':
-      
       // Sanity check, check group has field elements
       if ( ! is_array($element) || ! count($element) ) return FALSE;
       // Sort the grouped fields by #weight
@@ -44,20 +43,15 @@ function ehlbc_custom_formatters_field_group_pre_render(&$element, $group, &$for
       // );
 
       $columns = array();
-
-
       // Loop over group elements and add to table rows
       foreach ($element as $field_name => $field) {
-
         $columns[] = array(
           'data' =>  render($field),
           'class' => array('field-value-' . drupal_html_class($field_name)),
         );
-
-
       }
-      // Finish off table options
 
+      // Finish off table options
       $options['columns'] = $columns;
 
       // Build element merge array
@@ -83,19 +77,32 @@ function ehlbc_custom_formatters_theme() {
   return array(
     'ehlbc_foundation_rows' => array(),
   );
-} // re_hours_theme()
+} // ehlbc_custom_formatters_theme()
 
 
 /**
  * 
  */
 function theme_ehlbc_foundation_rows($variables) {
-
+  $column_sizes = array(
+    0 => 'one',
+    1 => 'two',
+    2 => 'three',
+    3 => 'four',
+    4 => 'five',
+    5 => 'six',
+    6 => 'seven',
+    7 => 'eight',
+    8 => 'nine',
+    9 => 'ten',
+    10 => 'eleven',
+    11 => 'twelve',
+  );
+  $total_columns = count($variables['columns']);
+  $column_size = floor(12 / $total_columns);
   foreach ($variables['columns'] as $key => $col) {
-    $output .= "<div class='columns'>". $col['data']. "</div>";
+    $output .= '<div class="columns ' . $column_sizes[$column_size - 1] . '">' . $col['data'] . '</div>';
   }
-
-
   return $output; 
-} // theme_re_hours_default_hours()
+} // theme_ehlbc_foundation_rows()
 
