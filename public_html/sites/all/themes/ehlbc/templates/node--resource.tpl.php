@@ -40,7 +40,6 @@
       // Hide specific elements for this content type:
       hide($content['field_resources_generic_url']);
       hide($content['field_resources_license']);
-      //dpm($content);
     ?>
 
     <?php /* field_resources_generic_url */ ?>

@@ -4,17 +4,24 @@
  * hook_field_group_formatter_info().
  */
 function ehlbc_custom_formatters_field_group_formatter_info(){
-  kpr('ehlbc_custom_formatters_field_group_formatter_info() read!');
-  return array(
-    'display' => array(
-      'f_row' => array(
-        'label' => t('Foundation Row'),
-        'description' => t('This fieldgroup renders the field labels and values as foundation rows'),
-        'format_types' => array('f_row'),
-        'instance_settings' => array('classes' => ''),
-        'default_formatter' => 'f_row',
+  $info['display'] = array(
+    'f_row' => array(
+      'description' => t('This fieldgroup renders the field labels and values as foundation rows'),
+      'instance_settings' => array(
+        'label_element' => 'h2',
       ),
-  ));
+      'label' => t('Foundation Row'),
+    ),
+    'simple_div' => array(
+      'description' => t('This fieldgroup renders the enclosed fields in a simple div'),
+      'instance_settings' => array(
+        'label_element' => 'h2',
+      ),
+      'label' => t('Simple Div'),
+    ),
+  );
+  $info['form'] = $info['display'];
+  return $info;
 }
 
 
@@ -25,47 +32,51 @@ function ehlbc_custom_formatters_field_group_formatter_info(){
  * @param Object $group The Field group info.
  */
 function ehlbc_custom_formatters_field_group_pre_render(&$element, $group, &$form) {
+  // Sanity check, check group has field elements:
+  if (!is_array($element) || !count($element)) {
+    return FALSE;
+  }
+  // Sort the grouped fields by #weight:
+  uasort($element, 'element_sort');
   switch ($group->format_type) {
-    // Table formatter
+    // Foundation row:
     case 'f_row':
-      // Sanity check, check group has field elements
-      if ( ! is_array($element) || ! count($element) ) return FALSE;
-      // Sort the grouped fields by #weight
-      uasort($element, 'element_sort');
-      // Build table options
-      $options = array();
-
-      // Two column header, value is group label
-      // $options['header'] = array();
-      // $options['header'][] = array(
-      //   'data' => $group->label ? check_plain(t($group->label)) : '',
-      //   'colspan' => 2
-      // );
-
+      // Build options:
       $columns = array();
-      // Loop over group elements and add to table rows
+      // Loop over group elements columns:
       foreach ($element as $field_name => $field) {
         $columns[] = array(
           'data' =>  render($field),
           'class' => array('field-value-' . drupal_html_class($field_name)),
         );
       }
-
-      // Finish off table options
-      $options['columns'] = $columns;
-
-      // Build element merge array
-      $row_class = 'field-group-table-' . drupal_html_class($group->group_name);
+      // Build element merge array:
       $field = array(
-        '#type' => 'markup',
-        '#prefix' => "<div class='row $row_class'>",
-        '#markup' => theme('ehlbc_foundation_rows', $options),
+        '#markup' => theme('ehlbc_foundation_rows', array('columns' => $columns)),
+        '#prefix' => '<div class="row field-group-f-row-' . drupal_html_class($group->group_name) . '">',
         '#suffix' => '</div>',
+        '#type' => 'markup',
         '#weight' => $group->weight,
       );
-      // Merge our table into the element
+      // Merge our row into the element:
       $element += $field;
-
+      break;
+    case 'simple_div':
+      $fields = array();
+      foreach ($element as $field_name => $field) {
+        $fields[] = array(
+          'data' => render($field),
+          'class' => array('field-value-' . drupal_html_class($field_name)),
+        );
+      } 
+      $field = array(
+        '#markup' => theme('ehlbc_simple_div', array('fields' => $fields)),
+        '#prefix' => '<div class="field-group-simple-div-' . drupal_html_class($group->group_name) . '">',
+        '#suffix' => '</div>',
+        '#type' => 'markup',
+        '#weight' => $group->weight,
+      );
+      $element += $field;
       break;
   }
 }
@@ -76,8 +87,21 @@ function ehlbc_custom_formatters_field_group_pre_render(&$element, $group, &$for
 function ehlbc_custom_formatters_theme() {
   return array(
     'ehlbc_foundation_rows' => array(),
+    'ehlbc_simple_div' => array(),
   );
 } // ehlbc_custom_formatters_theme()
+
+
+/**
+ *
+ */
+function theme_ehlbc_simple_div($variables) {
+  $output = '';
+  foreach ($variables['fields'] as $field) {
+    $output .= $field['data'] . chr(10);
+  }
+  return $output;
+} // theme_ehlbc_simple_div()
 
 
 /**
@@ -105,4 +129,44 @@ function theme_ehlbc_foundation_rows($variables) {
   }
   return $output; 
 } // theme_ehlbc_foundation_rows()
+
+/**
+ * Implements hook_field_group_format_settings().
+ * If the group has no format settings, default ones will be added.
+ * @params Object $group The group object.
+ * @return Array $form The form element for the format settings.
+ */
+function ehlbc_custom_formatters_field_group_format_settings($group) {
+  // Add a wrapper for extra settings to use by others.
+  $form = array(
+    'instance_settings' => array(
+      '#tree' => TRUE,
+      '#weight' => 2,
+    ),
+  );
+
+  // Add optional instance_settings.
+  switch ($group->format_type) {
+    case 'f_row':
+    case 'simple_div':
+      $form['instance_settings']['label_element'] = array(
+        '#title' => t('Label element'),
+        '#type' => 'select',
+        '#options' => array(
+          'h2' => t('Heading 2'),
+          'h3' => t('Heading 3'),
+          'h4' => t('Heading 4'),
+          'h5' => t('Heading 5'),
+          'h6' => t('Heading 6'),
+          'none' => t('None'),
+        ),
+        '#default_value' => isset($group->format_settings['instance_settings']['label_element']) ? $group->format_settings['instance_settings']['label_element'] : $formatter['instance_settings']['label_element'],
+        '#weight' => 2,
+      );
+      break;
+    default:
+  }
+
+  return $form;
+}
 
