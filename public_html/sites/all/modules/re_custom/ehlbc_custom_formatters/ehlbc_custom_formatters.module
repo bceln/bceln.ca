@@ -1,5 +1,45 @@
 <?php
 
+
+/**
+ * Implements hook_field_group_format_settings().
+ * If the group has no format settings, default ones will be added.
+ * @params Object $group The group object.
+ * @return Array $form The form element for the format settings.
+ */
+function ehlbc_custom_formatters_field_group_format_settings($group) {
+  // Add a wrapper for extra settings to use by others.
+  $form = array(
+    'instance_settings' => array(
+      '#tree' => TRUE,
+      '#weight' => 2,
+    ),
+  );
+  // Add optional instance_settings.
+  switch ($group->format_type) {
+    case 'f_row':
+    case 'simple_div':
+      $form['instance_settings']['label_element'] = array(
+        '#title' => t('Label element'),
+        '#type' => 'select',
+        '#options' => array(
+          'h2' => t('Heading 2'),
+          'h3' => t('Heading 3'),
+          'h4' => t('Heading 4'),
+          'h5' => t('Heading 5'),
+          'h6' => t('Heading 6'),
+          'none' => t('None'),
+        ),
+        '#default_value' => isset($group->format_settings['instance_settings']['label_element']) ? $group->format_settings['instance_settings']['label_element'] : $formatter['instance_settings']['label_element'],
+        '#weight' => 2,
+      );
+      break;
+    default:
+  }
+  return $form;
+} // ehlbc_custom_formatters_field_group_format_settings()
+
+
 /**
  * hook_field_group_formatter_info().
  */
@@ -22,7 +62,7 @@ function ehlbc_custom_formatters_field_group_formatter_info(){
   );
   $info['form'] = $info['display'];
   return $info;
-}
+} // ehlbc_custom_formatters_field_group_formatter_info()
 
 
 /**
@@ -77,7 +117,6 @@ function ehlbc_custom_formatters_field_group_pre_render(&$element, $group, &$for
         'heading' => array(
           'element' => $group->format_settings['instance_settings']['label_element'],
           'label' => $group->format_settings['label'],
-          'visibility' => TRUE,
         ),
       );
       $field = array(
@@ -101,37 +140,11 @@ function ehlbc_custom_formatters_theme() {
       'heading' => array(
         'element' => NULL,
         'label' => NULL,
-        'visibility' => NULL,
       ),
     ),
     'ehlbc_simple_div' => array(),
   );
 } // ehlbc_custom_formatters_theme()
-
-
-/**
- *
- */
-function theme_ehlbc_simple_div($variables) {
-  $div_pattern = '<div class="%s">%s</div>';
-  $heading_pattern = '<%s>%s</%s>';
-  $row_pattern = '<div class="field">%s</div>';
-  if ($variables['heading']['visibility']) {
-    $content = sprintf(
-      $heading_pattern,
-      $variables['heading']['element'],
-      $variables['heading']['label'], 
-      $variables['heading']['element']
-    ) . chr(10);
-  }
-  else {
-    $content = '';
-  }
-  foreach ($variables['fields'] as $field) {
-    $content .= sprintf($row_pattern, $field['data']) . chr(10);
-  }
-  return sprintf($div_pattern, implode(' ', $variables['class']), $content);
-} // theme_ehlbc_simple_div()
 
 
 /**
@@ -160,43 +173,28 @@ function theme_ehlbc_foundation_rows($variables) {
   return $output; 
 } // theme_ehlbc_foundation_rows()
 
+
 /**
- * Implements hook_field_group_format_settings().
- * If the group has no format settings, default ones will be added.
- * @params Object $group The group object.
- * @return Array $form The form element for the format settings.
+ *
  */
-function ehlbc_custom_formatters_field_group_format_settings($group) {
-  // Add a wrapper for extra settings to use by others.
-  $form = array(
-    'instance_settings' => array(
-      '#tree' => TRUE,
-      '#weight' => 2,
-    ),
-  );
-
-  // Add optional instance_settings.
-  switch ($group->format_type) {
-    case 'f_row':
-    case 'simple_div':
-      $form['instance_settings']['label_element'] = array(
-        '#title' => t('Label element'),
-        '#type' => 'select',
-        '#options' => array(
-          'h2' => t('Heading 2'),
-          'h3' => t('Heading 3'),
-          'h4' => t('Heading 4'),
-          'h5' => t('Heading 5'),
-          'h6' => t('Heading 6'),
-          'none' => t('None'),
-        ),
-        '#default_value' => isset($group->format_settings['instance_settings']['label_element']) ? $group->format_settings['instance_settings']['label_element'] : $formatter['instance_settings']['label_element'],
-        '#weight' => 2,
-      );
-      break;
-    default:
+function theme_ehlbc_simple_div($variables) {
+  $div_pattern = '<div class="%s">%s</div>';
+  $heading_pattern = '<%s>%s</%s>';
+  $row_pattern = '<div class="field">%s</div>';
+  if ($variables['heading']['element'] !== 'none') {
+    $content = sprintf(
+      $heading_pattern,
+      $variables['heading']['element'],
+      $variables['heading']['label'], 
+      $variables['heading']['element']
+    ) . chr(10);
   }
-
-  return $form;
-}
+  else {
+    $content = '';
+  }
+  foreach ($variables['fields'] as $field) {
+    $content .= sprintf($row_pattern, $field['data']) . chr(10);
+  }
+  return sprintf($div_pattern, implode(' ', $variables['class']), $content);
+} // theme_ehlbc_simple_div()
 
