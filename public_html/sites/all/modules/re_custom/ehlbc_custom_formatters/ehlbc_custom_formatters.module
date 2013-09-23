@@ -68,11 +68,20 @@ function ehlbc_custom_formatters_field_group_pre_render(&$element, $group, &$for
           'data' => render($field),
           'class' => array('field-value-' . drupal_html_class($field_name)),
         );
-      } 
+      }
+      $variables = array(
+        'class' => array(
+          'field-group-simple-div-' . drupal_html_class($group->group_name),
+        ),
+        'fields' => $fields,
+        'heading' => array(
+          'element' => $group->format_settings['instance_settings']['label_element'],
+          'label' => $group->format_settings['label'],
+          'visibility' => TRUE,
+        ),
+      );
       $field = array(
-        '#markup' => theme('ehlbc_simple_div', array('fields' => $fields)),
-        '#prefix' => '<div class="field-group-simple-div-' . drupal_html_class($group->group_name) . '">',
-        '#suffix' => '</div>',
+        '#markup' => theme('ehlbc_simple_div', $variables),
         '#type' => 'markup',
         '#weight' => $group->weight,
       );
@@ -86,7 +95,15 @@ function ehlbc_custom_formatters_field_group_pre_render(&$element, $group, &$for
  */
 function ehlbc_custom_formatters_theme() {
   return array(
-    'ehlbc_foundation_rows' => array(),
+    'ehlbc_foundation_rows' => array(
+      'class' => NULL,
+      'fields' => NULL,
+      'heading' => array(
+        'element' => NULL,
+        'label' => NULL,
+        'visibility' => NULL,
+      ),
+    ),
     'ehlbc_simple_div' => array(),
   );
 } // ehlbc_custom_formatters_theme()
@@ -96,11 +113,24 @@ function ehlbc_custom_formatters_theme() {
  *
  */
 function theme_ehlbc_simple_div($variables) {
-  $output = '';
-  foreach ($variables['fields'] as $field) {
-    $output .= $field['data'] . chr(10);
+  $div_pattern = '<div class="%s">%s</div>';
+  $heading_pattern = '<%s>%s</%s>';
+  $row_pattern = '<div class="field">%s</div>';
+  if ($variables['heading']['visibility']) {
+    $content = sprintf(
+      $heading_pattern,
+      $variables['heading']['element'],
+      $variables['heading']['label'], 
+      $variables['heading']['element']
+    ) . chr(10);
   }
-  return $output;
+  else {
+    $content = '';
+  }
+  foreach ($variables['fields'] as $field) {
+    $content .= sprintf($row_pattern, $field['data']) . chr(10);
+  }
+  return sprintf($div_pattern, implode(' ', $variables['class']), $content);
 } // theme_ehlbc_simple_div()
 
 
