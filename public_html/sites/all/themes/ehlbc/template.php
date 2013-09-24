@@ -14,21 +14,25 @@
  * This way we can theme any field with its own function
  */
 function ehlbc_preprocess_field(&$variables) {
-  // Allow for separate theming functions
+  // Allow for separate theming functions:
   $function = 'ehlbc_preprocess_field__' . $variables['element']['#field_name'];
-  if(function_exists($function)) {
+  if (function_exists($function)) {
     $function($variables);
   }
+  // But also allow for grouping of some common tasks:
+  switch ($variables['element']['#field_name']) {
+    case 'field_license_archival':
+    case 'field_license_ereserves':
+    case 'field_license_ill':
+      $variables['label'] = t('Summary');
+      break;
+    case 'field_license_archival_txt':
+    case 'field_license_eres_text':
+    case 'field_license_ill_txt':
+      $variables['label'] = t('Relevant License Text');
+      break;
+  }
 } // ehlbc_preprocess_field()
-
-
-/**
- * Implements template_preprocess_field() for field_resource_title_lists().
- */
-function ehlbc_preprocess_field__field_resource_title_lists(&$variables){
-// theme_item_list(array('items' => $variables['items'], 'title' => $variables['label'], 'type' => 'ul'));
-// 
-} // ehlbc_preprocess_field__field_resource_title_lists()
 
 
 /**
@@ -51,6 +55,9 @@ function ehlbc_preprocess_node(&$variables){
   //  hide($variables['content']['field_private_note']);
   //}
   switch ($variables['type']) {
+    case 'license': 
+      break;
+
     case 'resource':
 
       break;
