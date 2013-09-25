@@ -21,6 +21,23 @@ function ehlbc_preprocess_field(&$variables) {
   }
   // But also allow for grouping of some common tasks:
   switch ($variables['element']['#field_name']) {
+    // File fields:
+    case 'field_attachments':
+      $variables['label_hidden'] = TRUE;
+      $format = '<strong>%s</strong>: %s';
+      foreach ($variables['element']['#items'] as $key => $item) {
+        $download_url = file_create_url($item['uri']); 
+        $attachment['items'][] = sprintf($format, t('Description'), $item['description']);
+        $attachment['items'][] = sprintf($format, t('File path/name'), $download_url);
+        $attachment['items'][] = sprintf($format, t('Filesize'), format_size($item['filesize']));
+        $attachment['items'][] = sprintf($format, t('File Type'), $item['filemime']);
+        $attachment['items'][] = sprintf($format, t('File Upload Date'), format_date($item['timestamp'], 'custom', variable_get('date_format_event_view', drupal_get_user_timezone())));
+        $attachment['items'][] = l(t('Download'), $download_url);
+        $attachment_details = theme('item_list', $attachment);
+        $variables['items'][$key]['#markup'] = $attachment_details;
+      }
+      break;
+    // License fields:
     case 'field_license_archival':
     case 'field_license_ereserves':
     case 'field_license_ill':
@@ -31,10 +48,12 @@ function ehlbc_preprocess_field(&$variables) {
     case 'field_license_ill_txt':
       $variables['label'] = t('Relevant License Text');
       break;
+    // Contact fields:
     case 'field_contact_last_name':
       $variables['label'] = t('Name');
       $variables['items'][0]['#markup'] = $variables['element']['#object']->title . ' ' . $variables['items'][0]['#markup'];
       break;
+    // Organization fields:
     case 'field_organization_ref':
       $node = node_load($variables['items'][0]['#markup']);
       $renderable = array(
