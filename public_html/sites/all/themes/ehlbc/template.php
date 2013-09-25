@@ -31,6 +31,40 @@ function ehlbc_preprocess_field(&$variables) {
     case 'field_license_ill_txt':
       $variables['label'] = t('Relevant License Text');
       break;
+    case 'field_contact_last_name':
+      $variables['label'] = t('Name');
+      $variables['items'][0]['#markup'] = $variables['element']['#object']->title . ' ' . $variables['items'][0]['#markup'];
+      break;
+    case 'field_organization_ref':
+      $node = node_load($variables['items'][0]['#markup']);
+      $renderable = array(
+        0 => array(
+          0 => array(
+            '#theme' => 'location',
+            '#location' => $node->field_location['und'][0],
+          ),
+          '#access' => TRUE,
+          '#bundle' => 'organization',
+          '#entity_type' => 'node',
+          '#field_type' => 'location',
+          '#formatter' => 'location_default',
+          '#items' => array(
+            $node->field_location['und'][0],
+          ),
+          '#object' => $node,
+          '#theme' => 'field',
+          '#view_mode' => 'full',
+        ),
+      );
+      unset($renderable[0]['#items'][0]['latitude']);
+      unset($renderable[0]['#items'][0]['longitude']);
+      $patterns = array(
+        '/<div class="field-label[^>]+>:[^<]+<\/div>/',
+        '/<div class="map-link">\s*<div class="location map-link">[^<]+<a[^>]*>[^<]+<\/a><\/div>\s*<\/div>/',
+        '/<span class="geo"><abbr[^>]*>[^<]+<\/abbr>\s*,\s*<abbr[^>]+>[^<]+<\/abbr><\/span>/'
+      );
+      $variables['items'][0]['#markup'] = preg_replace($patterns, '', render($renderable));
+      break;
   }
 } // ehlbc_preprocess_field()
 
