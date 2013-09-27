@@ -103,10 +103,6 @@ function ehlbc_preprocess_field__field_resources_generic_url(&$variables) {
  * Implements template_preprocess_node().
  */
 function ehlbc_preprocess_node(&$variables){
-  global $user;
-  //if (isset($variables['content']['field_private_note']) && !user_access('view field_private_note', $user)){
-  //  hide($variables['content']['field_private_note']);
-  //}
   switch ($variables['type']) {
     case 'license': 
       break;
