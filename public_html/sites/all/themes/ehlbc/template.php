@@ -84,19 +84,24 @@ function ehlbc_preprocess_field(&$variables) {
       );
       $variables['items'][0]['#markup'] = preg_replace($patterns, '', render($renderable));
       break;
+    // Resources fields:
+    case 'field_resources_generic_url':
+      // There's a help message as part of the field--insert it here:
+      $variables['items'][0]['#suffix'] = '<div class="help">'
+                 . l(t("Why can't I connect to the database?"), 'node/114')
+                 . '</div>';
+      break;
+    // Trial-renewal fields:
+    case 'field_trial_active':
+      if ($variables['element']['#items'][0]['value'] === 'N') {
+        $variables['items'][0]['#markup'] = t('<strong><span class="notice">Please Note</span>: This Renewal is not currently active. This documentation is for reference only.</strong>'); 
+      }
+      break;
+    case 'field_trial_deadline':
+      $variables['items'][0]['#markup'] = preg_replace('/<span[^>]+>([^>]+)<\/span>/', '<div class="deadline"><strong>*** ' . t('Response Deadline') . ': $1 ***</strong></div>', $variables['items'][0]['#markup']);
+      break;
   }
 } // ehlbc_preprocess_field()
-
-
-/**
- *
- */
-function ehlbc_preprocess_field__field_resources_generic_url(&$variables) {
-  // There's a help message as part of the field--insert it here:
-  $variables['items'][0]['#suffix'] = '<div class="help">'
-             . l(t("Why can't I connect to the database?"), 'node/114')
-             . '</div>';
-} // ehlbc_preprocess_field__field_resources_generic_url()
 
 
 /**
@@ -108,6 +113,9 @@ function ehlbc_preprocess_node(&$variables){
       break;
 
     case 'resource':
+
+      break;
+    case 'trial_renewal':
 
       break;
   }
