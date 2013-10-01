@@ -92,6 +92,20 @@ function ehlbc_preprocess_field(&$variables) {
                  . '</div>';
       break;
     // Trial-renewal fields:
+    case 'field_trial_access':
+      $variables['label'] = t('Free Trial Access');
+      break;
+    case 'field_resource_ref':
+      $variables['label'] = t('Vendor Description');
+      // Vendor node, fields:
+      $vendor_node = node_load($variables['items'][0]['#markup']);
+      $vendor_items = field_get_items('node', $vendor_node, 'body', $langcode = NULL);
+      $variables['items'][0]['#markup'] = $vendor_items[0]['value'];
+      // License node, fields:
+      $license_nid = field_get_items('node', $vendor_node, 'field_resources_license', $langcode = NULL);
+      $license_node = node_load($license_nid[0]['nid']);
+      $variables['license_node'] = $license_node;
+      break;
     case 'field_trial_active':
       if ($variables['element']['#items'][0]['value'] === 'N') {
         $variables['items'][0]['#markup'] = t('<strong><span class="notice">Please Note</span>: This Renewal is not currently active. This documentation is for reference only.</strong>'); 
@@ -116,7 +130,37 @@ function ehlbc_preprocess_node(&$variables){
 
       break;
     case 'trial_renewal':
-
+      // First, deal with the field_resource_ref stuff:
+      //
+      // Get the resource node:
+      $resource_items = field_get_items('node', $variables['node'], 'field_resource_ref', NULL);
+      $resource_node = node_load($resource_items[0]['nid']);
+      // Get the license node:
+      $license_items = field_get_items('node', $resource_node, 'field_resources_license', NULL);
+      $license_node = node_load($license_items[0]['nid']);
+      // We need to create and insert a license title field in the current
+      // (trial_renewal) node:
+      $variables['content']['field_license_title'] = $variables['content']['field_trial_active'];
+      $variables['content']['field_license_title']['#title'] = t('License');
+      $variables['content']['field_license_title']['#label_display'] = 'above';
+      $variables['content']['field_license_title']['#field_name'] = t('License Title');
+      $variables['content']['field_license_title'][0]['#markup'] = $license_node->title;
+      $variables['content']['field_license_title']['#weight'] = 48;
+      // We need to position the license title field in relation to the 'other'
+      // field:
+      $variables['content']['field_trial_other']['#weight'] = 50;
+      // Then, deal with the field_trial_access stuff:
+      if (!user_access('view field_trial_access')) {
+        // If the user doesn't have access, we need to do two things:
+        // 1. Allow access to the field, BUT
+        // 2. Change the content:
+        $variables['content']['field_trial_access']['#access'] = TRUE;
+        $variables['content']['field_trial_access'][0]['#markup'] = t('To view pricing info and a link to the free trial, please log into the e-HLbc site using the orange LOGIN button at the top of this page.');
+      }
+      // Also, deal with the field_trial_active stuff:
+      if ($variables['content']['field_trial_active'][0]['#markup'] !== 'N') {
+        $variables['content']['field_trial_active']['#access'] = FALSE;
+      }
       break;
   }
 } // ehlbc_preprocess_node()

@@ -38,9 +38,6 @@
       hide($content['links']);
       hide($content['field_tags']);
       hide($content['field_private_note']);
-      if ($content['field_trial_active'][0]['#markup'] !== 'N') {
-        hide($content['field_trial_active']);
-      }
     ?>
     <?php
       print render($content['field_private_note']);
