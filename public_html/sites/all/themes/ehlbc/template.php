@@ -161,6 +161,10 @@ function ehlbc_preprocess_node(&$variables){
       if ($variables['content']['field_trial_active'][0]['#markup'] !== 'N') {
         $variables['content']['field_trial_active']['#access'] = FALSE;
       }
+      // Also, deal with the license term stuff:
+      $variables['content']['field_trail_begins']['label'] = t('Subscription Information');
+      $variables['content']['field_trial_begins'][0]['#markup'] = t('<strong>License Term</strong>: !start - !end', array('!start' => $variables['content']['field_trial_begins'][0]['#markup'], '!end' => $variables['content']['field_trial_ends'][0]['#markup'])); 
+      $variables['content']['field_trial_ends']['#access'] = FALSE;
       break;
   }
 } // ehlbc_preprocess_node()
