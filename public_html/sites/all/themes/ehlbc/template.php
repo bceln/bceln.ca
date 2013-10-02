@@ -53,6 +53,10 @@ function ehlbc_preprocess_field(&$variables) {
       $variables['label'] = t('Name');
       $variables['items'][0]['#markup'] = $variables['element']['#object']->title . ' ' . $variables['items'][0]['#markup'];
       break;
+    // Event fields:
+    case 'field_event_location':
+      $variables['label'] = t('Address');
+      break;
     // Organization fields:
     case 'field_organization_ref':
       $node = node_load($variables['items'][0]['#markup']);
@@ -95,15 +99,6 @@ function ehlbc_preprocess_field(&$variables) {
     case 'field_trial_access':
       $variables['label'] = t('Free Trial Access');
       break;
-    /*
-    case 'field_resource_ref':
-      $variables['label'] = t('Vendor Description');
-      // Vendor node, fields:
-      $vendor_node = node_load($variables['items'][0]['#markup']);
-      $vendor_items = field_get_items('node', $vendor_node, 'body', $langcode = NULL);
-      $variables['items'][0]['#markup'] = $vendor_items[0]['value'];
-      break;
-     */
     case 'field_trial_active':
       if ($variables['element']['#items'][0]['value'] === 'N') {
         $variables['items'][0]['#markup'] = t('<strong><span class="notice">Please Note</span>: This Renewal is not currently active. This documentation is for reference only.</strong>'); 
