@@ -43,12 +43,14 @@ function ehlbc_preprocess_field(&$variables) {
     case 'field_license_archival':
     case 'field_license_ereserves':
     case 'field_license_ill':
-      $variables['label'] = t('Summary');
+      $variables['label_hidden'] = TRUE;
+      $variables['items'][0]['#markup'] = t('<strong>Summary</strong>: !value', array('!value' => $variables['items'][0]['#markup']));
       break;
     case 'field_license_archival_txt':
     case 'field_license_eres_text':
     case 'field_license_ill_txt':
-      $variables['label'] = t('Relevant License Text');
+      $variables['label_hidden'] = TRUE;
+      $variables['items'][0]['#markup'] = t('<strong>Relevant License Text</strong>: !value', array('!value' => $variables['items'][0]['#markup']));
       break;
     // Contact fields:
     case 'field_contact_last_name':

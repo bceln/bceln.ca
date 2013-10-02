@@ -116,10 +116,18 @@
 
   .columns:last-child { float: left; }
 
-  .field-item{
+  .field-item {
     border-bottom: 1px dotted #ccc;
     margin-bottom: rem(2);
     padding-bottom: rem(1);
+  }
+
+  div[class^=field-group-simple-div] {
+    .field-item {
+      border-bottom-style: none;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
   }
 }
 

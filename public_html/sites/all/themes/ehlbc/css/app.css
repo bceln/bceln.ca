@@ -5466,6 +5466,16 @@ body.node-type-event article .field-item {
   margin-bottom: 2rem;
   padding-bottom: 1rem;
 }
+/* line 126, ../sass/_page.scss */
+#content > article div[class^=field-group-simple-div] .field-item,
+.content-article div[class^=field-group-simple-div] .field-item,
+body.node-type-resource article div[class^=field-group-simple-div] .field-item,
+body.node-type-organization article div[class^=field-group-simple-div] .field-item,
+body.node-type-event article div[class^=field-group-simple-div] .field-item {
+  border-bottom-style: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
 
 /* -----------------------------------------
    Content Types
@@ -5476,25 +5486,25 @@ body.node-type-event article .field-item {
 /* -----------------------------------------
    UI Elements
 ----------------------------------------- */
-/* line 158, ../sass/_page.scss */
+/* line 166, ../sass/_page.scss */
 #breadcrumb {
   height: 3rem;
   padding-top: 0.7rem;
   padding-left: 3rem;
 }
 
-/* line 164, ../sass/_page.scss */
+/* line 172, ../sass/_page.scss */
 ul.pagination {
   text-align: center;
 }
-/* line 166, ../sass/_page.scss */
+/* line 174, ../sass/_page.scss */
 ul.pagination li {
   float: none;
   display: inline-block;
 }
 
 /* Tab styling */
-/* line 175, ../sass/_page.scss */
+/* line 183, ../sass/_page.scss */
 div.drupal_tabs {
   background: #ddd;
   overflow: auto;
@@ -5504,7 +5514,7 @@ div.drupal_tabs {
   -webkit-border-radius: 6px;
 }
 
-/* line 181, ../sass/_page.scss */
+/* line 189, ../sass/_page.scss */
 dl.tabs.primary,
 dl.tabs.secondary {
   border-style: none;
@@ -5512,19 +5522,19 @@ dl.tabs.secondary {
   padding: 0;
 }
 
-/* line 185, ../sass/_page.scss */
+/* line 193, ../sass/_page.scss */
 dl.tabs.primary {
   float: left;
 }
 
-/* line 189, ../sass/_page.scss */
+/* line 197, ../sass/_page.scss */
 dl.tabs.primary dd {
   display: inline;
   margin: 0;
   padding: 0;
 }
 
-/* line 193, ../sass/_page.scss */
+/* line 201, ../sass/_page.scss */
 dl.tabs.primary dd a {
   background: #fff;
   border-style: none;
@@ -5540,20 +5550,20 @@ dl.tabs.primary dd a {
   text-decoration: none;
 }
 
-/* line 200, ../sass/_page.scss */
+/* line 208, ../sass/_page.scss */
 dl.tabs.primary dd a:hover,
 dl.tabs.primary dd a:active {
   background: #877f77;
   color: #fff;
 }
 
-/* line 205, ../sass/_page.scss */
+/* line 213, ../sass/_page.scss */
 dl.tabs.primary dd.active a {
   background: #877f77;
   color: #fff;
 }
 
-/* line 209, ../sass/_page.scss */
+/* line 217, ../sass/_page.scss */
 dl.tabs.secondary {
   border-top: 1px solid #fff;
   clear: both;
@@ -5564,7 +5574,7 @@ dl.tabs.secondary {
   top: 4px;
 }
 
-/* line 213, ../sass/_page.scss */
+/* line 221, ../sass/_page.scss */
 dl.tabs.secondary dd {
   border-style: none;
   display: block;
@@ -5573,7 +5583,7 @@ dl.tabs.secondary dd {
   padding: 6px 0;
 }
 
-/* line 217, ../sass/_page.scss */
+/* line 225, ../sass/_page.scss */
 dl.tabs.secondary dd a {
   border-bottom-style: none;
   border-right: 1px solid #fff;
