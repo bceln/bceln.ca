@@ -95,17 +95,15 @@ function ehlbc_preprocess_field(&$variables) {
     case 'field_trial_access':
       $variables['label'] = t('Free Trial Access');
       break;
+    /*
     case 'field_resource_ref':
       $variables['label'] = t('Vendor Description');
       // Vendor node, fields:
       $vendor_node = node_load($variables['items'][0]['#markup']);
       $vendor_items = field_get_items('node', $vendor_node, 'body', $langcode = NULL);
       $variables['items'][0]['#markup'] = $vendor_items[0]['value'];
-      // License node, fields:
-      $license_nid = field_get_items('node', $vendor_node, 'field_resources_license', $langcode = NULL);
-      $license_node = node_load($license_nid[0]['nid']);
-      $variables['license_node'] = $license_node;
       break;
+     */
     case 'field_trial_active':
       if ($variables['element']['#items'][0]['value'] === 'N') {
         $variables['items'][0]['#markup'] = t('<strong><span class="notice">Please Note</span>: This Renewal is not currently active. This documentation is for reference only.</strong>'); 
@@ -132,9 +130,22 @@ function ehlbc_preprocess_node(&$variables){
     case 'trial_renewal':
       // First, deal with the field_resource_ref stuff:
       //
-      // Get the resource node:
+      // Get the resource node and the vendor node:
       $resource_items = field_get_items('node', $variables['node'], 'field_resource_ref', NULL);
       $resource_node = node_load($resource_items[0]['nid']);
+      $vendor_ref_items = field_get_items('node', $resource_node, 'field_resource_vendor_ref', NULL);
+      $vendor_node = node_load($vendor_ref_items[0]['nid']);
+      $resource_body_items = field_get_items('node', $resource_node, 'body', NULL);
+      $variables['content']['field_resource_ref']['#title'] = t('Vendor Description');
+      $variables['content']['field_resource_ref'][0]['#markup'] = $resource_body_items[0]['value'];
+      // We need to create and insert a resource access field in the current
+      // (trial_renewal) node:
+      $variables['content']['field_resource_access'] = $variables['content']['field_trial_active'];
+      $variables['content']['field_resource_access']['#title'] = t('Access Details');
+      $variables['content']['field_resource_access']['#label_display'] = 'above';
+      $variables['content']['field_resource_access']['#field_name'] = 'field_resource_access';
+      $variables['content']['field_resource_access'][0]['#markup'] = $resource_node->field_resource_access['und'][0]['safe_value'];
+      $variables['content']['field_resource_access']['#weight'] = 5;
       // Get the license node:
       $license_items = field_get_items('node', $resource_node, 'field_resources_license', NULL);
       $license_node = node_load($license_items[0]['nid']);
@@ -143,9 +154,18 @@ function ehlbc_preprocess_node(&$variables){
       $variables['content']['field_license_title'] = $variables['content']['field_trial_active'];
       $variables['content']['field_license_title']['#title'] = t('License');
       $variables['content']['field_license_title']['#label_display'] = 'above';
-      $variables['content']['field_license_title']['#field_name'] = t('License Title');
+      $variables['content']['field_license_title']['#field_name'] = 'field_license_title';
       $variables['content']['field_license_title'][0]['#markup'] = $license_node->title;
       $variables['content']['field_license_title']['#weight'] = 48;
+      // We also need a new field for the vendor name and url:
+      $variables['content']['field_vendor_info'] = $variables['content']['field_trial_active'];
+      $variables['content']['field_vendor_info']['#title'] = t('Vendor Information');
+      $variables['content']['field_vendor_info']['#label_display'] = 'above';
+      $variables['content']['field_vendor_info']['#field_name'] = 'field_vendor_info';
+      $variables['content']['field_vendor_info'][0]['#markup'] = t('<strong>Vendor Name</strong>: !vendor-name', array('!vendor-name' => l($vendor_node->title, 'vendor/' . $vendor_node->nid)));
+
+      $variables['content']['field_vendor_info']['#weight'] = 6;
+
       // We need to position the license title field in relation to the 'other'
       // field:
       $variables['content']['field_trial_other']['#weight'] = 50;
