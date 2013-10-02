@@ -56,8 +56,8 @@ article {
 
   h1 { }
   h2 { 
-    font-size: 1.133em;
     color: $secondaryColor;
+    font-size: 1.133em;
     font-weight: bold;
   }
   h3 { 
@@ -76,9 +76,10 @@ article {
   }
 
   .field-label, label{
-    font-size: 1.133em;
     color: $secondaryColor;
+    font-size: 1.133em;
     font-weight: bold;
+    margin-bottom: rem(1.2);
   }
  
 }
@@ -125,10 +126,22 @@ nav {
 ----------------------------------------- */
 
 
+/* -----------------------------------------
+   Individual fields 
+----------------------------------------- */
+
+.field-name-field-trial-deadline {
+  font-size: rem(1.8);
+  text-align: center;  
+}
 
 /* -----------------------------------------
    UI Elements (pagination, breadcrumbs etc.)
 ----------------------------------------- */
+
+.notice {
+  color: #f00;
+}
 
 ul.pagination {
   li a{

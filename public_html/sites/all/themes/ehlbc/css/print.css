@@ -2065,8 +2065,8 @@ h1#page-title {
 
 /* line 58, ../sass/_typography.scss */
 article h2 {
-  font-size: 1.133em;
   color: #f68115;
+  font-size: 1.133em;
   font-weight: bold;
 }
 /* line 63, ../sass/_typography.scss */
@@ -2081,18 +2081,19 @@ article ul {
 }
 /* line 78, ../sass/_typography.scss */
 article .field-label, article label {
-  font-size: 1.133em;
   color: #f68115;
+  font-size: 1.133em;
   font-weight: bold;
+  margin-bottom: 1.2rem;
 }
 
-/* line 87, ../sass/_typography.scss */
+/* line 88, ../sass/_typography.scss */
 aside p {
   font-style: inherit;
   font-size: 1.5rem;
 }
 
-/* line 92, ../sass/_typography.scss */
+/* line 93, ../sass/_typography.scss */
 #main section .block-title {
   font-size: 1.133em;
   color: #f68115;
@@ -2106,8 +2107,22 @@ aside p {
    Block typography:
 ----------------------------------------- */
 /* -----------------------------------------
+   Individual fields 
+----------------------------------------- */
+/* line 133, ../sass/_typography.scss */
+.field-name-field-trial-deadline {
+  font-size: 1.8rem;
+  text-align: center;
+}
+
+/* -----------------------------------------
    UI Elements (pagination, breadcrumbs etc.)
 ----------------------------------------- */
+/* line 142, ../sass/_typography.scss */
+.notice {
+  color: #f00;
+}
+
 /********************************************
 
   Settings.scss
@@ -2255,15 +2270,17 @@ ul.links .print_html {
 
 /* line 95, ../sass/_page.scss */
 #footer {
-  border-top: 2px dotted #ddd;
+  border-top: 1px dotted #ddd;
   margin-top: 20px;
-  padding-top: 20px;
+  max-width: 92rem;
+  padding-bottom: 6rem;
+  padding-top: 2rem;
 }
 
 /* -----------------------------------------
    Common spacings
 ----------------------------------------- */
-/* line 105, ../sass/_page.scss */
+/* line 107, ../sass/_page.scss */
 #sidebar-right .block {
   margin-bottom: 3rem;
 }
@@ -2271,45 +2288,53 @@ ul.links .print_html {
 /* -----------------------------------------
    Generic content type formatting
 ----------------------------------------- */
-/* line 114, ../sass/_page.scss */
-.content-article .columns:last-child, body.node-type-resource article .columns:last-child, body.node-type-organization article .columns:last-child, body.node-type-event article .columns:last-child {
+/* line 117, ../sass/_page.scss */
+#content > article .columns:last-child,
+.content-article .columns:last-child,
+body.node-type-resource article .columns:last-child,
+body.node-type-organization article .columns:last-child,
+body.node-type-event article .columns:last-child {
   float: left;
 }
-/* line 116, ../sass/_page.scss */
-.content-article .field-item, body.node-type-resource article .field-item, body.node-type-organization article .field-item, body.node-type-event article .field-item, .content-article .row, body.node-type-resource article .row, body.node-type-organization article .row, body.node-type-event article .row {
+/* line 119, ../sass/_page.scss */
+#content > article .field-item,
+.content-article .field-item,
+body.node-type-resource article .field-item,
+body.node-type-organization article .field-item,
+body.node-type-event article .field-item {
   border-bottom: 1px dotted #ccc;
   margin-bottom: 2rem;
-}
-/* line 119, ../sass/_page.scss */
-.content-article .field-item .field-item, body.node-type-resource article .field-item .field-item, body.node-type-organization article .field-item .field-item, body.node-type-event article .field-item .field-item, .content-article .row .field-item, body.node-type-resource article .row .field-item, body.node-type-organization article .row .field-item, body.node-type-event article .row .field-item {
-  border-bottom: none;
+  padding-bottom: 1rem;
 }
 
 /* -----------------------------------------
    Content Types
 ----------------------------------------- */
 /* -----------------------------------------
+   Individual fields 
+----------------------------------------- */
+/* -----------------------------------------
    UI Elements
 ----------------------------------------- */
-/* line 148, ../sass/_page.scss */
+/* line 158, ../sass/_page.scss */
 #breadcrumb {
   height: 3rem;
   padding-top: 0.7rem;
   padding-left: 3rem;
 }
 
-/* line 154, ../sass/_page.scss */
+/* line 164, ../sass/_page.scss */
 ul.pagination {
   text-align: center;
 }
-/* line 156, ../sass/_page.scss */
+/* line 166, ../sass/_page.scss */
 ul.pagination li {
   float: none;
   display: inline-block;
 }
 
 /* Tab styling */
-/* line 165, ../sass/_page.scss */
+/* line 175, ../sass/_page.scss */
 div.drupal_tabs {
   background: #ddd;
   overflow: auto;
@@ -2319,7 +2344,7 @@ div.drupal_tabs {
   -webkit-border-radius: 6px;
 }
 
-/* line 171, ../sass/_page.scss */
+/* line 181, ../sass/_page.scss */
 dl.tabs.primary,
 dl.tabs.secondary {
   border-style: none;
@@ -2327,19 +2352,19 @@ dl.tabs.secondary {
   padding: 0;
 }
 
-/* line 175, ../sass/_page.scss */
+/* line 185, ../sass/_page.scss */
 dl.tabs.primary {
   float: left;
 }
 
-/* line 179, ../sass/_page.scss */
+/* line 189, ../sass/_page.scss */
 dl.tabs.primary dd {
   display: inline;
   margin: 0;
   padding: 0;
 }
 
-/* line 183, ../sass/_page.scss */
+/* line 193, ../sass/_page.scss */
 dl.tabs.primary dd a {
   background: #fff;
   border-style: none;
@@ -2355,20 +2380,20 @@ dl.tabs.primary dd a {
   text-decoration: none;
 }
 
-/* line 190, ../sass/_page.scss */
+/* line 200, ../sass/_page.scss */
 dl.tabs.primary dd a:hover,
 dl.tabs.primary dd a:active {
   background: #877f77;
   color: #fff;
 }
 
-/* line 195, ../sass/_page.scss */
+/* line 205, ../sass/_page.scss */
 dl.tabs.primary dd.active a {
   background: #877f77;
   color: #fff;
 }
 
-/* line 199, ../sass/_page.scss */
+/* line 209, ../sass/_page.scss */
 dl.tabs.secondary {
   border-top: 1px solid #fff;
   clear: both;
@@ -2379,7 +2404,7 @@ dl.tabs.secondary {
   top: 4px;
 }
 
-/* line 203, ../sass/_page.scss */
+/* line 213, ../sass/_page.scss */
 dl.tabs.secondary dd {
   border-style: none;
   display: block;
@@ -2388,7 +2413,7 @@ dl.tabs.secondary dd {
   padding: 6px 0;
 }
 
-/* line 207, ../sass/_page.scss */
+/* line 217, ../sass/_page.scss */
 dl.tabs.secondary dd a {
   border-bottom-style: none;
   border-right: 1px solid #fff;

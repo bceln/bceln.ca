@@ -93,9 +93,11 @@
 }
 
 #footer {
-  border-top: 2px dotted #ddd;
+  border-top: 1px dotted #ddd;
   margin-top: 20px;
-  padding-top: 20px;
+  max-width: rem(92);
+  padding-bottom: rem(6);
+  padding-top: rem(2);
 }
 
 /* -----------------------------------------
@@ -109,14 +111,15 @@
    Generic content type formatting
 ----------------------------------------- */
 
+#content > article,
 .content-article {
 
   .columns:last-child { float: left; }
 
-  .field-item, .row{
+  .field-item{
     border-bottom: 1px dotted #ccc;
     margin-bottom: rem(2);
-    .field-item{ border-bottom: none; }
+    padding-bottom: rem(1);
   }
 }
 
@@ -138,8 +141,15 @@ body.node-type-event article{
 }
 
 /* -----------------------------------------
+   Individual fields 
+----------------------------------------- */
+
+
+
+/* -----------------------------------------
    UI Elements
 ----------------------------------------- */
+
   //until further notice all buttons will be green
   .button{
 
