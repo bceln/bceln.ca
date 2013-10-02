@@ -25,7 +25,10 @@ function ehlbc_preprocess_field(&$variables) {
     case 'field_attachments':
       $variables['label_hidden'] = TRUE;
       $format = '<strong>%s</strong>: %s';
+      dpm($variables);
       foreach ($variables['element']['#items'] as $key => $item) {
+        $attachment = array();
+        $attachment_details = '';
         $download_url = file_create_url($item['uri']); 
         $attachment['items'][] = sprintf($format, t('Description'), $item['description']);
         $attachment['items'][] = sprintf($format, t('File path/name'), $download_url);
@@ -36,6 +39,7 @@ function ehlbc_preprocess_field(&$variables) {
         $attachment_details = theme('item_list', $attachment);
         $variables['items'][$key]['#markup'] = $attachment_details;
       }
+      dpm($variables);
       break;
     // License fields:
     case 'field_license_archival':
