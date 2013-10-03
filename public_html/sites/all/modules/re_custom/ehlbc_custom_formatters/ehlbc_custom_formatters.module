@@ -180,7 +180,7 @@ function theme_ehlbc_foundation_rows($variables) {
 function theme_ehlbc_simple_div($variables) {
   $div_pattern = '<div class="%s">%s</div>';
   $heading_pattern = '<%s>%s</%s>';
-  $row_pattern = '<div class="field">%s</div>';
+  $row_pattern = '<div class="field %s">%s</div>';
   if ($variables['heading']['element'] !== 'none') {
     $content = sprintf(
       $heading_pattern,
@@ -193,7 +193,7 @@ function theme_ehlbc_simple_div($variables) {
     $content = '';
   }
   foreach ($variables['fields'] as $field) {
-    $content .= sprintf($row_pattern, $field['data']) . chr(10);
+    $content .= sprintf($row_pattern, str_replace('field-value-', '', $field['class'][0]), $field['data']) . chr(10);
   }
   return sprintf($div_pattern, implode(' ', $variables['class']), $content);
 } // theme_ehlbc_simple_div()

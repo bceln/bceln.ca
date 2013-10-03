@@ -184,6 +184,9 @@ body.node-type-resource {
   article {
     @extend .content-article;
   }
+  .field-resource-vendor-ref {
+    float: right;
+  }
   .help {
     font-size: rem(1.1);
     margin-top: rem(.5);
