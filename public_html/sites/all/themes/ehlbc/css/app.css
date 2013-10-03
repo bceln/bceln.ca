@@ -627,7 +627,7 @@ that IE7/8 do not support :nth-child.
 
 /* Base Type Styles Using Modular Scale ---------------------- */
 /* line 3, ../../../../../../../../.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/zurb-foundation-3.2.5/scss/foundation/common/_typography.scss */
-body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, p, blockquote, th, td {
+body, div, dl, dt, dd, ul, ol, li, h1, h2, .content-article .field-label, body.node-type-resource article .field-label, body.node-type-organization article .field-label, body.node-type-event article .field-label, h3, h4, h5, h6, pre, form, p, blockquote, th, td {
   margin: 0;
   padding: 0;
   font-size: 15px;
@@ -657,7 +657,7 @@ aside p {
 }
 
 /* line 15, ../../../../../../../../.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/zurb-foundation-3.2.5/scss/foundation/common/_typography.scss */
-h1, h2, h3, h4, h5, h6 {
+h1, h2, .content-article .field-label, body.node-type-resource article .field-label, body.node-type-organization article .field-label, body.node-type-event article .field-label, h3, h4, h5, h6 {
   font-family: "Helvetica Neue", "Helvetica", Arial, sans-serif;
   font-weight: normal;
   font-style: normal;
@@ -668,7 +668,7 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 15px;
 }
 /* line 24, ../../../../../../../../.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/zurb-foundation-3.2.5/scss/foundation/common/_typography.scss */
-h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
+h1 small, h2 small, .content-article .field-label small, body.node-type-resource article .field-label small, body.node-type-organization article .field-label small, body.node-type-event article .field-label small, h3 small, h4 small, h5 small, h6 small {
   font-size: 60%;
   color: #7c746b;
   line-height: 0;
@@ -680,7 +680,7 @@ h1 {
 }
 
 /* line 28, ../../../../../../../../.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/zurb-foundation-3.2.5/scss/foundation/common/_typography.scss */
-h2 {
+h2, .content-article .field-label, body.node-type-resource article .field-label, body.node-type-organization article .field-label, body.node-type-event article .field-label {
   font-size: 39px;
 }
 
@@ -919,13 +919,13 @@ abbr {
 }
 
   /* line 98, ../../../../../../../../.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/zurb-foundation-3.2.5/scss/foundation/common/_typography.scss */
-  p, h2, h3 {
+  p, h2, .content-article .field-label, body.node-type-resource article .field-label, body.node-type-organization article .field-label, body.node-type-event article .field-label, h3 {
     orphans: 3;
     widows: 3;
   }
 
   /* line 99, ../../../../../../../../.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/zurb-foundation-3.2.5/scss/foundation/common/_typography.scss */
-  h2, h3 {
+  h2, .content-article .field-label, body.node-type-resource article .field-label, body.node-type-organization article .field-label, body.node-type-event article .field-label, h3 {
     page-break-after: avoid;
   }
 
@@ -3569,7 +3569,7 @@ ul.accordion > li > div.title {
   transition: 0.15s background linear;
 }
 /* line 106, ../../../../../../../../.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/zurb-foundation-3.2.5/scss/foundation/components/modules/_ui.scss */
-ul.accordion > li > div.title h1, ul.accordion > li > div.title h2, ul.accordion > li > div.title h3, ul.accordion > li > div.title h4, ul.accordion > li > div.title h5 {
+ul.accordion > li > div.title h1, ul.accordion > li > div.title h2, ul.accordion > li > div.title .content-article .field-label, .content-article ul.accordion > li > div.title .field-label, ul.accordion > li > div.title body.node-type-resource article .field-label, body.node-type-resource article ul.accordion > li > div.title .field-label, ul.accordion > li > div.title body.node-type-organization article .field-label, body.node-type-organization article ul.accordion > li > div.title .field-label, ul.accordion > li > div.title body.node-type-event article .field-label, body.node-type-event article ul.accordion > li > div.title .field-label, ul.accordion > li > div.title h3, ul.accordion > li > div.title h4, ul.accordion > li > div.title h5 {
   margin: 0;
 }
 /* line 107, ../../../../../../../../.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/zurb-foundation-3.2.5/scss/foundation/components/modules/_ui.scss */
@@ -5961,7 +5961,7 @@ h1#page-title {
 }
 
 /* line 64, ../sass/_typography.scss */
-article h2 {
+article h2, article .content-article .field-label, .content-article article .field-label, body.node-type-resource article .field-label, body.node-type-organization article .field-label, body.node-type-event article .field-label {
   color: #f68115;
   font-size: 1.133em;
   font-weight: bold;
@@ -6015,9 +6015,12 @@ aside p {
 /* -----------------------------------------
    UI Elements (pagination, breadcrumbs etc.)
 ----------------------------------------- */
-/* line 151, ../sass/_typography.scss */
-.collapsed legend a,
-.collapsible legend a {
+/* line 155, ../sass/_typography.scss */
+.content-article .collapsed legend a, body.node-type-resource article .collapsed legend a, body.node-type-organization article .collapsed legend a, body.node-type-event article .collapsed legend a,
+.content-article .collapsible legend a,
+body.node-type-resource article .collapsible legend a,
+body.node-type-organization article .collapsible legend a,
+body.node-type-event article .collapsible legend a {
   color: white;
   font-family: "minion-pro-1", "minion-pro-2", Georgia, "Times New Roman", serif;
   font-weight: bold;
@@ -6026,7 +6029,7 @@ aside p {
   text-transform: uppercase;
 }
 
-/* line 162, ../sass/_typography.scss */
+/* line 167, ../sass/_typography.scss */
 .notice {
   color: #f00;
 }
@@ -6362,7 +6365,7 @@ nav .foundation-menu {
   }
 }
 /* line 78, ../sass/_orbit.scss */
-.orbit div.orbit-content h2.orbit-title {
+.orbit div.orbit-content h2.orbit-title, .orbit div.orbit-content .content-article .orbit-title.field-label, .content-article .orbit div.orbit-content .orbit-title.field-label, .orbit div.orbit-content body.node-type-resource article .orbit-title.field-label, body.node-type-resource article .orbit div.orbit-content .orbit-title.field-label, .orbit div.orbit-content body.node-type-organization article .orbit-title.field-label, body.node-type-organization article .orbit div.orbit-content .orbit-title.field-label, .orbit div.orbit-content body.node-type-event article .orbit-title.field-label, body.node-type-event article .orbit div.orbit-content .orbit-title.field-label {
   margin: 0;
 }
 /* line 80, ../sass/_orbit.scss */
@@ -6705,36 +6708,6 @@ ul.links .print_html {
   margin-left: 0;
 }
 
-/* line 77, ../sass/_page.scss */
-.button, #content > article .collapsed legend a,
-#content > article .collapsible legend a,
-.content-article .collapsed legend a,
-body.node-type-resource article .collapsed legend a,
-body.node-type-organization article .collapsed legend a,
-body.node-type-event article .collapsed legend a,
-.content-article .collapsible legend a,
-body.node-type-resource article .collapsible legend a,
-body.node-type-organization article .collapsible legend a,
-body.node-type-event article .collapsible legend a {
-  cursor: pointer;
-  padding: 4px 17px;
-  margin-bottom: 1em;
-  color: #5a5a5a;
-  display: inline-block;
-  text-align: center;
-  font-weight: normal;
-  font-size: 1.1em;
-  font-family: "Lucida Grande",Verdana,sans-serif;
-  border: 1px solid #e4e4e4;
-  border-bottom: 1px solid #b4b4b4;
-  border-left-color: #D2D2D2;
-  border-right-color: #D2D2D2;
-  background: #ebebeb;
-  border-radius: 15px;
-  -moz-border-radius: 20px;
-  -webkit-border-radius: 15px;
-}
-
 /* -----------------------------------------
    Header / Footer & logo
 ----------------------------------------- */
@@ -6811,7 +6784,45 @@ body.node-type-event article div[class^=field-group-simple-div] .field-item {
   margin-bottom: 0;
   padding-bottom: 0;
 }
-/* line 142, ../sass/_page.scss */
+/* line 139, ../sass/_page.scss */
+#content > article fieldset,
+.content-article fieldset,
+body.node-type-resource article fieldset,
+body.node-type-organization article fieldset,
+body.node-type-event article fieldset {
+  background: #efefef;
+  border-bottom: 0.5rem solid #e0e0e0;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  border-top: 0.5rem solid #e0e0e0;
+  margin-bottom: 0;
+  padding: 2rem;
+}
+/* line 150, ../sass/_page.scss */
+#content > article .collapsed,
+.content-article .collapsed,
+body.node-type-resource article .collapsed,
+body.node-type-organization article .collapsed,
+body.node-type-event article .collapsed {
+  background: none;
+  border: none;
+  padding-bottom: 0px;
+}
+/* line 162, ../sass/_page.scss */
+#content > article .collapsed legend,
+#content > article .collapsible legend,
+.content-article .collapsed legend,
+body.node-type-resource article .collapsed legend,
+body.node-type-organization article .collapsed legend,
+body.node-type-event article .collapsed legend,
+.content-article .collapsible legend,
+body.node-type-resource article .collapsible legend,
+body.node-type-organization article .collapsible legend,
+body.node-type-event article .collapsible legend {
+  margin-left: -2.2rem;
+}
+/* line 164, ../sass/_page.scss */
 #content > article .collapsed legend a,
 #content > article .collapsible legend a,
 .content-article .collapsed legend a,
@@ -6828,19 +6839,18 @@ body.node-type-event article .collapsible legend a {
   -webkit-border-radius: 0.5rem;
   border-radius: 0.5rem;
   border-top: 1px solid #c9c9c8;
-  height: 2.3rem;
   padding: 0.5rem 0.8rem;
 }
 
 /* -----------------------------------------
    Content Types
 ----------------------------------------- */
-/* line 166, ../sass/_page.scss */
+/* line 187, ../sass/_page.scss */
 body.node-type-resource .help {
   font-size: 1.1rem;
   margin-top: 0.5rem;
 }
-/* line 170, ../sass/_page.scss */
+/* line 191, ../sass/_page.scss */
 body.node-type-resource #return-res {
   background: url("../images/return-resources.png") no-repeat right 0;
   font-family: Helvetica, Arial, sans-serif;
@@ -6851,7 +6861,7 @@ body.node-type-resource #return-res {
   right: 1.5rem;
   top: 5.2rem;
 }
-/* line 179, ../sass/_page.scss */
+/* line 200, ../sass/_page.scss */
 body.node-type-resource #return-res a {
   color: #8c8b89;
   display: block;
@@ -6864,7 +6874,7 @@ body.node-type-resource #return-res a {
 /* -----------------------------------------
    UI Elements
 ----------------------------------------- */
-/* line 209, ../sass/_page.scss */
+/* line 230, ../sass/_page.scss */
 .button:hover, #content > article .collapsed legend a:hover,
 #content > article .collapsible legend a:hover,
 .content-article .collapsed legend a:hover,
@@ -6896,25 +6906,25 @@ body.node-type-event article .collapsible legend a:focus {
   background: #877f77;
 }
 
-/* line 214, ../sass/_page.scss */
+/* line 235, ../sass/_page.scss */
 #breadcrumb {
   height: 3rem;
   padding-top: 0.7rem;
   padding-left: 3rem;
 }
 
-/* line 220, ../sass/_page.scss */
+/* line 241, ../sass/_page.scss */
 ul.pagination {
   text-align: center;
 }
-/* line 222, ../sass/_page.scss */
+/* line 243, ../sass/_page.scss */
 ul.pagination li {
   float: none;
   display: inline-block;
 }
 
 /* Tab styling */
-/* line 231, ../sass/_page.scss */
+/* line 252, ../sass/_page.scss */
 div.drupal_tabs {
   background: #dddddd;
   overflow: auto;
@@ -6924,7 +6934,7 @@ div.drupal_tabs {
   -webkit-border-radius: 6px;
 }
 
-/* line 237, ../sass/_page.scss */
+/* line 258, ../sass/_page.scss */
 dl.tabs.primary,
 dl.tabs.secondary {
   border-style: none;
@@ -6932,19 +6942,19 @@ dl.tabs.secondary {
   padding: 0;
 }
 
-/* line 241, ../sass/_page.scss */
+/* line 262, ../sass/_page.scss */
 dl.tabs.primary {
   float: left;
 }
 
-/* line 245, ../sass/_page.scss */
+/* line 266, ../sass/_page.scss */
 dl.tabs.primary dd {
   display: inline;
   margin: 0;
   padding: 0;
 }
 
-/* line 249, ../sass/_page.scss */
+/* line 270, ../sass/_page.scss */
 dl.tabs.primary dd a {
   background: white;
   border-style: none;
@@ -6960,20 +6970,20 @@ dl.tabs.primary dd a {
   text-decoration: none;
 }
 
-/* line 256, ../sass/_page.scss */
+/* line 277, ../sass/_page.scss */
 dl.tabs.primary dd a:hover,
 dl.tabs.primary dd a:active {
   background: #877f77;
   color: white;
 }
 
-/* line 261, ../sass/_page.scss */
+/* line 282, ../sass/_page.scss */
 dl.tabs.primary dd.active a {
   background: #877f77;
   color: white;
 }
 
-/* line 265, ../sass/_page.scss */
+/* line 286, ../sass/_page.scss */
 dl.tabs.secondary {
   border-top: 1px solid white;
   clear: both;
@@ -6984,7 +6994,7 @@ dl.tabs.secondary {
   top: 4px;
 }
 
-/* line 269, ../sass/_page.scss */
+/* line 290, ../sass/_page.scss */
 dl.tabs.secondary dd {
   border-style: none;
   display: block;
@@ -6993,7 +7003,7 @@ dl.tabs.secondary dd {
   padding: 6px 0;
 }
 
-/* line 273, ../sass/_page.scss */
+/* line 294, ../sass/_page.scss */
 dl.tabs.secondary dd a {
   border-bottom-style: none;
   border-right: 1px solid white;
@@ -7058,7 +7068,7 @@ dl.tabs.secondary dd a {
 }
 
 /* line 27, ../sass/_block.scss */
-.block > h2, .block > h3 {
+.block > h2, .content-article .block > .field-label, body.node-type-resource article .block > .field-label, body.node-type-organization article .block > .field-label, body.node-type-event article .block > .field-label, .block > h3 {
   font-size: 1em;
   margin: 0px 0px 10px;
   font-weight: bold;
@@ -7116,7 +7126,7 @@ dl.tabs.secondary dd a {
   list-style: none;
 }
 /* line 72, ../sass/_block.scss */
-#block-menu-menu-authenticated h2 {
+#block-menu-menu-authenticated h2, #block-menu-menu-authenticated .content-article .field-label, .content-article #block-menu-menu-authenticated .field-label, #block-menu-menu-authenticated body.node-type-resource article .field-label, body.node-type-resource article #block-menu-menu-authenticated .field-label, #block-menu-menu-authenticated body.node-type-organization article .field-label, body.node-type-organization article #block-menu-menu-authenticated .field-label, #block-menu-menu-authenticated body.node-type-event article .field-label, body.node-type-event article #block-menu-menu-authenticated .field-label {
   background: url("../images/resources-gear.png") no-repeat scroll top left transparent;
   color: #8C8B89;
   cursor: pointer;
@@ -7162,7 +7172,7 @@ dl.tabs.secondary dd a {
 
 /* Front page access block */
 /* line 115, ../sass/_block.scss */
-.front .node .entry-content h2 {
+.front .node .entry-content h2, .front .node .entry-content .content-article .field-label, .content-article .front .node .entry-content .field-label, .front .node .entry-content body.node-type-resource article .field-label, body.node-type-resource article .front .node .entry-content .field-label, .front .node .entry-content body.node-type-organization article .field-label, body.node-type-organization article .front .node .entry-content .field-label, .front .node .entry-content body.node-type-event article .field-label, body.node-type-event article .front .node .entry-content .field-label {
   color: #18729d;
   font-size: 1.333em;
   /* 20px relative to 15px */
@@ -7171,7 +7181,7 @@ dl.tabs.secondary dd a {
 
 /* Do I have Access Block */
 /* line 126, ../sass/_block.scss */
-.front #block-menu-block-1 h2 {
+.front #block-menu-block-1 h2, .front #block-menu-block-1 .content-article .field-label, .content-article .front #block-menu-block-1 .field-label, .front #block-menu-block-1 body.node-type-resource article .field-label, body.node-type-resource article .front #block-menu-block-1 .field-label, .front #block-menu-block-1 body.node-type-organization article .field-label, body.node-type-organization article .front #block-menu-block-1 .field-label, .front #block-menu-block-1 body.node-type-event article .field-label, body.node-type-event article .front #block-menu-block-1 .field-label {
   display: none;
 }
 
@@ -7467,7 +7477,7 @@ dl.tabs.secondary dd a {
 }
 
 /* line 396, ../sass/_block.scss */
-#block-user-login h2 {
+#block-user-login h2, #block-user-login .content-article .field-label, .content-article #block-user-login .field-label, #block-user-login body.node-type-resource article .field-label, body.node-type-resource article #block-user-login .field-label, #block-user-login body.node-type-organization article .field-label, body.node-type-organization article #block-user-login .field-label, #block-user-login body.node-type-event article .field-label, body.node-type-event article #block-user-login .field-label {
   color: #807b77;
   font-family: "minion-pro-1","minion-pro-2", Georgia, 'Times New Roman', serif;
   margin-top: 20px;
@@ -8207,7 +8217,7 @@ label.expand-btn {
 }
 
 /* line 383, ../sass/_views.scss */
-h2.pane-title {
+h2.pane-title, .content-article .pane-title.field-label, body.node-type-resource article .pane-title.field-label, body.node-type-organization article .pane-title.field-label, body.node-type-event article .pane-title.field-label {
   color: #2a2724;
   font-size: 1.000em;
   /* 15px relative to 15px */
@@ -8229,7 +8239,7 @@ h2.pane-title {
 }
 
 /* line 402, ../sass/_views.scss */
-#dashboard .pane-profile h2 {
+#dashboard .pane-profile h2, #dashboard .pane-profile .content-article .field-label, .content-article #dashboard .pane-profile .field-label, #dashboard .pane-profile body.node-type-resource article .field-label, body.node-type-resource article #dashboard .pane-profile .field-label, #dashboard .pane-profile body.node-type-organization article .field-label, body.node-type-organization article #dashboard .pane-profile .field-label, #dashboard .pane-profile body.node-type-event article .field-label, body.node-type-event article #dashboard .pane-profile .field-label {
   display: none;
 }
 
@@ -8301,7 +8311,7 @@ h2.pane-title {
 }
 
 /* line 466, ../sass/_views.scss */
-#dashboard .pane-signup-current-signups h2 {
+#dashboard .pane-signup-current-signups h2, #dashboard .pane-signup-current-signups .content-article .field-label, .content-article #dashboard .pane-signup-current-signups .field-label, #dashboard .pane-signup-current-signups body.node-type-resource article .field-label, body.node-type-resource article #dashboard .pane-signup-current-signups .field-label, #dashboard .pane-signup-current-signups body.node-type-organization article .field-label, body.node-type-organization article #dashboard .pane-signup-current-signups .field-label, #dashboard .pane-signup-current-signups body.node-type-event article .field-label, body.node-type-event article #dashboard .pane-signup-current-signups .field-label {
   color: #fff;
   font-size: 1.000em;
   /* 15px relative to 15px */
@@ -8343,7 +8353,7 @@ h2.pane-title {
 }
 
 /* line 501, ../sass/_views.scss */
-#dashboard .pane-colleagues h2 {
+#dashboard .pane-colleagues h2, #dashboard .pane-colleagues .content-article .field-label, .content-article #dashboard .pane-colleagues .field-label, #dashboard .pane-colleagues body.node-type-resource article .field-label, body.node-type-resource article #dashboard .pane-colleagues .field-label, #dashboard .pane-colleagues body.node-type-organization article .field-label, body.node-type-organization article #dashboard .pane-colleagues .field-label, #dashboard .pane-colleagues body.node-type-event article .field-label, body.node-type-event article #dashboard .pane-colleagues .field-label {
   margin: 20px 0 3px;
 }
 
@@ -8377,7 +8387,7 @@ h2.pane-title {
 /* Dashboard - Center Column */
 /* My Organization Resources */
 /* line 530, ../sass/_views.scss */
-#dashboard .pane-resources h2 {
+#dashboard .pane-resources h2, #dashboard .pane-resources .content-article .field-label, .content-article #dashboard .pane-resources .field-label, #dashboard .pane-resources body.node-type-resource article .field-label, body.node-type-resource article #dashboard .pane-resources .field-label, #dashboard .pane-resources body.node-type-organization article .field-label, body.node-type-organization article #dashboard .pane-resources .field-label, #dashboard .pane-resources body.node-type-event article .field-label, body.node-type-event article #dashboard .pane-resources .field-label {
   background: url("../images/dashed-border.png") repeat-x 0 bottom;
   color: #18729d;
   padding-bottom: 10px;
@@ -8435,7 +8445,7 @@ h2.pane-title {
 }
 
 /* line 583, ../sass/_views.scss */
-#dashboard .pane-og-my h2 {
+#dashboard .pane-og-my h2, #dashboard .pane-og-my .content-article .field-label, .content-article #dashboard .pane-og-my .field-label, #dashboard .pane-og-my body.node-type-resource article .field-label, body.node-type-resource article #dashboard .pane-og-my .field-label, #dashboard .pane-og-my body.node-type-organization article .field-label, body.node-type-organization article #dashboard .pane-og-my .field-label, #dashboard .pane-og-my body.node-type-event article .field-label, body.node-type-event article #dashboard .pane-og-my .field-label {
   margin: 20px 0 4px 0;
   padding: 0 20px;
 }
@@ -8514,8 +8524,16 @@ h2.pane-title {
 }
 
 /* line 658, ../sass/_views.scss */
-#dashboard .pane-og-which-gorups h2,
-#og-page h2.pane-title {
+#dashboard .pane-og-which-gorups h2, #dashboard .pane-og-which-gorups .content-article .field-label, .content-article #dashboard .pane-og-which-gorups .field-label, #dashboard .pane-og-which-gorups body.node-type-resource article .field-label, body.node-type-resource article #dashboard .pane-og-which-gorups .field-label, #dashboard .pane-og-which-gorups body.node-type-organization article .field-label, body.node-type-organization article #dashboard .pane-og-which-gorups .field-label, #dashboard .pane-og-which-gorups body.node-type-event article .field-label, body.node-type-event article #dashboard .pane-og-which-gorups .field-label,
+#og-page h2.pane-title,
+#og-page .content-article .pane-title.field-label,
+.content-article #og-page .pane-title.field-label,
+#og-page body.node-type-resource article .pane-title.field-label,
+body.node-type-resource article #og-page .pane-title.field-label,
+#og-page body.node-type-organization article .pane-title.field-label,
+body.node-type-organization article #og-page .pane-title.field-label,
+#og-page body.node-type-event article .pane-title.field-label,
+body.node-type-event article #og-page .pane-title.field-label {
   line-height: 1.3em;
   margin: 20px 0 7px 0;
   padding: 0 20px;

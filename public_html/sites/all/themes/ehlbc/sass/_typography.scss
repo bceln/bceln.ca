@@ -145,16 +145,21 @@ nav {
    UI Elements (pagination, breadcrumbs etc.)
 ----------------------------------------- */
 
-.collapsed,
-.collapsible {
-  legend {
-    a {
-      color: $white;
-      font-family: "minion-pro-1", "minion-pro-2", Georgia, "Times New Roman", serif;
-      font-weight: bold;
-      text-align: center;
-      text-decoration: none;
-      text-transform: uppercase;
+.content-article {
+  .field-label {
+    @extend h2;
+  }
+  .collapsed,
+  .collapsible {
+    legend {
+      a {
+        color: $white;
+        font-family: "minion-pro-1", "minion-pro-2", Georgia, "Times New Roman", serif;
+        font-weight: bold;
+        text-align: center;
+        text-decoration: none;
+        text-transform: uppercase;
+      }
     }
   }
 }

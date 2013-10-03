@@ -74,7 +74,7 @@
    .print_html { margin-left: 0; }
   }
 
-  .button { @include le-bouton; }
+  //.button { @include le-bouton; }
 
 /* -----------------------------------------
    Header / Footer & logo
@@ -136,9 +136,31 @@
     }
   }
 
+  fieldset {
+    background: $gray_11;
+    border-bottom: rem(.5) solid $gray_10;
+    -moz-border-radius: 0;
+    -webkit-border-radius: 0;
+    border-radius: 0;
+    border-top: rem(.5) solid $gray_10;
+    margin-bottom: 0;
+    padding: rem(2);
+  }
+
+  .collapsed {
+    background: none;
+    border: none;
+    padding-bottom:0px;
+  }
+
+  .collapsible {
+    
+  }
+
   .collapsed,
   .collapsible {
     legend {
+      margin-left: rem(-2.2);
       a {
         @extend .button;
         background: $gray_1;
@@ -147,7 +169,6 @@
         -webkit-border-radius: rem(.5);
         border-radius: rem(.5);
         border-top: 1px solid $gray_3;
-        height: rem(2.3);
         padding: rem(.5) rem(.8);
       }
     }
