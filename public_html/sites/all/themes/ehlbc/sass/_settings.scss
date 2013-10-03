@@ -292,3 +292,19 @@ $importantModNum: 44px;
   -moz-border-radius: 20px;
   -webkit-border-radius: 15px;
 }
+
+
+/* -----------------------------------------
+   EHLBC mixins
+----------------------------------------- */
+
+@mixin color-panel($background, $border) {
+  background: $background;
+  border-bottom: rem(.5) solid $border;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  border-top: rem(.5) solid $border;
+  margin-bottom: 0;
+  padding: rem(2);
+}
