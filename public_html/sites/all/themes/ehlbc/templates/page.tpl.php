@@ -90,15 +90,19 @@
           print $messages;
           if ($title && !drupal_is_front_page()): ?>
             <h1 id="page-title"><?php print $title; ?></h1>
-          <?php endif;
+          <?php endif; ?>
+          <?php
           if ($tabs['#primary'] != ""): ?>
             <div class="drupal_tabs"><?php print render($tabs); ?></div>
-          <?php endif;
-          print render($page['help']);
-          if ($action_links): ?>
-            <dl class="sub-nav action-links"><?php print render($action_links); ?></dl>
-          <?php endif;
-          print $feed_icons; ?>
+          <?php endif; ?>
+          <?php print render($page['help']); ?>
+          <?php if ($node->type === 'resource'): ?>
+          <span id="return-res"><a href="/resources-databases">Return to Resources</a></span>
+          <?php endif; ?>
+          <?php if ($action_links): ?>
+          <dl class="sub-nav action-links"><?php print render($action_links); ?></dl>
+          <?php endif; ?>
+          <?php print $feed_icons; ?>
 
          <?php print render($page['pre_content']);?>
          <?php print render($page['content']);?>

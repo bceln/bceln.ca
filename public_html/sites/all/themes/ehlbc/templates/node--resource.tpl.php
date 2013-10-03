@@ -40,8 +40,10 @@
       // Hide specific elements for this content type:
       hide($content['field_resources_generic_url']);
       hide($content['field_resources_license']);
+      hide($content['field_private_note']);
     ?>
 
+    <?php print render($content['field_private_note']); ?>
     <?php /* field_resources_generic_url */ ?>
     <h2><?php print t('Connect to the Database'); ?></h2>
     <?php print render($content['field_resources_generic_url']); ?>

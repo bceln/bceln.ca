@@ -129,6 +129,11 @@
       padding-bottom: 0;
     }
   }
+
+  .field-name-field-private-note {
+    background: #ffe9d5;
+    padding:1em;
+  }
 }
 
 /* -----------------------------------------
@@ -136,8 +141,25 @@
 ----------------------------------------- */
 
 
-body.node-type-resource article{
-  @extend .content-article;
+body.node-type-resource {
+  article {
+    @extend .content-article;
+  }
+  #return-res {
+    background: url('../images/return-resources.png') no-repeat right 0;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: rem(1.2); 
+    font-weight: bold;
+    height: 30px;
+    position: absolute;
+    right: rem(1.5);
+    top: rem(5.2);
+    a {
+      color: #8c8b89;
+      display: block;
+      padding: 5px 40px 0 0;
+    }
+  }
 }
 
 body.node-type-organization article{

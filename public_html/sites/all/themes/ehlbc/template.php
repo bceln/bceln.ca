@@ -124,7 +124,6 @@ function ehlbc_preprocess_node(&$variables){
       break;
 
     case 'resource':
-
       break;
     case 'trial_renewal':
       // First, deal with the field_resource_ref stuff:
