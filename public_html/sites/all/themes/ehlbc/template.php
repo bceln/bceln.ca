@@ -21,6 +21,11 @@ function ehlbc_preprocess_field(&$variables) {
   }
   // But also allow for grouping of some common tasks:
   switch ($variables['element']['#field_name']) {
+    // Fields used in multiple locations:
+    case 'field_private_note':
+      $variables['label_hidden'] = TRUE;
+      $variables['items'][0]['#markup'] = '<div class="field-label">' . $variables['label'] . '</div>' . $variables['items'][0]['#markup'];
+      break;
     // File fields:
     case 'field_attachments':
       $variables['label_hidden'] = TRUE;
