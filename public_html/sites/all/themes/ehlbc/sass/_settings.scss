@@ -47,6 +47,18 @@ $ie: 99!default;
   $shinyEdge:      rgba( $white, .5 );
   $darkEdge:       rgba( $black, .2 );
 
+  // EHLBC specific colors, lots of 'em:
+  $gray_1:         #939290;
+  $gray_2:         #737270;
+  $gray_3:         #c9c9c8;
+  $gray_4:         #ccc;
+  $gray_5:         #ffe9d5;
+  $gray_6:         #ddd; 
+  $gray_7:         #eee;
+  $gray_8:         #8c8b89;
+  $gray_9:         #877f77;
+  
+
 /* -----------------------------------------
    IE uses pie for some of its effects
    this won't get used unless we detect

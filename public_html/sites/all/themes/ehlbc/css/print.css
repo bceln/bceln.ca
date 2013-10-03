@@ -486,7 +486,16 @@ abbr {
 }
 /* Normal Buttons ---------------------- */
 /* line 3, ../../../../../../../../.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/zurb-foundation-3.2.5/scss/foundation/components/modules/_buttons.scss */
-.button {
+.button, #content > article .collapsed legend a,
+#content > article .collapsible legend a,
+.content-article .collapsed legend a,
+body.node-type-resource article .collapsed legend a,
+body.node-type-organization article .collapsed legend a,
+body.node-type-event article .collapsed legend a,
+.content-article .collapsible legend a,
+body.node-type-resource article .collapsible legend a,
+body.node-type-organization article .collapsible legend a,
+body.node-type-event article .collapsible legend a {
   width: auto;
   background: #18729d;
   border: 1px solid #0e425b;
@@ -517,79 +526,268 @@ abbr {
   /* Disabled ---------- */
 }
 /* line 6, ../../../../../../../../.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/zurb-foundation-3.2.5/scss/foundation/components/modules/_buttons.scss */
-.button:hover, .button:focus {
+.button:hover, #content > article .collapsed legend a:hover,
+#content > article .collapsible legend a:hover,
+.content-article .collapsed legend a:hover,
+body.node-type-resource article .collapsed legend a:hover,
+body.node-type-organization article .collapsed legend a:hover,
+body.node-type-event article .collapsed legend a:hover,
+.content-article .collapsible legend a:hover,
+body.node-type-resource article .collapsible legend a:hover,
+body.node-type-organization article .collapsible legend a:hover,
+body.node-type-event article .collapsible legend a:hover, .button:focus, #content > article .collapsed legend a:focus,
+#content > article .collapsible legend a:focus,
+.content-article .collapsed legend a:focus,
+body.node-type-resource article .collapsed legend a:focus,
+body.node-type-organization article .collapsed legend a:focus,
+body.node-type-event article .collapsed legend a:focus,
+.content-article .collapsible legend a:focus,
+body.node-type-resource article .collapsible legend a:focus,
+body.node-type-organization article .collapsible legend a:focus,
+body.node-type-event article .collapsible legend a:focus {
   color: white;
   background-color: #115271;
 }
 /* line 7, ../../../../../../../../.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/zurb-foundation-3.2.5/scss/foundation/components/modules/_buttons.scss */
-.button:active {
+.button:active, #content > article .collapsed legend a:active,
+#content > article .collapsible legend a:active,
+.content-article .collapsed legend a:active,
+body.node-type-resource article .collapsed legend a:active,
+body.node-type-organization article .collapsed legend a:active,
+body.node-type-event article .collapsed legend a:active,
+.content-article .collapsible legend a:active,
+body.node-type-resource article .collapsible legend a:active,
+body.node-type-organization article .collapsible legend a:active,
+body.node-type-event article .collapsible legend a:active {
   -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2) inset;
   -moz-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2) inset;
   box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2) inset;
 }
 /* line 10, ../../../../../../../../.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/zurb-foundation-3.2.5/scss/foundation/components/modules/_buttons.scss */
-.button.large {
+.button.large, #content > article .collapsed legend a.large,
+#content > article .collapsible legend a.large,
+.content-article .collapsed legend a.large,
+body.node-type-resource article .collapsed legend a.large,
+body.node-type-organization article .collapsed legend a.large,
+body.node-type-event article .collapsed legend a.large,
+.content-article .collapsible legend a.large,
+body.node-type-resource article .collapsible legend a.large,
+body.node-type-organization article .collapsible legend a.large,
+body.node-type-event article .collapsible legend a.large {
   font-size: 17px;
   padding: 15px 30px 16px;
 }
 /* line 11, ../../../../../../../../.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/zurb-foundation-3.2.5/scss/foundation/components/modules/_buttons.scss */
-.button.medium {
+.button.medium, #content > article .collapsed legend a.medium,
+#content > article .collapsible legend a.medium,
+.content-article .collapsed legend a.medium,
+body.node-type-resource article .collapsed legend a.medium,
+body.node-type-organization article .collapsed legend a.medium,
+body.node-type-event article .collapsed legend a.medium,
+.content-article .collapsible legend a.medium,
+body.node-type-resource article .collapsible legend a.medium,
+body.node-type-organization article .collapsible legend a.medium,
+body.node-type-event article .collapsible legend a.medium {
   font-size: 15px;
 }
 /* line 12, ../../../../../../../../.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/zurb-foundation-3.2.5/scss/foundation/components/modules/_buttons.scss */
-.button.small {
+.button.small, #content > article .collapsed legend a.small,
+#content > article .collapsible legend a.small,
+.content-article .collapsed legend a.small,
+body.node-type-resource article .collapsed legend a.small,
+body.node-type-organization article .collapsed legend a.small,
+body.node-type-event article .collapsed legend a.small,
+.content-article .collapsible legend a.small,
+body.node-type-resource article .collapsible legend a.small,
+body.node-type-organization article .collapsible legend a.small,
+body.node-type-event article .collapsible legend a.small {
   font-size: 12px;
   padding: 7px 14px 8px;
 }
 /* line 13, ../../../../../../../../.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/zurb-foundation-3.2.5/scss/foundation/components/modules/_buttons.scss */
-.button.tiny {
+.button.tiny, #content > article .collapsed legend a.tiny,
+#content > article .collapsible legend a.tiny,
+.content-article .collapsed legend a.tiny,
+body.node-type-resource article .collapsed legend a.tiny,
+body.node-type-organization article .collapsed legend a.tiny,
+body.node-type-event article .collapsed legend a.tiny,
+.content-article .collapsible legend a.tiny,
+body.node-type-resource article .collapsible legend a.tiny,
+body.node-type-organization article .collapsible legend a.tiny,
+body.node-type-event article .collapsible legend a.tiny {
   font-size: 11px;
   padding: 5px 10px 6px;
 }
 /* line 14, ../../../../../../../../.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/zurb-foundation-3.2.5/scss/foundation/components/modules/_buttons.scss */
-.button.expand {
+.button.expand, #content > article .collapsed legend a.expand,
+#content > article .collapsible legend a.expand,
+.content-article .collapsed legend a.expand,
+body.node-type-resource article .collapsed legend a.expand,
+body.node-type-organization article .collapsed legend a.expand,
+body.node-type-event article .collapsed legend a.expand,
+.content-article .collapsible legend a.expand,
+body.node-type-resource article .collapsible legend a.expand,
+body.node-type-organization article .collapsible legend a.expand,
+body.node-type-event article .collapsible legend a.expand {
   width: 100%;
   text-align: center;
 }
 /* line 17, ../../../../../../../../.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/zurb-foundation-3.2.5/scss/foundation/components/modules/_buttons.scss */
-.button.primary {
+.button.primary, #content > article .collapsed legend a.primary,
+#content > article .collapsible legend a.primary,
+.content-article .collapsed legend a.primary,
+body.node-type-resource article .collapsed legend a.primary,
+body.node-type-organization article .collapsed legend a.primary,
+body.node-type-event article .collapsed legend a.primary,
+.content-article .collapsible legend a.primary,
+body.node-type-resource article .collapsible legend a.primary,
+body.node-type-organization article .collapsible legend a.primary,
+body.node-type-event article .collapsible legend a.primary {
   background-color: #18729d;
   border: 1px solid #0e425b;
 }
 /* line 18, ../../../../../../../../.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/zurb-foundation-3.2.5/scss/foundation/components/modules/_buttons.scss */
-.button.primary:hover, .button.primary:focus {
+.button.primary:hover, #content > article .collapsed legend a.primary:hover,
+#content > article .collapsible legend a.primary:hover,
+.content-article .collapsed legend a.primary:hover,
+body.node-type-resource article .collapsed legend a.primary:hover,
+body.node-type-organization article .collapsed legend a.primary:hover,
+body.node-type-event article .collapsed legend a.primary:hover,
+.content-article .collapsible legend a.primary:hover,
+body.node-type-resource article .collapsible legend a.primary:hover,
+body.node-type-organization article .collapsible legend a.primary:hover,
+body.node-type-event article .collapsible legend a.primary:hover, .button.primary:focus, #content > article .collapsed legend a.primary:focus,
+#content > article .collapsible legend a.primary:focus,
+.content-article .collapsed legend a.primary:focus,
+body.node-type-resource article .collapsed legend a.primary:focus,
+body.node-type-organization article .collapsed legend a.primary:focus,
+body.node-type-event article .collapsed legend a.primary:focus,
+.content-article .collapsible legend a.primary:focus,
+body.node-type-resource article .collapsible legend a.primary:focus,
+body.node-type-organization article .collapsible legend a.primary:focus,
+body.node-type-event article .collapsible legend a.primary:focus {
   background-color: #115271;
 }
 /* line 20, ../../../../../../../../.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/zurb-foundation-3.2.5/scss/foundation/components/modules/_buttons.scss */
-.button.success {
+.button.success, #content > article .collapsed legend a.success,
+#content > article .collapsible legend a.success,
+.content-article .collapsed legend a.success,
+body.node-type-resource article .collapsed legend a.success,
+body.node-type-organization article .collapsed legend a.success,
+body.node-type-event article .collapsed legend a.success,
+.content-article .collapsible legend a.success,
+body.node-type-resource article .collapsible legend a.success,
+body.node-type-organization article .collapsible legend a.success,
+body.node-type-event article .collapsible legend a.success {
   background-color: #5da423;
   border: 1px solid #396516;
 }
 /* line 21, ../../../../../../../../.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/zurb-foundation-3.2.5/scss/foundation/components/modules/_buttons.scss */
-.button.success:hover, .button.success:focus {
+.button.success:hover, #content > article .collapsed legend a.success:hover,
+#content > article .collapsible legend a.success:hover,
+.content-article .collapsed legend a.success:hover,
+body.node-type-resource article .collapsed legend a.success:hover,
+body.node-type-organization article .collapsed legend a.success:hover,
+body.node-type-event article .collapsed legend a.success:hover,
+.content-article .collapsible legend a.success:hover,
+body.node-type-resource article .collapsible legend a.success:hover,
+body.node-type-organization article .collapsible legend a.success:hover,
+body.node-type-event article .collapsible legend a.success:hover, .button.success:focus, #content > article .collapsed legend a.success:focus,
+#content > article .collapsible legend a.success:focus,
+.content-article .collapsed legend a.success:focus,
+body.node-type-resource article .collapsed legend a.success:focus,
+body.node-type-organization article .collapsed legend a.success:focus,
+body.node-type-event article .collapsed legend a.success:focus,
+.content-article .collapsible legend a.success:focus,
+body.node-type-resource article .collapsible legend a.success:focus,
+body.node-type-organization article .collapsible legend a.success:focus,
+body.node-type-event article .collapsible legend a.success:focus {
   background-color: #457a1a;
 }
 /* line 23, ../../../../../../../../.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/zurb-foundation-3.2.5/scss/foundation/components/modules/_buttons.scss */
-.button.alert {
+.button.alert, #content > article .collapsed legend a.alert,
+#content > article .collapsible legend a.alert,
+.content-article .collapsed legend a.alert,
+body.node-type-resource article .collapsed legend a.alert,
+body.node-type-organization article .collapsed legend a.alert,
+body.node-type-event article .collapsed legend a.alert,
+.content-article .collapsible legend a.alert,
+body.node-type-resource article .collapsible legend a.alert,
+body.node-type-organization article .collapsible legend a.alert,
+body.node-type-event article .collapsible legend a.alert {
   background-color: #c60f13;
   border: 1px solid #7f0a0c;
 }
 /* line 24, ../../../../../../../../.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/zurb-foundation-3.2.5/scss/foundation/components/modules/_buttons.scss */
-.button.alert:hover, .button.alert:focus {
+.button.alert:hover, #content > article .collapsed legend a.alert:hover,
+#content > article .collapsible legend a.alert:hover,
+.content-article .collapsed legend a.alert:hover,
+body.node-type-resource article .collapsed legend a.alert:hover,
+body.node-type-organization article .collapsed legend a.alert:hover,
+body.node-type-event article .collapsed legend a.alert:hover,
+.content-article .collapsible legend a.alert:hover,
+body.node-type-resource article .collapsible legend a.alert:hover,
+body.node-type-organization article .collapsible legend a.alert:hover,
+body.node-type-event article .collapsible legend a.alert:hover, .button.alert:focus, #content > article .collapsed legend a.alert:focus,
+#content > article .collapsible legend a.alert:focus,
+.content-article .collapsed legend a.alert:focus,
+body.node-type-resource article .collapsed legend a.alert:focus,
+body.node-type-organization article .collapsed legend a.alert:focus,
+body.node-type-event article .collapsed legend a.alert:focus,
+.content-article .collapsible legend a.alert:focus,
+body.node-type-resource article .collapsible legend a.alert:focus,
+body.node-type-organization article .collapsible legend a.alert:focus,
+body.node-type-event article .collapsible legend a.alert:focus {
   background-color: #970b0e;
 }
 /* line 26, ../../../../../../../../.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/zurb-foundation-3.2.5/scss/foundation/components/modules/_buttons.scss */
-.button.secondary {
+.button.secondary, #content > article .collapsed legend a.secondary,
+#content > article .collapsible legend a.secondary,
+.content-article .collapsed legend a.secondary,
+body.node-type-resource article .collapsed legend a.secondary,
+body.node-type-organization article .collapsed legend a.secondary,
+body.node-type-event article .collapsed legend a.secondary,
+.content-article .collapsible legend a.secondary,
+body.node-type-resource article .collapsible legend a.secondary,
+body.node-type-organization article .collapsible legend a.secondary,
+body.node-type-event article .collapsible legend a.secondary {
   background-color: #f68115;
   color: black;
   border: 1px solid #b75c07;
 }
 /* line 27, ../../../../../../../../.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/zurb-foundation-3.2.5/scss/foundation/components/modules/_buttons.scss */
-.button.secondary:hover, .button.secondary:focus {
+.button.secondary:hover, #content > article .collapsed legend a.secondary:hover,
+#content > article .collapsible legend a.secondary:hover,
+.content-article .collapsed legend a.secondary:hover,
+body.node-type-resource article .collapsed legend a.secondary:hover,
+body.node-type-organization article .collapsed legend a.secondary:hover,
+body.node-type-event article .collapsed legend a.secondary:hover,
+.content-article .collapsible legend a.secondary:hover,
+body.node-type-resource article .collapsible legend a.secondary:hover,
+body.node-type-organization article .collapsible legend a.secondary:hover,
+body.node-type-event article .collapsible legend a.secondary:hover, .button.secondary:focus, #content > article .collapsed legend a.secondary:focus,
+#content > article .collapsible legend a.secondary:focus,
+.content-article .collapsed legend a.secondary:focus,
+body.node-type-resource article .collapsed legend a.secondary:focus,
+body.node-type-organization article .collapsed legend a.secondary:focus,
+body.node-type-event article .collapsed legend a.secondary:focus,
+.content-article .collapsible legend a.secondary:focus,
+body.node-type-resource article .collapsible legend a.secondary:focus,
+body.node-type-organization article .collapsible legend a.secondary:focus,
+body.node-type-event article .collapsible legend a.secondary:focus {
   background-color: #d06808;
 }
 /* line 31, ../../../../../../../../.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/zurb-foundation-3.2.5/scss/foundation/components/modules/_buttons.scss */
-.button.radius {
+.button.radius, #content > article .collapsed legend a.radius,
+#content > article .collapsible legend a.radius,
+.content-article .collapsed legend a.radius,
+body.node-type-resource article .collapsed legend a.radius,
+body.node-type-organization article .collapsed legend a.radius,
+body.node-type-event article .collapsed legend a.radius,
+.content-article .collapsible legend a.radius,
+body.node-type-resource article .collapsible legend a.radius,
+body.node-type-organization article .collapsible legend a.radius,
+body.node-type-event article .collapsible legend a.radius {
   -webkit-border-radius: 7px;
   -moz-border-radius: 7px;
   -ms-border-radius: 7px;
@@ -597,7 +795,16 @@ abbr {
   border-radius: 7px;
 }
 /* line 32, ../../../../../../../../.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/zurb-foundation-3.2.5/scss/foundation/components/modules/_buttons.scss */
-.button.round {
+.button.round, #content > article .collapsed legend a.round,
+#content > article .collapsible legend a.round,
+.content-article .collapsed legend a.round,
+body.node-type-resource article .collapsed legend a.round,
+body.node-type-organization article .collapsed legend a.round,
+body.node-type-event article .collapsed legend a.round,
+.content-article .collapsible legend a.round,
+body.node-type-resource article .collapsible legend a.round,
+body.node-type-organization article .collapsible legend a.round,
+body.node-type-event article .collapsible legend a.round {
   -webkit-border-radius: 1000px;
   -moz-border-radius: 1000px;
   -ms-border-radius: 1000px;
@@ -605,19 +812,55 @@ abbr {
   border-radius: 1000px;
 }
 /* line 35, ../../../../../../../../.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/zurb-foundation-3.2.5/scss/foundation/components/modules/_buttons.scss */
-.button.full-width {
+.button.full-width, #content > article .collapsed legend a.full-width,
+#content > article .collapsible legend a.full-width,
+.content-article .collapsed legend a.full-width,
+body.node-type-resource article .collapsed legend a.full-width,
+body.node-type-organization article .collapsed legend a.full-width,
+body.node-type-event article .collapsed legend a.full-width,
+.content-article .collapsible legend a.full-width,
+body.node-type-resource article .collapsible legend a.full-width,
+body.node-type-organization article .collapsible legend a.full-width,
+body.node-type-event article .collapsible legend a.full-width {
   width: 100%;
   text-align: center;
   padding-left: 0px !important;
   padding-right: 0px !important;
 }
 /* line 36, ../../../../../../../../.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/zurb-foundation-3.2.5/scss/foundation/components/modules/_buttons.scss */
-.button.left-align {
+.button.left-align, #content > article .collapsed legend a.left-align,
+#content > article .collapsible legend a.left-align,
+.content-article .collapsed legend a.left-align,
+body.node-type-resource article .collapsed legend a.left-align,
+body.node-type-organization article .collapsed legend a.left-align,
+body.node-type-event article .collapsed legend a.left-align,
+.content-article .collapsible legend a.left-align,
+body.node-type-resource article .collapsible legend a.left-align,
+body.node-type-organization article .collapsible legend a.left-align,
+body.node-type-event article .collapsible legend a.left-align {
   text-align: left;
   text-indent: 12px;
 }
 /* line 39, ../../../../../../../../.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/zurb-foundation-3.2.5/scss/foundation/components/modules/_buttons.scss */
-.button.disabled, .button[disabled] {
+.button.disabled, #content > article .collapsed legend a.disabled,
+#content > article .collapsible legend a.disabled,
+.content-article .collapsed legend a.disabled,
+body.node-type-resource article .collapsed legend a.disabled,
+body.node-type-organization article .collapsed legend a.disabled,
+body.node-type-event article .collapsed legend a.disabled,
+.content-article .collapsible legend a.disabled,
+body.node-type-resource article .collapsible legend a.disabled,
+body.node-type-organization article .collapsible legend a.disabled,
+body.node-type-event article .collapsible legend a.disabled, .button[disabled], #content > article .collapsed legend a[disabled],
+#content > article .collapsible legend a[disabled],
+.content-article .collapsed legend a[disabled],
+body.node-type-resource article .collapsed legend a[disabled],
+body.node-type-organization article .collapsed legend a[disabled],
+body.node-type-event article .collapsed legend a[disabled],
+.content-article .collapsible legend a[disabled],
+body.node-type-resource article .collapsible legend a[disabled],
+body.node-type-organization article .collapsible legend a[disabled],
+body.node-type-event article .collapsible legend a[disabled] {
   opacity: 0.6;
   cursor: default;
   background: #18729d;
@@ -626,33 +869,213 @@ abbr {
   box-shadow: none;
 }
 /* line 40, ../../../../../../../../.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/zurb-foundation-3.2.5/scss/foundation/components/modules/_buttons.scss */
-.button.disabled:hover, .button[disabled]:hover {
+.button.disabled:hover, #content > article .collapsed legend a.disabled:hover,
+#content > article .collapsible legend a.disabled:hover,
+.content-article .collapsed legend a.disabled:hover,
+body.node-type-resource article .collapsed legend a.disabled:hover,
+body.node-type-organization article .collapsed legend a.disabled:hover,
+body.node-type-event article .collapsed legend a.disabled:hover,
+.content-article .collapsible legend a.disabled:hover,
+body.node-type-resource article .collapsible legend a.disabled:hover,
+body.node-type-organization article .collapsible legend a.disabled:hover,
+body.node-type-event article .collapsible legend a.disabled:hover, .button[disabled]:hover, #content > article .collapsed legend a[disabled]:hover,
+#content > article .collapsible legend a[disabled]:hover,
+.content-article .collapsed legend a[disabled]:hover,
+body.node-type-resource article .collapsed legend a[disabled]:hover,
+body.node-type-organization article .collapsed legend a[disabled]:hover,
+body.node-type-event article .collapsed legend a[disabled]:hover,
+.content-article .collapsible legend a[disabled]:hover,
+body.node-type-resource article .collapsible legend a[disabled]:hover,
+body.node-type-organization article .collapsible legend a[disabled]:hover,
+body.node-type-event article .collapsible legend a[disabled]:hover {
   background: #18729d;
 }
 /* line 42, ../../../../../../../../.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/zurb-foundation-3.2.5/scss/foundation/components/modules/_buttons.scss */
-.button.disabled.success, .button[disabled].success {
+.button.disabled.success, #content > article .collapsed legend a.disabled.success,
+#content > article .collapsible legend a.disabled.success,
+.content-article .collapsed legend a.disabled.success,
+body.node-type-resource article .collapsed legend a.disabled.success,
+body.node-type-organization article .collapsed legend a.disabled.success,
+body.node-type-event article .collapsed legend a.disabled.success,
+.content-article .collapsible legend a.disabled.success,
+body.node-type-resource article .collapsible legend a.disabled.success,
+body.node-type-organization article .collapsible legend a.disabled.success,
+body.node-type-event article .collapsible legend a.disabled.success, .button[disabled].success, #content > article .collapsed legend a[disabled].success,
+#content > article .collapsible legend a[disabled].success,
+.content-article .collapsed legend a[disabled].success,
+body.node-type-resource article .collapsed legend a[disabled].success,
+body.node-type-organization article .collapsed legend a[disabled].success,
+body.node-type-event article .collapsed legend a[disabled].success,
+.content-article .collapsible legend a[disabled].success,
+body.node-type-resource article .collapsible legend a[disabled].success,
+body.node-type-organization article .collapsible legend a[disabled].success,
+body.node-type-event article .collapsible legend a[disabled].success {
   background-color: #5da423;
 }
 /* line 43, ../../../../../../../../.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/zurb-foundation-3.2.5/scss/foundation/components/modules/_buttons.scss */
-.button.disabled.success:hover, .button.disabled.success:focus, .button[disabled].success:hover, .button[disabled].success:focus {
+.button.disabled.success:hover, #content > article .collapsed legend a.disabled.success:hover,
+#content > article .collapsible legend a.disabled.success:hover,
+.content-article .collapsed legend a.disabled.success:hover,
+body.node-type-resource article .collapsed legend a.disabled.success:hover,
+body.node-type-organization article .collapsed legend a.disabled.success:hover,
+body.node-type-event article .collapsed legend a.disabled.success:hover,
+.content-article .collapsible legend a.disabled.success:hover,
+body.node-type-resource article .collapsible legend a.disabled.success:hover,
+body.node-type-organization article .collapsible legend a.disabled.success:hover,
+body.node-type-event article .collapsible legend a.disabled.success:hover, .button.disabled.success:focus, #content > article .collapsed legend a.disabled.success:focus,
+#content > article .collapsible legend a.disabled.success:focus,
+.content-article .collapsed legend a.disabled.success:focus,
+body.node-type-resource article .collapsed legend a.disabled.success:focus,
+body.node-type-organization article .collapsed legend a.disabled.success:focus,
+body.node-type-event article .collapsed legend a.disabled.success:focus,
+.content-article .collapsible legend a.disabled.success:focus,
+body.node-type-resource article .collapsible legend a.disabled.success:focus,
+body.node-type-organization article .collapsible legend a.disabled.success:focus,
+body.node-type-event article .collapsible legend a.disabled.success:focus, .button[disabled].success:hover, #content > article .collapsed legend a[disabled].success:hover,
+#content > article .collapsible legend a[disabled].success:hover,
+.content-article .collapsed legend a[disabled].success:hover,
+body.node-type-resource article .collapsed legend a[disabled].success:hover,
+body.node-type-organization article .collapsed legend a[disabled].success:hover,
+body.node-type-event article .collapsed legend a[disabled].success:hover,
+.content-article .collapsible legend a[disabled].success:hover,
+body.node-type-resource article .collapsible legend a[disabled].success:hover,
+body.node-type-organization article .collapsible legend a[disabled].success:hover,
+body.node-type-event article .collapsible legend a[disabled].success:hover, .button[disabled].success:focus, #content > article .collapsed legend a[disabled].success:focus,
+#content > article .collapsible legend a[disabled].success:focus,
+.content-article .collapsed legend a[disabled].success:focus,
+body.node-type-resource article .collapsed legend a[disabled].success:focus,
+body.node-type-organization article .collapsed legend a[disabled].success:focus,
+body.node-type-event article .collapsed legend a[disabled].success:focus,
+.content-article .collapsible legend a[disabled].success:focus,
+body.node-type-resource article .collapsible legend a[disabled].success:focus,
+body.node-type-organization article .collapsible legend a[disabled].success:focus,
+body.node-type-event article .collapsible legend a[disabled].success:focus {
   background-color: #5da423;
   outline: none;
 }
 /* line 45, ../../../../../../../../.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/zurb-foundation-3.2.5/scss/foundation/components/modules/_buttons.scss */
-.button.disabled.alert, .button[disabled].alert {
+.button.disabled.alert, #content > article .collapsed legend a.disabled.alert,
+#content > article .collapsible legend a.disabled.alert,
+.content-article .collapsed legend a.disabled.alert,
+body.node-type-resource article .collapsed legend a.disabled.alert,
+body.node-type-organization article .collapsed legend a.disabled.alert,
+body.node-type-event article .collapsed legend a.disabled.alert,
+.content-article .collapsible legend a.disabled.alert,
+body.node-type-resource article .collapsible legend a.disabled.alert,
+body.node-type-organization article .collapsible legend a.disabled.alert,
+body.node-type-event article .collapsible legend a.disabled.alert, .button[disabled].alert, #content > article .collapsed legend a[disabled].alert,
+#content > article .collapsible legend a[disabled].alert,
+.content-article .collapsed legend a[disabled].alert,
+body.node-type-resource article .collapsed legend a[disabled].alert,
+body.node-type-organization article .collapsed legend a[disabled].alert,
+body.node-type-event article .collapsed legend a[disabled].alert,
+.content-article .collapsible legend a[disabled].alert,
+body.node-type-resource article .collapsible legend a[disabled].alert,
+body.node-type-organization article .collapsible legend a[disabled].alert,
+body.node-type-event article .collapsible legend a[disabled].alert {
   background-color: #c60f13;
 }
 /* line 46, ../../../../../../../../.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/zurb-foundation-3.2.5/scss/foundation/components/modules/_buttons.scss */
-.button.disabled.alert:hover, .button.disabled.alert:focus, .button[disabled].alert:hover, .button[disabled].alert:focus {
+.button.disabled.alert:hover, #content > article .collapsed legend a.disabled.alert:hover,
+#content > article .collapsible legend a.disabled.alert:hover,
+.content-article .collapsed legend a.disabled.alert:hover,
+body.node-type-resource article .collapsed legend a.disabled.alert:hover,
+body.node-type-organization article .collapsed legend a.disabled.alert:hover,
+body.node-type-event article .collapsed legend a.disabled.alert:hover,
+.content-article .collapsible legend a.disabled.alert:hover,
+body.node-type-resource article .collapsible legend a.disabled.alert:hover,
+body.node-type-organization article .collapsible legend a.disabled.alert:hover,
+body.node-type-event article .collapsible legend a.disabled.alert:hover, .button.disabled.alert:focus, #content > article .collapsed legend a.disabled.alert:focus,
+#content > article .collapsible legend a.disabled.alert:focus,
+.content-article .collapsed legend a.disabled.alert:focus,
+body.node-type-resource article .collapsed legend a.disabled.alert:focus,
+body.node-type-organization article .collapsed legend a.disabled.alert:focus,
+body.node-type-event article .collapsed legend a.disabled.alert:focus,
+.content-article .collapsible legend a.disabled.alert:focus,
+body.node-type-resource article .collapsible legend a.disabled.alert:focus,
+body.node-type-organization article .collapsible legend a.disabled.alert:focus,
+body.node-type-event article .collapsible legend a.disabled.alert:focus, .button[disabled].alert:hover, #content > article .collapsed legend a[disabled].alert:hover,
+#content > article .collapsible legend a[disabled].alert:hover,
+.content-article .collapsed legend a[disabled].alert:hover,
+body.node-type-resource article .collapsed legend a[disabled].alert:hover,
+body.node-type-organization article .collapsed legend a[disabled].alert:hover,
+body.node-type-event article .collapsed legend a[disabled].alert:hover,
+.content-article .collapsible legend a[disabled].alert:hover,
+body.node-type-resource article .collapsible legend a[disabled].alert:hover,
+body.node-type-organization article .collapsible legend a[disabled].alert:hover,
+body.node-type-event article .collapsible legend a[disabled].alert:hover, .button[disabled].alert:focus, #content > article .collapsed legend a[disabled].alert:focus,
+#content > article .collapsible legend a[disabled].alert:focus,
+.content-article .collapsed legend a[disabled].alert:focus,
+body.node-type-resource article .collapsed legend a[disabled].alert:focus,
+body.node-type-organization article .collapsed legend a[disabled].alert:focus,
+body.node-type-event article .collapsed legend a[disabled].alert:focus,
+.content-article .collapsible legend a[disabled].alert:focus,
+body.node-type-resource article .collapsible legend a[disabled].alert:focus,
+body.node-type-organization article .collapsible legend a[disabled].alert:focus,
+body.node-type-event article .collapsible legend a[disabled].alert:focus {
   background-color: #c60f13;
   outline: none;
 }
 /* line 48, ../../../../../../../../.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/zurb-foundation-3.2.5/scss/foundation/components/modules/_buttons.scss */
-.button.disabled.secondary, .button[disabled].secondary {
+.button.disabled.secondary, #content > article .collapsed legend a.disabled.secondary,
+#content > article .collapsible legend a.disabled.secondary,
+.content-article .collapsed legend a.disabled.secondary,
+body.node-type-resource article .collapsed legend a.disabled.secondary,
+body.node-type-organization article .collapsed legend a.disabled.secondary,
+body.node-type-event article .collapsed legend a.disabled.secondary,
+.content-article .collapsible legend a.disabled.secondary,
+body.node-type-resource article .collapsible legend a.disabled.secondary,
+body.node-type-organization article .collapsible legend a.disabled.secondary,
+body.node-type-event article .collapsible legend a.disabled.secondary, .button[disabled].secondary, #content > article .collapsed legend a[disabled].secondary,
+#content > article .collapsible legend a[disabled].secondary,
+.content-article .collapsed legend a[disabled].secondary,
+body.node-type-resource article .collapsed legend a[disabled].secondary,
+body.node-type-organization article .collapsed legend a[disabled].secondary,
+body.node-type-event article .collapsed legend a[disabled].secondary,
+.content-article .collapsible legend a[disabled].secondary,
+body.node-type-resource article .collapsible legend a[disabled].secondary,
+body.node-type-organization article .collapsible legend a[disabled].secondary,
+body.node-type-event article .collapsible legend a[disabled].secondary {
   background-color: #f68115;
 }
 /* line 49, ../../../../../../../../.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/zurb-foundation-3.2.5/scss/foundation/components/modules/_buttons.scss */
-.button.disabled.secondary:hover, .button.disabled.secondary:focus, .button[disabled].secondary:hover, .button[disabled].secondary:focus {
+.button.disabled.secondary:hover, #content > article .collapsed legend a.disabled.secondary:hover,
+#content > article .collapsible legend a.disabled.secondary:hover,
+.content-article .collapsed legend a.disabled.secondary:hover,
+body.node-type-resource article .collapsed legend a.disabled.secondary:hover,
+body.node-type-organization article .collapsed legend a.disabled.secondary:hover,
+body.node-type-event article .collapsed legend a.disabled.secondary:hover,
+.content-article .collapsible legend a.disabled.secondary:hover,
+body.node-type-resource article .collapsible legend a.disabled.secondary:hover,
+body.node-type-organization article .collapsible legend a.disabled.secondary:hover,
+body.node-type-event article .collapsible legend a.disabled.secondary:hover, .button.disabled.secondary:focus, #content > article .collapsed legend a.disabled.secondary:focus,
+#content > article .collapsible legend a.disabled.secondary:focus,
+.content-article .collapsed legend a.disabled.secondary:focus,
+body.node-type-resource article .collapsed legend a.disabled.secondary:focus,
+body.node-type-organization article .collapsed legend a.disabled.secondary:focus,
+body.node-type-event article .collapsed legend a.disabled.secondary:focus,
+.content-article .collapsible legend a.disabled.secondary:focus,
+body.node-type-resource article .collapsible legend a.disabled.secondary:focus,
+body.node-type-organization article .collapsible legend a.disabled.secondary:focus,
+body.node-type-event article .collapsible legend a.disabled.secondary:focus, .button[disabled].secondary:hover, #content > article .collapsed legend a[disabled].secondary:hover,
+#content > article .collapsible legend a[disabled].secondary:hover,
+.content-article .collapsed legend a[disabled].secondary:hover,
+body.node-type-resource article .collapsed legend a[disabled].secondary:hover,
+body.node-type-organization article .collapsed legend a[disabled].secondary:hover,
+body.node-type-event article .collapsed legend a[disabled].secondary:hover,
+.content-article .collapsible legend a[disabled].secondary:hover,
+body.node-type-resource article .collapsible legend a[disabled].secondary:hover,
+body.node-type-organization article .collapsible legend a[disabled].secondary:hover,
+body.node-type-event article .collapsible legend a[disabled].secondary:hover, .button[disabled].secondary:focus, #content > article .collapsed legend a[disabled].secondary:focus,
+#content > article .collapsible legend a[disabled].secondary:focus,
+.content-article .collapsed legend a[disabled].secondary:focus,
+body.node-type-resource article .collapsed legend a[disabled].secondary:focus,
+body.node-type-organization article .collapsed legend a[disabled].secondary:focus,
+body.node-type-event article .collapsed legend a[disabled].secondary:focus,
+.content-article .collapsible legend a[disabled].secondary:focus,
+body.node-type-resource article .collapsible legend a[disabled].secondary:focus,
+body.node-type-organization article .collapsible legend a[disabled].secondary:focus,
+body.node-type-event article .collapsible legend a[disabled].secondary:focus {
   background-color: #f68115;
   outline: none;
 }
@@ -694,7 +1117,16 @@ input[type=submit].button, button.button {
 
 /* Buttons with Dropdowns ---------------------- */
 /* line 68, ../../../../../../../../.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/zurb-foundation-3.2.5/scss/foundation/components/modules/_buttons.scss */
-.button.dropdown {
+.button.dropdown, #content > article .collapsed legend a.dropdown,
+#content > article .collapsible legend a.dropdown,
+.content-article .collapsed legend a.dropdown,
+body.node-type-resource article .collapsed legend a.dropdown,
+body.node-type-organization article .collapsed legend a.dropdown,
+body.node-type-event article .collapsed legend a.dropdown,
+.content-article .collapsible legend a.dropdown,
+body.node-type-resource article .collapsible legend a.dropdown,
+body.node-type-organization article .collapsible legend a.dropdown,
+body.node-type-event article .collapsible legend a.dropdown {
   position: relative;
   padding-right: 44px;
   /* Sizes */
@@ -703,19 +1135,55 @@ input[type=submit].button, button.button {
   /* Split Dropdown Buttons */
 }
 /* line 71, ../../../../../../../../.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/zurb-foundation-3.2.5/scss/foundation/components/modules/_buttons.scss */
-.button.dropdown.large {
+.button.dropdown.large, #content > article .collapsed legend a.dropdown.large,
+#content > article .collapsible legend a.dropdown.large,
+.content-article .collapsed legend a.dropdown.large,
+body.node-type-resource article .collapsed legend a.dropdown.large,
+body.node-type-organization article .collapsed legend a.dropdown.large,
+body.node-type-event article .collapsed legend a.dropdown.large,
+.content-article .collapsible legend a.dropdown.large,
+body.node-type-resource article .collapsible legend a.dropdown.large,
+body.node-type-organization article .collapsible legend a.dropdown.large,
+body.node-type-event article .collapsible legend a.dropdown.large {
   padding-right: 60px;
 }
 /* line 72, ../../../../../../../../.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/zurb-foundation-3.2.5/scss/foundation/components/modules/_buttons.scss */
-.button.dropdown.small {
+.button.dropdown.small, #content > article .collapsed legend a.dropdown.small,
+#content > article .collapsible legend a.dropdown.small,
+.content-article .collapsed legend a.dropdown.small,
+body.node-type-resource article .collapsed legend a.dropdown.small,
+body.node-type-organization article .collapsed legend a.dropdown.small,
+body.node-type-event article .collapsed legend a.dropdown.small,
+.content-article .collapsible legend a.dropdown.small,
+body.node-type-resource article .collapsible legend a.dropdown.small,
+body.node-type-organization article .collapsible legend a.dropdown.small,
+body.node-type-event article .collapsible legend a.dropdown.small {
   padding-right: 28px;
 }
 /* line 73, ../../../../../../../../.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/zurb-foundation-3.2.5/scss/foundation/components/modules/_buttons.scss */
-.button.dropdown.tiny {
+.button.dropdown.tiny, #content > article .collapsed legend a.dropdown.tiny,
+#content > article .collapsible legend a.dropdown.tiny,
+.content-article .collapsed legend a.dropdown.tiny,
+body.node-type-resource article .collapsed legend a.dropdown.tiny,
+body.node-type-organization article .collapsed legend a.dropdown.tiny,
+body.node-type-event article .collapsed legend a.dropdown.tiny,
+.content-article .collapsible legend a.dropdown.tiny,
+body.node-type-resource article .collapsible legend a.dropdown.tiny,
+body.node-type-organization article .collapsible legend a.dropdown.tiny,
+body.node-type-event article .collapsible legend a.dropdown.tiny {
   padding-right: 20px;
 }
 /* line 76, ../../../../../../../../.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/zurb-foundation-3.2.5/scss/foundation/components/modules/_buttons.scss */
-.button.dropdown:after {
+.button.dropdown:after, #content > article .collapsed legend a.dropdown:after,
+#content > article .collapsible legend a.dropdown:after,
+.content-article .collapsed legend a.dropdown:after,
+body.node-type-resource article .collapsed legend a.dropdown:after,
+body.node-type-organization article .collapsed legend a.dropdown:after,
+body.node-type-event article .collapsed legend a.dropdown:after,
+.content-article .collapsible legend a.dropdown:after,
+body.node-type-resource article .collapsible legend a.dropdown:after,
+body.node-type-organization article .collapsible legend a.dropdown:after,
+body.node-type-event article .collapsible legend a.dropdown:after {
   content: "";
   display: block;
   width: 0;
@@ -728,7 +1196,16 @@ input[type=submit].button, button.button {
   margin-top: -2px;
 }
 /* line 77, ../../../../../../../../.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/zurb-foundation-3.2.5/scss/foundation/components/modules/_buttons.scss */
-.button.dropdown.large:after {
+.button.dropdown.large:after, #content > article .collapsed legend a.dropdown.large:after,
+#content > article .collapsible legend a.dropdown.large:after,
+.content-article .collapsed legend a.dropdown.large:after,
+body.node-type-resource article .collapsed legend a.dropdown.large:after,
+body.node-type-organization article .collapsed legend a.dropdown.large:after,
+body.node-type-event article .collapsed legend a.dropdown.large:after,
+.content-article .collapsible legend a.dropdown.large:after,
+body.node-type-resource article .collapsible legend a.dropdown.large:after,
+body.node-type-organization article .collapsible legend a.dropdown.large:after,
+body.node-type-event article .collapsible legend a.dropdown.large:after {
   content: "";
   display: block;
   width: 0;
@@ -739,7 +1216,16 @@ input[type=submit].button, button.button {
   right: 30px;
 }
 /* line 78, ../../../../../../../../.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/zurb-foundation-3.2.5/scss/foundation/components/modules/_buttons.scss */
-.button.dropdown.small:after {
+.button.dropdown.small:after, #content > article .collapsed legend a.dropdown.small:after,
+#content > article .collapsible legend a.dropdown.small:after,
+.content-article .collapsed legend a.dropdown.small:after,
+body.node-type-resource article .collapsed legend a.dropdown.small:after,
+body.node-type-organization article .collapsed legend a.dropdown.small:after,
+body.node-type-event article .collapsed legend a.dropdown.small:after,
+.content-article .collapsible legend a.dropdown.small:after,
+body.node-type-resource article .collapsible legend a.dropdown.small:after,
+body.node-type-organization article .collapsible legend a.dropdown.small:after,
+body.node-type-event article .collapsible legend a.dropdown.small:after {
   content: "";
   display: block;
   width: 0;
@@ -750,7 +1236,16 @@ input[type=submit].button, button.button {
   right: 14px;
 }
 /* line 79, ../../../../../../../../.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/zurb-foundation-3.2.5/scss/foundation/components/modules/_buttons.scss */
-.button.dropdown.tiny:after {
+.button.dropdown.tiny:after, #content > article .collapsed legend a.dropdown.tiny:after,
+#content > article .collapsible legend a.dropdown.tiny:after,
+.content-article .collapsed legend a.dropdown.tiny:after,
+body.node-type-resource article .collapsed legend a.dropdown.tiny:after,
+body.node-type-organization article .collapsed legend a.dropdown.tiny:after,
+body.node-type-event article .collapsed legend a.dropdown.tiny:after,
+.content-article .collapsible legend a.dropdown.tiny:after,
+body.node-type-resource article .collapsible legend a.dropdown.tiny:after,
+body.node-type-organization article .collapsible legend a.dropdown.tiny:after,
+body.node-type-event article .collapsible legend a.dropdown.tiny:after {
   content: "";
   display: block;
   width: 0;
@@ -761,7 +1256,16 @@ input[type=submit].button, button.button {
   right: 10px;
 }
 /* line 82, ../../../../../../../../.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/zurb-foundation-3.2.5/scss/foundation/components/modules/_buttons.scss */
-.button.dropdown > ul {
+.button.dropdown > ul, #content > article .collapsed legend a.dropdown > ul,
+#content > article .collapsible legend a.dropdown > ul,
+.content-article .collapsed legend a.dropdown > ul,
+body.node-type-resource article .collapsed legend a.dropdown > ul,
+body.node-type-organization article .collapsed legend a.dropdown > ul,
+body.node-type-event article .collapsed legend a.dropdown > ul,
+.content-article .collapsible legend a.dropdown > ul,
+body.node-type-resource article .collapsible legend a.dropdown > ul,
+body.node-type-organization article .collapsible legend a.dropdown > ul,
+body.node-type-event article .collapsible legend a.dropdown > ul {
   -webkit-box-sizing: content-box;
   -moz-box-sizing: content-box;
   box-sizing: content-box;
@@ -779,7 +1283,16 @@ input[type=submit].button, button.button {
   z-index: 40;
 }
 /* line 84, ../../../../../../../../.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/zurb-foundation-3.2.5/scss/foundation/components/modules/_buttons.scss */
-.button.dropdown > ul li {
+.button.dropdown > ul li, #content > article .collapsed legend a.dropdown > ul li,
+#content > article .collapsible legend a.dropdown > ul li,
+.content-article .collapsed legend a.dropdown > ul li,
+body.node-type-resource article .collapsed legend a.dropdown > ul li,
+body.node-type-organization article .collapsed legend a.dropdown > ul li,
+body.node-type-event article .collapsed legend a.dropdown > ul li,
+.content-article .collapsible legend a.dropdown > ul li,
+body.node-type-resource article .collapsible legend a.dropdown > ul li,
+body.node-type-organization article .collapsible legend a.dropdown > ul li,
+body.node-type-event article .collapsible legend a.dropdown > ul li {
   width: 100%;
   cursor: pointer;
   padding: 0;
@@ -790,7 +1303,25 @@ input[type=submit].button, button.button {
   list-style: none;
 }
 /* line 85, ../../../../../../../../.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/zurb-foundation-3.2.5/scss/foundation/components/modules/_buttons.scss */
-.button.dropdown > ul li a, .button.dropdown > ul li button {
+.button.dropdown > ul li a, #content > article .collapsed legend a.dropdown > ul li a,
+#content > article .collapsible legend a.dropdown > ul li a,
+.content-article .collapsed legend a.dropdown > ul li a,
+body.node-type-resource article .collapsed legend a.dropdown > ul li a,
+body.node-type-organization article .collapsed legend a.dropdown > ul li a,
+body.node-type-event article .collapsed legend a.dropdown > ul li a,
+.content-article .collapsible legend a.dropdown > ul li a,
+body.node-type-resource article .collapsible legend a.dropdown > ul li a,
+body.node-type-organization article .collapsible legend a.dropdown > ul li a,
+body.node-type-event article .collapsible legend a.dropdown > ul li a, .button.dropdown > ul li button, #content > article .collapsed legend a.dropdown > ul li button,
+#content > article .collapsible legend a.dropdown > ul li button,
+.content-article .collapsed legend a.dropdown > ul li button,
+body.node-type-resource article .collapsed legend a.dropdown > ul li button,
+body.node-type-organization article .collapsed legend a.dropdown > ul li button,
+body.node-type-event article .collapsed legend a.dropdown > ul li button,
+.content-article .collapsible legend a.dropdown > ul li button,
+body.node-type-resource article .collapsible legend a.dropdown > ul li button,
+body.node-type-organization article .collapsible legend a.dropdown > ul li button,
+body.node-type-event article .collapsible legend a.dropdown > ul li button {
   display: block;
   color: #555;
   font-size: 14px;
@@ -799,7 +1330,16 @@ input[type=submit].button, button.button {
   text-align: left;
 }
 /* line 86, ../../../../../../../../.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/zurb-foundation-3.2.5/scss/foundation/components/modules/_buttons.scss */
-.button.dropdown > ul li button {
+.button.dropdown > ul li button, #content > article .collapsed legend a.dropdown > ul li button,
+#content > article .collapsible legend a.dropdown > ul li button,
+.content-article .collapsed legend a.dropdown > ul li button,
+body.node-type-resource article .collapsed legend a.dropdown > ul li button,
+body.node-type-organization article .collapsed legend a.dropdown > ul li button,
+body.node-type-event article .collapsed legend a.dropdown > ul li button,
+.content-article .collapsible legend a.dropdown > ul li button,
+body.node-type-resource article .collapsible legend a.dropdown > ul li button,
+body.node-type-organization article .collapsible legend a.dropdown > ul li button,
+body.node-type-event article .collapsible legend a.dropdown > ul li button {
   width: 100%;
   border: inherit;
   background: inherit;
@@ -808,12 +1348,39 @@ input[type=submit].button, button.button {
   -webkit-font-smoothing: antialiased;
 }
 /* line 87, ../../../../../../../../.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/zurb-foundation-3.2.5/scss/foundation/components/modules/_buttons.scss */
-.button.dropdown > ul li:hover, .button.dropdown > ul li:focus {
+.button.dropdown > ul li:hover, #content > article .collapsed legend a.dropdown > ul li:hover,
+#content > article .collapsible legend a.dropdown > ul li:hover,
+.content-article .collapsed legend a.dropdown > ul li:hover,
+body.node-type-resource article .collapsed legend a.dropdown > ul li:hover,
+body.node-type-organization article .collapsed legend a.dropdown > ul li:hover,
+body.node-type-event article .collapsed legend a.dropdown > ul li:hover,
+.content-article .collapsible legend a.dropdown > ul li:hover,
+body.node-type-resource article .collapsible legend a.dropdown > ul li:hover,
+body.node-type-organization article .collapsible legend a.dropdown > ul li:hover,
+body.node-type-event article .collapsible legend a.dropdown > ul li:hover, .button.dropdown > ul li:focus, #content > article .collapsed legend a.dropdown > ul li:focus,
+#content > article .collapsible legend a.dropdown > ul li:focus,
+.content-article .collapsed legend a.dropdown > ul li:focus,
+body.node-type-resource article .collapsed legend a.dropdown > ul li:focus,
+body.node-type-organization article .collapsed legend a.dropdown > ul li:focus,
+body.node-type-event article .collapsed legend a.dropdown > ul li:focus,
+.content-article .collapsible legend a.dropdown > ul li:focus,
+body.node-type-resource article .collapsible legend a.dropdown > ul li:focus,
+body.node-type-organization article .collapsible legend a.dropdown > ul li:focus,
+body.node-type-event article .collapsible legend a.dropdown > ul li:focus {
   background-color: #a9daf2;
   color: #222;
 }
 /* line 88, ../../../../../../../../.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/zurb-foundation-3.2.5/scss/foundation/components/modules/_buttons.scss */
-.button.dropdown > ul li.divider {
+.button.dropdown > ul li.divider, #content > article .collapsed legend a.dropdown > ul li.divider,
+#content > article .collapsible legend a.dropdown > ul li.divider,
+.content-article .collapsed legend a.dropdown > ul li.divider,
+body.node-type-resource article .collapsed legend a.dropdown > ul li.divider,
+body.node-type-organization article .collapsed legend a.dropdown > ul li.divider,
+body.node-type-event article .collapsed legend a.dropdown > ul li.divider,
+.content-article .collapsible legend a.dropdown > ul li.divider,
+body.node-type-resource article .collapsible legend a.dropdown > ul li.divider,
+body.node-type-organization article .collapsible legend a.dropdown > ul li.divider,
+body.node-type-event article .collapsible legend a.dropdown > ul li.divider {
   min-height: 0;
   padding: 0;
   height: 1px;
@@ -821,20 +1388,56 @@ input[type=submit].button, button.button {
   background: #ededed;
 }
 /* line 92, ../../../../../../../../.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/zurb-foundation-3.2.5/scss/foundation/components/modules/_buttons.scss */
-.button.dropdown.up > ul {
+.button.dropdown.up > ul, #content > article .collapsed legend a.dropdown.up > ul,
+#content > article .collapsible legend a.dropdown.up > ul,
+.content-article .collapsed legend a.dropdown.up > ul,
+body.node-type-resource article .collapsed legend a.dropdown.up > ul,
+body.node-type-organization article .collapsed legend a.dropdown.up > ul,
+body.node-type-event article .collapsed legend a.dropdown.up > ul,
+.content-article .collapsible legend a.dropdown.up > ul,
+body.node-type-resource article .collapsible legend a.dropdown.up > ul,
+body.node-type-organization article .collapsible legend a.dropdown.up > ul,
+body.node-type-event article .collapsible legend a.dropdown.up > ul {
   border-top: 1px solid #cccccc;
   border-bottom: none;
 }
 /* line 94, ../../../../../../../../.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/zurb-foundation-3.2.5/scss/foundation/components/modules/_buttons.scss */
-.button.dropdown ul.no-hover.show-dropdown {
+.button.dropdown ul.no-hover.show-dropdown, #content > article .collapsed legend a.dropdown ul.no-hover.show-dropdown,
+#content > article .collapsible legend a.dropdown ul.no-hover.show-dropdown,
+.content-article .collapsed legend a.dropdown ul.no-hover.show-dropdown,
+body.node-type-resource article .collapsed legend a.dropdown ul.no-hover.show-dropdown,
+body.node-type-organization article .collapsed legend a.dropdown ul.no-hover.show-dropdown,
+body.node-type-event article .collapsed legend a.dropdown ul.no-hover.show-dropdown,
+.content-article .collapsible legend a.dropdown ul.no-hover.show-dropdown,
+body.node-type-resource article .collapsible legend a.dropdown ul.no-hover.show-dropdown,
+body.node-type-organization article .collapsible legend a.dropdown ul.no-hover.show-dropdown,
+body.node-type-event article .collapsible legend a.dropdown ul.no-hover.show-dropdown {
   display: block !important;
 }
 /* line 96, ../../../../../../../../.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/zurb-foundation-3.2.5/scss/foundation/components/modules/_buttons.scss */
-.button.dropdown:hover > ul.no-hover {
+.button.dropdown:hover > ul.no-hover, #content > article .collapsed legend a.dropdown:hover > ul.no-hover,
+#content > article .collapsible legend a.dropdown:hover > ul.no-hover,
+.content-article .collapsed legend a.dropdown:hover > ul.no-hover,
+body.node-type-resource article .collapsed legend a.dropdown:hover > ul.no-hover,
+body.node-type-organization article .collapsed legend a.dropdown:hover > ul.no-hover,
+body.node-type-event article .collapsed legend a.dropdown:hover > ul.no-hover,
+.content-article .collapsible legend a.dropdown:hover > ul.no-hover,
+body.node-type-resource article .collapsible legend a.dropdown:hover > ul.no-hover,
+body.node-type-organization article .collapsible legend a.dropdown:hover > ul.no-hover,
+body.node-type-event article .collapsible legend a.dropdown:hover > ul.no-hover {
   display: none;
 }
 /* line 102, ../../../../../../../../.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/zurb-foundation-3.2.5/scss/foundation/components/modules/_buttons.scss */
-.button.dropdown.split {
+.button.dropdown.split, #content > article .collapsed legend a.dropdown.split,
+#content > article .collapsible legend a.dropdown.split,
+.content-article .collapsed legend a.dropdown.split,
+body.node-type-resource article .collapsed legend a.dropdown.split,
+body.node-type-organization article .collapsed legend a.dropdown.split,
+body.node-type-event article .collapsed legend a.dropdown.split,
+.content-article .collapsible legend a.dropdown.split,
+body.node-type-resource article .collapsible legend a.dropdown.split,
+body.node-type-organization article .collapsible legend a.dropdown.split,
+body.node-type-event article .collapsible legend a.dropdown.split {
   padding: 0;
   position: relative;
   /* Sizes */
@@ -842,27 +1445,117 @@ input[type=submit].button, button.button {
   /* Colors */
 }
 /* line 104, ../../../../../../../../.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/zurb-foundation-3.2.5/scss/foundation/components/modules/_buttons.scss */
-.button.dropdown.split:after {
+.button.dropdown.split:after, #content > article .collapsed legend a.dropdown.split:after,
+#content > article .collapsible legend a.dropdown.split:after,
+.content-article .collapsed legend a.dropdown.split:after,
+body.node-type-resource article .collapsed legend a.dropdown.split:after,
+body.node-type-organization article .collapsed legend a.dropdown.split:after,
+body.node-type-event article .collapsed legend a.dropdown.split:after,
+.content-article .collapsible legend a.dropdown.split:after,
+body.node-type-resource article .collapsible legend a.dropdown.split:after,
+body.node-type-organization article .collapsible legend a.dropdown.split:after,
+body.node-type-event article .collapsible legend a.dropdown.split:after {
   display: none;
 }
 /* line 105, ../../../../../../../../.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/zurb-foundation-3.2.5/scss/foundation/components/modules/_buttons.scss */
-.button.dropdown.split:hover, .button.dropdown.split:focus {
+.button.dropdown.split:hover, #content > article .collapsed legend a.dropdown.split:hover,
+#content > article .collapsible legend a.dropdown.split:hover,
+.content-article .collapsed legend a.dropdown.split:hover,
+body.node-type-resource article .collapsed legend a.dropdown.split:hover,
+body.node-type-organization article .collapsed legend a.dropdown.split:hover,
+body.node-type-event article .collapsed legend a.dropdown.split:hover,
+.content-article .collapsible legend a.dropdown.split:hover,
+body.node-type-resource article .collapsible legend a.dropdown.split:hover,
+body.node-type-organization article .collapsible legend a.dropdown.split:hover,
+body.node-type-event article .collapsible legend a.dropdown.split:hover, .button.dropdown.split:focus, #content > article .collapsed legend a.dropdown.split:focus,
+#content > article .collapsible legend a.dropdown.split:focus,
+.content-article .collapsed legend a.dropdown.split:focus,
+body.node-type-resource article .collapsed legend a.dropdown.split:focus,
+body.node-type-organization article .collapsed legend a.dropdown.split:focus,
+body.node-type-event article .collapsed legend a.dropdown.split:focus,
+.content-article .collapsible legend a.dropdown.split:focus,
+body.node-type-resource article .collapsible legend a.dropdown.split:focus,
+body.node-type-organization article .collapsible legend a.dropdown.split:focus,
+body.node-type-event article .collapsible legend a.dropdown.split:focus {
   background-color: #18729d;
 }
 /* line 106, ../../../../../../../../.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/zurb-foundation-3.2.5/scss/foundation/components/modules/_buttons.scss */
-.button.dropdown.split.alert:hover, .button.dropdown.split.alert:focus {
+.button.dropdown.split.alert:hover, #content > article .collapsed legend a.dropdown.split.alert:hover,
+#content > article .collapsible legend a.dropdown.split.alert:hover,
+.content-article .collapsed legend a.dropdown.split.alert:hover,
+body.node-type-resource article .collapsed legend a.dropdown.split.alert:hover,
+body.node-type-organization article .collapsed legend a.dropdown.split.alert:hover,
+body.node-type-event article .collapsed legend a.dropdown.split.alert:hover,
+.content-article .collapsible legend a.dropdown.split.alert:hover,
+body.node-type-resource article .collapsible legend a.dropdown.split.alert:hover,
+body.node-type-organization article .collapsible legend a.dropdown.split.alert:hover,
+body.node-type-event article .collapsible legend a.dropdown.split.alert:hover, .button.dropdown.split.alert:focus, #content > article .collapsed legend a.dropdown.split.alert:focus,
+#content > article .collapsible legend a.dropdown.split.alert:focus,
+.content-article .collapsed legend a.dropdown.split.alert:focus,
+body.node-type-resource article .collapsed legend a.dropdown.split.alert:focus,
+body.node-type-organization article .collapsed legend a.dropdown.split.alert:focus,
+body.node-type-event article .collapsed legend a.dropdown.split.alert:focus,
+.content-article .collapsible legend a.dropdown.split.alert:focus,
+body.node-type-resource article .collapsible legend a.dropdown.split.alert:focus,
+body.node-type-organization article .collapsible legend a.dropdown.split.alert:focus,
+body.node-type-event article .collapsible legend a.dropdown.split.alert:focus {
   background-color: #c60f13;
 }
 /* line 107, ../../../../../../../../.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/zurb-foundation-3.2.5/scss/foundation/components/modules/_buttons.scss */
-.button.dropdown.split.success:hover, .button.dropdown.split.success:focus {
+.button.dropdown.split.success:hover, #content > article .collapsed legend a.dropdown.split.success:hover,
+#content > article .collapsible legend a.dropdown.split.success:hover,
+.content-article .collapsed legend a.dropdown.split.success:hover,
+body.node-type-resource article .collapsed legend a.dropdown.split.success:hover,
+body.node-type-organization article .collapsed legend a.dropdown.split.success:hover,
+body.node-type-event article .collapsed legend a.dropdown.split.success:hover,
+.content-article .collapsible legend a.dropdown.split.success:hover,
+body.node-type-resource article .collapsible legend a.dropdown.split.success:hover,
+body.node-type-organization article .collapsible legend a.dropdown.split.success:hover,
+body.node-type-event article .collapsible legend a.dropdown.split.success:hover, .button.dropdown.split.success:focus, #content > article .collapsed legend a.dropdown.split.success:focus,
+#content > article .collapsible legend a.dropdown.split.success:focus,
+.content-article .collapsed legend a.dropdown.split.success:focus,
+body.node-type-resource article .collapsed legend a.dropdown.split.success:focus,
+body.node-type-organization article .collapsed legend a.dropdown.split.success:focus,
+body.node-type-event article .collapsed legend a.dropdown.split.success:focus,
+.content-article .collapsible legend a.dropdown.split.success:focus,
+body.node-type-resource article .collapsible legend a.dropdown.split.success:focus,
+body.node-type-organization article .collapsible legend a.dropdown.split.success:focus,
+body.node-type-event article .collapsible legend a.dropdown.split.success:focus {
   background-color: #5da423;
 }
 /* line 108, ../../../../../../../../.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/zurb-foundation-3.2.5/scss/foundation/components/modules/_buttons.scss */
-.button.dropdown.split.secondary:hover, .button.dropdown.split.secondary:focus {
+.button.dropdown.split.secondary:hover, #content > article .collapsed legend a.dropdown.split.secondary:hover,
+#content > article .collapsible legend a.dropdown.split.secondary:hover,
+.content-article .collapsed legend a.dropdown.split.secondary:hover,
+body.node-type-resource article .collapsed legend a.dropdown.split.secondary:hover,
+body.node-type-organization article .collapsed legend a.dropdown.split.secondary:hover,
+body.node-type-event article .collapsed legend a.dropdown.split.secondary:hover,
+.content-article .collapsible legend a.dropdown.split.secondary:hover,
+body.node-type-resource article .collapsible legend a.dropdown.split.secondary:hover,
+body.node-type-organization article .collapsible legend a.dropdown.split.secondary:hover,
+body.node-type-event article .collapsible legend a.dropdown.split.secondary:hover, .button.dropdown.split.secondary:focus, #content > article .collapsed legend a.dropdown.split.secondary:focus,
+#content > article .collapsible legend a.dropdown.split.secondary:focus,
+.content-article .collapsed legend a.dropdown.split.secondary:focus,
+body.node-type-resource article .collapsed legend a.dropdown.split.secondary:focus,
+body.node-type-organization article .collapsed legend a.dropdown.split.secondary:focus,
+body.node-type-event article .collapsed legend a.dropdown.split.secondary:focus,
+.content-article .collapsible legend a.dropdown.split.secondary:focus,
+body.node-type-resource article .collapsible legend a.dropdown.split.secondary:focus,
+body.node-type-organization article .collapsible legend a.dropdown.split.secondary:focus,
+body.node-type-event article .collapsible legend a.dropdown.split.secondary:focus {
   background-color: #f68115;
 }
 /* line 111, ../../../../../../../../.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/zurb-foundation-3.2.5/scss/foundation/components/modules/_buttons.scss */
-.button.dropdown.split > a {
+.button.dropdown.split > a, #content > article .collapsed legend a.dropdown.split > a,
+#content > article .collapsible legend a.dropdown.split > a,
+.content-article .collapsed legend a.dropdown.split > a,
+body.node-type-resource article .collapsed legend a.dropdown.split > a,
+body.node-type-organization article .collapsed legend a.dropdown.split > a,
+body.node-type-event article .collapsed legend a.dropdown.split > a,
+.content-article .collapsible legend a.dropdown.split > a,
+body.node-type-resource article .collapsible legend a.dropdown.split > a,
+body.node-type-organization article .collapsible legend a.dropdown.split > a,
+body.node-type-event article .collapsible legend a.dropdown.split > a {
   color: white;
   display: block;
   padding: 10px 50px 11px 20px;
@@ -874,32 +1567,86 @@ input[type=submit].button, button.button {
   transition: background-color 0.15s ease-in-out;
 }
 /* line 112, ../../../../../../../../.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/zurb-foundation-3.2.5/scss/foundation/components/modules/_buttons.scss */
-.button.dropdown.split > a:hover, .button.dropdown.split > a:focus {
+.button.dropdown.split > a:hover, #content > article .collapsed legend a.dropdown.split > a:hover,
+#content > article .collapsible legend a.dropdown.split > a:hover,
+.content-article .collapsed legend a.dropdown.split > a:hover,
+body.node-type-resource article .collapsed legend a.dropdown.split > a:hover,
+body.node-type-organization article .collapsed legend a.dropdown.split > a:hover,
+body.node-type-event article .collapsed legend a.dropdown.split > a:hover,
+.content-article .collapsible legend a.dropdown.split > a:hover,
+body.node-type-resource article .collapsible legend a.dropdown.split > a:hover,
+body.node-type-organization article .collapsible legend a.dropdown.split > a:hover,
+body.node-type-event article .collapsible legend a.dropdown.split > a:hover, .button.dropdown.split > a:focus, #content > article .collapsed legend a.dropdown.split > a:focus,
+#content > article .collapsible legend a.dropdown.split > a:focus,
+.content-article .collapsed legend a.dropdown.split > a:focus,
+body.node-type-resource article .collapsed legend a.dropdown.split > a:focus,
+body.node-type-organization article .collapsed legend a.dropdown.split > a:focus,
+body.node-type-event article .collapsed legend a.dropdown.split > a:focus,
+.content-article .collapsible legend a.dropdown.split > a:focus,
+body.node-type-resource article .collapsible legend a.dropdown.split > a:focus,
+body.node-type-organization article .collapsible legend a.dropdown.split > a:focus,
+body.node-type-event article .collapsible legend a.dropdown.split > a:focus {
   background-color: #115271;
   -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
   -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
   box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
 }
 /* line 114, ../../../../../../../../.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/zurb-foundation-3.2.5/scss/foundation/components/modules/_buttons.scss */
-.button.dropdown.split.large > a {
+.button.dropdown.split.large > a, #content > article .collapsed legend a.dropdown.split.large > a,
+#content > article .collapsible legend a.dropdown.split.large > a,
+.content-article .collapsed legend a.dropdown.split.large > a,
+body.node-type-resource article .collapsed legend a.dropdown.split.large > a,
+body.node-type-organization article .collapsed legend a.dropdown.split.large > a,
+body.node-type-event article .collapsed legend a.dropdown.split.large > a,
+.content-article .collapsible legend a.dropdown.split.large > a,
+body.node-type-resource article .collapsible legend a.dropdown.split.large > a,
+body.node-type-organization article .collapsible legend a.dropdown.split.large > a,
+body.node-type-event article .collapsible legend a.dropdown.split.large > a {
   padding: 15px 75px 16px 30px;
   padding-left: 30px;
   padding-right: 75px;
 }
 /* line 115, ../../../../../../../../.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/zurb-foundation-3.2.5/scss/foundation/components/modules/_buttons.scss */
-.button.dropdown.split.small > a {
+.button.dropdown.split.small > a, #content > article .collapsed legend a.dropdown.split.small > a,
+#content > article .collapsible legend a.dropdown.split.small > a,
+.content-article .collapsed legend a.dropdown.split.small > a,
+body.node-type-resource article .collapsed legend a.dropdown.split.small > a,
+body.node-type-organization article .collapsed legend a.dropdown.split.small > a,
+body.node-type-event article .collapsed legend a.dropdown.split.small > a,
+.content-article .collapsible legend a.dropdown.split.small > a,
+body.node-type-resource article .collapsible legend a.dropdown.split.small > a,
+body.node-type-organization article .collapsible legend a.dropdown.split.small > a,
+body.node-type-event article .collapsible legend a.dropdown.split.small > a {
   padding: 7px 35px 8px 14px;
   padding-left: 14px;
   padding-right: 35px;
 }
 /* line 116, ../../../../../../../../.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/zurb-foundation-3.2.5/scss/foundation/components/modules/_buttons.scss */
-.button.dropdown.split.tiny > a {
+.button.dropdown.split.tiny > a, #content > article .collapsed legend a.dropdown.split.tiny > a,
+#content > article .collapsible legend a.dropdown.split.tiny > a,
+.content-article .collapsed legend a.dropdown.split.tiny > a,
+body.node-type-resource article .collapsed legend a.dropdown.split.tiny > a,
+body.node-type-organization article .collapsed legend a.dropdown.split.tiny > a,
+body.node-type-event article .collapsed legend a.dropdown.split.tiny > a,
+.content-article .collapsible legend a.dropdown.split.tiny > a,
+body.node-type-resource article .collapsible legend a.dropdown.split.tiny > a,
+body.node-type-organization article .collapsible legend a.dropdown.split.tiny > a,
+body.node-type-event article .collapsible legend a.dropdown.split.tiny > a {
   padding: 5px 25px 6px 10px;
   padding-left: 10px;
   padding-right: 25px;
 }
 /* line 119, ../../../../../../../../.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/zurb-foundation-3.2.5/scss/foundation/components/modules/_buttons.scss */
-.button.dropdown.split > span {
+.button.dropdown.split > span, #content > article .collapsed legend a.dropdown.split > span,
+#content > article .collapsible legend a.dropdown.split > span,
+.content-article .collapsed legend a.dropdown.split > span,
+body.node-type-resource article .collapsed legend a.dropdown.split > span,
+body.node-type-organization article .collapsed legend a.dropdown.split > span,
+body.node-type-event article .collapsed legend a.dropdown.split > span,
+.content-article .collapsible legend a.dropdown.split > span,
+body.node-type-resource article .collapsible legend a.dropdown.split > span,
+body.node-type-organization article .collapsible legend a.dropdown.split > span,
+body.node-type-event article .collapsible legend a.dropdown.split > span {
   background-color: #18729d;
   position: absolute;
   right: 0;
@@ -916,11 +1663,38 @@ input[type=submit].button, button.button {
   transition: background-color 0.15s ease-in-out;
 }
 /* line 120, ../../../../../../../../.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/zurb-foundation-3.2.5/scss/foundation/components/modules/_buttons.scss */
-.button.dropdown.split > span:hover, .button.dropdown.split > span:focus {
+.button.dropdown.split > span:hover, #content > article .collapsed legend a.dropdown.split > span:hover,
+#content > article .collapsible legend a.dropdown.split > span:hover,
+.content-article .collapsed legend a.dropdown.split > span:hover,
+body.node-type-resource article .collapsed legend a.dropdown.split > span:hover,
+body.node-type-organization article .collapsed legend a.dropdown.split > span:hover,
+body.node-type-event article .collapsed legend a.dropdown.split > span:hover,
+.content-article .collapsible legend a.dropdown.split > span:hover,
+body.node-type-resource article .collapsible legend a.dropdown.split > span:hover,
+body.node-type-organization article .collapsible legend a.dropdown.split > span:hover,
+body.node-type-event article .collapsible legend a.dropdown.split > span:hover, .button.dropdown.split > span:focus, #content > article .collapsed legend a.dropdown.split > span:focus,
+#content > article .collapsible legend a.dropdown.split > span:focus,
+.content-article .collapsed legend a.dropdown.split > span:focus,
+body.node-type-resource article .collapsed legend a.dropdown.split > span:focus,
+body.node-type-organization article .collapsed legend a.dropdown.split > span:focus,
+body.node-type-event article .collapsed legend a.dropdown.split > span:focus,
+.content-article .collapsible legend a.dropdown.split > span:focus,
+body.node-type-resource article .collapsible legend a.dropdown.split > span:focus,
+body.node-type-organization article .collapsible legend a.dropdown.split > span:focus,
+body.node-type-event article .collapsible legend a.dropdown.split > span:focus {
   background-color: #115271;
 }
 /* line 121, ../../../../../../../../.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/zurb-foundation-3.2.5/scss/foundation/components/modules/_buttons.scss */
-.button.dropdown.split > span:after {
+.button.dropdown.split > span:after, #content > article .collapsed legend a.dropdown.split > span:after,
+#content > article .collapsible legend a.dropdown.split > span:after,
+.content-article .collapsed legend a.dropdown.split > span:after,
+body.node-type-resource article .collapsed legend a.dropdown.split > span:after,
+body.node-type-organization article .collapsed legend a.dropdown.split > span:after,
+body.node-type-event article .collapsed legend a.dropdown.split > span:after,
+.content-article .collapsible legend a.dropdown.split > span:after,
+body.node-type-resource article .collapsible legend a.dropdown.split > span:after,
+body.node-type-organization article .collapsible legend a.dropdown.split > span:after,
+body.node-type-event article .collapsible legend a.dropdown.split > span:after {
   content: "";
   display: block;
   width: 0;
@@ -934,7 +1708,16 @@ input[type=submit].button, button.button {
   margin-top: -2px;
 }
 /* line 123, ../../../../../../../../.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/zurb-foundation-3.2.5/scss/foundation/components/modules/_buttons.scss */
-.button.dropdown.split.secondary > span:after {
+.button.dropdown.split.secondary > span:after, #content > article .collapsed legend a.dropdown.split.secondary > span:after,
+#content > article .collapsible legend a.dropdown.split.secondary > span:after,
+.content-article .collapsed legend a.dropdown.split.secondary > span:after,
+body.node-type-resource article .collapsed legend a.dropdown.split.secondary > span:after,
+body.node-type-organization article .collapsed legend a.dropdown.split.secondary > span:after,
+body.node-type-event article .collapsed legend a.dropdown.split.secondary > span:after,
+.content-article .collapsible legend a.dropdown.split.secondary > span:after,
+body.node-type-resource article .collapsible legend a.dropdown.split.secondary > span:after,
+body.node-type-organization article .collapsible legend a.dropdown.split.secondary > span:after,
+body.node-type-event article .collapsible legend a.dropdown.split.secondary > span:after {
   content: "";
   display: block;
   width: 0;
@@ -943,19 +1726,55 @@ input[type=submit].button, button.button {
   border-color: black transparent transparent transparent;
 }
 /* line 125, ../../../../../../../../.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/zurb-foundation-3.2.5/scss/foundation/components/modules/_buttons.scss */
-.button.dropdown.split.large span {
+.button.dropdown.split.large span, #content > article .collapsed legend a.dropdown.split.large span,
+#content > article .collapsible legend a.dropdown.split.large span,
+.content-article .collapsed legend a.dropdown.split.large span,
+body.node-type-resource article .collapsed legend a.dropdown.split.large span,
+body.node-type-organization article .collapsed legend a.dropdown.split.large span,
+body.node-type-event article .collapsed legend a.dropdown.split.large span,
+.content-article .collapsible legend a.dropdown.split.large span,
+body.node-type-resource article .collapsible legend a.dropdown.split.large span,
+body.node-type-organization article .collapsible legend a.dropdown.split.large span,
+body.node-type-event article .collapsible legend a.dropdown.split.large span {
   width: 45px;
 }
 /* line 126, ../../../../../../../../.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/zurb-foundation-3.2.5/scss/foundation/components/modules/_buttons.scss */
-.button.dropdown.split.small span {
+.button.dropdown.split.small span, #content > article .collapsed legend a.dropdown.split.small span,
+#content > article .collapsible legend a.dropdown.split.small span,
+.content-article .collapsed legend a.dropdown.split.small span,
+body.node-type-resource article .collapsed legend a.dropdown.split.small span,
+body.node-type-organization article .collapsed legend a.dropdown.split.small span,
+body.node-type-event article .collapsed legend a.dropdown.split.small span,
+.content-article .collapsible legend a.dropdown.split.small span,
+body.node-type-resource article .collapsible legend a.dropdown.split.small span,
+body.node-type-organization article .collapsible legend a.dropdown.split.small span,
+body.node-type-event article .collapsible legend a.dropdown.split.small span {
   width: 21px;
 }
 /* line 127, ../../../../../../../../.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/zurb-foundation-3.2.5/scss/foundation/components/modules/_buttons.scss */
-.button.dropdown.split.tiny span {
+.button.dropdown.split.tiny span, #content > article .collapsed legend a.dropdown.split.tiny span,
+#content > article .collapsible legend a.dropdown.split.tiny span,
+.content-article .collapsed legend a.dropdown.split.tiny span,
+body.node-type-resource article .collapsed legend a.dropdown.split.tiny span,
+body.node-type-organization article .collapsed legend a.dropdown.split.tiny span,
+body.node-type-event article .collapsed legend a.dropdown.split.tiny span,
+.content-article .collapsible legend a.dropdown.split.tiny span,
+body.node-type-resource article .collapsible legend a.dropdown.split.tiny span,
+body.node-type-organization article .collapsible legend a.dropdown.split.tiny span,
+body.node-type-event article .collapsible legend a.dropdown.split.tiny span {
   width: 15px;
 }
 /* line 129, ../../../../../../../../.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/zurb-foundation-3.2.5/scss/foundation/components/modules/_buttons.scss */
-.button.dropdown.split.large span:after {
+.button.dropdown.split.large span:after, #content > article .collapsed legend a.dropdown.split.large span:after,
+#content > article .collapsible legend a.dropdown.split.large span:after,
+.content-article .collapsed legend a.dropdown.split.large span:after,
+body.node-type-resource article .collapsed legend a.dropdown.split.large span:after,
+body.node-type-organization article .collapsed legend a.dropdown.split.large span:after,
+body.node-type-event article .collapsed legend a.dropdown.split.large span:after,
+.content-article .collapsible legend a.dropdown.split.large span:after,
+body.node-type-resource article .collapsible legend a.dropdown.split.large span:after,
+body.node-type-organization article .collapsible legend a.dropdown.split.large span:after,
+body.node-type-event article .collapsible legend a.dropdown.split.large span:after {
   content: "";
   display: block;
   width: 0;
@@ -966,7 +1785,16 @@ input[type=submit].button, button.button {
   margin-left: -7px;
 }
 /* line 130, ../../../../../../../../.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/zurb-foundation-3.2.5/scss/foundation/components/modules/_buttons.scss */
-.button.dropdown.split.small span:after {
+.button.dropdown.split.small span:after, #content > article .collapsed legend a.dropdown.split.small span:after,
+#content > article .collapsible legend a.dropdown.split.small span:after,
+.content-article .collapsed legend a.dropdown.split.small span:after,
+body.node-type-resource article .collapsed legend a.dropdown.split.small span:after,
+body.node-type-organization article .collapsed legend a.dropdown.split.small span:after,
+body.node-type-event article .collapsed legend a.dropdown.split.small span:after,
+.content-article .collapsible legend a.dropdown.split.small span:after,
+body.node-type-resource article .collapsible legend a.dropdown.split.small span:after,
+body.node-type-organization article .collapsible legend a.dropdown.split.small span:after,
+body.node-type-event article .collapsible legend a.dropdown.split.small span:after {
   content: "";
   display: block;
   width: 0;
@@ -977,7 +1805,16 @@ input[type=submit].button, button.button {
   margin-left: -4px;
 }
 /* line 131, ../../../../../../../../.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/zurb-foundation-3.2.5/scss/foundation/components/modules/_buttons.scss */
-.button.dropdown.split.tiny span:after {
+.button.dropdown.split.tiny span:after, #content > article .collapsed legend a.dropdown.split.tiny span:after,
+#content > article .collapsible legend a.dropdown.split.tiny span:after,
+.content-article .collapsed legend a.dropdown.split.tiny span:after,
+body.node-type-resource article .collapsed legend a.dropdown.split.tiny span:after,
+body.node-type-organization article .collapsed legend a.dropdown.split.tiny span:after,
+body.node-type-event article .collapsed legend a.dropdown.split.tiny span:after,
+.content-article .collapsible legend a.dropdown.split.tiny span:after,
+body.node-type-resource article .collapsible legend a.dropdown.split.tiny span:after,
+body.node-type-organization article .collapsible legend a.dropdown.split.tiny span:after,
+body.node-type-event article .collapsible legend a.dropdown.split.tiny span:after {
   content: "";
   display: block;
   width: 0;
@@ -988,34 +1825,178 @@ input[type=submit].button, button.button {
   margin-left: -3px;
 }
 /* line 134, ../../../../../../../../.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/zurb-foundation-3.2.5/scss/foundation/components/modules/_buttons.scss */
-.button.dropdown.split.alert > span {
+.button.dropdown.split.alert > span, #content > article .collapsed legend a.dropdown.split.alert > span,
+#content > article .collapsible legend a.dropdown.split.alert > span,
+.content-article .collapsed legend a.dropdown.split.alert > span,
+body.node-type-resource article .collapsed legend a.dropdown.split.alert > span,
+body.node-type-organization article .collapsed legend a.dropdown.split.alert > span,
+body.node-type-event article .collapsed legend a.dropdown.split.alert > span,
+.content-article .collapsible legend a.dropdown.split.alert > span,
+body.node-type-resource article .collapsible legend a.dropdown.split.alert > span,
+body.node-type-organization article .collapsible legend a.dropdown.split.alert > span,
+body.node-type-event article .collapsible legend a.dropdown.split.alert > span {
   background-color: #c60f13;
   border-left-color: #7f0a0c;
 }
 /* line 135, ../../../../../../../../.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/zurb-foundation-3.2.5/scss/foundation/components/modules/_buttons.scss */
-.button.dropdown.split.success > span {
+.button.dropdown.split.success > span, #content > article .collapsed legend a.dropdown.split.success > span,
+#content > article .collapsible legend a.dropdown.split.success > span,
+.content-article .collapsed legend a.dropdown.split.success > span,
+body.node-type-resource article .collapsed legend a.dropdown.split.success > span,
+body.node-type-organization article .collapsed legend a.dropdown.split.success > span,
+body.node-type-event article .collapsed legend a.dropdown.split.success > span,
+.content-article .collapsible legend a.dropdown.split.success > span,
+body.node-type-resource article .collapsible legend a.dropdown.split.success > span,
+body.node-type-organization article .collapsible legend a.dropdown.split.success > span,
+body.node-type-event article .collapsible legend a.dropdown.split.success > span {
   background-color: #5da423;
   border-left-color: #396516;
 }
 /* line 136, ../../../../../../../../.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/zurb-foundation-3.2.5/scss/foundation/components/modules/_buttons.scss */
-.button.dropdown.split.secondary > span {
+.button.dropdown.split.secondary > span, #content > article .collapsed legend a.dropdown.split.secondary > span,
+#content > article .collapsible legend a.dropdown.split.secondary > span,
+.content-article .collapsed legend a.dropdown.split.secondary > span,
+body.node-type-resource article .collapsed legend a.dropdown.split.secondary > span,
+body.node-type-organization article .collapsed legend a.dropdown.split.secondary > span,
+body.node-type-event article .collapsed legend a.dropdown.split.secondary > span,
+.content-article .collapsible legend a.dropdown.split.secondary > span,
+body.node-type-resource article .collapsible legend a.dropdown.split.secondary > span,
+body.node-type-organization article .collapsible legend a.dropdown.split.secondary > span,
+body.node-type-event article .collapsible legend a.dropdown.split.secondary > span {
   background-color: #f68115;
   border-left-color: #b75c07;
 }
 /* line 137, ../../../../../../../../.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/zurb-foundation-3.2.5/scss/foundation/components/modules/_buttons.scss */
-.button.dropdown.split.secondary > a {
+.button.dropdown.split.secondary > a, #content > article .collapsed legend a.dropdown.split.secondary > a,
+#content > article .collapsible legend a.dropdown.split.secondary > a,
+.content-article .collapsed legend a.dropdown.split.secondary > a,
+body.node-type-resource article .collapsed legend a.dropdown.split.secondary > a,
+body.node-type-organization article .collapsed legend a.dropdown.split.secondary > a,
+body.node-type-event article .collapsed legend a.dropdown.split.secondary > a,
+.content-article .collapsible legend a.dropdown.split.secondary > a,
+body.node-type-resource article .collapsible legend a.dropdown.split.secondary > a,
+body.node-type-organization article .collapsible legend a.dropdown.split.secondary > a,
+body.node-type-event article .collapsible legend a.dropdown.split.secondary > a {
   color: black;
 }
 /* line 139, ../../../../../../../../.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/zurb-foundation-3.2.5/scss/foundation/components/modules/_buttons.scss */
-.button.dropdown.split.alert > a:hover, .button.dropdown.split.alert > span:hover, .button.dropdown.split.alert > a:focus, .button.dropdown.split.alert > span:focus {
+.button.dropdown.split.alert > a:hover, #content > article .collapsed legend a.dropdown.split.alert > a:hover,
+#content > article .collapsible legend a.dropdown.split.alert > a:hover,
+.content-article .collapsed legend a.dropdown.split.alert > a:hover,
+body.node-type-resource article .collapsed legend a.dropdown.split.alert > a:hover,
+body.node-type-organization article .collapsed legend a.dropdown.split.alert > a:hover,
+body.node-type-event article .collapsed legend a.dropdown.split.alert > a:hover,
+.content-article .collapsible legend a.dropdown.split.alert > a:hover,
+body.node-type-resource article .collapsible legend a.dropdown.split.alert > a:hover,
+body.node-type-organization article .collapsible legend a.dropdown.split.alert > a:hover,
+body.node-type-event article .collapsible legend a.dropdown.split.alert > a:hover, .button.dropdown.split.alert > span:hover, #content > article .collapsed legend a.dropdown.split.alert > span:hover,
+#content > article .collapsible legend a.dropdown.split.alert > span:hover,
+.content-article .collapsed legend a.dropdown.split.alert > span:hover,
+body.node-type-resource article .collapsed legend a.dropdown.split.alert > span:hover,
+body.node-type-organization article .collapsed legend a.dropdown.split.alert > span:hover,
+body.node-type-event article .collapsed legend a.dropdown.split.alert > span:hover,
+.content-article .collapsible legend a.dropdown.split.alert > span:hover,
+body.node-type-resource article .collapsible legend a.dropdown.split.alert > span:hover,
+body.node-type-organization article .collapsible legend a.dropdown.split.alert > span:hover,
+body.node-type-event article .collapsible legend a.dropdown.split.alert > span:hover, .button.dropdown.split.alert > a:focus, #content > article .collapsed legend a.dropdown.split.alert > a:focus,
+#content > article .collapsible legend a.dropdown.split.alert > a:focus,
+.content-article .collapsed legend a.dropdown.split.alert > a:focus,
+body.node-type-resource article .collapsed legend a.dropdown.split.alert > a:focus,
+body.node-type-organization article .collapsed legend a.dropdown.split.alert > a:focus,
+body.node-type-event article .collapsed legend a.dropdown.split.alert > a:focus,
+.content-article .collapsible legend a.dropdown.split.alert > a:focus,
+body.node-type-resource article .collapsible legend a.dropdown.split.alert > a:focus,
+body.node-type-organization article .collapsible legend a.dropdown.split.alert > a:focus,
+body.node-type-event article .collapsible legend a.dropdown.split.alert > a:focus, .button.dropdown.split.alert > span:focus, #content > article .collapsed legend a.dropdown.split.alert > span:focus,
+#content > article .collapsible legend a.dropdown.split.alert > span:focus,
+.content-article .collapsed legend a.dropdown.split.alert > span:focus,
+body.node-type-resource article .collapsed legend a.dropdown.split.alert > span:focus,
+body.node-type-organization article .collapsed legend a.dropdown.split.alert > span:focus,
+body.node-type-event article .collapsed legend a.dropdown.split.alert > span:focus,
+.content-article .collapsible legend a.dropdown.split.alert > span:focus,
+body.node-type-resource article .collapsible legend a.dropdown.split.alert > span:focus,
+body.node-type-organization article .collapsible legend a.dropdown.split.alert > span:focus,
+body.node-type-event article .collapsible legend a.dropdown.split.alert > span:focus {
   background-color: #970b0e;
 }
 /* line 140, ../../../../../../../../.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/zurb-foundation-3.2.5/scss/foundation/components/modules/_buttons.scss */
-.button.dropdown.split.success > a:hover, .button.dropdown.split.success > span:hover, .button.dropdown.split.success > a:focus, .button.dropdown.split.success > span:focus {
+.button.dropdown.split.success > a:hover, #content > article .collapsed legend a.dropdown.split.success > a:hover,
+#content > article .collapsible legend a.dropdown.split.success > a:hover,
+.content-article .collapsed legend a.dropdown.split.success > a:hover,
+body.node-type-resource article .collapsed legend a.dropdown.split.success > a:hover,
+body.node-type-organization article .collapsed legend a.dropdown.split.success > a:hover,
+body.node-type-event article .collapsed legend a.dropdown.split.success > a:hover,
+.content-article .collapsible legend a.dropdown.split.success > a:hover,
+body.node-type-resource article .collapsible legend a.dropdown.split.success > a:hover,
+body.node-type-organization article .collapsible legend a.dropdown.split.success > a:hover,
+body.node-type-event article .collapsible legend a.dropdown.split.success > a:hover, .button.dropdown.split.success > span:hover, #content > article .collapsed legend a.dropdown.split.success > span:hover,
+#content > article .collapsible legend a.dropdown.split.success > span:hover,
+.content-article .collapsed legend a.dropdown.split.success > span:hover,
+body.node-type-resource article .collapsed legend a.dropdown.split.success > span:hover,
+body.node-type-organization article .collapsed legend a.dropdown.split.success > span:hover,
+body.node-type-event article .collapsed legend a.dropdown.split.success > span:hover,
+.content-article .collapsible legend a.dropdown.split.success > span:hover,
+body.node-type-resource article .collapsible legend a.dropdown.split.success > span:hover,
+body.node-type-organization article .collapsible legend a.dropdown.split.success > span:hover,
+body.node-type-event article .collapsible legend a.dropdown.split.success > span:hover, .button.dropdown.split.success > a:focus, #content > article .collapsed legend a.dropdown.split.success > a:focus,
+#content > article .collapsible legend a.dropdown.split.success > a:focus,
+.content-article .collapsed legend a.dropdown.split.success > a:focus,
+body.node-type-resource article .collapsed legend a.dropdown.split.success > a:focus,
+body.node-type-organization article .collapsed legend a.dropdown.split.success > a:focus,
+body.node-type-event article .collapsed legend a.dropdown.split.success > a:focus,
+.content-article .collapsible legend a.dropdown.split.success > a:focus,
+body.node-type-resource article .collapsible legend a.dropdown.split.success > a:focus,
+body.node-type-organization article .collapsible legend a.dropdown.split.success > a:focus,
+body.node-type-event article .collapsible legend a.dropdown.split.success > a:focus, .button.dropdown.split.success > span:focus, #content > article .collapsed legend a.dropdown.split.success > span:focus,
+#content > article .collapsible legend a.dropdown.split.success > span:focus,
+.content-article .collapsed legend a.dropdown.split.success > span:focus,
+body.node-type-resource article .collapsed legend a.dropdown.split.success > span:focus,
+body.node-type-organization article .collapsed legend a.dropdown.split.success > span:focus,
+body.node-type-event article .collapsed legend a.dropdown.split.success > span:focus,
+.content-article .collapsible legend a.dropdown.split.success > span:focus,
+body.node-type-resource article .collapsible legend a.dropdown.split.success > span:focus,
+body.node-type-organization article .collapsible legend a.dropdown.split.success > span:focus,
+body.node-type-event article .collapsible legend a.dropdown.split.success > span:focus {
   background-color: #457a1a;
 }
 /* line 141, ../../../../../../../../.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/zurb-foundation-3.2.5/scss/foundation/components/modules/_buttons.scss */
-.button.dropdown.split.secondary > a:hover, .button.dropdown.split.secondary > span:hover, .button.dropdown.split.secondary > a:focus, .button.dropdown.split.secondary > span:focus {
+.button.dropdown.split.secondary > a:hover, #content > article .collapsed legend a.dropdown.split.secondary > a:hover,
+#content > article .collapsible legend a.dropdown.split.secondary > a:hover,
+.content-article .collapsed legend a.dropdown.split.secondary > a:hover,
+body.node-type-resource article .collapsed legend a.dropdown.split.secondary > a:hover,
+body.node-type-organization article .collapsed legend a.dropdown.split.secondary > a:hover,
+body.node-type-event article .collapsed legend a.dropdown.split.secondary > a:hover,
+.content-article .collapsible legend a.dropdown.split.secondary > a:hover,
+body.node-type-resource article .collapsible legend a.dropdown.split.secondary > a:hover,
+body.node-type-organization article .collapsible legend a.dropdown.split.secondary > a:hover,
+body.node-type-event article .collapsible legend a.dropdown.split.secondary > a:hover, .button.dropdown.split.secondary > span:hover, #content > article .collapsed legend a.dropdown.split.secondary > span:hover,
+#content > article .collapsible legend a.dropdown.split.secondary > span:hover,
+.content-article .collapsed legend a.dropdown.split.secondary > span:hover,
+body.node-type-resource article .collapsed legend a.dropdown.split.secondary > span:hover,
+body.node-type-organization article .collapsed legend a.dropdown.split.secondary > span:hover,
+body.node-type-event article .collapsed legend a.dropdown.split.secondary > span:hover,
+.content-article .collapsible legend a.dropdown.split.secondary > span:hover,
+body.node-type-resource article .collapsible legend a.dropdown.split.secondary > span:hover,
+body.node-type-organization article .collapsible legend a.dropdown.split.secondary > span:hover,
+body.node-type-event article .collapsible legend a.dropdown.split.secondary > span:hover, .button.dropdown.split.secondary > a:focus, #content > article .collapsed legend a.dropdown.split.secondary > a:focus,
+#content > article .collapsible legend a.dropdown.split.secondary > a:focus,
+.content-article .collapsed legend a.dropdown.split.secondary > a:focus,
+body.node-type-resource article .collapsed legend a.dropdown.split.secondary > a:focus,
+body.node-type-organization article .collapsed legend a.dropdown.split.secondary > a:focus,
+body.node-type-event article .collapsed legend a.dropdown.split.secondary > a:focus,
+.content-article .collapsible legend a.dropdown.split.secondary > a:focus,
+body.node-type-resource article .collapsible legend a.dropdown.split.secondary > a:focus,
+body.node-type-organization article .collapsible legend a.dropdown.split.secondary > a:focus,
+body.node-type-event article .collapsible legend a.dropdown.split.secondary > a:focus, .button.dropdown.split.secondary > span:focus, #content > article .collapsed legend a.dropdown.split.secondary > span:focus,
+#content > article .collapsible legend a.dropdown.split.secondary > span:focus,
+.content-article .collapsed legend a.dropdown.split.secondary > span:focus,
+body.node-type-resource article .collapsed legend a.dropdown.split.secondary > span:focus,
+body.node-type-organization article .collapsed legend a.dropdown.split.secondary > span:focus,
+body.node-type-event article .collapsed legend a.dropdown.split.secondary > span:focus,
+.content-article .collapsible legend a.dropdown.split.secondary > span:focus,
+body.node-type-resource article .collapsible legend a.dropdown.split.secondary > span:focus,
+body.node-type-organization article .collapsible legend a.dropdown.split.secondary > span:focus,
+body.node-type-event article .collapsible legend a.dropdown.split.secondary > span:focus {
   background-color: #d06808;
 }
 
@@ -1047,7 +2028,43 @@ ul.button-group li:first-child {
   margin-left: 0;
 }
 /* line 154, ../../../../../../../../.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/zurb-foundation-3.2.5/scss/foundation/components/modules/_buttons.scss */
-ul.button-group.radius li .button, ul.button-group.radius li .button.radius, ul.button-group.radius li .button-rounded {
+ul.button-group.radius li .button, ul.button-group.radius li #content > article .collapsed legend a, #content > article .collapsed legend ul.button-group.radius li a,
+ul.button-group.radius li #content > article .collapsible legend a,
+#content > article .collapsible legend ul.button-group.radius li a,
+ul.button-group.radius li .content-article .collapsed legend a,
+.content-article .collapsed legend ul.button-group.radius li a,
+ul.button-group.radius li body.node-type-resource article .collapsed legend a,
+body.node-type-resource article .collapsed legend ul.button-group.radius li a,
+ul.button-group.radius li body.node-type-organization article .collapsed legend a,
+body.node-type-organization article .collapsed legend ul.button-group.radius li a,
+ul.button-group.radius li body.node-type-event article .collapsed legend a,
+body.node-type-event article .collapsed legend ul.button-group.radius li a,
+ul.button-group.radius li .content-article .collapsible legend a,
+.content-article .collapsible legend ul.button-group.radius li a,
+ul.button-group.radius li body.node-type-resource article .collapsible legend a,
+body.node-type-resource article .collapsible legend ul.button-group.radius li a,
+ul.button-group.radius li body.node-type-organization article .collapsible legend a,
+body.node-type-organization article .collapsible legend ul.button-group.radius li a,
+ul.button-group.radius li body.node-type-event article .collapsible legend a,
+body.node-type-event article .collapsible legend ul.button-group.radius li a, ul.button-group.radius li .button.radius, ul.button-group.radius li #content > article .collapsed legend a.radius, #content > article .collapsed legend ul.button-group.radius li a.radius,
+ul.button-group.radius li #content > article .collapsible legend a.radius,
+#content > article .collapsible legend ul.button-group.radius li a.radius,
+ul.button-group.radius li .content-article .collapsed legend a.radius,
+.content-article .collapsed legend ul.button-group.radius li a.radius,
+ul.button-group.radius li body.node-type-resource article .collapsed legend a.radius,
+body.node-type-resource article .collapsed legend ul.button-group.radius li a.radius,
+ul.button-group.radius li body.node-type-organization article .collapsed legend a.radius,
+body.node-type-organization article .collapsed legend ul.button-group.radius li a.radius,
+ul.button-group.radius li body.node-type-event article .collapsed legend a.radius,
+body.node-type-event article .collapsed legend ul.button-group.radius li a.radius,
+ul.button-group.radius li .content-article .collapsible legend a.radius,
+.content-article .collapsible legend ul.button-group.radius li a.radius,
+ul.button-group.radius li body.node-type-resource article .collapsible legend a.radius,
+body.node-type-resource article .collapsible legend ul.button-group.radius li a.radius,
+ul.button-group.radius li body.node-type-organization article .collapsible legend a.radius,
+body.node-type-organization article .collapsible legend ul.button-group.radius li a.radius,
+ul.button-group.radius li body.node-type-event article .collapsible legend a.radius,
+body.node-type-event article .collapsible legend ul.button-group.radius li a.radius, ul.button-group.radius li .button-rounded {
   -webkit-border-radius: 0px;
   -moz-border-radius: 0px;
   -ms-border-radius: 0px;
@@ -1055,7 +2072,43 @@ ul.button-group.radius li .button, ul.button-group.radius li .button.radius, ul.
   border-radius: 0px;
 }
 /* line 156, ../../../../../../../../.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/zurb-foundation-3.2.5/scss/foundation/components/modules/_buttons.scss */
-ul.button-group.radius li:first-child .button, ul.button-group.radius li:first-child .button.radius {
+ul.button-group.radius li:first-child .button, ul.button-group.radius li:first-child #content > article .collapsed legend a, #content > article .collapsed legend ul.button-group.radius li:first-child a,
+ul.button-group.radius li:first-child #content > article .collapsible legend a,
+#content > article .collapsible legend ul.button-group.radius li:first-child a,
+ul.button-group.radius li:first-child .content-article .collapsed legend a,
+.content-article .collapsed legend ul.button-group.radius li:first-child a,
+ul.button-group.radius li:first-child body.node-type-resource article .collapsed legend a,
+body.node-type-resource article .collapsed legend ul.button-group.radius li:first-child a,
+ul.button-group.radius li:first-child body.node-type-organization article .collapsed legend a,
+body.node-type-organization article .collapsed legend ul.button-group.radius li:first-child a,
+ul.button-group.radius li:first-child body.node-type-event article .collapsed legend a,
+body.node-type-event article .collapsed legend ul.button-group.radius li:first-child a,
+ul.button-group.radius li:first-child .content-article .collapsible legend a,
+.content-article .collapsible legend ul.button-group.radius li:first-child a,
+ul.button-group.radius li:first-child body.node-type-resource article .collapsible legend a,
+body.node-type-resource article .collapsible legend ul.button-group.radius li:first-child a,
+ul.button-group.radius li:first-child body.node-type-organization article .collapsible legend a,
+body.node-type-organization article .collapsible legend ul.button-group.radius li:first-child a,
+ul.button-group.radius li:first-child body.node-type-event article .collapsible legend a,
+body.node-type-event article .collapsible legend ul.button-group.radius li:first-child a, ul.button-group.radius li:first-child .button.radius, ul.button-group.radius li:first-child #content > article .collapsed legend a.radius, #content > article .collapsed legend ul.button-group.radius li:first-child a.radius,
+ul.button-group.radius li:first-child #content > article .collapsible legend a.radius,
+#content > article .collapsible legend ul.button-group.radius li:first-child a.radius,
+ul.button-group.radius li:first-child .content-article .collapsed legend a.radius,
+.content-article .collapsed legend ul.button-group.radius li:first-child a.radius,
+ul.button-group.radius li:first-child body.node-type-resource article .collapsed legend a.radius,
+body.node-type-resource article .collapsed legend ul.button-group.radius li:first-child a.radius,
+ul.button-group.radius li:first-child body.node-type-organization article .collapsed legend a.radius,
+body.node-type-organization article .collapsed legend ul.button-group.radius li:first-child a.radius,
+ul.button-group.radius li:first-child body.node-type-event article .collapsed legend a.radius,
+body.node-type-event article .collapsed legend ul.button-group.radius li:first-child a.radius,
+ul.button-group.radius li:first-child .content-article .collapsible legend a.radius,
+.content-article .collapsible legend ul.button-group.radius li:first-child a.radius,
+ul.button-group.radius li:first-child body.node-type-resource article .collapsible legend a.radius,
+body.node-type-resource article .collapsible legend ul.button-group.radius li:first-child a.radius,
+ul.button-group.radius li:first-child body.node-type-organization article .collapsible legend a.radius,
+body.node-type-organization article .collapsible legend ul.button-group.radius li:first-child a.radius,
+ul.button-group.radius li:first-child body.node-type-event article .collapsible legend a.radius,
+body.node-type-event article .collapsible legend ul.button-group.radius li:first-child a.radius {
   -moz-border-radius-topleft: 7px;
   -webkit-border-top-left-radius: 7px;
   border-top-left-radius: 7px;
@@ -1064,7 +2117,25 @@ ul.button-group.radius li:first-child .button, ul.button-group.radius li:first-c
   border-bottom-left-radius: 7px;
 }
 /* line 157, ../../../../../../../../.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/zurb-foundation-3.2.5/scss/foundation/components/modules/_buttons.scss */
-ul.button-group.radius li:first-child .button.rounded {
+ul.button-group.radius li:first-child .button.rounded, ul.button-group.radius li:first-child #content > article .collapsed legend a.rounded, #content > article .collapsed legend ul.button-group.radius li:first-child a.rounded,
+ul.button-group.radius li:first-child #content > article .collapsible legend a.rounded,
+#content > article .collapsible legend ul.button-group.radius li:first-child a.rounded,
+ul.button-group.radius li:first-child .content-article .collapsed legend a.rounded,
+.content-article .collapsed legend ul.button-group.radius li:first-child a.rounded,
+ul.button-group.radius li:first-child body.node-type-resource article .collapsed legend a.rounded,
+body.node-type-resource article .collapsed legend ul.button-group.radius li:first-child a.rounded,
+ul.button-group.radius li:first-child body.node-type-organization article .collapsed legend a.rounded,
+body.node-type-organization article .collapsed legend ul.button-group.radius li:first-child a.rounded,
+ul.button-group.radius li:first-child body.node-type-event article .collapsed legend a.rounded,
+body.node-type-event article .collapsed legend ul.button-group.radius li:first-child a.rounded,
+ul.button-group.radius li:first-child .content-article .collapsible legend a.rounded,
+.content-article .collapsible legend ul.button-group.radius li:first-child a.rounded,
+ul.button-group.radius li:first-child body.node-type-resource article .collapsible legend a.rounded,
+body.node-type-resource article .collapsible legend ul.button-group.radius li:first-child a.rounded,
+ul.button-group.radius li:first-child body.node-type-organization article .collapsible legend a.rounded,
+body.node-type-organization article .collapsible legend ul.button-group.radius li:first-child a.rounded,
+ul.button-group.radius li:first-child body.node-type-event article .collapsible legend a.rounded,
+body.node-type-event article .collapsible legend ul.button-group.radius li:first-child a.rounded {
   -moz-border-radius-topleft: 1000px;
   -webkit-border-top-left-radius: 1000px;
   border-top-left-radius: 1000px;
@@ -1073,7 +2144,43 @@ ul.button-group.radius li:first-child .button.rounded {
   border-bottom-left-radius: 1000px;
 }
 /* line 160, ../../../../../../../../.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/zurb-foundation-3.2.5/scss/foundation/components/modules/_buttons.scss */
-ul.button-group.radius li:last-child .button, ul.button-group.radius li:last-child .button.radius {
+ul.button-group.radius li:last-child .button, ul.button-group.radius li:last-child #content > article .collapsed legend a, #content > article .collapsed legend ul.button-group.radius li:last-child a,
+ul.button-group.radius li:last-child #content > article .collapsible legend a,
+#content > article .collapsible legend ul.button-group.radius li:last-child a,
+ul.button-group.radius li:last-child .content-article .collapsed legend a,
+.content-article .collapsed legend ul.button-group.radius li:last-child a,
+ul.button-group.radius li:last-child body.node-type-resource article .collapsed legend a,
+body.node-type-resource article .collapsed legend ul.button-group.radius li:last-child a,
+ul.button-group.radius li:last-child body.node-type-organization article .collapsed legend a,
+body.node-type-organization article .collapsed legend ul.button-group.radius li:last-child a,
+ul.button-group.radius li:last-child body.node-type-event article .collapsed legend a,
+body.node-type-event article .collapsed legend ul.button-group.radius li:last-child a,
+ul.button-group.radius li:last-child .content-article .collapsible legend a,
+.content-article .collapsible legend ul.button-group.radius li:last-child a,
+ul.button-group.radius li:last-child body.node-type-resource article .collapsible legend a,
+body.node-type-resource article .collapsible legend ul.button-group.radius li:last-child a,
+ul.button-group.radius li:last-child body.node-type-organization article .collapsible legend a,
+body.node-type-organization article .collapsible legend ul.button-group.radius li:last-child a,
+ul.button-group.radius li:last-child body.node-type-event article .collapsible legend a,
+body.node-type-event article .collapsible legend ul.button-group.radius li:last-child a, ul.button-group.radius li:last-child .button.radius, ul.button-group.radius li:last-child #content > article .collapsed legend a.radius, #content > article .collapsed legend ul.button-group.radius li:last-child a.radius,
+ul.button-group.radius li:last-child #content > article .collapsible legend a.radius,
+#content > article .collapsible legend ul.button-group.radius li:last-child a.radius,
+ul.button-group.radius li:last-child .content-article .collapsed legend a.radius,
+.content-article .collapsed legend ul.button-group.radius li:last-child a.radius,
+ul.button-group.radius li:last-child body.node-type-resource article .collapsed legend a.radius,
+body.node-type-resource article .collapsed legend ul.button-group.radius li:last-child a.radius,
+ul.button-group.radius li:last-child body.node-type-organization article .collapsed legend a.radius,
+body.node-type-organization article .collapsed legend ul.button-group.radius li:last-child a.radius,
+ul.button-group.radius li:last-child body.node-type-event article .collapsed legend a.radius,
+body.node-type-event article .collapsed legend ul.button-group.radius li:last-child a.radius,
+ul.button-group.radius li:last-child .content-article .collapsible legend a.radius,
+.content-article .collapsible legend ul.button-group.radius li:last-child a.radius,
+ul.button-group.radius li:last-child body.node-type-resource article .collapsible legend a.radius,
+body.node-type-resource article .collapsible legend ul.button-group.radius li:last-child a.radius,
+ul.button-group.radius li:last-child body.node-type-organization article .collapsible legend a.radius,
+body.node-type-organization article .collapsible legend ul.button-group.radius li:last-child a.radius,
+ul.button-group.radius li:last-child body.node-type-event article .collapsible legend a.radius,
+body.node-type-event article .collapsible legend ul.button-group.radius li:last-child a.radius {
   -moz-border-radius-topright: 7px;
   -webkit-border-top-right-radius: 7px;
   border-top-right-radius: 7px;
@@ -1082,7 +2189,25 @@ ul.button-group.radius li:last-child .button, ul.button-group.radius li:last-chi
   border-bottom-right-radius: 7px;
 }
 /* line 161, ../../../../../../../../.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/zurb-foundation-3.2.5/scss/foundation/components/modules/_buttons.scss */
-ul.button-group.radius li:last-child .button.rounded {
+ul.button-group.radius li:last-child .button.rounded, ul.button-group.radius li:last-child #content > article .collapsed legend a.rounded, #content > article .collapsed legend ul.button-group.radius li:last-child a.rounded,
+ul.button-group.radius li:last-child #content > article .collapsible legend a.rounded,
+#content > article .collapsible legend ul.button-group.radius li:last-child a.rounded,
+ul.button-group.radius li:last-child .content-article .collapsed legend a.rounded,
+.content-article .collapsed legend ul.button-group.radius li:last-child a.rounded,
+ul.button-group.radius li:last-child body.node-type-resource article .collapsed legend a.rounded,
+body.node-type-resource article .collapsed legend ul.button-group.radius li:last-child a.rounded,
+ul.button-group.radius li:last-child body.node-type-organization article .collapsed legend a.rounded,
+body.node-type-organization article .collapsed legend ul.button-group.radius li:last-child a.rounded,
+ul.button-group.radius li:last-child body.node-type-event article .collapsed legend a.rounded,
+body.node-type-event article .collapsed legend ul.button-group.radius li:last-child a.rounded,
+ul.button-group.radius li:last-child .content-article .collapsible legend a.rounded,
+.content-article .collapsible legend ul.button-group.radius li:last-child a.rounded,
+ul.button-group.radius li:last-child body.node-type-resource article .collapsible legend a.rounded,
+body.node-type-resource article .collapsible legend ul.button-group.radius li:last-child a.rounded,
+ul.button-group.radius li:last-child body.node-type-organization article .collapsible legend a.rounded,
+body.node-type-organization article .collapsible legend ul.button-group.radius li:last-child a.rounded,
+ul.button-group.radius li:last-child body.node-type-event article .collapsible legend a.rounded,
+body.node-type-event article .collapsible legend ul.button-group.radius li:last-child a.rounded {
   -moz-border-radius-topright: 1000px;
   -webkit-border-top-right-radius: 1000px;
   border-top-right-radius: 1000px;
@@ -1091,7 +2216,25 @@ ul.button-group.radius li:last-child .button.rounded {
   border-bottom-right-radius: 1000px;
 }
 /* line 166, ../../../../../../../../.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/zurb-foundation-3.2.5/scss/foundation/components/modules/_buttons.scss */
-ul.button-group.even .button {
+ul.button-group.even .button, ul.button-group.even #content > article .collapsed legend a, #content > article .collapsed legend ul.button-group.even a,
+ul.button-group.even #content > article .collapsible legend a,
+#content > article .collapsible legend ul.button-group.even a,
+ul.button-group.even .content-article .collapsed legend a,
+.content-article .collapsed legend ul.button-group.even a,
+ul.button-group.even body.node-type-resource article .collapsed legend a,
+body.node-type-resource article .collapsed legend ul.button-group.even a,
+ul.button-group.even body.node-type-organization article .collapsed legend a,
+body.node-type-organization article .collapsed legend ul.button-group.even a,
+ul.button-group.even body.node-type-event article .collapsed legend a,
+body.node-type-event article .collapsed legend ul.button-group.even a,
+ul.button-group.even .content-article .collapsible legend a,
+.content-article .collapsible legend ul.button-group.even a,
+ul.button-group.even body.node-type-resource article .collapsible legend a,
+body.node-type-resource article .collapsible legend ul.button-group.even a,
+ul.button-group.even body.node-type-organization article .collapsible legend a,
+body.node-type-organization article .collapsible legend ul.button-group.even a,
+ul.button-group.even body.node-type-event article .collapsible legend a,
+body.node-type-event article .collapsible legend ul.button-group.even a {
   width: 100%;
 }
 /* line 167, ../../../../../../../../.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/zurb-foundation-3.2.5/scss/foundation/components/modules/_buttons.scss */
@@ -1383,14 +2526,68 @@ div.alert-box a.close:hover, div.alert-box a.close:focus {
   color: #fff;
 }
 /* line 88, ../../../../../../../../.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/zurb-foundation-3.2.5/scss/foundation/components/modules/_ui.scss */
-.panel.callout .button {
+.panel.callout .button, .panel.callout #content > article .collapsed legend a, #content > article .collapsed legend .panel.callout a,
+.panel.callout #content > article .collapsible legend a,
+#content > article .collapsible legend .panel.callout a,
+.panel.callout .content-article .collapsed legend a,
+.content-article .collapsed legend .panel.callout a,
+.panel.callout body.node-type-resource article .collapsed legend a,
+body.node-type-resource article .collapsed legend .panel.callout a,
+.panel.callout body.node-type-organization article .collapsed legend a,
+body.node-type-organization article .collapsed legend .panel.callout a,
+.panel.callout body.node-type-event article .collapsed legend a,
+body.node-type-event article .collapsed legend .panel.callout a,
+.panel.callout .content-article .collapsible legend a,
+.content-article .collapsible legend .panel.callout a,
+.panel.callout body.node-type-resource article .collapsible legend a,
+body.node-type-resource article .collapsible legend .panel.callout a,
+.panel.callout body.node-type-organization article .collapsible legend a,
+body.node-type-organization article .collapsible legend .panel.callout a,
+.panel.callout body.node-type-event article .collapsible legend a,
+body.node-type-event article .collapsible legend .panel.callout a {
   background: white;
   border: none;
   color: #18729d;
   text-shadow: none;
 }
 /* line 90, ../../../../../../../../.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/zurb-foundation-3.2.5/scss/foundation/components/modules/_ui.scss */
-.panel.callout .button:hover, .panel.callout .button:focus {
+.panel.callout .button:hover, .panel.callout #content > article .collapsed legend a:hover, #content > article .collapsed legend .panel.callout a:hover,
+.panel.callout #content > article .collapsible legend a:hover,
+#content > article .collapsible legend .panel.callout a:hover,
+.panel.callout .content-article .collapsed legend a:hover,
+.content-article .collapsed legend .panel.callout a:hover,
+.panel.callout body.node-type-resource article .collapsed legend a:hover,
+body.node-type-resource article .collapsed legend .panel.callout a:hover,
+.panel.callout body.node-type-organization article .collapsed legend a:hover,
+body.node-type-organization article .collapsed legend .panel.callout a:hover,
+.panel.callout body.node-type-event article .collapsed legend a:hover,
+body.node-type-event article .collapsed legend .panel.callout a:hover,
+.panel.callout .content-article .collapsible legend a:hover,
+.content-article .collapsible legend .panel.callout a:hover,
+.panel.callout body.node-type-resource article .collapsible legend a:hover,
+body.node-type-resource article .collapsible legend .panel.callout a:hover,
+.panel.callout body.node-type-organization article .collapsible legend a:hover,
+body.node-type-organization article .collapsible legend .panel.callout a:hover,
+.panel.callout body.node-type-event article .collapsible legend a:hover,
+body.node-type-event article .collapsible legend .panel.callout a:hover, .panel.callout .button:focus, .panel.callout #content > article .collapsed legend a:focus, #content > article .collapsed legend .panel.callout a:focus,
+.panel.callout #content > article .collapsible legend a:focus,
+#content > article .collapsible legend .panel.callout a:focus,
+.panel.callout .content-article .collapsed legend a:focus,
+.content-article .collapsed legend .panel.callout a:focus,
+.panel.callout body.node-type-resource article .collapsed legend a:focus,
+body.node-type-resource article .collapsed legend .panel.callout a:focus,
+.panel.callout body.node-type-organization article .collapsed legend a:focus,
+body.node-type-organization article .collapsed legend .panel.callout a:focus,
+.panel.callout body.node-type-event article .collapsed legend a:focus,
+body.node-type-event article .collapsed legend .panel.callout a:focus,
+.panel.callout .content-article .collapsible legend a:focus,
+.content-article .collapsible legend .panel.callout a:focus,
+.panel.callout body.node-type-resource article .collapsible legend a:focus,
+body.node-type-resource article .collapsible legend .panel.callout a:focus,
+.panel.callout body.node-type-organization article .collapsible legend a:focus,
+body.node-type-organization article .collapsible legend .panel.callout a:focus,
+.panel.callout body.node-type-event article .collapsible legend a:focus,
+body.node-type-event article .collapsible legend .panel.callout a:focus {
   background: rgba(255, 255, 255, 0.8);
 }
 /* line 94, ../../../../../../../../.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/zurb-foundation-3.2.5/scss/foundation/components/modules/_ui.scss */
@@ -2039,22 +3236,31 @@ div.progress.round .meter {
 ----------------------------------------- */
 /* line 28, ../sass/_typography.scss */
 a {
+  text-decoration: none;
+}
+/* line 30, ../sass/_typography.scss */
+a:hover {
+  color: #f68115;
+}
+
+/* line 35, ../sass/_typography.scss */
+.underline-link {
   text-decoration: underline;
 }
 
-/* line 36, ../sass/_typography.scss */
+/* line 42, ../sass/_typography.scss */
 body {
   color: #2a2724;
 }
 
-/* line 38, ../sass/_typography.scss */
+/* line 44, ../sass/_typography.scss */
 body, p {
   font-family: minion-pro-1, minion-pro-2, Georgia, 'Times New Roman', serif;
   font-size: 1.5rem;
   line-height: 1.385;
 }
 
-/* line 44, ../sass/_typography.scss */
+/* line 50, ../sass/_typography.scss */
 h1#page-title {
   color: #18729d;
   font-size: 2.267em;
@@ -2063,23 +3269,23 @@ h1#page-title {
   padding: 0;
 }
 
-/* line 58, ../sass/_typography.scss */
+/* line 64, ../sass/_typography.scss */
 article h2 {
   color: #f68115;
   font-size: 1.133em;
   font-weight: bold;
 }
-/* line 63, ../sass/_typography.scss */
+/* line 69, ../sass/_typography.scss */
 article h3 {
   color: #18729d;
   font-size: 1em;
   font-weight: bold;
 }
-/* line 74, ../sass/_typography.scss */
+/* line 80, ../sass/_typography.scss */
 article ul {
   padding-left: 40px;
 }
-/* line 78, ../sass/_typography.scss */
+/* line 84, ../sass/_typography.scss */
 article .field-label, article label {
   color: #f68115;
   font-size: 1.133em;
@@ -2087,13 +3293,13 @@ article .field-label, article label {
   margin-bottom: 1.2rem;
 }
 
-/* line 88, ../sass/_typography.scss */
+/* line 94, ../sass/_typography.scss */
 aside p {
   font-style: inherit;
   font-size: 1.5rem;
 }
 
-/* line 93, ../sass/_typography.scss */
+/* line 99, ../sass/_typography.scss */
 #main section .block-title {
   font-size: 1.133em;
   color: #f68115;
@@ -2109,7 +3315,7 @@ aside p {
 /* -----------------------------------------
    Individual fields 
 ----------------------------------------- */
-/* line 133, ../sass/_typography.scss */
+/* line 139, ../sass/_typography.scss */
 .field-name-field-trial-deadline {
   font-size: 1.8rem;
   text-align: center;
@@ -2118,7 +3324,18 @@ aside p {
 /* -----------------------------------------
    UI Elements (pagination, breadcrumbs etc.)
 ----------------------------------------- */
-/* line 142, ../sass/_typography.scss */
+/* line 151, ../sass/_typography.scss */
+.collapsed legend a,
+.collapsible legend a {
+  color: white;
+  font-family: "minion-pro-1", "minion-pro-2", Georgia, "Times New Roman", serif;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+/* line 162, ../sass/_typography.scss */
 .notice {
   color: #f00;
 }
@@ -2200,7 +3417,7 @@ html, body {
 /* line 53, ../sass/_page.scss */
 table {
   width: 100%;
-  border: 1px solid #eee;
+  border: 1px solid #eeeeee;
 }
 
 /* line 58, ../sass/_page.scss */
@@ -2230,7 +3447,16 @@ ul.links .print_html {
 }
 
 /* line 77, ../sass/_page.scss */
-.button {
+.button, #content > article .collapsed legend a,
+#content > article .collapsible legend a,
+.content-article .collapsed legend a,
+body.node-type-resource article .collapsed legend a,
+body.node-type-organization article .collapsed legend a,
+body.node-type-event article .collapsed legend a,
+.content-article .collapsible legend a,
+body.node-type-resource article .collapsible legend a,
+body.node-type-organization article .collapsible legend a,
+body.node-type-event article .collapsible legend a {
   cursor: pointer;
   padding: 4px 17px;
   margin-bottom: 1em;
@@ -2270,7 +3496,7 @@ ul.links .print_html {
 
 /* line 95, ../sass/_page.scss */
 #footer {
-  border-top: 1px dotted #ddd;
+  border-top: 1px dotted #dddddd;
   margin-top: 20px;
   max-width: 92rem;
   padding-bottom: 6rem;
@@ -2302,21 +3528,11 @@ body.node-type-event article .columns:last-child {
 body.node-type-resource article .field-item,
 body.node-type-organization article .field-item,
 body.node-type-event article .field-item {
-  border-bottom: 1px dotted #ccc;
+  border-bottom: 1px dotted #cccccc;
   margin-bottom: 2rem;
   padding-bottom: 1rem;
 }
-/* line 126, ../sass/_page.scss */
-#content > article div[class^=field-group-simple-div] .field-item,
-.content-article div[class^=field-group-simple-div] .field-item,
-body.node-type-resource article div[class^=field-group-simple-div] .field-item,
-body.node-type-organization article div[class^=field-group-simple-div] .field-item,
-body.node-type-event article div[class^=field-group-simple-div] .field-item {
-  border-bottom-style: none;
-  margin-bottom: 0;
-  padding-bottom: 0;
-}
-/* line 133, ../sass/_page.scss */
+/* line 125, ../sass/_page.scss */
 #content > article .field-name-field-private-note,
 .content-article .field-name-field-private-note,
 body.node-type-resource article .field-name-field-private-note,
@@ -2326,22 +3542,57 @@ body.node-type-event article .field-name-field-private-note {
   border-bottom-style: none;
   padding: 1em;
 }
+/* line 132, ../sass/_page.scss */
+#content > article div[class^=field-group-simple-div] .field-item,
+.content-article div[class^=field-group-simple-div] .field-item,
+body.node-type-resource article div[class^=field-group-simple-div] .field-item,
+body.node-type-organization article div[class^=field-group-simple-div] .field-item,
+body.node-type-event article div[class^=field-group-simple-div] .field-item {
+  border-bottom-style: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+/* line 142, ../sass/_page.scss */
+#content > article .collapsed legend a,
+#content > article .collapsible legend a,
+.content-article .collapsed legend a,
+body.node-type-resource article .collapsed legend a,
+body.node-type-organization article .collapsed legend a,
+body.node-type-event article .collapsed legend a,
+.content-article .collapsible legend a,
+body.node-type-resource article .collapsible legend a,
+body.node-type-organization article .collapsible legend a,
+body.node-type-event article .collapsible legend a {
+  background: #939290;
+  border-bottom: 1px solid #737270;
+  -moz-border-radius: 0.5rem;
+  -webkit-border-radius: 0.5rem;
+  border-radius: 0.5rem;
+  border-top: 1px solid #c9c9c8;
+  height: 2.3rem;
+  padding: 0.5rem 0.8rem;
+}
 
 /* -----------------------------------------
    Content Types
 ----------------------------------------- */
-/* line 149, ../sass/_page.scss */
+/* line 166, ../sass/_page.scss */
+body.node-type-resource .help {
+  font-size: 1.1rem;
+  margin-top: 0.5rem;
+}
+/* line 170, ../sass/_page.scss */
 body.node-type-resource #return-res {
   background: url("../images/return-resources.png") no-repeat right 0;
   font-family: Helvetica, Arial, sans-serif;
   font-size: 1.2rem;
   font-weight: bold;
-  height: 30px;
+  height: 3rem;
   position: absolute;
   right: 1.5rem;
   top: 5.2rem;
 }
-/* line 158, ../sass/_page.scss */
+/* line 179, ../sass/_page.scss */
 body.node-type-resource #return-res a {
   color: #8c8b89;
   display: block;
@@ -2354,27 +3605,59 @@ body.node-type-resource #return-res a {
 /* -----------------------------------------
    UI Elements
 ----------------------------------------- */
-/* line 189, ../sass/_page.scss */
+/* line 209, ../sass/_page.scss */
+.button:hover, #content > article .collapsed legend a:hover,
+#content > article .collapsible legend a:hover,
+.content-article .collapsed legend a:hover,
+body.node-type-resource article .collapsed legend a:hover,
+body.node-type-organization article .collapsed legend a:hover,
+body.node-type-event article .collapsed legend a:hover,
+.content-article .collapsible legend a:hover,
+body.node-type-resource article .collapsible legend a:hover,
+body.node-type-organization article .collapsible legend a:hover,
+body.node-type-event article .collapsible legend a:hover, .button:active, #content > article .collapsed legend a:active,
+#content > article .collapsible legend a:active,
+.content-article .collapsed legend a:active,
+body.node-type-resource article .collapsed legend a:active,
+body.node-type-organization article .collapsed legend a:active,
+body.node-type-event article .collapsed legend a:active,
+.content-article .collapsible legend a:active,
+body.node-type-resource article .collapsible legend a:active,
+body.node-type-organization article .collapsible legend a:active,
+body.node-type-event article .collapsible legend a:active, .button:focus, #content > article .collapsed legend a:focus,
+#content > article .collapsible legend a:focus,
+.content-article .collapsed legend a:focus,
+body.node-type-resource article .collapsed legend a:focus,
+body.node-type-organization article .collapsed legend a:focus,
+body.node-type-event article .collapsed legend a:focus,
+.content-article .collapsible legend a:focus,
+body.node-type-resource article .collapsible legend a:focus,
+body.node-type-organization article .collapsible legend a:focus,
+body.node-type-event article .collapsible legend a:focus {
+  background: #877f77;
+}
+
+/* line 214, ../sass/_page.scss */
 #breadcrumb {
   height: 3rem;
   padding-top: 0.7rem;
   padding-left: 3rem;
 }
 
-/* line 195, ../sass/_page.scss */
+/* line 220, ../sass/_page.scss */
 ul.pagination {
   text-align: center;
 }
-/* line 197, ../sass/_page.scss */
+/* line 222, ../sass/_page.scss */
 ul.pagination li {
   float: none;
   display: inline-block;
 }
 
 /* Tab styling */
-/* line 206, ../sass/_page.scss */
+/* line 231, ../sass/_page.scss */
 div.drupal_tabs {
-  background: #ddd;
+  background: #dddddd;
   overflow: auto;
   margin: 18px 0;
   padding: 4px 2px;
@@ -2382,7 +3665,7 @@ div.drupal_tabs {
   -webkit-border-radius: 6px;
 }
 
-/* line 212, ../sass/_page.scss */
+/* line 237, ../sass/_page.scss */
 dl.tabs.primary,
 dl.tabs.secondary {
   border-style: none;
@@ -2390,21 +3673,21 @@ dl.tabs.secondary {
   padding: 0;
 }
 
-/* line 216, ../sass/_page.scss */
+/* line 241, ../sass/_page.scss */
 dl.tabs.primary {
   float: left;
 }
 
-/* line 220, ../sass/_page.scss */
+/* line 245, ../sass/_page.scss */
 dl.tabs.primary dd {
   display: inline;
   margin: 0;
   padding: 0;
 }
 
-/* line 224, ../sass/_page.scss */
+/* line 249, ../sass/_page.scss */
 dl.tabs.primary dd a {
-  background: #fff;
+  background: white;
   border-style: none;
   color: #877f77;
   display: block;
@@ -2418,22 +3701,22 @@ dl.tabs.primary dd a {
   text-decoration: none;
 }
 
-/* line 231, ../sass/_page.scss */
+/* line 256, ../sass/_page.scss */
 dl.tabs.primary dd a:hover,
 dl.tabs.primary dd a:active {
   background: #877f77;
-  color: #fff;
+  color: white;
 }
 
-/* line 236, ../sass/_page.scss */
+/* line 261, ../sass/_page.scss */
 dl.tabs.primary dd.active a {
   background: #877f77;
-  color: #fff;
+  color: white;
 }
 
-/* line 240, ../sass/_page.scss */
+/* line 265, ../sass/_page.scss */
 dl.tabs.secondary {
-  border-top: 1px solid #fff;
+  border-top: 1px solid white;
   clear: both;
   display: block;
   margin: 0 2px;
@@ -2442,7 +3725,7 @@ dl.tabs.secondary {
   top: 4px;
 }
 
-/* line 244, ../sass/_page.scss */
+/* line 269, ../sass/_page.scss */
 dl.tabs.secondary dd {
   border-style: none;
   display: block;
@@ -2451,10 +3734,10 @@ dl.tabs.secondary dd {
   padding: 6px 0;
 }
 
-/* line 248, ../sass/_page.scss */
+/* line 273, ../sass/_page.scss */
 dl.tabs.secondary dd a {
   border-bottom-style: none;
-  border-right: 1px solid #fff;
+  border-right: 1px solid white;
   display: block;
   float: left;
   font-weight: bold;
@@ -2917,7 +4200,25 @@ dl.tabs.secondary dd a {
   right: 15px;
 }
 /* line 327, ../sass/_views.scss */
-.view-resources .view-header a.button {
+.view-resources .view-header a.button, .view-resources .view-header #content > article .collapsed legend a, #content > article .collapsed legend .view-resources .view-header a,
+.view-resources .view-header #content > article .collapsible legend a,
+#content > article .collapsible legend .view-resources .view-header a,
+.view-resources .view-header .content-article .collapsed legend a,
+.content-article .collapsed legend .view-resources .view-header a,
+.view-resources .view-header body.node-type-resource article .collapsed legend a,
+body.node-type-resource article .collapsed legend .view-resources .view-header a,
+.view-resources .view-header body.node-type-organization article .collapsed legend a,
+body.node-type-organization article .collapsed legend .view-resources .view-header a,
+.view-resources .view-header body.node-type-event article .collapsed legend a,
+body.node-type-event article .collapsed legend .view-resources .view-header a,
+.view-resources .view-header .content-article .collapsible legend a,
+.content-article .collapsible legend .view-resources .view-header a,
+.view-resources .view-header body.node-type-resource article .collapsible legend a,
+body.node-type-resource article .collapsible legend .view-resources .view-header a,
+.view-resources .view-header body.node-type-organization article .collapsible legend a,
+body.node-type-organization article .collapsible legend .view-resources .view-header a,
+.view-resources .view-header body.node-type-event article .collapsible legend a,
+body.node-type-event article .collapsible legend .view-resources .view-header a {
   cursor: pointer;
   padding: 4px 17px;
   margin-bottom: 1em;
@@ -2938,8 +4239,46 @@ dl.tabs.secondary dd a {
 }
 
 /* line 332, ../sass/_views.scss */
-.view-contacts .view-header a.button,
-.view-organizations .view-header a.button {
+.view-contacts .view-header a.button, .view-contacts .view-header #content > article .collapsed legend a, #content > article .collapsed legend .view-contacts .view-header a,
+.view-contacts .view-header #content > article .collapsible legend a,
+#content > article .collapsible legend .view-contacts .view-header a,
+.view-contacts .view-header .content-article .collapsed legend a,
+.content-article .collapsed legend .view-contacts .view-header a,
+.view-contacts .view-header body.node-type-resource article .collapsed legend a,
+body.node-type-resource article .collapsed legend .view-contacts .view-header a,
+.view-contacts .view-header body.node-type-organization article .collapsed legend a,
+body.node-type-organization article .collapsed legend .view-contacts .view-header a,
+.view-contacts .view-header body.node-type-event article .collapsed legend a,
+body.node-type-event article .collapsed legend .view-contacts .view-header a,
+.view-contacts .view-header .content-article .collapsible legend a,
+.content-article .collapsible legend .view-contacts .view-header a,
+.view-contacts .view-header body.node-type-resource article .collapsible legend a,
+body.node-type-resource article .collapsible legend .view-contacts .view-header a,
+.view-contacts .view-header body.node-type-organization article .collapsible legend a,
+body.node-type-organization article .collapsible legend .view-contacts .view-header a,
+.view-contacts .view-header body.node-type-event article .collapsible legend a,
+body.node-type-event article .collapsible legend .view-contacts .view-header a,
+.view-organizations .view-header a.button,
+.view-organizations .view-header #content > article .collapsed legend a,
+#content > article .collapsed legend .view-organizations .view-header a,
+.view-organizations .view-header #content > article .collapsible legend a,
+#content > article .collapsible legend .view-organizations .view-header a,
+.view-organizations .view-header .content-article .collapsed legend a,
+.content-article .collapsed legend .view-organizations .view-header a,
+.view-organizations .view-header body.node-type-resource article .collapsed legend a,
+body.node-type-resource article .collapsed legend .view-organizations .view-header a,
+.view-organizations .view-header body.node-type-organization article .collapsed legend a,
+body.node-type-organization article .collapsed legend .view-organizations .view-header a,
+.view-organizations .view-header body.node-type-event article .collapsed legend a,
+body.node-type-event article .collapsed legend .view-organizations .view-header a,
+.view-organizations .view-header .content-article .collapsible legend a,
+.content-article .collapsible legend .view-organizations .view-header a,
+.view-organizations .view-header body.node-type-resource article .collapsible legend a,
+body.node-type-resource article .collapsible legend .view-organizations .view-header a,
+.view-organizations .view-header body.node-type-organization article .collapsible legend a,
+body.node-type-organization article .collapsible legend .view-organizations .view-header a,
+.view-organizations .view-header body.node-type-event article .collapsible legend a,
+body.node-type-event article .collapsible legend .view-organizations .view-header a {
   cursor: pointer;
   padding: 4px 17px;
   margin-bottom: 1em;

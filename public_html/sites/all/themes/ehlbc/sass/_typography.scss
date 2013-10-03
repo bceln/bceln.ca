@@ -26,8 +26,14 @@
 // ------- <Reusable types> ------- //
 
 a {
+  text-decoration: none;
+  &:hover {
+    color: $secondaryColor;
+  }
+}
+
+.underline-link {
   text-decoration: underline;
-  &:hover {}
 }
 
 
@@ -138,6 +144,20 @@ nav {
 /* -----------------------------------------
    UI Elements (pagination, breadcrumbs etc.)
 ----------------------------------------- */
+
+.collapsed,
+.collapsible {
+  legend {
+    a {
+      color: $white;
+      font-family: "minion-pro-1", "minion-pro-2", Georgia, "Times New Roman", serif;
+      font-weight: bold;
+      text-align: center;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+  }
+}
 
 .notice {
   color: #f00;

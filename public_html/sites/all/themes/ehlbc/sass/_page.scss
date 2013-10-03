@@ -52,7 +52,7 @@
 
   table {
     width: 100%;
-    border: 1px solid #eee;
+    border: 1px solid $gray_7;
   }
   
   #access {
@@ -93,7 +93,7 @@
 }
 
 #footer {
-  border-top: 1px dotted #ddd;
+  border-top: 1px dotted $gray_6;
   margin-top: 20px;
   max-width: rem(92);
   padding-bottom: rem(6);
@@ -117,9 +117,15 @@
   .columns:last-child { float: left; }
 
   .field-item {
-    border-bottom: 1px dotted #ccc;
+    border-bottom: 1px dotted $gray_4;
     margin-bottom: rem(2);
     padding-bottom: rem(1);
+  }
+
+  .field-name-field-private-note {
+    background: $gray_5;
+    border-bottom-style: none;
+    padding:1em;
   }
 
   div[class^=field-group-simple-div] {
@@ -130,10 +136,21 @@
     }
   }
 
-  .field-name-field-private-note {
-    background: #ffe9d5;
-    border-bottom-style: none;
-    padding:1em;
+  .collapsed,
+  .collapsible {
+    legend {
+      a {
+        @extend .button;
+        background: $gray_1;
+        border-bottom: 1px solid $gray_2;
+        -moz-border-radius: rem(.5);
+        -webkit-border-radius: rem(.5);
+        border-radius: rem(.5);
+        border-top: 1px solid $gray_3;
+        height: rem(2.3);
+        padding: rem(.5) rem(.8);
+      }
+    }
   }
 }
 
@@ -146,17 +163,21 @@ body.node-type-resource {
   article {
     @extend .content-article;
   }
+  .help {
+    font-size: rem(1.1);
+    margin-top: rem(.5);
+  }
   #return-res {
     background: url('../images/return-resources.png') no-repeat right 0;
     font-family: Helvetica, Arial, sans-serif;
     font-size: rem(1.2); 
     font-weight: bold;
-    height: 30px;
+    height: rem(3);
     position: absolute;
     right: rem(1.5);
     top: rem(5.2);
     a {
-      color: #8c8b89;
+      color: $gray_8;
       display: block;
       padding: 5px 40px 0 0;
     }
@@ -183,7 +204,11 @@ body.node-type-event article{
 
   //until further notice all buttons will be green
   .button{
-
+    &:hover,
+    &:active,
+    &:focus {
+      background: $gray_9;
+    }
   }
 
   #breadcrumb{
@@ -204,7 +229,7 @@ body.node-type-event article{
 
 /* Tab styling */
 div.drupal_tabs {
-  background:#ddd; overflow:auto; margin:18px 0; padding:4px 2px;
+  background:$gray_6; overflow:auto; margin:18px 0; padding:4px 2px;
   -moz-border-radius:6px; -webkit-border-radius:6px;
 }
 
@@ -222,23 +247,23 @@ div.drupal_tabs {
     }
     
       dl.tabs.primary dd a {
-        background:#fff;border-style:none;color:#877f77; display:block; font-weight:bold; float:left; margin:0 2px; padding:6px 12px; text-transform:uppercase;
+        background:$white;border-style:none;color:$gray_9; display:block; font-weight:bold; float:left; margin:0 2px; padding:6px 12px; text-transform:uppercase;
         -moz-border-radius:4px; -webkit-border-radius:4px;
         text-decoration: none;
       }
       
       dl.tabs.primary dd a:hover,
       dl.tabs.primary dd a:active {
-        background:#877f77;
-        color:#fff;
+        background:$gray_9;
+        color:$white;
       }
       
       dl.tabs.primary dd.active a {
-        background:#877f77; color:#fff;
+        background:$gray_9; color:$white;
       }
       
     dl.tabs.secondary {
-      border-top:1px solid #fff; clear:both; display:block; margin:0 2px; padding:0 0 4px 0; position:relative; top:4px;
+      border-top:1px solid $white; clear:both; display:block; margin:0 2px; padding:0 0 4px 0; position:relative; top:4px;
     }
     
       dl.tabs.secondary dd {
@@ -246,7 +271,7 @@ div.drupal_tabs {
       }
       
         dl.tabs.secondary dd a {
-          border-bottom-style:none; border-right:1px solid #fff; display:block; float:left; font-weight:bold; margin-right:9px; padding:0 9px 0 0;
+          border-bottom-style:none; border-right:1px solid $white; display:block; float:left; font-weight:bold; margin-right:9px; padding:0 9px 0 0;
         }
         
 
