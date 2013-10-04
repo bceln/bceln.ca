@@ -36,18 +36,19 @@
 
 /* Admin menu block */
 #block-menu-menu-authenticated {
-  background: #fff;
-  color:#8C8B89;
-  @include border-radius(5px);
-  -moz-box-shadow: 0 0 5px #888;
-  -webkit-box-shadow: 0 0 5px#888;
-  box-shadow: 0 0 5px #888;
-  height:auto;
-  padding:10px;
-  position:absolute;
-  right:-175px;
-  top:35px;
-  z-index:1000;
+  background: $white;
+  color: $gray_9;
+  @include border-radius(rem(.5));
+  -moz-box-shadow: 0 0 5px $gray_15;
+  -webkit-box-shadow: 0 0 5px $gray_15;
+  box-shadow: 0 0 5px $gray_15;
+  font-weight: bold;
+  height: auto;
+  padding: 10px;
+  position: absolute;
+  right: -162px;
+  top: 35px;
+  z-index: 1000;
   
   ul {
     list-style: none;
@@ -55,11 +56,12 @@
   
   h2 {
     background: url("../images/resources-gear.png") no-repeat scroll top left transparent;
-    color:#8C8B89;
+    color: $gray_9;
     cursor: pointer;
-    height:36px;
+    font-size: rem(1.5);
+    height: 36px;
     margin: 0;
-    padding:5px 0 0 46px;
+    padding: 5px 0 0 46px;
   }
   
   .block-content {

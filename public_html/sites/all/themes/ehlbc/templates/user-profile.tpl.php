@@ -41,9 +41,11 @@
   <?php foreach ($contact as $contact_item): ?>
   <?php
     $organization = $contact_item['field_organization_ref']['#items'][0]['node'];
+    $location = $organization->field_location['und'][0];
     hide($contact_item['field_contact_photo']);
     hide($contact_item['field_contact_first_name']);
     hide($contact_item['field_contact_last_name']);
+    dpm($location);
   ?>
   <div class="row-container">
     <div class="row">
@@ -62,7 +64,24 @@
         <?php print render($contact_item); ?>
         <?php
           // Manually render location field here--because Drupal sucks?
+          //
+          // It should be possible, using the node, $organization, to 
+          // either render the field_location field directly, or at 
+          // least to pass the node object through 
+          // node_prepare_content() and then render the field. None of 
+          // this works in this context for some reason. Consequently, 
+          // we do it manually: 
         ?>
+        <div class="field-label"><?php print t('Address'); ?>:</div>
+        <div class="location vcard">
+          <div class="adr">
+            <span class="fn"></span> 
+            <div class="street-address"><?php print $location['street']; ?></div> 
+            <span class="locality"><?php print $location['city']; ?> <?php print $location['province'] ?></span> 
+            <span class="postal-code"><?php print $location['postal_code']; ?></span>
+            <div class="country-name"><?php print $location['country_name']; ?></div>
+          </div> <!-- // close adr -->
+        </div>
       </div>
     </div>
   </div>

@@ -28,7 +28,7 @@
         }
         else {
           block.animate({
-            right: '-175px',
+            right: '-162px',
             height: '50px'
           });
         }

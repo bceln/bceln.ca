@@ -7521,76 +7521,78 @@ dl.tabs.secondary dd a {
 /* Admin menu block */
 /* line 38, ../sass/_block.scss */
 #block-menu-menu-authenticated {
-  background: #fff;
-  color: #8C8B89;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  -ms-border-radius: 5px;
-  -o-border-radius: 5px;
-  border-radius: 5px;
-  -moz-box-shadow: 0 0 5px #888;
+  background: white;
+  color: #877f77;
+  -webkit-border-radius: 0.5rem;
+  -moz-border-radius: 0.5rem;
+  -ms-border-radius: 0.5rem;
+  -o-border-radius: 0.5rem;
+  border-radius: 0.5rem;
+  -moz-box-shadow: 0 0 5px #888888;
   -webkit-box-shadow: 0 0 5px #888888;
-  box-shadow: 0 0 5px #888;
+  box-shadow: 0 0 5px #888888;
+  font-weight: bold;
   height: auto;
   padding: 10px;
   position: absolute;
-  right: -175px;
+  right: -162px;
   top: 35px;
   z-index: 1000;
 }
-/* line 52, ../sass/_block.scss */
+/* line 53, ../sass/_block.scss */
 #block-menu-menu-authenticated ul {
   list-style: none;
 }
-/* line 56, ../sass/_block.scss */
+/* line 57, ../sass/_block.scss */
 #block-menu-menu-authenticated h2, #block-menu-menu-authenticated .profile label, .profile #block-menu-menu-authenticated label,
 #block-menu-menu-authenticated article label,
 article #block-menu-menu-authenticated label, #block-menu-menu-authenticated .content-article .field-label, .content-article #block-menu-menu-authenticated .field-label, #block-menu-menu-authenticated body.node-type-resource article .field-label, body.node-type-resource article #block-menu-menu-authenticated .field-label, #block-menu-menu-authenticated body.node-type-organization article .field-label, body.node-type-organization article #block-menu-menu-authenticated .field-label, #block-menu-menu-authenticated body.node-type-event article .field-label, body.node-type-event article #block-menu-menu-authenticated .field-label, #block-menu-menu-authenticated body.page-user .profile .field-label, body.page-user .profile #block-menu-menu-authenticated .field-label {
   background: url("../images/resources-gear.png") no-repeat scroll top left transparent;
-  color: #8C8B89;
+  color: #877f77;
   cursor: pointer;
+  font-size: 1.5rem;
   height: 36px;
   margin: 0;
   padding: 5px 0 0 46px;
 }
-/* line 65, ../sass/_block.scss */
+/* line 67, ../sass/_block.scss */
 #block-menu-menu-authenticated .block-content {
   padding: 0 0 0 46px;
 }
 
 /* Share this block */
-/* line 71, ../sass/_block.scss */
+/* line 73, ../sass/_block.scss */
 #block-block-11 {
   position: absolute;
   right: 20px;
   top: -30px;
 }
 
-/* line 77, ../sass/_block.scss */
+/* line 79, ../sass/_block.scss */
 #block-block-11 .st_sharethis {
   background: url("../images/share-icon.png") no-repeat scroll left center transparent !important;
   height: 20px;
 }
 
-/* line 82, ../sass/_block.scss */
+/* line 84, ../sass/_block.scss */
 #block-block-11 .st_sharethis {
   padding: 1px 0 1px 22px;
   text-decoration: none;
 }
 
-/* line 87, ../sass/_block.scss */
+/* line 89, ../sass/_block.scss */
 #block-block-11 .stButton {
   margin: 0;
 }
 
-/* line 91, ../sass/_block.scss */
+/* line 93, ../sass/_block.scss */
 #block-block-11 .stButton .chicklets {
   background: none;
   padding: 0;
 }
 
 /* Front page access block */
-/* line 99, ../sass/_block.scss */
+/* line 101, ../sass/_block.scss */
 .front .node .entry-content h2, .front .node .entry-content .profile label, .profile .front .node .entry-content label,
 .front .node .entry-content article label,
 article .front .node .entry-content label, .front .node .entry-content .content-article .field-label, .content-article .front .node .entry-content .field-label, .front .node .entry-content body.node-type-resource article .field-label, body.node-type-resource article .front .node .entry-content .field-label, .front .node .entry-content body.node-type-organization article .field-label, body.node-type-organization article .front .node .entry-content .field-label, .front .node .entry-content body.node-type-event article .field-label, body.node-type-event article .front .node .entry-content .field-label, .front .node .entry-content body.page-user .profile .field-label, body.page-user .profile .front .node .entry-content .field-label {
@@ -7601,19 +7603,19 @@ article .front .node .entry-content label, .front .node .entry-content .content-
 }
 
 /* Do I have Access Block */
-/* line 110, ../sass/_block.scss */
+/* line 112, ../sass/_block.scss */
 .front #block-menu-block-1 h2, .front #block-menu-block-1 .profile label, .profile .front #block-menu-block-1 label,
 .front #block-menu-block-1 article label,
 article .front #block-menu-block-1 label, .front #block-menu-block-1 .content-article .field-label, .content-article .front #block-menu-block-1 .field-label, .front #block-menu-block-1 body.node-type-resource article .field-label, body.node-type-resource article .front #block-menu-block-1 .field-label, .front #block-menu-block-1 body.node-type-organization article .field-label, body.node-type-organization article .front #block-menu-block-1 .field-label, .front #block-menu-block-1 body.node-type-event article .field-label, body.node-type-event article .front #block-menu-block-1 .field-label, .front #block-menu-block-1 body.page-user .profile .field-label, body.page-user .profile .front #block-menu-block-1 .field-label {
   display: none;
 }
 
-/* line 114, ../sass/_block.scss */
+/* line 116, ../sass/_block.scss */
 .front #block-menu-block-1 ul.menu {
   list-style: none;
 }
 
-/* line 118, ../sass/_block.scss */
+/* line 120, ../sass/_block.scss */
 .front #block-menu-block-1 ul.menu li a {
   background: #18729d;
   color: #fff;
@@ -7636,7 +7638,7 @@ article .front #block-menu-block-1 label, .front #block-menu-block-1 .content-ar
 }
 
 /*  In this Section Block */
-/* line 138, ../sass/_block.scss */
+/* line 140, ../sass/_block.scss */
 .not-front #block-menu-block-1 {
   background: none repeat scroll 0 0 #e0e0e0;
   border-bottom: 5px solid #c5c5c5;
@@ -7645,24 +7647,24 @@ article .front #block-menu-block-1 label, .front #block-menu-block-1 .content-ar
   padding: 20px;
 }
 
-/* line 146, ../sass/_block.scss */
+/* line 148, ../sass/_block.scss */
 .not-front #block-menu-block-1 ul {
   list-style: none;
 }
 
-/* line 150, ../sass/_block.scss */
+/* line 152, ../sass/_block.scss */
 .not-front #block-menu-block-1 li {
   padding: 4px 0px 4px 20px;
   margin-left: -20px;
 }
 
-/* line 156, ../sass/_block.scss */
+/* line 158, ../sass/_block.scss */
 .not-front #block-menu-block-1 li.active,
 .not-front #block-menu-block-1 li.active-trail {
   border-left: 5px solid #ababab;
 }
 
-/* line 160, ../sass/_block.scss */
+/* line 162, ../sass/_block.scss */
 .not-front #block-menu-block-1 li a {
   display: block;
   font-size: 1.067em;
@@ -7671,7 +7673,7 @@ article .front #block-menu-block-1 label, .front #block-menu-block-1 .content-ar
   text-decoration: none;
 }
 
-/* line 168, ../sass/_block.scss */
+/* line 170, ../sass/_block.scss */
 .not-front #block-menu-block-1 li a.active,
 .not-front #block-menu-block-1 li a.active-trail {
   color: #104e6b;
@@ -7679,31 +7681,31 @@ article .front #block-menu-block-1 label, .front #block-menu-block-1 .content-ar
 }
 
 /* Third and Fourth level */
-/* line 175, ../sass/_block.scss */
+/* line 177, ../sass/_block.scss */
 .not-front #block-menu-block-1 li.active-trail li.active-trail,
 .not-front #block-menu-block-1 li.active-trail li.active-trail li.active-trail {
   border: none;
 }
 
 /* Utilities Block */
-/* line 181, ../sass/_block.scss */
+/* line 183, ../sass/_block.scss */
 #block-re-utilities-utility-nav {
   float: right;
 }
 
-/* line 185, ../sass/_block.scss */
+/* line 187, ../sass/_block.scss */
 #block-re-utilities-utility-nav .block-content {
   background: none;
 }
 
-/* line 189, ../sass/_block.scss */
+/* line 191, ../sass/_block.scss */
 #block-re-utilities-utility-nav ul.links {
   height: 40px;
   padding: 0;
   list-style: none;
 }
 
-/* line 195, ../sass/_block.scss */
+/* line 197, ../sass/_block.scss */
 #block-re-utilities-utility-nav ul.links li {
   background: #f68115;
   border-bottom: 5px solid #ff932f;
@@ -7717,13 +7719,13 @@ article .front #block-menu-block-1 label, .front #block-menu-block-1 .content-ar
   padding-right: 5px;
 }
 
-/* line 208, ../sass/_block.scss */
+/* line 210, ../sass/_block.scss */
 #block-re-utilities-utility-nav ul.links li.first {
   border-left: 5px solid #ff932f;
   display: block;
 }
 
-/* line 213, ../sass/_block.scss */
+/* line 215, ../sass/_block.scss */
 #block-re-utilities-utility-nav ul.links li.last {
   border-right: 5px solid #ff932f;
   display: block;
@@ -7734,7 +7736,7 @@ article .front #block-menu-block-1 label, .front #block-menu-block-1 .content-ar
   }*/
 }
 
-/* line 225, ../sass/_block.scss */
+/* line 227, ../sass/_block.scss */
 #block-re-utilities-utility-nav ul.links li a {
   color: #fff;
   display: block;
@@ -7743,12 +7745,12 @@ article .front #block-menu-block-1 label, .front #block-menu-block-1 .content-ar
   padding-left: 30px;
 }
 
-/* line 233, ../sass/_block.scss */
+/* line 235, ../sass/_block.scss */
 #block-re-utilities-utility-nav ul.links li a:hover {
   text-decoration: underline;
 }
 
-/* line 241, ../sass/_block.scss */
+/* line 243, ../sass/_block.scss */
 #block-re-utilities-utility-nav ul.links li a.dashboard {
   font-family: Helvetica, Arial, sans-serif;
   font-size: 0.786em;
@@ -7756,59 +7758,59 @@ article .front #block-menu-block-1 label, .front #block-menu-block-1 .content-ar
   padding-top: 25px;
 }
 
-/* line 248, ../sass/_block.scss */
+/* line 250, ../sass/_block.scss */
 .logged-in #block-re-utilities-utility-nav {
   /*  width: 380px; */
 }
 
-/* line 252, ../sass/_block.scss */
+/* line 254, ../sass/_block.scss */
 .logged-in #block-re-utilities-utility-nav .block-content .welcome {
   font-family: Helvetica, Arial, sans-serif;
   position: absolute;
   right: 243px;
 }
 
-/* line 258, ../sass/_block.scss */
+/* line 260, ../sass/_block.scss */
 .logged-in #block-re-utilities-utility-nav ul.links li {
   border-left: 5px solid #ff932f;
 }
 
-/* line 262, ../sass/_block.scss */
+/* line 264, ../sass/_block.scss */
 #block-re-utilities-utility-nav ul.links li a.register {
   background: url("../images/icon-register.png") no-repeat 11px 12px;
 }
 
-/* line 266, ../sass/_block.scss */
+/* line 268, ../sass/_block.scss */
 #block-re-utilities-utility-nav ul.links li a.login, #block-re-utilities-utility-nav ul.links li a.logout {
   background: url("../images/icon-loginout.png") no-repeat 5px 12px;
 }
 
-/* line 273, ../sass/_block.scss */
+/* line 275, ../sass/_block.scss */
 #block-re-utilities-utility-nav ul.links li a.search {
   background: url("../images/icon-search.png") no-repeat 5px 12px;
 }
 
-/* line 279, ../sass/_block.scss */
+/* line 281, ../sass/_block.scss */
 .logged-in #block-re-utilities-utility-nav ul.links li.first {
   background: none;
   border: none;
   font-family: Helvetica, Arial, sans-serif;
 }
 
-/* line 285, ../sass/_block.scss */
+/* line 287, ../sass/_block.scss */
 .logged-in #block-re-utilities-utility-nav ul.links li.last {
   border-left: none;
   border-right: 5px solid #ff932f;
 }
 
-/* line 290, ../sass/_block.scss */
+/* line 292, ../sass/_block.scss */
 .logged-in #block-re-utilities-utility-nav ul.links li.first {
   margin: 5px 5px 0 0;
   text-transform: none;
   width: 150px;
 }
 
-/* line 296, ../sass/_block.scss */
+/* line 298, ../sass/_block.scss */
 .logged-in #block-re-utilities-utility-nav ul.links li.first a {
   color: #18729d;
   display: block;
@@ -7818,7 +7820,7 @@ article .front #block-menu-block-1 label, .front #block-menu-block-1 .content-ar
 }
 
 /* Footer Logo */
-/* line 307, ../sass/_block.scss */
+/* line 309, ../sass/_block.scss */
 #block-block-1 {
   float: left;
   height: 75px;
@@ -7826,34 +7828,34 @@ article .front #block-menu-block-1 label, .front #block-menu-block-1 .content-ar
 }
 
 /* Footer Text */
-/* line 314, ../sass/_block.scss */
+/* line 316, ../sass/_block.scss */
 #block-block-10 {
   display: block;
   width: 75%;
   float: right;
 }
 
-/* line 320, ../sass/_block.scss */
+/* line 322, ../sass/_block.scss */
 #block-block-10 p {
   color: #807b77;
   margin-bottom: 0.5em;
   text-align: left;
 }
 
-/* line 325, ../sass/_block.scss */
+/* line 327, ../sass/_block.scss */
 #block-block-10 p a {
   text-decoration: none;
 }
 
 /* Footer menu */
-/* line 332, ../sass/_block.scss */
+/* line 334, ../sass/_block.scss */
 #block-menu-menu-footer {
   display: block;
   width: 75%;
   float: right;
 }
 
-/* line 339, ../sass/_block.scss */
+/* line 341, ../sass/_block.scss */
 #block-menu-menu-footer ul.menu li {
   float: left;
   list-style: none;
@@ -7861,7 +7863,7 @@ article .front #block-menu-block-1 label, .front #block-menu-block-1 .content-ar
   padding-right: 0;
 }
 
-/* line 346, ../sass/_block.scss */
+/* line 348, ../sass/_block.scss */
 #block-menu-menu-footer ul.menu li a {
   border-right: 1px solid #807b77;
   color: #17729d;
@@ -7870,23 +7872,23 @@ article .front #block-menu-block-1 label, .front #block-menu-block-1 .content-ar
   text-decoration: none;
 }
 
-/* line 354, ../sass/_block.scss */
+/* line 356, ../sass/_block.scss */
 #block-menu-menu-footer ul.menu li.first a {
   padding-left: 0;
 }
 
-/* line 358, ../sass/_block.scss */
+/* line 360, ../sass/_block.scss */
 #block-menu-menu-footer ul.menu li.last a {
   border-right: none;
 }
 
 /*  Member/User Login Block */
-/* line 364, ../sass/_block.scss */
+/* line 366, ../sass/_block.scss */
 #block-user-login {
   display: none;
 }
 
-/* line 368, ../sass/_block.scss */
+/* line 370, ../sass/_block.scss */
 #block-user-login {
   background: #e0e0e0;
   border-top: 5px solid #d1d1d1;
@@ -7899,7 +7901,7 @@ article .front #block-menu-block-1 label, .front #block-menu-block-1 .content-ar
   z-index: 100;
 }
 
-/* line 380, ../sass/_block.scss */
+/* line 382, ../sass/_block.scss */
 #block-user-login h2, #block-user-login .profile label, .profile #block-user-login label,
 #block-user-login article label,
 article #block-user-login label, #block-user-login .content-article .field-label, .content-article #block-user-login .field-label, #block-user-login body.node-type-resource article .field-label, body.node-type-resource article #block-user-login .field-label, #block-user-login body.node-type-organization article .field-label, body.node-type-organization article #block-user-login .field-label, #block-user-login body.node-type-event article .field-label, body.node-type-event article #block-user-login .field-label, #block-user-login body.page-user .profile .field-label, body.page-user .profile #block-user-login .field-label {
@@ -7909,18 +7911,18 @@ article #block-user-login label, #block-user-login .content-article .field-label
   text-transform: uppercase;
 }
 
-/* line 387, ../sass/_block.scss */
+/* line 389, ../sass/_block.scss */
 #block-user-login label {
   font-family: Helvetica, Arial, sans-serif;
   font-weight: bold;
 }
 
-/* line 392, ../sass/_block.scss */
+/* line 394, ../sass/_block.scss */
 #block-user-login .form-text {
   width: 175px;
 }
 
-/* line 397, ../sass/_block.scss */
+/* line 399, ../sass/_block.scss */
 #block-user-login .form-submit,
 #bd #block-user-0 .form-submit {
   background: #18729d;
@@ -7939,13 +7941,13 @@ article #block-user-login label, #block-user-login .content-article .field-label
   width: 105px;
 }
 
-/* line 410, ../sass/_block.scss */
+/* line 412, ../sass/_block.scss */
 #block-user-login form .item-list ul {
   margin: 10px 0;
   padding: 0;
 }
 
-/* line 415, ../sass/_block.scss */
+/* line 417, ../sass/_block.scss */
 #block-user-login form .item-list ul li {
   list-style: none;
   list-style-image: none;
@@ -7953,37 +7955,37 @@ article #block-user-login label, #block-user-login .content-article .field-label
   padding: 0;
 }
 
-/* line 422, ../sass/_block.scss */
+/* line 424, ../sass/_block.scss */
 #block-user-login form .item-list ul li a {
   font-size: 0.867em;
   /* 13px relative to 15px */
   text-decoration: none;
 }
 
-/* line 427, ../sass/_block.scss */
+/* line 429, ../sass/_block.scss */
 #block-user-login .item-list li.first {
   display: none;
 }
 
 /* Committee/Group pages login form */
-/* line 432, ../sass/_block.scss */
+/* line 434, ../sass/_block.scss */
 #bd #block-user-0 {
   float: left;
   width: 215px;
 }
 
-/* line 437, ../sass/_block.scss */
+/* line 439, ../sass/_block.scss */
 #bd #block-user-0 .item-list {
   display: none;
 }
 
 /* What's New Sidebar Blocks and User Login block on Committee pages */
-/* line 444, ../sass/_block.scss */
+/* line 446, ../sass/_block.scss */
 .dc-sub a {
   text-decoration: none;
 }
 
-/* line 453, ../sass/_block.scss */
+/* line 455, ../sass/_block.scss */
 #block-views-blog-block-2,
 #block-views-blog-block-3,
 #block-views-events-block-1,
@@ -7998,7 +8000,7 @@ article #block-user-login label, #block-user-login .content-article .field-label
 }
 
 /* Organizations */
-/* line 465, ../sass/_block.scss */
+/* line 467, ../sass/_block.scss */
 #block-views-resources-block_1 h3,
 #block-views-resources-block_4 h3 {
   color: #F68115;
@@ -8007,12 +8009,12 @@ article #block-user-login label, #block-user-login .content-article .field-label
   font-weight: bold;
 }
 
-/* line 471, ../sass/_block.scss */
+/* line 473, ../sass/_block.scss */
 #block-views-contacts-block_1 {
   margin: 0 0 10px 0;
 }
 
-/* line 475, ../sass/_block.scss */
+/* line 477, ../sass/_block.scss */
 #block-views-contacts-block_1 .view-contacts {
   margin-top: 0;
 }
