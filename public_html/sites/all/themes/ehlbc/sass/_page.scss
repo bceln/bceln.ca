@@ -243,7 +243,6 @@ body.page-user .profile {
 }
 
 
-
 /* -----------------------------------------
    UI Elements
 ----------------------------------------- */
@@ -318,4 +317,14 @@ div.drupal_tabs {
           border-bottom-style:none; border-right:1px solid $white; display:block; float:left; font-weight:bold; margin-right:9px; padding:0 9px 0 0;
         }
         
+
+/* -----------------------------------------
+   UI Elements
+----------------------------------------- */
+
+form {
+  &.right {
+    float: none;
+  }
+}
 
