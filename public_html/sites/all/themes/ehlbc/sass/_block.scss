@@ -254,7 +254,10 @@
 .logged-in #block-re-utilities-utility-nav .block-content .welcome {    
   font-family: Helvetica, Arial, sans-serif;
   position: absolute;
-  right: 243px;
+  right: 211px;
+  text-align: right;
+  top: 15px;
+  width: rem(15);
 }
 
 .logged-in #block-re-utilities-utility-nav ul.links li {
