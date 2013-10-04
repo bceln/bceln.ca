@@ -3318,7 +3318,12 @@ aside p {
 /* -----------------------------------------
    Block typography:
 ----------------------------------------- */
-/* line 135, ../sass/_typography.scss */
+/* line 136, ../sass/_typography.scss */
+.block h2, .block .content-article .field-label, .content-article .block .field-label, .block body.node-type-resource article .field-label, body.node-type-resource article .block .field-label, .block body.node-type-organization article .field-label, body.node-type-organization article .block .field-label, .block body.node-type-event article .field-label, body.node-type-event article .block .field-label,
+.block h3 {
+  margin: 0 0 1rem;
+}
+/* line 140, ../sass/_typography.scss */
 .block h3 {
   clear: both;
   color: #2a2724;
@@ -3330,7 +3335,7 @@ aside p {
 /* -----------------------------------------
    Individual fields 
 ----------------------------------------- */
-/* line 149, ../sass/_typography.scss */
+/* line 154, ../sass/_typography.scss */
 .field-name-field-trial-deadline {
   font-size: 1.8rem;
   text-align: center;
@@ -3339,7 +3344,7 @@ aside p {
 /* -----------------------------------------
    UI Elements (pagination, breadcrumbs etc.)
 ----------------------------------------- */
-/* line 166, ../sass/_typography.scss */
+/* line 171, ../sass/_typography.scss */
 .content-article .collapsed legend a, body.node-type-resource article .collapsed legend a, body.node-type-organization article .collapsed legend a, body.node-type-event article .collapsed legend a,
 .content-article .collapsible legend a,
 body.node-type-resource article .collapsible legend a,
@@ -3353,7 +3358,7 @@ body.node-type-event article .collapsible legend a {
   text-transform: uppercase;
 }
 
-/* line 178, ../sass/_typography.scss */
+/* line 183, ../sass/_typography.scss */
 .notice {
   color: #f00;
 }
@@ -3361,21 +3366,21 @@ body.node-type-event article .collapsible legend a {
 /* -----------------------------------------
     Views
 ----------------------------------------- */
-/* line 207, ../sass/_typography.scss */
+/* line 212, ../sass/_typography.scss */
 .view a {
   text-decoration: underline;
 }
-/* line 211, ../sass/_typography.scss */
+/* line 216, ../sass/_typography.scss */
 .view .row {
   margin-bottom: 1rem;
   margin-top: 1rem;
 }
 
-/* line 218, ../sass/_typography.scss */
+/* line 223, ../sass/_typography.scss */
 #block-views-contacts-by-group-block h2.block-title, #block-views-contacts-by-group-block .content-article .block-title.field-label, .content-article #block-views-contacts-by-group-block .block-title.field-label, #block-views-contacts-by-group-block body.node-type-resource article .block-title.field-label, body.node-type-resource article #block-views-contacts-by-group-block .block-title.field-label, #block-views-contacts-by-group-block body.node-type-organization article .block-title.field-label, body.node-type-organization article #block-views-contacts-by-group-block .block-title.field-label, #block-views-contacts-by-group-block body.node-type-event article .block-title.field-label, body.node-type-event article #block-views-contacts-by-group-block .block-title.field-label {
   color: black;
 }
-/* line 222, ../sass/_typography.scss */
+/* line 227, ../sass/_typography.scss */
 #block-views-contacts-by-group-block h3 {
   font-size: 1.2rem;
   margin-bottom: 1rem;

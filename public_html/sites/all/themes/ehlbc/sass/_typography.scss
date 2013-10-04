@@ -132,9 +132,14 @@ nav {
 ----------------------------------------- */
 
 .block {
+  h2,
+  h3 {
+    margin: 0 0 rem(1);
+  }
+
   h3 {
     clear: both;
-    color: #2a2724;
+    color: $gray_14;
     font-family: Helvetica, Arial, sans-serif;
     font-size: rem(1.5); 
     font-weight: bold;
