@@ -5148,7 +5148,7 @@ body#tinymce .front #block-menu-block-1 label, .front #block-menu-block-1 .conte
 
 /* line 227, ../sass/_block.scss */
 #block-re-utilities-utility-nav ul.links li a {
-  color: #fff;
+  color: white;
   display: block;
   padding-top: 13px;
   text-decoration: none;
