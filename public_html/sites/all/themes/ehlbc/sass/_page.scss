@@ -216,9 +216,15 @@ body.page-user .profile {
   @extend .content-article;
   .row-container {
     border: 1px solid $gray_6;
+    padding: rem(2) 0;
     .row {
       margin: 0 auto;
       width: rem(90);
+    }
+    .one {
+      .field-item {
+        border-bottom-style: none;
+      }
     }
   }
 }

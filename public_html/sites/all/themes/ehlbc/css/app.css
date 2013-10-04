@@ -630,7 +630,8 @@ that IE7/8 do not support :nth-child.
 
 /* Base Type Styles Using Modular Scale ---------------------- */
 /* line 3, ../../../../../../../../.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/zurb-foundation-3.2.5/scss/foundation/common/_typography.scss */
-body, div, dl, dt, dd, ul, ol, li, h1, h2, .content-article .field-label, body.node-type-resource article .field-label, body.node-type-organization article .field-label, body.node-type-event article .field-label, body.page-user .profile .field-label, h3, h4, h5, h6, pre, form, p, blockquote, th, td {
+body, div, dl, dt, dd, ul, ol, li, h1, h2, .profile label,
+article label, .content-article .field-label, body.node-type-resource article .field-label, body.node-type-organization article .field-label, body.node-type-event article .field-label, body.page-user .profile .field-label, h3, h4, h5, h6, pre, form, p, blockquote, th, td {
   margin: 0;
   padding: 0;
   font-size: 15px;
@@ -660,7 +661,8 @@ aside p {
 }
 
 /* line 15, ../../../../../../../../.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/zurb-foundation-3.2.5/scss/foundation/common/_typography.scss */
-h1, h2, .content-article .field-label, body.node-type-resource article .field-label, body.node-type-organization article .field-label, body.node-type-event article .field-label, body.page-user .profile .field-label, h3, h4, h5, h6 {
+h1, h2, .profile label,
+article label, .content-article .field-label, body.node-type-resource article .field-label, body.node-type-organization article .field-label, body.node-type-event article .field-label, body.page-user .profile .field-label, h3, h4, h5, h6 {
   font-family: "Helvetica Neue", "Helvetica", Arial, sans-serif;
   font-weight: normal;
   font-style: normal;
@@ -671,7 +673,8 @@ h1, h2, .content-article .field-label, body.node-type-resource article .field-la
   margin-top: 15px;
 }
 /* line 24, ../../../../../../../../.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/zurb-foundation-3.2.5/scss/foundation/common/_typography.scss */
-h1 small, h2 small, .content-article .field-label small, body.node-type-resource article .field-label small, body.node-type-organization article .field-label small, body.node-type-event article .field-label small, body.page-user .profile .field-label small, h3 small, h4 small, h5 small, h6 small {
+h1 small, h2 small, .profile label small,
+article label small, .content-article .field-label small, body.node-type-resource article .field-label small, body.node-type-organization article .field-label small, body.node-type-event article .field-label small, body.page-user .profile .field-label small, h3 small, h4 small, h5 small, h6 small {
   font-size: 60%;
   color: #7c746b;
   line-height: 0;
@@ -683,7 +686,8 @@ h1 {
 }
 
 /* line 28, ../../../../../../../../.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/zurb-foundation-3.2.5/scss/foundation/common/_typography.scss */
-h2, .content-article .field-label, body.node-type-resource article .field-label, body.node-type-organization article .field-label, body.node-type-event article .field-label, body.page-user .profile .field-label {
+h2, .profile label,
+article label, .content-article .field-label, body.node-type-resource article .field-label, body.node-type-organization article .field-label, body.node-type-event article .field-label, body.page-user .profile .field-label {
   font-size: 39px;
 }
 
@@ -922,13 +926,15 @@ abbr {
 }
 
   /* line 98, ../../../../../../../../.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/zurb-foundation-3.2.5/scss/foundation/common/_typography.scss */
-  p, h2, .content-article .field-label, body.node-type-resource article .field-label, body.node-type-organization article .field-label, body.node-type-event article .field-label, body.page-user .profile .field-label, h3 {
+  p, h2, .profile label,
+  article label, .content-article .field-label, body.node-type-resource article .field-label, body.node-type-organization article .field-label, body.node-type-event article .field-label, body.page-user .profile .field-label, h3 {
     orphans: 3;
     widows: 3;
   }
 
   /* line 99, ../../../../../../../../.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/zurb-foundation-3.2.5/scss/foundation/common/_typography.scss */
-  h2, .content-article .field-label, body.node-type-resource article .field-label, body.node-type-organization article .field-label, body.node-type-event article .field-label, body.page-user .profile .field-label, h3 {
+  h2, .profile label,
+  article label, .content-article .field-label, body.node-type-resource article .field-label, body.node-type-organization article .field-label, body.node-type-event article .field-label, body.page-user .profile .field-label, h3 {
     page-break-after: avoid;
   }
 
@@ -3846,7 +3852,9 @@ ul.accordion > li > div.title {
   transition: 0.15s background linear;
 }
 /* line 106, ../../../../../../../../.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/zurb-foundation-3.2.5/scss/foundation/components/modules/_ui.scss */
-ul.accordion > li > div.title h1, ul.accordion > li > div.title h2, ul.accordion > li > div.title .content-article .field-label, .content-article ul.accordion > li > div.title .field-label, ul.accordion > li > div.title body.node-type-resource article .field-label, body.node-type-resource article ul.accordion > li > div.title .field-label, ul.accordion > li > div.title body.node-type-organization article .field-label, body.node-type-organization article ul.accordion > li > div.title .field-label, ul.accordion > li > div.title body.node-type-event article .field-label, body.node-type-event article ul.accordion > li > div.title .field-label, ul.accordion > li > div.title body.page-user .profile .field-label, body.page-user .profile ul.accordion > li > div.title .field-label, ul.accordion > li > div.title h3, ul.accordion > li > div.title h4, ul.accordion > li > div.title h5 {
+ul.accordion > li > div.title h1, ul.accordion > li > div.title h2, ul.accordion > li > div.title .profile label, .profile ul.accordion > li > div.title label,
+ul.accordion > li > div.title article label,
+article ul.accordion > li > div.title label, ul.accordion > li > div.title .content-article .field-label, .content-article ul.accordion > li > div.title .field-label, ul.accordion > li > div.title body.node-type-resource article .field-label, body.node-type-resource article ul.accordion > li > div.title .field-label, ul.accordion > li > div.title body.node-type-organization article .field-label, body.node-type-organization article ul.accordion > li > div.title .field-label, ul.accordion > li > div.title body.node-type-event article .field-label, body.node-type-event article ul.accordion > li > div.title .field-label, ul.accordion > li > div.title body.page-user .profile .field-label, body.page-user .profile ul.accordion > li > div.title .field-label, ul.accordion > li > div.title h3, ul.accordion > li > div.title h4, ul.accordion > li > div.title h5 {
   margin: 0;
 }
 /* line 107, ../../../../../../../../.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/zurb-foundation-3.2.5/scss/foundation/components/modules/_ui.scss */
@@ -6254,9 +6262,17 @@ h1#page-title {
   padding: 0;
 }
 
+/* line 59, ../sass/_typography.scss */
+.profile,
+article {
+  /*.field-label,*/
+}
 /* line 63, ../sass/_typography.scss */
-.profile h2, .profile .content-article .field-label, .content-article .profile .field-label, .profile body.node-type-resource article .field-label, body.node-type-resource article .profile .field-label, .profile body.node-type-organization article .field-label, body.node-type-organization article .profile .field-label, .profile body.node-type-event article .field-label, body.node-type-event article .profile .field-label, body.page-user .profile .field-label,
+.profile h2, .profile label, .profile .content-article .field-label, .content-article .profile .field-label, .profile body.node-type-resource article .field-label, body.node-type-resource article .profile .field-label, .profile body.node-type-organization article .field-label, body.node-type-organization article .profile .field-label, .profile body.node-type-event article .field-label, body.node-type-event article .profile .field-label, body.page-user .profile .field-label,
 article h2,
+article .profile label,
+.profile article label,
+article label,
 article .content-article .field-label,
 .content-article article .field-label,
 body.node-type-resource article .field-label,
@@ -6280,23 +6296,25 @@ article h3 {
 article ul {
   padding-left: 40px;
 }
-/* line 83, ../sass/_typography.scss */
-.profile .field-label, .profile label,
-article .field-label,
+/* line 84, ../sass/_typography.scss */
+.profile label,
 article label {
-  color: #f68115;
-  font-size: 1.133em;
+  margin-top: 0;
+  /*
+  color: $secondaryColor;
+  font-size: rem(1.7);
   font-weight: bold;
-  margin-bottom: 1.2rem;
+  margin-bottom: rem(1.2);
+  */
 }
 
-/* line 93, ../sass/_typography.scss */
+/* line 98, ../sass/_typography.scss */
 aside p {
   font-style: inherit;
   font-size: 1.5rem;
 }
 
-/* line 98, ../sass/_typography.scss */
+/* line 103, ../sass/_typography.scss */
 #main section .block-title {
   font-size: 1.133em;
   color: #f68115;
@@ -6309,12 +6327,14 @@ aside p {
 /* -----------------------------------------
    Block typography:
 ----------------------------------------- */
-/* line 135, ../sass/_typography.scss */
-.block h2, .block .content-article .field-label, .content-article .block .field-label, .block body.node-type-resource article .field-label, body.node-type-resource article .block .field-label, .block body.node-type-organization article .field-label, body.node-type-organization article .block .field-label, .block body.node-type-event article .field-label, body.node-type-event article .block .field-label, .block body.page-user .profile .field-label, body.page-user .profile .block .field-label,
+/* line 140, ../sass/_typography.scss */
+.block h2, .block .profile label, .profile .block label,
+.block article label,
+article .block label, .block .content-article .field-label, .content-article .block .field-label, .block body.node-type-resource article .field-label, body.node-type-resource article .block .field-label, .block body.node-type-organization article .field-label, body.node-type-organization article .block .field-label, .block body.node-type-event article .field-label, body.node-type-event article .block .field-label, .block body.page-user .profile .field-label, body.page-user .profile .block .field-label,
 .block h3 {
   margin: 0 0 1rem;
 }
-/* line 139, ../sass/_typography.scss */
+/* line 144, ../sass/_typography.scss */
 .block h3 {
   clear: both;
   color: #2a2724;
@@ -6326,7 +6346,7 @@ aside p {
 /* -----------------------------------------
    Individual fields 
 ----------------------------------------- */
-/* line 153, ../sass/_typography.scss */
+/* line 158, ../sass/_typography.scss */
 .field-name-field-trial-deadline {
   font-size: 1.8rem;
   text-align: center;
@@ -6335,7 +6355,11 @@ aside p {
 /* -----------------------------------------
    UI Elements (pagination, breadcrumbs etc.)
 ----------------------------------------- */
-/* line 170, ../sass/_typography.scss */
+/* line 169, ../sass/_typography.scss */
+.content-article .field-label, body.node-type-resource article .field-label, body.node-type-organization article .field-label, body.node-type-event article .field-label, body.page-user .profile .field-label {
+  margin-top: 0;
+}
+/* line 176, ../sass/_typography.scss */
 .content-article .collapsed legend a, body.node-type-resource article .collapsed legend a, body.node-type-organization article .collapsed legend a, body.node-type-event article .collapsed legend a, body.page-user .profile .collapsed legend a,
 .content-article .collapsible legend a,
 body.node-type-resource article .collapsible legend a,
@@ -6350,7 +6374,7 @@ body.page-user .profile .collapsible legend a {
   text-transform: uppercase;
 }
 
-/* line 182, ../sass/_typography.scss */
+/* line 188, ../sass/_typography.scss */
 .notice {
   color: #f00;
 }
@@ -6358,21 +6382,23 @@ body.page-user .profile .collapsible legend a {
 /* -----------------------------------------
     Views
 ----------------------------------------- */
-/* line 211, ../sass/_typography.scss */
+/* line 217, ../sass/_typography.scss */
 .view a {
   text-decoration: underline;
 }
-/* line 215, ../sass/_typography.scss */
+/* line 221, ../sass/_typography.scss */
 .view .row {
   margin-bottom: 1rem;
   margin-top: 1rem;
 }
 
-/* line 222, ../sass/_typography.scss */
-#block-views-contacts-by-group-block h2.block-title, #block-views-contacts-by-group-block .content-article .block-title.field-label, .content-article #block-views-contacts-by-group-block .block-title.field-label, #block-views-contacts-by-group-block body.node-type-resource article .block-title.field-label, body.node-type-resource article #block-views-contacts-by-group-block .block-title.field-label, #block-views-contacts-by-group-block body.node-type-organization article .block-title.field-label, body.node-type-organization article #block-views-contacts-by-group-block .block-title.field-label, #block-views-contacts-by-group-block body.node-type-event article .block-title.field-label, body.node-type-event article #block-views-contacts-by-group-block .block-title.field-label, #block-views-contacts-by-group-block body.page-user .profile .block-title.field-label, body.page-user .profile #block-views-contacts-by-group-block .block-title.field-label {
+/* line 228, ../sass/_typography.scss */
+#block-views-contacts-by-group-block h2.block-title, #block-views-contacts-by-group-block .profile label.block-title, .profile #block-views-contacts-by-group-block label.block-title,
+#block-views-contacts-by-group-block article label.block-title,
+article #block-views-contacts-by-group-block label.block-title, #block-views-contacts-by-group-block .content-article .block-title.field-label, .content-article #block-views-contacts-by-group-block .block-title.field-label, #block-views-contacts-by-group-block body.node-type-resource article .block-title.field-label, body.node-type-resource article #block-views-contacts-by-group-block .block-title.field-label, #block-views-contacts-by-group-block body.node-type-organization article .block-title.field-label, body.node-type-organization article #block-views-contacts-by-group-block .block-title.field-label, #block-views-contacts-by-group-block body.node-type-event article .block-title.field-label, body.node-type-event article #block-views-contacts-by-group-block .block-title.field-label, #block-views-contacts-by-group-block body.page-user .profile .block-title.field-label, body.page-user .profile #block-views-contacts-by-group-block .block-title.field-label {
   color: black;
 }
-/* line 226, ../sass/_typography.scss */
+/* line 232, ../sass/_typography.scss */
 #block-views-contacts-by-group-block h3 {
   font-size: 1.2rem;
   margin-bottom: 1rem;
@@ -6717,7 +6743,9 @@ nav .foundation-menu {
   }
 }
 /* line 78, ../sass/_orbit.scss */
-.orbit div.orbit-content h2.orbit-title, .orbit div.orbit-content .content-article .orbit-title.field-label, .content-article .orbit div.orbit-content .orbit-title.field-label, .orbit div.orbit-content body.node-type-resource article .orbit-title.field-label, body.node-type-resource article .orbit div.orbit-content .orbit-title.field-label, .orbit div.orbit-content body.node-type-organization article .orbit-title.field-label, body.node-type-organization article .orbit div.orbit-content .orbit-title.field-label, .orbit div.orbit-content body.node-type-event article .orbit-title.field-label, body.node-type-event article .orbit div.orbit-content .orbit-title.field-label, .orbit div.orbit-content body.page-user .profile .orbit-title.field-label, body.page-user .profile .orbit div.orbit-content .orbit-title.field-label {
+.orbit div.orbit-content h2.orbit-title, .orbit div.orbit-content .profile label.orbit-title, .profile .orbit div.orbit-content label.orbit-title,
+.orbit div.orbit-content article label.orbit-title,
+article .orbit div.orbit-content label.orbit-title, .orbit div.orbit-content .content-article .orbit-title.field-label, .content-article .orbit div.orbit-content .orbit-title.field-label, .orbit div.orbit-content body.node-type-resource article .orbit-title.field-label, body.node-type-resource article .orbit div.orbit-content .orbit-title.field-label, .orbit div.orbit-content body.node-type-organization article .orbit-title.field-label, body.node-type-organization article .orbit div.orbit-content .orbit-title.field-label, .orbit div.orbit-content body.node-type-event article .orbit-title.field-label, body.node-type-event article .orbit div.orbit-content .orbit-title.field-label, .orbit div.orbit-content body.page-user .profile .orbit-title.field-label, body.page-user .profile .orbit div.orbit-content .orbit-title.field-label {
   margin: 0;
 }
 /* line 80, ../sass/_orbit.scss */
@@ -7244,11 +7272,16 @@ body.node-type-resource #return-res a {
 /* line 217, ../sass/_page.scss */
 body.page-user .profile .row-container {
   border: 1px solid #dddddd;
+  padding: 2rem 0;
 }
-/* line 219, ../sass/_page.scss */
+/* line 220, ../sass/_page.scss */
 body.page-user .profile .row-container .row {
   margin: 0 auto;
   width: 90rem;
+}
+/* line 225, ../sass/_page.scss */
+body.page-user .profile .row-container .one .field-item {
+  border-bottom-style: none;
 }
 
 /* -----------------------------------------
@@ -7257,7 +7290,7 @@ body.page-user .profile .row-container .row {
 /* -----------------------------------------
    Views 
 ----------------------------------------- */
-/* line 235, ../sass/_page.scss */
+/* line 241, ../sass/_page.scss */
 #block-views-contacts-by-group-block {
   background: #f7f7f7;
   border-bottom: 0.5rem solid #efefef;
@@ -7272,7 +7305,7 @@ body.page-user .profile .row-container .row {
 /* -----------------------------------------
    UI Elements
 ----------------------------------------- */
-/* line 248, ../sass/_page.scss */
+/* line 254, ../sass/_page.scss */
 .button:hover, #content > article .collapsed legend a:hover,
 #content > article .collapsible legend a:hover,
 .content-article .collapsed legend a:hover,
@@ -7310,25 +7343,25 @@ body.page-user .profile .collapsible legend a:focus {
   background: #877f77;
 }
 
-/* line 253, ../sass/_page.scss */
+/* line 259, ../sass/_page.scss */
 #breadcrumb {
   height: 3rem;
   padding-top: 0.7rem;
   padding-left: 3rem;
 }
 
-/* line 259, ../sass/_page.scss */
+/* line 265, ../sass/_page.scss */
 ul.pagination {
   text-align: center;
 }
-/* line 261, ../sass/_page.scss */
+/* line 267, ../sass/_page.scss */
 ul.pagination li {
   float: none;
   display: inline-block;
 }
 
 /* Tab styling */
-/* line 269, ../sass/_page.scss */
+/* line 275, ../sass/_page.scss */
 div.drupal_tabs {
   background: #dddddd;
   overflow: auto;
@@ -7338,7 +7371,7 @@ div.drupal_tabs {
   -webkit-border-radius: 6px;
 }
 
-/* line 275, ../sass/_page.scss */
+/* line 281, ../sass/_page.scss */
 dl.tabs.primary,
 dl.tabs.secondary {
   border-style: none;
@@ -7346,19 +7379,19 @@ dl.tabs.secondary {
   padding: 0;
 }
 
-/* line 279, ../sass/_page.scss */
+/* line 285, ../sass/_page.scss */
 dl.tabs.primary {
   float: left;
 }
 
-/* line 283, ../sass/_page.scss */
+/* line 289, ../sass/_page.scss */
 dl.tabs.primary dd {
   display: inline;
   margin: 0;
   padding: 0;
 }
 
-/* line 287, ../sass/_page.scss */
+/* line 293, ../sass/_page.scss */
 dl.tabs.primary dd a {
   background: white;
   border-style: none;
@@ -7374,20 +7407,20 @@ dl.tabs.primary dd a {
   text-decoration: none;
 }
 
-/* line 294, ../sass/_page.scss */
+/* line 300, ../sass/_page.scss */
 dl.tabs.primary dd a:hover,
 dl.tabs.primary dd a:active {
   background: #877f77;
   color: white;
 }
 
-/* line 299, ../sass/_page.scss */
+/* line 305, ../sass/_page.scss */
 dl.tabs.primary dd.active a {
   background: #877f77;
   color: white;
 }
 
-/* line 303, ../sass/_page.scss */
+/* line 309, ../sass/_page.scss */
 dl.tabs.secondary {
   border-top: 1px solid white;
   clear: both;
@@ -7398,7 +7431,7 @@ dl.tabs.secondary {
   top: 4px;
 }
 
-/* line 307, ../sass/_page.scss */
+/* line 313, ../sass/_page.scss */
 dl.tabs.secondary dd {
   border-style: none;
   display: block;
@@ -7407,7 +7440,7 @@ dl.tabs.secondary dd {
   padding: 6px 0;
 }
 
-/* line 311, ../sass/_page.scss */
+/* line 317, ../sass/_page.scss */
 dl.tabs.secondary dd a {
   border-bottom-style: none;
   border-right: 1px solid white;
@@ -7510,7 +7543,9 @@ dl.tabs.secondary dd a {
   list-style: none;
 }
 /* line 56, ../sass/_block.scss */
-#block-menu-menu-authenticated h2, #block-menu-menu-authenticated .content-article .field-label, .content-article #block-menu-menu-authenticated .field-label, #block-menu-menu-authenticated body.node-type-resource article .field-label, body.node-type-resource article #block-menu-menu-authenticated .field-label, #block-menu-menu-authenticated body.node-type-organization article .field-label, body.node-type-organization article #block-menu-menu-authenticated .field-label, #block-menu-menu-authenticated body.node-type-event article .field-label, body.node-type-event article #block-menu-menu-authenticated .field-label, #block-menu-menu-authenticated body.page-user .profile .field-label, body.page-user .profile #block-menu-menu-authenticated .field-label {
+#block-menu-menu-authenticated h2, #block-menu-menu-authenticated .profile label, .profile #block-menu-menu-authenticated label,
+#block-menu-menu-authenticated article label,
+article #block-menu-menu-authenticated label, #block-menu-menu-authenticated .content-article .field-label, .content-article #block-menu-menu-authenticated .field-label, #block-menu-menu-authenticated body.node-type-resource article .field-label, body.node-type-resource article #block-menu-menu-authenticated .field-label, #block-menu-menu-authenticated body.node-type-organization article .field-label, body.node-type-organization article #block-menu-menu-authenticated .field-label, #block-menu-menu-authenticated body.node-type-event article .field-label, body.node-type-event article #block-menu-menu-authenticated .field-label, #block-menu-menu-authenticated body.page-user .profile .field-label, body.page-user .profile #block-menu-menu-authenticated .field-label {
   background: url("../images/resources-gear.png") no-repeat scroll top left transparent;
   color: #8C8B89;
   cursor: pointer;
@@ -7556,7 +7591,9 @@ dl.tabs.secondary dd a {
 
 /* Front page access block */
 /* line 99, ../sass/_block.scss */
-.front .node .entry-content h2, .front .node .entry-content .content-article .field-label, .content-article .front .node .entry-content .field-label, .front .node .entry-content body.node-type-resource article .field-label, body.node-type-resource article .front .node .entry-content .field-label, .front .node .entry-content body.node-type-organization article .field-label, body.node-type-organization article .front .node .entry-content .field-label, .front .node .entry-content body.node-type-event article .field-label, body.node-type-event article .front .node .entry-content .field-label, .front .node .entry-content body.page-user .profile .field-label, body.page-user .profile .front .node .entry-content .field-label {
+.front .node .entry-content h2, .front .node .entry-content .profile label, .profile .front .node .entry-content label,
+.front .node .entry-content article label,
+article .front .node .entry-content label, .front .node .entry-content .content-article .field-label, .content-article .front .node .entry-content .field-label, .front .node .entry-content body.node-type-resource article .field-label, body.node-type-resource article .front .node .entry-content .field-label, .front .node .entry-content body.node-type-organization article .field-label, body.node-type-organization article .front .node .entry-content .field-label, .front .node .entry-content body.node-type-event article .field-label, body.node-type-event article .front .node .entry-content .field-label, .front .node .entry-content body.page-user .profile .field-label, body.page-user .profile .front .node .entry-content .field-label {
   color: #18729d;
   font-size: 1.333em;
   /* 20px relative to 15px */
@@ -7565,7 +7602,9 @@ dl.tabs.secondary dd a {
 
 /* Do I have Access Block */
 /* line 110, ../sass/_block.scss */
-.front #block-menu-block-1 h2, .front #block-menu-block-1 .content-article .field-label, .content-article .front #block-menu-block-1 .field-label, .front #block-menu-block-1 body.node-type-resource article .field-label, body.node-type-resource article .front #block-menu-block-1 .field-label, .front #block-menu-block-1 body.node-type-organization article .field-label, body.node-type-organization article .front #block-menu-block-1 .field-label, .front #block-menu-block-1 body.node-type-event article .field-label, body.node-type-event article .front #block-menu-block-1 .field-label, .front #block-menu-block-1 body.page-user .profile .field-label, body.page-user .profile .front #block-menu-block-1 .field-label {
+.front #block-menu-block-1 h2, .front #block-menu-block-1 .profile label, .profile .front #block-menu-block-1 label,
+.front #block-menu-block-1 article label,
+article .front #block-menu-block-1 label, .front #block-menu-block-1 .content-article .field-label, .content-article .front #block-menu-block-1 .field-label, .front #block-menu-block-1 body.node-type-resource article .field-label, body.node-type-resource article .front #block-menu-block-1 .field-label, .front #block-menu-block-1 body.node-type-organization article .field-label, body.node-type-organization article .front #block-menu-block-1 .field-label, .front #block-menu-block-1 body.node-type-event article .field-label, body.node-type-event article .front #block-menu-block-1 .field-label, .front #block-menu-block-1 body.page-user .profile .field-label, body.page-user .profile .front #block-menu-block-1 .field-label {
   display: none;
 }
 
@@ -7861,7 +7900,9 @@ dl.tabs.secondary dd a {
 }
 
 /* line 380, ../sass/_block.scss */
-#block-user-login h2, #block-user-login .content-article .field-label, .content-article #block-user-login .field-label, #block-user-login body.node-type-resource article .field-label, body.node-type-resource article #block-user-login .field-label, #block-user-login body.node-type-organization article .field-label, body.node-type-organization article #block-user-login .field-label, #block-user-login body.node-type-event article .field-label, body.node-type-event article #block-user-login .field-label, #block-user-login body.page-user .profile .field-label, body.page-user .profile #block-user-login .field-label {
+#block-user-login h2, #block-user-login .profile label, .profile #block-user-login label,
+#block-user-login article label,
+article #block-user-login label, #block-user-login .content-article .field-label, .content-article #block-user-login .field-label, #block-user-login body.node-type-resource article .field-label, body.node-type-resource article #block-user-login .field-label, #block-user-login body.node-type-organization article .field-label, body.node-type-organization article #block-user-login .field-label, #block-user-login body.node-type-event article .field-label, body.node-type-event article #block-user-login .field-label, #block-user-login body.page-user .profile .field-label, body.page-user .profile #block-user-login .field-label {
   color: #807b77;
   font-family: "minion-pro-1","minion-pro-2", Georgia, 'Times New Roman', serif;
   margin-top: 20px;
@@ -8613,7 +8654,8 @@ label.expand-btn {
 }
 
 /* line 383, ../sass/_views.scss */
-h2.pane-title, .content-article .pane-title.field-label, body.node-type-resource article .pane-title.field-label, body.node-type-organization article .pane-title.field-label, body.node-type-event article .pane-title.field-label, body.page-user .profile .pane-title.field-label {
+h2.pane-title, .profile label.pane-title,
+article label.pane-title, .content-article .pane-title.field-label, body.node-type-resource article .pane-title.field-label, body.node-type-organization article .pane-title.field-label, body.node-type-event article .pane-title.field-label, body.page-user .profile .pane-title.field-label {
   color: #2a2724;
   font-size: 1.000em;
   /* 15px relative to 15px */
@@ -8635,7 +8677,9 @@ h2.pane-title, .content-article .pane-title.field-label, body.node-type-resource
 }
 
 /* line 402, ../sass/_views.scss */
-#dashboard .pane-profile h2, #dashboard .pane-profile .content-article .field-label, .content-article #dashboard .pane-profile .field-label, #dashboard .pane-profile body.node-type-resource article .field-label, body.node-type-resource article #dashboard .pane-profile .field-label, #dashboard .pane-profile body.node-type-organization article .field-label, body.node-type-organization article #dashboard .pane-profile .field-label, #dashboard .pane-profile body.node-type-event article .field-label, body.node-type-event article #dashboard .pane-profile .field-label, #dashboard .pane-profile body.page-user .profile .field-label, body.page-user .profile #dashboard .pane-profile .field-label {
+#dashboard .pane-profile h2, #dashboard .pane-profile .profile label, .profile #dashboard .pane-profile label,
+#dashboard .pane-profile article label,
+article #dashboard .pane-profile label, #dashboard .pane-profile .content-article .field-label, .content-article #dashboard .pane-profile .field-label, #dashboard .pane-profile body.node-type-resource article .field-label, body.node-type-resource article #dashboard .pane-profile .field-label, #dashboard .pane-profile body.node-type-organization article .field-label, body.node-type-organization article #dashboard .pane-profile .field-label, #dashboard .pane-profile body.node-type-event article .field-label, body.node-type-event article #dashboard .pane-profile .field-label, #dashboard .pane-profile body.page-user .profile .field-label, body.page-user .profile #dashboard .pane-profile .field-label {
   display: none;
 }
 
@@ -8707,7 +8751,9 @@ h2.pane-title, .content-article .pane-title.field-label, body.node-type-resource
 }
 
 /* line 466, ../sass/_views.scss */
-#dashboard .pane-signup-current-signups h2, #dashboard .pane-signup-current-signups .content-article .field-label, .content-article #dashboard .pane-signup-current-signups .field-label, #dashboard .pane-signup-current-signups body.node-type-resource article .field-label, body.node-type-resource article #dashboard .pane-signup-current-signups .field-label, #dashboard .pane-signup-current-signups body.node-type-organization article .field-label, body.node-type-organization article #dashboard .pane-signup-current-signups .field-label, #dashboard .pane-signup-current-signups body.node-type-event article .field-label, body.node-type-event article #dashboard .pane-signup-current-signups .field-label, #dashboard .pane-signup-current-signups body.page-user .profile .field-label, body.page-user .profile #dashboard .pane-signup-current-signups .field-label {
+#dashboard .pane-signup-current-signups h2, #dashboard .pane-signup-current-signups .profile label, .profile #dashboard .pane-signup-current-signups label,
+#dashboard .pane-signup-current-signups article label,
+article #dashboard .pane-signup-current-signups label, #dashboard .pane-signup-current-signups .content-article .field-label, .content-article #dashboard .pane-signup-current-signups .field-label, #dashboard .pane-signup-current-signups body.node-type-resource article .field-label, body.node-type-resource article #dashboard .pane-signup-current-signups .field-label, #dashboard .pane-signup-current-signups body.node-type-organization article .field-label, body.node-type-organization article #dashboard .pane-signup-current-signups .field-label, #dashboard .pane-signup-current-signups body.node-type-event article .field-label, body.node-type-event article #dashboard .pane-signup-current-signups .field-label, #dashboard .pane-signup-current-signups body.page-user .profile .field-label, body.page-user .profile #dashboard .pane-signup-current-signups .field-label {
   color: #fff;
   font-size: 1.000em;
   /* 15px relative to 15px */
@@ -8749,7 +8795,9 @@ h2.pane-title, .content-article .pane-title.field-label, body.node-type-resource
 }
 
 /* line 501, ../sass/_views.scss */
-#dashboard .pane-colleagues h2, #dashboard .pane-colleagues .content-article .field-label, .content-article #dashboard .pane-colleagues .field-label, #dashboard .pane-colleagues body.node-type-resource article .field-label, body.node-type-resource article #dashboard .pane-colleagues .field-label, #dashboard .pane-colleagues body.node-type-organization article .field-label, body.node-type-organization article #dashboard .pane-colleagues .field-label, #dashboard .pane-colleagues body.node-type-event article .field-label, body.node-type-event article #dashboard .pane-colleagues .field-label, #dashboard .pane-colleagues body.page-user .profile .field-label, body.page-user .profile #dashboard .pane-colleagues .field-label {
+#dashboard .pane-colleagues h2, #dashboard .pane-colleagues .profile label, .profile #dashboard .pane-colleagues label,
+#dashboard .pane-colleagues article label,
+article #dashboard .pane-colleagues label, #dashboard .pane-colleagues .content-article .field-label, .content-article #dashboard .pane-colleagues .field-label, #dashboard .pane-colleagues body.node-type-resource article .field-label, body.node-type-resource article #dashboard .pane-colleagues .field-label, #dashboard .pane-colleagues body.node-type-organization article .field-label, body.node-type-organization article #dashboard .pane-colleagues .field-label, #dashboard .pane-colleagues body.node-type-event article .field-label, body.node-type-event article #dashboard .pane-colleagues .field-label, #dashboard .pane-colleagues body.page-user .profile .field-label, body.page-user .profile #dashboard .pane-colleagues .field-label {
   margin: 20px 0 3px;
 }
 
@@ -8783,7 +8831,9 @@ h2.pane-title, .content-article .pane-title.field-label, body.node-type-resource
 /* Dashboard - Center Column */
 /* My Organization Resources */
 /* line 530, ../sass/_views.scss */
-#dashboard .pane-resources h2, #dashboard .pane-resources .content-article .field-label, .content-article #dashboard .pane-resources .field-label, #dashboard .pane-resources body.node-type-resource article .field-label, body.node-type-resource article #dashboard .pane-resources .field-label, #dashboard .pane-resources body.node-type-organization article .field-label, body.node-type-organization article #dashboard .pane-resources .field-label, #dashboard .pane-resources body.node-type-event article .field-label, body.node-type-event article #dashboard .pane-resources .field-label, #dashboard .pane-resources body.page-user .profile .field-label, body.page-user .profile #dashboard .pane-resources .field-label {
+#dashboard .pane-resources h2, #dashboard .pane-resources .profile label, .profile #dashboard .pane-resources label,
+#dashboard .pane-resources article label,
+article #dashboard .pane-resources label, #dashboard .pane-resources .content-article .field-label, .content-article #dashboard .pane-resources .field-label, #dashboard .pane-resources body.node-type-resource article .field-label, body.node-type-resource article #dashboard .pane-resources .field-label, #dashboard .pane-resources body.node-type-organization article .field-label, body.node-type-organization article #dashboard .pane-resources .field-label, #dashboard .pane-resources body.node-type-event article .field-label, body.node-type-event article #dashboard .pane-resources .field-label, #dashboard .pane-resources body.page-user .profile .field-label, body.page-user .profile #dashboard .pane-resources .field-label {
   background: url("../images/dashed-border.png") repeat-x 0 bottom;
   color: #18729d;
   padding-bottom: 10px;
@@ -8841,7 +8891,9 @@ h2.pane-title, .content-article .pane-title.field-label, body.node-type-resource
 }
 
 /* line 583, ../sass/_views.scss */
-#dashboard .pane-og-my h2, #dashboard .pane-og-my .content-article .field-label, .content-article #dashboard .pane-og-my .field-label, #dashboard .pane-og-my body.node-type-resource article .field-label, body.node-type-resource article #dashboard .pane-og-my .field-label, #dashboard .pane-og-my body.node-type-organization article .field-label, body.node-type-organization article #dashboard .pane-og-my .field-label, #dashboard .pane-og-my body.node-type-event article .field-label, body.node-type-event article #dashboard .pane-og-my .field-label, #dashboard .pane-og-my body.page-user .profile .field-label, body.page-user .profile #dashboard .pane-og-my .field-label {
+#dashboard .pane-og-my h2, #dashboard .pane-og-my .profile label, .profile #dashboard .pane-og-my label,
+#dashboard .pane-og-my article label,
+article #dashboard .pane-og-my label, #dashboard .pane-og-my .content-article .field-label, .content-article #dashboard .pane-og-my .field-label, #dashboard .pane-og-my body.node-type-resource article .field-label, body.node-type-resource article #dashboard .pane-og-my .field-label, #dashboard .pane-og-my body.node-type-organization article .field-label, body.node-type-organization article #dashboard .pane-og-my .field-label, #dashboard .pane-og-my body.node-type-event article .field-label, body.node-type-event article #dashboard .pane-og-my .field-label, #dashboard .pane-og-my body.page-user .profile .field-label, body.page-user .profile #dashboard .pane-og-my .field-label {
   margin: 20px 0 4px 0;
   padding: 0 20px;
 }
@@ -8920,8 +8972,14 @@ h2.pane-title, .content-article .pane-title.field-label, body.node-type-resource
 }
 
 /* line 658, ../sass/_views.scss */
-#dashboard .pane-og-which-gorups h2, #dashboard .pane-og-which-gorups .content-article .field-label, .content-article #dashboard .pane-og-which-gorups .field-label, #dashboard .pane-og-which-gorups body.node-type-resource article .field-label, body.node-type-resource article #dashboard .pane-og-which-gorups .field-label, #dashboard .pane-og-which-gorups body.node-type-organization article .field-label, body.node-type-organization article #dashboard .pane-og-which-gorups .field-label, #dashboard .pane-og-which-gorups body.node-type-event article .field-label, body.node-type-event article #dashboard .pane-og-which-gorups .field-label, #dashboard .pane-og-which-gorups body.page-user .profile .field-label, body.page-user .profile #dashboard .pane-og-which-gorups .field-label,
+#dashboard .pane-og-which-gorups h2, #dashboard .pane-og-which-gorups .profile label, .profile #dashboard .pane-og-which-gorups label,
+#dashboard .pane-og-which-gorups article label,
+article #dashboard .pane-og-which-gorups label, #dashboard .pane-og-which-gorups .content-article .field-label, .content-article #dashboard .pane-og-which-gorups .field-label, #dashboard .pane-og-which-gorups body.node-type-resource article .field-label, body.node-type-resource article #dashboard .pane-og-which-gorups .field-label, #dashboard .pane-og-which-gorups body.node-type-organization article .field-label, body.node-type-organization article #dashboard .pane-og-which-gorups .field-label, #dashboard .pane-og-which-gorups body.node-type-event article .field-label, body.node-type-event article #dashboard .pane-og-which-gorups .field-label, #dashboard .pane-og-which-gorups body.page-user .profile .field-label, body.page-user .profile #dashboard .pane-og-which-gorups .field-label,
 #og-page h2.pane-title,
+#og-page .profile label.pane-title,
+.profile #og-page label.pane-title,
+#og-page article label.pane-title,
+article #og-page label.pane-title,
 #og-page .content-article .pane-title.field-label,
 .content-article #og-page .pane-title.field-label,
 #og-page body.node-type-resource article .pane-title.field-label,

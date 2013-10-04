@@ -40,7 +40,7 @@
   <?php $contact = $user_profile['profile_contact']['view']['profile2']; ?>
   <?php foreach ($contact as $contact_item): ?>
   <?php
-    dpm($contact_item);
+    $organization = $contact_item['field_organization_ref']['#items'][0]['node'];
     hide($contact_item['field_contact_photo']);
     hide($contact_item['field_contact_first_name']);
     hide($contact_item['field_contact_last_name']);
@@ -54,10 +54,19 @@
         ?>
       </div>
       <div class="columns eleven">
+        <div class="field-label"><?php print t('Name'); ?>:</div>
+        <div class="field-item field field-name-field-contact-last-name field-type-text field-label-above even">
+          <?php print $contact_item['field_contact_first_name']['#items'][0]['safe_value']; ?>
+          <?php print $contact_item['field_contact_last_name']['#items'][0]['safe_value']; ?>
+        </div>
         <?php print render($contact_item); ?>
+        <?php
+          // Manually render location field here--because Drupal sucks?
+        ?>
       </div>
     </div>
   </div>
   <?php endforeach;?>
   <?php print render($user_profile); ?>
 </div>
+

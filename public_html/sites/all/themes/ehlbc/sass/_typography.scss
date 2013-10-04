@@ -80,11 +80,16 @@ article {
     padding-left: 40px;
   }
 
-  .field-label, label{
+  /*.field-label,*/
+  label {
+    @extend h2;
+    margin-top: 0;
+    /*
     color: $secondaryColor;
-    font-size: 1.133em;
+    font-size: rem(1.7);
     font-weight: bold;
     margin-bottom: rem(1.2);
+    */
   }
  
 }
@@ -163,6 +168,7 @@ nav {
 .content-article {
   .field-label {
     @extend h2;
+    margin-top: 0;
   }
   .collapsed,
   .collapsible {
