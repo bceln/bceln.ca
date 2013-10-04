@@ -7452,13 +7452,8 @@ dl.tabs.secondary dd a {
 }
 
 /* -----------------------------------------
-   UI Elements
+   Forms
 ----------------------------------------- */
-/* line 326, ../sass/_page.scss */
-form.right {
-  float: none;
-}
-
 /********************************************
 
   Settings.scss
