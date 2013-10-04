@@ -208,8 +208,19 @@ body.node-type-organization article{
   @extend .content-article;
 }
 
-body.node-type-event article{
+body.node-type-event article {
   @extend .content-article;
+}
+
+body.page-user .profile {
+  @extend .content-article;
+  .row-container {
+    border: 1px solid $gray_6;
+    .row {
+      margin: 0 auto;
+      width: rem(90);
+    }
+  }
 }
 
 /* -----------------------------------------

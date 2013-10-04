@@ -630,7 +630,7 @@ that IE7/8 do not support :nth-child.
 
 /* Base Type Styles Using Modular Scale ---------------------- */
 /* line 3, ../../../../../../../../.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/zurb-foundation-3.2.5/scss/foundation/common/_typography.scss */
-body, div, dl, dt, dd, ul, ol, li, h1, h2, .content-article .field-label, body.node-type-resource article .field-label, body.node-type-organization article .field-label, body.node-type-event article .field-label, h3, h4, h5, h6, pre, form, p, blockquote, th, td {
+body, div, dl, dt, dd, ul, ol, li, h1, h2, .content-article .field-label, body.node-type-resource article .field-label, body.node-type-organization article .field-label, body.node-type-event article .field-label, body.page-user .profile .field-label, h3, h4, h5, h6, pre, form, p, blockquote, th, td {
   margin: 0;
   padding: 0;
   font-size: 15px;
@@ -660,7 +660,7 @@ aside p {
 }
 
 /* line 15, ../../../../../../../../.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/zurb-foundation-3.2.5/scss/foundation/common/_typography.scss */
-h1, h2, .content-article .field-label, body.node-type-resource article .field-label, body.node-type-organization article .field-label, body.node-type-event article .field-label, h3, h4, h5, h6 {
+h1, h2, .content-article .field-label, body.node-type-resource article .field-label, body.node-type-organization article .field-label, body.node-type-event article .field-label, body.page-user .profile .field-label, h3, h4, h5, h6 {
   font-family: "Helvetica Neue", "Helvetica", Arial, sans-serif;
   font-weight: normal;
   font-style: normal;
@@ -671,7 +671,7 @@ h1, h2, .content-article .field-label, body.node-type-resource article .field-la
   margin-top: 15px;
 }
 /* line 24, ../../../../../../../../.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/zurb-foundation-3.2.5/scss/foundation/common/_typography.scss */
-h1 small, h2 small, .content-article .field-label small, body.node-type-resource article .field-label small, body.node-type-organization article .field-label small, body.node-type-event article .field-label small, h3 small, h4 small, h5 small, h6 small {
+h1 small, h2 small, .content-article .field-label small, body.node-type-resource article .field-label small, body.node-type-organization article .field-label small, body.node-type-event article .field-label small, body.page-user .profile .field-label small, h3 small, h4 small, h5 small, h6 small {
   font-size: 60%;
   color: #7c746b;
   line-height: 0;
@@ -683,7 +683,7 @@ h1 {
 }
 
 /* line 28, ../../../../../../../../.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/zurb-foundation-3.2.5/scss/foundation/common/_typography.scss */
-h2, .content-article .field-label, body.node-type-resource article .field-label, body.node-type-organization article .field-label, body.node-type-event article .field-label {
+h2, .content-article .field-label, body.node-type-resource article .field-label, body.node-type-organization article .field-label, body.node-type-event article .field-label, body.page-user .profile .field-label {
   font-size: 39px;
 }
 
@@ -922,13 +922,13 @@ abbr {
 }
 
   /* line 98, ../../../../../../../../.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/zurb-foundation-3.2.5/scss/foundation/common/_typography.scss */
-  p, h2, .content-article .field-label, body.node-type-resource article .field-label, body.node-type-organization article .field-label, body.node-type-event article .field-label, h3 {
+  p, h2, .content-article .field-label, body.node-type-resource article .field-label, body.node-type-organization article .field-label, body.node-type-event article .field-label, body.page-user .profile .field-label, h3 {
     orphans: 3;
     widows: 3;
   }
 
   /* line 99, ../../../../../../../../.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/zurb-foundation-3.2.5/scss/foundation/common/_typography.scss */
-  h2, .content-article .field-label, body.node-type-resource article .field-label, body.node-type-organization article .field-label, body.node-type-event article .field-label, h3 {
+  h2, .content-article .field-label, body.node-type-resource article .field-label, body.node-type-organization article .field-label, body.node-type-event article .field-label, body.page-user .profile .field-label, h3 {
     page-break-after: avoid;
   }
 
@@ -1017,19 +1017,23 @@ a.button.prefix, #content > article .collapsed legend a.prefix,
 body.node-type-resource article .collapsed legend a.prefix,
 body.node-type-organization article .collapsed legend a.prefix,
 body.node-type-event article .collapsed legend a.prefix,
+body.page-user .profile .collapsed legend a.prefix,
 .content-article .collapsible legend a.prefix,
 body.node-type-resource article .collapsible legend a.prefix,
 body.node-type-organization article .collapsible legend a.prefix,
-body.node-type-event article .collapsible legend a.prefix, a.button.postfix, #content > article .collapsed legend a.postfix,
+body.node-type-event article .collapsible legend a.prefix,
+body.page-user .profile .collapsible legend a.prefix, a.button.postfix, #content > article .collapsed legend a.postfix,
 #content > article .collapsible legend a.postfix,
 .content-article .collapsed legend a.postfix,
 body.node-type-resource article .collapsed legend a.postfix,
 body.node-type-organization article .collapsed legend a.postfix,
 body.node-type-event article .collapsed legend a.postfix,
+body.page-user .profile .collapsed legend a.postfix,
 .content-article .collapsible legend a.postfix,
 body.node-type-resource article .collapsible legend a.postfix,
 body.node-type-organization article .collapsible legend a.postfix,
-body.node-type-event article .collapsible legend a.postfix {
+body.node-type-event article .collapsible legend a.postfix,
+body.page-user .profile .collapsible legend a.postfix {
   padding-left: 0;
   padding-right: 0;
   text-align: center;
@@ -1419,10 +1423,12 @@ form.custom .custom.disabled {
 body.node-type-resource article .collapsed legend a,
 body.node-type-organization article .collapsed legend a,
 body.node-type-event article .collapsed legend a,
+body.page-user .profile .collapsed legend a,
 .content-article .collapsible legend a,
 body.node-type-resource article .collapsible legend a,
 body.node-type-organization article .collapsible legend a,
-body.node-type-event article .collapsible legend a {
+body.node-type-event article .collapsible legend a,
+body.page-user .profile .collapsible legend a {
   width: auto;
   background: #18729d;
   border: 1px solid #0e425b;
@@ -1459,19 +1465,23 @@ body.node-type-event article .collapsible legend a {
 body.node-type-resource article .collapsed legend a:hover,
 body.node-type-organization article .collapsed legend a:hover,
 body.node-type-event article .collapsed legend a:hover,
+body.page-user .profile .collapsed legend a:hover,
 .content-article .collapsible legend a:hover,
 body.node-type-resource article .collapsible legend a:hover,
 body.node-type-organization article .collapsible legend a:hover,
-body.node-type-event article .collapsible legend a:hover, .button:focus, #content > article .collapsed legend a:focus,
+body.node-type-event article .collapsible legend a:hover,
+body.page-user .profile .collapsible legend a:hover, .button:focus, #content > article .collapsed legend a:focus,
 #content > article .collapsible legend a:focus,
 .content-article .collapsed legend a:focus,
 body.node-type-resource article .collapsed legend a:focus,
 body.node-type-organization article .collapsed legend a:focus,
 body.node-type-event article .collapsed legend a:focus,
+body.page-user .profile .collapsed legend a:focus,
 .content-article .collapsible legend a:focus,
 body.node-type-resource article .collapsible legend a:focus,
 body.node-type-organization article .collapsible legend a:focus,
-body.node-type-event article .collapsible legend a:focus {
+body.node-type-event article .collapsible legend a:focus,
+body.page-user .profile .collapsible legend a:focus {
   color: white;
   background-color: #115271;
 }
@@ -1482,10 +1492,12 @@ body.node-type-event article .collapsible legend a:focus {
 body.node-type-resource article .collapsed legend a:active,
 body.node-type-organization article .collapsed legend a:active,
 body.node-type-event article .collapsed legend a:active,
+body.page-user .profile .collapsed legend a:active,
 .content-article .collapsible legend a:active,
 body.node-type-resource article .collapsible legend a:active,
 body.node-type-organization article .collapsible legend a:active,
-body.node-type-event article .collapsible legend a:active {
+body.node-type-event article .collapsible legend a:active,
+body.page-user .profile .collapsible legend a:active {
   -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2) inset;
   -moz-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2) inset;
   box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2) inset;
@@ -1497,10 +1509,12 @@ body.node-type-event article .collapsible legend a:active {
 body.node-type-resource article .collapsed legend a.large,
 body.node-type-organization article .collapsed legend a.large,
 body.node-type-event article .collapsed legend a.large,
+body.page-user .profile .collapsed legend a.large,
 .content-article .collapsible legend a.large,
 body.node-type-resource article .collapsible legend a.large,
 body.node-type-organization article .collapsible legend a.large,
-body.node-type-event article .collapsible legend a.large {
+body.node-type-event article .collapsible legend a.large,
+body.page-user .profile .collapsible legend a.large {
   font-size: 17px;
   padding: 15px 30px 16px;
 }
@@ -1511,10 +1525,12 @@ body.node-type-event article .collapsible legend a.large {
 body.node-type-resource article .collapsed legend a.medium,
 body.node-type-organization article .collapsed legend a.medium,
 body.node-type-event article .collapsed legend a.medium,
+body.page-user .profile .collapsed legend a.medium,
 .content-article .collapsible legend a.medium,
 body.node-type-resource article .collapsible legend a.medium,
 body.node-type-organization article .collapsible legend a.medium,
-body.node-type-event article .collapsible legend a.medium {
+body.node-type-event article .collapsible legend a.medium,
+body.page-user .profile .collapsible legend a.medium {
   font-size: 15px;
 }
 /* line 12, ../../../../../../../../.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/zurb-foundation-3.2.5/scss/foundation/components/modules/_buttons.scss */
@@ -1524,10 +1540,12 @@ body.node-type-event article .collapsible legend a.medium {
 body.node-type-resource article .collapsed legend a.small,
 body.node-type-organization article .collapsed legend a.small,
 body.node-type-event article .collapsed legend a.small,
+body.page-user .profile .collapsed legend a.small,
 .content-article .collapsible legend a.small,
 body.node-type-resource article .collapsible legend a.small,
 body.node-type-organization article .collapsible legend a.small,
-body.node-type-event article .collapsible legend a.small {
+body.node-type-event article .collapsible legend a.small,
+body.page-user .profile .collapsible legend a.small {
   font-size: 12px;
   padding: 7px 14px 8px;
 }
@@ -1538,10 +1556,12 @@ body.node-type-event article .collapsible legend a.small {
 body.node-type-resource article .collapsed legend a.tiny,
 body.node-type-organization article .collapsed legend a.tiny,
 body.node-type-event article .collapsed legend a.tiny,
+body.page-user .profile .collapsed legend a.tiny,
 .content-article .collapsible legend a.tiny,
 body.node-type-resource article .collapsible legend a.tiny,
 body.node-type-organization article .collapsible legend a.tiny,
-body.node-type-event article .collapsible legend a.tiny {
+body.node-type-event article .collapsible legend a.tiny,
+body.page-user .profile .collapsible legend a.tiny {
   font-size: 11px;
   padding: 5px 10px 6px;
 }
@@ -1552,10 +1572,12 @@ body.node-type-event article .collapsible legend a.tiny {
 body.node-type-resource article .collapsed legend a.expand,
 body.node-type-organization article .collapsed legend a.expand,
 body.node-type-event article .collapsed legend a.expand,
+body.page-user .profile .collapsed legend a.expand,
 .content-article .collapsible legend a.expand,
 body.node-type-resource article .collapsible legend a.expand,
 body.node-type-organization article .collapsible legend a.expand,
-body.node-type-event article .collapsible legend a.expand {
+body.node-type-event article .collapsible legend a.expand,
+body.page-user .profile .collapsible legend a.expand {
   width: 100%;
   text-align: center;
 }
@@ -1566,10 +1588,12 @@ body.node-type-event article .collapsible legend a.expand {
 body.node-type-resource article .collapsed legend a.primary,
 body.node-type-organization article .collapsed legend a.primary,
 body.node-type-event article .collapsed legend a.primary,
+body.page-user .profile .collapsed legend a.primary,
 .content-article .collapsible legend a.primary,
 body.node-type-resource article .collapsible legend a.primary,
 body.node-type-organization article .collapsible legend a.primary,
-body.node-type-event article .collapsible legend a.primary {
+body.node-type-event article .collapsible legend a.primary,
+body.page-user .profile .collapsible legend a.primary {
   background-color: #18729d;
   border: 1px solid #0e425b;
 }
@@ -1580,19 +1604,23 @@ body.node-type-event article .collapsible legend a.primary {
 body.node-type-resource article .collapsed legend a.primary:hover,
 body.node-type-organization article .collapsed legend a.primary:hover,
 body.node-type-event article .collapsed legend a.primary:hover,
+body.page-user .profile .collapsed legend a.primary:hover,
 .content-article .collapsible legend a.primary:hover,
 body.node-type-resource article .collapsible legend a.primary:hover,
 body.node-type-organization article .collapsible legend a.primary:hover,
-body.node-type-event article .collapsible legend a.primary:hover, .button.primary:focus, #content > article .collapsed legend a.primary:focus,
+body.node-type-event article .collapsible legend a.primary:hover,
+body.page-user .profile .collapsible legend a.primary:hover, .button.primary:focus, #content > article .collapsed legend a.primary:focus,
 #content > article .collapsible legend a.primary:focus,
 .content-article .collapsed legend a.primary:focus,
 body.node-type-resource article .collapsed legend a.primary:focus,
 body.node-type-organization article .collapsed legend a.primary:focus,
 body.node-type-event article .collapsed legend a.primary:focus,
+body.page-user .profile .collapsed legend a.primary:focus,
 .content-article .collapsible legend a.primary:focus,
 body.node-type-resource article .collapsible legend a.primary:focus,
 body.node-type-organization article .collapsible legend a.primary:focus,
-body.node-type-event article .collapsible legend a.primary:focus {
+body.node-type-event article .collapsible legend a.primary:focus,
+body.page-user .profile .collapsible legend a.primary:focus {
   background-color: #115271;
 }
 /* line 20, ../../../../../../../../.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/zurb-foundation-3.2.5/scss/foundation/components/modules/_buttons.scss */
@@ -1602,10 +1630,12 @@ body.node-type-event article .collapsible legend a.primary:focus {
 body.node-type-resource article .collapsed legend a.success,
 body.node-type-organization article .collapsed legend a.success,
 body.node-type-event article .collapsed legend a.success,
+body.page-user .profile .collapsed legend a.success,
 .content-article .collapsible legend a.success,
 body.node-type-resource article .collapsible legend a.success,
 body.node-type-organization article .collapsible legend a.success,
-body.node-type-event article .collapsible legend a.success {
+body.node-type-event article .collapsible legend a.success,
+body.page-user .profile .collapsible legend a.success {
   background-color: #5da423;
   border: 1px solid #396516;
 }
@@ -1616,19 +1646,23 @@ body.node-type-event article .collapsible legend a.success {
 body.node-type-resource article .collapsed legend a.success:hover,
 body.node-type-organization article .collapsed legend a.success:hover,
 body.node-type-event article .collapsed legend a.success:hover,
+body.page-user .profile .collapsed legend a.success:hover,
 .content-article .collapsible legend a.success:hover,
 body.node-type-resource article .collapsible legend a.success:hover,
 body.node-type-organization article .collapsible legend a.success:hover,
-body.node-type-event article .collapsible legend a.success:hover, .button.success:focus, #content > article .collapsed legend a.success:focus,
+body.node-type-event article .collapsible legend a.success:hover,
+body.page-user .profile .collapsible legend a.success:hover, .button.success:focus, #content > article .collapsed legend a.success:focus,
 #content > article .collapsible legend a.success:focus,
 .content-article .collapsed legend a.success:focus,
 body.node-type-resource article .collapsed legend a.success:focus,
 body.node-type-organization article .collapsed legend a.success:focus,
 body.node-type-event article .collapsed legend a.success:focus,
+body.page-user .profile .collapsed legend a.success:focus,
 .content-article .collapsible legend a.success:focus,
 body.node-type-resource article .collapsible legend a.success:focus,
 body.node-type-organization article .collapsible legend a.success:focus,
-body.node-type-event article .collapsible legend a.success:focus {
+body.node-type-event article .collapsible legend a.success:focus,
+body.page-user .profile .collapsible legend a.success:focus {
   background-color: #457a1a;
 }
 /* line 23, ../../../../../../../../.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/zurb-foundation-3.2.5/scss/foundation/components/modules/_buttons.scss */
@@ -1638,10 +1672,12 @@ body.node-type-event article .collapsible legend a.success:focus {
 body.node-type-resource article .collapsed legend a.alert,
 body.node-type-organization article .collapsed legend a.alert,
 body.node-type-event article .collapsed legend a.alert,
+body.page-user .profile .collapsed legend a.alert,
 .content-article .collapsible legend a.alert,
 body.node-type-resource article .collapsible legend a.alert,
 body.node-type-organization article .collapsible legend a.alert,
-body.node-type-event article .collapsible legend a.alert {
+body.node-type-event article .collapsible legend a.alert,
+body.page-user .profile .collapsible legend a.alert {
   background-color: #c60f13;
   border: 1px solid #7f0a0c;
 }
@@ -1652,19 +1688,23 @@ body.node-type-event article .collapsible legend a.alert {
 body.node-type-resource article .collapsed legend a.alert:hover,
 body.node-type-organization article .collapsed legend a.alert:hover,
 body.node-type-event article .collapsed legend a.alert:hover,
+body.page-user .profile .collapsed legend a.alert:hover,
 .content-article .collapsible legend a.alert:hover,
 body.node-type-resource article .collapsible legend a.alert:hover,
 body.node-type-organization article .collapsible legend a.alert:hover,
-body.node-type-event article .collapsible legend a.alert:hover, .button.alert:focus, #content > article .collapsed legend a.alert:focus,
+body.node-type-event article .collapsible legend a.alert:hover,
+body.page-user .profile .collapsible legend a.alert:hover, .button.alert:focus, #content > article .collapsed legend a.alert:focus,
 #content > article .collapsible legend a.alert:focus,
 .content-article .collapsed legend a.alert:focus,
 body.node-type-resource article .collapsed legend a.alert:focus,
 body.node-type-organization article .collapsed legend a.alert:focus,
 body.node-type-event article .collapsed legend a.alert:focus,
+body.page-user .profile .collapsed legend a.alert:focus,
 .content-article .collapsible legend a.alert:focus,
 body.node-type-resource article .collapsible legend a.alert:focus,
 body.node-type-organization article .collapsible legend a.alert:focus,
-body.node-type-event article .collapsible legend a.alert:focus {
+body.node-type-event article .collapsible legend a.alert:focus,
+body.page-user .profile .collapsible legend a.alert:focus {
   background-color: #970b0e;
 }
 /* line 26, ../../../../../../../../.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/zurb-foundation-3.2.5/scss/foundation/components/modules/_buttons.scss */
@@ -1674,10 +1714,12 @@ body.node-type-event article .collapsible legend a.alert:focus {
 body.node-type-resource article .collapsed legend a.secondary,
 body.node-type-organization article .collapsed legend a.secondary,
 body.node-type-event article .collapsed legend a.secondary,
+body.page-user .profile .collapsed legend a.secondary,
 .content-article .collapsible legend a.secondary,
 body.node-type-resource article .collapsible legend a.secondary,
 body.node-type-organization article .collapsible legend a.secondary,
-body.node-type-event article .collapsible legend a.secondary {
+body.node-type-event article .collapsible legend a.secondary,
+body.page-user .profile .collapsible legend a.secondary {
   background-color: #f68115;
   color: black;
   border: 1px solid #b75c07;
@@ -1689,19 +1731,23 @@ body.node-type-event article .collapsible legend a.secondary {
 body.node-type-resource article .collapsed legend a.secondary:hover,
 body.node-type-organization article .collapsed legend a.secondary:hover,
 body.node-type-event article .collapsed legend a.secondary:hover,
+body.page-user .profile .collapsed legend a.secondary:hover,
 .content-article .collapsible legend a.secondary:hover,
 body.node-type-resource article .collapsible legend a.secondary:hover,
 body.node-type-organization article .collapsible legend a.secondary:hover,
-body.node-type-event article .collapsible legend a.secondary:hover, .button.secondary:focus, #content > article .collapsed legend a.secondary:focus,
+body.node-type-event article .collapsible legend a.secondary:hover,
+body.page-user .profile .collapsible legend a.secondary:hover, .button.secondary:focus, #content > article .collapsed legend a.secondary:focus,
 #content > article .collapsible legend a.secondary:focus,
 .content-article .collapsed legend a.secondary:focus,
 body.node-type-resource article .collapsed legend a.secondary:focus,
 body.node-type-organization article .collapsed legend a.secondary:focus,
 body.node-type-event article .collapsed legend a.secondary:focus,
+body.page-user .profile .collapsed legend a.secondary:focus,
 .content-article .collapsible legend a.secondary:focus,
 body.node-type-resource article .collapsible legend a.secondary:focus,
 body.node-type-organization article .collapsible legend a.secondary:focus,
-body.node-type-event article .collapsible legend a.secondary:focus {
+body.node-type-event article .collapsible legend a.secondary:focus,
+body.page-user .profile .collapsible legend a.secondary:focus {
   background-color: #d06808;
 }
 /* line 31, ../../../../../../../../.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/zurb-foundation-3.2.5/scss/foundation/components/modules/_buttons.scss */
@@ -1711,10 +1757,12 @@ body.node-type-event article .collapsible legend a.secondary:focus {
 body.node-type-resource article .collapsed legend a.radius,
 body.node-type-organization article .collapsed legend a.radius,
 body.node-type-event article .collapsed legend a.radius,
+body.page-user .profile .collapsed legend a.radius,
 .content-article .collapsible legend a.radius,
 body.node-type-resource article .collapsible legend a.radius,
 body.node-type-organization article .collapsible legend a.radius,
-body.node-type-event article .collapsible legend a.radius {
+body.node-type-event article .collapsible legend a.radius,
+body.page-user .profile .collapsible legend a.radius {
   -webkit-border-radius: 7px;
   -moz-border-radius: 7px;
   -ms-border-radius: 7px;
@@ -1733,6 +1781,8 @@ body.node-type-resource article .collapsed legend .orbit .orbit-edit-link a,
 body.node-type-organization article .collapsed legend .orbit .orbit-edit-link a,
 .orbit .orbit-edit-link body.node-type-event article .collapsed legend a,
 body.node-type-event article .collapsed legend .orbit .orbit-edit-link a,
+.orbit .orbit-edit-link body.page-user .profile .collapsed legend a,
+body.page-user .profile .collapsed legend .orbit .orbit-edit-link a,
 .orbit .orbit-edit-link .content-article .collapsible legend a,
 .content-article .collapsible legend .orbit .orbit-edit-link a,
 .orbit .orbit-edit-link body.node-type-resource article .collapsible legend a,
@@ -1740,16 +1790,20 @@ body.node-type-resource article .collapsible legend .orbit .orbit-edit-link a,
 .orbit .orbit-edit-link body.node-type-organization article .collapsible legend a,
 body.node-type-organization article .collapsible legend .orbit .orbit-edit-link a,
 .orbit .orbit-edit-link body.node-type-event article .collapsible legend a,
-body.node-type-event article .collapsible legend .orbit .orbit-edit-link a, #content > article .collapsed legend a.round,
+body.node-type-event article .collapsible legend .orbit .orbit-edit-link a,
+.orbit .orbit-edit-link body.page-user .profile .collapsible legend a,
+body.page-user .profile .collapsible legend .orbit .orbit-edit-link a, #content > article .collapsed legend a.round,
 #content > article .collapsible legend a.round,
 .content-article .collapsed legend a.round,
 body.node-type-resource article .collapsed legend a.round,
 body.node-type-organization article .collapsed legend a.round,
 body.node-type-event article .collapsed legend a.round,
+body.page-user .profile .collapsed legend a.round,
 .content-article .collapsible legend a.round,
 body.node-type-resource article .collapsible legend a.round,
 body.node-type-organization article .collapsible legend a.round,
-body.node-type-event article .collapsible legend a.round {
+body.node-type-event article .collapsible legend a.round,
+body.page-user .profile .collapsible legend a.round {
   -webkit-border-radius: 1000px;
   -moz-border-radius: 1000px;
   -ms-border-radius: 1000px;
@@ -1763,10 +1817,12 @@ body.node-type-event article .collapsible legend a.round {
 body.node-type-resource article .collapsed legend a.full-width,
 body.node-type-organization article .collapsed legend a.full-width,
 body.node-type-event article .collapsed legend a.full-width,
+body.page-user .profile .collapsed legend a.full-width,
 .content-article .collapsible legend a.full-width,
 body.node-type-resource article .collapsible legend a.full-width,
 body.node-type-organization article .collapsible legend a.full-width,
-body.node-type-event article .collapsible legend a.full-width {
+body.node-type-event article .collapsible legend a.full-width,
+body.page-user .profile .collapsible legend a.full-width {
   width: 100%;
   text-align: center;
   padding-left: 0px !important;
@@ -1779,10 +1835,12 @@ body.node-type-event article .collapsible legend a.full-width {
 body.node-type-resource article .collapsed legend a.left-align,
 body.node-type-organization article .collapsed legend a.left-align,
 body.node-type-event article .collapsed legend a.left-align,
+body.page-user .profile .collapsed legend a.left-align,
 .content-article .collapsible legend a.left-align,
 body.node-type-resource article .collapsible legend a.left-align,
 body.node-type-organization article .collapsible legend a.left-align,
-body.node-type-event article .collapsible legend a.left-align {
+body.node-type-event article .collapsible legend a.left-align,
+body.page-user .profile .collapsible legend a.left-align {
   text-align: left;
   text-indent: 12px;
 }
@@ -1793,19 +1851,23 @@ body.node-type-event article .collapsible legend a.left-align {
 body.node-type-resource article .collapsed legend a.disabled,
 body.node-type-organization article .collapsed legend a.disabled,
 body.node-type-event article .collapsed legend a.disabled,
+body.page-user .profile .collapsed legend a.disabled,
 .content-article .collapsible legend a.disabled,
 body.node-type-resource article .collapsible legend a.disabled,
 body.node-type-organization article .collapsible legend a.disabled,
-body.node-type-event article .collapsible legend a.disabled, .button[disabled], #content > article .collapsed legend a[disabled],
+body.node-type-event article .collapsible legend a.disabled,
+body.page-user .profile .collapsible legend a.disabled, .button[disabled], #content > article .collapsed legend a[disabled],
 #content > article .collapsible legend a[disabled],
 .content-article .collapsed legend a[disabled],
 body.node-type-resource article .collapsed legend a[disabled],
 body.node-type-organization article .collapsed legend a[disabled],
 body.node-type-event article .collapsed legend a[disabled],
+body.page-user .profile .collapsed legend a[disabled],
 .content-article .collapsible legend a[disabled],
 body.node-type-resource article .collapsible legend a[disabled],
 body.node-type-organization article .collapsible legend a[disabled],
-body.node-type-event article .collapsible legend a[disabled] {
+body.node-type-event article .collapsible legend a[disabled],
+body.page-user .profile .collapsible legend a[disabled] {
   opacity: 0.6;
   cursor: default;
   background: #18729d;
@@ -1820,19 +1882,23 @@ body.node-type-event article .collapsible legend a[disabled] {
 body.node-type-resource article .collapsed legend a.disabled:hover,
 body.node-type-organization article .collapsed legend a.disabled:hover,
 body.node-type-event article .collapsed legend a.disabled:hover,
+body.page-user .profile .collapsed legend a.disabled:hover,
 .content-article .collapsible legend a.disabled:hover,
 body.node-type-resource article .collapsible legend a.disabled:hover,
 body.node-type-organization article .collapsible legend a.disabled:hover,
-body.node-type-event article .collapsible legend a.disabled:hover, .button[disabled]:hover, #content > article .collapsed legend a[disabled]:hover,
+body.node-type-event article .collapsible legend a.disabled:hover,
+body.page-user .profile .collapsible legend a.disabled:hover, .button[disabled]:hover, #content > article .collapsed legend a[disabled]:hover,
 #content > article .collapsible legend a[disabled]:hover,
 .content-article .collapsed legend a[disabled]:hover,
 body.node-type-resource article .collapsed legend a[disabled]:hover,
 body.node-type-organization article .collapsed legend a[disabled]:hover,
 body.node-type-event article .collapsed legend a[disabled]:hover,
+body.page-user .profile .collapsed legend a[disabled]:hover,
 .content-article .collapsible legend a[disabled]:hover,
 body.node-type-resource article .collapsible legend a[disabled]:hover,
 body.node-type-organization article .collapsible legend a[disabled]:hover,
-body.node-type-event article .collapsible legend a[disabled]:hover {
+body.node-type-event article .collapsible legend a[disabled]:hover,
+body.page-user .profile .collapsible legend a[disabled]:hover {
   background: #18729d;
 }
 /* line 42, ../../../../../../../../.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/zurb-foundation-3.2.5/scss/foundation/components/modules/_buttons.scss */
@@ -1842,19 +1908,23 @@ body.node-type-event article .collapsible legend a[disabled]:hover {
 body.node-type-resource article .collapsed legend a.disabled.success,
 body.node-type-organization article .collapsed legend a.disabled.success,
 body.node-type-event article .collapsed legend a.disabled.success,
+body.page-user .profile .collapsed legend a.disabled.success,
 .content-article .collapsible legend a.disabled.success,
 body.node-type-resource article .collapsible legend a.disabled.success,
 body.node-type-organization article .collapsible legend a.disabled.success,
-body.node-type-event article .collapsible legend a.disabled.success, .button[disabled].success, #content > article .collapsed legend a[disabled].success,
+body.node-type-event article .collapsible legend a.disabled.success,
+body.page-user .profile .collapsible legend a.disabled.success, .button[disabled].success, #content > article .collapsed legend a[disabled].success,
 #content > article .collapsible legend a[disabled].success,
 .content-article .collapsed legend a[disabled].success,
 body.node-type-resource article .collapsed legend a[disabled].success,
 body.node-type-organization article .collapsed legend a[disabled].success,
 body.node-type-event article .collapsed legend a[disabled].success,
+body.page-user .profile .collapsed legend a[disabled].success,
 .content-article .collapsible legend a[disabled].success,
 body.node-type-resource article .collapsible legend a[disabled].success,
 body.node-type-organization article .collapsible legend a[disabled].success,
-body.node-type-event article .collapsible legend a[disabled].success {
+body.node-type-event article .collapsible legend a[disabled].success,
+body.page-user .profile .collapsible legend a[disabled].success {
   background-color: #5da423;
 }
 /* line 43, ../../../../../../../../.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/zurb-foundation-3.2.5/scss/foundation/components/modules/_buttons.scss */
@@ -1864,37 +1934,45 @@ body.node-type-event article .collapsible legend a[disabled].success {
 body.node-type-resource article .collapsed legend a.disabled.success:hover,
 body.node-type-organization article .collapsed legend a.disabled.success:hover,
 body.node-type-event article .collapsed legend a.disabled.success:hover,
+body.page-user .profile .collapsed legend a.disabled.success:hover,
 .content-article .collapsible legend a.disabled.success:hover,
 body.node-type-resource article .collapsible legend a.disabled.success:hover,
 body.node-type-organization article .collapsible legend a.disabled.success:hover,
-body.node-type-event article .collapsible legend a.disabled.success:hover, .button.disabled.success:focus, #content > article .collapsed legend a.disabled.success:focus,
+body.node-type-event article .collapsible legend a.disabled.success:hover,
+body.page-user .profile .collapsible legend a.disabled.success:hover, .button.disabled.success:focus, #content > article .collapsed legend a.disabled.success:focus,
 #content > article .collapsible legend a.disabled.success:focus,
 .content-article .collapsed legend a.disabled.success:focus,
 body.node-type-resource article .collapsed legend a.disabled.success:focus,
 body.node-type-organization article .collapsed legend a.disabled.success:focus,
 body.node-type-event article .collapsed legend a.disabled.success:focus,
+body.page-user .profile .collapsed legend a.disabled.success:focus,
 .content-article .collapsible legend a.disabled.success:focus,
 body.node-type-resource article .collapsible legend a.disabled.success:focus,
 body.node-type-organization article .collapsible legend a.disabled.success:focus,
-body.node-type-event article .collapsible legend a.disabled.success:focus, .button[disabled].success:hover, #content > article .collapsed legend a[disabled].success:hover,
+body.node-type-event article .collapsible legend a.disabled.success:focus,
+body.page-user .profile .collapsible legend a.disabled.success:focus, .button[disabled].success:hover, #content > article .collapsed legend a[disabled].success:hover,
 #content > article .collapsible legend a[disabled].success:hover,
 .content-article .collapsed legend a[disabled].success:hover,
 body.node-type-resource article .collapsed legend a[disabled].success:hover,
 body.node-type-organization article .collapsed legend a[disabled].success:hover,
 body.node-type-event article .collapsed legend a[disabled].success:hover,
+body.page-user .profile .collapsed legend a[disabled].success:hover,
 .content-article .collapsible legend a[disabled].success:hover,
 body.node-type-resource article .collapsible legend a[disabled].success:hover,
 body.node-type-organization article .collapsible legend a[disabled].success:hover,
-body.node-type-event article .collapsible legend a[disabled].success:hover, .button[disabled].success:focus, #content > article .collapsed legend a[disabled].success:focus,
+body.node-type-event article .collapsible legend a[disabled].success:hover,
+body.page-user .profile .collapsible legend a[disabled].success:hover, .button[disabled].success:focus, #content > article .collapsed legend a[disabled].success:focus,
 #content > article .collapsible legend a[disabled].success:focus,
 .content-article .collapsed legend a[disabled].success:focus,
 body.node-type-resource article .collapsed legend a[disabled].success:focus,
 body.node-type-organization article .collapsed legend a[disabled].success:focus,
 body.node-type-event article .collapsed legend a[disabled].success:focus,
+body.page-user .profile .collapsed legend a[disabled].success:focus,
 .content-article .collapsible legend a[disabled].success:focus,
 body.node-type-resource article .collapsible legend a[disabled].success:focus,
 body.node-type-organization article .collapsible legend a[disabled].success:focus,
-body.node-type-event article .collapsible legend a[disabled].success:focus {
+body.node-type-event article .collapsible legend a[disabled].success:focus,
+body.page-user .profile .collapsible legend a[disabled].success:focus {
   background-color: #5da423;
   outline: none;
 }
@@ -1905,19 +1983,23 @@ body.node-type-event article .collapsible legend a[disabled].success:focus {
 body.node-type-resource article .collapsed legend a.disabled.alert,
 body.node-type-organization article .collapsed legend a.disabled.alert,
 body.node-type-event article .collapsed legend a.disabled.alert,
+body.page-user .profile .collapsed legend a.disabled.alert,
 .content-article .collapsible legend a.disabled.alert,
 body.node-type-resource article .collapsible legend a.disabled.alert,
 body.node-type-organization article .collapsible legend a.disabled.alert,
-body.node-type-event article .collapsible legend a.disabled.alert, .button[disabled].alert, #content > article .collapsed legend a[disabled].alert,
+body.node-type-event article .collapsible legend a.disabled.alert,
+body.page-user .profile .collapsible legend a.disabled.alert, .button[disabled].alert, #content > article .collapsed legend a[disabled].alert,
 #content > article .collapsible legend a[disabled].alert,
 .content-article .collapsed legend a[disabled].alert,
 body.node-type-resource article .collapsed legend a[disabled].alert,
 body.node-type-organization article .collapsed legend a[disabled].alert,
 body.node-type-event article .collapsed legend a[disabled].alert,
+body.page-user .profile .collapsed legend a[disabled].alert,
 .content-article .collapsible legend a[disabled].alert,
 body.node-type-resource article .collapsible legend a[disabled].alert,
 body.node-type-organization article .collapsible legend a[disabled].alert,
-body.node-type-event article .collapsible legend a[disabled].alert {
+body.node-type-event article .collapsible legend a[disabled].alert,
+body.page-user .profile .collapsible legend a[disabled].alert {
   background-color: #c60f13;
 }
 /* line 46, ../../../../../../../../.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/zurb-foundation-3.2.5/scss/foundation/components/modules/_buttons.scss */
@@ -1927,37 +2009,45 @@ body.node-type-event article .collapsible legend a[disabled].alert {
 body.node-type-resource article .collapsed legend a.disabled.alert:hover,
 body.node-type-organization article .collapsed legend a.disabled.alert:hover,
 body.node-type-event article .collapsed legend a.disabled.alert:hover,
+body.page-user .profile .collapsed legend a.disabled.alert:hover,
 .content-article .collapsible legend a.disabled.alert:hover,
 body.node-type-resource article .collapsible legend a.disabled.alert:hover,
 body.node-type-organization article .collapsible legend a.disabled.alert:hover,
-body.node-type-event article .collapsible legend a.disabled.alert:hover, .button.disabled.alert:focus, #content > article .collapsed legend a.disabled.alert:focus,
+body.node-type-event article .collapsible legend a.disabled.alert:hover,
+body.page-user .profile .collapsible legend a.disabled.alert:hover, .button.disabled.alert:focus, #content > article .collapsed legend a.disabled.alert:focus,
 #content > article .collapsible legend a.disabled.alert:focus,
 .content-article .collapsed legend a.disabled.alert:focus,
 body.node-type-resource article .collapsed legend a.disabled.alert:focus,
 body.node-type-organization article .collapsed legend a.disabled.alert:focus,
 body.node-type-event article .collapsed legend a.disabled.alert:focus,
+body.page-user .profile .collapsed legend a.disabled.alert:focus,
 .content-article .collapsible legend a.disabled.alert:focus,
 body.node-type-resource article .collapsible legend a.disabled.alert:focus,
 body.node-type-organization article .collapsible legend a.disabled.alert:focus,
-body.node-type-event article .collapsible legend a.disabled.alert:focus, .button[disabled].alert:hover, #content > article .collapsed legend a[disabled].alert:hover,
+body.node-type-event article .collapsible legend a.disabled.alert:focus,
+body.page-user .profile .collapsible legend a.disabled.alert:focus, .button[disabled].alert:hover, #content > article .collapsed legend a[disabled].alert:hover,
 #content > article .collapsible legend a[disabled].alert:hover,
 .content-article .collapsed legend a[disabled].alert:hover,
 body.node-type-resource article .collapsed legend a[disabled].alert:hover,
 body.node-type-organization article .collapsed legend a[disabled].alert:hover,
 body.node-type-event article .collapsed legend a[disabled].alert:hover,
+body.page-user .profile .collapsed legend a[disabled].alert:hover,
 .content-article .collapsible legend a[disabled].alert:hover,
 body.node-type-resource article .collapsible legend a[disabled].alert:hover,
 body.node-type-organization article .collapsible legend a[disabled].alert:hover,
-body.node-type-event article .collapsible legend a[disabled].alert:hover, .button[disabled].alert:focus, #content > article .collapsed legend a[disabled].alert:focus,
+body.node-type-event article .collapsible legend a[disabled].alert:hover,
+body.page-user .profile .collapsible legend a[disabled].alert:hover, .button[disabled].alert:focus, #content > article .collapsed legend a[disabled].alert:focus,
 #content > article .collapsible legend a[disabled].alert:focus,
 .content-article .collapsed legend a[disabled].alert:focus,
 body.node-type-resource article .collapsed legend a[disabled].alert:focus,
 body.node-type-organization article .collapsed legend a[disabled].alert:focus,
 body.node-type-event article .collapsed legend a[disabled].alert:focus,
+body.page-user .profile .collapsed legend a[disabled].alert:focus,
 .content-article .collapsible legend a[disabled].alert:focus,
 body.node-type-resource article .collapsible legend a[disabled].alert:focus,
 body.node-type-organization article .collapsible legend a[disabled].alert:focus,
-body.node-type-event article .collapsible legend a[disabled].alert:focus {
+body.node-type-event article .collapsible legend a[disabled].alert:focus,
+body.page-user .profile .collapsible legend a[disabled].alert:focus {
   background-color: #c60f13;
   outline: none;
 }
@@ -1968,19 +2058,23 @@ body.node-type-event article .collapsible legend a[disabled].alert:focus {
 body.node-type-resource article .collapsed legend a.disabled.secondary,
 body.node-type-organization article .collapsed legend a.disabled.secondary,
 body.node-type-event article .collapsed legend a.disabled.secondary,
+body.page-user .profile .collapsed legend a.disabled.secondary,
 .content-article .collapsible legend a.disabled.secondary,
 body.node-type-resource article .collapsible legend a.disabled.secondary,
 body.node-type-organization article .collapsible legend a.disabled.secondary,
-body.node-type-event article .collapsible legend a.disabled.secondary, .button[disabled].secondary, #content > article .collapsed legend a[disabled].secondary,
+body.node-type-event article .collapsible legend a.disabled.secondary,
+body.page-user .profile .collapsible legend a.disabled.secondary, .button[disabled].secondary, #content > article .collapsed legend a[disabled].secondary,
 #content > article .collapsible legend a[disabled].secondary,
 .content-article .collapsed legend a[disabled].secondary,
 body.node-type-resource article .collapsed legend a[disabled].secondary,
 body.node-type-organization article .collapsed legend a[disabled].secondary,
 body.node-type-event article .collapsed legend a[disabled].secondary,
+body.page-user .profile .collapsed legend a[disabled].secondary,
 .content-article .collapsible legend a[disabled].secondary,
 body.node-type-resource article .collapsible legend a[disabled].secondary,
 body.node-type-organization article .collapsible legend a[disabled].secondary,
-body.node-type-event article .collapsible legend a[disabled].secondary {
+body.node-type-event article .collapsible legend a[disabled].secondary,
+body.page-user .profile .collapsible legend a[disabled].secondary {
   background-color: #f68115;
 }
 /* line 49, ../../../../../../../../.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/zurb-foundation-3.2.5/scss/foundation/components/modules/_buttons.scss */
@@ -1990,37 +2084,45 @@ body.node-type-event article .collapsible legend a[disabled].secondary {
 body.node-type-resource article .collapsed legend a.disabled.secondary:hover,
 body.node-type-organization article .collapsed legend a.disabled.secondary:hover,
 body.node-type-event article .collapsed legend a.disabled.secondary:hover,
+body.page-user .profile .collapsed legend a.disabled.secondary:hover,
 .content-article .collapsible legend a.disabled.secondary:hover,
 body.node-type-resource article .collapsible legend a.disabled.secondary:hover,
 body.node-type-organization article .collapsible legend a.disabled.secondary:hover,
-body.node-type-event article .collapsible legend a.disabled.secondary:hover, .button.disabled.secondary:focus, #content > article .collapsed legend a.disabled.secondary:focus,
+body.node-type-event article .collapsible legend a.disabled.secondary:hover,
+body.page-user .profile .collapsible legend a.disabled.secondary:hover, .button.disabled.secondary:focus, #content > article .collapsed legend a.disabled.secondary:focus,
 #content > article .collapsible legend a.disabled.secondary:focus,
 .content-article .collapsed legend a.disabled.secondary:focus,
 body.node-type-resource article .collapsed legend a.disabled.secondary:focus,
 body.node-type-organization article .collapsed legend a.disabled.secondary:focus,
 body.node-type-event article .collapsed legend a.disabled.secondary:focus,
+body.page-user .profile .collapsed legend a.disabled.secondary:focus,
 .content-article .collapsible legend a.disabled.secondary:focus,
 body.node-type-resource article .collapsible legend a.disabled.secondary:focus,
 body.node-type-organization article .collapsible legend a.disabled.secondary:focus,
-body.node-type-event article .collapsible legend a.disabled.secondary:focus, .button[disabled].secondary:hover, #content > article .collapsed legend a[disabled].secondary:hover,
+body.node-type-event article .collapsible legend a.disabled.secondary:focus,
+body.page-user .profile .collapsible legend a.disabled.secondary:focus, .button[disabled].secondary:hover, #content > article .collapsed legend a[disabled].secondary:hover,
 #content > article .collapsible legend a[disabled].secondary:hover,
 .content-article .collapsed legend a[disabled].secondary:hover,
 body.node-type-resource article .collapsed legend a[disabled].secondary:hover,
 body.node-type-organization article .collapsed legend a[disabled].secondary:hover,
 body.node-type-event article .collapsed legend a[disabled].secondary:hover,
+body.page-user .profile .collapsed legend a[disabled].secondary:hover,
 .content-article .collapsible legend a[disabled].secondary:hover,
 body.node-type-resource article .collapsible legend a[disabled].secondary:hover,
 body.node-type-organization article .collapsible legend a[disabled].secondary:hover,
-body.node-type-event article .collapsible legend a[disabled].secondary:hover, .button[disabled].secondary:focus, #content > article .collapsed legend a[disabled].secondary:focus,
+body.node-type-event article .collapsible legend a[disabled].secondary:hover,
+body.page-user .profile .collapsible legend a[disabled].secondary:hover, .button[disabled].secondary:focus, #content > article .collapsed legend a[disabled].secondary:focus,
 #content > article .collapsible legend a[disabled].secondary:focus,
 .content-article .collapsed legend a[disabled].secondary:focus,
 body.node-type-resource article .collapsed legend a[disabled].secondary:focus,
 body.node-type-organization article .collapsed legend a[disabled].secondary:focus,
 body.node-type-event article .collapsed legend a[disabled].secondary:focus,
+body.page-user .profile .collapsed legend a[disabled].secondary:focus,
 .content-article .collapsible legend a[disabled].secondary:focus,
 body.node-type-resource article .collapsible legend a[disabled].secondary:focus,
 body.node-type-organization article .collapsible legend a[disabled].secondary:focus,
-body.node-type-event article .collapsible legend a[disabled].secondary:focus {
+body.node-type-event article .collapsible legend a[disabled].secondary:focus,
+body.page-user .profile .collapsible legend a[disabled].secondary:focus {
   background-color: #f68115;
   outline: none;
 }
@@ -2068,10 +2170,12 @@ input[type=submit].button, button.button {
 body.node-type-resource article .collapsed legend a.dropdown,
 body.node-type-organization article .collapsed legend a.dropdown,
 body.node-type-event article .collapsed legend a.dropdown,
+body.page-user .profile .collapsed legend a.dropdown,
 .content-article .collapsible legend a.dropdown,
 body.node-type-resource article .collapsible legend a.dropdown,
 body.node-type-organization article .collapsible legend a.dropdown,
-body.node-type-event article .collapsible legend a.dropdown {
+body.node-type-event article .collapsible legend a.dropdown,
+body.page-user .profile .collapsible legend a.dropdown {
   position: relative;
   padding-right: 44px;
   /* Sizes */
@@ -2086,10 +2190,12 @@ body.node-type-event article .collapsible legend a.dropdown {
 body.node-type-resource article .collapsed legend a.dropdown.large,
 body.node-type-organization article .collapsed legend a.dropdown.large,
 body.node-type-event article .collapsed legend a.dropdown.large,
+body.page-user .profile .collapsed legend a.dropdown.large,
 .content-article .collapsible legend a.dropdown.large,
 body.node-type-resource article .collapsible legend a.dropdown.large,
 body.node-type-organization article .collapsible legend a.dropdown.large,
-body.node-type-event article .collapsible legend a.dropdown.large {
+body.node-type-event article .collapsible legend a.dropdown.large,
+body.page-user .profile .collapsible legend a.dropdown.large {
   padding-right: 60px;
 }
 /* line 72, ../../../../../../../../.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/zurb-foundation-3.2.5/scss/foundation/components/modules/_buttons.scss */
@@ -2099,10 +2205,12 @@ body.node-type-event article .collapsible legend a.dropdown.large {
 body.node-type-resource article .collapsed legend a.dropdown.small,
 body.node-type-organization article .collapsed legend a.dropdown.small,
 body.node-type-event article .collapsed legend a.dropdown.small,
+body.page-user .profile .collapsed legend a.dropdown.small,
 .content-article .collapsible legend a.dropdown.small,
 body.node-type-resource article .collapsible legend a.dropdown.small,
 body.node-type-organization article .collapsible legend a.dropdown.small,
-body.node-type-event article .collapsible legend a.dropdown.small {
+body.node-type-event article .collapsible legend a.dropdown.small,
+body.page-user .profile .collapsible legend a.dropdown.small {
   padding-right: 28px;
 }
 /* line 73, ../../../../../../../../.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/zurb-foundation-3.2.5/scss/foundation/components/modules/_buttons.scss */
@@ -2112,10 +2220,12 @@ body.node-type-event article .collapsible legend a.dropdown.small {
 body.node-type-resource article .collapsed legend a.dropdown.tiny,
 body.node-type-organization article .collapsed legend a.dropdown.tiny,
 body.node-type-event article .collapsed legend a.dropdown.tiny,
+body.page-user .profile .collapsed legend a.dropdown.tiny,
 .content-article .collapsible legend a.dropdown.tiny,
 body.node-type-resource article .collapsible legend a.dropdown.tiny,
 body.node-type-organization article .collapsible legend a.dropdown.tiny,
-body.node-type-event article .collapsible legend a.dropdown.tiny {
+body.node-type-event article .collapsible legend a.dropdown.tiny,
+body.page-user .profile .collapsible legend a.dropdown.tiny {
   padding-right: 20px;
 }
 /* line 76, ../../../../../../../../.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/zurb-foundation-3.2.5/scss/foundation/components/modules/_buttons.scss */
@@ -2125,10 +2235,12 @@ body.node-type-event article .collapsible legend a.dropdown.tiny {
 body.node-type-resource article .collapsed legend a.dropdown:after,
 body.node-type-organization article .collapsed legend a.dropdown:after,
 body.node-type-event article .collapsed legend a.dropdown:after,
+body.page-user .profile .collapsed legend a.dropdown:after,
 .content-article .collapsible legend a.dropdown:after,
 body.node-type-resource article .collapsible legend a.dropdown:after,
 body.node-type-organization article .collapsible legend a.dropdown:after,
-body.node-type-event article .collapsible legend a.dropdown:after {
+body.node-type-event article .collapsible legend a.dropdown:after,
+body.page-user .profile .collapsible legend a.dropdown:after {
   content: "";
   display: block;
   width: 0;
@@ -2147,10 +2259,12 @@ body.node-type-event article .collapsible legend a.dropdown:after {
 body.node-type-resource article .collapsed legend a.dropdown.large:after,
 body.node-type-organization article .collapsed legend a.dropdown.large:after,
 body.node-type-event article .collapsed legend a.dropdown.large:after,
+body.page-user .profile .collapsed legend a.dropdown.large:after,
 .content-article .collapsible legend a.dropdown.large:after,
 body.node-type-resource article .collapsible legend a.dropdown.large:after,
 body.node-type-organization article .collapsible legend a.dropdown.large:after,
-body.node-type-event article .collapsible legend a.dropdown.large:after {
+body.node-type-event article .collapsible legend a.dropdown.large:after,
+body.page-user .profile .collapsible legend a.dropdown.large:after {
   content: "";
   display: block;
   width: 0;
@@ -2167,10 +2281,12 @@ body.node-type-event article .collapsible legend a.dropdown.large:after {
 body.node-type-resource article .collapsed legend a.dropdown.small:after,
 body.node-type-organization article .collapsed legend a.dropdown.small:after,
 body.node-type-event article .collapsed legend a.dropdown.small:after,
+body.page-user .profile .collapsed legend a.dropdown.small:after,
 .content-article .collapsible legend a.dropdown.small:after,
 body.node-type-resource article .collapsible legend a.dropdown.small:after,
 body.node-type-organization article .collapsible legend a.dropdown.small:after,
-body.node-type-event article .collapsible legend a.dropdown.small:after {
+body.node-type-event article .collapsible legend a.dropdown.small:after,
+body.page-user .profile .collapsible legend a.dropdown.small:after {
   content: "";
   display: block;
   width: 0;
@@ -2187,10 +2303,12 @@ body.node-type-event article .collapsible legend a.dropdown.small:after {
 body.node-type-resource article .collapsed legend a.dropdown.tiny:after,
 body.node-type-organization article .collapsed legend a.dropdown.tiny:after,
 body.node-type-event article .collapsed legend a.dropdown.tiny:after,
+body.page-user .profile .collapsed legend a.dropdown.tiny:after,
 .content-article .collapsible legend a.dropdown.tiny:after,
 body.node-type-resource article .collapsible legend a.dropdown.tiny:after,
 body.node-type-organization article .collapsible legend a.dropdown.tiny:after,
-body.node-type-event article .collapsible legend a.dropdown.tiny:after {
+body.node-type-event article .collapsible legend a.dropdown.tiny:after,
+body.page-user .profile .collapsible legend a.dropdown.tiny:after {
   content: "";
   display: block;
   width: 0;
@@ -2207,10 +2325,12 @@ body.node-type-event article .collapsible legend a.dropdown.tiny:after {
 body.node-type-resource article .collapsed legend a.dropdown > ul,
 body.node-type-organization article .collapsed legend a.dropdown > ul,
 body.node-type-event article .collapsed legend a.dropdown > ul,
+body.page-user .profile .collapsed legend a.dropdown > ul,
 .content-article .collapsible legend a.dropdown > ul,
 body.node-type-resource article .collapsible legend a.dropdown > ul,
 body.node-type-organization article .collapsible legend a.dropdown > ul,
-body.node-type-event article .collapsible legend a.dropdown > ul {
+body.node-type-event article .collapsible legend a.dropdown > ul,
+body.page-user .profile .collapsible legend a.dropdown > ul {
   -webkit-box-sizing: content-box;
   -moz-box-sizing: content-box;
   box-sizing: content-box;
@@ -2234,10 +2354,12 @@ body.node-type-event article .collapsible legend a.dropdown > ul {
 body.node-type-resource article .collapsed legend a.dropdown > ul li,
 body.node-type-organization article .collapsed legend a.dropdown > ul li,
 body.node-type-event article .collapsed legend a.dropdown > ul li,
+body.page-user .profile .collapsed legend a.dropdown > ul li,
 .content-article .collapsible legend a.dropdown > ul li,
 body.node-type-resource article .collapsible legend a.dropdown > ul li,
 body.node-type-organization article .collapsible legend a.dropdown > ul li,
-body.node-type-event article .collapsible legend a.dropdown > ul li {
+body.node-type-event article .collapsible legend a.dropdown > ul li,
+body.page-user .profile .collapsible legend a.dropdown > ul li {
   width: 100%;
   cursor: pointer;
   padding: 0;
@@ -2254,19 +2376,23 @@ body.node-type-event article .collapsible legend a.dropdown > ul li {
 body.node-type-resource article .collapsed legend a.dropdown > ul li a,
 body.node-type-organization article .collapsed legend a.dropdown > ul li a,
 body.node-type-event article .collapsed legend a.dropdown > ul li a,
+body.page-user .profile .collapsed legend a.dropdown > ul li a,
 .content-article .collapsible legend a.dropdown > ul li a,
 body.node-type-resource article .collapsible legend a.dropdown > ul li a,
 body.node-type-organization article .collapsible legend a.dropdown > ul li a,
-body.node-type-event article .collapsible legend a.dropdown > ul li a, .button.dropdown > ul li button, #content > article .collapsed legend a.dropdown > ul li button,
+body.node-type-event article .collapsible legend a.dropdown > ul li a,
+body.page-user .profile .collapsible legend a.dropdown > ul li a, .button.dropdown > ul li button, #content > article .collapsed legend a.dropdown > ul li button,
 #content > article .collapsible legend a.dropdown > ul li button,
 .content-article .collapsed legend a.dropdown > ul li button,
 body.node-type-resource article .collapsed legend a.dropdown > ul li button,
 body.node-type-organization article .collapsed legend a.dropdown > ul li button,
 body.node-type-event article .collapsed legend a.dropdown > ul li button,
+body.page-user .profile .collapsed legend a.dropdown > ul li button,
 .content-article .collapsible legend a.dropdown > ul li button,
 body.node-type-resource article .collapsible legend a.dropdown > ul li button,
 body.node-type-organization article .collapsible legend a.dropdown > ul li button,
-body.node-type-event article .collapsible legend a.dropdown > ul li button {
+body.node-type-event article .collapsible legend a.dropdown > ul li button,
+body.page-user .profile .collapsible legend a.dropdown > ul li button {
   display: block;
   color: #555;
   font-size: 14px;
@@ -2281,10 +2407,12 @@ body.node-type-event article .collapsible legend a.dropdown > ul li button {
 body.node-type-resource article .collapsed legend a.dropdown > ul li button,
 body.node-type-organization article .collapsed legend a.dropdown > ul li button,
 body.node-type-event article .collapsed legend a.dropdown > ul li button,
+body.page-user .profile .collapsed legend a.dropdown > ul li button,
 .content-article .collapsible legend a.dropdown > ul li button,
 body.node-type-resource article .collapsible legend a.dropdown > ul li button,
 body.node-type-organization article .collapsible legend a.dropdown > ul li button,
-body.node-type-event article .collapsible legend a.dropdown > ul li button {
+body.node-type-event article .collapsible legend a.dropdown > ul li button,
+body.page-user .profile .collapsible legend a.dropdown > ul li button {
   width: 100%;
   border: inherit;
   background: inherit;
@@ -2299,19 +2427,23 @@ body.node-type-event article .collapsible legend a.dropdown > ul li button {
 body.node-type-resource article .collapsed legend a.dropdown > ul li:hover,
 body.node-type-organization article .collapsed legend a.dropdown > ul li:hover,
 body.node-type-event article .collapsed legend a.dropdown > ul li:hover,
+body.page-user .profile .collapsed legend a.dropdown > ul li:hover,
 .content-article .collapsible legend a.dropdown > ul li:hover,
 body.node-type-resource article .collapsible legend a.dropdown > ul li:hover,
 body.node-type-organization article .collapsible legend a.dropdown > ul li:hover,
-body.node-type-event article .collapsible legend a.dropdown > ul li:hover, .button.dropdown > ul li:focus, #content > article .collapsed legend a.dropdown > ul li:focus,
+body.node-type-event article .collapsible legend a.dropdown > ul li:hover,
+body.page-user .profile .collapsible legend a.dropdown > ul li:hover, .button.dropdown > ul li:focus, #content > article .collapsed legend a.dropdown > ul li:focus,
 #content > article .collapsible legend a.dropdown > ul li:focus,
 .content-article .collapsed legend a.dropdown > ul li:focus,
 body.node-type-resource article .collapsed legend a.dropdown > ul li:focus,
 body.node-type-organization article .collapsed legend a.dropdown > ul li:focus,
 body.node-type-event article .collapsed legend a.dropdown > ul li:focus,
+body.page-user .profile .collapsed legend a.dropdown > ul li:focus,
 .content-article .collapsible legend a.dropdown > ul li:focus,
 body.node-type-resource article .collapsible legend a.dropdown > ul li:focus,
 body.node-type-organization article .collapsible legend a.dropdown > ul li:focus,
-body.node-type-event article .collapsible legend a.dropdown > ul li:focus {
+body.node-type-event article .collapsible legend a.dropdown > ul li:focus,
+body.page-user .profile .collapsible legend a.dropdown > ul li:focus {
   background-color: #a9daf2;
   color: #222;
 }
@@ -2322,10 +2454,12 @@ body.node-type-event article .collapsible legend a.dropdown > ul li:focus {
 body.node-type-resource article .collapsed legend a.dropdown > ul li.divider,
 body.node-type-organization article .collapsed legend a.dropdown > ul li.divider,
 body.node-type-event article .collapsed legend a.dropdown > ul li.divider,
+body.page-user .profile .collapsed legend a.dropdown > ul li.divider,
 .content-article .collapsible legend a.dropdown > ul li.divider,
 body.node-type-resource article .collapsible legend a.dropdown > ul li.divider,
 body.node-type-organization article .collapsible legend a.dropdown > ul li.divider,
-body.node-type-event article .collapsible legend a.dropdown > ul li.divider {
+body.node-type-event article .collapsible legend a.dropdown > ul li.divider,
+body.page-user .profile .collapsible legend a.dropdown > ul li.divider {
   min-height: 0;
   padding: 0;
   height: 1px;
@@ -2339,10 +2473,12 @@ body.node-type-event article .collapsible legend a.dropdown > ul li.divider {
 body.node-type-resource article .collapsed legend a.dropdown.up > ul,
 body.node-type-organization article .collapsed legend a.dropdown.up > ul,
 body.node-type-event article .collapsed legend a.dropdown.up > ul,
+body.page-user .profile .collapsed legend a.dropdown.up > ul,
 .content-article .collapsible legend a.dropdown.up > ul,
 body.node-type-resource article .collapsible legend a.dropdown.up > ul,
 body.node-type-organization article .collapsible legend a.dropdown.up > ul,
-body.node-type-event article .collapsible legend a.dropdown.up > ul {
+body.node-type-event article .collapsible legend a.dropdown.up > ul,
+body.page-user .profile .collapsible legend a.dropdown.up > ul {
   border-top: 1px solid #cccccc;
   border-bottom: none;
 }
@@ -2353,10 +2489,12 @@ body.node-type-event article .collapsible legend a.dropdown.up > ul {
 body.node-type-resource article .collapsed legend a.dropdown ul.no-hover.show-dropdown,
 body.node-type-organization article .collapsed legend a.dropdown ul.no-hover.show-dropdown,
 body.node-type-event article .collapsed legend a.dropdown ul.no-hover.show-dropdown,
+body.page-user .profile .collapsed legend a.dropdown ul.no-hover.show-dropdown,
 .content-article .collapsible legend a.dropdown ul.no-hover.show-dropdown,
 body.node-type-resource article .collapsible legend a.dropdown ul.no-hover.show-dropdown,
 body.node-type-organization article .collapsible legend a.dropdown ul.no-hover.show-dropdown,
-body.node-type-event article .collapsible legend a.dropdown ul.no-hover.show-dropdown {
+body.node-type-event article .collapsible legend a.dropdown ul.no-hover.show-dropdown,
+body.page-user .profile .collapsible legend a.dropdown ul.no-hover.show-dropdown {
   display: block !important;
 }
 /* line 96, ../../../../../../../../.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/zurb-foundation-3.2.5/scss/foundation/components/modules/_buttons.scss */
@@ -2366,10 +2504,12 @@ body.node-type-event article .collapsible legend a.dropdown ul.no-hover.show-dro
 body.node-type-resource article .collapsed legend a.dropdown:hover > ul.no-hover,
 body.node-type-organization article .collapsed legend a.dropdown:hover > ul.no-hover,
 body.node-type-event article .collapsed legend a.dropdown:hover > ul.no-hover,
+body.page-user .profile .collapsed legend a.dropdown:hover > ul.no-hover,
 .content-article .collapsible legend a.dropdown:hover > ul.no-hover,
 body.node-type-resource article .collapsible legend a.dropdown:hover > ul.no-hover,
 body.node-type-organization article .collapsible legend a.dropdown:hover > ul.no-hover,
-body.node-type-event article .collapsible legend a.dropdown:hover > ul.no-hover {
+body.node-type-event article .collapsible legend a.dropdown:hover > ul.no-hover,
+body.page-user .profile .collapsible legend a.dropdown:hover > ul.no-hover {
   display: none;
 }
 /* line 102, ../../../../../../../../.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/zurb-foundation-3.2.5/scss/foundation/components/modules/_buttons.scss */
@@ -2379,10 +2519,12 @@ body.node-type-event article .collapsible legend a.dropdown:hover > ul.no-hover 
 body.node-type-resource article .collapsed legend a.dropdown.split,
 body.node-type-organization article .collapsed legend a.dropdown.split,
 body.node-type-event article .collapsed legend a.dropdown.split,
+body.page-user .profile .collapsed legend a.dropdown.split,
 .content-article .collapsible legend a.dropdown.split,
 body.node-type-resource article .collapsible legend a.dropdown.split,
 body.node-type-organization article .collapsible legend a.dropdown.split,
-body.node-type-event article .collapsible legend a.dropdown.split {
+body.node-type-event article .collapsible legend a.dropdown.split,
+body.page-user .profile .collapsible legend a.dropdown.split {
   padding: 0;
   position: relative;
   /* Sizes */
@@ -2396,10 +2538,12 @@ body.node-type-event article .collapsible legend a.dropdown.split {
 body.node-type-resource article .collapsed legend a.dropdown.split:after,
 body.node-type-organization article .collapsed legend a.dropdown.split:after,
 body.node-type-event article .collapsed legend a.dropdown.split:after,
+body.page-user .profile .collapsed legend a.dropdown.split:after,
 .content-article .collapsible legend a.dropdown.split:after,
 body.node-type-resource article .collapsible legend a.dropdown.split:after,
 body.node-type-organization article .collapsible legend a.dropdown.split:after,
-body.node-type-event article .collapsible legend a.dropdown.split:after {
+body.node-type-event article .collapsible legend a.dropdown.split:after,
+body.page-user .profile .collapsible legend a.dropdown.split:after {
   display: none;
 }
 /* line 105, ../../../../../../../../.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/zurb-foundation-3.2.5/scss/foundation/components/modules/_buttons.scss */
@@ -2409,19 +2553,23 @@ body.node-type-event article .collapsible legend a.dropdown.split:after {
 body.node-type-resource article .collapsed legend a.dropdown.split:hover,
 body.node-type-organization article .collapsed legend a.dropdown.split:hover,
 body.node-type-event article .collapsed legend a.dropdown.split:hover,
+body.page-user .profile .collapsed legend a.dropdown.split:hover,
 .content-article .collapsible legend a.dropdown.split:hover,
 body.node-type-resource article .collapsible legend a.dropdown.split:hover,
 body.node-type-organization article .collapsible legend a.dropdown.split:hover,
-body.node-type-event article .collapsible legend a.dropdown.split:hover, .button.dropdown.split:focus, #content > article .collapsed legend a.dropdown.split:focus,
+body.node-type-event article .collapsible legend a.dropdown.split:hover,
+body.page-user .profile .collapsible legend a.dropdown.split:hover, .button.dropdown.split:focus, #content > article .collapsed legend a.dropdown.split:focus,
 #content > article .collapsible legend a.dropdown.split:focus,
 .content-article .collapsed legend a.dropdown.split:focus,
 body.node-type-resource article .collapsed legend a.dropdown.split:focus,
 body.node-type-organization article .collapsed legend a.dropdown.split:focus,
 body.node-type-event article .collapsed legend a.dropdown.split:focus,
+body.page-user .profile .collapsed legend a.dropdown.split:focus,
 .content-article .collapsible legend a.dropdown.split:focus,
 body.node-type-resource article .collapsible legend a.dropdown.split:focus,
 body.node-type-organization article .collapsible legend a.dropdown.split:focus,
-body.node-type-event article .collapsible legend a.dropdown.split:focus {
+body.node-type-event article .collapsible legend a.dropdown.split:focus,
+body.page-user .profile .collapsible legend a.dropdown.split:focus {
   background-color: #18729d;
 }
 /* line 106, ../../../../../../../../.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/zurb-foundation-3.2.5/scss/foundation/components/modules/_buttons.scss */
@@ -2431,19 +2579,23 @@ body.node-type-event article .collapsible legend a.dropdown.split:focus {
 body.node-type-resource article .collapsed legend a.dropdown.split.alert:hover,
 body.node-type-organization article .collapsed legend a.dropdown.split.alert:hover,
 body.node-type-event article .collapsed legend a.dropdown.split.alert:hover,
+body.page-user .profile .collapsed legend a.dropdown.split.alert:hover,
 .content-article .collapsible legend a.dropdown.split.alert:hover,
 body.node-type-resource article .collapsible legend a.dropdown.split.alert:hover,
 body.node-type-organization article .collapsible legend a.dropdown.split.alert:hover,
-body.node-type-event article .collapsible legend a.dropdown.split.alert:hover, .button.dropdown.split.alert:focus, #content > article .collapsed legend a.dropdown.split.alert:focus,
+body.node-type-event article .collapsible legend a.dropdown.split.alert:hover,
+body.page-user .profile .collapsible legend a.dropdown.split.alert:hover, .button.dropdown.split.alert:focus, #content > article .collapsed legend a.dropdown.split.alert:focus,
 #content > article .collapsible legend a.dropdown.split.alert:focus,
 .content-article .collapsed legend a.dropdown.split.alert:focus,
 body.node-type-resource article .collapsed legend a.dropdown.split.alert:focus,
 body.node-type-organization article .collapsed legend a.dropdown.split.alert:focus,
 body.node-type-event article .collapsed legend a.dropdown.split.alert:focus,
+body.page-user .profile .collapsed legend a.dropdown.split.alert:focus,
 .content-article .collapsible legend a.dropdown.split.alert:focus,
 body.node-type-resource article .collapsible legend a.dropdown.split.alert:focus,
 body.node-type-organization article .collapsible legend a.dropdown.split.alert:focus,
-body.node-type-event article .collapsible legend a.dropdown.split.alert:focus {
+body.node-type-event article .collapsible legend a.dropdown.split.alert:focus,
+body.page-user .profile .collapsible legend a.dropdown.split.alert:focus {
   background-color: #c60f13;
 }
 /* line 107, ../../../../../../../../.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/zurb-foundation-3.2.5/scss/foundation/components/modules/_buttons.scss */
@@ -2453,19 +2605,23 @@ body.node-type-event article .collapsible legend a.dropdown.split.alert:focus {
 body.node-type-resource article .collapsed legend a.dropdown.split.success:hover,
 body.node-type-organization article .collapsed legend a.dropdown.split.success:hover,
 body.node-type-event article .collapsed legend a.dropdown.split.success:hover,
+body.page-user .profile .collapsed legend a.dropdown.split.success:hover,
 .content-article .collapsible legend a.dropdown.split.success:hover,
 body.node-type-resource article .collapsible legend a.dropdown.split.success:hover,
 body.node-type-organization article .collapsible legend a.dropdown.split.success:hover,
-body.node-type-event article .collapsible legend a.dropdown.split.success:hover, .button.dropdown.split.success:focus, #content > article .collapsed legend a.dropdown.split.success:focus,
+body.node-type-event article .collapsible legend a.dropdown.split.success:hover,
+body.page-user .profile .collapsible legend a.dropdown.split.success:hover, .button.dropdown.split.success:focus, #content > article .collapsed legend a.dropdown.split.success:focus,
 #content > article .collapsible legend a.dropdown.split.success:focus,
 .content-article .collapsed legend a.dropdown.split.success:focus,
 body.node-type-resource article .collapsed legend a.dropdown.split.success:focus,
 body.node-type-organization article .collapsed legend a.dropdown.split.success:focus,
 body.node-type-event article .collapsed legend a.dropdown.split.success:focus,
+body.page-user .profile .collapsed legend a.dropdown.split.success:focus,
 .content-article .collapsible legend a.dropdown.split.success:focus,
 body.node-type-resource article .collapsible legend a.dropdown.split.success:focus,
 body.node-type-organization article .collapsible legend a.dropdown.split.success:focus,
-body.node-type-event article .collapsible legend a.dropdown.split.success:focus {
+body.node-type-event article .collapsible legend a.dropdown.split.success:focus,
+body.page-user .profile .collapsible legend a.dropdown.split.success:focus {
   background-color: #5da423;
 }
 /* line 108, ../../../../../../../../.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/zurb-foundation-3.2.5/scss/foundation/components/modules/_buttons.scss */
@@ -2475,19 +2631,23 @@ body.node-type-event article .collapsible legend a.dropdown.split.success:focus 
 body.node-type-resource article .collapsed legend a.dropdown.split.secondary:hover,
 body.node-type-organization article .collapsed legend a.dropdown.split.secondary:hover,
 body.node-type-event article .collapsed legend a.dropdown.split.secondary:hover,
+body.page-user .profile .collapsed legend a.dropdown.split.secondary:hover,
 .content-article .collapsible legend a.dropdown.split.secondary:hover,
 body.node-type-resource article .collapsible legend a.dropdown.split.secondary:hover,
 body.node-type-organization article .collapsible legend a.dropdown.split.secondary:hover,
-body.node-type-event article .collapsible legend a.dropdown.split.secondary:hover, .button.dropdown.split.secondary:focus, #content > article .collapsed legend a.dropdown.split.secondary:focus,
+body.node-type-event article .collapsible legend a.dropdown.split.secondary:hover,
+body.page-user .profile .collapsible legend a.dropdown.split.secondary:hover, .button.dropdown.split.secondary:focus, #content > article .collapsed legend a.dropdown.split.secondary:focus,
 #content > article .collapsible legend a.dropdown.split.secondary:focus,
 .content-article .collapsed legend a.dropdown.split.secondary:focus,
 body.node-type-resource article .collapsed legend a.dropdown.split.secondary:focus,
 body.node-type-organization article .collapsed legend a.dropdown.split.secondary:focus,
 body.node-type-event article .collapsed legend a.dropdown.split.secondary:focus,
+body.page-user .profile .collapsed legend a.dropdown.split.secondary:focus,
 .content-article .collapsible legend a.dropdown.split.secondary:focus,
 body.node-type-resource article .collapsible legend a.dropdown.split.secondary:focus,
 body.node-type-organization article .collapsible legend a.dropdown.split.secondary:focus,
-body.node-type-event article .collapsible legend a.dropdown.split.secondary:focus {
+body.node-type-event article .collapsible legend a.dropdown.split.secondary:focus,
+body.page-user .profile .collapsible legend a.dropdown.split.secondary:focus {
   background-color: #f68115;
 }
 /* line 111, ../../../../../../../../.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/zurb-foundation-3.2.5/scss/foundation/components/modules/_buttons.scss */
@@ -2497,10 +2657,12 @@ body.node-type-event article .collapsible legend a.dropdown.split.secondary:focu
 body.node-type-resource article .collapsed legend a.dropdown.split > a,
 body.node-type-organization article .collapsed legend a.dropdown.split > a,
 body.node-type-event article .collapsed legend a.dropdown.split > a,
+body.page-user .profile .collapsed legend a.dropdown.split > a,
 .content-article .collapsible legend a.dropdown.split > a,
 body.node-type-resource article .collapsible legend a.dropdown.split > a,
 body.node-type-organization article .collapsible legend a.dropdown.split > a,
-body.node-type-event article .collapsible legend a.dropdown.split > a {
+body.node-type-event article .collapsible legend a.dropdown.split > a,
+body.page-user .profile .collapsible legend a.dropdown.split > a {
   color: white;
   display: block;
   padding: 10px 50px 11px 20px;
@@ -2518,19 +2680,23 @@ body.node-type-event article .collapsible legend a.dropdown.split > a {
 body.node-type-resource article .collapsed legend a.dropdown.split > a:hover,
 body.node-type-organization article .collapsed legend a.dropdown.split > a:hover,
 body.node-type-event article .collapsed legend a.dropdown.split > a:hover,
+body.page-user .profile .collapsed legend a.dropdown.split > a:hover,
 .content-article .collapsible legend a.dropdown.split > a:hover,
 body.node-type-resource article .collapsible legend a.dropdown.split > a:hover,
 body.node-type-organization article .collapsible legend a.dropdown.split > a:hover,
-body.node-type-event article .collapsible legend a.dropdown.split > a:hover, .button.dropdown.split > a:focus, #content > article .collapsed legend a.dropdown.split > a:focus,
+body.node-type-event article .collapsible legend a.dropdown.split > a:hover,
+body.page-user .profile .collapsible legend a.dropdown.split > a:hover, .button.dropdown.split > a:focus, #content > article .collapsed legend a.dropdown.split > a:focus,
 #content > article .collapsible legend a.dropdown.split > a:focus,
 .content-article .collapsed legend a.dropdown.split > a:focus,
 body.node-type-resource article .collapsed legend a.dropdown.split > a:focus,
 body.node-type-organization article .collapsed legend a.dropdown.split > a:focus,
 body.node-type-event article .collapsed legend a.dropdown.split > a:focus,
+body.page-user .profile .collapsed legend a.dropdown.split > a:focus,
 .content-article .collapsible legend a.dropdown.split > a:focus,
 body.node-type-resource article .collapsible legend a.dropdown.split > a:focus,
 body.node-type-organization article .collapsible legend a.dropdown.split > a:focus,
-body.node-type-event article .collapsible legend a.dropdown.split > a:focus {
+body.node-type-event article .collapsible legend a.dropdown.split > a:focus,
+body.page-user .profile .collapsible legend a.dropdown.split > a:focus {
   background-color: #115271;
   -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
   -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
@@ -2543,10 +2709,12 @@ body.node-type-event article .collapsible legend a.dropdown.split > a:focus {
 body.node-type-resource article .collapsed legend a.dropdown.split.large > a,
 body.node-type-organization article .collapsed legend a.dropdown.split.large > a,
 body.node-type-event article .collapsed legend a.dropdown.split.large > a,
+body.page-user .profile .collapsed legend a.dropdown.split.large > a,
 .content-article .collapsible legend a.dropdown.split.large > a,
 body.node-type-resource article .collapsible legend a.dropdown.split.large > a,
 body.node-type-organization article .collapsible legend a.dropdown.split.large > a,
-body.node-type-event article .collapsible legend a.dropdown.split.large > a {
+body.node-type-event article .collapsible legend a.dropdown.split.large > a,
+body.page-user .profile .collapsible legend a.dropdown.split.large > a {
   padding: 15px 75px 16px 30px;
   padding-left: 30px;
   padding-right: 75px;
@@ -2558,10 +2726,12 @@ body.node-type-event article .collapsible legend a.dropdown.split.large > a {
 body.node-type-resource article .collapsed legend a.dropdown.split.small > a,
 body.node-type-organization article .collapsed legend a.dropdown.split.small > a,
 body.node-type-event article .collapsed legend a.dropdown.split.small > a,
+body.page-user .profile .collapsed legend a.dropdown.split.small > a,
 .content-article .collapsible legend a.dropdown.split.small > a,
 body.node-type-resource article .collapsible legend a.dropdown.split.small > a,
 body.node-type-organization article .collapsible legend a.dropdown.split.small > a,
-body.node-type-event article .collapsible legend a.dropdown.split.small > a {
+body.node-type-event article .collapsible legend a.dropdown.split.small > a,
+body.page-user .profile .collapsible legend a.dropdown.split.small > a {
   padding: 7px 35px 8px 14px;
   padding-left: 14px;
   padding-right: 35px;
@@ -2573,10 +2743,12 @@ body.node-type-event article .collapsible legend a.dropdown.split.small > a {
 body.node-type-resource article .collapsed legend a.dropdown.split.tiny > a,
 body.node-type-organization article .collapsed legend a.dropdown.split.tiny > a,
 body.node-type-event article .collapsed legend a.dropdown.split.tiny > a,
+body.page-user .profile .collapsed legend a.dropdown.split.tiny > a,
 .content-article .collapsible legend a.dropdown.split.tiny > a,
 body.node-type-resource article .collapsible legend a.dropdown.split.tiny > a,
 body.node-type-organization article .collapsible legend a.dropdown.split.tiny > a,
-body.node-type-event article .collapsible legend a.dropdown.split.tiny > a {
+body.node-type-event article .collapsible legend a.dropdown.split.tiny > a,
+body.page-user .profile .collapsible legend a.dropdown.split.tiny > a {
   padding: 5px 25px 6px 10px;
   padding-left: 10px;
   padding-right: 25px;
@@ -2588,10 +2760,12 @@ body.node-type-event article .collapsible legend a.dropdown.split.tiny > a {
 body.node-type-resource article .collapsed legend a.dropdown.split > span,
 body.node-type-organization article .collapsed legend a.dropdown.split > span,
 body.node-type-event article .collapsed legend a.dropdown.split > span,
+body.page-user .profile .collapsed legend a.dropdown.split > span,
 .content-article .collapsible legend a.dropdown.split > span,
 body.node-type-resource article .collapsible legend a.dropdown.split > span,
 body.node-type-organization article .collapsible legend a.dropdown.split > span,
-body.node-type-event article .collapsible legend a.dropdown.split > span {
+body.node-type-event article .collapsible legend a.dropdown.split > span,
+body.page-user .profile .collapsible legend a.dropdown.split > span {
   background-color: #18729d;
   position: absolute;
   right: 0;
@@ -2614,19 +2788,23 @@ body.node-type-event article .collapsible legend a.dropdown.split > span {
 body.node-type-resource article .collapsed legend a.dropdown.split > span:hover,
 body.node-type-organization article .collapsed legend a.dropdown.split > span:hover,
 body.node-type-event article .collapsed legend a.dropdown.split > span:hover,
+body.page-user .profile .collapsed legend a.dropdown.split > span:hover,
 .content-article .collapsible legend a.dropdown.split > span:hover,
 body.node-type-resource article .collapsible legend a.dropdown.split > span:hover,
 body.node-type-organization article .collapsible legend a.dropdown.split > span:hover,
-body.node-type-event article .collapsible legend a.dropdown.split > span:hover, .button.dropdown.split > span:focus, #content > article .collapsed legend a.dropdown.split > span:focus,
+body.node-type-event article .collapsible legend a.dropdown.split > span:hover,
+body.page-user .profile .collapsible legend a.dropdown.split > span:hover, .button.dropdown.split > span:focus, #content > article .collapsed legend a.dropdown.split > span:focus,
 #content > article .collapsible legend a.dropdown.split > span:focus,
 .content-article .collapsed legend a.dropdown.split > span:focus,
 body.node-type-resource article .collapsed legend a.dropdown.split > span:focus,
 body.node-type-organization article .collapsed legend a.dropdown.split > span:focus,
 body.node-type-event article .collapsed legend a.dropdown.split > span:focus,
+body.page-user .profile .collapsed legend a.dropdown.split > span:focus,
 .content-article .collapsible legend a.dropdown.split > span:focus,
 body.node-type-resource article .collapsible legend a.dropdown.split > span:focus,
 body.node-type-organization article .collapsible legend a.dropdown.split > span:focus,
-body.node-type-event article .collapsible legend a.dropdown.split > span:focus {
+body.node-type-event article .collapsible legend a.dropdown.split > span:focus,
+body.page-user .profile .collapsible legend a.dropdown.split > span:focus {
   background-color: #115271;
 }
 /* line 121, ../../../../../../../../.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/zurb-foundation-3.2.5/scss/foundation/components/modules/_buttons.scss */
@@ -2636,10 +2814,12 @@ body.node-type-event article .collapsible legend a.dropdown.split > span:focus {
 body.node-type-resource article .collapsed legend a.dropdown.split > span:after,
 body.node-type-organization article .collapsed legend a.dropdown.split > span:after,
 body.node-type-event article .collapsed legend a.dropdown.split > span:after,
+body.page-user .profile .collapsed legend a.dropdown.split > span:after,
 .content-article .collapsible legend a.dropdown.split > span:after,
 body.node-type-resource article .collapsible legend a.dropdown.split > span:after,
 body.node-type-organization article .collapsible legend a.dropdown.split > span:after,
-body.node-type-event article .collapsible legend a.dropdown.split > span:after {
+body.node-type-event article .collapsible legend a.dropdown.split > span:after,
+body.page-user .profile .collapsible legend a.dropdown.split > span:after {
   content: "";
   display: block;
   width: 0;
@@ -2659,10 +2839,12 @@ body.node-type-event article .collapsible legend a.dropdown.split > span:after {
 body.node-type-resource article .collapsed legend a.dropdown.split.secondary > span:after,
 body.node-type-organization article .collapsed legend a.dropdown.split.secondary > span:after,
 body.node-type-event article .collapsed legend a.dropdown.split.secondary > span:after,
+body.page-user .profile .collapsed legend a.dropdown.split.secondary > span:after,
 .content-article .collapsible legend a.dropdown.split.secondary > span:after,
 body.node-type-resource article .collapsible legend a.dropdown.split.secondary > span:after,
 body.node-type-organization article .collapsible legend a.dropdown.split.secondary > span:after,
-body.node-type-event article .collapsible legend a.dropdown.split.secondary > span:after {
+body.node-type-event article .collapsible legend a.dropdown.split.secondary > span:after,
+body.page-user .profile .collapsible legend a.dropdown.split.secondary > span:after {
   content: "";
   display: block;
   width: 0;
@@ -2677,10 +2859,12 @@ body.node-type-event article .collapsible legend a.dropdown.split.secondary > sp
 body.node-type-resource article .collapsed legend a.dropdown.split.large span,
 body.node-type-organization article .collapsed legend a.dropdown.split.large span,
 body.node-type-event article .collapsed legend a.dropdown.split.large span,
+body.page-user .profile .collapsed legend a.dropdown.split.large span,
 .content-article .collapsible legend a.dropdown.split.large span,
 body.node-type-resource article .collapsible legend a.dropdown.split.large span,
 body.node-type-organization article .collapsible legend a.dropdown.split.large span,
-body.node-type-event article .collapsible legend a.dropdown.split.large span {
+body.node-type-event article .collapsible legend a.dropdown.split.large span,
+body.page-user .profile .collapsible legend a.dropdown.split.large span {
   width: 45px;
 }
 /* line 126, ../../../../../../../../.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/zurb-foundation-3.2.5/scss/foundation/components/modules/_buttons.scss */
@@ -2690,10 +2874,12 @@ body.node-type-event article .collapsible legend a.dropdown.split.large span {
 body.node-type-resource article .collapsed legend a.dropdown.split.small span,
 body.node-type-organization article .collapsed legend a.dropdown.split.small span,
 body.node-type-event article .collapsed legend a.dropdown.split.small span,
+body.page-user .profile .collapsed legend a.dropdown.split.small span,
 .content-article .collapsible legend a.dropdown.split.small span,
 body.node-type-resource article .collapsible legend a.dropdown.split.small span,
 body.node-type-organization article .collapsible legend a.dropdown.split.small span,
-body.node-type-event article .collapsible legend a.dropdown.split.small span {
+body.node-type-event article .collapsible legend a.dropdown.split.small span,
+body.page-user .profile .collapsible legend a.dropdown.split.small span {
   width: 21px;
 }
 /* line 127, ../../../../../../../../.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/zurb-foundation-3.2.5/scss/foundation/components/modules/_buttons.scss */
@@ -2703,10 +2889,12 @@ body.node-type-event article .collapsible legend a.dropdown.split.small span {
 body.node-type-resource article .collapsed legend a.dropdown.split.tiny span,
 body.node-type-organization article .collapsed legend a.dropdown.split.tiny span,
 body.node-type-event article .collapsed legend a.dropdown.split.tiny span,
+body.page-user .profile .collapsed legend a.dropdown.split.tiny span,
 .content-article .collapsible legend a.dropdown.split.tiny span,
 body.node-type-resource article .collapsible legend a.dropdown.split.tiny span,
 body.node-type-organization article .collapsible legend a.dropdown.split.tiny span,
-body.node-type-event article .collapsible legend a.dropdown.split.tiny span {
+body.node-type-event article .collapsible legend a.dropdown.split.tiny span,
+body.page-user .profile .collapsible legend a.dropdown.split.tiny span {
   width: 15px;
 }
 /* line 129, ../../../../../../../../.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/zurb-foundation-3.2.5/scss/foundation/components/modules/_buttons.scss */
@@ -2716,10 +2904,12 @@ body.node-type-event article .collapsible legend a.dropdown.split.tiny span {
 body.node-type-resource article .collapsed legend a.dropdown.split.large span:after,
 body.node-type-organization article .collapsed legend a.dropdown.split.large span:after,
 body.node-type-event article .collapsed legend a.dropdown.split.large span:after,
+body.page-user .profile .collapsed legend a.dropdown.split.large span:after,
 .content-article .collapsible legend a.dropdown.split.large span:after,
 body.node-type-resource article .collapsible legend a.dropdown.split.large span:after,
 body.node-type-organization article .collapsible legend a.dropdown.split.large span:after,
-body.node-type-event article .collapsible legend a.dropdown.split.large span:after {
+body.node-type-event article .collapsible legend a.dropdown.split.large span:after,
+body.page-user .profile .collapsible legend a.dropdown.split.large span:after {
   content: "";
   display: block;
   width: 0;
@@ -2736,10 +2926,12 @@ body.node-type-event article .collapsible legend a.dropdown.split.large span:aft
 body.node-type-resource article .collapsed legend a.dropdown.split.small span:after,
 body.node-type-organization article .collapsed legend a.dropdown.split.small span:after,
 body.node-type-event article .collapsed legend a.dropdown.split.small span:after,
+body.page-user .profile .collapsed legend a.dropdown.split.small span:after,
 .content-article .collapsible legend a.dropdown.split.small span:after,
 body.node-type-resource article .collapsible legend a.dropdown.split.small span:after,
 body.node-type-organization article .collapsible legend a.dropdown.split.small span:after,
-body.node-type-event article .collapsible legend a.dropdown.split.small span:after {
+body.node-type-event article .collapsible legend a.dropdown.split.small span:after,
+body.page-user .profile .collapsible legend a.dropdown.split.small span:after {
   content: "";
   display: block;
   width: 0;
@@ -2756,10 +2948,12 @@ body.node-type-event article .collapsible legend a.dropdown.split.small span:aft
 body.node-type-resource article .collapsed legend a.dropdown.split.tiny span:after,
 body.node-type-organization article .collapsed legend a.dropdown.split.tiny span:after,
 body.node-type-event article .collapsed legend a.dropdown.split.tiny span:after,
+body.page-user .profile .collapsed legend a.dropdown.split.tiny span:after,
 .content-article .collapsible legend a.dropdown.split.tiny span:after,
 body.node-type-resource article .collapsible legend a.dropdown.split.tiny span:after,
 body.node-type-organization article .collapsible legend a.dropdown.split.tiny span:after,
-body.node-type-event article .collapsible legend a.dropdown.split.tiny span:after {
+body.node-type-event article .collapsible legend a.dropdown.split.tiny span:after,
+body.page-user .profile .collapsible legend a.dropdown.split.tiny span:after {
   content: "";
   display: block;
   width: 0;
@@ -2776,10 +2970,12 @@ body.node-type-event article .collapsible legend a.dropdown.split.tiny span:afte
 body.node-type-resource article .collapsed legend a.dropdown.split.alert > span,
 body.node-type-organization article .collapsed legend a.dropdown.split.alert > span,
 body.node-type-event article .collapsed legend a.dropdown.split.alert > span,
+body.page-user .profile .collapsed legend a.dropdown.split.alert > span,
 .content-article .collapsible legend a.dropdown.split.alert > span,
 body.node-type-resource article .collapsible legend a.dropdown.split.alert > span,
 body.node-type-organization article .collapsible legend a.dropdown.split.alert > span,
-body.node-type-event article .collapsible legend a.dropdown.split.alert > span {
+body.node-type-event article .collapsible legend a.dropdown.split.alert > span,
+body.page-user .profile .collapsible legend a.dropdown.split.alert > span {
   background-color: #c60f13;
   border-left-color: #7f0a0c;
 }
@@ -2790,10 +2986,12 @@ body.node-type-event article .collapsible legend a.dropdown.split.alert > span {
 body.node-type-resource article .collapsed legend a.dropdown.split.success > span,
 body.node-type-organization article .collapsed legend a.dropdown.split.success > span,
 body.node-type-event article .collapsed legend a.dropdown.split.success > span,
+body.page-user .profile .collapsed legend a.dropdown.split.success > span,
 .content-article .collapsible legend a.dropdown.split.success > span,
 body.node-type-resource article .collapsible legend a.dropdown.split.success > span,
 body.node-type-organization article .collapsible legend a.dropdown.split.success > span,
-body.node-type-event article .collapsible legend a.dropdown.split.success > span {
+body.node-type-event article .collapsible legend a.dropdown.split.success > span,
+body.page-user .profile .collapsible legend a.dropdown.split.success > span {
   background-color: #5da423;
   border-left-color: #396516;
 }
@@ -2804,10 +3002,12 @@ body.node-type-event article .collapsible legend a.dropdown.split.success > span
 body.node-type-resource article .collapsed legend a.dropdown.split.secondary > span,
 body.node-type-organization article .collapsed legend a.dropdown.split.secondary > span,
 body.node-type-event article .collapsed legend a.dropdown.split.secondary > span,
+body.page-user .profile .collapsed legend a.dropdown.split.secondary > span,
 .content-article .collapsible legend a.dropdown.split.secondary > span,
 body.node-type-resource article .collapsible legend a.dropdown.split.secondary > span,
 body.node-type-organization article .collapsible legend a.dropdown.split.secondary > span,
-body.node-type-event article .collapsible legend a.dropdown.split.secondary > span {
+body.node-type-event article .collapsible legend a.dropdown.split.secondary > span,
+body.page-user .profile .collapsible legend a.dropdown.split.secondary > span {
   background-color: #f68115;
   border-left-color: #b75c07;
 }
@@ -2818,10 +3018,12 @@ body.node-type-event article .collapsible legend a.dropdown.split.secondary > sp
 body.node-type-resource article .collapsed legend a.dropdown.split.secondary > a,
 body.node-type-organization article .collapsed legend a.dropdown.split.secondary > a,
 body.node-type-event article .collapsed legend a.dropdown.split.secondary > a,
+body.page-user .profile .collapsed legend a.dropdown.split.secondary > a,
 .content-article .collapsible legend a.dropdown.split.secondary > a,
 body.node-type-resource article .collapsible legend a.dropdown.split.secondary > a,
 body.node-type-organization article .collapsible legend a.dropdown.split.secondary > a,
-body.node-type-event article .collapsible legend a.dropdown.split.secondary > a {
+body.node-type-event article .collapsible legend a.dropdown.split.secondary > a,
+body.page-user .profile .collapsible legend a.dropdown.split.secondary > a {
   color: black;
 }
 /* line 139, ../../../../../../../../.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/zurb-foundation-3.2.5/scss/foundation/components/modules/_buttons.scss */
@@ -2831,37 +3033,45 @@ body.node-type-event article .collapsible legend a.dropdown.split.secondary > a 
 body.node-type-resource article .collapsed legend a.dropdown.split.alert > a:hover,
 body.node-type-organization article .collapsed legend a.dropdown.split.alert > a:hover,
 body.node-type-event article .collapsed legend a.dropdown.split.alert > a:hover,
+body.page-user .profile .collapsed legend a.dropdown.split.alert > a:hover,
 .content-article .collapsible legend a.dropdown.split.alert > a:hover,
 body.node-type-resource article .collapsible legend a.dropdown.split.alert > a:hover,
 body.node-type-organization article .collapsible legend a.dropdown.split.alert > a:hover,
-body.node-type-event article .collapsible legend a.dropdown.split.alert > a:hover, .button.dropdown.split.alert > span:hover, #content > article .collapsed legend a.dropdown.split.alert > span:hover,
+body.node-type-event article .collapsible legend a.dropdown.split.alert > a:hover,
+body.page-user .profile .collapsible legend a.dropdown.split.alert > a:hover, .button.dropdown.split.alert > span:hover, #content > article .collapsed legend a.dropdown.split.alert > span:hover,
 #content > article .collapsible legend a.dropdown.split.alert > span:hover,
 .content-article .collapsed legend a.dropdown.split.alert > span:hover,
 body.node-type-resource article .collapsed legend a.dropdown.split.alert > span:hover,
 body.node-type-organization article .collapsed legend a.dropdown.split.alert > span:hover,
 body.node-type-event article .collapsed legend a.dropdown.split.alert > span:hover,
+body.page-user .profile .collapsed legend a.dropdown.split.alert > span:hover,
 .content-article .collapsible legend a.dropdown.split.alert > span:hover,
 body.node-type-resource article .collapsible legend a.dropdown.split.alert > span:hover,
 body.node-type-organization article .collapsible legend a.dropdown.split.alert > span:hover,
-body.node-type-event article .collapsible legend a.dropdown.split.alert > span:hover, .button.dropdown.split.alert > a:focus, #content > article .collapsed legend a.dropdown.split.alert > a:focus,
+body.node-type-event article .collapsible legend a.dropdown.split.alert > span:hover,
+body.page-user .profile .collapsible legend a.dropdown.split.alert > span:hover, .button.dropdown.split.alert > a:focus, #content > article .collapsed legend a.dropdown.split.alert > a:focus,
 #content > article .collapsible legend a.dropdown.split.alert > a:focus,
 .content-article .collapsed legend a.dropdown.split.alert > a:focus,
 body.node-type-resource article .collapsed legend a.dropdown.split.alert > a:focus,
 body.node-type-organization article .collapsed legend a.dropdown.split.alert > a:focus,
 body.node-type-event article .collapsed legend a.dropdown.split.alert > a:focus,
+body.page-user .profile .collapsed legend a.dropdown.split.alert > a:focus,
 .content-article .collapsible legend a.dropdown.split.alert > a:focus,
 body.node-type-resource article .collapsible legend a.dropdown.split.alert > a:focus,
 body.node-type-organization article .collapsible legend a.dropdown.split.alert > a:focus,
-body.node-type-event article .collapsible legend a.dropdown.split.alert > a:focus, .button.dropdown.split.alert > span:focus, #content > article .collapsed legend a.dropdown.split.alert > span:focus,
+body.node-type-event article .collapsible legend a.dropdown.split.alert > a:focus,
+body.page-user .profile .collapsible legend a.dropdown.split.alert > a:focus, .button.dropdown.split.alert > span:focus, #content > article .collapsed legend a.dropdown.split.alert > span:focus,
 #content > article .collapsible legend a.dropdown.split.alert > span:focus,
 .content-article .collapsed legend a.dropdown.split.alert > span:focus,
 body.node-type-resource article .collapsed legend a.dropdown.split.alert > span:focus,
 body.node-type-organization article .collapsed legend a.dropdown.split.alert > span:focus,
 body.node-type-event article .collapsed legend a.dropdown.split.alert > span:focus,
+body.page-user .profile .collapsed legend a.dropdown.split.alert > span:focus,
 .content-article .collapsible legend a.dropdown.split.alert > span:focus,
 body.node-type-resource article .collapsible legend a.dropdown.split.alert > span:focus,
 body.node-type-organization article .collapsible legend a.dropdown.split.alert > span:focus,
-body.node-type-event article .collapsible legend a.dropdown.split.alert > span:focus {
+body.node-type-event article .collapsible legend a.dropdown.split.alert > span:focus,
+body.page-user .profile .collapsible legend a.dropdown.split.alert > span:focus {
   background-color: #970b0e;
 }
 /* line 140, ../../../../../../../../.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/zurb-foundation-3.2.5/scss/foundation/components/modules/_buttons.scss */
@@ -2871,37 +3081,45 @@ body.node-type-event article .collapsible legend a.dropdown.split.alert > span:f
 body.node-type-resource article .collapsed legend a.dropdown.split.success > a:hover,
 body.node-type-organization article .collapsed legend a.dropdown.split.success > a:hover,
 body.node-type-event article .collapsed legend a.dropdown.split.success > a:hover,
+body.page-user .profile .collapsed legend a.dropdown.split.success > a:hover,
 .content-article .collapsible legend a.dropdown.split.success > a:hover,
 body.node-type-resource article .collapsible legend a.dropdown.split.success > a:hover,
 body.node-type-organization article .collapsible legend a.dropdown.split.success > a:hover,
-body.node-type-event article .collapsible legend a.dropdown.split.success > a:hover, .button.dropdown.split.success > span:hover, #content > article .collapsed legend a.dropdown.split.success > span:hover,
+body.node-type-event article .collapsible legend a.dropdown.split.success > a:hover,
+body.page-user .profile .collapsible legend a.dropdown.split.success > a:hover, .button.dropdown.split.success > span:hover, #content > article .collapsed legend a.dropdown.split.success > span:hover,
 #content > article .collapsible legend a.dropdown.split.success > span:hover,
 .content-article .collapsed legend a.dropdown.split.success > span:hover,
 body.node-type-resource article .collapsed legend a.dropdown.split.success > span:hover,
 body.node-type-organization article .collapsed legend a.dropdown.split.success > span:hover,
 body.node-type-event article .collapsed legend a.dropdown.split.success > span:hover,
+body.page-user .profile .collapsed legend a.dropdown.split.success > span:hover,
 .content-article .collapsible legend a.dropdown.split.success > span:hover,
 body.node-type-resource article .collapsible legend a.dropdown.split.success > span:hover,
 body.node-type-organization article .collapsible legend a.dropdown.split.success > span:hover,
-body.node-type-event article .collapsible legend a.dropdown.split.success > span:hover, .button.dropdown.split.success > a:focus, #content > article .collapsed legend a.dropdown.split.success > a:focus,
+body.node-type-event article .collapsible legend a.dropdown.split.success > span:hover,
+body.page-user .profile .collapsible legend a.dropdown.split.success > span:hover, .button.dropdown.split.success > a:focus, #content > article .collapsed legend a.dropdown.split.success > a:focus,
 #content > article .collapsible legend a.dropdown.split.success > a:focus,
 .content-article .collapsed legend a.dropdown.split.success > a:focus,
 body.node-type-resource article .collapsed legend a.dropdown.split.success > a:focus,
 body.node-type-organization article .collapsed legend a.dropdown.split.success > a:focus,
 body.node-type-event article .collapsed legend a.dropdown.split.success > a:focus,
+body.page-user .profile .collapsed legend a.dropdown.split.success > a:focus,
 .content-article .collapsible legend a.dropdown.split.success > a:focus,
 body.node-type-resource article .collapsible legend a.dropdown.split.success > a:focus,
 body.node-type-organization article .collapsible legend a.dropdown.split.success > a:focus,
-body.node-type-event article .collapsible legend a.dropdown.split.success > a:focus, .button.dropdown.split.success > span:focus, #content > article .collapsed legend a.dropdown.split.success > span:focus,
+body.node-type-event article .collapsible legend a.dropdown.split.success > a:focus,
+body.page-user .profile .collapsible legend a.dropdown.split.success > a:focus, .button.dropdown.split.success > span:focus, #content > article .collapsed legend a.dropdown.split.success > span:focus,
 #content > article .collapsible legend a.dropdown.split.success > span:focus,
 .content-article .collapsed legend a.dropdown.split.success > span:focus,
 body.node-type-resource article .collapsed legend a.dropdown.split.success > span:focus,
 body.node-type-organization article .collapsed legend a.dropdown.split.success > span:focus,
 body.node-type-event article .collapsed legend a.dropdown.split.success > span:focus,
+body.page-user .profile .collapsed legend a.dropdown.split.success > span:focus,
 .content-article .collapsible legend a.dropdown.split.success > span:focus,
 body.node-type-resource article .collapsible legend a.dropdown.split.success > span:focus,
 body.node-type-organization article .collapsible legend a.dropdown.split.success > span:focus,
-body.node-type-event article .collapsible legend a.dropdown.split.success > span:focus {
+body.node-type-event article .collapsible legend a.dropdown.split.success > span:focus,
+body.page-user .profile .collapsible legend a.dropdown.split.success > span:focus {
   background-color: #457a1a;
 }
 /* line 141, ../../../../../../../../.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/zurb-foundation-3.2.5/scss/foundation/components/modules/_buttons.scss */
@@ -2911,37 +3129,45 @@ body.node-type-event article .collapsible legend a.dropdown.split.success > span
 body.node-type-resource article .collapsed legend a.dropdown.split.secondary > a:hover,
 body.node-type-organization article .collapsed legend a.dropdown.split.secondary > a:hover,
 body.node-type-event article .collapsed legend a.dropdown.split.secondary > a:hover,
+body.page-user .profile .collapsed legend a.dropdown.split.secondary > a:hover,
 .content-article .collapsible legend a.dropdown.split.secondary > a:hover,
 body.node-type-resource article .collapsible legend a.dropdown.split.secondary > a:hover,
 body.node-type-organization article .collapsible legend a.dropdown.split.secondary > a:hover,
-body.node-type-event article .collapsible legend a.dropdown.split.secondary > a:hover, .button.dropdown.split.secondary > span:hover, #content > article .collapsed legend a.dropdown.split.secondary > span:hover,
+body.node-type-event article .collapsible legend a.dropdown.split.secondary > a:hover,
+body.page-user .profile .collapsible legend a.dropdown.split.secondary > a:hover, .button.dropdown.split.secondary > span:hover, #content > article .collapsed legend a.dropdown.split.secondary > span:hover,
 #content > article .collapsible legend a.dropdown.split.secondary > span:hover,
 .content-article .collapsed legend a.dropdown.split.secondary > span:hover,
 body.node-type-resource article .collapsed legend a.dropdown.split.secondary > span:hover,
 body.node-type-organization article .collapsed legend a.dropdown.split.secondary > span:hover,
 body.node-type-event article .collapsed legend a.dropdown.split.secondary > span:hover,
+body.page-user .profile .collapsed legend a.dropdown.split.secondary > span:hover,
 .content-article .collapsible legend a.dropdown.split.secondary > span:hover,
 body.node-type-resource article .collapsible legend a.dropdown.split.secondary > span:hover,
 body.node-type-organization article .collapsible legend a.dropdown.split.secondary > span:hover,
-body.node-type-event article .collapsible legend a.dropdown.split.secondary > span:hover, .button.dropdown.split.secondary > a:focus, #content > article .collapsed legend a.dropdown.split.secondary > a:focus,
+body.node-type-event article .collapsible legend a.dropdown.split.secondary > span:hover,
+body.page-user .profile .collapsible legend a.dropdown.split.secondary > span:hover, .button.dropdown.split.secondary > a:focus, #content > article .collapsed legend a.dropdown.split.secondary > a:focus,
 #content > article .collapsible legend a.dropdown.split.secondary > a:focus,
 .content-article .collapsed legend a.dropdown.split.secondary > a:focus,
 body.node-type-resource article .collapsed legend a.dropdown.split.secondary > a:focus,
 body.node-type-organization article .collapsed legend a.dropdown.split.secondary > a:focus,
 body.node-type-event article .collapsed legend a.dropdown.split.secondary > a:focus,
+body.page-user .profile .collapsed legend a.dropdown.split.secondary > a:focus,
 .content-article .collapsible legend a.dropdown.split.secondary > a:focus,
 body.node-type-resource article .collapsible legend a.dropdown.split.secondary > a:focus,
 body.node-type-organization article .collapsible legend a.dropdown.split.secondary > a:focus,
-body.node-type-event article .collapsible legend a.dropdown.split.secondary > a:focus, .button.dropdown.split.secondary > span:focus, #content > article .collapsed legend a.dropdown.split.secondary > span:focus,
+body.node-type-event article .collapsible legend a.dropdown.split.secondary > a:focus,
+body.page-user .profile .collapsible legend a.dropdown.split.secondary > a:focus, .button.dropdown.split.secondary > span:focus, #content > article .collapsed legend a.dropdown.split.secondary > span:focus,
 #content > article .collapsible legend a.dropdown.split.secondary > span:focus,
 .content-article .collapsed legend a.dropdown.split.secondary > span:focus,
 body.node-type-resource article .collapsed legend a.dropdown.split.secondary > span:focus,
 body.node-type-organization article .collapsed legend a.dropdown.split.secondary > span:focus,
 body.node-type-event article .collapsed legend a.dropdown.split.secondary > span:focus,
+body.page-user .profile .collapsed legend a.dropdown.split.secondary > span:focus,
 .content-article .collapsible legend a.dropdown.split.secondary > span:focus,
 body.node-type-resource article .collapsible legend a.dropdown.split.secondary > span:focus,
 body.node-type-organization article .collapsible legend a.dropdown.split.secondary > span:focus,
-body.node-type-event article .collapsible legend a.dropdown.split.secondary > span:focus {
+body.node-type-event article .collapsible legend a.dropdown.split.secondary > span:focus,
+body.page-user .profile .collapsible legend a.dropdown.split.secondary > span:focus {
   background-color: #d06808;
 }
 
@@ -2984,6 +3210,8 @@ ul.button-group.radius li body.node-type-organization article .collapsed legend 
 body.node-type-organization article .collapsed legend ul.button-group.radius li a,
 ul.button-group.radius li body.node-type-event article .collapsed legend a,
 body.node-type-event article .collapsed legend ul.button-group.radius li a,
+ul.button-group.radius li body.page-user .profile .collapsed legend a,
+body.page-user .profile .collapsed legend ul.button-group.radius li a,
 ul.button-group.radius li .content-article .collapsible legend a,
 .content-article .collapsible legend ul.button-group.radius li a,
 ul.button-group.radius li body.node-type-resource article .collapsible legend a,
@@ -2991,7 +3219,9 @@ body.node-type-resource article .collapsible legend ul.button-group.radius li a,
 ul.button-group.radius li body.node-type-organization article .collapsible legend a,
 body.node-type-organization article .collapsible legend ul.button-group.radius li a,
 ul.button-group.radius li body.node-type-event article .collapsible legend a,
-body.node-type-event article .collapsible legend ul.button-group.radius li a, ul.button-group.radius li .button.radius, ul.button-group.radius li #content > article .collapsed legend a.radius, #content > article .collapsed legend ul.button-group.radius li a.radius,
+body.node-type-event article .collapsible legend ul.button-group.radius li a,
+ul.button-group.radius li body.page-user .profile .collapsible legend a,
+body.page-user .profile .collapsible legend ul.button-group.radius li a, ul.button-group.radius li .button.radius, ul.button-group.radius li #content > article .collapsed legend a.radius, #content > article .collapsed legend ul.button-group.radius li a.radius,
 ul.button-group.radius li #content > article .collapsible legend a.radius,
 #content > article .collapsible legend ul.button-group.radius li a.radius,
 ul.button-group.radius li .content-article .collapsed legend a.radius,
@@ -3002,6 +3232,8 @@ ul.button-group.radius li body.node-type-organization article .collapsed legend 
 body.node-type-organization article .collapsed legend ul.button-group.radius li a.radius,
 ul.button-group.radius li body.node-type-event article .collapsed legend a.radius,
 body.node-type-event article .collapsed legend ul.button-group.radius li a.radius,
+ul.button-group.radius li body.page-user .profile .collapsed legend a.radius,
+body.page-user .profile .collapsed legend ul.button-group.radius li a.radius,
 ul.button-group.radius li .content-article .collapsible legend a.radius,
 .content-article .collapsible legend ul.button-group.radius li a.radius,
 ul.button-group.radius li body.node-type-resource article .collapsible legend a.radius,
@@ -3009,7 +3241,9 @@ body.node-type-resource article .collapsible legend ul.button-group.radius li a.
 ul.button-group.radius li body.node-type-organization article .collapsible legend a.radius,
 body.node-type-organization article .collapsible legend ul.button-group.radius li a.radius,
 ul.button-group.radius li body.node-type-event article .collapsible legend a.radius,
-body.node-type-event article .collapsible legend ul.button-group.radius li a.radius, ul.button-group.radius li .button-rounded {
+body.node-type-event article .collapsible legend ul.button-group.radius li a.radius,
+ul.button-group.radius li body.page-user .profile .collapsible legend a.radius,
+body.page-user .profile .collapsible legend ul.button-group.radius li a.radius, ul.button-group.radius li .button-rounded {
   -webkit-border-radius: 0px;
   -moz-border-radius: 0px;
   -ms-border-radius: 0px;
@@ -3028,6 +3262,8 @@ ul.button-group.radius li:first-child body.node-type-organization article .colla
 body.node-type-organization article .collapsed legend ul.button-group.radius li:first-child a,
 ul.button-group.radius li:first-child body.node-type-event article .collapsed legend a,
 body.node-type-event article .collapsed legend ul.button-group.radius li:first-child a,
+ul.button-group.radius li:first-child body.page-user .profile .collapsed legend a,
+body.page-user .profile .collapsed legend ul.button-group.radius li:first-child a,
 ul.button-group.radius li:first-child .content-article .collapsible legend a,
 .content-article .collapsible legend ul.button-group.radius li:first-child a,
 ul.button-group.radius li:first-child body.node-type-resource article .collapsible legend a,
@@ -3035,7 +3271,9 @@ body.node-type-resource article .collapsible legend ul.button-group.radius li:fi
 ul.button-group.radius li:first-child body.node-type-organization article .collapsible legend a,
 body.node-type-organization article .collapsible legend ul.button-group.radius li:first-child a,
 ul.button-group.radius li:first-child body.node-type-event article .collapsible legend a,
-body.node-type-event article .collapsible legend ul.button-group.radius li:first-child a, ul.button-group.radius li:first-child .button.radius, ul.button-group.radius li:first-child #content > article .collapsed legend a.radius, #content > article .collapsed legend ul.button-group.radius li:first-child a.radius,
+body.node-type-event article .collapsible legend ul.button-group.radius li:first-child a,
+ul.button-group.radius li:first-child body.page-user .profile .collapsible legend a,
+body.page-user .profile .collapsible legend ul.button-group.radius li:first-child a, ul.button-group.radius li:first-child .button.radius, ul.button-group.radius li:first-child #content > article .collapsed legend a.radius, #content > article .collapsed legend ul.button-group.radius li:first-child a.radius,
 ul.button-group.radius li:first-child #content > article .collapsible legend a.radius,
 #content > article .collapsible legend ul.button-group.radius li:first-child a.radius,
 ul.button-group.radius li:first-child .content-article .collapsed legend a.radius,
@@ -3046,6 +3284,8 @@ ul.button-group.radius li:first-child body.node-type-organization article .colla
 body.node-type-organization article .collapsed legend ul.button-group.radius li:first-child a.radius,
 ul.button-group.radius li:first-child body.node-type-event article .collapsed legend a.radius,
 body.node-type-event article .collapsed legend ul.button-group.radius li:first-child a.radius,
+ul.button-group.radius li:first-child body.page-user .profile .collapsed legend a.radius,
+body.page-user .profile .collapsed legend ul.button-group.radius li:first-child a.radius,
 ul.button-group.radius li:first-child .content-article .collapsible legend a.radius,
 .content-article .collapsible legend ul.button-group.radius li:first-child a.radius,
 ul.button-group.radius li:first-child body.node-type-resource article .collapsible legend a.radius,
@@ -3053,7 +3293,9 @@ body.node-type-resource article .collapsible legend ul.button-group.radius li:fi
 ul.button-group.radius li:first-child body.node-type-organization article .collapsible legend a.radius,
 body.node-type-organization article .collapsible legend ul.button-group.radius li:first-child a.radius,
 ul.button-group.radius li:first-child body.node-type-event article .collapsible legend a.radius,
-body.node-type-event article .collapsible legend ul.button-group.radius li:first-child a.radius {
+body.node-type-event article .collapsible legend ul.button-group.radius li:first-child a.radius,
+ul.button-group.radius li:first-child body.page-user .profile .collapsible legend a.radius,
+body.page-user .profile .collapsible legend ul.button-group.radius li:first-child a.radius {
   -moz-border-radius-topleft: 7px;
   -webkit-border-top-left-radius: 7px;
   border-top-left-radius: 7px;
@@ -3073,6 +3315,8 @@ ul.button-group.radius li:first-child body.node-type-organization article .colla
 body.node-type-organization article .collapsed legend ul.button-group.radius li:first-child a.rounded,
 ul.button-group.radius li:first-child body.node-type-event article .collapsed legend a.rounded,
 body.node-type-event article .collapsed legend ul.button-group.radius li:first-child a.rounded,
+ul.button-group.radius li:first-child body.page-user .profile .collapsed legend a.rounded,
+body.page-user .profile .collapsed legend ul.button-group.radius li:first-child a.rounded,
 ul.button-group.radius li:first-child .content-article .collapsible legend a.rounded,
 .content-article .collapsible legend ul.button-group.radius li:first-child a.rounded,
 ul.button-group.radius li:first-child body.node-type-resource article .collapsible legend a.rounded,
@@ -3080,7 +3324,9 @@ body.node-type-resource article .collapsible legend ul.button-group.radius li:fi
 ul.button-group.radius li:first-child body.node-type-organization article .collapsible legend a.rounded,
 body.node-type-organization article .collapsible legend ul.button-group.radius li:first-child a.rounded,
 ul.button-group.radius li:first-child body.node-type-event article .collapsible legend a.rounded,
-body.node-type-event article .collapsible legend ul.button-group.radius li:first-child a.rounded {
+body.node-type-event article .collapsible legend ul.button-group.radius li:first-child a.rounded,
+ul.button-group.radius li:first-child body.page-user .profile .collapsible legend a.rounded,
+body.page-user .profile .collapsible legend ul.button-group.radius li:first-child a.rounded {
   -moz-border-radius-topleft: 1000px;
   -webkit-border-top-left-radius: 1000px;
   border-top-left-radius: 1000px;
@@ -3100,6 +3346,8 @@ ul.button-group.radius li:last-child body.node-type-organization article .collap
 body.node-type-organization article .collapsed legend ul.button-group.radius li:last-child a,
 ul.button-group.radius li:last-child body.node-type-event article .collapsed legend a,
 body.node-type-event article .collapsed legend ul.button-group.radius li:last-child a,
+ul.button-group.radius li:last-child body.page-user .profile .collapsed legend a,
+body.page-user .profile .collapsed legend ul.button-group.radius li:last-child a,
 ul.button-group.radius li:last-child .content-article .collapsible legend a,
 .content-article .collapsible legend ul.button-group.radius li:last-child a,
 ul.button-group.radius li:last-child body.node-type-resource article .collapsible legend a,
@@ -3107,7 +3355,9 @@ body.node-type-resource article .collapsible legend ul.button-group.radius li:la
 ul.button-group.radius li:last-child body.node-type-organization article .collapsible legend a,
 body.node-type-organization article .collapsible legend ul.button-group.radius li:last-child a,
 ul.button-group.radius li:last-child body.node-type-event article .collapsible legend a,
-body.node-type-event article .collapsible legend ul.button-group.radius li:last-child a, ul.button-group.radius li:last-child .button.radius, ul.button-group.radius li:last-child #content > article .collapsed legend a.radius, #content > article .collapsed legend ul.button-group.radius li:last-child a.radius,
+body.node-type-event article .collapsible legend ul.button-group.radius li:last-child a,
+ul.button-group.radius li:last-child body.page-user .profile .collapsible legend a,
+body.page-user .profile .collapsible legend ul.button-group.radius li:last-child a, ul.button-group.radius li:last-child .button.radius, ul.button-group.radius li:last-child #content > article .collapsed legend a.radius, #content > article .collapsed legend ul.button-group.radius li:last-child a.radius,
 ul.button-group.radius li:last-child #content > article .collapsible legend a.radius,
 #content > article .collapsible legend ul.button-group.radius li:last-child a.radius,
 ul.button-group.radius li:last-child .content-article .collapsed legend a.radius,
@@ -3118,6 +3368,8 @@ ul.button-group.radius li:last-child body.node-type-organization article .collap
 body.node-type-organization article .collapsed legend ul.button-group.radius li:last-child a.radius,
 ul.button-group.radius li:last-child body.node-type-event article .collapsed legend a.radius,
 body.node-type-event article .collapsed legend ul.button-group.radius li:last-child a.radius,
+ul.button-group.radius li:last-child body.page-user .profile .collapsed legend a.radius,
+body.page-user .profile .collapsed legend ul.button-group.radius li:last-child a.radius,
 ul.button-group.radius li:last-child .content-article .collapsible legend a.radius,
 .content-article .collapsible legend ul.button-group.radius li:last-child a.radius,
 ul.button-group.radius li:last-child body.node-type-resource article .collapsible legend a.radius,
@@ -3125,7 +3377,9 @@ body.node-type-resource article .collapsible legend ul.button-group.radius li:la
 ul.button-group.radius li:last-child body.node-type-organization article .collapsible legend a.radius,
 body.node-type-organization article .collapsible legend ul.button-group.radius li:last-child a.radius,
 ul.button-group.radius li:last-child body.node-type-event article .collapsible legend a.radius,
-body.node-type-event article .collapsible legend ul.button-group.radius li:last-child a.radius {
+body.node-type-event article .collapsible legend ul.button-group.radius li:last-child a.radius,
+ul.button-group.radius li:last-child body.page-user .profile .collapsible legend a.radius,
+body.page-user .profile .collapsible legend ul.button-group.radius li:last-child a.radius {
   -moz-border-radius-topright: 7px;
   -webkit-border-top-right-radius: 7px;
   border-top-right-radius: 7px;
@@ -3145,6 +3399,8 @@ ul.button-group.radius li:last-child body.node-type-organization article .collap
 body.node-type-organization article .collapsed legend ul.button-group.radius li:last-child a.rounded,
 ul.button-group.radius li:last-child body.node-type-event article .collapsed legend a.rounded,
 body.node-type-event article .collapsed legend ul.button-group.radius li:last-child a.rounded,
+ul.button-group.radius li:last-child body.page-user .profile .collapsed legend a.rounded,
+body.page-user .profile .collapsed legend ul.button-group.radius li:last-child a.rounded,
 ul.button-group.radius li:last-child .content-article .collapsible legend a.rounded,
 .content-article .collapsible legend ul.button-group.radius li:last-child a.rounded,
 ul.button-group.radius li:last-child body.node-type-resource article .collapsible legend a.rounded,
@@ -3152,7 +3408,9 @@ body.node-type-resource article .collapsible legend ul.button-group.radius li:la
 ul.button-group.radius li:last-child body.node-type-organization article .collapsible legend a.rounded,
 body.node-type-organization article .collapsible legend ul.button-group.radius li:last-child a.rounded,
 ul.button-group.radius li:last-child body.node-type-event article .collapsible legend a.rounded,
-body.node-type-event article .collapsible legend ul.button-group.radius li:last-child a.rounded {
+body.node-type-event article .collapsible legend ul.button-group.radius li:last-child a.rounded,
+ul.button-group.radius li:last-child body.page-user .profile .collapsible legend a.rounded,
+body.page-user .profile .collapsible legend ul.button-group.radius li:last-child a.rounded {
   -moz-border-radius-topright: 1000px;
   -webkit-border-top-right-radius: 1000px;
   border-top-right-radius: 1000px;
@@ -3172,6 +3430,8 @@ ul.button-group.even body.node-type-organization article .collapsed legend a,
 body.node-type-organization article .collapsed legend ul.button-group.even a,
 ul.button-group.even body.node-type-event article .collapsed legend a,
 body.node-type-event article .collapsed legend ul.button-group.even a,
+ul.button-group.even body.page-user .profile .collapsed legend a,
+body.page-user .profile .collapsed legend ul.button-group.even a,
 ul.button-group.even .content-article .collapsible legend a,
 .content-article .collapsible legend ul.button-group.even a,
 ul.button-group.even body.node-type-resource article .collapsible legend a,
@@ -3179,7 +3439,9 @@ body.node-type-resource article .collapsible legend ul.button-group.even a,
 ul.button-group.even body.node-type-organization article .collapsible legend a,
 body.node-type-organization article .collapsible legend ul.button-group.even a,
 ul.button-group.even body.node-type-event article .collapsible legend a,
-body.node-type-event article .collapsible legend ul.button-group.even a {
+body.node-type-event article .collapsible legend ul.button-group.even a,
+ul.button-group.even body.page-user .profile .collapsible legend a,
+body.page-user .profile .collapsible legend ul.button-group.even a {
   width: 100%;
 }
 /* line 167, ../../../../../../../../.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/zurb-foundation-3.2.5/scss/foundation/components/modules/_buttons.scss */
@@ -3482,6 +3744,8 @@ body.node-type-resource article .collapsed legend .panel.callout a,
 body.node-type-organization article .collapsed legend .panel.callout a,
 .panel.callout body.node-type-event article .collapsed legend a,
 body.node-type-event article .collapsed legend .panel.callout a,
+.panel.callout body.page-user .profile .collapsed legend a,
+body.page-user .profile .collapsed legend .panel.callout a,
 .panel.callout .content-article .collapsible legend a,
 .content-article .collapsible legend .panel.callout a,
 .panel.callout body.node-type-resource article .collapsible legend a,
@@ -3489,7 +3753,9 @@ body.node-type-resource article .collapsible legend .panel.callout a,
 .panel.callout body.node-type-organization article .collapsible legend a,
 body.node-type-organization article .collapsible legend .panel.callout a,
 .panel.callout body.node-type-event article .collapsible legend a,
-body.node-type-event article .collapsible legend .panel.callout a {
+body.node-type-event article .collapsible legend .panel.callout a,
+.panel.callout body.page-user .profile .collapsible legend a,
+body.page-user .profile .collapsible legend .panel.callout a {
   background: white;
   border: none;
   color: #18729d;
@@ -3507,6 +3773,8 @@ body.node-type-resource article .collapsed legend .panel.callout a:hover,
 body.node-type-organization article .collapsed legend .panel.callout a:hover,
 .panel.callout body.node-type-event article .collapsed legend a:hover,
 body.node-type-event article .collapsed legend .panel.callout a:hover,
+.panel.callout body.page-user .profile .collapsed legend a:hover,
+body.page-user .profile .collapsed legend .panel.callout a:hover,
 .panel.callout .content-article .collapsible legend a:hover,
 .content-article .collapsible legend .panel.callout a:hover,
 .panel.callout body.node-type-resource article .collapsible legend a:hover,
@@ -3514,7 +3782,9 @@ body.node-type-resource article .collapsible legend .panel.callout a:hover,
 .panel.callout body.node-type-organization article .collapsible legend a:hover,
 body.node-type-organization article .collapsible legend .panel.callout a:hover,
 .panel.callout body.node-type-event article .collapsible legend a:hover,
-body.node-type-event article .collapsible legend .panel.callout a:hover, .panel.callout .button:focus, .panel.callout #content > article .collapsed legend a:focus, #content > article .collapsed legend .panel.callout a:focus,
+body.node-type-event article .collapsible legend .panel.callout a:hover,
+.panel.callout body.page-user .profile .collapsible legend a:hover,
+body.page-user .profile .collapsible legend .panel.callout a:hover, .panel.callout .button:focus, .panel.callout #content > article .collapsed legend a:focus, #content > article .collapsed legend .panel.callout a:focus,
 .panel.callout #content > article .collapsible legend a:focus,
 #content > article .collapsible legend .panel.callout a:focus,
 .panel.callout .content-article .collapsed legend a:focus,
@@ -3525,6 +3795,8 @@ body.node-type-resource article .collapsed legend .panel.callout a:focus,
 body.node-type-organization article .collapsed legend .panel.callout a:focus,
 .panel.callout body.node-type-event article .collapsed legend a:focus,
 body.node-type-event article .collapsed legend .panel.callout a:focus,
+.panel.callout body.page-user .profile .collapsed legend a:focus,
+body.page-user .profile .collapsed legend .panel.callout a:focus,
 .panel.callout .content-article .collapsible legend a:focus,
 .content-article .collapsible legend .panel.callout a:focus,
 .panel.callout body.node-type-resource article .collapsible legend a:focus,
@@ -3532,7 +3804,9 @@ body.node-type-resource article .collapsible legend .panel.callout a:focus,
 .panel.callout body.node-type-organization article .collapsible legend a:focus,
 body.node-type-organization article .collapsible legend .panel.callout a:focus,
 .panel.callout body.node-type-event article .collapsible legend a:focus,
-body.node-type-event article .collapsible legend .panel.callout a:focus {
+body.node-type-event article .collapsible legend .panel.callout a:focus,
+.panel.callout body.page-user .profile .collapsible legend a:focus,
+body.page-user .profile .collapsible legend .panel.callout a:focus {
   background: rgba(255, 255, 255, 0.8);
 }
 /* line 94, ../../../../../../../../.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/zurb-foundation-3.2.5/scss/foundation/components/modules/_ui.scss */
@@ -3572,7 +3846,7 @@ ul.accordion > li > div.title {
   transition: 0.15s background linear;
 }
 /* line 106, ../../../../../../../../.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/zurb-foundation-3.2.5/scss/foundation/components/modules/_ui.scss */
-ul.accordion > li > div.title h1, ul.accordion > li > div.title h2, ul.accordion > li > div.title .content-article .field-label, .content-article ul.accordion > li > div.title .field-label, ul.accordion > li > div.title body.node-type-resource article .field-label, body.node-type-resource article ul.accordion > li > div.title .field-label, ul.accordion > li > div.title body.node-type-organization article .field-label, body.node-type-organization article ul.accordion > li > div.title .field-label, ul.accordion > li > div.title body.node-type-event article .field-label, body.node-type-event article ul.accordion > li > div.title .field-label, ul.accordion > li > div.title h3, ul.accordion > li > div.title h4, ul.accordion > li > div.title h5 {
+ul.accordion > li > div.title h1, ul.accordion > li > div.title h2, ul.accordion > li > div.title .content-article .field-label, .content-article ul.accordion > li > div.title .field-label, ul.accordion > li > div.title body.node-type-resource article .field-label, body.node-type-resource article ul.accordion > li > div.title .field-label, ul.accordion > li > div.title body.node-type-organization article .field-label, body.node-type-organization article ul.accordion > li > div.title .field-label, ul.accordion > li > div.title body.node-type-event article .field-label, body.node-type-event article ul.accordion > li > div.title .field-label, ul.accordion > li > div.title body.page-user .profile .field-label, body.page-user .profile ul.accordion > li > div.title .field-label, ul.accordion > li > div.title h3, ul.accordion > li > div.title h4, ul.accordion > li > div.title h5 {
   margin: 0;
 }
 /* line 107, ../../../../../../../../.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/zurb-foundation-3.2.5/scss/foundation/components/modules/_ui.scss */
@@ -5207,10 +5481,12 @@ table.hide-for-medium {
   body.node-type-resource article .collapsed legend a,
   body.node-type-organization article .collapsed legend a,
   body.node-type-event article .collapsed legend a,
+  body.page-user .profile .collapsed legend a,
   .content-article .collapsible legend a,
   body.node-type-resource article .collapsible legend a,
   body.node-type-organization article .collapsible legend a,
-  body.node-type-event article .collapsible legend a {
+  body.node-type-event article .collapsible legend a,
+  body.page-user .profile .collapsible legend a {
     display: block;
   }
 
@@ -5631,6 +5907,8 @@ table.hide-for-medium {
   body.node-type-organization article .collapsed legend .top-bar ul > li.search form a,
   .top-bar ul > li.search form body.node-type-event article .collapsed legend a,
   body.node-type-event article .collapsed legend .top-bar ul > li.search form a,
+  .top-bar ul > li.search form body.page-user .profile .collapsed legend a,
+  body.page-user .profile .collapsed legend .top-bar ul > li.search form a,
   .top-bar ul > li.search form .content-article .collapsible legend a,
   .content-article .collapsible legend .top-bar ul > li.search form a,
   .top-bar ul > li.search form body.node-type-resource article .collapsible legend a,
@@ -5638,7 +5916,9 @@ table.hide-for-medium {
   .top-bar ul > li.search form body.node-type-organization article .collapsible legend a,
   body.node-type-organization article .collapsible legend .top-bar ul > li.search form a,
   .top-bar ul > li.search form body.node-type-event article .collapsible legend a,
-  body.node-type-event article .collapsible legend .top-bar ul > li.search form a {
+  body.node-type-event article .collapsible legend .top-bar ul > li.search form a,
+  .top-bar ul > li.search form body.page-user .profile .collapsible legend a,
+  body.page-user .profile .collapsible legend .top-bar ul > li.search form a {
     top: -1px;
     width: 25%;
   }
@@ -5841,6 +6121,8 @@ table.hide-for-medium {
   body.node-type-organization article .collapsed legend .top-bar ul li a.small,
   .top-bar ul li body.node-type-event article .collapsed legend a.small,
   body.node-type-event article .collapsed legend .top-bar ul li a.small,
+  .top-bar ul li body.page-user .profile .collapsed legend a.small,
+  body.page-user .profile .collapsed legend .top-bar ul li a.small,
   .top-bar ul li .content-article .collapsible legend a.small,
   .content-article .collapsible legend .top-bar ul li a.small,
   .top-bar ul li body.node-type-resource article .collapsible legend a.small,
@@ -5848,7 +6130,9 @@ table.hide-for-medium {
   .top-bar ul li body.node-type-organization article .collapsible legend a.small,
   body.node-type-organization article .collapsible legend .top-bar ul li a.small,
   .top-bar ul li body.node-type-event article .collapsible legend a.small,
-  body.node-type-event article .collapsible legend .top-bar ul li a.small {
+  body.node-type-event article .collapsible legend .top-bar ul li a.small,
+  .top-bar ul li body.page-user .profile .collapsible legend a.small,
+  body.page-user .profile .collapsible legend .top-bar ul li a.small {
     margin: 0 !important;
     display: inline-block;
     width: 100%;
@@ -5866,6 +6150,8 @@ table.hide-for-medium {
   body.node-type-organization article .collapsed legend .top-bar ul > li.has-button a,
   .top-bar ul > li.has-button body.node-type-event article .collapsed legend a,
   body.node-type-event article .collapsed legend .top-bar ul > li.has-button a,
+  .top-bar ul > li.has-button body.page-user .profile .collapsed legend a,
+  body.page-user .profile .collapsed legend .top-bar ul > li.has-button a,
   .top-bar ul > li.has-button .content-article .collapsible legend a,
   .content-article .collapsible legend .top-bar ul > li.has-button a,
   .top-bar ul > li.has-button body.node-type-resource article .collapsible legend a,
@@ -5873,7 +6159,9 @@ table.hide-for-medium {
   .top-bar ul > li.has-button body.node-type-organization article .collapsible legend a,
   body.node-type-organization article .collapsible legend .top-bar ul > li.has-button a,
   .top-bar ul > li.has-button body.node-type-event article .collapsible legend a,
-  body.node-type-event article .collapsible legend .top-bar ul > li.has-button a {
+  body.node-type-event article .collapsible legend .top-bar ul > li.has-button a,
+  .top-bar ul > li.has-button body.page-user .profile .collapsible legend a,
+  body.page-user .profile .collapsible legend .top-bar ul > li.has-button a {
     margin: 0;
   }
 }
@@ -5966,37 +6254,49 @@ h1#page-title {
   padding: 0;
 }
 
-/* line 64, ../sass/_typography.scss */
-article h2, article .content-article .field-label, .content-article article .field-label, body.node-type-resource article .field-label, body.node-type-organization article .field-label, body.node-type-event article .field-label {
+/* line 63, ../sass/_typography.scss */
+.profile h2, .profile .content-article .field-label, .content-article .profile .field-label, .profile body.node-type-resource article .field-label, body.node-type-resource article .profile .field-label, .profile body.node-type-organization article .field-label, body.node-type-organization article .profile .field-label, .profile body.node-type-event article .field-label, body.node-type-event article .profile .field-label, body.page-user .profile .field-label,
+article h2,
+article .content-article .field-label,
+.content-article article .field-label,
+body.node-type-resource article .field-label,
+body.node-type-organization article .field-label,
+body.node-type-event article .field-label,
+article body.page-user .profile .field-label,
+body.page-user .profile article .field-label {
   color: #f68115;
   font-size: 1.133em;
   font-weight: bold;
 }
-/* line 69, ../sass/_typography.scss */
+/* line 68, ../sass/_typography.scss */
+.profile h3,
 article h3 {
   color: #18729d;
   font-size: 1em;
   font-weight: bold;
 }
-/* line 80, ../sass/_typography.scss */
+/* line 79, ../sass/_typography.scss */
+.profile ul,
 article ul {
   padding-left: 40px;
 }
-/* line 84, ../sass/_typography.scss */
-article .field-label, article label {
+/* line 83, ../sass/_typography.scss */
+.profile .field-label, .profile label,
+article .field-label,
+article label {
   color: #f68115;
   font-size: 1.133em;
   font-weight: bold;
   margin-bottom: 1.2rem;
 }
 
-/* line 94, ../sass/_typography.scss */
+/* line 93, ../sass/_typography.scss */
 aside p {
   font-style: inherit;
   font-size: 1.5rem;
 }
 
-/* line 99, ../sass/_typography.scss */
+/* line 98, ../sass/_typography.scss */
 #main section .block-title {
   font-size: 1.133em;
   color: #f68115;
@@ -6009,12 +6309,12 @@ aside p {
 /* -----------------------------------------
    Block typography:
 ----------------------------------------- */
-/* line 136, ../sass/_typography.scss */
-.block h2, .block .content-article .field-label, .content-article .block .field-label, .block body.node-type-resource article .field-label, body.node-type-resource article .block .field-label, .block body.node-type-organization article .field-label, body.node-type-organization article .block .field-label, .block body.node-type-event article .field-label, body.node-type-event article .block .field-label,
+/* line 135, ../sass/_typography.scss */
+.block h2, .block .content-article .field-label, .content-article .block .field-label, .block body.node-type-resource article .field-label, body.node-type-resource article .block .field-label, .block body.node-type-organization article .field-label, body.node-type-organization article .block .field-label, .block body.node-type-event article .field-label, body.node-type-event article .block .field-label, .block body.page-user .profile .field-label, body.page-user .profile .block .field-label,
 .block h3 {
   margin: 0 0 1rem;
 }
-/* line 140, ../sass/_typography.scss */
+/* line 139, ../sass/_typography.scss */
 .block h3 {
   clear: both;
   color: #2a2724;
@@ -6026,7 +6326,7 @@ aside p {
 /* -----------------------------------------
    Individual fields 
 ----------------------------------------- */
-/* line 154, ../sass/_typography.scss */
+/* line 153, ../sass/_typography.scss */
 .field-name-field-trial-deadline {
   font-size: 1.8rem;
   text-align: center;
@@ -6035,12 +6335,13 @@ aside p {
 /* -----------------------------------------
    UI Elements (pagination, breadcrumbs etc.)
 ----------------------------------------- */
-/* line 171, ../sass/_typography.scss */
-.content-article .collapsed legend a, body.node-type-resource article .collapsed legend a, body.node-type-organization article .collapsed legend a, body.node-type-event article .collapsed legend a,
+/* line 170, ../sass/_typography.scss */
+.content-article .collapsed legend a, body.node-type-resource article .collapsed legend a, body.node-type-organization article .collapsed legend a, body.node-type-event article .collapsed legend a, body.page-user .profile .collapsed legend a,
 .content-article .collapsible legend a,
 body.node-type-resource article .collapsible legend a,
 body.node-type-organization article .collapsible legend a,
-body.node-type-event article .collapsible legend a {
+body.node-type-event article .collapsible legend a,
+body.page-user .profile .collapsible legend a {
   color: white;
   font-family: "minion-pro-1", "minion-pro-2", Georgia, "Times New Roman", serif;
   font-weight: bold;
@@ -6049,7 +6350,7 @@ body.node-type-event article .collapsible legend a {
   text-transform: uppercase;
 }
 
-/* line 183, ../sass/_typography.scss */
+/* line 182, ../sass/_typography.scss */
 .notice {
   color: #f00;
 }
@@ -6057,21 +6358,21 @@ body.node-type-event article .collapsible legend a {
 /* -----------------------------------------
     Views
 ----------------------------------------- */
-/* line 212, ../sass/_typography.scss */
+/* line 211, ../sass/_typography.scss */
 .view a {
   text-decoration: underline;
 }
-/* line 216, ../sass/_typography.scss */
+/* line 215, ../sass/_typography.scss */
 .view .row {
   margin-bottom: 1rem;
   margin-top: 1rem;
 }
 
-/* line 223, ../sass/_typography.scss */
-#block-views-contacts-by-group-block h2.block-title, #block-views-contacts-by-group-block .content-article .block-title.field-label, .content-article #block-views-contacts-by-group-block .block-title.field-label, #block-views-contacts-by-group-block body.node-type-resource article .block-title.field-label, body.node-type-resource article #block-views-contacts-by-group-block .block-title.field-label, #block-views-contacts-by-group-block body.node-type-organization article .block-title.field-label, body.node-type-organization article #block-views-contacts-by-group-block .block-title.field-label, #block-views-contacts-by-group-block body.node-type-event article .block-title.field-label, body.node-type-event article #block-views-contacts-by-group-block .block-title.field-label {
+/* line 222, ../sass/_typography.scss */
+#block-views-contacts-by-group-block h2.block-title, #block-views-contacts-by-group-block .content-article .block-title.field-label, .content-article #block-views-contacts-by-group-block .block-title.field-label, #block-views-contacts-by-group-block body.node-type-resource article .block-title.field-label, body.node-type-resource article #block-views-contacts-by-group-block .block-title.field-label, #block-views-contacts-by-group-block body.node-type-organization article .block-title.field-label, body.node-type-organization article #block-views-contacts-by-group-block .block-title.field-label, #block-views-contacts-by-group-block body.node-type-event article .block-title.field-label, body.node-type-event article #block-views-contacts-by-group-block .block-title.field-label, #block-views-contacts-by-group-block body.page-user .profile .block-title.field-label, body.page-user .profile #block-views-contacts-by-group-block .block-title.field-label {
   color: black;
 }
-/* line 227, ../sass/_typography.scss */
+/* line 226, ../sass/_typography.scss */
 #block-views-contacts-by-group-block h3 {
   font-size: 1.2rem;
   margin-bottom: 1rem;
@@ -6416,7 +6717,7 @@ nav .foundation-menu {
   }
 }
 /* line 78, ../sass/_orbit.scss */
-.orbit div.orbit-content h2.orbit-title, .orbit div.orbit-content .content-article .orbit-title.field-label, .content-article .orbit div.orbit-content .orbit-title.field-label, .orbit div.orbit-content body.node-type-resource article .orbit-title.field-label, body.node-type-resource article .orbit div.orbit-content .orbit-title.field-label, .orbit div.orbit-content body.node-type-organization article .orbit-title.field-label, body.node-type-organization article .orbit div.orbit-content .orbit-title.field-label, .orbit div.orbit-content body.node-type-event article .orbit-title.field-label, body.node-type-event article .orbit div.orbit-content .orbit-title.field-label {
+.orbit div.orbit-content h2.orbit-title, .orbit div.orbit-content .content-article .orbit-title.field-label, .content-article .orbit div.orbit-content .orbit-title.field-label, .orbit div.orbit-content body.node-type-resource article .orbit-title.field-label, body.node-type-resource article .orbit div.orbit-content .orbit-title.field-label, .orbit div.orbit-content body.node-type-organization article .orbit-title.field-label, body.node-type-organization article .orbit div.orbit-content .orbit-title.field-label, .orbit div.orbit-content body.node-type-event article .orbit-title.field-label, body.node-type-event article .orbit div.orbit-content .orbit-title.field-label, .orbit div.orbit-content body.page-user .profile .orbit-title.field-label, body.page-user .profile .orbit div.orbit-content .orbit-title.field-label {
   margin: 0;
 }
 /* line 80, ../sass/_orbit.scss */
@@ -6805,7 +7106,8 @@ ul.links .print_html {
 .content-article .columns:last-child,
 body.node-type-resource article .columns:last-child,
 body.node-type-organization article .columns:last-child,
-body.node-type-event article .columns:last-child {
+body.node-type-event article .columns:last-child,
+body.page-user .profile .columns:last-child {
   float: left;
 }
 /* line 119, ../sass/_page.scss */
@@ -6813,7 +7115,8 @@ body.node-type-event article .columns:last-child {
 .content-article .field-item,
 body.node-type-resource article .field-item,
 body.node-type-organization article .field-item,
-body.node-type-event article .field-item {
+body.node-type-event article .field-item,
+body.page-user .profile .field-item {
   border-bottom: 1px dotted #cccccc;
   margin-bottom: 2rem;
   padding-bottom: 1rem;
@@ -6823,7 +7126,8 @@ body.node-type-event article .field-item {
 .content-article .field-name-field-private-note,
 body.node-type-resource article .field-name-field-private-note,
 body.node-type-organization article .field-name-field-private-note,
-body.node-type-event article .field-name-field-private-note {
+body.node-type-event article .field-name-field-private-note,
+body.page-user .profile .field-name-field-private-note {
   background: #ffe9d5;
   border-bottom-style: none;
   padding: 1em;
@@ -6833,7 +7137,8 @@ body.node-type-event article .field-name-field-private-note {
 .content-article div[class^=field-group-simple-div] .field-item,
 body.node-type-resource article div[class^=field-group-simple-div] .field-item,
 body.node-type-organization article div[class^=field-group-simple-div] .field-item,
-body.node-type-event article div[class^=field-group-simple-div] .field-item {
+body.node-type-event article div[class^=field-group-simple-div] .field-item,
+body.page-user .profile div[class^=field-group-simple-div] .field-item {
   border-bottom-style: none;
   margin-bottom: 0;
   padding-bottom: 0;
@@ -6843,7 +7148,8 @@ body.node-type-event article div[class^=field-group-simple-div] .field-item {
 .content-article fieldset,
 body.node-type-resource article fieldset,
 body.node-type-organization article fieldset,
-body.node-type-event article fieldset {
+body.node-type-event article fieldset,
+body.page-user .profile fieldset {
   background: #efefef;
   border-bottom: 0.5rem solid #e0e0e0;
   -moz-border-radius: 0;
@@ -6858,7 +7164,8 @@ body.node-type-event article fieldset {
 .content-article .collapsed,
 body.node-type-resource article .collapsed,
 body.node-type-organization article .collapsed,
-body.node-type-event article .collapsed {
+body.node-type-event article .collapsed,
+body.page-user .profile .collapsed {
   background: none;
   border: none;
   padding-bottom: 0px;
@@ -6870,10 +7177,12 @@ body.node-type-event article .collapsed {
 body.node-type-resource article .collapsed legend,
 body.node-type-organization article .collapsed legend,
 body.node-type-event article .collapsed legend,
+body.page-user .profile .collapsed legend,
 .content-article .collapsible legend,
 body.node-type-resource article .collapsible legend,
 body.node-type-organization article .collapsible legend,
-body.node-type-event article .collapsible legend {
+body.node-type-event article .collapsible legend,
+body.page-user .profile .collapsible legend {
   margin-left: -2.2rem;
 }
 /* line 157, ../sass/_page.scss */
@@ -6883,10 +7192,12 @@ body.node-type-event article .collapsible legend {
 body.node-type-resource article .collapsed legend a,
 body.node-type-organization article .collapsed legend a,
 body.node-type-event article .collapsed legend a,
+body.page-user .profile .collapsed legend a,
 .content-article .collapsible legend a,
 body.node-type-resource article .collapsible legend a,
 body.node-type-organization article .collapsible legend a,
-body.node-type-event article .collapsible legend a {
+body.node-type-event article .collapsible legend a,
+body.page-user .profile .collapsible legend a {
   background: #939290;
   border-bottom: 1px solid #737270;
   -moz-border-radius: 0.5rem;
@@ -6930,13 +7241,23 @@ body.node-type-resource #return-res a {
   padding: 5px 40px 0 0;
 }
 
+/* line 217, ../sass/_page.scss */
+body.page-user .profile .row-container {
+  border: 1px solid #dddddd;
+}
+/* line 219, ../sass/_page.scss */
+body.page-user .profile .row-container .row {
+  margin: 0 auto;
+  width: 90rem;
+}
+
 /* -----------------------------------------
    Individual fields 
 ----------------------------------------- */
 /* -----------------------------------------
    Views 
 ----------------------------------------- */
-/* line 224, ../sass/_page.scss */
+/* line 235, ../sass/_page.scss */
 #block-views-contacts-by-group-block {
   background: #f7f7f7;
   border-bottom: 0.5rem solid #efefef;
@@ -6951,57 +7272,63 @@ body.node-type-resource #return-res a {
 /* -----------------------------------------
    UI Elements
 ----------------------------------------- */
-/* line 237, ../sass/_page.scss */
+/* line 248, ../sass/_page.scss */
 .button:hover, #content > article .collapsed legend a:hover,
 #content > article .collapsible legend a:hover,
 .content-article .collapsed legend a:hover,
 body.node-type-resource article .collapsed legend a:hover,
 body.node-type-organization article .collapsed legend a:hover,
 body.node-type-event article .collapsed legend a:hover,
+body.page-user .profile .collapsed legend a:hover,
 .content-article .collapsible legend a:hover,
 body.node-type-resource article .collapsible legend a:hover,
 body.node-type-organization article .collapsible legend a:hover,
-body.node-type-event article .collapsible legend a:hover, .button:active, #content > article .collapsed legend a:active,
+body.node-type-event article .collapsible legend a:hover,
+body.page-user .profile .collapsible legend a:hover, .button:active, #content > article .collapsed legend a:active,
 #content > article .collapsible legend a:active,
 .content-article .collapsed legend a:active,
 body.node-type-resource article .collapsed legend a:active,
 body.node-type-organization article .collapsed legend a:active,
 body.node-type-event article .collapsed legend a:active,
+body.page-user .profile .collapsed legend a:active,
 .content-article .collapsible legend a:active,
 body.node-type-resource article .collapsible legend a:active,
 body.node-type-organization article .collapsible legend a:active,
-body.node-type-event article .collapsible legend a:active, .button:focus, #content > article .collapsed legend a:focus,
+body.node-type-event article .collapsible legend a:active,
+body.page-user .profile .collapsible legend a:active, .button:focus, #content > article .collapsed legend a:focus,
 #content > article .collapsible legend a:focus,
 .content-article .collapsed legend a:focus,
 body.node-type-resource article .collapsed legend a:focus,
 body.node-type-organization article .collapsed legend a:focus,
 body.node-type-event article .collapsed legend a:focus,
+body.page-user .profile .collapsed legend a:focus,
 .content-article .collapsible legend a:focus,
 body.node-type-resource article .collapsible legend a:focus,
 body.node-type-organization article .collapsible legend a:focus,
-body.node-type-event article .collapsible legend a:focus {
+body.node-type-event article .collapsible legend a:focus,
+body.page-user .profile .collapsible legend a:focus {
   background: #877f77;
 }
 
-/* line 242, ../sass/_page.scss */
+/* line 253, ../sass/_page.scss */
 #breadcrumb {
   height: 3rem;
   padding-top: 0.7rem;
   padding-left: 3rem;
 }
 
-/* line 248, ../sass/_page.scss */
+/* line 259, ../sass/_page.scss */
 ul.pagination {
   text-align: center;
 }
-/* line 250, ../sass/_page.scss */
+/* line 261, ../sass/_page.scss */
 ul.pagination li {
   float: none;
   display: inline-block;
 }
 
 /* Tab styling */
-/* line 258, ../sass/_page.scss */
+/* line 269, ../sass/_page.scss */
 div.drupal_tabs {
   background: #dddddd;
   overflow: auto;
@@ -7011,7 +7338,7 @@ div.drupal_tabs {
   -webkit-border-radius: 6px;
 }
 
-/* line 264, ../sass/_page.scss */
+/* line 275, ../sass/_page.scss */
 dl.tabs.primary,
 dl.tabs.secondary {
   border-style: none;
@@ -7019,19 +7346,19 @@ dl.tabs.secondary {
   padding: 0;
 }
 
-/* line 268, ../sass/_page.scss */
+/* line 279, ../sass/_page.scss */
 dl.tabs.primary {
   float: left;
 }
 
-/* line 272, ../sass/_page.scss */
+/* line 283, ../sass/_page.scss */
 dl.tabs.primary dd {
   display: inline;
   margin: 0;
   padding: 0;
 }
 
-/* line 276, ../sass/_page.scss */
+/* line 287, ../sass/_page.scss */
 dl.tabs.primary dd a {
   background: white;
   border-style: none;
@@ -7047,20 +7374,20 @@ dl.tabs.primary dd a {
   text-decoration: none;
 }
 
-/* line 283, ../sass/_page.scss */
+/* line 294, ../sass/_page.scss */
 dl.tabs.primary dd a:hover,
 dl.tabs.primary dd a:active {
   background: #877f77;
   color: white;
 }
 
-/* line 288, ../sass/_page.scss */
+/* line 299, ../sass/_page.scss */
 dl.tabs.primary dd.active a {
   background: #877f77;
   color: white;
 }
 
-/* line 292, ../sass/_page.scss */
+/* line 303, ../sass/_page.scss */
 dl.tabs.secondary {
   border-top: 1px solid white;
   clear: both;
@@ -7071,7 +7398,7 @@ dl.tabs.secondary {
   top: 4px;
 }
 
-/* line 296, ../sass/_page.scss */
+/* line 307, ../sass/_page.scss */
 dl.tabs.secondary dd {
   border-style: none;
   display: block;
@@ -7080,7 +7407,7 @@ dl.tabs.secondary dd {
   padding: 6px 0;
 }
 
-/* line 300, ../sass/_page.scss */
+/* line 311, ../sass/_page.scss */
 dl.tabs.secondary dd a {
   border-bottom-style: none;
   border-right: 1px solid white;
@@ -7183,7 +7510,7 @@ dl.tabs.secondary dd a {
   list-style: none;
 }
 /* line 56, ../sass/_block.scss */
-#block-menu-menu-authenticated h2, #block-menu-menu-authenticated .content-article .field-label, .content-article #block-menu-menu-authenticated .field-label, #block-menu-menu-authenticated body.node-type-resource article .field-label, body.node-type-resource article #block-menu-menu-authenticated .field-label, #block-menu-menu-authenticated body.node-type-organization article .field-label, body.node-type-organization article #block-menu-menu-authenticated .field-label, #block-menu-menu-authenticated body.node-type-event article .field-label, body.node-type-event article #block-menu-menu-authenticated .field-label {
+#block-menu-menu-authenticated h2, #block-menu-menu-authenticated .content-article .field-label, .content-article #block-menu-menu-authenticated .field-label, #block-menu-menu-authenticated body.node-type-resource article .field-label, body.node-type-resource article #block-menu-menu-authenticated .field-label, #block-menu-menu-authenticated body.node-type-organization article .field-label, body.node-type-organization article #block-menu-menu-authenticated .field-label, #block-menu-menu-authenticated body.node-type-event article .field-label, body.node-type-event article #block-menu-menu-authenticated .field-label, #block-menu-menu-authenticated body.page-user .profile .field-label, body.page-user .profile #block-menu-menu-authenticated .field-label {
   background: url("../images/resources-gear.png") no-repeat scroll top left transparent;
   color: #8C8B89;
   cursor: pointer;
@@ -7229,7 +7556,7 @@ dl.tabs.secondary dd a {
 
 /* Front page access block */
 /* line 99, ../sass/_block.scss */
-.front .node .entry-content h2, .front .node .entry-content .content-article .field-label, .content-article .front .node .entry-content .field-label, .front .node .entry-content body.node-type-resource article .field-label, body.node-type-resource article .front .node .entry-content .field-label, .front .node .entry-content body.node-type-organization article .field-label, body.node-type-organization article .front .node .entry-content .field-label, .front .node .entry-content body.node-type-event article .field-label, body.node-type-event article .front .node .entry-content .field-label {
+.front .node .entry-content h2, .front .node .entry-content .content-article .field-label, .content-article .front .node .entry-content .field-label, .front .node .entry-content body.node-type-resource article .field-label, body.node-type-resource article .front .node .entry-content .field-label, .front .node .entry-content body.node-type-organization article .field-label, body.node-type-organization article .front .node .entry-content .field-label, .front .node .entry-content body.node-type-event article .field-label, body.node-type-event article .front .node .entry-content .field-label, .front .node .entry-content body.page-user .profile .field-label, body.page-user .profile .front .node .entry-content .field-label {
   color: #18729d;
   font-size: 1.333em;
   /* 20px relative to 15px */
@@ -7238,7 +7565,7 @@ dl.tabs.secondary dd a {
 
 /* Do I have Access Block */
 /* line 110, ../sass/_block.scss */
-.front #block-menu-block-1 h2, .front #block-menu-block-1 .content-article .field-label, .content-article .front #block-menu-block-1 .field-label, .front #block-menu-block-1 body.node-type-resource article .field-label, body.node-type-resource article .front #block-menu-block-1 .field-label, .front #block-menu-block-1 body.node-type-organization article .field-label, body.node-type-organization article .front #block-menu-block-1 .field-label, .front #block-menu-block-1 body.node-type-event article .field-label, body.node-type-event article .front #block-menu-block-1 .field-label {
+.front #block-menu-block-1 h2, .front #block-menu-block-1 .content-article .field-label, .content-article .front #block-menu-block-1 .field-label, .front #block-menu-block-1 body.node-type-resource article .field-label, body.node-type-resource article .front #block-menu-block-1 .field-label, .front #block-menu-block-1 body.node-type-organization article .field-label, body.node-type-organization article .front #block-menu-block-1 .field-label, .front #block-menu-block-1 body.node-type-event article .field-label, body.node-type-event article .front #block-menu-block-1 .field-label, .front #block-menu-block-1 body.page-user .profile .field-label, body.page-user .profile .front #block-menu-block-1 .field-label {
   display: none;
 }
 
@@ -7534,7 +7861,7 @@ dl.tabs.secondary dd a {
 }
 
 /* line 380, ../sass/_block.scss */
-#block-user-login h2, #block-user-login .content-article .field-label, .content-article #block-user-login .field-label, #block-user-login body.node-type-resource article .field-label, body.node-type-resource article #block-user-login .field-label, #block-user-login body.node-type-organization article .field-label, body.node-type-organization article #block-user-login .field-label, #block-user-login body.node-type-event article .field-label, body.node-type-event article #block-user-login .field-label {
+#block-user-login h2, #block-user-login .content-article .field-label, .content-article #block-user-login .field-label, #block-user-login body.node-type-resource article .field-label, body.node-type-resource article #block-user-login .field-label, #block-user-login body.node-type-organization article .field-label, body.node-type-organization article #block-user-login .field-label, #block-user-login body.node-type-event article .field-label, body.node-type-event article #block-user-login .field-label, #block-user-login body.page-user .profile .field-label, body.page-user .profile #block-user-login .field-label {
   color: #807b77;
   font-family: "minion-pro-1","minion-pro-2", Georgia, 'Times New Roman', serif;
   margin-top: 20px;
@@ -8115,6 +8442,8 @@ body.node-type-resource article .collapsed legend .view-resources .view-header a
 body.node-type-organization article .collapsed legend .view-resources .view-header a,
 .view-resources .view-header body.node-type-event article .collapsed legend a,
 body.node-type-event article .collapsed legend .view-resources .view-header a,
+.view-resources .view-header body.page-user .profile .collapsed legend a,
+body.page-user .profile .collapsed legend .view-resources .view-header a,
 .view-resources .view-header .content-article .collapsible legend a,
 .content-article .collapsible legend .view-resources .view-header a,
 .view-resources .view-header body.node-type-resource article .collapsible legend a,
@@ -8122,7 +8451,9 @@ body.node-type-resource article .collapsible legend .view-resources .view-header
 .view-resources .view-header body.node-type-organization article .collapsible legend a,
 body.node-type-organization article .collapsible legend .view-resources .view-header a,
 .view-resources .view-header body.node-type-event article .collapsible legend a,
-body.node-type-event article .collapsible legend .view-resources .view-header a {
+body.node-type-event article .collapsible legend .view-resources .view-header a,
+.view-resources .view-header body.page-user .profile .collapsible legend a,
+body.page-user .profile .collapsible legend .view-resources .view-header a {
   cursor: pointer;
   padding: 4px 17px;
   margin-bottom: 1em;
@@ -8154,6 +8485,8 @@ body.node-type-resource article .collapsed legend .view-contacts .view-header a,
 body.node-type-organization article .collapsed legend .view-contacts .view-header a,
 .view-contacts .view-header body.node-type-event article .collapsed legend a,
 body.node-type-event article .collapsed legend .view-contacts .view-header a,
+.view-contacts .view-header body.page-user .profile .collapsed legend a,
+body.page-user .profile .collapsed legend .view-contacts .view-header a,
 .view-contacts .view-header .content-article .collapsible legend a,
 .content-article .collapsible legend .view-contacts .view-header a,
 .view-contacts .view-header body.node-type-resource article .collapsible legend a,
@@ -8162,6 +8495,8 @@ body.node-type-resource article .collapsible legend .view-contacts .view-header 
 body.node-type-organization article .collapsible legend .view-contacts .view-header a,
 .view-contacts .view-header body.node-type-event article .collapsible legend a,
 body.node-type-event article .collapsible legend .view-contacts .view-header a,
+.view-contacts .view-header body.page-user .profile .collapsible legend a,
+body.page-user .profile .collapsible legend .view-contacts .view-header a,
 .view-organizations .view-header a.button,
 .view-organizations .view-header #content > article .collapsed legend a,
 #content > article .collapsed legend .view-organizations .view-header a,
@@ -8175,6 +8510,8 @@ body.node-type-resource article .collapsed legend .view-organizations .view-head
 body.node-type-organization article .collapsed legend .view-organizations .view-header a,
 .view-organizations .view-header body.node-type-event article .collapsed legend a,
 body.node-type-event article .collapsed legend .view-organizations .view-header a,
+.view-organizations .view-header body.page-user .profile .collapsed legend a,
+body.page-user .profile .collapsed legend .view-organizations .view-header a,
 .view-organizations .view-header .content-article .collapsible legend a,
 .content-article .collapsible legend .view-organizations .view-header a,
 .view-organizations .view-header body.node-type-resource article .collapsible legend a,
@@ -8182,7 +8519,9 @@ body.node-type-resource article .collapsible legend .view-organizations .view-he
 .view-organizations .view-header body.node-type-organization article .collapsible legend a,
 body.node-type-organization article .collapsible legend .view-organizations .view-header a,
 .view-organizations .view-header body.node-type-event article .collapsible legend a,
-body.node-type-event article .collapsible legend .view-organizations .view-header a {
+body.node-type-event article .collapsible legend .view-organizations .view-header a,
+.view-organizations .view-header body.page-user .profile .collapsible legend a,
+body.page-user .profile .collapsible legend .view-organizations .view-header a {
   cursor: pointer;
   padding: 4px 17px;
   margin-bottom: 1em;
@@ -8274,7 +8613,7 @@ label.expand-btn {
 }
 
 /* line 383, ../sass/_views.scss */
-h2.pane-title, .content-article .pane-title.field-label, body.node-type-resource article .pane-title.field-label, body.node-type-organization article .pane-title.field-label, body.node-type-event article .pane-title.field-label {
+h2.pane-title, .content-article .pane-title.field-label, body.node-type-resource article .pane-title.field-label, body.node-type-organization article .pane-title.field-label, body.node-type-event article .pane-title.field-label, body.page-user .profile .pane-title.field-label {
   color: #2a2724;
   font-size: 1.000em;
   /* 15px relative to 15px */
@@ -8296,7 +8635,7 @@ h2.pane-title, .content-article .pane-title.field-label, body.node-type-resource
 }
 
 /* line 402, ../sass/_views.scss */
-#dashboard .pane-profile h2, #dashboard .pane-profile .content-article .field-label, .content-article #dashboard .pane-profile .field-label, #dashboard .pane-profile body.node-type-resource article .field-label, body.node-type-resource article #dashboard .pane-profile .field-label, #dashboard .pane-profile body.node-type-organization article .field-label, body.node-type-organization article #dashboard .pane-profile .field-label, #dashboard .pane-profile body.node-type-event article .field-label, body.node-type-event article #dashboard .pane-profile .field-label {
+#dashboard .pane-profile h2, #dashboard .pane-profile .content-article .field-label, .content-article #dashboard .pane-profile .field-label, #dashboard .pane-profile body.node-type-resource article .field-label, body.node-type-resource article #dashboard .pane-profile .field-label, #dashboard .pane-profile body.node-type-organization article .field-label, body.node-type-organization article #dashboard .pane-profile .field-label, #dashboard .pane-profile body.node-type-event article .field-label, body.node-type-event article #dashboard .pane-profile .field-label, #dashboard .pane-profile body.page-user .profile .field-label, body.page-user .profile #dashboard .pane-profile .field-label {
   display: none;
 }
 
@@ -8368,7 +8707,7 @@ h2.pane-title, .content-article .pane-title.field-label, body.node-type-resource
 }
 
 /* line 466, ../sass/_views.scss */
-#dashboard .pane-signup-current-signups h2, #dashboard .pane-signup-current-signups .content-article .field-label, .content-article #dashboard .pane-signup-current-signups .field-label, #dashboard .pane-signup-current-signups body.node-type-resource article .field-label, body.node-type-resource article #dashboard .pane-signup-current-signups .field-label, #dashboard .pane-signup-current-signups body.node-type-organization article .field-label, body.node-type-organization article #dashboard .pane-signup-current-signups .field-label, #dashboard .pane-signup-current-signups body.node-type-event article .field-label, body.node-type-event article #dashboard .pane-signup-current-signups .field-label {
+#dashboard .pane-signup-current-signups h2, #dashboard .pane-signup-current-signups .content-article .field-label, .content-article #dashboard .pane-signup-current-signups .field-label, #dashboard .pane-signup-current-signups body.node-type-resource article .field-label, body.node-type-resource article #dashboard .pane-signup-current-signups .field-label, #dashboard .pane-signup-current-signups body.node-type-organization article .field-label, body.node-type-organization article #dashboard .pane-signup-current-signups .field-label, #dashboard .pane-signup-current-signups body.node-type-event article .field-label, body.node-type-event article #dashboard .pane-signup-current-signups .field-label, #dashboard .pane-signup-current-signups body.page-user .profile .field-label, body.page-user .profile #dashboard .pane-signup-current-signups .field-label {
   color: #fff;
   font-size: 1.000em;
   /* 15px relative to 15px */
@@ -8410,7 +8749,7 @@ h2.pane-title, .content-article .pane-title.field-label, body.node-type-resource
 }
 
 /* line 501, ../sass/_views.scss */
-#dashboard .pane-colleagues h2, #dashboard .pane-colleagues .content-article .field-label, .content-article #dashboard .pane-colleagues .field-label, #dashboard .pane-colleagues body.node-type-resource article .field-label, body.node-type-resource article #dashboard .pane-colleagues .field-label, #dashboard .pane-colleagues body.node-type-organization article .field-label, body.node-type-organization article #dashboard .pane-colleagues .field-label, #dashboard .pane-colleagues body.node-type-event article .field-label, body.node-type-event article #dashboard .pane-colleagues .field-label {
+#dashboard .pane-colleagues h2, #dashboard .pane-colleagues .content-article .field-label, .content-article #dashboard .pane-colleagues .field-label, #dashboard .pane-colleagues body.node-type-resource article .field-label, body.node-type-resource article #dashboard .pane-colleagues .field-label, #dashboard .pane-colleagues body.node-type-organization article .field-label, body.node-type-organization article #dashboard .pane-colleagues .field-label, #dashboard .pane-colleagues body.node-type-event article .field-label, body.node-type-event article #dashboard .pane-colleagues .field-label, #dashboard .pane-colleagues body.page-user .profile .field-label, body.page-user .profile #dashboard .pane-colleagues .field-label {
   margin: 20px 0 3px;
 }
 
@@ -8444,7 +8783,7 @@ h2.pane-title, .content-article .pane-title.field-label, body.node-type-resource
 /* Dashboard - Center Column */
 /* My Organization Resources */
 /* line 530, ../sass/_views.scss */
-#dashboard .pane-resources h2, #dashboard .pane-resources .content-article .field-label, .content-article #dashboard .pane-resources .field-label, #dashboard .pane-resources body.node-type-resource article .field-label, body.node-type-resource article #dashboard .pane-resources .field-label, #dashboard .pane-resources body.node-type-organization article .field-label, body.node-type-organization article #dashboard .pane-resources .field-label, #dashboard .pane-resources body.node-type-event article .field-label, body.node-type-event article #dashboard .pane-resources .field-label {
+#dashboard .pane-resources h2, #dashboard .pane-resources .content-article .field-label, .content-article #dashboard .pane-resources .field-label, #dashboard .pane-resources body.node-type-resource article .field-label, body.node-type-resource article #dashboard .pane-resources .field-label, #dashboard .pane-resources body.node-type-organization article .field-label, body.node-type-organization article #dashboard .pane-resources .field-label, #dashboard .pane-resources body.node-type-event article .field-label, body.node-type-event article #dashboard .pane-resources .field-label, #dashboard .pane-resources body.page-user .profile .field-label, body.page-user .profile #dashboard .pane-resources .field-label {
   background: url("../images/dashed-border.png") repeat-x 0 bottom;
   color: #18729d;
   padding-bottom: 10px;
@@ -8502,7 +8841,7 @@ h2.pane-title, .content-article .pane-title.field-label, body.node-type-resource
 }
 
 /* line 583, ../sass/_views.scss */
-#dashboard .pane-og-my h2, #dashboard .pane-og-my .content-article .field-label, .content-article #dashboard .pane-og-my .field-label, #dashboard .pane-og-my body.node-type-resource article .field-label, body.node-type-resource article #dashboard .pane-og-my .field-label, #dashboard .pane-og-my body.node-type-organization article .field-label, body.node-type-organization article #dashboard .pane-og-my .field-label, #dashboard .pane-og-my body.node-type-event article .field-label, body.node-type-event article #dashboard .pane-og-my .field-label {
+#dashboard .pane-og-my h2, #dashboard .pane-og-my .content-article .field-label, .content-article #dashboard .pane-og-my .field-label, #dashboard .pane-og-my body.node-type-resource article .field-label, body.node-type-resource article #dashboard .pane-og-my .field-label, #dashboard .pane-og-my body.node-type-organization article .field-label, body.node-type-organization article #dashboard .pane-og-my .field-label, #dashboard .pane-og-my body.node-type-event article .field-label, body.node-type-event article #dashboard .pane-og-my .field-label, #dashboard .pane-og-my body.page-user .profile .field-label, body.page-user .profile #dashboard .pane-og-my .field-label {
   margin: 20px 0 4px 0;
   padding: 0 20px;
 }
@@ -8581,7 +8920,7 @@ h2.pane-title, .content-article .pane-title.field-label, body.node-type-resource
 }
 
 /* line 658, ../sass/_views.scss */
-#dashboard .pane-og-which-gorups h2, #dashboard .pane-og-which-gorups .content-article .field-label, .content-article #dashboard .pane-og-which-gorups .field-label, #dashboard .pane-og-which-gorups body.node-type-resource article .field-label, body.node-type-resource article #dashboard .pane-og-which-gorups .field-label, #dashboard .pane-og-which-gorups body.node-type-organization article .field-label, body.node-type-organization article #dashboard .pane-og-which-gorups .field-label, #dashboard .pane-og-which-gorups body.node-type-event article .field-label, body.node-type-event article #dashboard .pane-og-which-gorups .field-label,
+#dashboard .pane-og-which-gorups h2, #dashboard .pane-og-which-gorups .content-article .field-label, .content-article #dashboard .pane-og-which-gorups .field-label, #dashboard .pane-og-which-gorups body.node-type-resource article .field-label, body.node-type-resource article #dashboard .pane-og-which-gorups .field-label, #dashboard .pane-og-which-gorups body.node-type-organization article .field-label, body.node-type-organization article #dashboard .pane-og-which-gorups .field-label, #dashboard .pane-og-which-gorups body.node-type-event article .field-label, body.node-type-event article #dashboard .pane-og-which-gorups .field-label, #dashboard .pane-og-which-gorups body.page-user .profile .field-label, body.page-user .profile #dashboard .pane-og-which-gorups .field-label,
 #og-page h2.pane-title,
 #og-page .content-article .pane-title.field-label,
 .content-article #og-page .pane-title.field-label,
@@ -8590,7 +8929,9 @@ body.node-type-resource article #og-page .pane-title.field-label,
 #og-page body.node-type-organization article .pane-title.field-label,
 body.node-type-organization article #og-page .pane-title.field-label,
 #og-page body.node-type-event article .pane-title.field-label,
-body.node-type-event article #og-page .pane-title.field-label {
+body.node-type-event article #og-page .pane-title.field-label,
+#og-page body.page-user .profile .pane-title.field-label,
+body.page-user .profile #og-page .pane-title.field-label {
   line-height: 1.3em;
   margin: 20px 0 7px 0;
   padding: 0 20px;
