@@ -6437,6 +6437,14 @@ article #block-views-contacts-by-group-block label.block-title, #block-views-con
   text-transform: uppercase;
 }
 
+/* -----------------------------------------
+   Forms
+----------------------------------------- */
+/* line 248, ../sass/_typography.scss */
+.search-results dt a {
+  text-decoration: underline;
+}
+
 /********************************************
 
   Settings.scss

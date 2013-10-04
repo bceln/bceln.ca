@@ -4186,7 +4186,7 @@ body#tinymce #block-views-contacts-by-group-block label.block-title, #block-view
    Forms
 ----------------------------------------- */
 /* line 248, ../sass/_typography.scss */
-#search-form dt a {
+.search-results dt a {
   text-decoration: underline;
 }
 
