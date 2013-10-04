@@ -39,7 +39,7 @@ a {
 
 // ------- </Reusable types> ------- //
 
-body{ color: #2a2724; }
+body{ color: $gray_14; }
 
 body, p {
     font-family: minion-pro-1, minion-pro-2, Georgia, 'Times New Roman', serif;
@@ -48,13 +48,14 @@ body, p {
 }
 
 h1#page-title{ 
-  color: #18729d;
+  color: $mainColor;
   font-size: 2.267em;
   font-weight: normal;
   margin-top: 0;
   padding: 0;
 }
 
+#content,
 .profile,
 article {
   #{headers(6)} {  }
@@ -237,3 +238,15 @@ ul.pagination {
   }
 }
 
+
+/* -----------------------------------------
+   Forms
+----------------------------------------- */
+
+#search-form {
+  dt {
+    a {
+      text-decoration: underline;
+    }
+  } 
+}

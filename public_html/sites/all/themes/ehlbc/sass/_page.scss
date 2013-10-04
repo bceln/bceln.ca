@@ -322,4 +322,14 @@ div.drupal_tabs {
    Forms
 ----------------------------------------- */
 
+.standard-form {
+  .button {
+    @include le-bouton;
+  }
+}
+
+#user-login,
+#search-form {
+  @extend .standard-form;
+}
 
