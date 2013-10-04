@@ -109,6 +109,7 @@ function cogito_html_head_alter(&$variables) {
 /**
  * Implements hook_form_alter().
  */
+/*
 function cogito_form_alter(&$form, &$form_state, $form_id) {
 
 
@@ -128,6 +129,7 @@ function cogito_form_alter(&$form, &$form_state, $form_id) {
     $form['basic']['submit']['#attributes']['class'] = array("");
   }
 }
+*/
 
 /**
  * Implements hook_theme().
