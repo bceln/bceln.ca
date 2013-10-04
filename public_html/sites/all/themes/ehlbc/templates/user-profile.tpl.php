@@ -35,7 +35,6 @@
  */
 ?>
 <div class="profile"<?php print $attributes; ?>>
-  <?php //dpm(get_defined_vars()); ?>
   <?php hide($user_profile['profile_contact']); ?>
   <?php $contact = $user_profile['profile_contact']['view']['profile2']; ?>
   <?php foreach ($contact as $contact_item): ?>
@@ -45,7 +44,6 @@
     hide($contact_item['field_contact_photo']);
     hide($contact_item['field_contact_first_name']);
     hide($contact_item['field_contact_last_name']);
-    dpm($location);
   ?>
   <div class="row-container">
     <div class="row">
