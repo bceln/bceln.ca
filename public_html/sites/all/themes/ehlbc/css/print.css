@@ -3318,10 +3318,19 @@ aside p {
 /* -----------------------------------------
    Block typography:
 ----------------------------------------- */
+/* line 135, ../sass/_typography.scss */
+.block h3 {
+  clear: both;
+  color: #2a2724;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
 /* -----------------------------------------
    Individual fields 
 ----------------------------------------- */
-/* line 139, ../sass/_typography.scss */
+/* line 149, ../sass/_typography.scss */
 .field-name-field-trial-deadline {
   font-size: 1.8rem;
   text-align: center;
@@ -3330,7 +3339,7 @@ aside p {
 /* -----------------------------------------
    UI Elements (pagination, breadcrumbs etc.)
 ----------------------------------------- */
-/* line 155, ../sass/_typography.scss */
+/* line 166, ../sass/_typography.scss */
 .content-article .collapsed legend a, body.node-type-resource article .collapsed legend a, body.node-type-organization article .collapsed legend a, body.node-type-event article .collapsed legend a,
 .content-article .collapsible legend a,
 body.node-type-resource article .collapsible legend a,
@@ -3344,9 +3353,34 @@ body.node-type-event article .collapsible legend a {
   text-transform: uppercase;
 }
 
-/* line 167, ../sass/_typography.scss */
+/* line 178, ../sass/_typography.scss */
 .notice {
   color: #f00;
+}
+
+/* -----------------------------------------
+    Views
+----------------------------------------- */
+/* line 207, ../sass/_typography.scss */
+.view a {
+  text-decoration: underline;
+}
+/* line 211, ../sass/_typography.scss */
+.view .row {
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+
+/* line 218, ../sass/_typography.scss */
+#block-views-contacts-by-group-block h2.block-title, #block-views-contacts-by-group-block .content-article .block-title.field-label, .content-article #block-views-contacts-by-group-block .block-title.field-label, #block-views-contacts-by-group-block body.node-type-resource article .block-title.field-label, body.node-type-resource article #block-views-contacts-by-group-block .block-title.field-label, #block-views-contacts-by-group-block body.node-type-organization article .block-title.field-label, body.node-type-organization article #block-views-contacts-by-group-block .block-title.field-label, #block-views-contacts-by-group-block body.node-type-event article .block-title.field-label, body.node-type-event article #block-views-contacts-by-group-block .block-title.field-label {
+  color: black;
+}
+/* line 222, ../sass/_typography.scss */
+#block-views-contacts-by-group-block h3 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  margin-top: 0;
+  text-transform: uppercase;
 }
 
 /********************************************
@@ -3597,18 +3631,18 @@ body.node-type-event article .collapsible legend a {
 /* -----------------------------------------
    Content Types
 ----------------------------------------- */
-/* line 182, ../sass/_page.scss */
+/* line 181, ../sass/_page.scss */
 body.node-type-resource .field-resource-vendor-ref {
   float: right;
   padding-bottom: 2rem;
   padding-left: 2rem;
 }
-/* line 187, ../sass/_page.scss */
+/* line 186, ../sass/_page.scss */
 body.node-type-resource .help {
   font-size: 1.1rem;
   margin-top: 0.5rem;
 }
-/* line 191, ../sass/_page.scss */
+/* line 190, ../sass/_page.scss */
 body.node-type-resource #return-res {
   background: url("../images/return-resources.png") no-repeat right 0;
   font-family: Helvetica, Arial, sans-serif;
@@ -3619,7 +3653,7 @@ body.node-type-resource #return-res {
   right: 1.5rem;
   top: 5.2rem;
 }
-/* line 200, ../sass/_page.scss */
+/* line 199, ../sass/_page.scss */
 body.node-type-resource #return-res a {
   color: #8c8b89;
   display: block;
@@ -3632,7 +3666,7 @@ body.node-type-resource #return-res a {
 /* -----------------------------------------
    Views 
 ----------------------------------------- */
-/* line 225, ../sass/_page.scss */
+/* line 224, ../sass/_page.scss */
 #block-views-contacts-by-group-block {
   background: #f7f7f7;
   border-bottom: 0.5rem solid #efefef;
@@ -3647,7 +3681,7 @@ body.node-type-resource #return-res a {
 /* -----------------------------------------
    UI Elements
 ----------------------------------------- */
-/* line 239, ../sass/_page.scss */
+/* line 237, ../sass/_page.scss */
 .button:hover, #content > article .collapsed legend a:hover,
 #content > article .collapsible legend a:hover,
 .content-article .collapsed legend a:hover,
@@ -3679,25 +3713,25 @@ body.node-type-event article .collapsible legend a:focus {
   background: #877f77;
 }
 
-/* line 244, ../sass/_page.scss */
+/* line 242, ../sass/_page.scss */
 #breadcrumb {
   height: 3rem;
   padding-top: 0.7rem;
   padding-left: 3rem;
 }
 
-/* line 250, ../sass/_page.scss */
+/* line 248, ../sass/_page.scss */
 ul.pagination {
   text-align: center;
 }
-/* line 252, ../sass/_page.scss */
+/* line 250, ../sass/_page.scss */
 ul.pagination li {
   float: none;
   display: inline-block;
 }
 
 /* Tab styling */
-/* line 261, ../sass/_page.scss */
+/* line 258, ../sass/_page.scss */
 div.drupal_tabs {
   background: #dddddd;
   overflow: auto;
@@ -3707,7 +3741,7 @@ div.drupal_tabs {
   -webkit-border-radius: 6px;
 }
 
-/* line 267, ../sass/_page.scss */
+/* line 264, ../sass/_page.scss */
 dl.tabs.primary,
 dl.tabs.secondary {
   border-style: none;
@@ -3715,19 +3749,19 @@ dl.tabs.secondary {
   padding: 0;
 }
 
-/* line 271, ../sass/_page.scss */
+/* line 268, ../sass/_page.scss */
 dl.tabs.primary {
   float: left;
 }
 
-/* line 275, ../sass/_page.scss */
+/* line 272, ../sass/_page.scss */
 dl.tabs.primary dd {
   display: inline;
   margin: 0;
   padding: 0;
 }
 
-/* line 279, ../sass/_page.scss */
+/* line 276, ../sass/_page.scss */
 dl.tabs.primary dd a {
   background: white;
   border-style: none;
@@ -3743,20 +3777,20 @@ dl.tabs.primary dd a {
   text-decoration: none;
 }
 
-/* line 286, ../sass/_page.scss */
+/* line 283, ../sass/_page.scss */
 dl.tabs.primary dd a:hover,
 dl.tabs.primary dd a:active {
   background: #877f77;
   color: white;
 }
 
-/* line 291, ../sass/_page.scss */
+/* line 288, ../sass/_page.scss */
 dl.tabs.primary dd.active a {
   background: #877f77;
   color: white;
 }
 
-/* line 295, ../sass/_page.scss */
+/* line 292, ../sass/_page.scss */
 dl.tabs.secondary {
   border-top: 1px solid white;
   clear: both;
@@ -3767,7 +3801,7 @@ dl.tabs.secondary {
   top: 4px;
 }
 
-/* line 299, ../sass/_page.scss */
+/* line 296, ../sass/_page.scss */
 dl.tabs.secondary dd {
   border-style: none;
   display: block;
@@ -3776,7 +3810,7 @@ dl.tabs.secondary dd {
   padding: 6px 0;
 }
 
-/* line 303, ../sass/_page.scss */
+/* line 300, ../sass/_page.scss */
 dl.tabs.secondary dd a {
   border-bottom-style: none;
   border-right: 1px solid white;

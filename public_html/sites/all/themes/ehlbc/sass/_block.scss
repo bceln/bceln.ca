@@ -25,10 +25,9 @@
 }
 
 .block > h2, .block > h3 {
-  font-size: 1em;	
   margin:0px 0px 10px;
-  font-weight: bold;
 }
+
 .block table { margin:0px; }
 
 .block-search {
@@ -36,18 +35,6 @@
   float: right;
 }
 
-.block h3 {
-  color: #2a2724;
-  clear: both;
-  font-family: Helvetica, Arial, sans-serif;
-  font-size: 1em; /* 15px relative to 15px */
-  font-weight: bold;
-  /* padding: 0 20px; */
-}
-
-.dc-sub > div {
-  margin-top: 35px;
-}
 
 
 /* Admin menu block */

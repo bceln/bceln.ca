@@ -174,7 +174,6 @@
    Content Types
 ----------------------------------------- */
 
-
 body.node-type-resource {
   article {
     @extend .content-article;
@@ -232,29 +231,27 @@ body.node-type-event article{
    UI Elements
 ----------------------------------------- */
 
-  //until further notice all buttons will be green
-  .button{
-    &:hover,
-    &:active,
-    &:focus {
-      background: $gray_9;
-    }
+.button {
+  &:hover,
+  &:active,
+  &:focus {
+    background: $gray_9;
   }
+}
 
-  #breadcrumb{
-    height: $gutter;
-    padding-top: rem(0.7);
-    padding-left: $gutter;
+#breadcrumb {
+  height: $gutter;
+  padding-top: rem(0.7);
+  padding-left: $gutter;
+}
+
+ul.pagination {
+  text-align: center;
+  li {
+    float: none;
+    display: inline-block;
   }
-
-  ul.pagination{
-    text-align: center;
-    li {
-      float: none;
-      display: inline-block;
-    }
-  }
-
+}
 
 
 /* Tab styling */

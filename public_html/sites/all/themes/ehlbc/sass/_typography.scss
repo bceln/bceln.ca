@@ -110,7 +110,7 @@ nav {
     &>li.active-trail{
       a { }
     }
-    &>li:hover{
+    &>li:hover {
       a { }
     }
   }
@@ -120,7 +120,7 @@ nav {
   .flyout {
     a {
     }
-    a:hover{
+    a:hover {
     }
 
   }
@@ -131,6 +131,16 @@ nav {
    Block typography:
 ----------------------------------------- */
 
+.block {
+  h3 {
+    clear: both;
+    color: #2a2724;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: rem(1.5); 
+    font-weight: bold;
+  }
+}
+
 
 /* -----------------------------------------
    Individual fields 
@@ -140,6 +150,7 @@ nav {
   font-size: rem(1.8);
   text-align: center;  
 }
+
 
 /* -----------------------------------------
    UI Elements (pagination, breadcrumbs etc.)
@@ -183,5 +194,36 @@ ul.pagination {
   a{ 
     &:hover { }
   }
-
 }
+
+
+
+
+/* -----------------------------------------
+    Views
+----------------------------------------- */
+
+.view {
+  a {
+    text-decoration: underline;
+  }
+
+  .row {
+    margin-bottom: rem(1);
+    margin-top: rem(1);
+  }
+}
+
+#block-views-contacts-by-group-block {
+  h2.block-title {
+    color: $black;
+  }
+
+  h3 {
+    font-size: rem(1.2);
+    margin-bottom: rem(1);
+    margin-top: 0;
+    text-transform: uppercase;
+  }
+}
+
