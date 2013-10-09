@@ -111,7 +111,7 @@
    Generic content type formatting
 ----------------------------------------- */
 
-#content > article,
+#content > article:except(.node-contact),
 .content-article {
 
   .columns:last-child { float: left; }
@@ -227,6 +227,24 @@ body.page-user .profile {
       }
     }
   }
+}
+
+body.node-type-contact .node .field-item {
+  padding-bottom: 1em;
+}
+
+body.node-type-contact .node .field-label {
+  color: $secondaryColor;
+  font-family: Helvetica,Arial,sans-serif;
+  font-size: 1.133em;
+  font-weight: bold;
+  margin: 0.75em 0 0.15em;
+}
+
+body.node-type-contact .field-name-field-contact-groups {
+  position: absolute;
+  right: 50%;
+  top: -13px;
 }
 
 /* -----------------------------------------
