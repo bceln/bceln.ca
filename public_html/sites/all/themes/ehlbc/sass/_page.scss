@@ -264,6 +264,30 @@ body.node-type-contact .field-name-field-contact-groups {
   font-size: 0.867em;
 }
 
+.more-link {
+  background: #f68115;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  border-bottom: 1px solid #c06510;
+  border-top: 1px solid #fbc08a;
+  clear: both;
+  font-family: "minion-pro-1","minion-pro-2", Georgia, 'Times New Roman', serif;
+  font-size: 0.933em; /* 14px relative to 15px */
+  font-weight: bold;
+  height: 32px;
+  margin-top: 10px;
+  padding-top: 7px;
+  text-align: center;
+  text-transform: uppercase;
+  width: 105px;
+}
+
+.more-link a {
+  color: #fff;
+  text-decoration: none;
+}
+
 /* -----------------------------------------
    Front page specific 
 ----------------------------------------- */

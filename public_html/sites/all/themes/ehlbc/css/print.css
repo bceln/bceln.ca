@@ -4119,32 +4119,59 @@ body.node-type-contact .field-name-field-contact-groups {
   font-size: 0.867em;
 }
 
+/* line 267, ../sass/_page.scss */
+.more-link {
+  background: #f68115;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  border-bottom: 1px solid #c06510;
+  border-top: 1px solid #fbc08a;
+  clear: both;
+  font-family: "minion-pro-1","minion-pro-2", Georgia, 'Times New Roman', serif;
+  font-size: 0.933em;
+  /* 14px relative to 15px */
+  font-weight: bold;
+  height: 32px;
+  margin-top: 10px;
+  padding-top: 7px;
+  text-align: center;
+  text-transform: uppercase;
+  width: 105px;
+}
+
+/* line 286, ../sass/_page.scss */
+.more-link a {
+  color: #fff;
+  text-decoration: none;
+}
+
 /* -----------------------------------------
    Front page specific 
 ----------------------------------------- */
-/* line 270, ../sass/_page.scss */
+/* line 294, ../sass/_page.scss */
 .front #content .entry-content h2, .front #content .entry-content label, .front #content .entry-content .content-article .field-label, .content-article .front #content .entry-content .field-label, .front #content .entry-content body.node-type-resource article .field-label, body.node-type-resource article .front #content .entry-content .field-label, .front #content .entry-content body.node-type-organization article .field-label, body.node-type-organization article .front #content .entry-content .field-label, .front #content .entry-content body.node-type-event article .field-label, body.node-type-event article .front #content .entry-content .field-label, .front #content .entry-content body.page-user .profile .field-label, body.page-user .profile .front #content .entry-content .field-label {
   color: #18729d;
   font-size: 1.333em;
   padding-bottom: 20px;
 }
 
-/* line 276, ../sass/_page.scss */
+/* line 300, ../sass/_page.scss */
 .front #content > article .field-item {
   border: 0;
 }
 
-/* line 280, ../sass/_page.scss */
+/* line 304, ../sass/_page.scss */
 .front .submitted {
   display: none;
 }
 
-/* line 284, ../sass/_page.scss */
+/* line 308, ../sass/_page.scss */
 .front #content .view-Blog ul {
   padding-left: 0;
 }
 
-/* line 288, ../sass/_page.scss */
+/* line 312, ../sass/_page.scss */
 .front #content .view-Blog .more-link {
   background: #f68115;
   -moz-border-radius: 5px;
@@ -4163,7 +4190,7 @@ body.node-type-contact .field-name-field-contact-groups {
   text-transform: uppercase;
   width: 130px;
 }
-/* line 306, ../sass/_page.scss */
+/* line 330, ../sass/_page.scss */
 .front #content .view-Blog .more-link a {
   color: #fff;
   text-decoration: none;
@@ -4172,7 +4199,7 @@ body.node-type-contact .field-name-field-contact-groups {
 /* -----------------------------------------
    Views 
 ----------------------------------------- */
-/* line 317, ../sass/_page.scss */
+/* line 341, ../sass/_page.scss */
 #block-views-contacts-by-group-block {
   background: #f7f7f7;
   border-bottom: 0.5rem solid #efefef;
@@ -4187,7 +4214,7 @@ body.node-type-contact .field-name-field-contact-groups {
 /* -----------------------------------------
    UI Elements
 ----------------------------------------- */
-/* line 329, ../sass/_page.scss */
+/* line 353, ../sass/_page.scss */
 .button:hover, #content > article:except(.node-contact) .collapsed legend a:hover,
 #content > article:except(.node-contact) .collapsible legend a:hover,
 .content-article .collapsed legend a:hover,
@@ -4225,32 +4252,32 @@ body.page-user .profile .collapsible legend a:focus {
   background: #877f77;
 }
 
-/* line 334, ../sass/_page.scss */
+/* line 358, ../sass/_page.scss */
 #breadcrumb {
   height: 3rem;
   padding-top: 0.7rem;
   padding-left: 3rem;
 }
 
-/* line 340, ../sass/_page.scss */
+/* line 364, ../sass/_page.scss */
 ul.pagination {
   margin-top: 15px;
   text-align: left;
 }
-/* line 343, ../sass/_page.scss */
+/* line 367, ../sass/_page.scss */
 ul.pagination li {
   float: none;
   display: inline-block;
   margin: 0;
 }
-/* line 348, ../sass/_page.scss */
+/* line 372, ../sass/_page.scss */
 ul.pagination li .first {
   padding-left: 0;
   margin-left: 0;
 }
 
 /* Tab styling */
-/* line 357, ../sass/_page.scss */
+/* line 381, ../sass/_page.scss */
 div.drupal_tabs {
   background: #dddddd;
   overflow: auto;
@@ -4260,7 +4287,7 @@ div.drupal_tabs {
   -webkit-border-radius: 6px;
 }
 
-/* line 363, ../sass/_page.scss */
+/* line 387, ../sass/_page.scss */
 dl.tabs.primary,
 dl.tabs.secondary {
   border-style: none;
@@ -4268,19 +4295,19 @@ dl.tabs.secondary {
   padding: 0;
 }
 
-/* line 367, ../sass/_page.scss */
+/* line 391, ../sass/_page.scss */
 dl.tabs.primary {
   float: left;
 }
 
-/* line 371, ../sass/_page.scss */
+/* line 395, ../sass/_page.scss */
 dl.tabs.primary dd {
   display: inline;
   margin: 0;
   padding: 0;
 }
 
-/* line 375, ../sass/_page.scss */
+/* line 399, ../sass/_page.scss */
 dl.tabs.primary dd a {
   background: white;
   border-style: none;
@@ -4296,20 +4323,20 @@ dl.tabs.primary dd a {
   text-decoration: none;
 }
 
-/* line 382, ../sass/_page.scss */
+/* line 406, ../sass/_page.scss */
 dl.tabs.primary dd a:hover,
 dl.tabs.primary dd a:active {
   background: #877f77;
   color: white;
 }
 
-/* line 387, ../sass/_page.scss */
+/* line 411, ../sass/_page.scss */
 dl.tabs.primary dd.active a {
   background: #877f77;
   color: white;
 }
 
-/* line 391, ../sass/_page.scss */
+/* line 415, ../sass/_page.scss */
 dl.tabs.secondary {
   border-top: 1px solid white;
   clear: both;
@@ -4320,7 +4347,7 @@ dl.tabs.secondary {
   top: 4px;
 }
 
-/* line 395, ../sass/_page.scss */
+/* line 419, ../sass/_page.scss */
 dl.tabs.secondary dd {
   border-style: none;
   display: block;
@@ -4329,7 +4356,7 @@ dl.tabs.secondary dd {
   padding: 6px 0;
 }
 
-/* line 399, ../sass/_page.scss */
+/* line 423, ../sass/_page.scss */
 dl.tabs.secondary dd a {
   border-bottom-style: none;
   border-right: 1px solid white;
@@ -4343,7 +4370,7 @@ dl.tabs.secondary dd a {
 /* -----------------------------------------
    Forms
 ----------------------------------------- */
-/* line 409, ../sass/_page.scss */
+/* line 433, ../sass/_page.scss */
 .standard-form .button, #user-login .button,
 #search-form .button, .standard-form #content > article:except(.node-contact) .collapsed legend a, #content > article:except(.node-contact) .collapsed legend .standard-form a, #user-login #content > article:except(.node-contact) .collapsed legend a, #content > article:except(.node-contact) .collapsed legend #user-login a,
 #search-form #content > article:except(.node-contact) .collapsed legend a,
