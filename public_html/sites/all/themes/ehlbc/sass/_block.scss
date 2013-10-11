@@ -210,11 +210,13 @@
 #block-re-utilities-utility-nav ul.links li.first {
   border-left: 5px solid #ff932f;
   display: block;
+  width: 114px;
 }
 
 #block-re-utilities-utility-nav ul.links li.last {
   border-right: 5px solid #ff932f;
   display: block;
+  width:132px;
   
   /*
     @media(max-width: $screenSmall){
@@ -227,7 +229,7 @@
 #block-re-utilities-utility-nav ul.links li a {
   color: $white;
   display: block;
-  padding-top: 13px;
+  padding-top: 10px;
   text-decoration: none;
   padding-left: 30px;
 }
@@ -269,14 +271,14 @@
 }
 
 #block-re-utilities-utility-nav ul.links li a.login, #block-re-utilities-utility-nav ul.links li a.logout {
-  background: url('../images/icon-loginout.png') no-repeat 5px 12px;
+  background: url('../images/icon-loginout.png') no-repeat 15px 12px;
 }
 
 #block-re-utilities-utility-nav ul.links li a.logout {
 }
 
 #block-re-utilities-utility-nav ul.links li a.search {
-  background: url('../images/icon-search.png') no-repeat 5px 12px;
+  background: url('../images/icon-search.png') no-repeat 15px 12px;
 }
 
 
@@ -385,6 +387,8 @@
 #block-user-login h2 {
   color: #807b77;
   font-family: "minion-pro-1","minion-pro-2", Georgia, 'Times New Roman', serif;
+  font-size: 0.933em;
+  font-weight: bold;
   margin-top: 20px;
   text-transform: uppercase;
 }
