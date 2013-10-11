@@ -214,6 +214,7 @@
 
 .views-table th {
   font-family: Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
 }
 
 .views-table a {
@@ -332,10 +333,26 @@
   a.button { @include le-bouton; } 
 }
 
-.view-resources .views-exposed-form input.button,
-.view-contacts .views-exposed-form input.button{ @include le-bouton; } 
+.view-resources .view-filters {
+  background: none;
+  padding:0;
+}
 
-label.expand-btn{
+.view-resources .views-exposed-form {
+  background: #EFEFEF;
+  margin-top: -19px;
+  padding: 0 10px;
+  float:right
+}
+
+.view-resources .views-exposed-form .views-submit-button input.button {
+  margin:0;
+}
+
+.view-resources .views-exposed-form input.button,
+.view-contacts .views-exposed-form input.button{ margin:5px; @include le-bouton; } 
+
+#content label.expand-btn{
   position: absolute;
   top: 1.2rem;
   right: 0rem;
@@ -343,9 +360,11 @@ label.expand-btn{
   background: url("../images/resources-gear.png") no-repeat right 0px;
   color: #8c8b89;
   cursor: pointer;
-  font-size: 12px;
+  color: $gray_8;
+  font-size: .923em;
   font-weight: bold;
   height: 30px;
+  padding: 3px 45px 0 0;
   line-height: 30px;
 }
 
@@ -733,7 +752,7 @@ h2.pane-title {
   border-radius: 0;
   overflow: hidden;
   padding-top: 3px;
-  width: 689px;
+  width: 681px;
   position: relative;
 }
 
@@ -767,9 +786,10 @@ li.btn {
   border: none;
   color: #9e9993;
   float: left;
+  font-weight: 500;
   height: 40px;
   margin: 2px 2px 0 0;
-  padding: 12px 10px 0;
+  padding: 9px 10px 0;
   text-transform: uppercase;
   text-decoration: none;
 }

@@ -71,7 +71,11 @@ article {
     font-size: 1em;
     font-weight: bold;
   }
-  h4 { }
+  h4 {
+    font-size: rem(1.2);
+    font-weight: bold;
+    text-transform: uppercase;
+  }
 
   blockquote {
     p { }

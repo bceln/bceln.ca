@@ -4057,14 +4057,23 @@ body#tinymce h3 {
   font-size: 1em;
   font-weight: bold;
 }
-/* line 80, ../sass/_typography.scss */
+/* line 74, ../sass/_typography.scss */
+#content h4,
+.profile h4,
+article h4,
+body#tinymce h4 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+/* line 84, ../sass/_typography.scss */
 #content ul,
 .profile ul,
 article ul,
 body#tinymce ul {
   padding-left: 40px;
 }
-/* line 85, ../sass/_typography.scss */
+/* line 89, ../sass/_typography.scss */
 #content label,
 .profile label,
 article label,
@@ -4078,18 +4087,18 @@ body#tinymce label {
   */
 }
 
-/* line 98, ../sass/_typography.scss */
+/* line 102, ../sass/_typography.scss */
 #content article ul.links, #content body#tinymce ul.links {
   padding-left: 0;
 }
 
-/* line 102, ../sass/_typography.scss */
+/* line 106, ../sass/_typography.scss */
 aside p {
   font-style: inherit;
   font-size: 1.5rem;
 }
 
-/* line 107, ../sass/_typography.scss */
+/* line 111, ../sass/_typography.scss */
 #main section .block-title {
   font-size: 1.133em;
   color: #f68115;
@@ -4102,7 +4111,7 @@ aside p {
 /* -----------------------------------------
    Block typography:
 ----------------------------------------- */
-/* line 144, ../sass/_typography.scss */
+/* line 148, ../sass/_typography.scss */
 .block h2, .block #content label, #content .block label,
 .block .profile label,
 .profile .block label,
@@ -4113,7 +4122,7 @@ body#tinymce .block label, .block .content-article .field-label, .content-articl
 .block h3 {
   margin: 0 0 1rem;
 }
-/* line 148, ../sass/_typography.scss */
+/* line 152, ../sass/_typography.scss */
 .block h3 {
   clear: both;
   color: #2a2724;
@@ -4125,7 +4134,7 @@ body#tinymce .block label, .block .content-article .field-label, .content-articl
 /* -----------------------------------------
    Individual fields 
 ----------------------------------------- */
-/* line 162, ../sass/_typography.scss */
+/* line 166, ../sass/_typography.scss */
 .field-name-field-trial-deadline {
   font-size: 1.8rem;
   text-align: center;
@@ -4134,11 +4143,11 @@ body#tinymce .block label, .block .content-article .field-label, .content-articl
 /* -----------------------------------------
    UI Elements (pagination, breadcrumbs etc.)
 ----------------------------------------- */
-/* line 173, ../sass/_typography.scss */
+/* line 177, ../sass/_typography.scss */
 .content-article .field-label, body.node-type-resource article .field-label, body.node-type-resource body#tinymce .field-label, body.node-type-organization article .field-label, body.node-type-organization body#tinymce .field-label, body.node-type-event article .field-label, body.node-type-event body#tinymce .field-label, body.page-user .profile .field-label {
   margin-top: 0;
 }
-/* line 180, ../sass/_typography.scss */
+/* line 184, ../sass/_typography.scss */
 .content-article .collapsed legend a, body.node-type-resource article .collapsed legend a, body.node-type-resource body#tinymce .collapsed legend a, body.node-type-organization article .collapsed legend a, body.node-type-organization body#tinymce .collapsed legend a, body.node-type-event article .collapsed legend a, body.node-type-event body#tinymce .collapsed legend a, body.page-user .profile .collapsed legend a,
 .content-article .collapsible legend a,
 body.node-type-resource article .collapsible legend a,
@@ -4156,7 +4165,7 @@ body.page-user .profile .collapsible legend a {
   text-transform: uppercase;
 }
 
-/* line 192, ../sass/_typography.scss */
+/* line 196, ../sass/_typography.scss */
 .notice {
   color: #f00;
 }
@@ -4164,17 +4173,17 @@ body.page-user .profile .collapsible legend a {
 /* -----------------------------------------
     Views
 ----------------------------------------- */
-/* line 221, ../sass/_typography.scss */
+/* line 225, ../sass/_typography.scss */
 .view a {
   text-decoration: underline;
 }
-/* line 225, ../sass/_typography.scss */
+/* line 229, ../sass/_typography.scss */
 .view .row {
   margin-bottom: 1rem;
   margin-top: 1rem;
 }
 
-/* line 232, ../sass/_typography.scss */
+/* line 236, ../sass/_typography.scss */
 #block-views-contacts-by-group-block h2.block-title, #block-views-contacts-by-group-block #content label.block-title, #content #block-views-contacts-by-group-block label.block-title,
 #block-views-contacts-by-group-block .profile label.block-title,
 .profile #block-views-contacts-by-group-block label.block-title,
@@ -4184,7 +4193,7 @@ article #block-views-contacts-by-group-block label.block-title,
 body#tinymce #block-views-contacts-by-group-block label.block-title, #block-views-contacts-by-group-block .content-article .block-title.field-label, .content-article #block-views-contacts-by-group-block .block-title.field-label, #block-views-contacts-by-group-block body.node-type-resource article .block-title.field-label, body.node-type-resource article #block-views-contacts-by-group-block .block-title.field-label, #block-views-contacts-by-group-block body.node-type-resource body#tinymce .block-title.field-label, body.node-type-resource body#tinymce #block-views-contacts-by-group-block .block-title.field-label, #block-views-contacts-by-group-block body.node-type-organization article .block-title.field-label, body.node-type-organization article #block-views-contacts-by-group-block .block-title.field-label, #block-views-contacts-by-group-block body.node-type-organization body#tinymce .block-title.field-label, body.node-type-organization body#tinymce #block-views-contacts-by-group-block .block-title.field-label, #block-views-contacts-by-group-block body.node-type-event article .block-title.field-label, body.node-type-event article #block-views-contacts-by-group-block .block-title.field-label, #block-views-contacts-by-group-block body.node-type-event body#tinymce .block-title.field-label, body.node-type-event body#tinymce #block-views-contacts-by-group-block .block-title.field-label, #block-views-contacts-by-group-block body.page-user .profile .block-title.field-label, body.page-user .profile #block-views-contacts-by-group-block .block-title.field-label {
   color: black;
 }
-/* line 236, ../sass/_typography.scss */
+/* line 240, ../sass/_typography.scss */
 #block-views-contacts-by-group-block h3 {
   font-size: 1.2rem;
   margin-bottom: 1rem;
@@ -4195,7 +4204,7 @@ body#tinymce #block-views-contacts-by-group-block label.block-title, #block-view
 /* -----------------------------------------
    Forms
 ----------------------------------------- */
-/* line 251, ../sass/_typography.scss */
+/* line 255, ../sass/_typography.scss */
 .search-results dt a {
   text-decoration: underline;
 }
@@ -4284,27 +4293,32 @@ table {
 }
 
 /* line 58, ../sass/_page.scss */
+table thead {
+  background: none;
+}
+
+/* line 62, ../sass/_page.scss */
 #access {
   position: relative;
 }
 
-/* line 62, ../sass/_page.scss */
+/* line 66, ../sass/_page.scss */
 #main {
   margin-top: 40px;
 }
 
-/* line 66, ../sass/_page.scss */
+/* line 70, ../sass/_page.scss */
 .access-outer {
   background: #18729d;
   border-bottom: 3px solid #1f92c9;
 }
 
-/* line 71, ../sass/_page.scss */
+/* line 75, ../sass/_page.scss */
 ul.links {
   list-style: none;
   padding-left: 0px;
 }
-/* line 74, ../sass/_page.scss */
+/* line 78, ../sass/_page.scss */
 ul.links .print_html {
   margin-left: 0;
 }
@@ -4312,22 +4326,22 @@ ul.links .print_html {
 /* -----------------------------------------
    Header / Footer & logo
 ----------------------------------------- */
-/* line 83, ../sass/_page.scss */
+/* line 87, ../sass/_page.scss */
 .header-outer {
   background: url("../images/header-background.png") repeat;
 }
 
-/* line 87, ../sass/_page.scss */
+/* line 91, ../sass/_page.scss */
 #header-wrapper {
   background: url("../images/header-molecules4.png") no-repeat center top;
 }
 
-/* line 91, ../sass/_page.scss */
+/* line 95, ../sass/_page.scss */
 #logo {
   margin: 29px 0;
 }
 
-/* line 95, ../sass/_page.scss */
+/* line 99, ../sass/_page.scss */
 #footer {
   border-top: 1px dotted #dddddd;
   margin-top: 20px;
@@ -4339,7 +4353,7 @@ ul.links .print_html {
 /* -----------------------------------------
    Common spacings
 ----------------------------------------- */
-/* line 107, ../sass/_page.scss */
+/* line 111, ../sass/_page.scss */
 #sidebar-right .block {
   margin-bottom: 3rem;
 }
@@ -4347,7 +4361,7 @@ ul.links .print_html {
 /* -----------------------------------------
    Generic content type formatting
 ----------------------------------------- */
-/* line 117, ../sass/_page.scss */
+/* line 121, ../sass/_page.scss */
 #content > article:except(.node-contact) .columns:last-child, #content > body#tinymce:except(.node-contact) .columns:last-child,
 .content-article .columns:last-child,
 body.node-type-resource article .columns:last-child,
@@ -4359,7 +4373,7 @@ body.node-type-event body#tinymce .columns:last-child,
 body.page-user .profile .columns:last-child {
   float: left;
 }
-/* line 119, ../sass/_page.scss */
+/* line 123, ../sass/_page.scss */
 #content > article:except(.node-contact) .field-item, #content > body#tinymce:except(.node-contact) .field-item,
 .content-article .field-item,
 body.node-type-resource article .field-item,
@@ -4373,7 +4387,7 @@ body.page-user .profile .field-item {
   margin-bottom: 2rem;
   padding-bottom: 1rem;
 }
-/* line 125, ../sass/_page.scss */
+/* line 129, ../sass/_page.scss */
 #content > article:except(.node-contact) .field-name-field-private-note, #content > body#tinymce:except(.node-contact) .field-name-field-private-note,
 .content-article .field-name-field-private-note,
 body.node-type-resource article .field-name-field-private-note,
@@ -4387,7 +4401,7 @@ body.page-user .profile .field-name-field-private-note {
   border-bottom-style: none;
   padding: 1em;
 }
-/* line 132, ../sass/_page.scss */
+/* line 136, ../sass/_page.scss */
 #content > article:except(.node-contact) div[class^=field-group-simple-div] .field-item, #content > body#tinymce:except(.node-contact) div[class^=field-group-simple-div] .field-item,
 .content-article div[class^=field-group-simple-div] .field-item,
 body.node-type-resource article div[class^=field-group-simple-div] .field-item,
@@ -4401,7 +4415,7 @@ body.page-user .profile div[class^=field-group-simple-div] .field-item {
   margin-bottom: 0;
   padding-bottom: 0;
 }
-/* line 139, ../sass/_page.scss */
+/* line 143, ../sass/_page.scss */
 #content > article:except(.node-contact) fieldset, #content > body#tinymce:except(.node-contact) fieldset,
 .content-article fieldset,
 body.node-type-resource article fieldset,
@@ -4420,7 +4434,7 @@ body.page-user .profile fieldset {
   margin-bottom: 0;
   padding: 2rem;
 }
-/* line 143, ../sass/_page.scss */
+/* line 147, ../sass/_page.scss */
 #content > article:except(.node-contact) .collapsed, #content > body#tinymce:except(.node-contact) .collapsed,
 .content-article .collapsed,
 body.node-type-resource article .collapsed,
@@ -4434,7 +4448,7 @@ body.page-user .profile .collapsed {
   border: none;
   padding-bottom: 0px;
 }
-/* line 155, ../sass/_page.scss */
+/* line 159, ../sass/_page.scss */
 #content > article:except(.node-contact) .collapsed legend, #content > body#tinymce:except(.node-contact) .collapsed legend,
 #content > article:except(.node-contact) .collapsible legend,
 #content > body#tinymce:except(.node-contact) .collapsible legend,
@@ -4456,7 +4470,7 @@ body.node-type-event body#tinymce .collapsible legend,
 body.page-user .profile .collapsible legend {
   margin-left: -2.2rem;
 }
-/* line 157, ../sass/_page.scss */
+/* line 161, ../sass/_page.scss */
 #content > article:except(.node-contact) .collapsed legend a, #content > body#tinymce:except(.node-contact) .collapsed legend a,
 #content > article:except(.node-contact) .collapsible legend a,
 #content > body#tinymce:except(.node-contact) .collapsible legend a,
@@ -4490,18 +4504,18 @@ body.page-user .profile .collapsible legend a {
 /* -----------------------------------------
    Content Types
 ----------------------------------------- */
-/* line 181, ../sass/_page.scss */
+/* line 185, ../sass/_page.scss */
 body.node-type-resource .field-resource-vendor-ref {
   float: right;
   padding-bottom: 2rem;
   padding-left: 2rem;
 }
-/* line 186, ../sass/_page.scss */
+/* line 190, ../sass/_page.scss */
 body.node-type-resource .help {
   font-size: 1.1rem;
   margin-top: 0.5rem;
 }
-/* line 190, ../sass/_page.scss */
+/* line 194, ../sass/_page.scss */
 body.node-type-resource #return-res {
   background: url("../images/return-resources.png") no-repeat right 0;
   font-family: Helvetica, Arial, sans-serif;
@@ -4512,34 +4526,34 @@ body.node-type-resource #return-res {
   right: 1.5rem;
   top: 5.2rem;
 }
-/* line 199, ../sass/_page.scss */
+/* line 203, ../sass/_page.scss */
 body.node-type-resource #return-res a {
   color: #8c8b89;
   display: block;
   padding: 5px 40px 0 0;
 }
 
-/* line 217, ../sass/_page.scss */
+/* line 221, ../sass/_page.scss */
 body.page-user .profile .row-container {
   border: 1px solid #dddddd;
   padding: 2rem 0;
 }
-/* line 220, ../sass/_page.scss */
+/* line 224, ../sass/_page.scss */
 body.page-user .profile .row-container .row {
   margin: 0 auto;
   width: 90rem;
 }
-/* line 225, ../sass/_page.scss */
+/* line 229, ../sass/_page.scss */
 body.page-user .profile .row-container .one .field-item {
   border-bottom-style: none;
 }
 
-/* line 232, ../sass/_page.scss */
+/* line 236, ../sass/_page.scss */
 body.node-type-contact .node .field-item {
   padding-bottom: 1em;
 }
 
-/* line 236, ../sass/_page.scss */
+/* line 240, ../sass/_page.scss */
 body.node-type-contact .node .field-label {
   color: #f68115;
   font-family: Helvetica,Arial,sans-serif;
@@ -4548,7 +4562,7 @@ body.node-type-contact .node .field-label {
   margin: 0.75em 0 0.15em;
 }
 
-/* line 244, ../sass/_page.scss */
+/* line 248, ../sass/_page.scss */
 body.node-type-contact .field-name-field-contact-groups {
   position: absolute;
   right: 50%;
@@ -4558,7 +4572,7 @@ body.node-type-contact .field-name-field-contact-groups {
 /* -----------------------------------------
    Individual fields 
 ----------------------------------------- */
-/* line 253, ../sass/_page.scss */
+/* line 257, ../sass/_page.scss */
 .st_sharethis {
   font-family: helvetica,arial,sans-serif;
   font-size: 0.867em;
@@ -4567,29 +4581,29 @@ body.node-type-contact .field-name-field-contact-groups {
 /* -----------------------------------------
    Front page specific 
 ----------------------------------------- */
-/* line 261, ../sass/_page.scss */
+/* line 265, ../sass/_page.scss */
 .front #content .entry-content h2, .front #content .entry-content label, .front #content .entry-content .content-article .field-label, .content-article .front #content .entry-content .field-label, .front #content .entry-content body.node-type-resource article .field-label, body.node-type-resource article .front #content .entry-content .field-label, .front #content .entry-content body.node-type-resource body#tinymce .field-label, body.node-type-resource body#tinymce .front #content .entry-content .field-label, .front #content .entry-content body.node-type-organization article .field-label, body.node-type-organization article .front #content .entry-content .field-label, .front #content .entry-content body.node-type-organization body#tinymce .field-label, body.node-type-organization body#tinymce .front #content .entry-content .field-label, .front #content .entry-content body.node-type-event article .field-label, body.node-type-event article .front #content .entry-content .field-label, .front #content .entry-content body.node-type-event body#tinymce .field-label, body.node-type-event body#tinymce .front #content .entry-content .field-label, .front #content .entry-content body.page-user .profile .field-label, body.page-user .profile .front #content .entry-content .field-label {
   color: #18729d;
   font-size: 1.333em;
   padding-bottom: 20px;
 }
 
-/* line 267, ../sass/_page.scss */
+/* line 271, ../sass/_page.scss */
 .front #content > article .field-item, .front #content > body#tinymce .field-item {
   border: 0;
 }
 
-/* line 271, ../sass/_page.scss */
+/* line 275, ../sass/_page.scss */
 .front .submitted {
   display: none;
 }
 
-/* line 275, ../sass/_page.scss */
+/* line 279, ../sass/_page.scss */
 .front #content .view-Blog ul {
   padding-left: 0;
 }
 
-/* line 279, ../sass/_page.scss */
+/* line 283, ../sass/_page.scss */
 .front #content .view-Blog .more-link {
   background: #f68115;
   -moz-border-radius: 5px;
@@ -4608,7 +4622,7 @@ body.node-type-contact .field-name-field-contact-groups {
   text-transform: uppercase;
   width: 130px;
 }
-/* line 297, ../sass/_page.scss */
+/* line 301, ../sass/_page.scss */
 .front #content .view-Blog .more-link a {
   color: #fff;
   text-decoration: none;
@@ -4617,7 +4631,7 @@ body.node-type-contact .field-name-field-contact-groups {
 /* -----------------------------------------
    Views 
 ----------------------------------------- */
-/* line 308, ../sass/_page.scss */
+/* line 312, ../sass/_page.scss */
 #block-views-contacts-by-group-block {
   background: #f7f7f7;
   border-bottom: 0.5rem solid #efefef;
@@ -4632,7 +4646,7 @@ body.node-type-contact .field-name-field-contact-groups {
 /* -----------------------------------------
    UI Elements
 ----------------------------------------- */
-/* line 320, ../sass/_page.scss */
+/* line 324, ../sass/_page.scss */
 .button:hover, #content > article:except(.node-contact) .collapsed legend a:hover, #content > body#tinymce:except(.node-contact) .collapsed legend a:hover,
 #content > article:except(.node-contact) .collapsible legend a:hover,
 #content > body#tinymce:except(.node-contact) .collapsible legend a:hover,
@@ -4691,35 +4705,42 @@ body.page-user .profile .collapsible legend a:focus {
   background: #877f77;
 }
 
-/* line 325, ../sass/_page.scss */
+/* line 329, ../sass/_page.scss */
 #breadcrumb {
   height: 3rem;
   padding-top: 0.7rem;
   padding-left: 3rem;
 }
 
-/* line 331, ../sass/_page.scss */
+/* line 335, ../sass/_page.scss */
 ul.pagination {
-  text-align: center;
+  margin-top: 15px;
+  text-align: left;
 }
-/* line 333, ../sass/_page.scss */
+/* line 338, ../sass/_page.scss */
 ul.pagination li {
   float: none;
   display: inline-block;
+  margin: 0;
+}
+/* line 343, ../sass/_page.scss */
+ul.pagination li .first {
+  padding-left: 0;
+  margin-left: 0;
 }
 
 /* Tab styling */
-/* line 341, ../sass/_page.scss */
+/* line 352, ../sass/_page.scss */
 div.drupal_tabs {
   background: #dddddd;
   overflow: auto;
-  margin: 18px 0;
+  margin: 18px 0 0 0;
   padding: 4px 2px;
   -moz-border-radius: 6px;
   -webkit-border-radius: 6px;
 }
 
-/* line 347, ../sass/_page.scss */
+/* line 358, ../sass/_page.scss */
 dl.tabs.primary,
 dl.tabs.secondary {
   border-style: none;
@@ -4727,19 +4748,19 @@ dl.tabs.secondary {
   padding: 0;
 }
 
-/* line 351, ../sass/_page.scss */
+/* line 362, ../sass/_page.scss */
 dl.tabs.primary {
   float: left;
 }
 
-/* line 355, ../sass/_page.scss */
+/* line 366, ../sass/_page.scss */
 dl.tabs.primary dd {
   display: inline;
   margin: 0;
   padding: 0;
 }
 
-/* line 359, ../sass/_page.scss */
+/* line 370, ../sass/_page.scss */
 dl.tabs.primary dd a {
   background: white;
   border-style: none;
@@ -4755,20 +4776,20 @@ dl.tabs.primary dd a {
   text-decoration: none;
 }
 
-/* line 366, ../sass/_page.scss */
+/* line 377, ../sass/_page.scss */
 dl.tabs.primary dd a:hover,
 dl.tabs.primary dd a:active {
   background: #877f77;
   color: white;
 }
 
-/* line 371, ../sass/_page.scss */
+/* line 382, ../sass/_page.scss */
 dl.tabs.primary dd.active a {
   background: #877f77;
   color: white;
 }
 
-/* line 375, ../sass/_page.scss */
+/* line 386, ../sass/_page.scss */
 dl.tabs.secondary {
   border-top: 1px solid white;
   clear: both;
@@ -4779,7 +4800,7 @@ dl.tabs.secondary {
   top: 4px;
 }
 
-/* line 379, ../sass/_page.scss */
+/* line 390, ../sass/_page.scss */
 dl.tabs.secondary dd {
   border-style: none;
   display: block;
@@ -4788,7 +4809,7 @@ dl.tabs.secondary dd {
   padding: 6px 0;
 }
 
-/* line 383, ../sass/_page.scss */
+/* line 394, ../sass/_page.scss */
 dl.tabs.secondary dd a {
   border-bottom-style: none;
   border-right: 1px solid white;
@@ -4802,7 +4823,7 @@ dl.tabs.secondary dd a {
 /* -----------------------------------------
    Forms
 ----------------------------------------- */
-/* line 393, ../sass/_page.scss */
+/* line 404, ../sass/_page.scss */
 .standard-form .button, #user-login .button,
 #search-form .button, .standard-form #content > article:except(.node-contact) .collapsed legend a, #content > article:except(.node-contact) .collapsed legend .standard-form a, #user-login #content > article:except(.node-contact) .collapsed legend a, #content > article:except(.node-contact) .collapsed legend #user-login a,
 #search-form #content > article:except(.node-contact) .collapsed legend a,

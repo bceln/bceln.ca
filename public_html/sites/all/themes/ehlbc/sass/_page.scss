@@ -54,6 +54,10 @@
     width: 100%;
     border: 1px solid $gray_7;
   }
+
+  table thead {
+    background: none;
+  }
   
   #access {
     position:relative;
@@ -329,17 +333,24 @@ body.node-type-contact .field-name-field-contact-groups {
 }
 
 ul.pagination {
-  text-align: center;
+  margin-top: 15px;
+  text-align: left;
   li {
     float: none;
     display: inline-block;
+    margin: 0;
+
+    .first {
+      padding-left: 0;
+      margin-left: 0;
+    }
   }
 }
 
 
 /* Tab styling */
 div.drupal_tabs {
-  background:$gray_6; overflow:auto; margin:18px 0; padding:4px 2px;
+  background:$gray_6; overflow:auto; margin:18px 0 0 0; padding:4px 2px;
   -moz-border-radius:6px; -webkit-border-radius:6px;
 }
 
