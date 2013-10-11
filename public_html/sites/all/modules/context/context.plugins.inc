@@ -120,6 +120,11 @@ function _context_context_registry() {
       'description' => t('Control menu active class using context.'),
       'plugin' => 'context_reaction_menu',
     );
+    $registry['reactions']['menu_position'] = array(
+      'title' => t('Menu position'),
+      'description' => t('Set the current page to behave like a child of the selected menu item.'),
+      'plugin' => 'context_reaction_menu_position',
+    );
   }
   if (module_exists('css_injector')) {
     $registry['reactions']['css_injector'] = array(
@@ -300,6 +305,14 @@ function _context_context_plugins() {
       'file' => 'context_reaction_menu.inc',
       'class' => 'context_reaction_menu',
       'parent' => 'context_reaction',
+    ),
+  );
+  $plugins['context_reaction_menu_position'] = array(
+    'handler' => array(
+      'path' => drupal_get_path('module', 'context') . '/plugins',
+      'file' => 'context_reaction_menu_position.inc',
+      'class' => 'context_reaction_menu_position',
+      'parent' => 'context_reaction_menu',
     ),
   );
   $plugins['context_reaction_theme'] = array(

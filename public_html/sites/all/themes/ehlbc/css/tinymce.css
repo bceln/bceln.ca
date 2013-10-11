@@ -4105,13 +4105,47 @@ aside p {
   font-weight: bold;
 }
 
+/* line 119, ../sass/_typography.scss */
+#sidebar-right .block h2, #sidebar-right .block #content label, #content #sidebar-right .block label,
+#sidebar-right .block .profile label,
+.profile #sidebar-right .block label,
+#sidebar-right .block article label,
+article #sidebar-right .block label,
+#sidebar-right .block body#tinymce label,
+body#tinymce #sidebar-right .block label, #sidebar-right .block .content-article .field-label, .content-article #sidebar-right .block .field-label, #sidebar-right .block body.node-type-resource article .field-label, body.node-type-resource article #sidebar-right .block .field-label, #sidebar-right .block body.node-type-resource body#tinymce .field-label, body.node-type-resource body#tinymce #sidebar-right .block .field-label, #sidebar-right .block body.node-type-organization article .field-label, body.node-type-organization article #sidebar-right .block .field-label, #sidebar-right .block body.node-type-organization body#tinymce .field-label, body.node-type-organization body#tinymce #sidebar-right .block .field-label, #sidebar-right .block body.node-type-event article .field-label, body.node-type-event article #sidebar-right .block .field-label, #sidebar-right .block body.node-type-event body#tinymce .field-label, body.node-type-event body#tinymce #sidebar-right .block .field-label, #sidebar-right .block body.page-user .profile .field-label, body.page-user .profile #sidebar-right .block .field-label {
+  color: #2a2724;
+  clear: both;
+  font-family: Helvetica,Arial,sans-serif;
+  font-size: 1em;
+  font-weight: bold;
+}
+/* line 127, ../sass/_typography.scss */
+#sidebar-right .block ul {
+  padding: 0 0 0.25em 1em;
+}
+
+/* line 135, ../sass/_typography.scss */
+#sidebar-left .block h2, #sidebar-left .block #content label, #content #sidebar-left .block label,
+#sidebar-left .block .profile label,
+.profile #sidebar-left .block label,
+#sidebar-left .block article label,
+article #sidebar-left .block label,
+#sidebar-left .block body#tinymce label,
+body#tinymce #sidebar-left .block label, #sidebar-left .block .content-article .field-label, .content-article #sidebar-left .block .field-label, #sidebar-left .block body.node-type-resource article .field-label, body.node-type-resource article #sidebar-left .block .field-label, #sidebar-left .block body.node-type-resource body#tinymce .field-label, body.node-type-resource body#tinymce #sidebar-left .block .field-label, #sidebar-left .block body.node-type-organization article .field-label, body.node-type-organization article #sidebar-left .block .field-label, #sidebar-left .block body.node-type-organization body#tinymce .field-label, body.node-type-organization body#tinymce #sidebar-left .block .field-label, #sidebar-left .block body.node-type-event article .field-label, body.node-type-event article #sidebar-left .block .field-label, #sidebar-left .block body.node-type-event body#tinymce .field-label, body.node-type-event body#tinymce #sidebar-left .block .field-label, #sidebar-left .block body.page-user .profile .field-label, body.page-user .profile #sidebar-left .block .field-label {
+  color: #2a2724;
+  clear: both;
+  font-family: Helvetica,Arial,sans-serif;
+  font-size: 1em;
+  font-weight: bold;
+}
+
 /* -----------------------------------------
    NAV typography:
 ----------------------------------------- */
 /* -----------------------------------------
    Block typography:
 ----------------------------------------- */
-/* line 148, ../sass/_typography.scss */
+/* line 176, ../sass/_typography.scss */
 .block h2, .block #content label, #content .block label,
 .block .profile label,
 .profile .block label,
@@ -4122,7 +4156,7 @@ body#tinymce .block label, .block .content-article .field-label, .content-articl
 .block h3 {
   margin: 0 0 1rem;
 }
-/* line 152, ../sass/_typography.scss */
+/* line 180, ../sass/_typography.scss */
 .block h3 {
   clear: both;
   color: #2a2724;
@@ -4134,7 +4168,7 @@ body#tinymce .block label, .block .content-article .field-label, .content-articl
 /* -----------------------------------------
    Individual fields 
 ----------------------------------------- */
-/* line 166, ../sass/_typography.scss */
+/* line 194, ../sass/_typography.scss */
 .field-name-field-trial-deadline {
   font-size: 1.8rem;
   text-align: center;
@@ -4143,11 +4177,11 @@ body#tinymce .block label, .block .content-article .field-label, .content-articl
 /* -----------------------------------------
    UI Elements (pagination, breadcrumbs etc.)
 ----------------------------------------- */
-/* line 177, ../sass/_typography.scss */
+/* line 205, ../sass/_typography.scss */
 .content-article .field-label, body.node-type-resource article .field-label, body.node-type-resource body#tinymce .field-label, body.node-type-organization article .field-label, body.node-type-organization body#tinymce .field-label, body.node-type-event article .field-label, body.node-type-event body#tinymce .field-label, body.page-user .profile .field-label {
   margin-top: 0;
 }
-/* line 184, ../sass/_typography.scss */
+/* line 212, ../sass/_typography.scss */
 .content-article .collapsed legend a, body.node-type-resource article .collapsed legend a, body.node-type-resource body#tinymce .collapsed legend a, body.node-type-organization article .collapsed legend a, body.node-type-organization body#tinymce .collapsed legend a, body.node-type-event article .collapsed legend a, body.node-type-event body#tinymce .collapsed legend a, body.page-user .profile .collapsed legend a,
 .content-article .collapsible legend a,
 body.node-type-resource article .collapsible legend a,
@@ -4165,7 +4199,7 @@ body.page-user .profile .collapsible legend a {
   text-transform: uppercase;
 }
 
-/* line 196, ../sass/_typography.scss */
+/* line 224, ../sass/_typography.scss */
 .notice {
   color: #f00;
 }
@@ -4173,17 +4207,17 @@ body.page-user .profile .collapsible legend a {
 /* -----------------------------------------
     Views
 ----------------------------------------- */
-/* line 225, ../sass/_typography.scss */
+/* line 253, ../sass/_typography.scss */
 .view a {
   text-decoration: underline;
 }
-/* line 229, ../sass/_typography.scss */
+/* line 257, ../sass/_typography.scss */
 .view .row {
   margin-bottom: 1rem;
   margin-top: 1rem;
 }
 
-/* line 236, ../sass/_typography.scss */
+/* line 264, ../sass/_typography.scss */
 #block-views-contacts-by-group-block h2.block-title, #block-views-contacts-by-group-block #content label.block-title, #content #block-views-contacts-by-group-block label.block-title,
 #block-views-contacts-by-group-block .profile label.block-title,
 .profile #block-views-contacts-by-group-block label.block-title,
@@ -4193,7 +4227,7 @@ article #block-views-contacts-by-group-block label.block-title,
 body#tinymce #block-views-contacts-by-group-block label.block-title, #block-views-contacts-by-group-block .content-article .block-title.field-label, .content-article #block-views-contacts-by-group-block .block-title.field-label, #block-views-contacts-by-group-block body.node-type-resource article .block-title.field-label, body.node-type-resource article #block-views-contacts-by-group-block .block-title.field-label, #block-views-contacts-by-group-block body.node-type-resource body#tinymce .block-title.field-label, body.node-type-resource body#tinymce #block-views-contacts-by-group-block .block-title.field-label, #block-views-contacts-by-group-block body.node-type-organization article .block-title.field-label, body.node-type-organization article #block-views-contacts-by-group-block .block-title.field-label, #block-views-contacts-by-group-block body.node-type-organization body#tinymce .block-title.field-label, body.node-type-organization body#tinymce #block-views-contacts-by-group-block .block-title.field-label, #block-views-contacts-by-group-block body.node-type-event article .block-title.field-label, body.node-type-event article #block-views-contacts-by-group-block .block-title.field-label, #block-views-contacts-by-group-block body.node-type-event body#tinymce .block-title.field-label, body.node-type-event body#tinymce #block-views-contacts-by-group-block .block-title.field-label, #block-views-contacts-by-group-block body.page-user .profile .block-title.field-label, body.page-user .profile #block-views-contacts-by-group-block .block-title.field-label {
   color: black;
 }
-/* line 240, ../sass/_typography.scss */
+/* line 268, ../sass/_typography.scss */
 #block-views-contacts-by-group-block h3 {
   font-size: 1.2rem;
   margin-bottom: 1rem;
@@ -4204,7 +4238,7 @@ body#tinymce #block-views-contacts-by-group-block label.block-title, #block-view
 /* -----------------------------------------
    Forms
 ----------------------------------------- */
-/* line 255, ../sass/_typography.scss */
+/* line 283, ../sass/_typography.scss */
 .search-results dt a {
   text-decoration: underline;
 }
