@@ -177,6 +177,11 @@
 /* -----------------------------------------
    Content Types
 ----------------------------------------- */
+body.page-node .field {
+  background: url('../images/dashed-border-trans.png') repeat-x 0 bottom;
+  padding-bottom: 10px !important;
+  margin: 10px 0;
+}
 
 body.node-type-resource {
   article {

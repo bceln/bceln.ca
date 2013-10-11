@@ -100,6 +100,11 @@
   #content .view-events ul.row{
     list-style: none;
   }
+
+  #content .view-events .views-row {
+    border-bottom: 1px solid #E0E0E0;
+    padding: 1em 0;
+  }
   
     #content .view-Blog .views-field-title a,
     #content .view-events .views-field-title a,
@@ -119,12 +124,13 @@
     }  
 
    #content .view-Blog .views-field-created,
-   #content .view-events .views-field-field-date-value {
-    color: #f68115;
+   #content .view-events .views-field-field-date {
+    color: $secondaryColor;
     display: block;
     font-family: Helvetica, Arial, sans-serif;
-    font-size: 1.333em; /* 20px relative to 15px */
-    padding-bottom: 15px;
+    font-size: 1.067em; /* 20px relative to 15px */
+    font-weight: bold;
+    padding-bottom: 0;
   }
 
   #content .view-events .views-field-field-date-value {
