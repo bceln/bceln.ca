@@ -8581,29 +8581,34 @@ article #block-user-login label, #block-user-login .content-article .field-label
 }
 
 /* line 136, ../sass/_views.scss */
+#content .view-Blog .views-field-created {
+  padding-bottom: 15px;
+}
+
+/* line 140, ../sass/_views.scss */
 #content .view-events .views-field-field-date-value {
   font-size: 1.067em;
   /*16px -relative to 15px */
   padding-bottom: 0;
 }
 
-/* line 144, ../sass/_views.scss */
+/* line 148, ../sass/_views.scss */
 #content .view-Blog .views-field-tid {
   padding-bottom: 10px;
 }
 
-/* line 148, ../sass/_views.scss */
+/* line 152, ../sass/_views.scss */
 #content .view-Blog .views-field-teaser {
   font-family: "minion-pro-1","minion-pro-2", Georgia, 'Times New Roman', serif;
 }
 
-/* line 152, ../sass/_views.scss */
+/* line 156, ../sass/_views.scss */
 .node-type-blog .node .content {
   padding: 15px 35px 15px 0;
 }
 
 /* Homepage quotes */
-/* line 159, ../sass/_views.scss */
+/* line 163, ../sass/_views.scss */
 #block-views-quotes-block-1 {
   background: #efefef;
   border-bottom: 5px solid #e0e0e0;
@@ -8617,7 +8622,7 @@ article #block-user-login label, #block-user-login .content-article .field-label
   font-style: normal;
 }
 
-/* line 175, ../sass/_views.scss */
+/* line 179, ../sass/_views.scss */
 #block-views-quotes-block-1 .quote-title,
 #block-views-quotes-block-1 .quote-job-title,
 #block-views-quotes-block-1 .quote-org,
@@ -8626,43 +8631,43 @@ article #block-user-login label, #block-user-login .content-article .field-label
   font-weight: bold;
 }
 
-/* line 180, ../sass/_views.scss */
+/* line 184, ../sass/_views.scss */
 #block-views-quotes-block-1 .quote-year {
   color: #f68115;
   font-weight: normal;
 }
 
-/* line 185, ../sass/_views.scss */
+/* line 189, ../sass/_views.scss */
 #block-views-quotes-block-1 blockquote {
   background: none;
   border: none;
   padding: 10px 0 0 0;
 }
 
-/* line 191, ../sass/_views.scss */
+/* line 195, ../sass/_views.scss */
 #block-views-quotes-block-1 blockquote, #block-views-quotes-block-1 blockquote p {
   color: #2a2724;
   font-style: normal;
   font-weight: 1em;
 }
 
-/* line 196, ../sass/_views.scss */
+/* line 200, ../sass/_views.scss */
 #block-views-quotes-block-1 .date-display-single {
   color: #f68115;
 }
 
 /* Contacts View */
-/* line 204, ../sass/_views.scss */
+/* line 208, ../sass/_views.scss */
 .view-contacts {
   margin-top: 35px;
 }
 
-/* line 208, ../sass/_views.scss */
+/* line 212, ../sass/_views.scss */
 #edit-submit-contacts {
   margin-top: 30px;
 }
 
-/* line 212, ../sass/_views.scss */
+/* line 216, ../sass/_views.scss */
 .view-contacts .view-filters {
   background: none repeat scroll 0 0 #EFEFEF;
   border-bottom: 5px solid #E0E0E0;
@@ -8670,29 +8675,29 @@ article #block-user-login label, #block-user-login .content-article .field-label
 }
 
 /* Data Tables */
-/* line 221, ../sass/_views.scss */
+/* line 225, ../sass/_views.scss */
 .views-table th {
   font-family: Helvetica, Arial, sans-serif;
   text-transform: uppercase;
 }
 
-/* line 226, ../sass/_views.scss */
+/* line 230, ../sass/_views.scss */
 .views-table a {
   text-decoration: none;
 }
 
-/* line 230, ../sass/_views.scss */
+/* line 234, ../sass/_views.scss */
 #dashboard .view-resources .view-content {
   padding-left: 0;
 }
 
-/* line 235, ../sass/_views.scss */
+/* line 239, ../sass/_views.scss */
 .view-resources .view-content,
 .view-licenses .view-content {
   padding-left: 15px;
 }
 
-/* line 245, ../sass/_views.scss */
+/* line 249, ../sass/_views.scss */
 .view-resources table,
 .view-contacts table,
 .view-licenses table,
@@ -8705,7 +8710,7 @@ article #block-user-login label, #block-user-login .content-article .field-label
   width: 100%;
 }
 
-/* line 257, ../sass/_views.scss */
+/* line 261, ../sass/_views.scss */
 .view-resources table tr,
 .view-contacts table tr,
 .view-licenses table tr,
@@ -8716,7 +8721,7 @@ article #block-user-login label, #block-user-login .content-article .field-label
   background: none;
 }
 
-/* line 274, ../sass/_views.scss */
+/* line 278, ../sass/_views.scss */
 .view-resources table td,
 .view-resources table th,
 .view-contacts table td,
@@ -8737,12 +8742,12 @@ article #block-user-login label, #block-user-login .content-article .field-label
   vertical-align: top;
 }
 
-/* line 281, ../sass/_views.scss */
+/* line 285, ../sass/_views.scss */
 .page-forum table thead tr {
   background: url("../images/dashed-border.png") repeat-x 0 bottom;
 }
 
-/* line 298, ../sass/_views.scss */
+/* line 302, ../sass/_views.scss */
 .view-resources table tr.even,
 .view-resources table tr.odd,
 .view-contacts table tr.even,
@@ -8761,26 +8766,26 @@ article #block-user-login label, #block-user-login .content-article .field-label
   border: none;
 }
 
-/* line 303, ../sass/_views.scss */
+/* line 307, ../sass/_views.scss */
 .view-resources td.views-field-title {
   font-family: "minion-pro-1","minion-pro-2", Georgia, 'Times New Roman', serif;
   font-weight: bold;
   width: 225px;
 }
 
-/* line 309, ../sass/_views.scss */
+/* line 313, ../sass/_views.scss */
 .view-resources td.views-field-title a {
   color: #18729d;
   font-size: 1.133em;
 }
 
-/* line 315, ../sass/_views.scss */
+/* line 319, ../sass/_views.scss */
 .view-resources td.views-field-body {
   color: #2a2724;
   font-family: "minion-pro-1","minion-pro-2", Georgia, 'Times New Roman', serif;
 }
 
-/* line 325, ../sass/_views.scss */
+/* line 329, ../sass/_views.scss */
 .view-resources th,
 .view-organizations th,
 .view-contacts th,
@@ -8790,13 +8795,13 @@ article #block-user-login label, #block-user-login .content-article .field-label
   font-weight: bold;
 }
 
-/* line 330, ../sass/_views.scss */
+/* line 334, ../sass/_views.scss */
 .view-resources .view-header {
   position: absolute;
   top: 0;
   right: 15px;
 }
-/* line 334, ../sass/_views.scss */
+/* line 338, ../sass/_views.scss */
 .view-resources .view-header a.button, .view-resources .view-header #content > article:except(.node-contact) .collapsed legend a, #content > article:except(.node-contact) .collapsed legend .view-resources .view-header a,
 .view-resources .view-header #content > article:except(.node-contact) .collapsible legend a,
 #content > article:except(.node-contact) .collapsible legend .view-resources .view-header a,
@@ -8839,7 +8844,7 @@ body.page-user .profile .collapsible legend .view-resources .view-header a {
   -webkit-border-radius: 15px;
 }
 
-/* line 339, ../sass/_views.scss */
+/* line 343, ../sass/_views.scss */
 .view-contacts .view-header a.button, .view-contacts .view-header #content > article:except(.node-contact) .collapsed legend a, #content > article:except(.node-contact) .collapsed legend .view-contacts .view-header a,
 .view-contacts .view-header #content > article:except(.node-contact) .collapsible legend a,
 #content > article:except(.node-contact) .collapsible legend .view-contacts .view-header a,
@@ -8907,13 +8912,13 @@ body.page-user .profile .collapsible legend .view-organizations .view-header a {
   -webkit-border-radius: 15px;
 }
 
-/* line 342, ../sass/_views.scss */
+/* line 346, ../sass/_views.scss */
 .view-resources .view-filters {
   background: none;
   padding: 0;
 }
 
-/* line 347, ../sass/_views.scss */
+/* line 351, ../sass/_views.scss */
 .view-resources .views-exposed-form {
   background: #EFEFEF;
   margin-top: -19px;
@@ -8921,12 +8926,12 @@ body.page-user .profile .collapsible legend .view-organizations .view-header a {
   float: right;
 }
 
-/* line 354, ../sass/_views.scss */
+/* line 358, ../sass/_views.scss */
 .view-resources .views-exposed-form .views-submit-button input.button {
   margin: 0;
 }
 
-/* line 359, ../sass/_views.scss */
+/* line 363, ../sass/_views.scss */
 .view-resources .views-exposed-form input.button,
 .view-contacts .views-exposed-form input.button {
   margin: 5px;
@@ -8949,7 +8954,7 @@ body.page-user .profile .collapsible legend .view-organizations .view-header a {
   -webkit-border-radius: 15px;
 }
 
-/* line 361, ../sass/_views.scss */
+/* line 365, ../sass/_views.scss */
 #content label.expand-btn {
   position: absolute;
   top: 1.2rem;
@@ -8967,40 +8972,40 @@ body.page-user .profile .collapsible legend .view-organizations .view-header a {
 }
 
 /* Dashboard */
-/* line 380, ../sass/_views.scss */
+/* line 384, ../sass/_views.scss */
 #dashboard {
   margin-top: 36px;
 }
 
-/* line 384, ../sass/_views.scss */
+/* line 388, ../sass/_views.scss */
 .panel-3col-33 .panel-col {
   margin-right: 32px;
   width: 445px;
 }
 
-/* line 389, ../sass/_views.scss */
+/* line 393, ../sass/_views.scss */
 .panel-3col-33 .panel-col-first {
   margin-right: 30px;
   width: 221px;
 }
 
-/* line 394, ../sass/_views.scss */
+/* line 398, ../sass/_views.scss */
 .panel-3col-33 .panel-col-last {
   width: 221px;
 }
 
 /* Dashboard - col-first */
-/* line 400, ../sass/_views.scss */
+/* line 404, ../sass/_views.scss */
 .page-dashboard a {
   text-decoration: none;
 }
 
-/* line 404, ../sass/_views.scss */
+/* line 408, ../sass/_views.scss */
 #dashboard .panel-pane, #og-page .panel-pane {
   border: none;
 }
 
-/* line 408, ../sass/_views.scss */
+/* line 412, ../sass/_views.scss */
 h2.pane-title, #content label.pane-title,
 .profile label.pane-title,
 article label.pane-title, .content-article .pane-title.field-label, body.node-type-resource article .pane-title.field-label, body.node-type-organization article .pane-title.field-label, body.node-type-event article .pane-title.field-label, body.page-user .profile .pane-title.field-label {
@@ -9010,7 +9015,7 @@ article label.pane-title, .content-article .pane-title.field-label, body.node-ty
 }
 
 /* Profile */
-/* line 415, ../sass/_views.scss */
+/* line 419, ../sass/_views.scss */
 #dashboard .pane-profile {
   background: #e0e0e0;
   border-bottom: 5px solid #c5c5c5;
@@ -9019,12 +9024,12 @@ article label.pane-title, .content-article .pane-title.field-label, body.node-ty
   margin-bottom: 30px;
 }
 
-/* line 423, ../sass/_views.scss */
+/* line 427, ../sass/_views.scss */
 #dashboard .pane-profile a {
   color: #18729d;
 }
 
-/* line 427, ../sass/_views.scss */
+/* line 431, ../sass/_views.scss */
 #dashboard .pane-profile h2, #dashboard .pane-profile #content label, #content #dashboard .pane-profile label,
 #dashboard .pane-profile .profile label,
 .profile #dashboard .pane-profile label,
@@ -9033,7 +9038,7 @@ article #dashboard .pane-profile label, #dashboard .pane-profile .content-articl
   display: none;
 }
 
-/* line 431, ../sass/_views.scss */
+/* line 435, ../sass/_views.scss */
 #dashboard .pane-profile h4 {
   color: #2a2724;
   font-size: 1.333em;
@@ -9043,29 +9048,29 @@ article #dashboard .pane-profile label, #dashboard .pane-profile .content-articl
   text-transform: none;
 }
 
-/* line 439, ../sass/_views.scss */
+/* line 443, ../sass/_views.scss */
 #dashboard .pane-profile .job-title {
   color: #f68115;
   font-family: Helvetica, Arial, sans-serif;
 }
 
-/* line 444, ../sass/_views.scss */
+/* line 448, ../sass/_views.scss */
 #dashboard .pane-profile .email {
   margin-top: 12px;
   word-wrap: break-word;
 }
 
-/* line 449, ../sass/_views.scss */
+/* line 453, ../sass/_views.scss */
 #dashboard .pane-profile .org {
   margin-bottom: 15px;
 }
 
-/* line 454, ../sass/_views.scss */
+/* line 458, ../sass/_views.scss */
 #dashboard .pane-profile .groups {
   margin-bottom: 15px;
 }
 
-/* line 458, ../sass/_views.scss */
+/* line 462, ../sass/_views.scss */
 #dashboard .pane-profile .edit-profile a {
   background: #939290;
   color: #fff;
@@ -9085,13 +9090,13 @@ article #dashboard .pane-profile label, #dashboard .pane-profile .content-articl
   text-transform: uppercase;
 }
 
-/* line 477, ../sass/_views.scss */
+/* line 481, ../sass/_views.scss */
 #dashboard .pane-profile img.imagefield {
   float: right;
 }
 
 /* My Event Signups */
-/* line 483, ../sass/_views.scss */
+/* line 487, ../sass/_views.scss */
 #dashboard .pane-signup-current-signups {
   background: #f68115;
   border-bottom: 5px solid #ff932f;
@@ -9100,7 +9105,7 @@ article #dashboard .pane-profile label, #dashboard .pane-profile .content-articl
   padding-left: 20px;
 }
 
-/* line 491, ../sass/_views.scss */
+/* line 495, ../sass/_views.scss */
 #dashboard .pane-signup-current-signups h2, #dashboard .pane-signup-current-signups #content label, #content #dashboard .pane-signup-current-signups label,
 #dashboard .pane-signup-current-signups .profile label,
 .profile #dashboard .pane-signup-current-signups label,
@@ -9112,7 +9117,7 @@ article #dashboard .pane-signup-current-signups label, #dashboard .pane-signup-c
   margin: 20px 0 5px 0;
 }
 
-/* line 497, ../sass/_views.scss */
+/* line 501, ../sass/_views.scss */
 #dashboard .pane-signup-current-signups .item-list ul li {
   list-style: none;
   list-style-image: none;
@@ -9120,24 +9125,24 @@ article #dashboard .pane-signup-current-signups label, #dashboard .pane-signup-c
   padding-left: 0;
 }
 
-/* line 504, ../sass/_views.scss */
+/* line 508, ../sass/_views.scss */
 #dashboard .pane-signup-current-signups .views-field-title {
   font-size: 1.133em;
   /* 17px relative to 15px */
 }
 
-/* line 508, ../sass/_views.scss */
+/* line 512, ../sass/_views.scss */
 #dashboard .pane-signup-current-signups .views-field-title a {
   color: #fff;
 }
 
-/* line 512, ../sass/_views.scss */
+/* line 516, ../sass/_views.scss */
 #dashboard .pane-signup-current-signups .view-signup-current-signups {
   color: #fff;
 }
 
 /* My Colleagues */
-/* line 518, ../sass/_views.scss */
+/* line 522, ../sass/_views.scss */
 #dashboard .pane-colleagues {
   background: #f7f7f7;
   border-bottom: 5px solid #efefef;
@@ -9146,7 +9151,7 @@ article #dashboard .pane-signup-current-signups label, #dashboard .pane-signup-c
   word-wrap: break-word;
 }
 
-/* line 526, ../sass/_views.scss */
+/* line 530, ../sass/_views.scss */
 #dashboard .pane-colleagues h2, #dashboard .pane-colleagues #content label, #content #dashboard .pane-colleagues label,
 #dashboard .pane-colleagues .profile label,
 .profile #dashboard .pane-colleagues label,
@@ -9155,36 +9160,36 @@ article #dashboard .pane-colleagues label, #dashboard .pane-colleagues .content-
   margin: 20px 0 3px;
 }
 
-/* line 530, ../sass/_views.scss */
+/* line 534, ../sass/_views.scss */
 #dashboard .pane-colleagues .view-colleagues .view-content {
   font-size: 0.867em;
   /* 13px relative to 15px */
 }
 
-/* line 534, ../sass/_views.scss */
+/* line 538, ../sass/_views.scss */
 #dashboard .pane-colleagues .view-colleagues h4 {
   font-size: 1.000em;
   /* 15px relative to 15px */
 }
 
-/* line 538, ../sass/_views.scss */
+/* line 542, ../sass/_views.scss */
 #dashboard .pane-colleagues .view-colleagues h4 a {
   color: #2a2724;
 }
 
-/* line 542, ../sass/_views.scss */
+/* line 546, ../sass/_views.scss */
 #dashboard .pane-colleagues .view-colleagues .position {
   color: #939290;
 }
 
-/* line 546, ../sass/_views.scss */
+/* line 550, ../sass/_views.scss */
 #dashboard .pane-colleagues .view-colleagues .email a {
   color: #18729d;
 }
 
 /* Dashboard - Center Column */
 /* My Organization Resources */
-/* line 555, ../sass/_views.scss */
+/* line 559, ../sass/_views.scss */
 #dashboard .pane-resources h2, #dashboard .pane-resources #content label, #content #dashboard .pane-resources label,
 #dashboard .pane-resources .profile label,
 .profile #dashboard .pane-resources label,
@@ -9195,12 +9200,12 @@ article #dashboard .pane-resources label, #dashboard .pane-resources .content-ar
   padding-bottom: 10px;
 }
 
-/* line 562, ../sass/_views.scss */
+/* line 566, ../sass/_views.scss */
 #dashboard .pane-resources .view-resources .row {
   background: url("../images/dashed-border.png") repeat-x 0 bottom;
 }
 
-/* line 566, ../sass/_views.scss */
+/* line 570, ../sass/_views.scss */
 #dashboard .pane-resources .view-resources .row h4 {
   color: #2a2724;
   font-family: "minion-pro-1","minion-pro-2", Georgia, 'Times New Roman', serif;
@@ -9209,13 +9214,13 @@ article #dashboard .pane-resources label, #dashboard .pane-resources .content-ar
   font-weight: 300;
 }
 
-/* line 573, ../sass/_views.scss */
+/* line 577, ../sass/_views.scss */
 #dashboard .pane-resources .view-resources .row h4 a {
   color: #2a2724;
   text-transform: none;
 }
 
-/* line 579, ../sass/_views.scss */
+/* line 583, ../sass/_views.scss */
 #dashboard .pane-resources .more-link {
   background: #18729d;
   -moz-border-radius: 5px;
@@ -9238,7 +9243,7 @@ article #dashboard .pane-resources label, #dashboard .pane-resources .content-ar
 }
 
 /* Dashboard - My Groups */
-/* line 601, ../sass/_views.scss */
+/* line 605, ../sass/_views.scss */
 #dashboard .pane-og-my {
   background: #f7f7f7;
   border-bottom: 5px solid #efefef;
@@ -9246,7 +9251,7 @@ article #dashboard .pane-resources label, #dashboard .pane-resources .content-ar
   margin-bottom: 30px;
 }
 
-/* line 608, ../sass/_views.scss */
+/* line 612, ../sass/_views.scss */
 #dashboard .pane-og-my h2, #dashboard .pane-og-my #content label, #content #dashboard .pane-og-my label,
 #dashboard .pane-og-my .profile label,
 .profile #dashboard .pane-og-my label,
@@ -9256,12 +9261,12 @@ article #dashboard .pane-og-my label, #dashboard .pane-og-my .content-article .f
   padding: 0 20px;
 }
 
-/* line 617, ../sass/_views.scss */
+/* line 621, ../sass/_views.scss */
 #dashboard .pane-og-my .view-empty {
   padding-left: 20px;
 }
 
-/* line 624, ../sass/_views.scss */
+/* line 628, ../sass/_views.scss */
 #dashboard .pane-og-my .view-og-my table,
 #dashboard .pane-og-my .view-og-my table th,
 #dashboard .pane-og-my .view-og-my table tr,
@@ -9270,7 +9275,7 @@ article #dashboard .pane-og-my label, #dashboard .pane-og-my .content-article .f
   border: none;
 }
 
-/* line 629, ../sass/_views.scss */
+/* line 633, ../sass/_views.scss */
 #dashboard .pane-og-my .view-og-my table th {
   background: #e6e6e6;
   color: #939290;
@@ -9280,44 +9285,44 @@ article #dashboard .pane-og-my label, #dashboard .pane-og-my .content-article .f
   text-transform: none;
 }
 
-/* line 637, ../sass/_views.scss */
+/* line 641, ../sass/_views.scss */
 #dashboard .pane-og-my .view-og-my th.views-field-member-count {
   padding-right: 10px;
 }
 
-/* line 642, ../sass/_views.scss */
+/* line 646, ../sass/_views.scss */
 #dashboard .pane-og-my .view-og-my table td {
   color: #18729d;
   padding-left: 20px;
 }
 
-/* line 647, ../sass/_views.scss */
+/* line 651, ../sass/_views.scss */
 #dashboard .pane-og-my .view-og-my table td a {
   color: #18729d;
 }
 
-/* line 652, ../sass/_views.scss */
+/* line 656, ../sass/_views.scss */
 #dashboard .pane-og-my .view-id-og_my {
   /* padding-left: 20px; */
 }
 
-/* line 656, ../sass/_views.scss */
+/* line 660, ../sass/_views.scss */
 #dashboard .pane-og-my .view-id-og_my .view-footer {
   height: 0px;
 }
 
-/* line 660, ../sass/_views.scss */
+/* line 664, ../sass/_views.scss */
 #og-page .pane-content {
   margin-left: 20px;
 }
 
 /* Recent Group Forum/Wiki Activity */
-/* line 667, ../sass/_views.scss */
+/* line 671, ../sass/_views.scss */
 .pane-og-which-gorups .view-content .row {
   padding-right: 20px;
 }
 
-/* line 674, ../sass/_views.scss */
+/* line 678, ../sass/_views.scss */
 #dashboard .pane-og-which-gorups,
 .node-type-group #og-page .pane-og-mytracker,
 .node-type-group #og-page .pane-events,
@@ -9329,7 +9334,7 @@ article #dashboard .pane-og-my label, #dashboard .pane-og-my .content-article .f
   position: relative;
 }
 
-/* line 683, ../sass/_views.scss */
+/* line 687, ../sass/_views.scss */
 #dashboard .pane-og-which-gorups h2, #dashboard .pane-og-which-gorups #content label, #content #dashboard .pane-og-which-gorups label,
 #dashboard .pane-og-which-gorups .profile label,
 .profile #dashboard .pane-og-which-gorups label,
@@ -9357,7 +9362,7 @@ body.page-user .profile #og-page .pane-title.field-label {
   padding: 0 20px;
 }
 
-/* line 689, ../sass/_views.scss */
+/* line 693, ../sass/_views.scss */
 #dashboard .pane-og-which-gorups h3.group-title {
   background: #e6e6e6;
   font-size: 1em;
@@ -9367,26 +9372,26 @@ body.page-user .profile #og-page .pane-title.field-label {
   text-transform: none;
 }
 
-/* line 697, ../sass/_views.scss */
+/* line 701, ../sass/_views.scss */
 #dashboard .pane-og-which-gorups h3.group-title a {
   color: #939290;
   font-size: 0.867em;
   /* 13px relative to 15px */
 }
 
-/* line 702, ../sass/_views.scss */
+/* line 706, ../sass/_views.scss */
 #dashboard .pane-og-which-gorups .view-content .row {
   font-family: "minion-pro-1","minion-pro-2", Georgia, 'Times New Roman', serif;
   padding-left: 20px;
 }
 
-/* line 709, ../sass/_views.scss */
+/* line 713, ../sass/_views.scss */
 #dashboard .pane-og-which-gorups .view-content .first,
 .pane-og-mytracker .view-content .first {
   padding-top: 10px;
 }
 
-/* line 714, ../sass/_views.scss */
+/* line 718, ../sass/_views.scss */
 #dashboard .pane-og-which-gorups .view-content .row h4,
 .pane-og-mytracker .view-content .row h4 {
   font-family: "minion-pro-1","minion-pro-2", Georgia, 'Times New Roman', serif;
@@ -9395,14 +9400,14 @@ body.page-user .profile #og-page .pane-title.field-label {
   text-transform: none;
 }
 
-/* line 721, ../sass/_views.scss */
+/* line 725, ../sass/_views.scss */
 #dashboard .pane-og-which-gorups .view-content .row h4 a,
 .pane-og-mytracker .view-content .row h4 a {
   color: #18729d;
   font-weight: 400;
 }
 
-/* line 726, ../sass/_views.scss */
+/* line 730, ../sass/_views.scss */
 #dashboard .pane-og-which-gorups .view-content .row .updated {
   color: #939290;
   font-style: italic;
@@ -9412,7 +9417,7 @@ body.page-user .profile #og-page .pane-title.field-label {
 
 /* Recent Group Wiki Activity */
 /* Tabs Styles */
-/* line 738, ../sass/_views.scss */
+/* line 742, ../sass/_views.scss */
 .page-organizations dl.primary,
 .page-resources-databases dl.primary,
 .page-licenses dl.primary {
@@ -9421,7 +9426,7 @@ body.page-user .profile #og-page .pane-title.field-label {
   padding: 0;
 }
 
-/* line 746, ../sass/_views.scss */
+/* line 750, ../sass/_views.scss */
 .page-organizations dl.tabs.primary dd,
 .page-resources-databases dl.tabs.primary dd,
 .page-licenses dl.tabs.primary dd {
@@ -9430,7 +9435,7 @@ body.page-user .profile #og-page .pane-title.field-label {
   margin: -2px 0 0;
 }
 
-/* line 754, ../sass/_views.scss */
+/* line 758, ../sass/_views.scss */
 .page-organizations div.drupal_tabs,
 .page-resources-databases div.drupal_tabs,
 .page-licenses div.drupal_tabs {
@@ -9444,7 +9449,7 @@ body.page-user .profile #og-page .pane-title.field-label {
   position: relative;
 }
 
-/* line 768, ../sass/_views.scss */
+/* line 772, ../sass/_views.scss */
 .page-organizations dl.tabs.primary,
 .page-resources-databases dl.tabs.primary,
 .page-licenses dl.tabs.primary {
@@ -9459,12 +9464,12 @@ body.page-user .profile #og-page .pane-title.field-label {
   width: 100%;
 }
 
-/* line 780, ../sass/_views.scss */
+/* line 784, ../sass/_views.scss */
 li.btn {
   width: 168px;
 }
 
-/* line 787, ../sass/_views.scss */
+/* line 791, ../sass/_views.scss */
 .page-organizations dl.tabs.primary dd a,
 .page-resources-databases dl.tabs.primary dd a,
 .page-licenses dl.tabs.primary dd a {
@@ -9483,7 +9488,7 @@ li.btn {
   text-decoration: none;
 }
 
-/* line 805, ../sass/_views.scss */
+/* line 809, ../sass/_views.scss */
 .page-organizations dl.tabs.primary dd.active a,
 .page-resources-databases dl.tabs.primary dd.active a,
 .page-licenses dl.tabs.primary dd.active a {
@@ -9491,7 +9496,7 @@ li.btn {
   color: #2a2724;
 }
 
-/* line 812, ../sass/_views.scss */
+/* line 816, ../sass/_views.scss */
 .page-organizations dl.tabs.primary dd a:hover,
 .page-resources-databases dl.tabs.primary dd a:hover,
 .page-licenses dl.tabs.primary dd a:hover {
