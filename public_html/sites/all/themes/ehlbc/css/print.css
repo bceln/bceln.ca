@@ -4039,7 +4039,7 @@ body.page-user .profile .collapsible legend a {
    Content Types
 ----------------------------------------- */
 /* line 180, ../sass/_page.scss */
-body.page-node .field {
+body.node-type-page .field {
   background: url("../images/dashed-border-trans.png") repeat-x 0 bottom;
   padding-bottom: 10px !important;
   margin: 10px 0;
