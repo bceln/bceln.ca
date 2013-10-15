@@ -69,6 +69,7 @@ function ehlbc_preprocess_field(&$variables) {
     // Organization fields:
     case 'field_organization_ref':
       $node = node_load($variables['items'][0]['#markup']);
+      $variables['items'][0]['#markup'] = l($node->title, 'node/' . $node->nid);
       $renderable = array(
         0 => array(
           0 => array(
@@ -95,7 +96,8 @@ function ehlbc_preprocess_field(&$variables) {
         '/<div class="map-link">\s*<div class="location map-link">[^<]+<a[^>]*>[^<]+<\/a><\/div>\s*<\/div>/',
         '/<span class="geo"><abbr[^>]*>[^<]+<\/abbr>\s*,\s*<abbr[^>]+>[^<]+<\/abbr><\/span>/'
       );
-      $variables['items'][0]['#markup'] = preg_replace($patterns, '', render($renderable));
+      $variables['items'][0]['#markup'] .= '<div class="field-label">Address: </div>';
+      $variables['items'][0]['#markup'] .= preg_replace($patterns, '', render($renderable));
       break;
     // Resources fields:
     case 'field_resources_generic_url':
