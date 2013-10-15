@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /********************************************
 
   Settings.scss
@@ -7512,96 +7511,7 @@ body.node-type-contact .field-name-field-contact-groups {
 /* -----------------------------------------
    UI Elements
 ----------------------------------------- */
-/* Button styling taken from Seven theme */
-/* line 356, ../sass/_page.scss */
-a.button, #content > article:except(.node-contact) .collapsed legend a,
-#content > article:except(.node-contact) .collapsible legend a,
-.content-article .collapsed legend a,
-body.node-type-resource article .collapsed legend a,
-body.node-type-organization article .collapsed legend a,
-body.node-type-event article .collapsed legend a,
-body.page-user .profile .collapsed legend a,
-.content-article .collapsible legend a,
-body.node-type-resource article .collapsible legend a,
-body.node-type-organization article .collapsible legend a,
-body.node-type-event article .collapsible legend a,
-body.page-user .profile .collapsible legend a {
-  cursor: pointer;
-  padding: 4px 17px;
-  margin-bottom: 1em;
-  color: #5a5a5a;
-  display: inline-block;
-  text-align: center;
-  font-weight: normal;
-  font-size: 1.1em;
-  font-family: "Lucida Grande", Verdana, sans-serif;
-  border: 1px solid #e4e4e4;
-  border-bottom: 1px solid #b4b4b4;
-  border-left-color: #D2D2D2;
-  border-right-color: #D2D2D2;
-  background: url("/themes/seven/images/buttons.png") 0 0 repeat-x;
-  border-radius: 15px;
-  -moz-border-radius: 20px;
-  -webkit-border-radius: 15px;
-}
-
-/* line 379, ../sass/_page.scss */
-a.button:link, #content > article:except(.node-contact) .collapsed legend a:link,
-#content > article:except(.node-contact) .collapsible legend a:link,
-.content-article .collapsed legend a:link,
-body.node-type-resource article .collapsed legend a:link,
-body.node-type-organization article .collapsed legend a:link,
-body.node-type-event article .collapsed legend a:link,
-body.page-user .profile .collapsed legend a:link,
-.content-article .collapsible legend a:link,
-body.node-type-resource article .collapsible legend a:link,
-body.node-type-organization article .collapsible legend a:link,
-body.node-type-event article .collapsible legend a:link,
-body.page-user .profile .collapsible legend a:link,
-a.button:visited,
-#content > article:except(.node-contact) .collapsed legend a:visited,
-#content > article:except(.node-contact) .collapsible legend a:visited,
-.content-article .collapsed legend a:visited,
-body.node-type-resource article .collapsed legend a:visited,
-body.node-type-organization article .collapsed legend a:visited,
-body.node-type-event article .collapsed legend a:visited,
-body.page-user .profile .collapsed legend a:visited,
-.content-article .collapsible legend a:visited,
-body.node-type-resource article .collapsible legend a:visited,
-body.node-type-organization article .collapsible legend a:visited,
-body.node-type-event article .collapsible legend a:visited,
-body.page-user .profile .collapsible legend a:visited,
-a.button:hover,
-#content > article:except(.node-contact) .collapsed legend a:hover,
-#content > article:except(.node-contact) .collapsible legend a:hover,
-.content-article .collapsed legend a:hover,
-body.node-type-resource article .collapsed legend a:hover,
-body.node-type-organization article .collapsed legend a:hover,
-body.node-type-event article .collapsed legend a:hover,
-body.page-user .profile .collapsed legend a:hover,
-.content-article .collapsible legend a:hover,
-body.node-type-resource article .collapsible legend a:hover,
-body.node-type-organization article .collapsible legend a:hover,
-body.node-type-event article .collapsible legend a:hover,
-body.page-user .profile .collapsible legend a:hover,
-a.button:active,
-#content > article:except(.node-contact) .collapsed legend a:active,
-#content > article:except(.node-contact) .collapsible legend a:active,
-.content-article .collapsed legend a:active,
-body.node-type-resource article .collapsed legend a:active,
-body.node-type-organization article .collapsed legend a:active,
-body.node-type-event article .collapsed legend a:active,
-body.page-user .profile .collapsed legend a:active,
-.content-article .collapsible legend a:active,
-body.node-type-resource article .collapsible legend a:active,
-body.node-type-organization article .collapsible legend a:active,
-body.node-type-event article .collapsible legend a:active,
-body.page-user .profile .collapsible legend a:active {
-  text-decoration: none;
-  color: #5a5a5a;
-}
-
-/* line 387, ../sass/_page.scss */
+/* line 359, ../sass/_page.scss */
 .button:hover, #content > article:except(.node-contact) .collapsed legend a:hover,
 #content > article:except(.node-contact) .collapsible legend a:hover,
 .content-article .collapsed legend a:hover,
@@ -7639,32 +7549,32 @@ body.page-user .profile .collapsible legend a:focus {
   background: #877f77;
 }
 
-/* line 392, ../sass/_page.scss */
+/* line 364, ../sass/_page.scss */
 #breadcrumb {
   height: 3rem;
   padding-top: 0.7rem;
   padding-left: 3rem;
 }
 
-/* line 398, ../sass/_page.scss */
+/* line 370, ../sass/_page.scss */
 ul.pagination {
   margin-top: 15px;
   text-align: left;
 }
-/* line 401, ../sass/_page.scss */
+/* line 373, ../sass/_page.scss */
 ul.pagination li {
   float: none;
   display: inline-block;
   margin: 0;
 }
-/* line 406, ../sass/_page.scss */
+/* line 378, ../sass/_page.scss */
 ul.pagination li .first {
   padding-left: 0;
   margin-left: 0;
 }
 
 /* Tab styling */
-/* line 415, ../sass/_page.scss */
+/* line 387, ../sass/_page.scss */
 div.drupal_tabs {
   background: #dddddd;
   overflow: auto;
@@ -7674,7 +7584,7 @@ div.drupal_tabs {
   -webkit-border-radius: 6px;
 }
 
-/* line 421, ../sass/_page.scss */
+/* line 393, ../sass/_page.scss */
 dl.tabs.primary,
 dl.tabs.secondary {
   border-style: none;
@@ -7682,19 +7592,19 @@ dl.tabs.secondary {
   padding: 0;
 }
 
-/* line 425, ../sass/_page.scss */
+/* line 397, ../sass/_page.scss */
 dl.tabs.primary {
   float: left;
 }
 
-/* line 429, ../sass/_page.scss */
+/* line 401, ../sass/_page.scss */
 dl.tabs.primary dd {
   display: inline;
   margin: 0;
   padding: 0;
 }
 
-/* line 433, ../sass/_page.scss */
+/* line 405, ../sass/_page.scss */
 dl.tabs.primary dd a {
   background: white;
   border-style: none;
@@ -7710,20 +7620,20 @@ dl.tabs.primary dd a {
   text-decoration: none;
 }
 
-/* line 440, ../sass/_page.scss */
+/* line 412, ../sass/_page.scss */
 dl.tabs.primary dd a:hover,
 dl.tabs.primary dd a:active {
   background: #877f77;
   color: white;
 }
 
-/* line 445, ../sass/_page.scss */
+/* line 417, ../sass/_page.scss */
 dl.tabs.primary dd.active a {
   background: #877f77;
   color: white;
 }
 
-/* line 449, ../sass/_page.scss */
+/* line 421, ../sass/_page.scss */
 dl.tabs.secondary {
   border-top: 1px solid white;
   clear: both;
@@ -7734,7 +7644,7 @@ dl.tabs.secondary {
   top: 4px;
 }
 
-/* line 453, ../sass/_page.scss */
+/* line 425, ../sass/_page.scss */
 dl.tabs.secondary dd {
   border-style: none;
   display: block;
@@ -7743,7 +7653,7 @@ dl.tabs.secondary dd {
   padding: 6px 0;
 }
 
-/* line 457, ../sass/_page.scss */
+/* line 429, ../sass/_page.scss */
 dl.tabs.secondary dd a {
   border-bottom-style: none;
   border-right: 1px solid white;
@@ -7757,7 +7667,7 @@ dl.tabs.secondary dd a {
 /* -----------------------------------------
    Forms
 ----------------------------------------- */
-/* line 467, ../sass/_page.scss */
+/* line 439, ../sass/_page.scss */
 .standard-form .button, #user-login .button,
 #search-form .button, .standard-form #content > article:except(.node-contact) .collapsed legend a, #content > article:except(.node-contact) .collapsed legend .standard-form a, #user-login #content > article:except(.node-contact) .collapsed legend a, #content > article:except(.node-contact) .collapsed legend #user-login a,
 #search-form #content > article:except(.node-contact) .collapsed legend a,
@@ -8476,13 +8386,12 @@ article #block-user-login label, #block-user-login .content-article .field-label
 }
 /* line 46, ../sass/_media.scss */
 #mobile-nav-trigger #menu-link:before {
-  content: "≡ ";
   font-size: 2rem;
   line-height: 5rem;
   font-weight: normal;
 }
 
-/* line 56, ../sass/_media.scss */
+/* line 55, ../sass/_media.scss */
 #mobile-nav {
   background-image: none;
   background-color: transparent;
@@ -8492,11 +8401,11 @@ article #block-user-login label, #block-user-login .content-article .field-label
   box-shadow: none;
   padding: 0;
 }
-/* line 62, ../sass/_media.scss */
+/* line 61, ../sass/_media.scss */
 #mobile-nav li {
   list-style: none;
 }
-/* line 63, ../sass/_media.scss */
+/* line 62, ../sass/_media.scss */
 #mobile-nav li a {
   display: block;
   background-color: green;
@@ -8510,14 +8419,14 @@ article #block-user-login label, #block-user-login .content-article .field-label
   -moz-box-shadow: rgba(0, 0, 0, 0.8) 0px 3px 10px;
   box-shadow: rgba(0, 0, 0, 0.8) 0px 3px 10px;
 }
-/* line 77, ../sass/_media.scss */
+/* line 76, ../sass/_media.scss */
 #mobile-nav li a:hover, #mobile-nav li a:focus, #mobile-nav li a:active {
   text-decoration: none;
   background: green;
   border: 0.1rem solid #004d00;
 }
 
-/* line 85, ../sass/_media.scss */
+/* line 84, ../sass/_media.scss */
 .reveal-modal-bg {
   background: #000;
   background: rgba(0, 0, 0, 0.8);

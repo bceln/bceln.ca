@@ -352,34 +352,6 @@ body.node-type-contact .field-name-field-contact-groups {
 /* -----------------------------------------
    UI Elements
 ----------------------------------------- */
-/* Button styling taken from Seven theme */
-a.button {
-  cursor: pointer;
-  padding: 4px 17px;
-  margin-bottom: 1em;
-  color: #5a5a5a;
-  display: inline-block;
-  text-align: center;
-  font-weight: normal;
-  font-size: 1.1em;
-  font-family: "Lucida Grande", Verdana, sans-serif;
-  border: 1px solid #e4e4e4;
-  border-bottom: 1px solid #b4b4b4;
-  border-left-color: #D2D2D2;
-  border-right-color: #D2D2D2;
-  background: url('/themes/seven/images/buttons.png') 0 0 repeat-x;
-  border-radius: 15px;
-  -moz-border-radius: 20px;
-  -webkit-border-radius: 15px;
-}
-
-a.button:link,
-a.button:visited,
-a.button:hover,
-a.button:active {
-  text-decoration: none;
-  color: #5a5a5a;
-}
 
 .button {
   &:hover,

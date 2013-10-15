@@ -41,7 +41,7 @@
 <?php /* MOBILE MENU NAVBAR: a secondary menu intended for devices with with narrow screens. */?>
 <div id="mobile-nav-trigger" class="show-for-small row">
   <div class="columns phone-four">
-    <a id="menu-link" data-reveal-id="mobile-nav" href="#">Menu</a>
+    <a id="menu-link" data-reveal-id="mobile-nav" href="#">&#9776; Menu</a>
   </div>
 </div>
 
