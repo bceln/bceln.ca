@@ -115,7 +115,7 @@
    Generic content type formatting
 ----------------------------------------- */
 
-#content > article:except(.node-contact),
+#content > article:not(.node-contact),
 .content-article {
 
   .columns:last-child { float: left; }
@@ -147,11 +147,7 @@
   .collapsed {
     background: none;
     border: none;
-    padding-bottom:0px;
-  }
-
-  .collapsible {
-    
+    padding-bottom:1em;
   }
 
   .collapsed,
@@ -177,17 +173,6 @@
 /* -----------------------------------------
    Content Types
 ----------------------------------------- */
-body.page-node .field {
-  background: url('../images/dashed-border-trans.png') repeat-x 0 bottom;
-  padding-bottom: 10px !important;
-  margin: 10px 0;
-}
-
-body.node-type-contact .field {
-  background: none;
-  padding-bottom: 0;
-  margin: 0;
-}
 
 body.node-type-resource {
   article {
@@ -219,11 +204,10 @@ body.node-type-resource {
   }
 }
 
-body.node-type-organization article{
-  @extend .content-article;
-}
-
-body.node-type-event article {
+body.node-type-organization article,
+body.node-type-event article,
+body.node-type-vendor article,
+body.node-type-trial-renewal article {
   @extend .content-article;
 }
 

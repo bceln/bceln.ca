@@ -44,9 +44,11 @@
     ?>
 
     <?php print render($content['field_private_note']); ?>
-    <?php /* field_resources_generic_url */ ?>
-    <h2><?php print t('Connect to the Database'); ?></h2>
-    <?php print render($content['field_resources_generic_url']); ?>
+    <?php if (count($node->field_resources_generic_url) > 0):
+      /* field_resources_generic_url */ ?>
+      <h2><?php print t('Connect to the Database'); ?></h2>
+      <?php print render($content['field_resources_generic_url']); 
+    endif; ?>
     <?php /* field_resources_license */ ?>
     <?php
       print theme('fieldset', array(
