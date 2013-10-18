@@ -6284,6 +6284,102 @@ body.page-user .profile .collapsible legend #search-form a {
   -webkit-border-radius: 15px;
 }
 
+/* Tabs Styles */
+/* line 742, ../sass/_views.scss */
+/* line 437, ../sass/_page.scss */
+.page-organizations dl.primary,
+.page-resources-databases dl.primary,
+.page-licenses dl.primary {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 750, ../sass/_views.scss */
+/* line 446, ../sass/_page.scss */
+.page-organizations dl.tabs.primary dd,
+.page-resources-databases dl.tabs.primary dd,
+.page-licenses dl.tabs.primary dd {
+  /* display: block; */
+  position: relative;
+  margin: -2px 0 0;
+}
+
+/* line 758, ../sass/_views.scss */
+/* line 455, ../sass/_page.scss */
+.page-organizations div.drupal_tabs,
+.page-resources-databases div.drupal_tabs,
+.page-licenses div.drupal_tabs {
+  border-top: 1px dotted #ddd;
+  border-bottom: 1px dotted #efefef;
+  background: transparent;
+  border-radius: 0;
+  overflow: hidden;
+  padding-top: 3px;
+  width: 681px;
+  position: relative;
+}
+
+/* line 772, ../sass/_views.scss */
+/* line 469, ../sass/_page.scss */
+.page-organizations dl.tabs.primary,
+.page-resources-databases dl.tabs.primary,
+.page-licenses dl.tabs.primary {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 0.867em;
+  /* 13px relative to 15px */
+  float: left;
+  height: 40px;
+  margin-bottom: 5px;
+  padding: 0 0 7px 0;
+  position: relative;
+  width: 100%;
+}
+
+/* line 784, ../sass/_views.scss */
+/* line 482, ../sass/_page.scss */
+li.btn {
+  width: 168px;
+}
+
+/* line 791, ../sass/_views.scss */
+/* line 489, ../sass/_page.scss */
+.page-organizations dl.tabs.primary dd a,
+.page-resources-databases dl.tabs.primary dd a,
+.page-licenses dl.tabs.primary dd a {
+  background: none;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  border: none;
+  color: #9e9993;
+  float: left;
+  font-weight: 500;
+  height: 40px;
+  margin: 2px 2px 0 0;
+  padding: 9px 10px 0;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+/* line 809, ../sass/_views.scss */
+/* line 508, ../sass/_page.scss */
+.page-organizations dl.tabs.primary dd.active a,
+.page-resources-databases dl.tabs.primary dd.active a,
+.page-licenses dl.tabs.primary dd.active a {
+  background: #efefef;
+  color: #2a2724;
+}
+
+/* line 816, ../sass/_views.scss */
+/* line 516, ../sass/_page.scss */
+.page-organizations dl.tabs.primary dd a:hover,
+.page-resources-databases dl.tabs.primary dd a:hover,
+.page-licenses dl.tabs.primary dd a:hover {
+  background: #efefef;
+  color: #2a2724;
+}
+
 /********************************************
 
   Settings.scss
