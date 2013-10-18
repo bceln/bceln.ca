@@ -20,7 +20,7 @@
       &:first-child {  }
       &:last-child { }
 
-      &.active {
+      &.active-trail {
         &>a { cursor: default; color: $secondaryColor; }
         &:hover {  cursor: default; color: $secondaryColor; }
       }

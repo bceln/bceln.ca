@@ -160,7 +160,7 @@ function ehlbc_preprocess_node(&$variables){
       $variables['content']['field_license_title']['#title'] = t('License');
       $variables['content']['field_license_title']['#label_display'] = 'above';
       $variables['content']['field_license_title']['#field_name'] = 'field_license_title';
-      $variables['content']['field_license_title'][0]['#markup'] = $license_node->title;
+      $variables['content']['field_license_title'][0]['#markup'] = l($license_node->title, 'node/' . $license_node->nid);
       $variables['content']['field_license_title']['#weight'] = 48;
       // We also need a new field for the vendor name and url:
       $variables['content']['field_vendor_info'] = $variables['content']['field_trial_active'];

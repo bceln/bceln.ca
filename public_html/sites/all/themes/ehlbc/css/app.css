@@ -7191,12 +7191,12 @@ nav .foundation-menu {
   line-height: 4rem;
 }
 /* line 24, ../sass/_nav.scss */
-#access ul.menu > li.active > a {
+#access ul.menu > li.active-trail > a {
   cursor: default;
   color: #f68115;
 }
 /* line 25, ../sass/_nav.scss */
-#access ul.menu > li.active:hover {
+#access ul.menu > li.active-trail:hover {
   cursor: default;
   color: #f68115;
 }

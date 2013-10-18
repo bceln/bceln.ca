@@ -50,15 +50,15 @@
       );*/
 
       // Set up floating menu
-      /* This needs to be uncommented and made to work. It stopped working after installing
-       * the update jquery module 
+      /*This needs to be uncommented and made to work. It stopped working after installing
+       * the update jquery module */
       function moveFloatMenu() {
         var menuOffset = menuYloc.top + $(this).scrollTop() + "px";
         block.animate({top: menuOffset}, {duration: 500, queue: false});
       }
       menuYloc = block.offset();
       $(window).scroll(moveFloatMenu);
-      moveFloatMenu();*/
+      moveFloatMenu();
     }
   };
 
