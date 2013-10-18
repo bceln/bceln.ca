@@ -15,14 +15,14 @@
  * We've left the basic layout, regardless if there is content to fill it!
  */
 ?>
-<div class="ehlbc_dashboard"<?php if (!empty($css_id)) { print ' id="$css_id"'; } ?>>
+<div class="ehlbc_dashboard"<?php if (!empty($css_id)) { print ' id="' . $css_id. '"'; } ?>>
   <div class="row">
-    <div class="columns four" id="sidebar-left">
+    <div class="columns three" id="sidebar-left">
       <?php if ($content['sidebar_left']): ?>
         <?php print $content['sidebar_left']; ?>
       <?php endif; ?>
     </div>
-    <div class="columns eight" id="content-main">
+    <div class="columns nine" id="content-main">
       <?php if ($content['content_main']): ?>
         <?php print $content['content_main']; ?>
       <?php endif; ?>

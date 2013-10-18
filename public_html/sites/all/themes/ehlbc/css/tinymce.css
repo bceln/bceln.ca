@@ -6598,16 +6598,17 @@ body.node-type-trial-renewal body#tinymce .front #block-menu-block-1 .field-labe
   text-align: center;
   text-transform: uppercase;
   padding-right: 5px;
+  width: 110px;
 }
 
-/* line 210, ../sass/_block.scss */
+/* line 211, ../sass/_block.scss */
 #block-re-utilities-utility-nav ul.links li.first {
   border-left: 5px solid #ff932f;
   display: block;
   width: 114px;
 }
 
-/* line 216, ../sass/_block.scss */
+/* line 217, ../sass/_block.scss */
 #block-re-utilities-utility-nav ul.links li.last {
   border-right: 5px solid #ff932f;
   display: block;
@@ -6619,7 +6620,7 @@ body.node-type-trial-renewal body#tinymce .front #block-menu-block-1 .field-labe
   }*/
 }
 
-/* line 229, ../sass/_block.scss */
+/* line 230, ../sass/_block.scss */
 #block-re-utilities-utility-nav ul.links li a {
   color: white;
   display: block;
@@ -6628,12 +6629,12 @@ body.node-type-trial-renewal body#tinymce .front #block-menu-block-1 .field-labe
   padding-left: 30px;
 }
 
-/* line 237, ../sass/_block.scss */
+/* line 238, ../sass/_block.scss */
 #block-re-utilities-utility-nav ul.links li a:hover {
   text-decoration: underline;
 }
 
-/* line 245, ../sass/_block.scss */
+/* line 246, ../sass/_block.scss */
 #block-re-utilities-utility-nav ul.links li a.dashboard {
   font-family: Helvetica, Arial, sans-serif;
   font-size: 0.786em;
@@ -6641,62 +6642,62 @@ body.node-type-trial-renewal body#tinymce .front #block-menu-block-1 .field-labe
   padding-top: 25px;
 }
 
-/* line 252, ../sass/_block.scss */
+/* line 253, ../sass/_block.scss */
 .logged-in #block-re-utilities-utility-nav {
   /*  width: 380px; */
 }
 
-/* line 256, ../sass/_block.scss */
+/* line 257, ../sass/_block.scss */
 .logged-in #block-re-utilities-utility-nav .block-content .welcome {
   font-family: Helvetica, Arial, sans-serif;
   position: absolute;
-  right: 211px;
+  right: 252px;
   text-align: right;
   top: 15px;
   width: 15rem;
 }
 
-/* line 265, ../sass/_block.scss */
+/* line 266, ../sass/_block.scss */
 .logged-in #block-re-utilities-utility-nav ul.links li {
   border-left: 5px solid #ff932f;
 }
 
-/* line 269, ../sass/_block.scss */
+/* line 270, ../sass/_block.scss */
 #block-re-utilities-utility-nav ul.links li a.register {
   background: url("../images/icon-register.png") no-repeat 11px 12px;
 }
 
-/* line 273, ../sass/_block.scss */
+/* line 274, ../sass/_block.scss */
 #block-re-utilities-utility-nav ul.links li a.login, #block-re-utilities-utility-nav ul.links li a.logout {
-  background: url("../images/icon-loginout.png") no-repeat 15px 12px;
+  background: url("../images/icon-loginout.png") no-repeat 5px 12px;
 }
 
-/* line 280, ../sass/_block.scss */
+/* line 281, ../sass/_block.scss */
 #block-re-utilities-utility-nav ul.links li a.search {
   background: url("../images/icon-search.png") no-repeat 15px 12px;
 }
 
-/* line 286, ../sass/_block.scss */
+/* line 287, ../sass/_block.scss */
 .logged-in #block-re-utilities-utility-nav ul.links li.first {
   background: none;
   border: none;
   font-family: Helvetica, Arial, sans-serif;
 }
 
-/* line 292, ../sass/_block.scss */
+/* line 293, ../sass/_block.scss */
 .logged-in #block-re-utilities-utility-nav ul.links li.last {
   border-left: none;
   border-right: 5px solid #ff932f;
 }
 
-/* line 297, ../sass/_block.scss */
+/* line 298, ../sass/_block.scss */
 .logged-in #block-re-utilities-utility-nav ul.links li.first {
   margin: 5px 5px 0 0;
   text-transform: none;
   width: 150px;
 }
 
-/* line 303, ../sass/_block.scss */
+/* line 304, ../sass/_block.scss */
 .logged-in #block-re-utilities-utility-nav ul.links li.first a {
   color: #18729d;
   display: block;

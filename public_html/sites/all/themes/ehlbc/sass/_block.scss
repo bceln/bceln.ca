@@ -204,7 +204,8 @@
   margin: 0;
   text-align: center;
   text-transform: uppercase;
-  padding-right: 5px
+  padding-right: 5px;
+  width: 110px;
 }
 
 #block-re-utilities-utility-nav ul.links li.first {
@@ -256,7 +257,7 @@
 .logged-in #block-re-utilities-utility-nav .block-content .welcome {    
   font-family: Helvetica, Arial, sans-serif;
   position: absolute;
-  right: 211px;
+  right: 252px;
   text-align: right;
   top: 15px;
   width: rem(15);
@@ -271,7 +272,7 @@
 }
 
 #block-re-utilities-utility-nav ul.links li a.login, #block-re-utilities-utility-nav ul.links li a.logout {
-  background: url('../images/icon-loginout.png') no-repeat 15px 12px;
+  background: url('../images/icon-loginout.png') no-repeat 5px 12px;
 }
 
 #block-re-utilities-utility-nav ul.links li a.logout {
@@ -307,7 +308,6 @@
   font-weight: normal;
   padding-left: 0;
 }
-
 
 /* Footer Logo */
 
