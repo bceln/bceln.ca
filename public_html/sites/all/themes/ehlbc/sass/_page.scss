@@ -147,7 +147,7 @@
 
   div[class^=field-group-simple-div] {
     margin-bottom: rem(2);
-    .field-item {
+    .field-item:not(.field-name-field-resource-vend-desc) {
       border-bottom-style: none;
       margin-bottom: 0;
       padding-bottom: 0;
@@ -246,12 +246,17 @@ body.node-type-contact .node .field-item {
   padding-bottom: 1em;
 }
 
-body.node-type-contact .node .field-label {
+body.node-type-contact .node .field-label,
+body.node-type-license .node .field-label {
   color: $secondaryColor;
-  font-family: Helvetica,Arial,sans-serif;
+  font-family: 'Helvetica Neue', Helvetica ,Arial,sans-serif;
   font-size: 1.133em;
   font-weight: bold;
-  margin: 0.75em 0 0.15em;
+  margin: 0.75em 0 15px 0;
+}
+
+.field-name-field-resource-vend-desc {
+  padding-bottom: 15px;
 }
 
 body.node-type-contact .field-name-field-contact-groups {
