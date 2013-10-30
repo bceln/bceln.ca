@@ -80,6 +80,19 @@
 
   //.button { @include le-bouton; }
 
+/* Print module styles */
+.print-site_name, .print-breadcrumb, .print-content .submitted {
+  display: none;
+}
+
+  div[class^=print-] {
+    margin: auto 1em;
+      * { 
+        color: #000;
+        font-family: sans-serif;
+      }
+  }
+
 /* -----------------------------------------
    Header / Footer & logo
 ----------------------------------------- */
@@ -133,6 +146,7 @@
   }
 
   div[class^=field-group-simple-div] {
+    margin-bottom: rem(2);
     .field-item {
       border-bottom-style: none;
       margin-bottom: 0;

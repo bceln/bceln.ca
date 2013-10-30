@@ -217,6 +217,11 @@
   background: none repeat scroll 0 0 #EFEFEF;
   border-bottom: 5px solid #E0E0E0;
   border-top: 5px solid #E0E0E0;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  form {
+    padding-bottom: 0;
+  }
 }
 
 
@@ -238,6 +243,7 @@
 .view-resources .view-content,
 .view-licenses .view-content {
   padding-left: 15px;
+  clear:both;
 }
 
 .view-resources table,

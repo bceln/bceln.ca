@@ -13,52 +13,53 @@
   Drupal.behaviors.adminDrag = {
     attach: function(context) {
       var block = $('#block-menu-menu-authenticated');
-
-      // Hide the content area
-      // When you hover over the block show the content area
-      block.css('height', '50px');
-      
-      $('#block-menu-menu-authenticated h2').click(function(e){
-        if (block.height() <= 50 )
-        {
-          block.animate({
-            right: '-5px',
-            height: '300px'
-          });
-        }
-        else {
-          block.animate({
-            right: '-162px',
-            height: '50px'
-          });
-        }
-      });
+      if(block.length > 0) {
+        // Hide the content area
+        // When you hover over the block show the content area
+        block.css('height', '50px');
         
-      /*
-      $('h2', block).toggle(
-        function() {
-          alert('t1');
+        $('#block-menu-menu-authenticated h2').click(function(e){
+          if (block.height() <= 50 )
+          {
+            block.animate({
+              right: '-5px',
+              height: '300px'
+            });
+          }
+          else {
+            block.animate({
+              right: '-162px',
+              height: '50px'
+            });
+          }
+        });
           
-        },
-        function() {
-          alert('t2');
-          block.animate({
-            right: '-164px',
-            height: '30px'
-          });
-        }
-      );*/
+        /*
+        $('h2', block).toggle(
+          function() {
+            alert('t1');
+            
+          },
+          function() {
+            alert('t2');
+            block.animate({
+              right: '-164px',
+              height: '30px'
+            });
+          }
+        );*/
 
-      // Set up floating menu
-      /*This needs to be uncommented and made to work. It stopped working after installing
-       * the update jquery module */
-      function moveFloatMenu() {
-        var menuOffset = menuYloc.top + $(this).scrollTop() + "px";
-        block.animate({top: menuOffset}, {duration: 500, queue: false});
+        // Set up floating menu
+        /*This needs to be uncommented and made to work. It stopped working after installing
+         * the update jquery module */
+        function moveFloatMenu() {
+          var menuOffset = menuYloc.top + $(this).scrollTop() + "px";
+          block.animate({top: menuOffset}, {duration: 500, queue: false});
+        }
+        menuYloc = block.offset();
+        $(window).scroll(moveFloatMenu);
+        moveFloatMenu();
       }
-      menuYloc = block.offset();
-      $(window).scroll(moveFloatMenu);
-      moveFloatMenu();
     }
   };
 
