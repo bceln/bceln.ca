@@ -145,12 +145,12 @@ function ehlbc_preprocess_node(&$variables){
       $variables['content']['field_resource_ref'][0]['#markup'] = $resource_body_items[0]['value'];
       // We need to create and insert a resource access field in the current
       // (trial_renewal) node:
-      $variables['content']['field_resource_access'] = $variables['content']['field_trial_active'];
+      /*$variables['content']['field_resource_access'] = $variables['content']['field_trial_active'];
       $variables['content']['field_resource_access']['#title'] = t('Access Details');
       $variables['content']['field_resource_access']['#label_display'] = 'above';
       $variables['content']['field_resource_access']['#field_name'] = 'field_resource_access';
       $variables['content']['field_resource_access'][0]['#markup'] = $resource_node->field_resource_access['und'][0]['safe_value'];
-      $variables['content']['field_resource_access']['#weight'] = 5;
+      $variables['content']['field_resource_access']['#weight'] = 5;*/
       // Get the license node:
       $license_items = field_get_items('node', $resource_node, 'field_resources_license', NULL);
       $license_node = node_load($license_items[0]['nid']);
