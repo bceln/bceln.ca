@@ -141,8 +141,6 @@ function ehlbc_preprocess_node(&$variables){
       $vendor_ref_items = field_get_items('node', $resource_node, 'field_resource_vendor_ref', NULL);
       $vendor_node = node_load($vendor_ref_items[0]['nid']);
       $resource_body_items = field_get_items('node', $resource_node, 'body', NULL);
-      $variables['content']['field_resource_ref']['#title'] = t('Vendor Description');
-      $variables['content']['field_resource_ref'][0]['#markup'] = $resource_body_items[0]['value'];
       // We need to create and insert a resource access field in the current
       // (trial_renewal) node:
       /*$variables['content']['field_resource_access'] = $variables['content']['field_trial_active'];
@@ -162,14 +160,17 @@ function ehlbc_preprocess_node(&$variables){
       $variables['content']['field_license_title']['#field_name'] = 'field_license_title';
       $variables['content']['field_license_title'][0]['#markup'] = l($license_node->title, 'node/' . $license_node->nid);
       $variables['content']['field_license_title']['#weight'] = 48;
-      // We also need a new field for the vendor name and url:
-      $variables['content']['field_vendor_info'] = $variables['content']['field_trial_active'];
-      $variables['content']['field_vendor_info']['#title'] = t('Vendor Information');
+      // We also need a new field for the vendor description, name and url:
+      $variables['content']['field_vendor_info'] = $variables['content']['field_trial_preamble'];
+      $variables['content']['field_vendor_info']['#title'] = t('Vendor');
       $variables['content']['field_vendor_info']['#label_display'] = 'above';
       $variables['content']['field_vendor_info']['#field_name'] = 'field_vendor_info';
-      $variables['content']['field_vendor_info'][0]['#markup'] = t('<strong>Vendor Name</strong>: !vendor-name', array('!vendor-name' => l($vendor_node->title, 'vendor/' . $vendor_node->nid)));
+      $variables['content']['field_vendor_info'][0]['#markup'] = t('!vendor-name', array('!vendor-name' => l($vendor_node->title, 'vendor/' . $vendor_node->nid)));
+      $variables['content']['field_vendor_info']['#weight'] = 4;
 
-      $variables['content']['field_vendor_info']['#weight'] = 6;
+      $variables['content']['field_resource_ref']['#title'] = t('Vendor Description');
+      $variables['content']['field_resource_ref'][0]['#markup'] = $resource_body_items[0]['value'];
+      $variables['content']['field_resource_ref']['#weight'] = 6;
 
       // We need to position the license title field in relation to the 'other'
       // field:

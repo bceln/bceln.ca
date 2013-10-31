@@ -145,6 +145,10 @@
     padding:1em;
   }
 
+  .field-name-field-vendor-info {
+    border-bottom: none;
+  }
+
   div[class^=field-group-simple-div] {
     margin-bottom: rem(2);
     .field-item:not(.field-name-field-resource-vend-desc) {
