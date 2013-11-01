@@ -191,7 +191,32 @@ function ehlbc_preprocess_node(&$variables){
       $variables['content']['field_trial_begins']['#title'] = t('Subscription Information');
       $variables['content']['field_trial_begins'][0]['#markup'] = t('<strong>License Term</strong>: !start - !end', array('!start' => $variables['content']['field_trial_begins'][0]['#markup'], '!end' => $variables['content']['field_trial_ends'][0]['#markup'])); 
       $variables['content']['field_trial_ends']['#access'] = FALSE;
-      break;
+
+
+      // Change how the Staff contact is output
+      $uid = $variables['content']['field_trial_staff']['#items'][0]['uid'];
+      // Load user
+      $user = user_load($uid);
+      // Load any associated profiles
+      $profiles = profile2_load_by_user($uid);
+
+      // Get the first name
+      $first_name_field = field_get_items('profile2', $profiles['contact'], 'field_contact_first_name');
+      $first_name = render(field_view_value('profile2', $profiles['contact'], 'field_contact_first_name', $first_name_field[0]));
+
+      // Get the last name
+      $last_name_field = field_get_items('profile2', $profiles['contact'], 'field_contact_last_name');
+      $last_name = render(field_view_value('profile2', $profiles['contact'], 'field_contact_last_name', $last_name_field[0]));
+
+      // Get the phone number
+      $phone_field = field_get_items('profile2', $profiles['contact'], 'field_contact_phone');
+      $phone = render(field_view_value('profile2', $profiles['contact'], 'field_contact_phone', $phone_field[0]));
+
+      // Build the required output - The Name, 555-232-2323, email@gmail.com
+      $output = l($first_name . ' ' . $last_name, 'user/' . $uid) . ', ' . render($phone) . ', ' . l($user->mail, 'mailto:' . $user->mail, array('absolute' => TRUE));
+      $variables['content']['field_trial_staff'][0] = array('#markup' => $output);
+
+     break;
   }
 } // ehlbc_preprocess_node()
 
