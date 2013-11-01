@@ -159,18 +159,18 @@ function ehlbc_preprocess_node(&$variables){
       $variables['content']['field_license_title']['#label_display'] = 'above';
       $variables['content']['field_license_title']['#field_name'] = 'field_license_title';
       $variables['content']['field_license_title'][0]['#markup'] = l($license_node->title, 'node/' . $license_node->nid);
-      $variables['content']['field_license_title']['#weight'] = 48;
+      $variables['content']['field_license_title']['#weight'] = 10;
       // We also need a new field for the vendor description, name and url:
       $variables['content']['field_vendor_info'] = $variables['content']['field_trial_preamble'];
       $variables['content']['field_vendor_info']['#title'] = t('Vendor');
       $variables['content']['field_vendor_info']['#label_display'] = 'above';
       $variables['content']['field_vendor_info']['#field_name'] = 'field_vendor_info';
       $variables['content']['field_vendor_info'][0]['#markup'] = t('!vendor-name', array('!vendor-name' => l($vendor_node->title, 'vendor/' . $vendor_node->nid)));
-      $variables['content']['field_vendor_info']['#weight'] = 4;
+      $variables['content']['field_vendor_info']['#weight'] = 3;
 
       $variables['content']['field_resource_ref']['#title'] = t('Vendor Description');
       $variables['content']['field_resource_ref'][0]['#markup'] = $resource_body_items[0]['value'];
-      $variables['content']['field_resource_ref']['#weight'] = 6;
+      $variables['content']['field_resource_ref']['#weight'] = 4;
 
       // We need to position the license title field in relation to the 'other'
       // field:
@@ -224,6 +224,7 @@ function ehlbc_preprocess_node(&$variables){
       // Build the required output - The Name, 555-232-2323, email@gmail.com
       $output = l($first_name . ' ' . $last_name, 'user/' . $uid) . ', ' . render($phone) . ', ' . l($user->mail, 'mailto:' . $user->mail, array('absolute' => TRUE));
       $variables['content']['field_trial_staff'][0] = array('#markup' => $output);
+      $variables['content']['field_trial_staff']['#weight'] = 16;
 
      break;
   }
