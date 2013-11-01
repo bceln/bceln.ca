@@ -181,8 +181,17 @@ function ehlbc_preprocess_node(&$variables){
         // 1. Allow access to the field, BUT
         // 2. Change the content:
         $variables['content']['field_trial_access']['#access'] = TRUE;
-        $variables['content']['field_trial_access'][0]['#markup'] = t('To view pricing info and a link to the free trial, please log into the e-HLbc site using the orange LOGIN button at the top of this page.');
+        $variables['content']['field_trial_access'][0]['#markup'] = t('To view a link to the free trial, please log into the e-HLbc site using the orange LOGIN button at the top of this page.');
       }
+
+      if (!user_access('view field_trial_pricing')) {
+        // If the user doesn't have access, we need to do two things:
+        // 1. Allow access to the field, BUT
+        // 2. Change the content:
+        $variables['content']['field_trial_pricing']['#access'] = TRUE;
+        $variables['content']['field_trial_pricing'][0]['#markup'] = t('To view pricing info, please log into the e-HLbc site using the orange LOGIN button at the top of this page.');
+      }
+
       // Also, deal with the field_trial_active stuff:
       if ($variables['content']['field_trial_active'][0]['#markup'] !== 'N') {
         $variables['content']['field_trial_active']['#access'] = FALSE;
