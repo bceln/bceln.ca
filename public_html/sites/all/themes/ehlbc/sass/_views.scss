@@ -205,7 +205,8 @@
 
 /* Contacts View */
 
-.view-contacts {
+.view-contacts,
+.view-organization-contacts {
   margin: 0 0 35px 0;
 }
 
@@ -251,6 +252,7 @@
 .view-licenses table,
 .view-trials table,
 .view-organizations table,
+.view-organization-contacts table,
 .view-vendors table,
 .page-forum table {
   border: none;
@@ -264,6 +266,7 @@
 .view-trials table tr,
 .view-organizations table tr,
 .view-vendors table tr,
+.view-organization-contacts table tr,
 .page-forum table tr {
   background: none;
 }
@@ -278,6 +281,8 @@
 .view-trials table th,
 .view-organizations table td,
 .view-organizations table th,
+.view-organization-contacts table td,
+.view-organization-contacts table th,
 .view-vendors table td,
 .view-vendors table th,
 .page-forum table td,
@@ -302,6 +307,8 @@
 .view-trials table tr.odd,
 .view-organizations table tr.even,
 .view-organizations table tr.odd, 
+.view-organization-contacts table tr.even,
+.view-organization-contacts table tr.odd, 
 .view-vendors table tr.even,
 .view-vendors table tr.odd,
 .page-forum table tr.even,
@@ -330,6 +337,7 @@
 
 .view-resources th,
 .view-organizations th,
+.view-organization-contacts th,
 .view-contacts th,
 .view-licenses th,
 .view-trials th  {
