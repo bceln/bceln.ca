@@ -9774,57 +9774,62 @@ body.node-type-trial-renewal article #block-user-login .field-label, #block-user
 }
 
 /* Contacts View */
-/* line 209, ../sass/_views.scss */
+/* line 210, ../sass/_views.scss */
 .view-contacts,
+.view-profile-contacts,
 .view-organization-contacts {
   margin: 0 0 35px 0;
 }
 
-/* line 213, ../sass/_views.scss */
-#edit-submit-contacts {
+/* line 215, ../sass/_views.scss */
+#edit-submit-contacts,
+#edit-submit-profile-contacts {
   margin-top: 30px;
 }
 
-/* line 217, ../sass/_views.scss */
-.view-contacts .view-filters {
+/* line 220, ../sass/_views.scss */
+.view-contacts .view-filters,
+.view-profile-contacts .view-filters {
   background: none repeat scroll 0 0 #EFEFEF;
   border-bottom: 5px solid #E0E0E0;
   border-top: 5px solid #E0E0E0;
   margin-bottom: 0;
   padding-bottom: 0;
 }
-/* line 223, ../sass/_views.scss */
-.view-contacts .view-filters form {
+/* line 226, ../sass/_views.scss */
+.view-contacts .view-filters form,
+.view-profile-contacts .view-filters form {
   padding-bottom: 0;
 }
 
 /* Data Tables */
-/* line 231, ../sass/_views.scss */
+/* line 234, ../sass/_views.scss */
 .views-table th {
   font-family: Helvetica, Arial, sans-serif;
   text-transform: uppercase;
 }
 
-/* line 236, ../sass/_views.scss */
+/* line 239, ../sass/_views.scss */
 .views-table a {
   text-decoration: none;
 }
 
-/* line 240, ../sass/_views.scss */
+/* line 243, ../sass/_views.scss */
 #dashboard .view-resources .view-content {
   padding-left: 0;
 }
 
-/* line 245, ../sass/_views.scss */
+/* line 248, ../sass/_views.scss */
 .view-resources .view-content,
 .view-licenses .view-content {
   padding-left: 15px;
   clear: both;
 }
 
-/* line 257, ../sass/_views.scss */
+/* line 261, ../sass/_views.scss */
 .view-resources table,
 .view-contacts table,
+.view-profile-contacts table,
 .view-licenses table,
 .view-trials table,
 .view-organizations table,
@@ -9836,9 +9841,10 @@ body.node-type-trial-renewal article #block-user-login .field-label, #block-user
   width: 100%;
 }
 
-/* line 270, ../sass/_views.scss */
+/* line 275, ../sass/_views.scss */
 .view-resources table tr,
 .view-contacts table tr,
+.view-profile-contacts table tr,
 .view-licenses table tr,
 .view-trials table tr,
 .view-organizations table tr,
@@ -9848,11 +9854,13 @@ body.node-type-trial-renewal article #block-user-login .field-label, #block-user
   background: none;
 }
 
-/* line 289, ../sass/_views.scss */
+/* line 296, ../sass/_views.scss */
 .view-resources table td,
 .view-resources table th,
 .view-contacts table td,
 .view-contacts table th,
+.view-profile-contacts table td,
+.view-profile-contacts table th,
 .view-licenses table td,
 .view-licenses table th,
 .view-trials table td,
@@ -9871,16 +9879,18 @@ body.node-type-trial-renewal article #block-user-login .field-label, #block-user
   vertical-align: top;
 }
 
-/* line 296, ../sass/_views.scss */
+/* line 303, ../sass/_views.scss */
 .page-forum table thead tr {
   background: url("../images/dashed-border.png") repeat-x 0 bottom;
 }
 
-/* line 315, ../sass/_views.scss */
+/* line 324, ../sass/_views.scss */
 .view-resources table tr.even,
 .view-resources table tr.odd,
 .view-contacts table tr.even,
 .view-contacts table tr.odd,
+.view-profile-contacts table tr.even,
+.view-profile-contacts table tr.odd,
 .view-licenses table tr.even,
 .view-licenses table tr.odd,
 .view-trials table tr.even,
@@ -9897,43 +9907,44 @@ body.node-type-trial-renewal article #block-user-login .field-label, #block-user
   border: none;
 }
 
-/* line 320, ../sass/_views.scss */
+/* line 329, ../sass/_views.scss */
 .view-resources td.views-field-title {
   font-family: "minion-pro-1","minion-pro-2", Georgia, 'Times New Roman', serif;
   font-weight: bold;
   width: 225px;
 }
 
-/* line 326, ../sass/_views.scss */
+/* line 335, ../sass/_views.scss */
 .view-resources td.views-field-title a {
   color: #18729d;
   font-size: 1.133em;
 }
 
-/* line 332, ../sass/_views.scss */
+/* line 341, ../sass/_views.scss */
 .view-resources td.views-field-body {
   color: #2a2724;
   font-family: "minion-pro-1","minion-pro-2", Georgia, 'Times New Roman', serif;
 }
 
-/* line 343, ../sass/_views.scss */
+/* line 353, ../sass/_views.scss */
 .view-resources th,
 .view-organizations th,
 .view-organization-contacts th,
 .view-contacts th,
+.view-profile-contacts th,
 .view-licenses th,
 .view-trials th {
   color: #2a2724;
   font-weight: bold;
 }
 
-/* line 348, ../sass/_views.scss */
+/* line 358, ../sass/_views.scss */
 .view-resources .view-header {
   position: absolute;
   top: 0;
   right: 15px;
 }
-/* line 352, ../sass/_views.scss */
+/* line 362, ../sass/_views.scss */
 .view-resources .view-header a.button, .view-resources .view-header #content > article:not(.node-contact) .collapsed legend a, #content > article:not(.node-contact) .collapsed legend .view-resources .view-header a,
 .view-resources .view-header #content > article:not(.node-contact) .collapsible legend a,
 #content > article:not(.node-contact) .collapsible legend .view-resources .view-header a,
@@ -9984,7 +9995,7 @@ body.page-user .profile .collapsible legend .view-resources .view-header a {
   -webkit-border-radius: 15px;
 }
 
-/* line 357, ../sass/_views.scss */
+/* line 368, ../sass/_views.scss */
 .view-contacts .view-header a.button, .view-contacts .view-header #content > article:not(.node-contact) .collapsed legend a, #content > article:not(.node-contact) .collapsed legend .view-contacts .view-header a,
 .view-contacts .view-header #content > article:not(.node-contact) .collapsible legend a,
 #content > article:not(.node-contact) .collapsible legend .view-contacts .view-header a,
@@ -10016,6 +10027,39 @@ body.node-type-vendor article .collapsible legend .view-contacts .view-header a,
 body.node-type-trial-renewal article .collapsible legend .view-contacts .view-header a,
 .view-contacts .view-header body.page-user .profile .collapsible legend a,
 body.page-user .profile .collapsible legend .view-contacts .view-header a,
+.view-profile-contacts .view-header a.button,
+.view-profile-contacts .view-header #content > article:not(.node-contact) .collapsed legend a,
+#content > article:not(.node-contact) .collapsed legend .view-profile-contacts .view-header a,
+.view-profile-contacts .view-header #content > article:not(.node-contact) .collapsible legend a,
+#content > article:not(.node-contact) .collapsible legend .view-profile-contacts .view-header a,
+.view-profile-contacts .view-header .content-article .collapsed legend a,
+.content-article .collapsed legend .view-profile-contacts .view-header a,
+.view-profile-contacts .view-header body.node-type-resource article .collapsed legend a,
+body.node-type-resource article .collapsed legend .view-profile-contacts .view-header a,
+.view-profile-contacts .view-header body.node-type-organization article .collapsed legend a,
+body.node-type-organization article .collapsed legend .view-profile-contacts .view-header a,
+.view-profile-contacts .view-header body.node-type-event article .collapsed legend a,
+body.node-type-event article .collapsed legend .view-profile-contacts .view-header a,
+.view-profile-contacts .view-header body.node-type-vendor article .collapsed legend a,
+body.node-type-vendor article .collapsed legend .view-profile-contacts .view-header a,
+.view-profile-contacts .view-header body.node-type-trial-renewal article .collapsed legend a,
+body.node-type-trial-renewal article .collapsed legend .view-profile-contacts .view-header a,
+.view-profile-contacts .view-header body.page-user .profile .collapsed legend a,
+body.page-user .profile .collapsed legend .view-profile-contacts .view-header a,
+.view-profile-contacts .view-header .content-article .collapsible legend a,
+.content-article .collapsible legend .view-profile-contacts .view-header a,
+.view-profile-contacts .view-header body.node-type-resource article .collapsible legend a,
+body.node-type-resource article .collapsible legend .view-profile-contacts .view-header a,
+.view-profile-contacts .view-header body.node-type-organization article .collapsible legend a,
+body.node-type-organization article .collapsible legend .view-profile-contacts .view-header a,
+.view-profile-contacts .view-header body.node-type-event article .collapsible legend a,
+body.node-type-event article .collapsible legend .view-profile-contacts .view-header a,
+.view-profile-contacts .view-header body.node-type-vendor article .collapsible legend a,
+body.node-type-vendor article .collapsible legend .view-profile-contacts .view-header a,
+.view-profile-contacts .view-header body.node-type-trial-renewal article .collapsible legend a,
+body.node-type-trial-renewal article .collapsible legend .view-profile-contacts .view-header a,
+.view-profile-contacts .view-header body.page-user .profile .collapsible legend a,
+body.page-user .profile .collapsible legend .view-profile-contacts .view-header a,
 .view-organizations .view-header a.button,
 .view-organizations .view-header #content > article:not(.node-contact) .collapsed legend a,
 #content > article:not(.node-contact) .collapsed legend .view-organizations .view-header a,
@@ -10068,13 +10112,13 @@ body.page-user .profile .collapsible legend .view-organizations .view-header a {
   -webkit-border-radius: 15px;
 }
 
-/* line 360, ../sass/_views.scss */
+/* line 371, ../sass/_views.scss */
 .view-resources .view-filters {
   background: none;
   padding: 0;
 }
 
-/* line 365, ../sass/_views.scss */
+/* line 376, ../sass/_views.scss */
 .view-resources .views-exposed-form {
   background: #EFEFEF;
   margin-top: -19px;
@@ -10082,14 +10126,15 @@ body.page-user .profile .collapsible legend .view-organizations .view-header a {
   float: right;
 }
 
-/* line 372, ../sass/_views.scss */
+/* line 383, ../sass/_views.scss */
 .view-resources .views-exposed-form .views-submit-button input.button {
   margin: 0;
 }
 
-/* line 377, ../sass/_views.scss */
+/* line 389, ../sass/_views.scss */
 .view-resources .views-exposed-form input.button,
-.view-contacts .views-exposed-form input.button {
+.view-contacts .views-exposed-form input.button,
+.view-profile-contacts .views-exposed-form input.button {
   margin: 5px;
   cursor: pointer;
   padding: 4px 17px;
@@ -10110,7 +10155,7 @@ body.page-user .profile .collapsible legend .view-organizations .view-header a {
   -webkit-border-radius: 15px;
 }
 
-/* line 379, ../sass/_views.scss */
+/* line 391, ../sass/_views.scss */
 #content label.expand-btn {
   position: absolute;
   top: 1.2rem;

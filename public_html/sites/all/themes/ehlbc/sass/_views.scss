@@ -206,15 +206,18 @@
 /* Contacts View */
 
 .view-contacts,
+.view-profile-contacts,
 .view-organization-contacts {
   margin: 0 0 35px 0;
 }
 
-#edit-submit-contacts {
+#edit-submit-contacts,
+#edit-submit-profile-contacts {
   margin-top: 30px;
 }
 
-.view-contacts .view-filters {
+.view-contacts .view-filters,
+.view-profile-contacts .view-filters {
   background: none repeat scroll 0 0 #EFEFEF;
   border-bottom: 5px solid #E0E0E0;
   border-top: 5px solid #E0E0E0;
@@ -249,6 +252,7 @@
 
 .view-resources table,
 .view-contacts table,
+.view-profile-contacts table,
 .view-licenses table,
 .view-trials table,
 .view-organizations table,
@@ -262,6 +266,7 @@
 
 .view-resources table tr,
 .view-contacts table tr,
+.view-profile-contacts table tr,
 .view-licenses table tr,
 .view-trials table tr,
 .view-organizations table tr,
@@ -275,6 +280,8 @@
 .view-resources table th,
 .view-contacts table td,
 .view-contacts table th,
+.view-profile-contacts table td,
+.view-profile-contacts table th,
 .view-licenses table td,
 .view-licenses table th,
 .view-trials table td,
@@ -301,6 +308,8 @@
 .view-resources table tr.odd,
 .view-contacts table tr.even,
 .view-contacts table tr.odd,
+.view-profile-contacts table tr.even,
+.view-profile-contacts table tr.odd,
 .view-licenses table tr.even,
 .view-licenses table tr.odd,
 .view-trials table tr.even,
@@ -339,6 +348,7 @@
 .view-organizations th,
 .view-organization-contacts th,
 .view-contacts th,
+.view-profile-contacts th,
 .view-licenses th,
 .view-trials th  {
   color: #2a2724;
@@ -353,6 +363,7 @@
 }
 
 .view-contacts .view-header,
+.view-profile-contacts .view-header,
 .view-organizations .view-header{
   a.button { @include le-bouton; } 
 }
@@ -374,7 +385,8 @@
 }
 
 .view-resources .views-exposed-form input.button,
-.view-contacts .views-exposed-form input.button{ margin:5px; @include le-bouton; } 
+.view-contacts .views-exposed-form input.button,
+.view-profile-contacts .views-exposed-form input.button { margin:5px; @include le-bouton; } 
 
 #content label.expand-btn{
   position: absolute;
