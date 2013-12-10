@@ -235,6 +235,22 @@ function ehlbc_preprocess_node(&$variables){
  * Implements template_preprocess_page().
  */
 function ehlbc_preprocess_page(&$variables) {
+  
+  if($variables['page']['content']['system_main']['#account']) {
+    $uid = $variables['page']['content']['system_main']['#account']->uid;
+    $profiles = profile2_load_by_user($uid);
+
+    // Get the first name
+    $first_name_field = field_get_items('profile2', $profiles['contact'], 'field_contact_first_name');
+    $first_name = render(field_view_value('profile2', $profiles['contact'], 'field_contact_first_name', $first_name_field[0]));
+
+    // Get the last name
+    $last_name_field = field_get_items('profile2', $profiles['contact'], 'field_contact_last_name');
+    $last_name = render(field_view_value('profile2', $profiles['contact'], 'field_contact_last_name', $last_name_field[0]));
+
+    $variables['title'] = $first_name . ' ' . $last_name;
+  }
+
   drupal_add_js('http://w.sharethis.com/button/buttons.js', 'external');
   drupal_add_js('stLight.options({publisher:"4e1667cf-8007-473e-96b5-3eda0d97f1fb"});', 'inline');
 } // ehlbc_preprocess_page()
