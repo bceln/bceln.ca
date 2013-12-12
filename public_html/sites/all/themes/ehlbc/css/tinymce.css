@@ -6434,6 +6434,14 @@ li.btn {
   color: #2a2724;
 }
 
+/* -----------------------------------------
+   Term Landing Pages (Committee pages)
+----------------------------------------- */
+/* line 548, ../sass/_page.scss */
+.vocabulary-groups {
+  border-bottom: 1px dotted #dddddd;
+}
+
 /********************************************
 
   Settings.scss
