@@ -96,8 +96,7 @@
 
   Drupal.behaviors.resourceFilter = {
     attach: function(context) {
-
-      if(!$.browser.msie) {
+      if ($.support.leadingWhitespace) {
         // If the filter has already been used we need to make sure it's visible.
         if ($(location).attr('search').search(new RegExp(/organization/i)) == -1) {
           $('.view-resources .view-filters').hide();
