@@ -1,3 +1,11 @@
+/* line 4, ../sass/_settings.scss */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  *behavior: url(/sites/all/themes/ehlbc/js/boxsizing.htc);
+}
+
 /********************************************
 
   Settings.scss
@@ -4953,6 +4961,14 @@ div.button-bar ul.button-group:last-child {
 }
 
 /****************** END FOUNDATION ******************/
+/* line 4, ../sass/_settings.scss */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  *behavior: url(/sites/all/themes/ehlbc/js/boxsizing.htc);
+}
+
 /********************************************
 
   Settings.scss
@@ -5383,6 +5399,14 @@ body.node-type-trial-renewal body#tinymce #block-views-contacts-by-group-block .
 /* line 283, ../sass/_typography.scss */
 .search-results dt a {
   text-decoration: underline;
+}
+
+/* line 4, ../sass/_settings.scss */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  *behavior: url(/sites/all/themes/ehlbc/js/boxsizing.htc);
 }
 
 /********************************************
@@ -6440,6 +6464,14 @@ li.btn {
 /* line 548, ../sass/_page.scss */
 .vocabulary-groups {
   border-bottom: 1px dotted #dddddd;
+}
+
+/* line 4, ../sass/_settings.scss */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  *behavior: url(/sites/all/themes/ehlbc/js/boxsizing.htc);
 }
 
 /********************************************

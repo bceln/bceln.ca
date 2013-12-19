@@ -1,0 +1,20 @@
+// Here's where specific IE7 code goes.
+$ie: 8;
+// We're loading PIE so the gradients and rounded
+// corners will all work
+@import "compass/css3/pie";
+// IE6.css will contain all necessary CSS for the site
+// customized and optimized to work with IE7
+@import "app";
+
+.group-license a.fieldset-title {
+    background: $gray_1;
+    border-bottom: 1px solid $gray_2;
+    -moz-border-radius: rem(.5);
+    -webkit-border-radius: rem(.5);
+    border-radius: rem(.5);
+    border-left-style: none;
+    border-right-style: none;
+    border-top: 1px solid $gray_3;
+    padding: rem(.5) rem(.8);
+}

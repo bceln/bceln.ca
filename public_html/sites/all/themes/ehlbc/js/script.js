@@ -97,16 +97,18 @@
   Drupal.behaviors.resourceFilter = {
     attach: function(context) {
 
-      // If the filter has already been used we need to make sure it's visible.
-      if ($(location).attr('search').search(new RegExp(/organization/i)) == -1) {
-        $('.view-resources .view-filters').hide();
+      if(!$.browser.msie) {
+        // If the filter has already been used we need to make sure it's visible.
+        if ($(location).attr('search').search(new RegExp(/organization/i)) == -1) {
+          $('.view-resources .view-filters').hide();
+        }
+
+        $('#edit-organization-wrapper label').appendTo('.drupal_tabs').addClass('expand-btn');
+
+        $('.expand-btn').click(function() {
+          $('.view-resources .view-filters').slideToggle('400');
+        });
       }
-
-      $('#edit-organization-wrapper label').appendTo('.drupal_tabs').addClass('expand-btn');
-
-      $('.expand-btn').click(function() {
-        $('.view-resources .view-filters').slideToggle('400');
-      });
     }
   };
 

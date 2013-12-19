@@ -173,9 +173,9 @@ figure {
 /* The Grid ---------------------- */
 /* line 3, ../../../../../../../../../../usr/local/Cellar/ruby/1.9.3-p374/lib/ruby/gems/1.9.1/gems/zurb-foundation-3.2.5/scss/foundation/components/_grid.scss */
 .row {
-  width: 95rem;
+  width: 950px;
   max-width: 100%;
-  min-width: 33.33333em;
+  min-width: 500px;
   margin: 0 auto;
 }
 /* line 4, ../../../../../../../../../../usr/local/Cellar/ruby/1.9.3-p374/lib/ruby/gems/1.9.1/gems/zurb-foundation-3.2.5/scss/foundation/components/_grid.scss */
@@ -5117,7 +5117,7 @@ div.progress.round .meter {
 }
 
 /* Very large display targeting */
-@media only screen and (min-width: 67.33333em) {
+@media only screen and (min-width: 1010px) {
   /* line 27, ../../../../../../../../../../usr/local/Cellar/ruby/1.9.3-p374/lib/ruby/gems/1.9.1/gems/zurb-foundation-3.2.5/scss/foundation/components/modules/_mqueries.scss */
   .hide-for-small,
   .hide-for-medium,
@@ -5139,7 +5139,7 @@ div.progress.round .meter {
   }
 }
 /* Medium display targeting */
-@media only screen and (max-width: 57.39999em) and (min-width: 33.33333em) {
+@media only screen and (max-width: 861px) and (min-width: 500px) {
   /* line 44, ../../../../../../../../../../usr/local/Cellar/ruby/1.9.3-p374/lib/ruby/gems/1.9.1/gems/zurb-foundation-3.2.5/scss/foundation/components/modules/_mqueries.scss */
   .hide-for-small,
   .show-for-medium,
@@ -5161,7 +5161,7 @@ div.progress.round .meter {
   }
 }
 /* Small display targeting */
-@media only screen and (max-width: 32.33333em) {
+@media only screen and (max-width: 499px) {
   /* line 61, ../../../../../../../../../../usr/local/Cellar/ruby/1.9.3-p374/lib/ruby/gems/1.9.1/gems/zurb-foundation-3.2.5/scss/foundation/components/modules/_mqueries.scss */
   .show-for-small,
   .hide-for-medium,
@@ -5251,7 +5251,7 @@ table.hide-for-medium {
   display: table !important;
 }
 
-@media only screen and (max-width: 57.39999em) and (min-width: 33.33333em) {
+@media only screen and (max-width: 861px) and (min-width: 500px) {
   /* line 108, ../../../../../../../../../../usr/local/Cellar/ruby/1.9.3-p374/lib/ruby/gems/1.9.1/gems/zurb-foundation-3.2.5/scss/foundation/components/modules/_mqueries.scss */
   .touch table.hide-for-xlarge,
   .touch table.hide-for-large,
@@ -5260,7 +5260,7 @@ table.hide-for-medium {
     display: table !important;
   }
 }
-@media only screen and (max-width: 32.33333em) {
+@media only screen and (max-width: 499px) {
   /* line 115, ../../../../../../../../../../usr/local/Cellar/ruby/1.9.3-p374/lib/ruby/gems/1.9.1/gems/zurb-foundation-3.2.5/scss/foundation/components/modules/_mqueries.scss */
   table.hide-for-xlarge,
   table.hide-for-large,
@@ -5286,7 +5286,7 @@ table.hide-for-medium {
   }
 }
 /* Between Medium and Small */
-@media only screen and (max-width: 57.39999em) and (min-width: 33.33333em) {
+@media only screen and (max-width: 861px) and (min-width: 500px) {
   /* NavBar --- */
   /*            */
   /* line 139, ../../../../../../../../../../usr/local/Cellar/ruby/1.9.3-p374/lib/ruby/gems/1.9.1/gems/zurb-foundation-3.2.5/scss/foundation/components/modules/_mqueries.scss */
@@ -5295,11 +5295,11 @@ table.hide-for-medium {
   }
   /* line 141, ../../../../../../../../../../usr/local/Cellar/ruby/1.9.3-p374/lib/ruby/gems/1.9.1/gems/zurb-foundation-3.2.5/scss/foundation/components/modules/_mqueries.scss */
   .touch .nav-bar li.has-flyout > a.flyout-toggle {
-    padding: 2rem !important;
+    padding: 20px !important;
   }
   /* line 142, ../../../../../../../../../../usr/local/Cellar/ruby/1.9.3-p374/lib/ruby/gems/1.9.1/gems/zurb-foundation-3.2.5/scss/foundation/components/modules/_mqueries.scss */
   .touch .nav-bar li.has-flyout > a {
-    padding-right: 0rem !important;
+    padding-right: 36px !important;
   }
 
   /* Clearing --- */
@@ -5348,7 +5348,7 @@ table.hide-for-medium {
   }
 }
 /* Small Devices ------------ */
-@media only screen and (max-width: 32.33333em) {
+@media only screen and (max-width: 499px) {
   /* Global Misc --- */
   /*                 */
   /* line 172, ../../../../../../../../../../usr/local/Cellar/ruby/1.9.3-p374/lib/ruby/gems/1.9.1/gems/zurb-foundation-3.2.5/scss/foundation/components/modules/_mqueries.scss */
@@ -6152,7 +6152,7 @@ table.hide-for-medium {
     position: absolute;
     right: 0;
     top: 0;
-    padding: 4rem;
+    padding: 22px;
     z-index: 2;
     display: block;
   }
@@ -6872,7 +6872,7 @@ body {
 /* line 44, ../sass/_typography.scss */
 body, p {
   font-family: minion-pro-1, minion-pro-2, Georgia, 'Times New Roman', serif;
-  font-size: 1.5rem;
+  font-size: 15px;
   line-height: 1.385;
 }
 
@@ -6947,7 +6947,7 @@ article h3 {
 #content h4,
 .profile h4,
 article h4 {
-  font-size: 1.2rem;
+  font-size: 12px;
   font-weight: bold;
   text-transform: uppercase;
 }
@@ -6978,7 +6978,7 @@ article label {
 /* line 106, ../sass/_typography.scss */
 aside p {
   font-style: inherit;
-  font-size: 1.5rem;
+  font-size: 15px;
 }
 
 /* line 111, ../sass/_typography.scss */
@@ -7049,14 +7049,14 @@ body.node-type-vendor article .block .field-label,
 .block body.node-type-trial-renewal article .field-label,
 body.node-type-trial-renewal article .block .field-label, .block body.page-user .profile .field-label, body.page-user .profile .block .field-label,
 .block h3 {
-  margin: 0 0 1rem;
+  margin: 0 0 10px;
 }
 /* line 180, ../sass/_typography.scss */
 .block h3 {
   clear: both;
   color: #2a2724;
   font-family: Helvetica, Arial, sans-serif;
-  font-size: 1.5rem;
+  font-size: 15px;
   font-weight: bold;
 }
 
@@ -7065,7 +7065,7 @@ body.node-type-trial-renewal article .block .field-label, .block body.page-user 
 ----------------------------------------- */
 /* line 194, ../sass/_typography.scss */
 .field-name-field-trial-deadline {
-  font-size: 1.8rem;
+  font-size: 18px;
   text-align: center;
 }
 
@@ -7113,8 +7113,8 @@ body.page-user .profile .collapsible legend a {
 }
 /* line 257, ../sass/_typography.scss */
 .view .row {
-  margin-bottom: 1rem;
-  margin-top: 1rem;
+  margin-bottom: 10px;
+  margin-top: 10px;
 }
 
 /* line 264, ../sass/_typography.scss */
@@ -7133,8 +7133,8 @@ body.node-type-trial-renewal article #block-views-contacts-by-group-block .block
 }
 /* line 268, ../sass/_typography.scss */
 #block-views-contacts-by-group-block h3 {
-  font-size: 1.2rem;
-  margin-bottom: 1rem;
+  font-size: 12px;
+  margin-bottom: 10px;
   margin-top: 0;
   text-transform: uppercase;
 }
@@ -7196,7 +7196,7 @@ nav .foundation-menu {
 
 /* line 7, ../sass/_nav.scss */
 #access ul.menu {
-  height: 4rem;
+  height: 40px;
   margin: 0;
   padding: 0;
 }
@@ -7206,13 +7206,13 @@ nav .foundation-menu {
 }
 /* line 11, ../sass/_nav.scss */
 #access ul.menu > li {
-  height: 4rem;
+  height: 40px;
   float: left;
   display: block;
   position: relative;
   padding: 0;
   margin: 0;
-  line-height: 4rem;
+  line-height: 40px;
 }
 /* line 24, ../sass/_nav.scss */
 #access ul.menu > li.active-trail > a {
@@ -7230,7 +7230,7 @@ nav .foundation-menu {
 }
 /* line 29, ../sass/_nav.scss */
 #access ul.menu > li > a {
-  line-height: 4rem;
+  line-height: 40px;
   color: white;
   font-family: Helvetica, Arial, sans-serif;
   font-weight: bold;
@@ -7245,7 +7245,7 @@ nav .foundation-menu {
 }
 /* line 39, ../sass/_nav.scss */
 #access ul.menu > li.has-flyout > a:first-child {
-  padding-right: 4rem;
+  padding-right: 40px;
   position: relative;
 }
 /* line 42, ../sass/_nav.scss */
@@ -7254,36 +7254,36 @@ nav .foundation-menu {
   display: block;
   width: 0;
   height: 0;
-  border: solid 0.4rem;
+  border: solid 4px;
   border-color: #e6e6e6 transparent transparent transparent;
   position: absolute;
-  right: 2rem;
-  top: 1.7rem;
+  right: 20px;
+  top: 17px;
 }
 /* line 49, ../sass/_nav.scss */
 #access ul.menu > li.has-flyout > a.flyout-toggle {
   position: absolute;
   right: 0;
   top: 0;
-  padding: 2rem;
+  padding: 20px;
   z-index: 2;
   display: block;
 }
 /* line 58, ../sass/_nav.scss */
 #access ul.menu > li.has-flyout.is-touch > a:first-child {
-  padding-right: 5.5rem;
+  padding-right: 55px;
 }
 /* line 64, ../sass/_nav.scss */
 #access ul.menu > li > a:first-child {
   position: relative;
-  padding: 0 2rem;
+  padding: 0 20px;
   display: block;
   text-decoration: none;
   font-size: 15px;
 }
 /* line 71, ../sass/_nav.scss */
 #access ul.menu > li > input {
-  margin: 0 1rem;
+  margin: 0 10px;
 }
 /* line 73, ../sass/_nav.scss */
 #access ul.menu.vertical {
@@ -7300,13 +7300,13 @@ nav .foundation-menu {
   display: block;
   width: 0;
   height: 0;
-  border: solid 0.4rem;
+  border: solid 4px;
   border-color: transparent transparent transparent #e6e6e6;
 }
 /* line 82, ../sass/_nav.scss */
 #access ul.menu.vertical > li .flyout {
   left: 100%;
-  top: -0.1rem;
+  top: -1px;
 }
 /* line 85, ../sass/_nav.scss */
 #access ul.menu.vertical > li .flyout.right {
@@ -7325,7 +7325,7 @@ nav .foundation-menu {
   font-size: 15px;
   height: auto;
   line-height: 1;
-  padding: 1.5rem 2rem;
+  padding: 15px 20px;
 }
 /* line 110, ../sass/_nav.scss */
 #access ul.menu li ul li.active {
@@ -7349,7 +7349,7 @@ nav .foundation-menu {
   font-size: 15px;
   height: auto;
   line-height: 1;
-  padding: 1.5rem 2rem;
+  padding: 15px 20px;
 }
 /* line 137, ../sass/_nav.scss */
 #access ul.menu li ul ul.flyout li.active, #access ul.menu li ul #access ul.menu li ul li.active {
@@ -7431,7 +7431,7 @@ nav .foundation-menu {
   overflow: hidden;
   margin-bottom: 17px;
 }
-@media only screen and (max-width: 33.33333em) {
+@media only screen and (max-width: 500px) {
   /* line 23, ../sass/_orbit.scss */
   .orbit .orbit-image {
     height: 66%;
@@ -7445,7 +7445,7 @@ nav .foundation-menu {
 .orbit .orbit-image img {
   width: 100%;
 }
-@media only screen and (max-width: 33.33333em) {
+@media only screen and (max-width: 500px) {
   /* line 30, ../sass/_orbit.scss */
   .orbit .orbit-image img {
     margin-top: -15%;
@@ -7458,7 +7458,7 @@ nav .foundation-menu {
 /* line 40, ../sass/_orbit.scss */
 .orbit .orbit-slide {
   max-width: 100%;
-  max-height: 42.9rem;
+  max-height: 429px;
   position: absolute;
   top: 0;
   left: 0;
@@ -7466,8 +7466,8 @@ nav .foundation-menu {
 /* line 47, ../sass/_orbit.scss */
 .orbit .orbit-edit-link {
   position: absolute;
-  bottom: 0.5rem;
-  right: 0.5rem;
+  bottom: 5px;
+  right: 5px;
 }
 /* line 51, ../sass/_orbit.scss */
 .orbit .orbit-edit-link a {
@@ -7483,7 +7483,7 @@ nav .foundation-menu {
 /* line 64, ../sass/_orbit.scss */
 .orbit div.orbit-content {
   position: absolute;
-  padding: 2rem 3rem;
+  padding: 20px 30px;
   width: 70%;
   display: block;
   height: 33%;
@@ -7491,12 +7491,12 @@ nav .foundation-menu {
   right: 0;
   z-index: 400;
 }
-@media only screen and (max-width: 33.33333em) {
+@media only screen and (max-width: 500px) {
   /* line 64, ../sass/_orbit.scss */
   .orbit div.orbit-content {
     width: 100%;
     height: 34%;
-    padding: 1.5rem 1.5rem;
+    padding: 15px 15px;
   }
 }
 /* line 78, ../sass/_orbit.scss */
@@ -7651,7 +7651,7 @@ body.node-type-trial-renewal article .orbit div.orbit-content .orbit-title.field
 /* line 205, ../sass/_orbit.scss */
 ul.orbit-bullets {
   position: absolute;
-  margin-bottom: 3.9rem;
+  margin-bottom: 39px;
   z-index: 30;
   list-style: none;
   bottom: 0;
@@ -7659,7 +7659,7 @@ ul.orbit-bullets {
   margin-left: 0 !important;
   padding: 0;
 }
-@media only screen and (max-width: 33.33333em) {
+@media only screen and (max-width: 500px) {
   /* line 205, ../sass/_orbit.scss */
   ul.orbit-bullets {
     display: none;
@@ -7667,21 +7667,21 @@ ul.orbit-bullets {
 }
 /* line 208, ../sass/_orbit.scss */
 ul.orbit-bullets:before {
-  margin-left: 3rem;
+  margin-left: 30px;
 }
 /* line 216, ../sass/_orbit.scss */
 ul.orbit-bullets li {
-  -webkit-border-radius: 1.8rem;
-  -moz-border-radius: 1.8rem;
-  -ms-border-radius: 1.8rem;
-  -o-border-radius: 1.8rem;
-  border-radius: 1.8rem;
+  -webkit-border-radius: 18px;
+  -moz-border-radius: 18px;
+  -ms-border-radius: 18px;
+  -o-border-radius: 18px;
+  border-radius: 18px;
   float: left;
-  margin-left: 0.5rem;
+  margin-left: 5px;
   text-align: center;
   cursor: pointer;
-  width: 1.8rem;
-  height: 1.8rem;
+  width: 18px;
+  height: 18px;
   overflow: hidden;
 }
 /* line 226, ../sass/_orbit.scss */
@@ -7709,11 +7709,11 @@ ul.orbit-bullets li.active {
   display: block;
   width: 100%;
 }
-@media only screen and (max-width: 33.33333em) {
+@media only screen and (max-width: 500px) {
   /* line 242, ../sass/_orbit.scss */
   .orbit img.fluid-placeholder {
-    width: 35rem;
-    height: 35rem;
+    width: 350px;
+    height: 350px;
   }
 }
 
@@ -7735,7 +7735,7 @@ ul.orbit-bullets li.active {
   zoom: 1;
 }
 
-@media only screen and (max-width: 32.33333em) {
+@media only screen and (max-width: 499px) {
   /* line 263, ../sass/_orbit.scss */
   .orbit.orbit-stack-on-small img.fluid-placeholder {
     visibility: visible;
@@ -7907,9 +7907,9 @@ div[class^=print-] * {
 #footer {
   border-top: 1px dotted #dddddd;
   margin-top: 20px;
-  max-width: 92rem;
-  padding-bottom: 6rem;
-  padding-top: 2rem;
+  max-width: 920px;
+  padding-bottom: 60px;
+  padding-top: 20px;
 }
 
 /* -----------------------------------------
@@ -7917,7 +7917,7 @@ div[class^=print-] * {
 ----------------------------------------- */
 /* line 124, ../sass/_page.scss */
 #sidebar-right .block {
-  margin-bottom: 3rem;
+  margin-bottom: 30px;
 }
 
 /* -----------------------------------------
@@ -7944,8 +7944,8 @@ body.node-type-vendor article .field-item,
 body.node-type-trial-renewal article .field-item,
 body.page-user .profile .field-item {
   border-bottom: 1px dotted #cccccc;
-  margin-bottom: 2rem;
-  padding-bottom: 1rem;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
 }
 /* line 142, ../sass/_page.scss */
 #content > article:not(.node-contact) .field-name-field-private-note,
@@ -7980,7 +7980,7 @@ body.node-type-event article div[class^=field-group-simple-div],
 body.node-type-vendor article div[class^=field-group-simple-div],
 body.node-type-trial-renewal article div[class^=field-group-simple-div],
 body.page-user .profile div[class^=field-group-simple-div] {
-  margin-bottom: 2rem;
+  margin-bottom: 20px;
 }
 /* line 154, ../sass/_page.scss */
 #content > article:not(.node-contact) div[class^=field-group-simple-div] .field-item:not(.field-name-field-resource-vend-desc),
@@ -8005,13 +8005,13 @@ body.node-type-vendor article fieldset,
 body.node-type-trial-renewal article fieldset,
 body.page-user .profile fieldset {
   background: #efefef;
-  border-bottom: 0.5rem solid #e0e0e0;
+  border-bottom: 5px solid #e0e0e0;
   -moz-border-radius: 0;
   -webkit-border-radius: 0;
   border-radius: 0;
-  border-top: 0.5rem solid #e0e0e0;
+  border-top: 5px solid #e0e0e0;
   margin-bottom: 0;
-  padding: 2rem;
+  padding: 20px;
 }
 /* line 165, ../sass/_page.scss */
 #content > article:not(.node-contact) .collapsed,
@@ -8043,7 +8043,7 @@ body.node-type-event article .collapsible legend,
 body.node-type-vendor article .collapsible legend,
 body.node-type-trial-renewal article .collapsible legend,
 body.page-user .profile .collapsible legend {
-  margin-left: -2.2rem;
+  margin-left: -22px;
 }
 /* line 175, ../sass/_page.scss */
 #content > article:not(.node-contact) .collapsed legend a,
@@ -8064,13 +8064,13 @@ body.node-type-trial-renewal article .collapsible legend a,
 body.page-user .profile .collapsible legend a {
   background: #939290;
   border-bottom: 1px solid #737270;
-  -moz-border-radius: 0.5rem;
-  -webkit-border-radius: 0.5rem;
-  border-radius: 0.5rem;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
   border-left-style: none;
   border-right-style: none;
   border-top: 1px solid #c9c9c8;
-  padding: 0.5rem 0.8rem;
+  padding: 5px 8px;
 }
 
 /* -----------------------------------------
@@ -8079,24 +8079,24 @@ body.page-user .profile .collapsible legend a {
 /* line 199, ../sass/_page.scss */
 body.node-type-resource .field-resource-vendor-ref {
   float: right;
-  padding-bottom: 2rem;
-  padding-left: 2rem;
+  padding-bottom: 20px;
+  padding-left: 20px;
 }
 /* line 204, ../sass/_page.scss */
 body.node-type-resource .help {
-  font-size: 1.1rem;
-  margin-top: 0.5rem;
+  font-size: 11px;
+  margin-top: 5px;
 }
 /* line 208, ../sass/_page.scss */
 body.node-type-resource #return-res {
   background: url("../images/return-resources.png") no-repeat right 0;
   font-family: Helvetica, Arial, sans-serif;
-  font-size: 1.2rem;
+  font-size: 12px;
   font-weight: bold;
-  height: 3rem;
+  height: 30px;
   position: absolute;
-  right: 1.5rem;
-  top: 5.2rem;
+  right: 15px;
+  top: 52px;
 }
 /* line 217, ../sass/_page.scss */
 body.node-type-resource #return-res a {
@@ -8108,12 +8108,12 @@ body.node-type-resource #return-res a {
 /* line 234, ../sass/_page.scss */
 body.page-user .profile .row-container {
   border: 1px solid #dddddd;
-  padding: 2rem 0;
+  padding: 20px 0;
 }
 /* line 237, ../sass/_page.scss */
 body.page-user .profile .row-container .row {
   margin: 0 auto;
-  width: 90rem;
+  width: 900px;
 }
 /* line 242, ../sass/_page.scss */
 body.page-user .profile .row-container .one .field-item {
@@ -8245,13 +8245,13 @@ body.node-type-trial-renewal article .front #content .entry-content .field-label
 /* line 354, ../sass/_page.scss */
 #block-views-contacts-by-group-block {
   background: #f7f7f7;
-  border-bottom: 0.5rem solid #efefef;
+  border-bottom: 5px solid #efefef;
   -moz-border-radius: 0;
   -webkit-border-radius: 0;
   border-radius: 0;
-  border-top: 0.5rem solid #efefef;
+  border-top: 5px solid #efefef;
   margin-bottom: 0;
-  padding: 2rem;
+  padding: 20px;
 }
 
 /* -----------------------------------------
@@ -8309,9 +8309,9 @@ body.page-user .profile .collapsible legend a:focus {
 
 /* line 371, ../sass/_page.scss */
 #breadcrumb {
-  height: 3rem;
-  padding-top: 0.7rem;
-  padding-left: 3rem;
+  height: 30px;
+  padding-top: 7px;
+  padding-left: 30px;
 }
 
 /* line 377, ../sass/_page.scss */
@@ -8665,7 +8665,7 @@ li.btn {
 
    What do we do at different sizes
 ----------------------------------------- */
-@media only screen and (max-width: 46.65666em) {
+@media only screen and (max-width: 699.99px) {
   /* line 33, ../sass/_media.scss */
   #access {
     display: none !important;
@@ -8676,12 +8676,12 @@ li.btn {
 #mobile-nav-trigger {
   display: none;
   position: absolute;
-  right: 1.5rem;
-  top: 4.5rem;
-  height: 5rem;
+  right: 15px;
+  top: 45px;
+  height: 50px;
   z-index: 5;
 }
-@media only screen and (max-width: 46.65666em) {
+@media only screen and (max-width: 699.99px) {
   /* line 36, ../sass/_media.scss */
   #mobile-nav-trigger {
     display: block;
@@ -8689,8 +8689,8 @@ li.btn {
 }
 /* line 46, ../sass/_media.scss */
 #mobile-nav-trigger #menu-link:before {
-  font-size: 2rem;
-  line-height: 5rem;
+  font-size: 20px;
+  line-height: 50px;
   font-weight: normal;
 }
 
@@ -8698,7 +8698,7 @@ li.btn {
 #mobile-nav {
   background-image: none;
   background-color: transparent;
-  top: 2rem !important;
+  top: 20px !important;
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   box-shadow: none;
@@ -8713,11 +8713,11 @@ li.btn {
   display: block;
   background-color: green;
   color: white;
-  font-size: 2.8rem;
+  font-size: 28px;
   font-weight: normal;
-  border: 0.1rem solid #004d00;
+  border: 1px solid #004d00;
   line-height: 1.1;
-  padding: 1rem;
+  padding: 10px;
   -webkit-box-shadow: rgba(0, 0, 0, 0.8) 0px 3px 10px;
   -moz-box-shadow: rgba(0, 0, 0, 0.8) 0px 3px 10px;
   box-shadow: rgba(0, 0, 0, 0.8) 0px 3px 10px;
@@ -8726,7 +8726,7 @@ li.btn {
 #mobile-nav li a:hover, #mobile-nav li a:focus, #mobile-nav li a:active {
   text-decoration: none;
   background: green;
-  border: 0.1rem solid #004d00;
+  border: 1px solid #004d00;
 }
 
 /* line 84, ../sass/_media.scss */
@@ -9739,11 +9739,11 @@ body.node-type-trial-renewal article #block-views-committee-members-block .block
 #block-menu-menu-authenticated {
   background: white;
   color: #877f77;
-  -webkit-border-radius: 0.5rem;
-  -moz-border-radius: 0.5rem;
-  -ms-border-radius: 0.5rem;
-  -o-border-radius: 0.5rem;
-  border-radius: 0.5rem;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
   -moz-box-shadow: 0 0 5px #888888;
   -webkit-box-shadow: 0 0 5px #888888;
   box-shadow: 0 0 5px #888888;
@@ -9774,7 +9774,7 @@ body.node-type-trial-renewal article #block-menu-menu-authenticated .field-label
   background: url("../images/resources-gear.png") no-repeat scroll top left transparent;
   color: #877f77;
   cursor: pointer;
-  font-size: 1.5rem;
+  font-size: 15px;
   height: 36px;
   margin: 0;
   padding: 5px 0 0 46px;
@@ -10013,7 +10013,7 @@ body.node-type-trial-renewal article .front #block-menu-block-1 .field-label, .f
   right: 267px;
   text-align: right;
   top: 15px;
-  width: 25rem;
+  width: 250px;
 }
 
 /* line 266, ../sass/_block.scss */
@@ -10273,4 +10273,17 @@ body.node-type-trial-renewal article #block-user-login .field-label, #block-user
 /* line 484, ../sass/_block.scss */
 #block-views-contacts-block_1 .view-contacts {
   margin-top: 0;
+}
+
+/* line 10, ../sass/ie8.scss */
+.group-license a.fieldset-title {
+  background: #939290;
+  border-bottom: 1px solid #737270;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  border-left-style: none;
+  border-right-style: none;
+  border-top: 1px solid #c9c9c8;
+  padding: 5px 8px;
 }
