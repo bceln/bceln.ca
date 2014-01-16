@@ -1,0 +1,11 @@
+name = "COPPUL Data migration"
+description = "Migrate content to the new COPPUL site"
+package = "Raised Eyebrow Custom Modules"
+core = 7.x
+;hidden = TRUE
+
+dependencies[] = migrate
+;dependencies[] = migrate_d2d
+
+files[] = licenses.inc
+;files[] = user.inc

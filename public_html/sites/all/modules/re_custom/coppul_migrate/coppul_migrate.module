@@ -1,0 +1,27 @@
+<?php
+
+/**
+ * This is example code for a Drupal 6 to Drupal 7 migration. This won't actually
+ * work without defining the referenced vocabularies, content types, and fields
+ * on each side.
+ */
+
+/**
+ * Implements hook_flush_caches().
+ */
+function coppul_migrate_flush_caches() {
+  coppul_migrate_register_migrations();
+}
+
+/**
+ * Implements hook_migrate_api().
+ */
+function coppul_migrate_migrate_api() {
+  $api = array(
+    'api' => 2,
+    'migrations' => array(
+      'licenses' => array('class_name' => 'CLicenses'),
+    ),
+  );
+  return $api;
+}
