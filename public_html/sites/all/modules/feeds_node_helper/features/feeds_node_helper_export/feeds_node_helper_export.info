@@ -1,0 +1,19 @@
+name = Book Outline Export
+description = View that allows for exporting of book outlines
+core = 7.x
+package = Feeds
+dependencies[] = book
+dependencies[] = uuid
+dependencies[] = views
+dependencies[] = views_data_export
+features[ctools][] = views:views_default:3.0
+features[features_api][] = api:1
+features[views_view][] = feeds_node_helper_export
+features_exclude[dependencies][ctools] = ctools
+
+; Information added by drupal.org packaging script on 2013-08-05
+version = "7.x-1.4"
+core = "7.x"
+project = "feeds_node_helper"
+datestamp = "1375722968"
+

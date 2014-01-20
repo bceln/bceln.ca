@@ -3,7 +3,7 @@
 /**
  * A dynamic migration that is reused for each source CSV file.
  */
-class CLicenses extends Migration {
+class Licenses extends Migration {
   public function __construct() {
     
     parent::__construct();
@@ -16,10 +16,10 @@ class CLicenses extends Migration {
       
   	$this->map = new MigrateSQLMap($this->machineName,
   		array(
-  			'name' => array(
-  				'type' => 'varchar',
-  				'length' => 255,
+  			'guid' => array(
+  				'type' => 'int',
   				'not null' => TRUE,
+          'description' => 'UUID of License',
   			)
   	 	),
        	MigrateDestinationNode::getKeySchema()
@@ -28,37 +28,21 @@ class CLicenses extends Migration {
     $this->source = new MigrateSourceCSV($path . '/' . 'licenses-final.csv', array(), array('header_rows' => 1));
 
   	$this->destination = new MigrateDestinationNode('license');
-
+    //guid  title ereserves ereserves_txt ill ill_txt archival  archival_txt  url_1 url_2 general
     //Field mapping
-    $this->addFieldMapping('title', 'name');
-    $this->addFieldMapping('field_component', 'component')->separator('||');
-    $this->addFieldMapping('field_component:source_type')->defaultValue('tid');
-    $this->addFieldMapping('field_employer_type', 'type')->separator('||');
-    $this->addFieldMapping('field_employer_type:source_type')->defaultValue('tid');
+    $this->addFieldMapping('title', 'title');
+    $this->addFieldMapping('field_license_ereserves', 'ereserves');
+    $this->addFieldMapping('field_license_eres_text', 'ereserves_txt');
+    $this->addFieldMapping('field_license_ill', 'ill');
+    $this->addFieldMapping('field_license_ill_txt', 'ill_txt');
+    $this->addFieldMapping('field_license_archival', 'archival');
+    $this->addFieldMapping('field_license_archival_txt', 'archival_txt');
+    $this->addFieldMapping('field_private_note', 'general');
     $this->addFieldMapping('status')->defaultValue(1);
   }
 
-  public function prepareRow($row) {
-    // This implementation is created to handle duplicate rows
-    // where an Organization can belong to multiple components.
-
-    // Get the next row
-    $nextrow = $this->source->getNextRow();
-    // Make sure it's not the same row
-    if($row->csvrownum != $nextrow->csvrownum) {
-      // If then next row has the same name
-      if($row->name === $nextrow->name) {
-        do {
-          // Get the taxonomy term/component of the next row
-          $row->component .= ' || ' . $nextrow->component;
-          // Iterate to the row after that (the next next row)
-          $nextrow = $this->source->getNextRow();
-          // And loop as long as the names are the same
-        } while($row->name === $nextrow->name);
-      }
-    }
-    // Rewind a row because the second NextRow() will have advanced it too far..
-    $this->source->performRewind();
-  }
+  // public function prepareRow($row) {
+  
+  // }
 
 }

@@ -6,11 +6,277 @@
  * on each side.
  */
 
+function coppul_migrate_menu() {
+	$items['coppul/ips'] = array(
+	    'title' => 'Coppul IP Address import',
+	    'page callback' => 'coppul_migrate_list_ips',
+	    'access callback' => TRUE,
+	    'access arguments' => array('administer nodes'),
+	    'expanded' => TRUE,
+  	);
+
+  $items['coppul/orgs'] = array(
+      'title' => 'Coppul Resource -> Organization Mapping',
+      'page callback' => 'coppul_migrate_list_resources',
+      'access callback' => TRUE,
+      'access arguments' => array('administer nodes'),
+      'expanded' => TRUE,
+    );
+
+  	return $items;
+}
+
+function coppul_migrate_list_ips() {
+
+  // SELECT n.nid, n.title, fip.ip_address FROM feeds_ip_addresses fip
+  // JOIN feeds_item fi ON fip.org_id = fi.guid
+  // JOIN node n ON n.nid = fi.entity_id
+  // WHERE n.type = 'organization'
+
+  $result = coppul_migrate_retrieve_ips();
+
+	$table = array(
+		'table' => array(
+		    '#theme' => 'table',
+		    '#header' => array(
+		      'nid' => array('data' => t('ID'), 'field' => 'nid'),
+	        'title' => array('data' => t('Title'), 'field' => 'title'),
+	        'ip_address' => array('data' => t('IP Address'), 'field' => 'ip_address'),
+		    ),
+		    '#rows' => array_map(function ($row) {
+		        return (array)$row;
+		      }, $result),
+		    '#sticky' => TRUE,
+		    '#empty' => t('No IP Addresses returned'),
+	    ),
+  );
+
+  $output = render(drupal_get_form('coppul_migrate_import_ip_form'));
+  $output .= render($table);
+
+  return $output;
+}
+
+function coppul_migrate_retrieve_ips() {
+  $query = db_select('feeds_ip_addresses', 'fip');
+  
+  $query->innerJoin('feeds_item', 'fi', 'fip.org_id = fi.guid');
+  $query->innerJoin('node', 'n', 'n.nid = fi.entity_id');
+
+  $result = $query
+    ->fields('n', array('nid', 'title'))
+    ->fields('fip', array('ip_address'))
+    ->condition('n.type', 'organization', '=')
+    ->execute()
+    ->fetchAll();
+
+  return $result;
+}
+
+function coppul_migrate_import_ip_form($form, &$form_state) {
+  $form['submit'] = array(
+    '#type' => 'submit',
+    '#value' => 'Import',
+  );
+  return $form;
+}
+
+// Adds a submit handler/function to our form to send a successful
+// completion message to the screen.
+function coppul_migrate_import_ip_form_submit($form, &$form_state) {
+  
+  try {
+    $result = coppul_migrate_retrieve_ips();
+    foreach ($result as $row) {
+      $node = node_load($row->nid);
+      $wrapper = entity_metadata_wrapper('node', $node);
+      //dpm($wrapper->getPropertyInfo());
+      // Get the current values - should be empty
+      $current_values = $wrapper->field_org_ip->value();
+      // dpm($row->title);
+      // dpm($row->ip_address);
+      // dpm($wrapper->field_org_ip->value());
+      if(!in_array($row->ip_address, $current_values)) {
+        $current_values[] = $row->ip_address;
+        // dpm($current_values);
+        $wrapper->field_org_ip->set($current_values);
+        $wrapper->save();
+        watchdog(
+          'MODULE_NANE',
+          'Saving ' . $row->ip_address . ' to: ' . $row->nid . ' - ' . $row->title,
+          NULL, WATCHDOG_NOTICE
+        );
+      }
+      $current_values = array();
+    }
+    drupal_set_message(t('The IP Addresses have been imported.'));
+  }
+
+  catch (EntityMetadataWrapperException $exc) {
+      drupal_set_message(t('The IP Addresses were not imported. See logs for details.', 'error'));
+      watchdog(
+        'MODULE_NANE',
+        'See '  . __FUNCTION__ . '() ' .  $exc->getTraceAsString(),
+         NULL, WATCHDOG_ERROR
+      );
+  }
+    //drupal_set_message(t('The form has been submitted.'));
+}
+
+
+function coppul_migrate_list_resources() {
+
+  $result = coppul_migrate_retrieve_resources();
+
+  foreach($result as $row) {
+    $organization = coppul_migrate_get_org_info($row->org_id, 'title');
+    $row->org_id = $organization[0];
+  }
+
+  $table = array(
+    'table' => array(
+        '#theme' => 'table',
+        '#header' => array(
+          'nid' => array('data' => t('ID'), 'field' => 'nid'),
+          'title' => array('data' => t('Title'), 'field' => 'title'),
+          'org_id' => array('data' => t('Organization'), 'field' => 'ip_address'),
+        ),
+        '#rows' => array_map(function ($row) {
+            return (array)$row;
+          }, $result),
+        '#sticky' => TRUE,
+        '#empty' => t('No Resources returned'),
+      ),
+  );
+
+  $output = render(drupal_get_form('coppul_migrate_update_resource_form'));
+  $output .= render($table);
+
+  return $output;
+}
+
+function coppul_migrate_retrieve_resources() {
+
+  // SELECT n.nid, n.title, fror.org_id FROM feeds_resource_org_relationship fror
+  // JOIN feeds_item fi ON fror.resource_id = fi.guid
+  // JOIN node n ON n.nid = fi.entity_id
+  // WHERE n.type = 'resource';
+
+  $query = db_select('feeds_resource_org_relationship', 'fror');
+  
+  $query->orderBy('n.title', 'ASC');
+
+  $query->innerJoin('feeds_item', 'fi', 'fror.resource_id = fi.guid');
+  $query->innerJoin('node', 'n', 'n.nid = fi.entity_id');
+
+  $result = $query
+    ->fields('n', array('nid', 'title'))
+    ->fields('fror', array('org_id'))
+    ->condition('n.type', 'resource', '=')
+    ->execute()
+    ->fetchAll();
+
+  return $result;
+}
+
+
+function coppul_migrate_update_resource_form($form, &$form_state) {
+  $form['submit'] = array(
+    '#type' => 'submit',
+    '#value' => 'Import',
+  );
+  return $form;
+}
+
+// Adds a submit handler/function to our form to send a successful
+// completion message to the screen.
+function coppul_migrate_update_resource_form_submit($form, &$form_state) {
+  
+  try {
+    $result = coppul_migrate_retrieve_resources();
+    foreach ($result as $row) {
+      //if($row->nid == 1053) {
+      $node = node_load($row->nid);
+      $wrapper = entity_metadata_wrapper('node', $node);
+      
+      // Get the current values - should be empty
+      $current_values = $wrapper->field_organization_ref->value();
+      $set_nids = array();
+      foreach($current_values as $set_node) {
+        $set_nids[] = $set_node->nid;
+      }
+
+      // Load the organization entity_id based on the old guid
+      $organization = coppul_migrate_get_org_info($row->org_id, 'nid');
+      $row->org_id = $organization[0];
+
+      // Load the Entity wrapper for the Organization node.
+      // We will need this to update the field below.
+      $ref_wrapper = entity_metadata_wrapper('node', $row->org_id);
+
+      // dpm($row->title);
+      // dpm('Set nids: ') . dpm($set_nids);
+      // dpm('Row Organization id ' . $row->org_id);
+      // dpm($wrapper->field_organization_ref->value());
+
+      if(!in_array($row->org_id, $set_nids)) {
+        // dpm('Saving' . $ref_wrapper->nid->value());
+        $wrapper->field_organization_ref[] = intval($ref_wrapper->nid->value());
+        $wrapper->save();
+        watchdog(
+          'MODULE_NANE',
+          'Saving ' . $row->org_id . ' to: ' . $row->nid . ' - ' . $row->title,
+          NULL, WATCHDOG_NOTICE
+        );
+      }
+      $current_values = array();
+      //}
+    }
+
+    drupal_set_message(t('The Organizations have been assigned.'));
+  }
+
+  catch (EntityMetadataWrapperException $exc) {
+      drupal_set_message(t('The Organizations were not assigned. See logs for details.', 'error'));
+      watchdog(
+        'MODULE_NANE',
+        'See '  . __FUNCTION__ . '() ' .  $exc->getTraceAsString(),
+         NULL, WATCHDOG_ERROR
+      );
+  }
+    //drupal_set_message(t('The form has been submitted.'));
+}
+
+function coppul_migrate_get_org_info($org_id, $column) {
+  // SELECT n.title FROM node n
+  // JOIN feeds_item fi ON n.nid = fi.entity_id
+  // JOIN feeds_resource_org_relationship fror ON fror.org_id = fi.guid
+  // WHERE fi.id = "organization" AND fror.resource_id = 96;
+
+  $query = db_select('node', 'n');
+  
+  $query->groupBy($column);
+
+  $query->innerJoin('feeds_item', 'fi', 'n.nid = fi.entity_id');
+  $query->innerJoin('feeds_resource_org_relationship', 'fror', 'fi.guid=fror.org_id');
+
+  $query
+    ->fields('n', array($column))
+    ->condition('fi.id', 'organization', '=')
+    ->condition('fror.org_id', $org_id, '=');
+
+  $result = $query->execute()
+    ->fetchCol($column);
+
+  return $result;
+}
+
+
 /**
  * Implements hook_flush_caches().
  */
 function coppul_migrate_flush_caches() {
-  coppul_migrate_register_migrations();
+  //coppul_migrate_register_migrations();
 }
 
 /**
@@ -20,7 +286,7 @@ function coppul_migrate_migrate_api() {
   $api = array(
     'api' => 2,
     'migrations' => array(
-      'licenses' => array('class_name' => 'CLicenses'),
+      'licenses' => array('class_name' => 'Licenses'),
     ),
   );
   return $api;

@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Book Outline Export feature.
+ */
+
+include_once 'feeds_node_helper_export.features.inc';
