@@ -428,3 +428,12 @@
   #block-views-committee-members-block h4 {
     margin-bottom:5px;
   }
+
+.view-organizations {
+  table {
+    caption {
+      @extend h2;
+      text-align: left !important;
+    }
+  }
+}
