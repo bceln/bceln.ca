@@ -485,5 +485,34 @@
   margin-top:0;
 }
 
+/* Homepage */
+.front .field-name-body {
+  h2 {
+    float:left;
+    padding: rem(3);
+    width: 60%
+  }
+  img {
+    width: 40%
+  }
+}
 
+#block-block-12 {
+  clear: both;
+}
 
+#block-block-12, #block-block-13, #block-block-14 {
+  float: right;
+  width: 33.33333%;
+  padding-left: rem(1);
+  padding-right: rem(1);
+  text-align: center;
+
+  &:after {
+    box-sizing: border-box;
+  }
+}
+
+#block-views-blog-block-6 {
+  clear: both;
+}

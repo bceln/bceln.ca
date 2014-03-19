@@ -190,6 +190,11 @@ nav {
 /* -----------------------------------------
    Individual fields 
 ----------------------------------------- */
+.front #content .entry-content .field-name-body {
+  h2 {
+    font-size: rem(3.5);
+  }
+}
 
 .field-name-field-trial-deadline {
   font-size: rem(1.8);

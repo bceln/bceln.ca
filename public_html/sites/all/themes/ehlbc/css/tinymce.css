@@ -5299,6 +5299,23 @@ body.node-type-trial-renewal body#tinymce .block .field-label, .block body.page-
    Individual fields 
 ----------------------------------------- */
 /* line 194, ../sass/_typography.scss */
+.front #content .entry-content .field-name-body h2, .front #content .entry-content .field-name-body label, .front #content .entry-content .field-name-body .content-article .field-label, .content-article .front #content .entry-content .field-name-body .field-label, .front #content .entry-content .field-name-body body.node-type-resource article .field-label, body.node-type-resource article .front #content .entry-content .field-name-body .field-label, .front #content .entry-content .field-name-body body.node-type-resource body#tinymce .field-label, body.node-type-resource body#tinymce .front #content .entry-content .field-name-body .field-label, .front #content .entry-content .field-name-body body.node-type-organization article .field-label, body.node-type-organization article .front #content .entry-content .field-name-body .field-label, .front #content .entry-content .field-name-body body.node-type-organization body#tinymce .field-label, body.node-type-organization body#tinymce .front #content .entry-content .field-name-body .field-label,
+.front #content .entry-content .field-name-body body.node-type-event article .field-label,
+body.node-type-event article .front #content .entry-content .field-name-body .field-label,
+.front #content .entry-content .field-name-body body.node-type-event body#tinymce .field-label,
+body.node-type-event body#tinymce .front #content .entry-content .field-name-body .field-label,
+.front #content .entry-content .field-name-body body.node-type-vendor article .field-label,
+body.node-type-vendor article .front #content .entry-content .field-name-body .field-label,
+.front #content .entry-content .field-name-body body.node-type-vendor body#tinymce .field-label,
+body.node-type-vendor body#tinymce .front #content .entry-content .field-name-body .field-label,
+.front #content .entry-content .field-name-body body.node-type-trial-renewal article .field-label,
+body.node-type-trial-renewal article .front #content .entry-content .field-name-body .field-label,
+.front #content .entry-content .field-name-body body.node-type-trial-renewal body#tinymce .field-label,
+body.node-type-trial-renewal body#tinymce .front #content .entry-content .field-name-body .field-label, .front #content .entry-content .field-name-body body.page-user .profile .field-label, body.page-user .profile .front #content .entry-content .field-name-body .field-label {
+  font-size: 3.5rem;
+}
+
+/* line 199, ../sass/_typography.scss */
 .field-name-field-trial-deadline {
   font-size: 1.8rem;
   text-align: center;
@@ -5307,7 +5324,7 @@ body.node-type-trial-renewal body#tinymce .block .field-label, .block body.page-
 /* -----------------------------------------
    UI Elements (pagination, breadcrumbs etc.)
 ----------------------------------------- */
-/* line 205, ../sass/_typography.scss */
+/* line 210, ../sass/_typography.scss */
 .content-article .field-label, body.node-type-resource article .field-label, body.node-type-resource body#tinymce .field-label, body.node-type-organization article .field-label, body.node-type-organization body#tinymce .field-label,
 body.node-type-event article .field-label,
 body.node-type-event body#tinymce .field-label,
@@ -5317,7 +5334,7 @@ body.node-type-trial-renewal article .field-label,
 body.node-type-trial-renewal body#tinymce .field-label, body.page-user .profile .field-label {
   margin-top: 0;
 }
-/* line 212, ../sass/_typography.scss */
+/* line 217, ../sass/_typography.scss */
 .content-article .collapsed legend a, body.node-type-resource article .collapsed legend a, body.node-type-resource body#tinymce .collapsed legend a, body.node-type-organization article .collapsed legend a, body.node-type-organization body#tinymce .collapsed legend a,
 body.node-type-event article .collapsed legend a,
 body.node-type-event body#tinymce .collapsed legend a,
@@ -5345,7 +5362,7 @@ body.page-user .profile .collapsible legend a {
   text-transform: uppercase;
 }
 
-/* line 224, ../sass/_typography.scss */
+/* line 229, ../sass/_typography.scss */
 .notice {
   color: #f00;
 }
@@ -5353,17 +5370,17 @@ body.page-user .profile .collapsible legend a {
 /* -----------------------------------------
     Views
 ----------------------------------------- */
-/* line 253, ../sass/_typography.scss */
+/* line 258, ../sass/_typography.scss */
 .view a {
   text-decoration: none;
 }
-/* line 257, ../sass/_typography.scss */
+/* line 262, ../sass/_typography.scss */
 .view .row {
   margin-bottom: 1rem;
   margin-top: 1rem;
 }
 
-/* line 264, ../sass/_typography.scss */
+/* line 269, ../sass/_typography.scss */
 #block-views-contacts-by-group-block h2.block-title, #block-views-contacts-by-group-block #content label.block-title, #content #block-views-contacts-by-group-block label.block-title,
 #block-views-contacts-by-group-block .profile label.block-title,
 .profile #block-views-contacts-by-group-block label.block-title,
@@ -5385,7 +5402,7 @@ body.node-type-trial-renewal article #block-views-contacts-by-group-block .block
 body.node-type-trial-renewal body#tinymce #block-views-contacts-by-group-block .block-title.field-label, #block-views-contacts-by-group-block body.page-user .profile .block-title.field-label, body.page-user .profile #block-views-contacts-by-group-block .block-title.field-label {
   color: black;
 }
-/* line 268, ../sass/_typography.scss */
+/* line 273, ../sass/_typography.scss */
 #block-views-contacts-by-group-block h3 {
   font-size: 1.2rem;
   margin-bottom: 1rem;
@@ -5396,7 +5413,7 @@ body.node-type-trial-renewal body#tinymce #block-views-contacts-by-group-block .
 /* -----------------------------------------
    Forms
 ----------------------------------------- */
-/* line 283, ../sass/_typography.scss */
+/* line 288, ../sass/_typography.scss */
 .search-results dt a {
   text-decoration: underline;
 }
@@ -5629,8 +5646,10 @@ body.page-user .profile .field-name-field-private-note {
   border-bottom-style: none;
   padding: 1em;
 }
-/* line 148, ../sass/_page.scss */
+/* line 149, ../sass/_page.scss */
 #content > article:not(.node-contact) .field-name-field-vendor-info, #content > body#tinymce:not(.node-contact) .field-name-field-vendor-info,
+#content > article:not(.node-contact) .field-name-field-blog-categories,
+#content > body#tinymce:not(.node-contact) .field-name-field-blog-categories,
 .content-article .field-name-field-vendor-info,
 body.node-type-resource article .field-name-field-vendor-info,
 body.node-type-resource body#tinymce .field-name-field-vendor-info,
@@ -5642,10 +5661,22 @@ body.node-type-vendor article .field-name-field-vendor-info,
 body.node-type-vendor body#tinymce .field-name-field-vendor-info,
 body.node-type-trial-renewal article .field-name-field-vendor-info,
 body.node-type-trial-renewal body#tinymce .field-name-field-vendor-info,
-body.page-user .profile .field-name-field-vendor-info {
+body.page-user .profile .field-name-field-vendor-info,
+.content-article .field-name-field-blog-categories,
+body.node-type-resource article .field-name-field-blog-categories,
+body.node-type-resource body#tinymce .field-name-field-blog-categories,
+body.node-type-organization article .field-name-field-blog-categories,
+body.node-type-organization body#tinymce .field-name-field-blog-categories,
+body.node-type-event article .field-name-field-blog-categories,
+body.node-type-event body#tinymce .field-name-field-blog-categories,
+body.node-type-vendor article .field-name-field-blog-categories,
+body.node-type-vendor body#tinymce .field-name-field-blog-categories,
+body.node-type-trial-renewal article .field-name-field-blog-categories,
+body.node-type-trial-renewal body#tinymce .field-name-field-blog-categories,
+body.page-user .profile .field-name-field-blog-categories {
   border-bottom: none;
 }
-/* line 152, ../sass/_page.scss */
+/* line 153, ../sass/_page.scss */
 #content > article:not(.node-contact) div[class^=field-group-simple-div], #content > body#tinymce:not(.node-contact) div[class^=field-group-simple-div],
 .content-article div[class^=field-group-simple-div],
 body.node-type-resource article div[class^=field-group-simple-div],
@@ -5661,7 +5692,7 @@ body.node-type-trial-renewal body#tinymce div[class^=field-group-simple-div],
 body.page-user .profile div[class^=field-group-simple-div] {
   margin-bottom: 2rem;
 }
-/* line 154, ../sass/_page.scss */
+/* line 155, ../sass/_page.scss */
 #content > article:not(.node-contact) div[class^=field-group-simple-div] .field-item:not(.field-name-field-resource-vend-desc), #content > body#tinymce:not(.node-contact) div[class^=field-group-simple-div] .field-item:not(.field-name-field-resource-vend-desc),
 .content-article div[class^=field-group-simple-div] .field-item:not(.field-name-field-resource-vend-desc),
 body.node-type-resource article div[class^=field-group-simple-div] .field-item:not(.field-name-field-resource-vend-desc),
@@ -5679,7 +5710,7 @@ body.page-user .profile div[class^=field-group-simple-div] .field-item:not(.fiel
   margin-bottom: 0;
   padding-bottom: 0;
 }
-/* line 161, ../sass/_page.scss */
+/* line 162, ../sass/_page.scss */
 #content > article:not(.node-contact) fieldset, #content > body#tinymce:not(.node-contact) fieldset,
 .content-article fieldset,
 body.node-type-resource article fieldset,
@@ -5702,7 +5733,7 @@ body.page-user .profile fieldset {
   margin-bottom: 0;
   padding: 2rem;
 }
-/* line 165, ../sass/_page.scss */
+/* line 166, ../sass/_page.scss */
 #content > article:not(.node-contact) .collapsed, #content > body#tinymce:not(.node-contact) .collapsed,
 .content-article .collapsed,
 body.node-type-resource article .collapsed,
@@ -5720,7 +5751,7 @@ body.page-user .profile .collapsed {
   border: none;
   padding-bottom: 1em;
 }
-/* line 173, ../sass/_page.scss */
+/* line 174, ../sass/_page.scss */
 #content > article:not(.node-contact) .collapsed legend, #content > body#tinymce:not(.node-contact) .collapsed legend,
 #content > article:not(.node-contact) .collapsible legend,
 #content > body#tinymce:not(.node-contact) .collapsible legend,
@@ -5750,7 +5781,7 @@ body.node-type-trial-renewal body#tinymce .collapsible legend,
 body.page-user .profile .collapsible legend {
   margin-left: -2.2rem;
 }
-/* line 175, ../sass/_page.scss */
+/* line 176, ../sass/_page.scss */
 #content > article:not(.node-contact) .collapsed legend a, #content > body#tinymce:not(.node-contact) .collapsed legend a,
 #content > article:not(.node-contact) .collapsible legend a,
 #content > body#tinymce:not(.node-contact) .collapsible legend a,
@@ -5792,18 +5823,18 @@ body.page-user .profile .collapsible legend a {
 /* -----------------------------------------
    Content Types
 ----------------------------------------- */
-/* line 199, ../sass/_page.scss */
+/* line 200, ../sass/_page.scss */
 body.node-type-resource .field-resource-vendor-ref {
   float: right;
   padding-bottom: 2rem;
   padding-left: 2rem;
 }
-/* line 204, ../sass/_page.scss */
+/* line 205, ../sass/_page.scss */
 body.node-type-resource .help {
   font-size: 1.1rem;
   margin-top: 0.5rem;
 }
-/* line 208, ../sass/_page.scss */
+/* line 209, ../sass/_page.scss */
 body.node-type-resource #return-res {
   background: url("../images/return-resources.png") no-repeat right 0;
   font-family: Helvetica, Arial, sans-serif;
@@ -5814,34 +5845,34 @@ body.node-type-resource #return-res {
   right: 1.5rem;
   top: 5.2rem;
 }
-/* line 217, ../sass/_page.scss */
+/* line 218, ../sass/_page.scss */
 body.node-type-resource #return-res a {
   color: #8c8b89;
   display: block;
   padding: 5px 40px 0 0;
 }
 
-/* line 234, ../sass/_page.scss */
+/* line 235, ../sass/_page.scss */
 body.page-user .profile .row-container {
   border: 1px solid #dddddd;
   padding: 2rem 0;
 }
-/* line 237, ../sass/_page.scss */
+/* line 238, ../sass/_page.scss */
 body.page-user .profile .row-container .row {
   margin: 0 auto;
   width: 90rem;
 }
-/* line 242, ../sass/_page.scss */
+/* line 243, ../sass/_page.scss */
 body.page-user .profile .row-container .one .field-item {
   border-bottom-style: none;
 }
 
-/* line 249, ../sass/_page.scss */
+/* line 250, ../sass/_page.scss */
 body.node-type-contact .node .field-item {
   padding-bottom: 1em;
 }
 
-/* line 254, ../sass/_page.scss */
+/* line 255, ../sass/_page.scss */
 body.node-type-contact .node .field-label,
 body.node-type-license .node .field-label {
   color: #f68115;
@@ -5851,12 +5882,12 @@ body.node-type-license .node .field-label {
   margin: 0.75em 0 15px 0;
 }
 
-/* line 262, ../sass/_page.scss */
+/* line 263, ../sass/_page.scss */
 .field-name-field-resource-vend-desc {
   padding-bottom: 15px;
 }
 
-/* line 266, ../sass/_page.scss */
+/* line 267, ../sass/_page.scss */
 body.node-type-contact .field-name-field-contact-groups {
   position: absolute;
   right: 50%;
@@ -5866,13 +5897,13 @@ body.node-type-contact .field-name-field-contact-groups {
 /* -----------------------------------------
    Individual fields 
 ----------------------------------------- */
-/* line 275, ../sass/_page.scss */
+/* line 276, ../sass/_page.scss */
 .st_sharethis {
   font-family: helvetica,arial,sans-serif;
   font-size: 0.867em;
 }
 
-/* line 280, ../sass/_page.scss */
+/* line 281, ../sass/_page.scss */
 .more-link {
   background: #f68115;
   -moz-border-radius: 5px;
@@ -5893,7 +5924,7 @@ body.node-type-contact .field-name-field-contact-groups {
   width: 105px;
 }
 
-/* line 299, ../sass/_page.scss */
+/* line 300, ../sass/_page.scss */
 .more-link a {
   color: #fff;
   text-decoration: none;
@@ -5902,7 +5933,7 @@ body.node-type-contact .field-name-field-contact-groups {
 /* -----------------------------------------
    Front page specific 
 ----------------------------------------- */
-/* line 307, ../sass/_page.scss */
+/* line 308, ../sass/_page.scss */
 .front #content .entry-content h2, .front #content .entry-content label, .front #content .entry-content .content-article .field-label, .content-article .front #content .entry-content .field-label, .front #content .entry-content body.node-type-resource article .field-label, body.node-type-resource article .front #content .entry-content .field-label, .front #content .entry-content body.node-type-resource body#tinymce .field-label, body.node-type-resource body#tinymce .front #content .entry-content .field-label, .front #content .entry-content body.node-type-organization article .field-label, body.node-type-organization article .front #content .entry-content .field-label, .front #content .entry-content body.node-type-organization body#tinymce .field-label, body.node-type-organization body#tinymce .front #content .entry-content .field-label,
 .front #content .entry-content body.node-type-event article .field-label,
 body.node-type-event article .front #content .entry-content .field-label,
@@ -5921,22 +5952,22 @@ body.node-type-trial-renewal body#tinymce .front #content .entry-content .field-
   padding-bottom: 20px;
 }
 
-/* line 313, ../sass/_page.scss */
+/* line 314, ../sass/_page.scss */
 .front #content > article .field-item, .front #content > body#tinymce .field-item {
   border: 0;
 }
 
-/* line 317, ../sass/_page.scss */
+/* line 318, ../sass/_page.scss */
 .front .submitted {
   display: none;
 }
 
-/* line 321, ../sass/_page.scss */
+/* line 322, ../sass/_page.scss */
 .front #content .view-Blog ul {
   padding-left: 0;
 }
 
-/* line 325, ../sass/_page.scss */
+/* line 326, ../sass/_page.scss */
 .front #content .view-Blog .more-link {
   background: #f68115;
   -moz-border-radius: 5px;
@@ -5955,7 +5986,7 @@ body.node-type-trial-renewal body#tinymce .front #content .entry-content .field-
   text-transform: uppercase;
   width: 130px;
 }
-/* line 343, ../sass/_page.scss */
+/* line 344, ../sass/_page.scss */
 .front #content .view-Blog .more-link a {
   color: #fff;
   text-decoration: none;
@@ -5964,7 +5995,7 @@ body.node-type-trial-renewal body#tinymce .front #content .entry-content .field-
 /* -----------------------------------------
    Views 
 ----------------------------------------- */
-/* line 354, ../sass/_page.scss */
+/* line 355, ../sass/_page.scss */
 #block-views-contacts-by-group-block {
   background: #f7f7f7;
   border-bottom: 0.5rem solid #efefef;
@@ -5979,7 +6010,7 @@ body.node-type-trial-renewal body#tinymce .front #content .entry-content .field-
 /* -----------------------------------------
    UI Elements
 ----------------------------------------- */
-/* line 366, ../sass/_page.scss */
+/* line 367, ../sass/_page.scss */
 .button:hover, #content > article:not(.node-contact) .collapsed legend a:hover, #content > body#tinymce:not(.node-contact) .collapsed legend a:hover,
 #content > article:not(.node-contact) .collapsible legend a:hover,
 #content > body#tinymce:not(.node-contact) .collapsible legend a:hover,
@@ -6062,32 +6093,32 @@ body.page-user .profile .collapsible legend a:focus {
   background: #877f77;
 }
 
-/* line 371, ../sass/_page.scss */
+/* line 372, ../sass/_page.scss */
 #breadcrumb {
   height: 3rem;
   padding-top: 0.7rem;
   padding-left: 3rem;
 }
 
-/* line 377, ../sass/_page.scss */
+/* line 378, ../sass/_page.scss */
 ul.pagination {
   margin-top: 15px;
   text-align: left;
 }
-/* line 380, ../sass/_page.scss */
+/* line 381, ../sass/_page.scss */
 ul.pagination li {
   float: none;
   display: inline-block;
   margin: 0;
 }
-/* line 385, ../sass/_page.scss */
+/* line 386, ../sass/_page.scss */
 ul.pagination li .first {
   padding-left: 0;
   margin-left: 0;
 }
 
 /* Tab styling */
-/* line 394, ../sass/_page.scss */
+/* line 395, ../sass/_page.scss */
 div.drupal_tabs {
   background: #dddddd;
   overflow: auto;
@@ -6097,7 +6128,7 @@ div.drupal_tabs {
   -webkit-border-radius: 6px;
 }
 
-/* line 400, ../sass/_page.scss */
+/* line 401, ../sass/_page.scss */
 dl.tabs.primary,
 dl.tabs.secondary {
   border-style: none;
@@ -6105,19 +6136,19 @@ dl.tabs.secondary {
   padding: 0;
 }
 
-/* line 404, ../sass/_page.scss */
+/* line 405, ../sass/_page.scss */
 dl.tabs.primary {
   float: left;
 }
 
-/* line 408, ../sass/_page.scss */
+/* line 409, ../sass/_page.scss */
 dl.tabs.primary dd {
   display: inline;
   margin: 0;
   padding: 0;
 }
 
-/* line 412, ../sass/_page.scss */
+/* line 413, ../sass/_page.scss */
 dl.tabs.primary dd a {
   background: white;
   border-style: none;
@@ -6133,20 +6164,20 @@ dl.tabs.primary dd a {
   text-decoration: none;
 }
 
-/* line 419, ../sass/_page.scss */
+/* line 420, ../sass/_page.scss */
 dl.tabs.primary dd a:hover,
 dl.tabs.primary dd a:active {
   background: #877f77;
   color: white;
 }
 
-/* line 424, ../sass/_page.scss */
+/* line 425, ../sass/_page.scss */
 dl.tabs.primary dd.active a {
   background: #877f77;
   color: white;
 }
 
-/* line 428, ../sass/_page.scss */
+/* line 429, ../sass/_page.scss */
 dl.tabs.secondary {
   border-top: 1px solid white;
   clear: both;
@@ -6157,7 +6188,7 @@ dl.tabs.secondary {
   top: 4px;
 }
 
-/* line 432, ../sass/_page.scss */
+/* line 433, ../sass/_page.scss */
 dl.tabs.secondary dd {
   border-style: none;
   display: block;
@@ -6166,7 +6197,7 @@ dl.tabs.secondary dd {
   padding: 6px 0;
 }
 
-/* line 436, ../sass/_page.scss */
+/* line 437, ../sass/_page.scss */
 dl.tabs.secondary dd a {
   border-bottom-style: none;
   border-right: 1px solid white;
@@ -6180,7 +6211,7 @@ dl.tabs.secondary dd a {
 /* -----------------------------------------
    Forms
 ----------------------------------------- */
-/* line 446, ../sass/_page.scss */
+/* line 447, ../sass/_page.scss */
 .standard-form .button, #user-login .button,
 #search-form .button, .standard-form #content > article:not(.node-contact) .collapsed legend a, #content > article:not(.node-contact) .collapsed legend .standard-form a, #user-login #content > article:not(.node-contact) .collapsed legend a, #content > article:not(.node-contact) .collapsed legend #user-login a,
 #search-form #content > article:not(.node-contact) .collapsed legend a,
@@ -6364,7 +6395,7 @@ body.page-user .profile .collapsible legend #search-form a {
 
 /* Tabs Styles */
 /* line 742, ../sass/_views.scss */
-/* line 460, ../sass/_page.scss */
+/* line 461, ../sass/_page.scss */
 .page-organizations dl.primary,
 .page-licenses-products dl.primary,
 .page-licenses dl.primary {
@@ -6374,7 +6405,7 @@ body.page-user .profile .collapsible legend #search-form a {
 }
 
 /* line 750, ../sass/_views.scss */
-/* line 469, ../sass/_page.scss */
+/* line 470, ../sass/_page.scss */
 .page-organizations dl.tabs.primary dd,
 .page-licenses-products dl.tabs.primary dd,
 .page-licenses dl.tabs.primary dd {
@@ -6384,7 +6415,7 @@ body.page-user .profile .collapsible legend #search-form a {
 }
 
 /* line 758, ../sass/_views.scss */
-/* line 478, ../sass/_page.scss */
+/* line 479, ../sass/_page.scss */
 .page-organizations div.drupal_tabs,
 .page-licenses-products div.drupal_tabs,
 .page-licenses div.drupal_tabs {
@@ -6399,7 +6430,7 @@ body.page-user .profile .collapsible legend #search-form a {
 }
 
 /* line 772, ../sass/_views.scss */
-/* line 492, ../sass/_page.scss */
+/* line 493, ../sass/_page.scss */
 .page-organizations dl.tabs.primary,
 .page-licenses-products dl.tabs.primary,
 .page-licenses dl.tabs.primary {
@@ -6415,13 +6446,13 @@ body.page-user .profile .collapsible legend #search-form a {
 }
 
 /* line 784, ../sass/_views.scss */
-/* line 505, ../sass/_page.scss */
+/* line 506, ../sass/_page.scss */
 li.btn {
   width: 168px;
 }
 
 /* line 791, ../sass/_views.scss */
-/* line 512, ../sass/_page.scss */
+/* line 513, ../sass/_page.scss */
 .page-organizations dl.tabs.primary dd a,
 .page-licenses-products dl.tabs.primary dd a,
 .page-licenses dl.tabs.primary dd a {
@@ -6441,7 +6472,7 @@ li.btn {
 }
 
 /* line 809, ../sass/_views.scss */
-/* line 531, ../sass/_page.scss */
+/* line 532, ../sass/_page.scss */
 .page-organizations dl.tabs.primary dd.active a,
 .page-licenses-products dl.tabs.primary dd.active a,
 .page-licenses dl.tabs.primary dd.active a {
@@ -6450,7 +6481,7 @@ li.btn {
 }
 
 /* line 816, ../sass/_views.scss */
-/* line 539, ../sass/_page.scss */
+/* line 540, ../sass/_page.scss */
 .page-organizations dl.tabs.primary dd a:hover,
 .page-licenses-products dl.tabs.primary dd a:hover,
 .page-licenses dl.tabs.primary dd a:hover {
@@ -6461,9 +6492,31 @@ li.btn {
 /* -----------------------------------------
    Term Landing Pages (Committee pages)
 ----------------------------------------- */
-/* line 548, ../sass/_page.scss */
+/* line 549, ../sass/_page.scss */
 .vocabulary-groups {
   border-bottom: 1px dotted #dddddd;
+}
+
+/* line 553, ../sass/_page.scss */
+.image-right, .image-right img {
+  float: right;
+  padding: 0 0 1rem 1rem;
+}
+/* line 557, ../sass/_page.scss */
+.image-right:after, .image-right img:after {
+  content: '';
+  clear: both;
+}
+
+/* line 563, ../sass/_page.scss */
+.image-left, .image-left img {
+  float: right;
+  padding: 0 1rem 1rem 0;
+}
+/* line 567, ../sass/_page.scss */
+.image-left:after, .image-left img:after {
+  content: '';
+  clear: both;
 }
 
 /* line 4, ../sass/_settings.scss */
@@ -7112,6 +7165,59 @@ body.node-type-trial-renewal body#tinymce #block-user-login .field-label, #block
 /* line 484, ../sass/_block.scss */
 #block-views-contacts-block_1 .view-contacts {
   margin-top: 0;
+}
+
+/* Homepage */
+/* line 490, ../sass/_block.scss */
+.front .field-name-body h2, .front .field-name-body #content label, #content .front .field-name-body label,
+.front .field-name-body .profile label,
+.profile .front .field-name-body label,
+.front .field-name-body article label,
+article .front .field-name-body label,
+.front .field-name-body body#tinymce label,
+body#tinymce .front .field-name-body label, .front .field-name-body .content-article .field-label, .content-article .front .field-name-body .field-label, .front .field-name-body body.node-type-resource article .field-label, body.node-type-resource article .front .field-name-body .field-label, .front .field-name-body body.node-type-resource body#tinymce .field-label, body.node-type-resource body#tinymce .front .field-name-body .field-label, .front .field-name-body body.node-type-organization article .field-label, body.node-type-organization article .front .field-name-body .field-label, .front .field-name-body body.node-type-organization body#tinymce .field-label, body.node-type-organization body#tinymce .front .field-name-body .field-label,
+.front .field-name-body body.node-type-event article .field-label,
+body.node-type-event article .front .field-name-body .field-label,
+.front .field-name-body body.node-type-event body#tinymce .field-label,
+body.node-type-event body#tinymce .front .field-name-body .field-label,
+.front .field-name-body body.node-type-vendor article .field-label,
+body.node-type-vendor article .front .field-name-body .field-label,
+.front .field-name-body body.node-type-vendor body#tinymce .field-label,
+body.node-type-vendor body#tinymce .front .field-name-body .field-label,
+.front .field-name-body body.node-type-trial-renewal article .field-label,
+body.node-type-trial-renewal article .front .field-name-body .field-label,
+.front .field-name-body body.node-type-trial-renewal body#tinymce .field-label,
+body.node-type-trial-renewal body#tinymce .front .field-name-body .field-label, .front .field-name-body body.page-user .profile .field-label, body.page-user .profile .front .field-name-body .field-label {
+  float: left;
+  padding: 3rem;
+  width: 60%;
+}
+/* line 495, ../sass/_block.scss */
+.front .field-name-body img {
+  width: 40%;
+}
+
+/* line 500, ../sass/_block.scss */
+#block-block-12 {
+  clear: both;
+}
+
+/* line 504, ../sass/_block.scss */
+#block-block-12, #block-block-13, #block-block-14 {
+  float: right;
+  width: 33.33333%;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  text-align: center;
+}
+/* line 511, ../sass/_block.scss */
+#block-block-12:after, #block-block-13:after, #block-block-14:after {
+  box-sizing: border-box;
+}
+
+/* line 516, ../sass/_block.scss */
+#block-views-blog-block-6 {
+  clear: both;
 }
 
 /* line 46, ../sass/tinymce.scss */

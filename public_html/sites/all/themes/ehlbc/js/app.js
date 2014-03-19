@@ -66,4 +66,12 @@
       }
     }
   }
+
+  // Loads random image from a collection of a few on the homepage
+  Drupal.behaviors.randomImage = {
+    attach: function(context) {
+      var random = Math.floor(Math.random() * $('.front .field-name-body img').length);
+      $('.front .field-name-body img').hide().eq(random).show();
+    }
+  }
 })(jQuery);

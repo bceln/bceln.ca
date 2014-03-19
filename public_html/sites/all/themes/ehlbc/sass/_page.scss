@@ -145,7 +145,8 @@
     padding:1em;
   }
 
-  .field-name-field-vendor-info {
+  .field-name-field-vendor-info, 
+  .field-name-field-blog-categories {
     border-bottom: none;
   }
 
@@ -547,4 +548,24 @@ li.btn {
 ----------------------------------------- */
 .vocabulary-groups {
   border-bottom: 1px dotted $gray_6;
+}
+
+.image-right, .image-right img {
+  float: right;
+  padding: 0 0 rem(1) rem(1);
+
+  &:after {
+    content: '';
+    clear: both;
+  }
+}
+
+.image-left, .image-left img {
+  float: right;
+  padding: 0 rem(1) rem(1) 0;
+
+  &:after {
+    content: '';
+    clear: both;
+  }
 }
