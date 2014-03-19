@@ -456,7 +456,7 @@ div.drupal_tabs {
 /* Tabs Styles */
 /* line 742, ../sass/_views.scss */
 .page-organizations dl.primary,
-.page-resources-databases dl.primary,
+.page-licenses-products dl.primary,
 .page-licenses dl.primary {
   border: none;
   margin: 0;
@@ -465,7 +465,7 @@ div.drupal_tabs {
 
 /* line 750, ../sass/_views.scss */
 .page-organizations dl.tabs.primary dd,
-.page-resources-databases dl.tabs.primary dd,
+.page-licenses-products dl.tabs.primary dd,
 .page-licenses dl.tabs.primary dd {
   /* display: block; */
   position: relative;
@@ -474,7 +474,7 @@ div.drupal_tabs {
 
 /* line 758, ../sass/_views.scss */
 .page-organizations div.drupal_tabs,
-.page-resources-databases div.drupal_tabs,
+.page-licenses-products div.drupal_tabs,
 .page-licenses div.drupal_tabs {
   border-top: 1px dotted #ddd;
   border-bottom: 1px dotted #efefef;
@@ -488,7 +488,7 @@ div.drupal_tabs {
 
 /* line 772, ../sass/_views.scss */
 .page-organizations dl.tabs.primary,
-.page-resources-databases dl.tabs.primary,
+.page-licenses-products dl.tabs.primary,
 .page-licenses dl.tabs.primary {
   font-family: Helvetica, Arial, sans-serif;
   font-size: 0.867em;
@@ -508,7 +508,7 @@ li.btn {
 
 /* line 791, ../sass/_views.scss */
 .page-organizations dl.tabs.primary dd a,
-.page-resources-databases dl.tabs.primary dd a,
+.page-licenses-products dl.tabs.primary dd a,
 .page-licenses dl.tabs.primary dd a {
   background: none;
   -moz-border-radius: 0;
@@ -527,7 +527,7 @@ li.btn {
 
 /* line 809, ../sass/_views.scss */
 .page-organizations dl.tabs.primary dd.active a,
-.page-resources-databases dl.tabs.primary dd.active a,
+.page-licenses-products dl.tabs.primary dd.active a,
 .page-licenses dl.tabs.primary dd.active a {
   background: #efefef;
   color: #2a2724;
@@ -535,7 +535,7 @@ li.btn {
 
 /* line 816, ../sass/_views.scss */
 .page-organizations dl.tabs.primary dd a:hover,
-.page-resources-databases dl.tabs.primary dd a:hover,
+.page-licenses-products dl.tabs.primary dd a:hover,
 .page-licenses dl.tabs.primary dd a:hover {
   background: #efefef;
   color: #2a2724;
