@@ -2,8 +2,8 @@
 ; Theme Info -----------------------------------------------------------------
 ; required information about the theme
 
-name = ehlbc
-description = Cogito is an HTML5 theme based on the Foundation Framework by Zurb.
+name = coppul
+description = Coppul based on Cogito, based on the Foundation Framework by Zurb.
 base theme = cogito
 core = 7.x
 engine = phptemplate
