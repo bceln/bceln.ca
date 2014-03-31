@@ -24,7 +24,7 @@
       display: block;
       position: absolute;
       background: white;
-      height: rem(4); width: rem(4); left: rem(1); top: rem(4);      
+      height: rem(4); width: rem(4); left: rem(1); top: rem(4);
       font-size: rem(4);
       color: black;
       line-height: rem(3.6);
@@ -58,7 +58,7 @@
   table thead {
     background: none;
   }
-  
+
   #access {
     position:relative;
   }
@@ -68,12 +68,12 @@
   }
 
   .access-outer {
-    background: $mainColor;
-    border-bottom: 3px solid lighten($mainColor, 10%);
+    background: $secondaryColor;
+    border-bottom: 3px solid lighten($secondaryColor, 10%);
   }
 
   ul.links {
-   list-style: none; 
+   list-style: none;
    padding-left: 0px;
    .print_html { margin-left: 0; }
   }
@@ -87,7 +87,7 @@
 
   div[class^=print-] {
     margin: auto 1em;
-      * { 
+      * {
         color: #000;
         font-family: sans-serif;
       }
@@ -102,7 +102,7 @@
 }
 
 #header-wrapper {
-    background: url('../images/header-molecules4.png') no-repeat center top;    
+    // background: url('../images/header-molecules4.png') no-repeat center top;
 }
 
 #logo {
@@ -145,7 +145,7 @@
     padding:1em;
   }
 
-  .field-name-field-vendor-info, 
+  .field-name-field-vendor-info,
   .field-name-field-blog-categories {
     border-bottom: none;
   }
@@ -209,7 +209,7 @@ body.node-type-resource {
   #return-res {
     background: url('../images/return-resources.png') no-repeat right 0;
     font-family: Helvetica, Arial, sans-serif;
-    font-size: rem(1.2); 
+    font-size: rem(1.2);
     font-weight: bold;
     height: rem(3);
     position: absolute;
@@ -271,7 +271,7 @@ body.node-type-contact .field-name-field-contact-groups {
 }
 
 /* -----------------------------------------
-   Individual fields 
+   Individual fields
 ----------------------------------------- */
 .st_sharethis {
   font-family: helvetica,arial,sans-serif;
@@ -279,12 +279,10 @@ body.node-type-contact .field-name-field-contact-groups {
 }
 
 .more-link {
-  background: #f68115;
+  background: $mainColor;
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
   border-radius: 5px;
-  border-bottom: 1px solid #c06510;
-  border-top: 1px solid #fbc08a;
   clear: both;
   font-family: "minion-pro-1","minion-pro-2", Georgia, 'Times New Roman', serif;
   font-size: 0.933em; /* 14px relative to 15px */
@@ -303,7 +301,7 @@ body.node-type-contact .field-name-field-contact-groups {
 }
 
 /* -----------------------------------------
-   Front page specific 
+   Front page specific
 ----------------------------------------- */
 .front #content .entry-content h2 {
   color: $mainColor;
@@ -324,12 +322,10 @@ body.node-type-contact .field-name-field-contact-groups {
 }
 
 .front #content .view-Blog .more-link {
-  background: $secondaryColor;
+  background: $mainColor;
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
   border-radius: 5px;
-  border-bottom: 1px solid #c06510;
-  border-top: 1px solid #fbc08a;
   clear: both;
   font-family: "minion-pro-1","minion-pro-2",Georgia,'Times New Roman',serif;
   font-size: 0.81em;
@@ -349,7 +345,7 @@ body.node-type-contact .field-name-field-contact-groups {
 
 
 /* -----------------------------------------
-   Views 
+   Views
 ----------------------------------------- */
 
 #block-views-contacts-by-group-block {
@@ -405,39 +401,39 @@ div.drupal_tabs {
   dl.tabs.primary {
     float:left;
   }
-  
+
     dl.tabs.primary dd {
       display:inline;margin:0;padding:0;
     }
-    
+
       dl.tabs.primary dd a {
         background:$white;border-style:none;color:$gray_9; display:block; font-weight:bold; float:left; margin:0 2px; padding:6px 12px; text-transform:uppercase;
         -moz-border-radius:4px; -webkit-border-radius:4px;
         text-decoration: none;
       }
-      
+
       dl.tabs.primary dd a:hover,
       dl.tabs.primary dd a:active {
         background:$gray_9;
         color:$white;
       }
-      
+
       dl.tabs.primary dd.active a {
         background:$gray_9; color:$white;
       }
-      
+
     dl.tabs.secondary {
       border-top:1px solid $white; clear:both; display:block; margin:0 2px; padding:0 0 4px 0; position:relative; top:4px;
     }
-    
+
       dl.tabs.secondary dd {
         border-style:none; display:block; float:left; margin:0 !important; padding:6px 0;
       }
-      
+
         dl.tabs.secondary dd a {
           border-bottom-style:none; border-right:1px solid $white; display:block; float:left; font-weight:bold; margin-right:9px; padding:0 9px 0 0;
         }
-        
+
 
 /* -----------------------------------------
    Forms

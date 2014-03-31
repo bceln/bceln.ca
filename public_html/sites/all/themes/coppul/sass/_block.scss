@@ -2,13 +2,13 @@
 @import "compass/css3";
 
 /********************************************
-  
-  Block.scss 
-  
-  All styles (except typography) for 
+
+  Block.scss
+
+  All styles (except typography) for
   drupal blocks. Start with abstractions
   and then inheritances underneath
-  
+
 ********************************************/
 
 //This is here only to define it.
@@ -49,11 +49,11 @@
   right: -162px;
   top: 35px;
   z-index: 1000;
-  
+
   ul {
     list-style: none;
   }
-  
+
   h2 {
     background: url("../images/resources-gear.png") no-repeat scroll top left transparent;
     color: $gray_9;
@@ -63,7 +63,7 @@
     margin: 0;
     padding: 5px 0 0 46px;
   }
-  
+
   .block-content {
     padding:0 0 0 46px;
   }
@@ -185,7 +185,7 @@
 }
 
 #block-re-utilities-utility-nav .block-content {
-  background: none;  
+  background: none;
 }
 
 #block-re-utilities-utility-nav ul.links {
@@ -195,8 +195,8 @@
 }
 
 #block-re-utilities-utility-nav ul.links li {
-  background: #f68115;
-  border-bottom: 5px solid #ff932f;
+  background: $mainColor;
+  border-bottom: 5px solid lighten($mainColor, 10);
   font-family: "minion-pro-1","minion-pro-2", Georgia, 'Times New Roman', serif;
   font-weight: bold;
   height: 43px;
@@ -209,22 +209,22 @@
 }
 
 #block-re-utilities-utility-nav ul.links li.first {
-  border-left: 5px solid #ff932f;
+  border-left: 5px solid lighten($mainColor, 10);
   display: block;
   width: 114px;
 }
 
 #block-re-utilities-utility-nav ul.links li.last {
-  border-right: 5px solid #ff932f;
+  border-right: 5px solid lighten($mainColor, 10);
   display: block;
   width:132px;
-  
+
   /*
     @media(max-width: $screenSmall){
     width: 25px;
     text-indent: -9999px;
   }*/
-  
+
 }
 
 #block-re-utilities-utility-nav ul.links li a {
@@ -240,12 +240,12 @@
 }
 
 #block-re-utilities-utility-nav ul.links li a.register {
-  
+
 }
 
 #block-re-utilities-utility-nav ul.links li a.dashboard {
   font-family: Helvetica, Arial, sans-serif;
-  font-size: 0.786em; /* 11px relative to 14px (ul.links) */  
+  font-size: 0.786em; /* 11px relative to 14px (ul.links) */
   padding-top: 25px;
 }
 
@@ -254,7 +254,7 @@
   /*  width: 380px; */
 }
 
-.logged-in #block-re-utilities-utility-nav .block-content .welcome {    
+.logged-in #block-re-utilities-utility-nav .block-content .welcome {
   font-family: Helvetica, Arial, sans-serif;
   position: absolute;
   right: 267px;
@@ -264,7 +264,7 @@
 }
 
 .logged-in #block-re-utilities-utility-nav ul.links li {
-  border-left: 5px solid #ff932f;
+  border-left: 5px solid lighten($mainColor, 10);
 }
 
 #block-re-utilities-utility-nav ul.links li a.register {
@@ -292,7 +292,7 @@
 
 .logged-in #block-re-utilities-utility-nav ul.links li.last {
   border-left: none;
-  border-right: 5px solid #ff932f;
+  border-right: 5px solid lighten($mainColor, 10);
 }
 
 .logged-in #block-re-utilities-utility-nav ul.links li.first {
@@ -367,7 +367,7 @@
 }
 
 
-/*  Member/User Login Block */    
+/*  Member/User Login Block */
 #block-user-login {
   display: none;
 }
@@ -454,8 +454,8 @@
   text-decoration: none;
 }
 
-#block-views-blog-block-2,  
-#block-views-blog-block-3, 
+#block-views-blog-block-2,
+#block-views-blog-block-3,
 #block-views-events-block-1,
 #block-views-events-block-2,
 #block-views-trials-block-1,
