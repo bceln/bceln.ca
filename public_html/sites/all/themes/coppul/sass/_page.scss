@@ -48,6 +48,10 @@
     overflow-x: hidden;
   }
 
+  body {
+    background-color: $body-bg;
+  }
+
   .three, .four{ min-height: 1px; }
 
   table {
@@ -69,7 +73,6 @@
 
   .access-outer {
     background: $secondaryColor;
-    border-bottom: 3px solid lighten($secondaryColor, 10%);
   }
 
   ul.links {
@@ -101,20 +104,28 @@
     background: url('../images/header-background.png') repeat;
 }
 
-#header-wrapper {
-    // background: url('../images/header-molecules4.png') no-repeat center top;
-}
-
 #logo {
-  margin: 29px 0;
+  margin: rem(2.9) 0 rem(1) 0;
 }
 
 #footer {
-  border-top: 1px dotted $gray_6;
+  border-top: 1px solid $divider-gray;
   margin-top: 20px;
   max-width: rem(92);
   padding-bottom: rem(6);
   padding-top: rem(2);
+  position: relative;
+
+  &:before {
+    border-top: 1px solid $divider-highlight;
+    content: '';
+    display: block;
+    position: absolute;
+    top: -2px;
+    right: 0;
+    left: 0;
+  }
+
 }
 
 /* -----------------------------------------
@@ -208,7 +219,6 @@ body.node-type-resource {
   }
   #return-res {
     background: url('../images/return-resources.png') no-repeat right 0;
-    font-family: Helvetica, Arial, sans-serif;
     font-size: rem(1.2);
     font-weight: bold;
     height: rem(3);
@@ -254,7 +264,6 @@ body.node-type-contact .node .field-item {
 body.node-type-contact .node .field-label,
 body.node-type-license .node .field-label {
   color: $secondaryColor;
-  font-family: 'Helvetica Neue', Helvetica ,Arial,sans-serif;
   font-size: 1.133em;
   font-weight: bold;
   margin: 0.75em 0 15px 0;
@@ -274,7 +283,6 @@ body.node-type-contact .field-name-field-contact-groups {
    Individual fields
 ----------------------------------------- */
 .st_sharethis {
-  font-family: helvetica,arial,sans-serif;
   font-size: 0.867em;
 }
 
@@ -284,7 +292,6 @@ body.node-type-contact .field-name-field-contact-groups {
   -webkit-border-radius: 5px;
   border-radius: 5px;
   clear: both;
-  font-family: "minion-pro-1","minion-pro-2", Georgia, 'Times New Roman', serif;
   font-size: 0.933em; /* 14px relative to 15px */
   font-weight: bold;
   height: 32px;
@@ -327,7 +334,6 @@ body.node-type-contact .field-name-field-contact-groups {
   -webkit-border-radius: 5px;
   border-radius: 5px;
   clear: both;
-  font-family: "minion-pro-1","minion-pro-2",Georgia,'Times New Roman',serif;
   font-size: 0.81em;
   font-weight: bold;
   height: 32px;
@@ -473,7 +479,7 @@ div.drupal_tabs {
 .page-organizations div.drupal_tabs,
 .page-licenses-products div.drupal_tabs,
 .page-licenses div.drupal_tabs {
-  border-top: 1px dotted #ddd;
+  border-top: 1px dotted $divider-gray;
   border-bottom: 1px dotted #efefef;
   background: transparent;
   border-radius: 0;
@@ -487,7 +493,6 @@ div.drupal_tabs {
 .page-organizations dl.tabs.primary,
 .page-licenses-products dl.tabs.primary,
 .page-licenses dl.tabs.primary {
-  font-family: Helvetica, Arial, sans-serif;
   font-size: 0.867em;
   /* 13px relative to 15px */
   float: left;

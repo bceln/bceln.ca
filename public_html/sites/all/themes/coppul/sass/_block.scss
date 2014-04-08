@@ -122,7 +122,6 @@
   color: #fff;
   @include border-radius(7px);
   display: block;
-  font-family: "minion-pro-1","minion-pro-2", Georgia, 'Times New Roman', serif;
   font-size: 1.00em; /* 18px relative to 15px */
   font-weight: bold;
   height: 50px;
@@ -135,13 +134,9 @@
 
 
 /*  In this Section Block */
-
-
 .not-front #block-menu-block-1 {
-  background: none repeat scroll 0 0 #e0e0e0;
-  border-bottom: 5px solid #c5c5c5;
-  border-top: 5px solid #c5c5c5;
-  font-family: "minion-pro-1","minion-pro-2", Georgia, 'Times New Roman', serif;
+  background: none repeat scroll 0 0 $gray;
+  border-bottom: 5px solid $border-gray;
   padding: 20px;
 }
 
@@ -196,26 +191,25 @@
 
 #block-re-utilities-utility-nav ul.links li {
   background: $mainColor;
-  border-bottom: 5px solid lighten($mainColor, 10);
-  font-family: "minion-pro-1","minion-pro-2", Georgia, 'Times New Roman', serif;
-  font-weight: bold;
+  border-bottom: 5px solid lighten($mainColor, 20);
+  font-family: $ff-ss-bold;
+  font-size: rem(1.8);
   height: 43px;
   float: left;
   margin: 0;
   text-align: center;
-  text-transform: uppercase;
   padding-right: 5px;
   width: 110px;
 }
 
 #block-re-utilities-utility-nav ul.links li.first {
-  border-left: 5px solid lighten($mainColor, 10);
+  border-left: 5px solid lighten($mainColor, 20);
   display: block;
   width: 114px;
 }
 
 #block-re-utilities-utility-nav ul.links li.last {
-  border-right: 5px solid lighten($mainColor, 10);
+  border-right: 5px solid lighten($mainColor, 20);
   display: block;
   width:132px;
 
@@ -230,7 +224,8 @@
 #block-re-utilities-utility-nav ul.links li a {
   color: $white;
   display: block;
-  padding-top: 10px;
+  padding-top: 9px;
+  padding-bottom: 3px;
   text-decoration: none;
   padding-left: 30px;
 }
@@ -244,7 +239,6 @@
 }
 
 #block-re-utilities-utility-nav ul.links li a.dashboard {
-  font-family: Helvetica, Arial, sans-serif;
   font-size: 0.786em; /* 11px relative to 14px (ul.links) */
   padding-top: 25px;
 }
@@ -255,7 +249,6 @@
 }
 
 .logged-in #block-re-utilities-utility-nav .block-content .welcome {
-  font-family: Helvetica, Arial, sans-serif;
   position: absolute;
   right: 267px;
   text-align: right;
@@ -268,18 +261,18 @@
 }
 
 #block-re-utilities-utility-nav ul.links li a.register {
-  background: url('../images/icon-register.png') no-repeat 11px 12px;
+  background: url('../images/icon-register.png') no-repeat 10px 7px;
 }
 
 #block-re-utilities-utility-nav ul.links li a.login, #block-re-utilities-utility-nav ul.links li a.logout {
-  background: url('../images/icon-loginout.png') no-repeat 5px 12px;
+  background: url('../images/icon-loginout.png') no-repeat 10px 7px;
 }
 
 #block-re-utilities-utility-nav ul.links li a.logout {
 }
 
 #block-re-utilities-utility-nav ul.links li a.search {
-  background: url('../images/icon-search.png') no-repeat 15px 12px;
+  background: url('../images/icon-search.png') no-repeat 10px 7px;
 }
 
 
@@ -287,7 +280,6 @@
 .logged-in #block-re-utilities-utility-nav ul.links li.first {
   background: none;
   border: none;
-  font-family: Helvetica, Arial, sans-serif;
 }
 
 .logged-in #block-re-utilities-utility-nav ul.links li.last {
@@ -352,7 +344,6 @@
 
 #block-menu-menu-footer ul.menu li a {
   border-right: 1px solid #807b77;
-  color: #17729d;
   display: block;
   padding: 0 6px;
   text-decoration: none;
@@ -373,7 +364,7 @@
 }
 
 #block-user-login {
-  background: #e0e0e0;
+  background: $gray;
   border-top: 5px solid #d1d1d1;
   border-bottom: 5px solid #d1d1d1;
   padding: 0 15px;
@@ -386,7 +377,6 @@
 
 #block-user-login h2 {
   color: #807b77;
-  font-family: "minion-pro-1","minion-pro-2", Georgia, 'Times New Roman', serif;
   font-size: 0.933em;
   font-weight: bold;
   margin-top: 20px;
@@ -394,7 +384,6 @@
 }
 
 #block-user-login label {
-  font-family: Helvetica, Arial, sans-serif;
   font-weight: bold;
 }
 
@@ -408,7 +397,6 @@
   border: 0;
   @include border-radius(3px);
   color: #fff;
-  font-family: "minion-pro-1","minion-pro-2", Georgia, 'Times New Roman', serif;
   font-size: 0.933em; /* 14px relative to 15px */
   height: 30px;
   text-transform: uppercase;
@@ -461,9 +449,8 @@
 #block-views-trials-block-1,
 #block-user-0 {
   background: none repeat scroll 0 0 #efefef;
-  border-bottom: 5px solid #e0e0e0;
-  border-top: 5px solid #e0e0e0;
-  font-family: "minion-pro-1","minion-pro-2", Georgia, 'Times New Roman', serif;
+  border-bottom: 5px solid $gray;
+  border-top: 5px solid $gray;
   padding: 20px;
 }
 

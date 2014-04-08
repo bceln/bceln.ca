@@ -12,12 +12,27 @@
 /* -----------------------------------------
    Our Fonts
 ----------------------------------------- */
-// @include font-face ( "s_regular", font-files('sourcesanspro-regular-webfont.woff', 'woff','sourcesanspro-regular-webfont.ttf', 'truetype', 'sourcesanspro-regular-webfont.svg', 'svg'), 'sourcesanspro-regular-webfont.eot');
+@include font-face ( "source_sans_probold", font-files('sourcesanspro-bold-webfont.svg#source_sans_probold', 'svg', 'sourcesanspro-bold-webfont.woff', 'woff', 'sourcesanspro-bold-webfont.ttf', 'truetype'), 'sourcesanspro-bold-webfont.eot');
+@include font-face ( "source_sans_proregular", font-files('sourcesanspro-regular-webfont.svg#source_sans_proregular', 'svg', 'sourcesanspro-regular-webfont.woff', 'woff', 'sourcesanspro-regular-webfont.ttf', 'truetype'), 'sourcesanspro-regular-webfont.eot');
+@include font-face ( "source_sans_prosemibold", font-files('sourcesanspro-semibold-webfont.svg#source_sans_prosemibold', 'svg', 'sourcesanspro-regular-webfont.woff', 'woff', 'sourcesanspro-semibold-webfont.ttf', 'truetype'), 'sourcesanspro-semibold-webfont.eot');
+
+// Font Families
+// ------------------------------------------------------
+// Let's create some sensible font stacks
+
+$ff-ss-reg: "source_sans_proregular", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+$ff-ss-bold:  "source_sans_probold", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+$ff-ss-semibold:  "source_sans_prosemibold", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+$ff-arial:  Arial, Helvetica, Sans-serif;
+$ff-helvetica:  "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+
+
+html { -webkit-font-smoothing: antialiased; }
 
 /* -----------------------------------------
    Global Rules and the article type:
 
-   This is the core of the taxonomy of the 
+   This is the core of the taxonomy of the
    site so we put it right up at the top
 
    Everything else will derive from this
@@ -26,6 +41,8 @@
 // ------- <Reusable types> ------- //
 
 a {
+  color: rgba(2, 139, 174, 1);
+  font-weight: 400;
   text-decoration: none;
   &:hover {
     color: $secondaryColor;
@@ -39,18 +56,18 @@ a {
 
 // ------- </Reusable types> ------- //
 
-body{ color: $gray_14; }
+body{ color: $body_font_color; }
 
-body, p {
-    font-family: minion-pro-1, minion-pro-2, Georgia, 'Times New Roman', serif;
-    font-size: rem(1.5);
+body, p, ul {
+    font-family: $ff-ss-reg;
+    font-size: rem(1.8);
     line-height: 1.385;
 }
 
-h1#page-title{ 
-  color: $mainColor;
-  font-size: 2.267em;
-  font-weight: normal;
+#content h1#page-title{
+  font-family: $ff-ss-semibold;
+  font-size: rem(3.2);
+  line-height: 1;
   margin-top: 0;
   padding: 0;
 }
@@ -60,17 +77,38 @@ h1#page-title{
 article {
   #{headers(6)} {  }
 
-  h1 { }
-  h2 { 
+  h1 {
+    font-family: $ff-ss-semibold;
+    font-size: rem(3.2);
+    line-height: rem(8);
+    text-align: left;
+    text-transform: capitalize;
+    font-weight: 600;
+    font-style: normal;
+    color: rgba(58, 58, 59, 1);
+  }
+
+  h2 {
     color: $secondaryColor;
-    font-size: 1.133em;
-    font-weight: bold;
+    font-size: rem(2.6);
+    font-family: $ff-ss-semibold;
+    line-height: rem(2.2);
+    margin-bottom: rem(2.7);
+    font-weight: 600;
+    font-style: normal;
+    color: rgba(50, 51, 52, 1);
+
   }
-  h3 { 
-    color: $mainColor;
-    font-size: 1em;
-    font-weight: bold;
+
+  h3 {
+    color: rgba(239, 72, 45, 1);
+    font-size: rem(2);
+    font-family: $ff-ss-semibold;;
+    font-weight: 600;
+    font-style: normal;
+    line-height: rem(4.5);
   }
+
   h4 {
     font-size: rem(1.2);
     font-weight: bold;
@@ -81,7 +119,7 @@ article {
     p { }
   }
 
-  ul { 
+  ul {
     padding-left: 40px;
   }
 
@@ -96,7 +134,7 @@ article {
     margin-bottom: rem(1.2);
     */
   }
- 
+
 }
 
 #content article ul.links {
@@ -119,7 +157,6 @@ aside p {
     h2 {
       color: $txtColor;
       clear: both;
-      font-family: Helvetica,Arial,sans-serif;
       font-size: 1em;
       font-weight: bold;
     }
@@ -135,7 +172,6 @@ aside p {
     h2 {
       color: $txtColor;
       clear: both;
-      font-family: Helvetica,Arial,sans-serif;
       font-size: 1em;
       font-weight: bold;
     }
@@ -154,7 +190,7 @@ nav {
       a { }
     }
   }
-  a { 
+  a {
     font: {    };
   }
   .flyout {
@@ -166,7 +202,7 @@ nav {
   }
 }
 
- 
+
 /* -----------------------------------------
    Block typography:
 ----------------------------------------- */
@@ -180,15 +216,14 @@ nav {
   h3 {
     clear: both;
     color: $gray_14;
-    font-family: Helvetica, Arial, sans-serif;
-    font-size: rem(1.5); 
+    font-size: rem(1.5);
     font-weight: bold;
   }
 }
 
 
 /* -----------------------------------------
-   Individual fields 
+   Individual fields
 ----------------------------------------- */
 .front #content .entry-content .field-name-body {
   h2 {
@@ -198,7 +233,7 @@ nav {
 
 .field-name-field-trial-deadline {
   font-size: rem(1.8);
-  text-align: center;  
+  text-align: center;
 }
 
 
@@ -216,7 +251,6 @@ nav {
     legend {
       a {
         color: $white;
-        font-family: "minion-pro-1", "minion-pro-2", Georgia, "Times New Roman", serif;
         font-weight: bold;
         text-align: center;
         text-decoration: none;
@@ -241,8 +275,8 @@ ul.pagination {
   a {}
 }
 
-.more-link { 
-  a{ 
+.more-link {
+  a{
     &:hover { }
   }
 }
@@ -288,5 +322,5 @@ ul.pagination {
     a {
       text-decoration: underline;
     }
-  } 
+  }
 }

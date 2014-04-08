@@ -40,17 +40,15 @@
 
 <?php /* TITLE / LOGO and DESCRIPTION (DESKTOP) */?>
 <hgroup id="header-wrapper" class="row">
-  
-  <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" id="logo" class="columns four mobile-twelve">
+
+  <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" id="logo" class="columns six mobile-twelve">
      <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" />
   </a>
-  <div class="columns eight mobile-twelve">
+  <div class="columns six mobile-twelve">
     <?php if ($page['header']):
          print render($page['header']);
       endif;
-    ?>      
+    ?>
   </div>
 
 </hgroup>
-
-

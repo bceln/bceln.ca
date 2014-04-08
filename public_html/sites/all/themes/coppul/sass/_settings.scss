@@ -38,6 +38,13 @@ $ie: 99!default;
 ----------------------------------------- */
 
   // ADD YOUR CUSTOM COLOURS BELOW:
+  $body-bg:            rgba(246,246,247,1);
+  $body-font-color:    rgba(58, 58, 59, 1);
+  $gray:               rgba(228,226,226,1);
+  $border-gray:        rgba(200,200,200,1);
+  $blue-highlight:     rgba(17,183,226,1);
+  $divider-gray:       rgba(185,185,185,1);
+  $divider-highlight:  rgba(231,231,231,1);
 
   $white:       #ffffff;
   $black:       #000000;
@@ -64,7 +71,7 @@ $ie: 99!default;
   $gray_7:         #eee;
   $gray_8:         #8c8b89;
   $gray_9:         #877f77;
-  $gray_10:        #e0e0e0;
+  $gray_10:        $gray;
   $gray_11:        #efefef;
   $gray_13:        #f7f7f7;
   $gray_14:        #2a2724;
@@ -100,10 +107,8 @@ $ie: 99!default;
   // Foundation Initial Typography Settings
   // We can leave this mostly as is as a fallback stack
   // Then do the rest of the typography simply in typography.scss
-  $headerFontFamily: "Helvetica Neue", "Helvetica", Arial, sans-serif;
   $headerFontWeight: normal;
   $headerFontColor: $txtColor;
-  $bodyFontFamily: "Helvetica Neue", "Helvetica", Arial, sans-serif;
   $bodyFontWeight: normal;
   $bodyFontColor: $txtColor;
 
@@ -122,10 +127,10 @@ $btnBase: 10px;
 
 // Tab Settings
 
-  $tabHeight: $gutter;
+$tabHeight: $gutter;
 
 // Nav Bar Settings
-$navBarHeight: rem(4);
+$navBarHeight: rem(4.3);
 $navFlyoutBaseWidth: rem(23);
 
 // UI Settings
@@ -259,7 +264,6 @@ $importantModNum: 44px;
   @include border-radius( rem(0.5) 0 0 0);
   font-size: rem(1.4);
   line-height: rem(2.3);
-  font-family: "s_regular";
   padding: 4px 10px;
   height: rem(2.3);
   border: medium none;
@@ -292,7 +296,6 @@ $importantModNum: 44px;
   text-align: center;
   font-weight: normal;
   font-size: 1.1em;
-  font-family: "Lucida Grande",Verdana,sans-serif;
   border: 1px solid #e4e4e4;
   border-bottom: 1px solid #b4b4b4;
   border-left-color: #D2D2D2;

@@ -12,7 +12,7 @@
   	background:#f8f8f8;
   	padding:10px;
 	}
-	
+
 .view .views-row,
 .view-content .row {
   clear: both;
@@ -24,7 +24,7 @@
 .view-id-og_members_block {
   text-align: left;
 }
-  
+
   .view-id-og_members_block .item-list ul li {
     list-style:disc outside none;
     margin: 0;
@@ -40,13 +40,13 @@
 /* !Generic Exposed Filters */
 .view-filters {
   background: #f8f8f8;
-  margin:0 0 1em 0; 
+  margin:0 0 1em 0;
   padding:1em;
 }
 
 .views-exposed-widget {
   float:left;
-  margin:0 1em 0 0; 
+  margin:0 1em 0 0;
 }
 
 /* !Group Members view block on Group Page */
@@ -68,30 +68,30 @@
   background: url('../images/dashed-border.png') repeat-x 0 top;
   padding-top: 35px;
 }
-  
+
   .front #content .view-Blog .views-row {
     clear: none;
     float: left;
     width: 325px;
   }
-  
+
   .not-front #content .view-Blog .views-row {
     padding: 15px 35px 0 0;
   }
 
   #content .view-events .views-row {
-    border-bottom: 1px solid #E0E0E0;
+    border-bottom: 1px solid $gray;
     padding:1em 0;
   }
 
     #content .view-events .views-row-last {
       border: none;
     }
-  
+
   #content .view-Blog .views-row-first {
     padding-right: 25px;
   }
-  
+
   .view-og-mytracker .row {
     color: #f68115;
   }
@@ -102,15 +102,14 @@
   }
 
   #content .view-events .views-row {
-    border-bottom: 1px solid #E0E0E0;
+    border-bottom: 1px solid $gray;
     padding: 1em 0;
   }
-  
+
     #content .view-Blog .views-field-title a,
     #content .view-events .views-field-title a,
     .view-og-mytracker .views-field-title a {
       color: #2a2724;
-      font-family: Helvetica, Arial, sans-serif;
       font-size: 1.333em; /* 20px relative to 15px */
       font-weight: bold;
       text-decoration: none;
@@ -121,13 +120,12 @@
     #content .view-events .views-field-title a {
       color: #18729d;
       font-size: 1.200em; /*18px relative to 15px*/
-    }  
+    }
 
    #content .view-Blog .views-field-created,
    #content .view-events .views-field-field-date {
     color: $secondaryColor;
     display: block;
-    font-family: Helvetica, Arial, sans-serif;
     font-size: 1.067em; /* 20px relative to 15px */
     font-weight: bold;
     padding-bottom: 0;
@@ -144,16 +142,12 @@
 
   #content .view-events .views-field-field-date-value-1 {
   }
-  
+
   #content .view-Blog .views-field-tid,
   #content .view-Blog .views-field-term-node-tid {
     padding-bottom: 10px;
   }
-  
-  #content .view-Blog .views-field-teaser {
-    font-family: "minion-pro-1","minion-pro-2", Georgia, 'Times New Roman', serif;
-  }
-  
+
   .node-type-blog .node .content {
     padding: 15px 35px 15px 0;
   }
@@ -162,13 +156,11 @@
 /* Homepage quotes */
 
 #block-views-quotes-block-1 {
-  background: #efefef;  
-  border-bottom: 5px solid #e0e0e0;
-  border-top: 5px solid #e0e0e0;
-  font-family: "minion-pro-1","minion-pro-2", Georgia, 'Times New Roman', serif;
+  background: #efefef;
+  border-bottom: 5px solid $gray;
+  border-top: 5px solid $gray;
   margin-top: 20px;
   padding: 20px;
-  font-family: Helvetica, Arial, sans-serif;
   font-weight: bold;
   font-size: 1em;
   font-style: normal;
@@ -178,7 +170,6 @@
 #block-views-quotes-block-1 .quote-job-title,
 #block-views-quotes-block-1 .quote-org,
 #block-views-quotes-block-1 .quote-year {
-  font-family: Helvetica, Arial, sans-serif;
   font-weight: bold;
 }
 
@@ -191,14 +182,14 @@
   background: none;
   border: none;
   padding: 10px 0 0 0;
-  
+
 }
 #block-views-quotes-block-1 blockquote, #block-views-quotes-block-1 blockquote p {
   color: $txtColor;
   font-style: normal;
   font-weight: 1em;
 }
-#block-views-quotes-block-1 .date-display-single {  
+#block-views-quotes-block-1 .date-display-single {
   color: $secondaryColor;
 }
 
@@ -220,8 +211,8 @@
 .view-contacts .view-filters,
 .view-profile-contacts .view-filters {
   background: none repeat scroll 0 0 #EFEFEF;
-  border-bottom: 5px solid #E0E0E0;
-  border-top: 5px solid #E0E0E0;
+  border-bottom: 5px solid $gray;
+  border-top: 5px solid $gray;
   margin-bottom: 0;
   padding-bottom: 0;
   form {
@@ -233,7 +224,6 @@
 /* Data Tables */
 
 .views-table th {
-  font-family: Helvetica, Arial, sans-serif;
   text-transform: uppercase;
 }
 
@@ -316,9 +306,9 @@
 .view-trials table tr.even,
 .view-trials table tr.odd,
 .view-organizations table tr.even,
-.view-organizations table tr.odd, 
+.view-organizations table tr.odd,
 .view-organization-contacts table tr.even,
-.view-organization-contacts table tr.odd, 
+.view-organization-contacts table tr.odd,
 .view-vendors table tr.even,
 .view-vendors table tr.odd,
 .page-forum table tr.even,
@@ -328,7 +318,6 @@
 }
 
 .view-resources td.views-field-title {
-  font-family: "minion-pro-1","minion-pro-2", Georgia, 'Times New Roman', serif; 
   font-weight: bold;
   width: 225px;
 }
@@ -341,7 +330,6 @@
 
 .view-resources td.views-field-body {
   color: #2a2724;
-  font-family: "minion-pro-1","minion-pro-2", Georgia, 'Times New Roman', serif;  
 }
 
 
@@ -360,13 +348,13 @@
   position: absolute;
   top: 0;
   right: 15px;
-  a.button { @include le-bouton; } 
+  a.button { @include le-bouton; }
 }
 
 .view-contacts .view-header,
 .view-profile-contacts .view-header,
 .view-organizations .view-header{
-  a.button { @include le-bouton; } 
+  a.button { @include le-bouton; }
 }
 
 .view-resources .view-filters {
@@ -387,7 +375,7 @@
 
 .view-resources .views-exposed-form input.button,
 .view-contacts .views-exposed-form input.button,
-.view-profile-contacts .views-exposed-form input.button { margin:5px; @include le-bouton; } 
+.view-profile-contacts .views-exposed-form input.button { margin:5px; @include le-bouton; }
 
 #content label.expand-btn{
   position: absolute;

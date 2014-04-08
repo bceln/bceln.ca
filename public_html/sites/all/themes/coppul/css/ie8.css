@@ -65,7 +65,7 @@ html {
 /* line 7, ../../../../../../../../.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/zurb-foundation-3.2.5/scss/foundation/common/_globals.scss */
 body {
   background: white;
-  font-family: "Helvetica Neue", "Helvetica", Arial, sans-serif;
+  font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
   font-weight: normal;
   font-style: normal;
   font-size: 15px;
@@ -678,7 +678,7 @@ article label, .content-article .field-label, body.node-type-resource article .f
 body.node-type-event article .field-label,
 body.node-type-vendor article .field-label,
 body.node-type-trial-renewal article .field-label, body.page-user .profile .field-label, .view-organizations table caption, h3, h4, h5, h6 {
-  font-family: "Helvetica Neue", "Helvetica", Arial, sans-serif;
+  font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
   font-weight: normal;
   font-style: normal;
   color: #2a2724;
@@ -5295,11 +5295,11 @@ table.hide-for-medium {
   }
   /* line 141, ../../../../../../../../.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/zurb-foundation-3.2.5/scss/foundation/components/modules/_mqueries.scss */
   .touch .nav-bar li.has-flyout > a.flyout-toggle {
-    padding: 20px !important;
+    padding: 21.5px !important;
   }
   /* line 142, ../../../../../../../../.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/zurb-foundation-3.2.5/scss/foundation/components/modules/_mqueries.scss */
   .touch .nav-bar li.has-flyout > a {
-    padding-right: 36px !important;
+    padding-right: 39px !important;
   }
 
   /* Clearing --- */
@@ -6152,7 +6152,7 @@ table.hide-for-medium {
     position: absolute;
     right: 0;
     top: 0;
-    padding: 22px;
+    padding: 23.5px;
     z-index: 2;
     display: block;
   }
@@ -6842,56 +6842,94 @@ table.hide-for-medium {
 /* -----------------------------------------
    Our Fonts
 ----------------------------------------- */
+@font-face {
+  font-family: "source_sans_probold";
+  src: url('../fonts/sourcesanspro-bold-webfont.eot');
+  src: url('../fonts/sourcesanspro-bold-webfont.eot?#iefix') format('eot'), url('../fonts/sourcesanspro-bold-webfont.svg#source_sans_probold') format('svg'), url('../fonts/sourcesanspro-bold-webfont.woff') format('woff'), url('../fonts/sourcesanspro-bold-webfont.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: "source_sans_proregular";
+  src: url('../fonts/sourcesanspro-regular-webfont.eot');
+  src: url('../fonts/sourcesanspro-regular-webfont.eot?#iefix') format('eot'), url('../fonts/sourcesanspro-regular-webfont.svg#source_sans_proregular') format('svg'), url('../fonts/sourcesanspro-regular-webfont.woff') format('woff'), url('../fonts/sourcesanspro-regular-webfont.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: "source_sans_prosemibold";
+  src: url('../fonts/sourcesanspro-semibold-webfont.eot');
+  src: url('../fonts/sourcesanspro-semibold-webfont.eot?#iefix') format('eot'), url('../fonts/sourcesanspro-semibold-webfont.svg#source_sans_prosemibold') format('svg'), url('../fonts/sourcesanspro-regular-webfont.woff') format('woff'), url('../fonts/sourcesanspro-semibold-webfont.ttf') format('truetype');
+}
+
+/* line 30, ../sass/_typography.scss */
+html {
+  -webkit-font-smoothing: antialiased;
+}
+
 /* -----------------------------------------
    Global Rules and the article type:
 
-   This is the core of the taxonomy of the 
+   This is the core of the taxonomy of the
    site so we put it right up at the top
 
    Everything else will derive from this
 ----------------------------------------- */
-/* line 28, ../sass/_typography.scss */
+/* line 43, ../sass/_typography.scss */
 a {
+  color: #028bae;
+  font-weight: 400;
   text-decoration: none;
 }
-/* line 30, ../sass/_typography.scss */
+/* line 47, ../sass/_typography.scss */
 a:hover {
   color: #3a3a3a;
 }
 
-/* line 35, ../sass/_typography.scss */
+/* line 52, ../sass/_typography.scss */
 .underline-link {
   text-decoration: none;
 }
 
-/* line 42, ../sass/_typography.scss */
+/* line 59, ../sass/_typography.scss */
 body {
-  color: #2a2724;
+  color: #3a3a3b;
 }
 
-/* line 44, ../sass/_typography.scss */
-body, p {
-  font-family: minion-pro-1, minion-pro-2, Georgia, 'Times New Roman', serif;
-  font-size: 15px;
+/* line 61, ../sass/_typography.scss */
+body, p, ul {
+  font-family: "source_sans_proregular", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-size: 18px;
   line-height: 1.385;
 }
 
-/* line 50, ../sass/_typography.scss */
-h1#page-title {
-  color: #10b7e3;
-  font-size: 2.267em;
-  font-weight: normal;
+/* line 67, ../sass/_typography.scss */
+#content h1#page-title {
+  font-family: "source_sans_prosemibold", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-size: 32px;
+  line-height: 1;
   margin-top: 0;
   padding: 0;
 }
 
-/* line 60, ../sass/_typography.scss */
+/* line 77, ../sass/_typography.scss */
 #content,
 .profile,
 article {
   /*.field-label,*/
 }
-/* line 64, ../sass/_typography.scss */
+/* line 80, ../sass/_typography.scss */
+#content h1,
+.profile h1,
+article h1 {
+  font-family: "source_sans_prosemibold", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-size: 32px;
+  line-height: 80px;
+  text-align: left;
+  text-transform: capitalize;
+  font-weight: 600;
+  font-style: normal;
+  color: #3a3a3b;
+}
+/* line 91, ../sass/_typography.scss */
 #content h2, #content label, #content .content-article .field-label, .content-article #content .field-label, #content body.node-type-resource article .field-label, body.node-type-resource article #content .field-label, #content body.node-type-organization article .field-label, body.node-type-organization article #content .field-label,
 #content body.node-type-event article .field-label,
 body.node-type-event article #content .field-label,
@@ -6936,18 +6974,26 @@ body.page-user .profile article .field-label,
 article .view-organizations table caption,
 .view-organizations table article caption {
   color: #3a3a3a;
-  font-size: 1.133em;
-  font-weight: bold;
+  font-size: 26px;
+  font-family: "source_sans_prosemibold", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  line-height: 22px;
+  margin-bottom: 27px;
+  font-weight: 600;
+  font-style: normal;
+  color: #323334;
 }
-/* line 69, ../sass/_typography.scss */
+/* line 103, ../sass/_typography.scss */
 #content h3,
 .profile h3,
 article h3 {
-  color: #10b7e3;
-  font-size: 1em;
-  font-weight: bold;
+  color: #ef482d;
+  font-size: 20px;
+  font-family: "source_sans_prosemibold", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  line-height: 45px;
 }
-/* line 74, ../sass/_typography.scss */
+/* line 112, ../sass/_typography.scss */
 #content h4,
 .profile h4,
 article h4 {
@@ -6955,13 +7001,13 @@ article h4 {
   font-weight: bold;
   text-transform: uppercase;
 }
-/* line 84, ../sass/_typography.scss */
+/* line 122, ../sass/_typography.scss */
 #content ul,
 .profile ul,
 article ul {
   padding-left: 40px;
 }
-/* line 89, ../sass/_typography.scss */
+/* line 127, ../sass/_typography.scss */
 #content label,
 .profile label,
 article label {
@@ -6974,25 +7020,25 @@ article label {
   */
 }
 
-/* line 102, ../sass/_typography.scss */
+/* line 140, ../sass/_typography.scss */
 #content article ul.links {
   padding-left: 0;
 }
 
-/* line 106, ../sass/_typography.scss */
+/* line 144, ../sass/_typography.scss */
 aside p {
   font-style: inherit;
   font-size: 15px;
 }
 
-/* line 111, ../sass/_typography.scss */
+/* line 149, ../sass/_typography.scss */
 #main section .block-title {
   font-size: 1.133em;
   color: #3a3a3a;
   font-weight: bold;
 }
 
-/* line 119, ../sass/_typography.scss */
+/* line 157, ../sass/_typography.scss */
 #sidebar-right .block h2, #sidebar-right .block #content label, #content #sidebar-right .block label,
 #sidebar-right .block .profile label,
 .profile #sidebar-right .block label,
@@ -7006,16 +7052,15 @@ body.node-type-vendor article #sidebar-right .block .field-label,
 body.node-type-trial-renewal article #sidebar-right .block .field-label, #sidebar-right .block body.page-user .profile .field-label, body.page-user .profile #sidebar-right .block .field-label, #sidebar-right .block .view-organizations table caption, .view-organizations table #sidebar-right .block caption {
   color: #2a2724;
   clear: both;
-  font-family: Helvetica,Arial,sans-serif;
   font-size: 1em;
   font-weight: bold;
 }
-/* line 127, ../sass/_typography.scss */
+/* line 164, ../sass/_typography.scss */
 #sidebar-right .block ul {
   padding: 0 0 0.25em 1em;
 }
 
-/* line 135, ../sass/_typography.scss */
+/* line 172, ../sass/_typography.scss */
 #sidebar-left .block h2, #sidebar-left .block #content label, #content #sidebar-left .block label,
 #sidebar-left .block .profile label,
 .profile #sidebar-left .block label,
@@ -7029,7 +7074,6 @@ body.node-type-vendor article #sidebar-left .block .field-label,
 body.node-type-trial-renewal article #sidebar-left .block .field-label, #sidebar-left .block body.page-user .profile .field-label, body.page-user .profile #sidebar-left .block .field-label, #sidebar-left .block .view-organizations table caption, .view-organizations table #sidebar-left .block caption {
   color: #2a2724;
   clear: both;
-  font-family: Helvetica,Arial,sans-serif;
   font-size: 1em;
   font-weight: bold;
 }
@@ -7040,7 +7084,7 @@ body.node-type-trial-renewal article #sidebar-left .block .field-label, #sidebar
 /* -----------------------------------------
    Block typography:
 ----------------------------------------- */
-/* line 176, ../sass/_typography.scss */
+/* line 212, ../sass/_typography.scss */
 .block h2, .block #content label, #content .block label,
 .block .profile label,
 .profile .block label,
@@ -7055,19 +7099,18 @@ body.node-type-trial-renewal article .block .field-label, .block body.page-user 
 .block h3 {
   margin: 0 0 10px;
 }
-/* line 180, ../sass/_typography.scss */
+/* line 216, ../sass/_typography.scss */
 .block h3 {
   clear: both;
   color: #2a2724;
-  font-family: Helvetica, Arial, sans-serif;
   font-size: 15px;
   font-weight: bold;
 }
 
 /* -----------------------------------------
-   Individual fields 
+   Individual fields
 ----------------------------------------- */
-/* line 194, ../sass/_typography.scss */
+/* line 229, ../sass/_typography.scss */
 .front #content .entry-content .field-name-body h2, .front #content .entry-content .field-name-body label, .front #content .entry-content .field-name-body .content-article .field-label, .content-article .front #content .entry-content .field-name-body .field-label, .front #content .entry-content .field-name-body body.node-type-resource article .field-label, body.node-type-resource article .front #content .entry-content .field-name-body .field-label, .front #content .entry-content .field-name-body body.node-type-organization article .field-label, body.node-type-organization article .front #content .entry-content .field-name-body .field-label,
 .front #content .entry-content .field-name-body body.node-type-event article .field-label,
 body.node-type-event article .front #content .entry-content .field-name-body .field-label,
@@ -7078,7 +7121,7 @@ body.node-type-trial-renewal article .front #content .entry-content .field-name-
   font-size: 35px;
 }
 
-/* line 199, ../sass/_typography.scss */
+/* line 234, ../sass/_typography.scss */
 .field-name-field-trial-deadline {
   font-size: 18px;
   text-align: center;
@@ -7087,14 +7130,14 @@ body.node-type-trial-renewal article .front #content .entry-content .field-name-
 /* -----------------------------------------
    UI Elements (pagination, breadcrumbs etc.)
 ----------------------------------------- */
-/* line 210, ../sass/_typography.scss */
+/* line 245, ../sass/_typography.scss */
 .content-article .field-label, body.node-type-resource article .field-label, body.node-type-organization article .field-label,
 body.node-type-event article .field-label,
 body.node-type-vendor article .field-label,
 body.node-type-trial-renewal article .field-label, body.page-user .profile .field-label {
   margin-top: 0;
 }
-/* line 217, ../sass/_typography.scss */
+/* line 252, ../sass/_typography.scss */
 .content-article .collapsed legend a, body.node-type-resource article .collapsed legend a, body.node-type-organization article .collapsed legend a,
 body.node-type-event article .collapsed legend a,
 body.node-type-vendor article .collapsed legend a,
@@ -7107,14 +7150,13 @@ body.node-type-vendor article .collapsible legend a,
 body.node-type-trial-renewal article .collapsible legend a,
 body.page-user .profile .collapsible legend a {
   color: white;
-  font-family: "minion-pro-1", "minion-pro-2", Georgia, "Times New Roman", serif;
   font-weight: bold;
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
 }
 
-/* line 229, ../sass/_typography.scss */
+/* line 263, ../sass/_typography.scss */
 .notice {
   color: #f00;
 }
@@ -7122,17 +7164,17 @@ body.page-user .profile .collapsible legend a {
 /* -----------------------------------------
     Views
 ----------------------------------------- */
-/* line 258, ../sass/_typography.scss */
+/* line 292, ../sass/_typography.scss */
 .view a {
   text-decoration: none;
 }
-/* line 262, ../sass/_typography.scss */
+/* line 296, ../sass/_typography.scss */
 .view .row {
   margin-bottom: 10px;
   margin-top: 10px;
 }
 
-/* line 269, ../sass/_typography.scss */
+/* line 303, ../sass/_typography.scss */
 #block-views-contacts-by-group-block h2.block-title, #block-views-contacts-by-group-block #content label.block-title, #content #block-views-contacts-by-group-block label.block-title,
 #block-views-contacts-by-group-block .profile label.block-title,
 .profile #block-views-contacts-by-group-block label.block-title,
@@ -7146,7 +7188,7 @@ body.node-type-vendor article #block-views-contacts-by-group-block .block-title.
 body.node-type-trial-renewal article #block-views-contacts-by-group-block .block-title.field-label, #block-views-contacts-by-group-block body.page-user .profile .block-title.field-label, body.page-user .profile #block-views-contacts-by-group-block .block-title.field-label, #block-views-contacts-by-group-block .view-organizations table caption.block-title, .view-organizations table #block-views-contacts-by-group-block caption.block-title {
   color: black;
 }
-/* line 273, ../sass/_typography.scss */
+/* line 307, ../sass/_typography.scss */
 #block-views-contacts-by-group-block h3 {
   font-size: 12px;
   margin-bottom: 10px;
@@ -7157,7 +7199,7 @@ body.node-type-trial-renewal article #block-views-contacts-by-group-block .block
 /* -----------------------------------------
    Forms
 ----------------------------------------- */
-/* line 288, ../sass/_typography.scss */
+/* line 322, ../sass/_typography.scss */
 .search-results dt a {
   text-decoration: underline;
 }
@@ -7211,7 +7253,7 @@ nav .foundation-menu {
 
 /* line 7, ../sass/_nav.scss */
 #access ul.menu {
-  height: 40px;
+  height: 43px;
   margin: 0;
   padding: 0;
 }
@@ -7221,49 +7263,48 @@ nav .foundation-menu {
 }
 /* line 11, ../sass/_nav.scss */
 #access ul.menu > li {
-  height: 40px;
+  height: 43px;
   float: left;
   display: block;
   position: relative;
   padding: 0;
   margin: 0;
-  line-height: 40px;
+  line-height: 43px;
 }
 /* line 24, ../sass/_nav.scss */
 #access ul.menu > li.active-trail > a {
   cursor: default;
-  color: #3a3a3a;
+  color: #11b7e2;
 }
 /* line 25, ../sass/_nav.scss */
 #access ul.menu > li.active-trail:hover {
   cursor: default;
-  color: #3a3a3a;
+  color: #11b7e2;
 }
-/* line 27, ../sass/_nav.scss */
-#access ul.menu > li:hover {
-  color: #3a3a3a;
-}
-/* line 29, ../sass/_nav.scss */
+/* line 28, ../sass/_nav.scss */
 #access ul.menu > li > a {
-  line-height: 40px;
+  line-height: 43px;
   color: white;
-  font-family: Helvetica, Arial, sans-serif;
   font-weight: bold;
 }
-/* line 35, ../sass/_nav.scss */
+/* line 33, ../sass/_nav.scss */
+#access ul.menu > li > a:hover {
+  color: #11b7e2;
+}
+/* line 36, ../sass/_nav.scss */
 #access ul.menu > li ul {
   margin-bottom: 0;
 }
-/* line 36, ../sass/_nav.scss */
+/* line 37, ../sass/_nav.scss */
 #access ul.menu > li .flyout {
   display: none;
 }
-/* line 39, ../sass/_nav.scss */
+/* line 40, ../sass/_nav.scss */
 #access ul.menu > li.has-flyout > a:first-child {
-  padding-right: 40px;
+  padding-right: 43px;
   position: relative;
 }
-/* line 42, ../sass/_nav.scss */
+/* line 43, ../sass/_nav.scss */
 #access ul.menu > li.has-flyout > a:first-child:after {
   content: "";
   display: block;
@@ -7272,44 +7313,45 @@ nav .foundation-menu {
   border: solid 4px;
   border-color: #e6e6e6 transparent transparent transparent;
   position: absolute;
-  right: 20px;
-  top: 17px;
+  right: 21.5px;
+  top: 18.5px;
 }
-/* line 49, ../sass/_nav.scss */
+/* line 50, ../sass/_nav.scss */
 #access ul.menu > li.has-flyout > a.flyout-toggle {
   position: absolute;
   right: 0;
   top: 0;
-  padding: 20px;
+  padding: 21.5px;
   z-index: 2;
   display: block;
 }
-/* line 58, ../sass/_nav.scss */
+/* line 59, ../sass/_nav.scss */
 #access ul.menu > li.has-flyout.is-touch > a:first-child {
   padding-right: 55px;
 }
-/* line 64, ../sass/_nav.scss */
+/* line 65, ../sass/_nav.scss */
 #access ul.menu > li > a:first-child {
   position: relative;
-  padding: 0 20px;
+  padding: 0 21.5px;
   display: block;
   text-decoration: none;
-  font-size: 15px;
+  font-size: 16px;
+  font-family: "source_sans_probold", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 }
-/* line 71, ../sass/_nav.scss */
+/* line 73, ../sass/_nav.scss */
 #access ul.menu > li > input {
   margin: 0 10px;
 }
-/* line 73, ../sass/_nav.scss */
+/* line 75, ../sass/_nav.scss */
 #access ul.menu.vertical {
   height: auto;
   margin-top: 0;
 }
-/* line 77, ../sass/_nav.scss */
+/* line 79, ../sass/_nav.scss */
 #access ul.menu.vertical > li {
   float: none;
 }
-/* line 79, ../sass/_nav.scss */
+/* line 81, ../sass/_nav.scss */
 #access ul.menu.vertical > li.has-flyout > a:first-child:after {
   content: "";
   display: block;
@@ -7318,59 +7360,59 @@ nav .foundation-menu {
   border: solid 4px;
   border-color: transparent transparent transparent #e6e6e6;
 }
-/* line 82, ../sass/_nav.scss */
+/* line 84, ../sass/_nav.scss */
 #access ul.menu.vertical > li .flyout {
   left: 100%;
   top: -1px;
 }
-/* line 85, ../sass/_nav.scss */
+/* line 87, ../sass/_nav.scss */
 #access ul.menu.vertical > li .flyout.right {
   left: auto;
   right: 100%;
 }
 
-/* line 95, ../sass/_nav.scss */
+/* line 97, ../sass/_nav.scss */
 #access ul.menu li ul {
   padding: 0;
   list-style: none;
 }
-/* line 100, ../sass/_nav.scss */
+/* line 102, ../sass/_nav.scss */
 #access ul.menu li ul li a {
   display: block;
   font-size: 15px;
   height: auto;
   line-height: 1;
-  padding: 15px 20px;
+  padding: 16.5px 21.5px;
 }
-/* line 110, ../sass/_nav.scss */
+/* line 112, ../sass/_nav.scss */
 #access ul.menu li ul li.active {
   margin-top: 0;
 }
-/* line 112, ../sass/_nav.scss */
+/* line 114, ../sass/_nav.scss */
 #access ul.menu li ul li.active a {
   height: auto;
   margin: 0;
   position: static;
   top: 0;
 }
-/* line 122, ../sass/_nav.scss */
+/* line 124, ../sass/_nav.scss */
 #access ul.menu li ul ul.flyout, #access ul.menu li ul #access ul.menu li ul {
   padding: 0;
   list-style: none;
 }
-/* line 127, ../sass/_nav.scss */
+/* line 129, ../sass/_nav.scss */
 #access ul.menu li ul ul.flyout li a, #access ul.menu li ul #access ul.menu li ul li a {
   display: block;
   font-size: 15px;
   height: auto;
   line-height: 1;
-  padding: 15px 20px;
+  padding: 16.5px 21.5px;
 }
-/* line 137, ../sass/_nav.scss */
+/* line 139, ../sass/_nav.scss */
 #access ul.menu li ul ul.flyout li.active, #access ul.menu li ul #access ul.menu li ul li.active {
   margin-top: 0;
 }
-/* line 139, ../sass/_nav.scss */
+/* line 141, ../sass/_nav.scss */
 #access ul.menu li ul ul.flyout li.active a, #access ul.menu li ul #access ul.menu li ul li.active a {
   height: auto;
   margin: 0;
@@ -7843,58 +7885,62 @@ html, body {
 }
 
 /* line 51, ../sass/_page.scss */
+body {
+  background-color: #f6f6f7;
+}
+
+/* line 55, ../sass/_page.scss */
 .three, .row .three, .four, .row .four {
   min-height: 1px;
 }
 
-/* line 53, ../sass/_page.scss */
+/* line 57, ../sass/_page.scss */
 table {
   width: 100%;
   border: 1px solid #eeeeee;
 }
 
-/* line 58, ../sass/_page.scss */
+/* line 62, ../sass/_page.scss */
 table thead {
   background: none;
 }
 
-/* line 62, ../sass/_page.scss */
+/* line 66, ../sass/_page.scss */
 #access {
   position: relative;
 }
 
-/* line 66, ../sass/_page.scss */
+/* line 70, ../sass/_page.scss */
 #main {
   margin-top: 40px;
 }
 
-/* line 70, ../sass/_page.scss */
+/* line 74, ../sass/_page.scss */
 .access-outer {
   background: #3a3a3a;
-  border-bottom: 3px solid #545454;
 }
 
-/* line 75, ../sass/_page.scss */
+/* line 78, ../sass/_page.scss */
 ul.links {
   list-style: none;
   padding-left: 0px;
 }
-/* line 78, ../sass/_page.scss */
+/* line 81, ../sass/_page.scss */
 ul.links .print_html {
   margin-left: 0;
 }
 
 /* Print module styles */
-/* line 84, ../sass/_page.scss */
+/* line 87, ../sass/_page.scss */
 .print-site_name, .print-breadcrumb, .print-content .submitted {
   display: none;
 }
 
-/* line 88, ../sass/_page.scss */
+/* line 91, ../sass/_page.scss */
 div[class^=print-] {
   margin: auto 1em;
 }
-/* line 90, ../sass/_page.scss */
+/* line 93, ../sass/_page.scss */
 div[class^=print-] * {
   color: #000;
   font-family: sans-serif;
@@ -7903,29 +7949,40 @@ div[class^=print-] * {
 /* -----------------------------------------
    Header / Footer & logo
 ----------------------------------------- */
-/* line 100, ../sass/_page.scss */
+/* line 103, ../sass/_page.scss */
 .header-outer {
   background: url("../images/header-background.png") repeat;
 }
 
-/* line 108, ../sass/_page.scss */
+/* line 107, ../sass/_page.scss */
 #logo {
-  margin: 29px 0;
+  margin: 29px 0 10px 0;
 }
 
-/* line 112, ../sass/_page.scss */
+/* line 111, ../sass/_page.scss */
 #footer {
-  border-top: 1px dotted #dddddd;
+  border-top: 1px solid #b9b9b9;
   margin-top: 20px;
   max-width: 920px;
   padding-bottom: 60px;
   padding-top: 20px;
+  position: relative;
+}
+/* line 119, ../sass/_page.scss */
+#footer:before {
+  border-top: 1px solid #e7e7e7;
+  content: '';
+  display: block;
+  position: absolute;
+  top: -2px;
+  right: 0;
+  left: 0;
 }
 
 /* -----------------------------------------
    Common spacings
 ----------------------------------------- */
-/* line 124, ../sass/_page.scss */
+/* line 135, ../sass/_page.scss */
 #sidebar-right .block {
   margin-bottom: 30px;
 }
@@ -7933,7 +7990,7 @@ div[class^=print-] * {
 /* -----------------------------------------
    Generic content type formatting
 ----------------------------------------- */
-/* line 134, ../sass/_page.scss */
+/* line 145, ../sass/_page.scss */
 #content > article:not(.node-contact) .columns:last-child,
 .content-article .columns:last-child,
 body.node-type-resource article .columns:last-child,
@@ -7944,7 +8001,7 @@ body.node-type-trial-renewal article .columns:last-child,
 body.page-user .profile .columns:last-child {
   float: left;
 }
-/* line 136, ../sass/_page.scss */
+/* line 147, ../sass/_page.scss */
 #content > article:not(.node-contact) .field-item,
 .content-article .field-item,
 body.node-type-resource article .field-item,
@@ -7957,7 +8014,7 @@ body.page-user .profile .field-item {
   margin-bottom: 20px;
   padding-bottom: 10px;
 }
-/* line 142, ../sass/_page.scss */
+/* line 153, ../sass/_page.scss */
 #content > article:not(.node-contact) .field-name-field-private-note,
 .content-article .field-name-field-private-note,
 body.node-type-resource article .field-name-field-private-note,
@@ -7970,7 +8027,7 @@ body.page-user .profile .field-name-field-private-note {
   border-bottom-style: none;
   padding: 1em;
 }
-/* line 149, ../sass/_page.scss */
+/* line 160, ../sass/_page.scss */
 #content > article:not(.node-contact) .field-name-field-vendor-info,
 #content > article:not(.node-contact) .field-name-field-blog-categories,
 .content-article .field-name-field-vendor-info,
@@ -7989,7 +8046,7 @@ body.node-type-trial-renewal article .field-name-field-blog-categories,
 body.page-user .profile .field-name-field-blog-categories {
   border-bottom: none;
 }
-/* line 153, ../sass/_page.scss */
+/* line 164, ../sass/_page.scss */
 #content > article:not(.node-contact) div[class^=field-group-simple-div],
 .content-article div[class^=field-group-simple-div],
 body.node-type-resource article div[class^=field-group-simple-div],
@@ -8000,7 +8057,7 @@ body.node-type-trial-renewal article div[class^=field-group-simple-div],
 body.page-user .profile div[class^=field-group-simple-div] {
   margin-bottom: 20px;
 }
-/* line 155, ../sass/_page.scss */
+/* line 166, ../sass/_page.scss */
 #content > article:not(.node-contact) div[class^=field-group-simple-div] .field-item:not(.field-name-field-resource-vend-desc),
 .content-article div[class^=field-group-simple-div] .field-item:not(.field-name-field-resource-vend-desc),
 body.node-type-resource article div[class^=field-group-simple-div] .field-item:not(.field-name-field-resource-vend-desc),
@@ -8013,7 +8070,7 @@ body.page-user .profile div[class^=field-group-simple-div] .field-item:not(.fiel
   margin-bottom: 0;
   padding-bottom: 0;
 }
-/* line 162, ../sass/_page.scss */
+/* line 173, ../sass/_page.scss */
 #content > article:not(.node-contact) fieldset,
 .content-article fieldset,
 body.node-type-resource article fieldset,
@@ -8023,15 +8080,15 @@ body.node-type-vendor article fieldset,
 body.node-type-trial-renewal article fieldset,
 body.page-user .profile fieldset {
   background: #efefef;
-  border-bottom: 5px solid #e0e0e0;
+  border-bottom: 5px solid #e4e2e2;
   -moz-border-radius: 0;
   -webkit-border-radius: 0;
   border-radius: 0;
-  border-top: 5px solid #e0e0e0;
+  border-top: 5px solid #e4e2e2;
   margin-bottom: 0;
   padding: 20px;
 }
-/* line 166, ../sass/_page.scss */
+/* line 177, ../sass/_page.scss */
 #content > article:not(.node-contact) .collapsed,
 .content-article .collapsed,
 body.node-type-resource article .collapsed,
@@ -8044,7 +8101,7 @@ body.page-user .profile .collapsed {
   border: none;
   padding-bottom: 1em;
 }
-/* line 174, ../sass/_page.scss */
+/* line 185, ../sass/_page.scss */
 #content > article:not(.node-contact) .collapsed legend,
 #content > article:not(.node-contact) .collapsible legend,
 .content-article .collapsed legend,
@@ -8063,7 +8120,7 @@ body.node-type-trial-renewal article .collapsible legend,
 body.page-user .profile .collapsible legend {
   margin-left: -22px;
 }
-/* line 176, ../sass/_page.scss */
+/* line 187, ../sass/_page.scss */
 #content > article:not(.node-contact) .collapsed legend a,
 #content > article:not(.node-contact) .collapsible legend a,
 .content-article .collapsed legend a,
@@ -8094,21 +8151,20 @@ body.page-user .profile .collapsible legend a {
 /* -----------------------------------------
    Content Types
 ----------------------------------------- */
-/* line 200, ../sass/_page.scss */
+/* line 211, ../sass/_page.scss */
 body.node-type-resource .field-resource-vendor-ref {
   float: right;
   padding-bottom: 20px;
   padding-left: 20px;
 }
-/* line 205, ../sass/_page.scss */
+/* line 216, ../sass/_page.scss */
 body.node-type-resource .help {
   font-size: 11px;
   margin-top: 5px;
 }
-/* line 209, ../sass/_page.scss */
+/* line 220, ../sass/_page.scss */
 body.node-type-resource #return-res {
   background: url("../images/return-resources.png") no-repeat right 0;
-  font-family: Helvetica, Arial, sans-serif;
   font-size: 12px;
   font-weight: bold;
   height: 30px;
@@ -8116,49 +8172,48 @@ body.node-type-resource #return-res {
   right: 15px;
   top: 52px;
 }
-/* line 218, ../sass/_page.scss */
+/* line 228, ../sass/_page.scss */
 body.node-type-resource #return-res a {
   color: #8c8b89;
   display: block;
   padding: 5px 40px 0 0;
 }
 
-/* line 235, ../sass/_page.scss */
+/* line 245, ../sass/_page.scss */
 body.page-user .profile .row-container {
   border: 1px solid #dddddd;
   padding: 20px 0;
 }
-/* line 238, ../sass/_page.scss */
+/* line 248, ../sass/_page.scss */
 body.page-user .profile .row-container .row {
   margin: 0 auto;
   width: 900px;
 }
-/* line 243, ../sass/_page.scss */
+/* line 253, ../sass/_page.scss */
 body.page-user .profile .row-container .one .field-item {
   border-bottom-style: none;
 }
 
-/* line 250, ../sass/_page.scss */
+/* line 260, ../sass/_page.scss */
 body.node-type-contact .node .field-item {
   padding-bottom: 1em;
 }
 
-/* line 255, ../sass/_page.scss */
+/* line 265, ../sass/_page.scss */
 body.node-type-contact .node .field-label,
 body.node-type-license .node .field-label {
   color: #3a3a3a;
-  font-family: 'Helvetica Neue', Helvetica ,Arial,sans-serif;
   font-size: 1.133em;
   font-weight: bold;
   margin: 0.75em 0 15px 0;
 }
 
-/* line 263, ../sass/_page.scss */
+/* line 272, ../sass/_page.scss */
 .field-name-field-resource-vend-desc {
   padding-bottom: 15px;
 }
 
-/* line 267, ../sass/_page.scss */
+/* line 276, ../sass/_page.scss */
 body.node-type-contact .field-name-field-contact-groups {
   position: absolute;
   right: 50%;
@@ -8168,20 +8223,18 @@ body.node-type-contact .field-name-field-contact-groups {
 /* -----------------------------------------
    Individual fields
 ----------------------------------------- */
-/* line 276, ../sass/_page.scss */
+/* line 285, ../sass/_page.scss */
 .st_sharethis {
-  font-family: helvetica,arial,sans-serif;
   font-size: 0.867em;
 }
 
-/* line 281, ../sass/_page.scss */
+/* line 289, ../sass/_page.scss */
 .more-link {
   background: #10b7e3;
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
   border-radius: 5px;
   clear: both;
-  font-family: "minion-pro-1","minion-pro-2", Georgia, 'Times New Roman', serif;
   font-size: 0.933em;
   /* 14px relative to 15px */
   font-weight: bold;
@@ -8193,7 +8246,7 @@ body.node-type-contact .field-name-field-contact-groups {
   width: 105px;
 }
 
-/* line 298, ../sass/_page.scss */
+/* line 305, ../sass/_page.scss */
 .more-link a {
   color: #fff;
   text-decoration: none;
@@ -8202,7 +8255,7 @@ body.node-type-contact .field-name-field-contact-groups {
 /* -----------------------------------------
    Front page specific
 ----------------------------------------- */
-/* line 306, ../sass/_page.scss */
+/* line 313, ../sass/_page.scss */
 .front #content .entry-content h2, .front #content .entry-content label, .front #content .entry-content .content-article .field-label, .content-article .front #content .entry-content .field-label, .front #content .entry-content body.node-type-resource article .field-label, body.node-type-resource article .front #content .entry-content .field-label, .front #content .entry-content body.node-type-organization article .field-label, body.node-type-organization article .front #content .entry-content .field-label,
 .front #content .entry-content body.node-type-event article .field-label,
 body.node-type-event article .front #content .entry-content .field-label,
@@ -8215,29 +8268,28 @@ body.node-type-trial-renewal article .front #content .entry-content .field-label
   padding-bottom: 20px;
 }
 
-/* line 312, ../sass/_page.scss */
+/* line 319, ../sass/_page.scss */
 .front #content > article .field-item {
   border: 0;
 }
 
-/* line 316, ../sass/_page.scss */
+/* line 323, ../sass/_page.scss */
 .front .submitted {
   display: none;
 }
 
-/* line 320, ../sass/_page.scss */
+/* line 327, ../sass/_page.scss */
 .front #content .view-Blog ul {
   padding-left: 0;
 }
 
-/* line 324, ../sass/_page.scss */
+/* line 331, ../sass/_page.scss */
 .front #content .view-Blog .more-link {
   background: #10b7e3;
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
   border-radius: 5px;
   clear: both;
-  font-family: "minion-pro-1","minion-pro-2",Georgia,'Times New Roman',serif;
   font-size: 0.81em;
   font-weight: bold;
   height: 32px;
@@ -8247,7 +8299,7 @@ body.node-type-trial-renewal article .front #content .entry-content .field-label
   text-transform: uppercase;
   width: 130px;
 }
-/* line 340, ../sass/_page.scss */
+/* line 346, ../sass/_page.scss */
 .front #content .view-Blog .more-link a {
   color: #fff;
   text-decoration: none;
@@ -8256,7 +8308,7 @@ body.node-type-trial-renewal article .front #content .entry-content .field-label
 /* -----------------------------------------
    Views
 ----------------------------------------- */
-/* line 351, ../sass/_page.scss */
+/* line 357, ../sass/_page.scss */
 #block-views-contacts-by-group-block {
   background: #f7f7f7;
   border-bottom: 5px solid #efefef;
@@ -8271,7 +8323,7 @@ body.node-type-trial-renewal article .front #content .entry-content .field-label
 /* -----------------------------------------
    UI Elements
 ----------------------------------------- */
-/* line 363, ../sass/_page.scss */
+/* line 369, ../sass/_page.scss */
 .button:hover, #content > article:not(.node-contact) .collapsed legend a:hover,
 #content > article:not(.node-contact) .collapsible legend a:hover,
 .content-article .collapsed legend a:hover,
@@ -8321,32 +8373,32 @@ body.page-user .profile .collapsible legend a:focus {
   background: #877f77;
 }
 
-/* line 368, ../sass/_page.scss */
+/* line 374, ../sass/_page.scss */
 #breadcrumb {
   height: 30px;
   padding-top: 7px;
   padding-left: 30px;
 }
 
-/* line 374, ../sass/_page.scss */
+/* line 380, ../sass/_page.scss */
 ul.pagination {
   margin-top: 15px;
   text-align: left;
 }
-/* line 377, ../sass/_page.scss */
+/* line 383, ../sass/_page.scss */
 ul.pagination li {
   float: none;
   display: inline-block;
   margin: 0;
 }
-/* line 382, ../sass/_page.scss */
+/* line 388, ../sass/_page.scss */
 ul.pagination li .first {
   padding-left: 0;
   margin-left: 0;
 }
 
 /* Tab styling */
-/* line 391, ../sass/_page.scss */
+/* line 397, ../sass/_page.scss */
 div.drupal_tabs {
   background: #dddddd;
   overflow: auto;
@@ -8356,7 +8408,7 @@ div.drupal_tabs {
   -webkit-border-radius: 6px;
 }
 
-/* line 397, ../sass/_page.scss */
+/* line 403, ../sass/_page.scss */
 dl.tabs.primary,
 dl.tabs.secondary {
   border-style: none;
@@ -8364,19 +8416,19 @@ dl.tabs.secondary {
   padding: 0;
 }
 
-/* line 401, ../sass/_page.scss */
+/* line 407, ../sass/_page.scss */
 dl.tabs.primary {
   float: left;
 }
 
-/* line 405, ../sass/_page.scss */
+/* line 411, ../sass/_page.scss */
 dl.tabs.primary dd {
   display: inline;
   margin: 0;
   padding: 0;
 }
 
-/* line 409, ../sass/_page.scss */
+/* line 415, ../sass/_page.scss */
 dl.tabs.primary dd a {
   background: white;
   border-style: none;
@@ -8392,20 +8444,20 @@ dl.tabs.primary dd a {
   text-decoration: none;
 }
 
-/* line 416, ../sass/_page.scss */
+/* line 422, ../sass/_page.scss */
 dl.tabs.primary dd a:hover,
 dl.tabs.primary dd a:active {
   background: #877f77;
   color: white;
 }
 
-/* line 421, ../sass/_page.scss */
+/* line 427, ../sass/_page.scss */
 dl.tabs.primary dd.active a {
   background: #877f77;
   color: white;
 }
 
-/* line 425, ../sass/_page.scss */
+/* line 431, ../sass/_page.scss */
 dl.tabs.secondary {
   border-top: 1px solid white;
   clear: both;
@@ -8416,7 +8468,7 @@ dl.tabs.secondary {
   top: 4px;
 }
 
-/* line 429, ../sass/_page.scss */
+/* line 435, ../sass/_page.scss */
 dl.tabs.secondary dd {
   border-style: none;
   display: block;
@@ -8425,7 +8477,7 @@ dl.tabs.secondary dd {
   padding: 6px 0;
 }
 
-/* line 433, ../sass/_page.scss */
+/* line 439, ../sass/_page.scss */
 dl.tabs.secondary dd a {
   border-bottom-style: none;
   border-right: 1px solid white;
@@ -8439,7 +8491,7 @@ dl.tabs.secondary dd a {
 /* -----------------------------------------
    Forms
 ----------------------------------------- */
-/* line 443, ../sass/_page.scss */
+/* line 449, ../sass/_page.scss */
 .standard-form .button, #user-login .button,
 #search-form .button, .standard-form #content > article:not(.node-contact) .collapsed legend a, #content > article:not(.node-contact) .collapsed legend .standard-form a, #user-login #content > article:not(.node-contact) .collapsed legend a, #content > article:not(.node-contact) .collapsed legend #user-login a,
 #search-form #content > article:not(.node-contact) .collapsed legend a,
@@ -8542,7 +8594,6 @@ body.page-user .profile .collapsible legend #search-form a {
   text-align: center;
   font-weight: normal;
   font-size: 1.1em;
-  font-family: "Lucida Grande",Verdana,sans-serif;
   border: 1px solid #e4e4e4;
   border-bottom: 1px solid #b4b4b4;
   border-left-color: #D2D2D2;
@@ -8555,7 +8606,7 @@ body.page-user .profile .collapsible legend #search-form a {
 
 /* Tabs Styles */
 /* line 742, ../sass/_views.scss */
-/* line 457, ../sass/_page.scss */
+/* line 463, ../sass/_page.scss */
 .page-organizations dl.primary,
 .page-licenses-products dl.primary,
 .page-licenses dl.primary {
@@ -8565,7 +8616,7 @@ body.page-user .profile .collapsible legend #search-form a {
 }
 
 /* line 750, ../sass/_views.scss */
-/* line 466, ../sass/_page.scss */
+/* line 472, ../sass/_page.scss */
 .page-organizations dl.tabs.primary dd,
 .page-licenses-products dl.tabs.primary dd,
 .page-licenses dl.tabs.primary dd {
@@ -8575,11 +8626,11 @@ body.page-user .profile .collapsible legend #search-form a {
 }
 
 /* line 758, ../sass/_views.scss */
-/* line 475, ../sass/_page.scss */
+/* line 481, ../sass/_page.scss */
 .page-organizations div.drupal_tabs,
 .page-licenses-products div.drupal_tabs,
 .page-licenses div.drupal_tabs {
-  border-top: 1px dotted #ddd;
+  border-top: 1px dotted #b9b9b9;
   border-bottom: 1px dotted #efefef;
   background: transparent;
   border-radius: 0;
@@ -8590,11 +8641,10 @@ body.page-user .profile .collapsible legend #search-form a {
 }
 
 /* line 772, ../sass/_views.scss */
-/* line 489, ../sass/_page.scss */
+/* line 495, ../sass/_page.scss */
 .page-organizations dl.tabs.primary,
 .page-licenses-products dl.tabs.primary,
 .page-licenses dl.tabs.primary {
-  font-family: Helvetica, Arial, sans-serif;
   font-size: 0.867em;
   /* 13px relative to 15px */
   float: left;
@@ -8606,13 +8656,13 @@ body.page-user .profile .collapsible legend #search-form a {
 }
 
 /* line 784, ../sass/_views.scss */
-/* line 502, ../sass/_page.scss */
+/* line 507, ../sass/_page.scss */
 li.btn {
   width: 168px;
 }
 
 /* line 791, ../sass/_views.scss */
-/* line 509, ../sass/_page.scss */
+/* line 514, ../sass/_page.scss */
 .page-organizations dl.tabs.primary dd a,
 .page-licenses-products dl.tabs.primary dd a,
 .page-licenses dl.tabs.primary dd a {
@@ -8632,7 +8682,7 @@ li.btn {
 }
 
 /* line 809, ../sass/_views.scss */
-/* line 528, ../sass/_page.scss */
+/* line 533, ../sass/_page.scss */
 .page-organizations dl.tabs.primary dd.active a,
 .page-licenses-products dl.tabs.primary dd.active a,
 .page-licenses dl.tabs.primary dd.active a {
@@ -8641,7 +8691,7 @@ li.btn {
 }
 
 /* line 816, ../sass/_views.scss */
-/* line 536, ../sass/_page.scss */
+/* line 541, ../sass/_page.scss */
 .page-organizations dl.tabs.primary dd a:hover,
 .page-licenses-products dl.tabs.primary dd a:hover,
 .page-licenses dl.tabs.primary dd a:hover {
@@ -8652,28 +8702,28 @@ li.btn {
 /* -----------------------------------------
    Term Landing Pages (Committee pages)
 ----------------------------------------- */
-/* line 545, ../sass/_page.scss */
+/* line 550, ../sass/_page.scss */
 .vocabulary-groups {
   border-bottom: 1px dotted #dddddd;
 }
 
-/* line 549, ../sass/_page.scss */
+/* line 554, ../sass/_page.scss */
 .image-right, .image-right img {
   float: right;
   padding: 0 0 10px 10px;
 }
-/* line 553, ../sass/_page.scss */
+/* line 558, ../sass/_page.scss */
 .image-right:after, .image-right img:after {
   content: '';
   clear: both;
 }
 
-/* line 559, ../sass/_page.scss */
+/* line 564, ../sass/_page.scss */
 .image-left, .image-left img {
   float: right;
   padding: 0 10px 10px 0;
 }
-/* line 563, ../sass/_page.scss */
+/* line 568, ../sass/_page.scss */
 .image-left:after, .image-left img:after {
   content: '';
   clear: both;
@@ -9117,7 +9167,7 @@ li.btn {
 
 /* line 82, ../sass/_views.scss */
 #content .view-events .views-row {
-  border-bottom: 1px solid #E0E0E0;
+  border-bottom: 1px solid #e4e2e2;
   padding: 1em 0;
 }
 
@@ -9144,7 +9194,7 @@ li.btn {
 
 /* line 104, ../sass/_views.scss */
 #content .view-events .views-row {
-  border-bottom: 1px solid #E0E0E0;
+  border-bottom: 1px solid #e4e2e2;
   padding: 1em 0;
 }
 
@@ -9153,7 +9203,6 @@ li.btn {
 #content .view-events .views-field-title a,
 .view-og-mytracker .views-field-title a {
   color: #2a2724;
-  font-family: Helvetica, Arial, sans-serif;
   font-size: 1.333em;
   /* 20px relative to 15px */
   font-weight: bold;
@@ -9162,156 +9211,146 @@ li.btn {
   line-height: 1;
 }
 
-/* line 121, ../sass/_views.scss */
+/* line 120, ../sass/_views.scss */
 #content .view-events .views-field-title a {
   color: #18729d;
   font-size: 1.200em;
   /*18px relative to 15px*/
 }
 
-/* line 127, ../sass/_views.scss */
+/* line 126, ../sass/_views.scss */
 #content .view-Blog .views-field-created,
 #content .view-events .views-field-field-date {
   color: #3a3a3a;
   display: block;
-  font-family: Helvetica, Arial, sans-serif;
   font-size: 1.067em;
   /* 20px relative to 15px */
   font-weight: bold;
   padding-bottom: 0;
 }
 
-/* line 136, ../sass/_views.scss */
+/* line 134, ../sass/_views.scss */
 #content .view-Blog .views-field-created {
   padding-bottom: 15px;
 }
 
-/* line 140, ../sass/_views.scss */
+/* line 138, ../sass/_views.scss */
 #content .view-events .views-field-field-date-value {
   font-size: 1.067em;
   /*16px -relative to 15px */
   padding-bottom: 0;
 }
 
-/* line 149, ../sass/_views.scss */
+/* line 147, ../sass/_views.scss */
 #content .view-Blog .views-field-tid,
 #content .view-Blog .views-field-term-node-tid {
   padding-bottom: 10px;
 }
 
-/* line 153, ../sass/_views.scss */
-#content .view-Blog .views-field-teaser {
-  font-family: "minion-pro-1","minion-pro-2", Georgia, 'Times New Roman', serif;
-}
-
-/* line 157, ../sass/_views.scss */
+/* line 151, ../sass/_views.scss */
 .node-type-blog .node .content {
   padding: 15px 35px 15px 0;
 }
 
 /* Homepage quotes */
-/* line 164, ../sass/_views.scss */
+/* line 158, ../sass/_views.scss */
 #block-views-quotes-block-1 {
   background: #efefef;
-  border-bottom: 5px solid #e0e0e0;
-  border-top: 5px solid #e0e0e0;
-  font-family: "minion-pro-1","minion-pro-2", Georgia, 'Times New Roman', serif;
+  border-bottom: 5px solid #e4e2e2;
+  border-top: 5px solid #e4e2e2;
   margin-top: 20px;
   padding: 20px;
-  font-family: Helvetica, Arial, sans-serif;
   font-weight: bold;
   font-size: 1em;
   font-style: normal;
 }
 
-/* line 180, ../sass/_views.scss */
+/* line 172, ../sass/_views.scss */
 #block-views-quotes-block-1 .quote-title,
 #block-views-quotes-block-1 .quote-job-title,
 #block-views-quotes-block-1 .quote-org,
 #block-views-quotes-block-1 .quote-year {
-  font-family: Helvetica, Arial, sans-serif;
   font-weight: bold;
 }
 
-/* line 185, ../sass/_views.scss */
+/* line 176, ../sass/_views.scss */
 #block-views-quotes-block-1 .quote-year {
   color: #f68115;
   font-weight: normal;
 }
 
-/* line 190, ../sass/_views.scss */
+/* line 181, ../sass/_views.scss */
 #block-views-quotes-block-1 blockquote {
   background: none;
   border: none;
   padding: 10px 0 0 0;
 }
 
-/* line 196, ../sass/_views.scss */
+/* line 187, ../sass/_views.scss */
 #block-views-quotes-block-1 blockquote, #block-views-quotes-block-1 blockquote p {
   color: #2a2724;
   font-style: normal;
   font-weight: 1em;
 }
 
-/* line 201, ../sass/_views.scss */
+/* line 192, ../sass/_views.scss */
 #block-views-quotes-block-1 .date-display-single {
   color: #3a3a3a;
 }
 
 /* Contacts View */
-/* line 211, ../sass/_views.scss */
+/* line 202, ../sass/_views.scss */
 .view-contacts,
 .view-profile-contacts,
 .view-organization-contacts {
   margin: 0 0 35px 0;
 }
 
-/* line 216, ../sass/_views.scss */
+/* line 207, ../sass/_views.scss */
 #edit-submit-contacts,
 #edit-submit-profile-contacts {
   margin-top: 30px;
 }
 
-/* line 221, ../sass/_views.scss */
+/* line 212, ../sass/_views.scss */
 .view-contacts .view-filters,
 .view-profile-contacts .view-filters {
   background: none repeat scroll 0 0 #EFEFEF;
-  border-bottom: 5px solid #E0E0E0;
-  border-top: 5px solid #E0E0E0;
+  border-bottom: 5px solid #e4e2e2;
+  border-top: 5px solid #e4e2e2;
   margin-bottom: 0;
   padding-bottom: 0;
 }
-/* line 227, ../sass/_views.scss */
+/* line 218, ../sass/_views.scss */
 .view-contacts .view-filters form,
 .view-profile-contacts .view-filters form {
   padding-bottom: 0;
 }
 
 /* Data Tables */
-/* line 235, ../sass/_views.scss */
+/* line 226, ../sass/_views.scss */
 .views-table th {
-  font-family: Helvetica, Arial, sans-serif;
   text-transform: uppercase;
 }
 
-/* line 240, ../sass/_views.scss */
+/* line 230, ../sass/_views.scss */
 .views-table a {
   text-decoration: none;
 }
 
-/* line 244, ../sass/_views.scss */
+/* line 234, ../sass/_views.scss */
 #dashboard .view-resources .view-content {
   padding-left: 0;
 }
 
-/* line 249, ../sass/_views.scss */
+/* line 239, ../sass/_views.scss */
 .view-resources .view-content,
 .view-licenses .view-content {
   padding-left: 15px;
   clear: both;
 }
 
-/* line 262, ../sass/_views.scss */
+/* line 252, ../sass/_views.scss */
 .view-resources table,
 .view-contacts table,
 .view-profile-contacts table,
@@ -9326,7 +9365,7 @@ li.btn {
   width: 100%;
 }
 
-/* line 276, ../sass/_views.scss */
+/* line 266, ../sass/_views.scss */
 .view-resources table tr,
 .view-contacts table tr,
 .view-profile-contacts table tr,
@@ -9339,7 +9378,7 @@ li.btn {
   background: none;
 }
 
-/* line 297, ../sass/_views.scss */
+/* line 287, ../sass/_views.scss */
 .view-resources table td,
 .view-resources table th,
 .view-contacts table td,
@@ -9364,12 +9403,12 @@ li.btn {
   vertical-align: top;
 }
 
-/* line 304, ../sass/_views.scss */
+/* line 294, ../sass/_views.scss */
 .page-forum table thead tr {
   background: url("../images/dashed-border.png") repeat-x 0 bottom;
 }
 
-/* line 325, ../sass/_views.scss */
+/* line 315, ../sass/_views.scss */
 .view-resources table tr.even,
 .view-resources table tr.odd,
 .view-contacts table tr.even,
@@ -9392,26 +9431,24 @@ li.btn {
   border: none;
 }
 
-/* line 330, ../sass/_views.scss */
+/* line 320, ../sass/_views.scss */
 .view-resources td.views-field-title {
-  font-family: "minion-pro-1","minion-pro-2", Georgia, 'Times New Roman', serif;
   font-weight: bold;
   width: 225px;
 }
 
-/* line 336, ../sass/_views.scss */
+/* line 325, ../sass/_views.scss */
 .view-resources td.views-field-title a {
   color: #18729d;
   font-size: 1.133em;
 }
 
-/* line 342, ../sass/_views.scss */
+/* line 331, ../sass/_views.scss */
 .view-resources td.views-field-body {
   color: #2a2724;
-  font-family: "minion-pro-1","minion-pro-2", Georgia, 'Times New Roman', serif;
 }
 
-/* line 354, ../sass/_views.scss */
+/* line 342, ../sass/_views.scss */
 .view-resources th,
 .view-organizations th,
 .view-organization-contacts th,
@@ -9423,13 +9460,13 @@ li.btn {
   font-weight: bold;
 }
 
-/* line 359, ../sass/_views.scss */
+/* line 347, ../sass/_views.scss */
 .view-resources .view-header {
   position: absolute;
   top: 0;
   right: 15px;
 }
-/* line 363, ../sass/_views.scss */
+/* line 351, ../sass/_views.scss */
 .view-resources .view-header a.button, .view-resources .view-header #content > article:not(.node-contact) .collapsed legend a, #content > article:not(.node-contact) .collapsed legend .view-resources .view-header a,
 .view-resources .view-header #content > article:not(.node-contact) .collapsible legend a,
 #content > article:not(.node-contact) .collapsible legend .view-resources .view-header a,
@@ -9469,7 +9506,6 @@ body.page-user .profile .collapsible legend .view-resources .view-header a {
   text-align: center;
   font-weight: normal;
   font-size: 1.1em;
-  font-family: "Lucida Grande",Verdana,sans-serif;
   border: 1px solid #e4e4e4;
   border-bottom: 1px solid #b4b4b4;
   border-left-color: #D2D2D2;
@@ -9480,7 +9516,7 @@ body.page-user .profile .collapsible legend .view-resources .view-header a {
   -webkit-border-radius: 15px;
 }
 
-/* line 369, ../sass/_views.scss */
+/* line 357, ../sass/_views.scss */
 .view-contacts .view-header a.button, .view-contacts .view-header #content > article:not(.node-contact) .collapsed legend a, #content > article:not(.node-contact) .collapsed legend .view-contacts .view-header a,
 .view-contacts .view-header #content > article:not(.node-contact) .collapsible legend a,
 #content > article:not(.node-contact) .collapsible legend .view-contacts .view-header a,
@@ -9586,7 +9622,6 @@ body.page-user .profile .collapsible legend .view-organizations .view-header a {
   text-align: center;
   font-weight: normal;
   font-size: 1.1em;
-  font-family: "Lucida Grande",Verdana,sans-serif;
   border: 1px solid #e4e4e4;
   border-bottom: 1px solid #b4b4b4;
   border-left-color: #D2D2D2;
@@ -9597,13 +9632,13 @@ body.page-user .profile .collapsible legend .view-organizations .view-header a {
   -webkit-border-radius: 15px;
 }
 
-/* line 372, ../sass/_views.scss */
+/* line 360, ../sass/_views.scss */
 .view-resources .view-filters {
   background: none;
   padding: 0;
 }
 
-/* line 377, ../sass/_views.scss */
+/* line 365, ../sass/_views.scss */
 .view-resources .views-exposed-form {
   background: #EFEFEF;
   margin-top: -19px;
@@ -9611,12 +9646,12 @@ body.page-user .profile .collapsible legend .view-organizations .view-header a {
   float: right;
 }
 
-/* line 384, ../sass/_views.scss */
+/* line 372, ../sass/_views.scss */
 .view-resources .views-exposed-form .views-submit-button input.button {
   margin: 0;
 }
 
-/* line 390, ../sass/_views.scss */
+/* line 378, ../sass/_views.scss */
 .view-resources .views-exposed-form input.button,
 .view-contacts .views-exposed-form input.button,
 .view-profile-contacts .views-exposed-form input.button {
@@ -9629,7 +9664,6 @@ body.page-user .profile .collapsible legend .view-organizations .view-header a {
   text-align: center;
   font-weight: normal;
   font-size: 1.1em;
-  font-family: "Lucida Grande",Verdana,sans-serif;
   border: 1px solid #e4e4e4;
   border-bottom: 1px solid #b4b4b4;
   border-left-color: #D2D2D2;
@@ -9640,7 +9674,7 @@ body.page-user .profile .collapsible legend .view-organizations .view-header a {
   -webkit-border-radius: 15px;
 }
 
-/* line 392, ../sass/_views.scss */
+/* line 380, ../sass/_views.scss */
 #content label.expand-btn {
   position: absolute;
   top: 1.2rem;
@@ -9657,7 +9691,7 @@ body.page-user .profile .collapsible legend .view-organizations .view-header a {
   line-height: 30px;
 }
 
-/* line 408, ../sass/_views.scss */
+/* line 396, ../sass/_views.scss */
 #block-views-committee-members-block {
   background: #f7f7f7;
   border-bottom: 5px solid #efefef;
@@ -9667,7 +9701,7 @@ body.page-user .profile .collapsible legend .view-organizations .view-header a {
   position: relative;
 }
 
-/* line 417, ../sass/_views.scss */
+/* line 405, ../sass/_views.scss */
 #block-views-committee-members-block h2.block-title, #block-views-committee-members-block #content label.block-title, #content #block-views-committee-members-block label.block-title,
 #block-views-committee-members-block .profile label.block-title,
 .profile #block-views-committee-members-block label.block-title,
@@ -9685,18 +9719,18 @@ body.node-type-trial-renewal article #block-views-committee-members-block .block
   margin: 20px 0 7px 0;
 }
 
-/* line 424, ../sass/_views.scss */
+/* line 412, ../sass/_views.scss */
 #block-views-committee-members-block img {
   float: left;
   margin: 4px 8px 6px 0;
 }
 
-/* line 429, ../sass/_views.scss */
+/* line 417, ../sass/_views.scss */
 #block-views-committee-members-block h4 {
   margin-bottom: 5px;
 }
 
-/* line 435, ../sass/_views.scss */
+/* line 423, ../sass/_views.scss */
 .view-organizations table caption {
   text-align: left !important;
 }
@@ -9907,7 +9941,6 @@ body.node-type-trial-renewal article .front #block-menu-block-1 .field-label, .f
   -o-border-radius: 7px;
   border-radius: 7px;
   display: block;
-  font-family: "minion-pro-1","minion-pro-2", Georgia, 'Times New Roman', serif;
   font-size: 1.00em;
   /* 18px relative to 15px */
   font-weight: bold;
@@ -9920,33 +9953,31 @@ body.node-type-trial-renewal article .front #block-menu-block-1 .field-label, .f
 }
 
 /*  In this Section Block */
-/* line 140, ../sass/_block.scss */
+/* line 137, ../sass/_block.scss */
 .not-front #block-menu-block-1 {
-  background: none repeat scroll 0 0 #e0e0e0;
-  border-bottom: 5px solid #c5c5c5;
-  border-top: 5px solid #c5c5c5;
-  font-family: "minion-pro-1","minion-pro-2", Georgia, 'Times New Roman', serif;
+  background: none repeat scroll 0 0 #e4e2e2;
+  border-bottom: 5px solid #c8c8c8;
   padding: 20px;
 }
 
-/* line 148, ../sass/_block.scss */
+/* line 143, ../sass/_block.scss */
 .not-front #block-menu-block-1 ul {
   list-style: none;
 }
 
-/* line 152, ../sass/_block.scss */
+/* line 147, ../sass/_block.scss */
 .not-front #block-menu-block-1 li {
   padding: 4px 0px 4px 20px;
   margin-left: -20px;
 }
 
-/* line 158, ../sass/_block.scss */
+/* line 153, ../sass/_block.scss */
 .not-front #block-menu-block-1 li.active,
 .not-front #block-menu-block-1 li.active-trail {
   border-left: 5px solid #ababab;
 }
 
-/* line 162, ../sass/_block.scss */
+/* line 157, ../sass/_block.scss */
 .not-front #block-menu-block-1 li a {
   display: block;
   font-size: 1.067em;
@@ -9955,7 +9986,7 @@ body.node-type-trial-renewal article .front #block-menu-block-1 .field-label, .f
   text-decoration: none;
 }
 
-/* line 170, ../sass/_block.scss */
+/* line 165, ../sass/_block.scss */
 .not-front #block-menu-block-1 li a.active,
 .not-front #block-menu-block-1 li a.active-trail {
   color: #104e6b;
@@ -9963,55 +9994,54 @@ body.node-type-trial-renewal article .front #block-menu-block-1 .field-label, .f
 }
 
 /* Third and Fourth level */
-/* line 177, ../sass/_block.scss */
+/* line 172, ../sass/_block.scss */
 .not-front #block-menu-block-1 li.active-trail li.active-trail,
 .not-front #block-menu-block-1 li.active-trail li.active-trail li.active-trail {
   border: none;
 }
 
 /* Utilities Block */
-/* line 183, ../sass/_block.scss */
+/* line 178, ../sass/_block.scss */
 #block-re-utilities-utility-nav {
   float: right;
 }
 
-/* line 187, ../sass/_block.scss */
+/* line 182, ../sass/_block.scss */
 #block-re-utilities-utility-nav .block-content {
   background: none;
 }
 
-/* line 191, ../sass/_block.scss */
+/* line 186, ../sass/_block.scss */
 #block-re-utilities-utility-nav ul.links {
   height: 40px;
   padding: 0;
   list-style: none;
 }
 
-/* line 197, ../sass/_block.scss */
+/* line 192, ../sass/_block.scss */
 #block-re-utilities-utility-nav ul.links li {
   background: #10b7e3;
-  border-bottom: 5px solid #35caf1;
-  font-family: "minion-pro-1","minion-pro-2", Georgia, 'Times New Roman', serif;
-  font-weight: bold;
+  border-bottom: 5px solid #65d6f4;
+  font-family: "source_sans_probold", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-size: 18px;
   height: 43px;
   float: left;
   margin: 0;
   text-align: center;
-  text-transform: uppercase;
   padding-right: 5px;
   width: 110px;
 }
 
-/* line 211, ../sass/_block.scss */
+/* line 205, ../sass/_block.scss */
 #block-re-utilities-utility-nav ul.links li.first {
-  border-left: 5px solid #35caf1;
+  border-left: 5px solid #65d6f4;
   display: block;
   width: 114px;
 }
 
-/* line 217, ../sass/_block.scss */
+/* line 211, ../sass/_block.scss */
 #block-re-utilities-utility-nav ul.links li.last {
-  border-right: 5px solid #35caf1;
+  border-right: 5px solid #65d6f4;
   display: block;
   width: 132px;
   /*
@@ -10021,36 +10051,35 @@ body.node-type-trial-renewal article .front #block-menu-block-1 .field-label, .f
   }*/
 }
 
-/* line 230, ../sass/_block.scss */
+/* line 224, ../sass/_block.scss */
 #block-re-utilities-utility-nav ul.links li a {
   color: white;
   display: block;
-  padding-top: 10px;
+  padding-top: 9px;
+  padding-bottom: 3px;
   text-decoration: none;
   padding-left: 30px;
 }
 
-/* line 238, ../sass/_block.scss */
+/* line 233, ../sass/_block.scss */
 #block-re-utilities-utility-nav ul.links li a:hover {
   text-decoration: underline;
 }
 
-/* line 246, ../sass/_block.scss */
+/* line 241, ../sass/_block.scss */
 #block-re-utilities-utility-nav ul.links li a.dashboard {
-  font-family: Helvetica, Arial, sans-serif;
   font-size: 0.786em;
   /* 11px relative to 14px (ul.links) */
   padding-top: 25px;
 }
 
-/* line 253, ../sass/_block.scss */
+/* line 247, ../sass/_block.scss */
 .logged-in #block-re-utilities-utility-nav {
   /*  width: 380px; */
 }
 
-/* line 257, ../sass/_block.scss */
+/* line 251, ../sass/_block.scss */
 .logged-in #block-re-utilities-utility-nav .block-content .welcome {
-  font-family: Helvetica, Arial, sans-serif;
   position: absolute;
   right: 267px;
   text-align: right;
@@ -10058,47 +10087,46 @@ body.node-type-trial-renewal article .front #block-menu-block-1 .field-label, .f
   width: 250px;
 }
 
-/* line 266, ../sass/_block.scss */
+/* line 259, ../sass/_block.scss */
 .logged-in #block-re-utilities-utility-nav ul.links li {
   border-left: 5px solid #35caf1;
 }
 
-/* line 270, ../sass/_block.scss */
+/* line 263, ../sass/_block.scss */
 #block-re-utilities-utility-nav ul.links li a.register {
-  background: url("../images/icon-register.png") no-repeat 11px 12px;
+  background: url("../images/icon-register.png") no-repeat 10px 7px;
+}
+
+/* line 267, ../sass/_block.scss */
+#block-re-utilities-utility-nav ul.links li a.login, #block-re-utilities-utility-nav ul.links li a.logout {
+  background: url("../images/icon-loginout.png") no-repeat 10px 7px;
 }
 
 /* line 274, ../sass/_block.scss */
-#block-re-utilities-utility-nav ul.links li a.login, #block-re-utilities-utility-nav ul.links li a.logout {
-  background: url("../images/icon-loginout.png") no-repeat 5px 12px;
-}
-
-/* line 281, ../sass/_block.scss */
 #block-re-utilities-utility-nav ul.links li a.search {
-  background: url("../images/icon-search.png") no-repeat 15px 12px;
+  background: url("../images/icon-search.png") no-repeat 10px 7px;
 }
 
-/* line 287, ../sass/_block.scss */
+/* line 280, ../sass/_block.scss */
 .logged-in #block-re-utilities-utility-nav ul.links li.first {
   background: none;
   border: none;
-  font-family: Helvetica, Arial, sans-serif;
 }
 
-/* line 293, ../sass/_block.scss */
+/* line 285, ../sass/_block.scss */
 .logged-in #block-re-utilities-utility-nav ul.links li.last {
   border-left: none;
   border-right: 5px solid #35caf1;
 }
 
-/* line 298, ../sass/_block.scss */
+/* line 290, ../sass/_block.scss */
 .logged-in #block-re-utilities-utility-nav ul.links li.first {
   margin: 5px 5px 0 0;
   text-transform: none;
   width: 150px;
 }
 
-/* line 304, ../sass/_block.scss */
+/* line 296, ../sass/_block.scss */
 .logged-in #block-re-utilities-utility-nav ul.links li.first a {
   color: #18729d;
   display: block;
@@ -10108,7 +10136,7 @@ body.node-type-trial-renewal article .front #block-menu-block-1 .field-label, .f
 }
 
 /* Footer Logo */
-/* line 314, ../sass/_block.scss */
+/* line 306, ../sass/_block.scss */
 #block-block-1 {
   float: left;
   height: 75px;
@@ -10116,34 +10144,34 @@ body.node-type-trial-renewal article .front #block-menu-block-1 .field-label, .f
 }
 
 /* Footer Text */
-/* line 321, ../sass/_block.scss */
+/* line 313, ../sass/_block.scss */
 #block-block-10 {
   display: block;
   width: 75%;
   float: right;
 }
 
-/* line 327, ../sass/_block.scss */
+/* line 319, ../sass/_block.scss */
 #block-block-10 p {
   color: #807b77;
   margin-bottom: 0.5em;
   text-align: left;
 }
 
-/* line 332, ../sass/_block.scss */
+/* line 324, ../sass/_block.scss */
 #block-block-10 p a {
   text-decoration: none;
 }
 
 /* Footer menu */
-/* line 339, ../sass/_block.scss */
+/* line 331, ../sass/_block.scss */
 #block-menu-menu-footer {
   display: block;
   width: 75%;
   float: right;
 }
 
-/* line 346, ../sass/_block.scss */
+/* line 338, ../sass/_block.scss */
 #block-menu-menu-footer ul.menu li {
   float: left;
   list-style: none;
@@ -10151,34 +10179,33 @@ body.node-type-trial-renewal article .front #block-menu-block-1 .field-label, .f
   padding-right: 0;
 }
 
-/* line 353, ../sass/_block.scss */
+/* line 345, ../sass/_block.scss */
 #block-menu-menu-footer ul.menu li a {
   border-right: 1px solid #807b77;
-  color: #17729d;
   display: block;
   padding: 0 6px;
   text-decoration: none;
 }
 
-/* line 361, ../sass/_block.scss */
+/* line 352, ../sass/_block.scss */
 #block-menu-menu-footer ul.menu li.first a {
   padding-left: 0;
 }
 
-/* line 365, ../sass/_block.scss */
+/* line 356, ../sass/_block.scss */
 #block-menu-menu-footer ul.menu li.last a {
   border-right: none;
 }
 
 /*  Member/User Login Block */
-/* line 371, ../sass/_block.scss */
+/* line 362, ../sass/_block.scss */
 #block-user-login {
   display: none;
 }
 
-/* line 375, ../sass/_block.scss */
+/* line 366, ../sass/_block.scss */
 #block-user-login {
-  background: #e0e0e0;
+  background: #e4e2e2;
   border-top: 5px solid #d1d1d1;
   border-bottom: 5px solid #d1d1d1;
   padding: 0 15px;
@@ -10189,7 +10216,7 @@ body.node-type-trial-renewal article .front #block-menu-block-1 .field-label, .f
   z-index: 100;
 }
 
-/* line 387, ../sass/_block.scss */
+/* line 378, ../sass/_block.scss */
 #block-user-login h2, #block-user-login #content label, #content #block-user-login label,
 #block-user-login .profile label,
 .profile #block-user-login label,
@@ -10202,25 +10229,23 @@ body.node-type-vendor article #block-user-login .field-label,
 #block-user-login body.node-type-trial-renewal article .field-label,
 body.node-type-trial-renewal article #block-user-login .field-label, #block-user-login body.page-user .profile .field-label, body.page-user .profile #block-user-login .field-label, #block-user-login .view-organizations table caption, .view-organizations table #block-user-login caption {
   color: #807b77;
-  font-family: "minion-pro-1","minion-pro-2", Georgia, 'Times New Roman', serif;
   font-size: 0.933em;
   font-weight: bold;
   margin-top: 20px;
   text-transform: uppercase;
 }
 
-/* line 396, ../sass/_block.scss */
+/* line 386, ../sass/_block.scss */
 #block-user-login label {
-  font-family: Helvetica, Arial, sans-serif;
   font-weight: bold;
 }
 
-/* line 401, ../sass/_block.scss */
+/* line 390, ../sass/_block.scss */
 #block-user-login .form-text {
   width: 175px;
 }
 
-/* line 406, ../sass/_block.scss */
+/* line 395, ../sass/_block.scss */
 #block-user-login .form-submit,
 #bd #block-user-0 .form-submit {
   background: #18729d;
@@ -10231,7 +10256,6 @@ body.node-type-trial-renewal article #block-user-login .field-label, #block-user
   -o-border-radius: 3px;
   border-radius: 3px;
   color: #fff;
-  font-family: "minion-pro-1","minion-pro-2", Georgia, 'Times New Roman', serif;
   font-size: 0.933em;
   /* 14px relative to 15px */
   height: 30px;
@@ -10239,13 +10263,13 @@ body.node-type-trial-renewal article #block-user-login .field-label, #block-user
   width: 105px;
 }
 
-/* line 419, ../sass/_block.scss */
+/* line 407, ../sass/_block.scss */
 #block-user-login form .item-list ul {
   margin: 10px 0;
   padding: 0;
 }
 
-/* line 424, ../sass/_block.scss */
+/* line 412, ../sass/_block.scss */
 #block-user-login form .item-list ul li {
   list-style: none;
   list-style-image: none;
@@ -10253,37 +10277,37 @@ body.node-type-trial-renewal article #block-user-login .field-label, #block-user
   padding: 0;
 }
 
-/* line 431, ../sass/_block.scss */
+/* line 419, ../sass/_block.scss */
 #block-user-login form .item-list ul li a {
   font-size: 0.867em;
   /* 13px relative to 15px */
   text-decoration: none;
 }
 
-/* line 436, ../sass/_block.scss */
+/* line 424, ../sass/_block.scss */
 #block-user-login .item-list li.first {
   display: none;
 }
 
 /* Committee/Group pages login form */
-/* line 441, ../sass/_block.scss */
+/* line 429, ../sass/_block.scss */
 #bd #block-user-0 {
   float: left;
   width: 215px;
 }
 
-/* line 446, ../sass/_block.scss */
+/* line 434, ../sass/_block.scss */
 #bd #block-user-0 .item-list {
   display: none;
 }
 
 /* What's New Sidebar Blocks and User Login block on Committee pages */
-/* line 453, ../sass/_block.scss */
+/* line 441, ../sass/_block.scss */
 .dc-sub a {
   text-decoration: none;
 }
 
-/* line 462, ../sass/_block.scss */
+/* line 450, ../sass/_block.scss */
 #block-views-blog-block-2,
 #block-views-blog-block-3,
 #block-views-events-block-1,
@@ -10291,14 +10315,13 @@ body.node-type-trial-renewal article #block-user-login .field-label, #block-user
 #block-views-trials-block-1,
 #block-user-0 {
   background: none repeat scroll 0 0 #efefef;
-  border-bottom: 5px solid #e0e0e0;
-  border-top: 5px solid #e0e0e0;
-  font-family: "minion-pro-1","minion-pro-2", Georgia, 'Times New Roman', serif;
+  border-bottom: 5px solid #e4e2e2;
+  border-top: 5px solid #e4e2e2;
   padding: 20px;
 }
 
 /* Organizations */
-/* line 474, ../sass/_block.scss */
+/* line 461, ../sass/_block.scss */
 #block-views-resources-block_1 h3,
 #block-views-resources-block_4 h3 {
   color: #F68115;
@@ -10307,18 +10330,18 @@ body.node-type-trial-renewal article #block-user-login .field-label, #block-user
   font-weight: bold;
 }
 
-/* line 480, ../sass/_block.scss */
+/* line 467, ../sass/_block.scss */
 #block-views-contacts-block_1 {
   margin: 0 0 10px 0;
 }
 
-/* line 484, ../sass/_block.scss */
+/* line 471, ../sass/_block.scss */
 #block-views-contacts-block_1 .view-contacts {
   margin-top: 0;
 }
 
 /* Homepage */
-/* line 490, ../sass/_block.scss */
+/* line 477, ../sass/_block.scss */
 .front .field-name-body h2, .front .field-name-body #content label, #content .front .field-name-body label,
 .front .field-name-body .profile label,
 .profile .front .field-name-body label,
@@ -10334,17 +10357,17 @@ body.node-type-trial-renewal article .front .field-name-body .field-label, .fron
   padding: 30px;
   width: 60%;
 }
-/* line 495, ../sass/_block.scss */
+/* line 482, ../sass/_block.scss */
 .front .field-name-body img {
   width: 40%;
 }
 
-/* line 500, ../sass/_block.scss */
+/* line 487, ../sass/_block.scss */
 #block-block-12 {
   clear: both;
 }
 
-/* line 504, ../sass/_block.scss */
+/* line 491, ../sass/_block.scss */
 #block-block-12, #block-block-13, #block-block-14 {
   float: right;
   width: 33.33333%;
@@ -10352,12 +10375,12 @@ body.node-type-trial-renewal article .front .field-name-body .field-label, .fron
   padding-right: 10px;
   text-align: center;
 }
-/* line 511, ../sass/_block.scss */
+/* line 498, ../sass/_block.scss */
 #block-block-12:after, #block-block-13:after, #block-block-14:after {
   box-sizing: border-box;
 }
 
-/* line 516, ../sass/_block.scss */
+/* line 503, ../sass/_block.scss */
 #block-views-blog-block-6 {
   clear: both;
 }

@@ -72,32 +72,32 @@
   .print-source_url {font-size: small;}
   .print-links {font-size: small;}
   .print-footer {display: none;}
-  
+
   #last-updated { margin: 2em 0 0 0; font-size:x-small}
-  
+
     #branding, .access-outer, #access, #footer, #block-re-utilities-utility-nav, div.drupal_tabs, .print_html, .krumo-root  { display:none !important; } /* Remove print-irrelevant layout items */
   	#main, #sidebar-left, #sidebar-right, .view-content { border-style:none; margin:0 !important; padding:0 !important; overflow: visible; width: auto !important; float: none !important; } /* Rejigger margins and padding on main layout containers */
   	body { font-size:10pt !important; line-height:18pt !important;  } /* Use print-friendly units */
   	a, body, h1, h2, h3, h4, h5, h6, dl, ol, p, ul { color:#000; } /* Use print-friendly colours */
   	a { text-decoration:underline; } /* Make links look like links */
   	a:after { content:' (' attr(href) ')'; } /* Show link urls after links */
-    
+
     .views-field-edit-node, .views-admin-links, #block-context_ui-devel { display: none; }
-    
+
     .node .content, .dc-div, .view-content {
       /* margin-right: 150px !important;
       overflow: visible !important;
       width: auto !important; */
     }
-    
+
     table tr {
       border-bottom: 1px dashed #000;
     }
-    
+
     html.js fieldset.collapsible * {
       display: block !important;
     }
-    
+
     html.js fieldset.collapsed {
       height: auto !important;
     }

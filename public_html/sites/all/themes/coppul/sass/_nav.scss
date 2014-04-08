@@ -1,7 +1,7 @@
 @import "foundation/settings";
 @import "settings";
 @import "foundation/mixins/css-triangle";
-  // Note: This is copied from the foundation gem and then 
+  // Note: This is copied from the foundation gem and then
   // stripped down to just what we need;
   nav .foundation-menu { background: none; }
   #access ul.menu {
@@ -16,21 +16,22 @@
       padding: 0;
       margin: 0;
       line-height: $navBarHeight;
-      
+
       &:first-child {  }
       &:last-child { }
 
       &.active-trail {
-        &>a { cursor: default; color: $secondaryColor; }
-        &:hover {  cursor: default; color: $secondaryColor; }
+        &>a { cursor: default; color: $blue-highlight; }
+        &:hover {  cursor: default; color: $blue-highlight; }
       }
-      &:hover { color: $secondaryColor; }
 
-      &>a { 
-        line-height: $navBarHeight; 
+      &>a {
+        line-height: $navBarHeight;
         color: white;
-        font-family: Helvetica, Arial, sans-serif;
         font-weight: bold;
+
+        &:hover { color: $blue-highlight; }
+
       }
       ul { margin-bottom: 0; }
       .flyout { display: none; }
@@ -66,7 +67,8 @@
       padding: 0 ($navBarHeight / 2);
       display: block;
       text-decoration: none;
-      font-size: ms(0);
+      font-size: rem(1.6);
+      font-family: $ff-ss-bold;
     }
     &>li>input { margin: 0 rem(1); }
 
@@ -79,7 +81,7 @@
         &.has-flyout>a:first-child:after {
           @include cssTriangle(rem(0.4), darken($white, 10%), $defaultFloat);
         }
-        .flyout { 
+        .flyout {
           #{$defaultFloat}: 100%;
           top: rem(-0.1);
           &.right { #{$defaultFloat}: auto; #{$defaultOpposite}: 100%; }
@@ -90,7 +92,7 @@
     }
 
   }
-  
+
 
   #access ul.menu li ul {
     padding: 0;
@@ -103,7 +105,7 @@
         height: auto;
         line-height: 1;
         padding: (($navBarHeight / 2) - rem(0.5)) ($navBarHeight / 2);
-        
+
         &:hover, &:focus {
         }
       }
@@ -114,7 +116,7 @@
           margin: 0;
           position: static;
           top: 0;
-          
+
         }
       }
     }
@@ -130,7 +132,7 @@
         height: auto;
         line-height: 1;
         padding: (($navBarHeight / 2) - rem(0.5)) ($navBarHeight / 2);
-        
+
         &:hover, &:focus {
         }
       }
@@ -141,7 +143,7 @@
           margin: 0;
           position: static;
           top: 0;
-          
+
         }
       }
     }
