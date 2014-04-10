@@ -60,7 +60,7 @@ body{ color: $body_font_color; }
 
 body, p, ul {
     font-family: $ff-ss-reg;
-    font-size: rem(1.8);
+    //font-size: rem(1.8);
     line-height: 1.385;
 }
 
@@ -240,15 +240,19 @@ nav {
 /* -----------------------------------------
    UI Elements (pagination, breadcrumbs etc.)
 ----------------------------------------- */
-
+#content > article:not(.node-contact),
 .content-article {
   .field-label {
     @extend h2;
+    color: $orange;
+    font-size: rem(2);
     margin-top: 0;
+    margin-bottom: rem(1.5);
   }
   .collapsed,
   .collapsible {
     legend {
+      background: transparent;
       a {
         color: $white;
         font-weight: bold;

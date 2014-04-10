@@ -64,7 +64,7 @@
 
     &>li>a:first-child {
       position: relative;
-      padding: 0 ($navBarHeight / 2);
+      padding: 0 rem(2); //($navBarHeight / 2);
       display: block;
       text-decoration: none;
       font-size: rem(1.6);

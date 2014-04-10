@@ -45,6 +45,7 @@ $ie: 99!default;
   $blue-highlight:     rgba(17,183,226,1);
   $divider-gray:       rgba(185,185,185,1);
   $divider-highlight:  rgba(231,231,231,1);
+  $orange:             rgba(239,72,45,1);
 
   $white:       #ffffff;
   $black:       #000000;
@@ -145,7 +146,7 @@ $navFlyoutBaseWidth: rem(23);
 // Modular Scale
 
 //$ratio: $golden;
-$baseFontSize: 15px;
+$baseFontSize: 18px;
 $importantModNum: 44px;
 
 // Tooltip Settings
@@ -184,7 +185,7 @@ $importantModNum: 44px;
   $screenSmall: $mq1 !default;
   $screenMedium: $mq3 !default;
   $screenXlarge: $mq4 !default;
-  $rowWidth: rem(95); //980 + 30 for gutters
+  $rowWidth: rem(90.6); //980 + 30 for gutters
 
 // output ems or px if it's IE
 // A little mixin to make things easier for us. This means we don't need

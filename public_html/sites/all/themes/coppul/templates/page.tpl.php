@@ -97,7 +97,7 @@
           <?php endif; ?>
           <?php print render($page['help']); ?>
           <?php if ($node->type === 'resource'): ?>
-          <span id="return-res"><a href="/resources-databases">Return to Resources</a></span>
+          <span id="return-res"><a href="/licenses-products">Return to Licenses</a></span>
           <?php endif; ?>
           <?php if ($action_links): ?>
           <dl class="sub-nav action-links"><?php print render($action_links); ?></dl>
@@ -131,7 +131,7 @@
   <footer id="footer" role="contentinfo" class="row">
       <?php print render($page['footer']); ?>
   </footer>
-  
+
   <?php print render($page['overlay']); ?>
 
 </div>

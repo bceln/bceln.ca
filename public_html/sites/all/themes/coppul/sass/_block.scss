@@ -316,6 +316,16 @@
   float: right;
 }
 
+.no-sidebars {
+
+  #block-menu-menu-footer,
+  #block-block-10 {
+    width: 100%;
+    float: none;
+  }
+
+}
+
 #block-block-10 p {
   color: #807b77;
   margin-bottom: 0.5em;
@@ -473,30 +483,74 @@
 }
 
 /* Homepage */
-.front .field-name-body {
+.front #content .entry-content .field-name-body {
+  position:relative;
   h2 {
-    float:left;
-    padding: rem(3);
-    width: 60%
+    background-color: rgba(0,0,0,0.75);
+    color: $white;
+    padding: rem(1.9);
+    width: 56%;
+    top: 43%;
+    line-height: rem(3.8);
+    font-size: rem(2.8);
+    position:absolute;
   }
-  img {
-    width: 40%
+}
+
+#block-block-12, #block-block-13, #block-block-14 {
+  background-color: $gray;
+  width: 31%;
+  padding: rem(2.5);
+  position: relative;
+  padding: rem(2.2) rem(1.2) rem(2.2) rem(2.2);
+  float: left;
+
+  h2 {
+    font-size: rem(2.2);
+    line-height: rem(3);
+    margin-bottom: rem(1.2);
+    padding-left: rem(2.6);
+    background: transparent url('/sites/all/themes/coppul/images/icon-browse-resources.png') top left no-repeat;
+  }
+
+  .block-content {
+    p {
+      font-size: rem(1.6);
+      line-height: rem(2.4);
+      margin-bottom: 0;
+    }
+  }
+
+  &:after {
+    box-sizing: border-box;
+  }
+}
+
+#block-block-13 {
+  margin: 0 $gutter;
+  h2 {
+    padding-left: rem(4);
+    background-image: url('/sites/all/themes/coppul/images/icon-member-info.png');
+  }
+}
+
+#block-block-14 {
+  h2 {
+    background-image: url('/sites/all/themes/coppul/images/icon-discover.png');
   }
 }
 
 #block-block-12 {
-  clear: both;
-}
-
-#block-block-12, #block-block-13, #block-block-14 {
+  margin-bottom: rem(3.5);
   float: right;
-  width: 33.33333%;
-  padding-left: rem(1);
-  padding-right: rem(1);
-  text-align: center;
-
   &:after {
-    box-sizing: border-box;
+    clear: both;
+    content: " ";
+    display: table;
+  }
+
+  h2 {
+    padding-left: rem(3.2);
   }
 }
 

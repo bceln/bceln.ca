@@ -55,8 +55,13 @@
   .three, .four{ min-height: 1px; }
 
   table {
+    background: none;
     width: 100%;
     border: 1px solid $gray_7;
+
+    tr.odd {
+      //background-color: lighten($white, 10) !important;
+    }
   }
 
   table thead {
@@ -144,8 +149,23 @@
 
   .columns:last-child { float: left; }
 
+  .field-item:not(.field-type-list-text):not(.field-type-node-reference) {
+    //border-bottom: 1px dotted $gray_4;
+    border-bottom: 1px solid $divider-gray;
+    position: relative;
+
+    &:before {
+      border-bottom: 1px solid $divider-highlight;
+      content: '';
+      display: block;
+      position: absolute;
+      bottom: 0px;
+      right: 0;
+      left: 0;
+    }
+  }
+
   .field-item {
-    border-bottom: 1px dotted $gray_4;
     margin-bottom: rem(2);
     padding-bottom: rem(1);
   }
@@ -165,8 +185,12 @@
     margin-bottom: rem(2);
     .field-item:not(.field-name-field-resource-vend-desc) {
       border-bottom-style: none;
-      margin-bottom: 0;
+      margin-bottom: rem(2);
       padding-bottom: 0;
+
+      &:before {
+        border-bottom: none;
+      }
     }
   }
 
@@ -236,6 +260,7 @@ body.node-type-resource {
 body.node-type-organization article,
 body.node-type-event article,
 body.node-type-vendor article,
+body.node-type-license article,
 body.node-type-trial-renewal article {
   @extend .content-article;
 }
@@ -261,13 +286,18 @@ body.node-type-contact .node .field-item {
   padding-bottom: 1em;
 }
 
-body.node-type-contact .node .field-label,
-body.node-type-license .node .field-label {
-  color: $secondaryColor;
-  font-size: 1.133em;
-  font-weight: bold;
-  margin: 0.75em 0 15px 0;
-}
+// body.node-type-contact .node .field-label,
+// body.node-type-license .node .field-label {
+//   @extend h2;
+//   color: $orange;
+//   font-size: rem(2);
+//   margin-top: 0;
+//   margin-bottom: rem(1.5);
+//   // color: $secondaryColor;
+//   // font-size: 1.133em;
+//   // font-weight: bold;
+//   // margin: 0.75em 0 15px 0;
+// }
 
 .field-name-field-resource-vend-desc {
   padding-bottom: 15px;
@@ -298,7 +328,6 @@ body.node-type-contact .field-name-field-contact-groups {
   margin-top: 10px;
   padding-top: 7px;
   text-align: center;
-  text-transform: uppercase;
   width: 105px;
 }
 
@@ -324,8 +353,20 @@ body.node-type-contact .field-name-field-contact-groups {
   display: none;
 }
 
-.front #content .view-Blog ul {
-  padding-left: 0;
+.front #content .view-Blog {
+  ul {
+    padding-left: 0;
+  }
+
+  .views-field-title a {
+    font-size: rem(2.4);
+    line-height: rem(3.0);
+  }
+
+  .views-field-created {
+    color: $orange;
+    font-size: rem(2);
+  }
 }
 
 .front #content .view-Blog .more-link {
@@ -340,7 +381,6 @@ body.node-type-contact .field-name-field-contact-groups {
   margin-top: 10px;
   padding-top: 7px;
   text-align: center;
-  text-transform: uppercase;
   width: 130px;
 
   a {

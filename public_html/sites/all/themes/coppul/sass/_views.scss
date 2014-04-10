@@ -3,6 +3,10 @@
 
 }
 
+.front .view .views-field-body p {
+	font-size: rem(1.8);
+}
+
 .view .attachment {
 	/*margin:0 0 20px 0;
   padding:0 0 19px 0;*/
@@ -65,8 +69,18 @@
 /* Homepage / What's New Blog / Events View */
 
 #block-views-blog-block-6 {
-  background: url('../images/dashed-border.png') repeat-x 0 top;
-  padding-top: 35px;
+  border-top: 1px solid $divider-gray;
+	padding-top: 35px;
+
+	&:before {
+		border-top: 1px solid $divider-highlight;
+		content: '';
+		display: block;
+		position: absolute;
+		top: -2px;
+		right: 0;
+		left: 0;
+	}
 }
 
   .front #content .view-Blog .views-row {
@@ -76,7 +90,8 @@
   }
 
   .not-front #content .view-Blog .views-row {
-    padding: 15px 35px 0 0;
+		background: url('../images/dashed-border-trans.png') repeat-x 0 bottom;
+    padding: 15px 35px 15px 0;
   }
 
   #content .view-events .views-row {
@@ -102,8 +117,8 @@
   }
 
   #content .view-events .views-row {
-    border-bottom: 1px solid $gray;
-    padding: 1em 0;
+    background: url('../images/dashed-border-trans.png') repeat-x 0 bottom;
+		padding: 1em 0;
   }
 
     #content .view-Blog .views-field-title a,
@@ -237,8 +252,15 @@
 
 .view-resources .view-content,
 .view-licenses .view-content {
-  padding-left: 15px;
   clear:both;
+}
+
+.view {
+	table tbody tr td,
+	ul li,
+	p {
+		font-size: 1.5rem;
+	}
 }
 
 .view-resources table,
@@ -292,7 +314,7 @@
 }
 
 .page-forum table thead tr {
-  background: url('../images/dashed-border.png') repeat-x 0 bottom;
+  background: url('../images/dashed-border-trans.png') repeat-x 0 bottom;
 }
 
 .view-resources table tr.even,
@@ -313,7 +335,7 @@
 .view-vendors table tr.odd,
 .page-forum table tr.even,
 .page-forum table tr.odd {
-  background: url('../images/dashed-border.png') repeat-x 0 bottom;
+  background: url('../images/dashed-border-trans.png') repeat-x 0 bottom;
   border: none;
 }
 
