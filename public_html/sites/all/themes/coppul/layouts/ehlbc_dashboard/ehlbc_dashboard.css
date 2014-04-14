@@ -203,22 +203,6 @@ h2.pane-title {
 
 
 #dashboard .pane-views-resources-block-3 .more-link {
-  background: #18729d;
-  -moz-border-radius: 5px;
-  -webkit-border-radius: 5px;
-  border-radius: 5px;
-  border-bottom: 1px solid #13597b;
-  border-top: 1px solid #8cb9ce;
-  clear: both;
-  font-family: "minion-pro-1","minion-pro-2", Georgia, 'Times New Roman', serif;
-  font-size: 0.933em; /* 14px relative to 15px */
-  font-weight: bold;
-  float: left;
-  height: 32px;
-  margin-top: 20px;
-  padding-top: 7px;
-  text-align: center;
-  text-transform: uppercase;
   width: 172px;
 }
 
