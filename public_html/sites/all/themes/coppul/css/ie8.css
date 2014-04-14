@@ -7761,7 +7761,7 @@ nav .foundation-menu {
 /* line 65, ../sass/_nav.scss */
 #access ul.menu > li > a:first-child {
   position: relative;
-  padding: 0 20px;
+  padding: 0 19px;
   display: block;
   text-decoration: none;
   font-size: 16px;
