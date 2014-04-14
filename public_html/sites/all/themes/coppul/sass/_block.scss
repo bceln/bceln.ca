@@ -133,44 +133,60 @@
 }
 
 
-/*  In this Section Block */
-.not-front #block-menu-block-1 {
-  background: none repeat scroll 0 0 $gray;
-  border-bottom: 5px solid $border-gray;
-  padding: 20px;
-}
+/* Sidebar blocks  - In this Section Block */
+.not-front #sidebar-left,
+.not-front #sidebar-right {
 
-.not-front #block-menu-block-1 ul {
-  list-style:none;
-}
+  .block {
+    background: none repeat scroll 0 0 $gray;
+    border-bottom: 5px solid $border-gray;
+    padding: 20px;
+    margin-bottom: rem(3);
 
-.not-front #block-menu-block-1 li {
-  padding: 4px 0px 4px 20px;
-  margin-left: -20px;
-}
+    ul {
+      list-style:none;
+    }
 
-.not-front #block-menu-block-1 li.active,
-.not-front #block-menu-block-1 li.active-trail {
-  border-left: 5px solid #ababab;
-}
+    li {
+      padding: 4px 0px 4px 20px;
+      margin-left: -20px;
 
-.not-front #block-menu-block-1 li a {
-  display: block;
-  font-size: 1.067em; /* 16px relative to 15px */
-  line-height: 1;
-  text-decoration: none;
-}
+      &.active,
+      &.active-trail {
+        border-left: 5px solid #ababab;
+      }
 
-.not-front #block-menu-block-1 li a.active,
-.not-front #block-menu-block-1 li a.active-trail {
-  color: #104e6b;
-  font-weight: bold;
-}
+      a {
+        display: block;
+        font-size: rem(1.9);
+        font-weight: bold;
+        line-height: 1;
+        text-decoration: none;
 
-/* Third and Fourth level */
-.not-front #block-menu-block-1 li.active-trail li.active-trail,
-.not-front #block-menu-block-1 li.active-trail li.active-trail li.active-trail {
-  border:none;
+        &.active,
+        &.active-trail {
+          color: #104e6b;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+
+
+  /* Third and Fourth level */
+  #block-menu-block-1 {
+    li {
+      a {
+        font-size: rem(1.8);
+      }
+    }
+    li.active-trail li.active-trail,
+    li.active-trail li.active-trail li.active-trail {
+      border:none;
+    }
+  }
+
+
 }
 
 /* Utilities Block */
