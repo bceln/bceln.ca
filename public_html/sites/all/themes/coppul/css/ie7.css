@@ -9242,7 +9242,7 @@ li.btn {
 
 /* line 604, ../sass/_page.scss */
 .image-left, .image-left img {
-  float: right;
+  float: left;
   padding: 0 10px 10px 0;
 }
 /* line 608, ../sass/_page.scss */
