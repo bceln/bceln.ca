@@ -12,9 +12,9 @@
 /* -----------------------------------------
    Our Fonts
 ----------------------------------------- */
-@include font-face ( "source_sans_probold", font-files('sourcesanspro-bold-webfont.svg#source_sans_probold', 'svg', 'sourcesanspro-bold-webfont.woff', 'woff', 'sourcesanspro-bold-webfont.ttf', 'truetype'), 'sourcesanspro-bold-webfont.eot');
-@include font-face ( "source_sans_proregular", font-files('sourcesanspro-regular-webfont.svg#source_sans_proregular', 'svg', 'sourcesanspro-regular-webfont.woff', 'woff', 'sourcesanspro-regular-webfont.ttf', 'truetype'), 'sourcesanspro-regular-webfont.eot');
-@include font-face ( "source_sans_prosemibold", font-files('sourcesanspro-semibold-webfont.svg#source_sans_prosemibold', 'svg', 'sourcesanspro-regular-webfont.woff', 'woff', 'sourcesanspro-semibold-webfont.ttf', 'truetype'), 'sourcesanspro-semibold-webfont.eot');
+@include font-face ( "source_sans_probold", font-files('SourceSansPro-Bold.svg', 'svg', 'SourceSansPro-Bold.otf.woff', 'woff', 'SourceSansPro-Bold.ttf.woff', 'truetype'), 'SourceSansPro-Bold.eot');
+@include font-face ( "source_sans_proregular", font-files('SourceSansPro-Regular.svg', 'svg', 'SourceSansPro-Regular.otf.woff', 'woff', 'SourceSansPro-Regular.ttf.woff', 'truetype'), 'SourceSansPro-Regular.eot');
+@include font-face ( "source_sans_prosemibold", font-files('SourceSansPro-Semibold.svg', 'svg', 'SourceSansPro-Semibold.otf.woff', 'woff', 'SourceSansPro-Semibold.ttf.woff', 'truetype'), 'SourceSansPro-Semibold.eot');
 
 // Font Families
 // ------------------------------------------------------

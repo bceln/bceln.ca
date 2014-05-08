@@ -7172,20 +7172,20 @@ table.hide-for-medium {
 ----------------------------------------- */
 @font-face {
   font-family: "source_sans_probold";
-  src: url('../fonts/sourcesanspro-bold-webfont.eot');
-  src: url('../fonts/sourcesanspro-bold-webfont.eot?#iefix') format('eot'), url('../fonts/sourcesanspro-bold-webfont.svg#source_sans_probold') format('svg'), url('../fonts/sourcesanspro-bold-webfont.woff') format('woff'), url('../fonts/sourcesanspro-bold-webfont.ttf') format('truetype');
+  src: url('../fonts/SourceSansPro-Bold.eot');
+  src: url('../fonts/SourceSansPro-Bold.eot?#iefix') format('eot'), url('../fonts/SourceSansPro-Bold.svg') format('svg'), url('../fonts/SourceSansPro-Bold.otf.woff') format('woff'), url('../fonts/SourceSansPro-Bold.ttf.woff') format('truetype');
 }
 
 @font-face {
   font-family: "source_sans_proregular";
-  src: url('../fonts/sourcesanspro-regular-webfont.eot');
-  src: url('../fonts/sourcesanspro-regular-webfont.eot?#iefix') format('eot'), url('../fonts/sourcesanspro-regular-webfont.svg#source_sans_proregular') format('svg'), url('../fonts/sourcesanspro-regular-webfont.woff') format('woff'), url('../fonts/sourcesanspro-regular-webfont.ttf') format('truetype');
+  src: url('../fonts/SourceSansPro-Regular.eot');
+  src: url('../fonts/SourceSansPro-Regular.eot?#iefix') format('eot'), url('../fonts/SourceSansPro-Regular.svg') format('svg'), url('../fonts/SourceSansPro-Regular.otf.woff') format('woff'), url('../fonts/SourceSansPro-Regular.ttf.woff') format('truetype');
 }
 
 @font-face {
   font-family: "source_sans_prosemibold";
-  src: url('../fonts/sourcesanspro-semibold-webfont.eot');
-  src: url('../fonts/sourcesanspro-semibold-webfont.eot?#iefix') format('eot'), url('../fonts/sourcesanspro-semibold-webfont.svg#source_sans_prosemibold') format('svg'), url('../fonts/sourcesanspro-regular-webfont.woff') format('woff'), url('../fonts/sourcesanspro-semibold-webfont.ttf') format('truetype');
+  src: url('../fonts/SourceSansPro-Semibold.eot');
+  src: url('../fonts/SourceSansPro-Semibold.eot?#iefix') format('eot'), url('../fonts/SourceSansPro-Semibold.svg') format('svg'), url('../fonts/SourceSansPro-Semibold.otf.woff') format('woff'), url('../fonts/SourceSansPro-Semibold.ttf.woff') format('truetype');
 }
 
 /* line 30, ../sass/_typography.scss */
@@ -7765,7 +7765,7 @@ nav .foundation-menu {
   display: block;
   text-decoration: none;
   font-size: 1.6rem;
-  font-family: "source_sans_probold", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-family: "source_sans_prosemibold", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 }
 /* line 73, ../sass/_nav.scss */
 #access ul.menu > li > input {
