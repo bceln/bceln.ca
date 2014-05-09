@@ -7420,6 +7420,11 @@ li.btn {
   clear: both;
 }
 
+/* line 614, ../sass/_page.scss */
+ul li .image-left {
+  padding: 1rem 3rem 1rem 0;
+}
+
 /* line 4, ../sass/_settings.scss */
 * {
   -webkit-box-sizing: border-box;
