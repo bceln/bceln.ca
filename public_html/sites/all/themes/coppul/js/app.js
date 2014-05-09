@@ -12,6 +12,8 @@
 
   Drupal.behaviors.init = {
       attach: function(context) {
+            // External links, open in a new window
+            $('a[rel="external"]').attr('target', '_blank');
             /* DrUPAL HACK*/
             $('nav .menu').addClass('nav-bar');
             $('nav .menu .d7flyout').addClass('flyout');
