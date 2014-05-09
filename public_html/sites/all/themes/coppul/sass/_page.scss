@@ -232,11 +232,6 @@ body.node-type-resource {
   article {
     @extend .content-article;
   }
-  .field-resource-vendor-ref {
-    float: right;
-    padding-bottom: rem(2);
-    padding-left: rem(2);
-  }
   .help {
     font-size: rem(1.1);
     margin-top: rem(.5);

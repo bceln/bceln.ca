@@ -8647,17 +8647,11 @@ body.page-user .profile .collapsible legend a {
    Content Types
 ----------------------------------------- */
 /* line 235, ../sass/_page.scss */
-body.node-type-resource .field-resource-vendor-ref {
-  float: right;
-  padding-bottom: 20px;
-  padding-left: 20px;
-}
-/* line 240, ../sass/_page.scss */
 body.node-type-resource .help {
   font-size: 11px;
   margin-top: 5px;
 }
-/* line 244, ../sass/_page.scss */
+/* line 239, ../sass/_page.scss */
 body.node-type-resource #return-res {
   background: url("../images/return-resources.png") no-repeat right 0;
   font-size: 12px;
@@ -8667,39 +8661,39 @@ body.node-type-resource #return-res {
   right: 15px;
   top: 52px;
 }
-/* line 252, ../sass/_page.scss */
+/* line 247, ../sass/_page.scss */
 body.node-type-resource #return-res a {
   color: #8c8b89;
   display: block;
   padding: 5px 40px 0 0;
 }
 
-/* line 270, ../sass/_page.scss */
+/* line 265, ../sass/_page.scss */
 body.page-user .profile .row-container {
   border: 1px solid #dddddd;
   padding: 20px 0;
 }
-/* line 273, ../sass/_page.scss */
+/* line 268, ../sass/_page.scss */
 body.page-user .profile .row-container .row {
   margin: 0 auto;
   width: 900px;
 }
-/* line 278, ../sass/_page.scss */
+/* line 273, ../sass/_page.scss */
 body.page-user .profile .row-container .one .field-item {
   border-bottom-style: none;
 }
 
-/* line 285, ../sass/_page.scss */
+/* line 280, ../sass/_page.scss */
 body.node-type-contact .node .field-item {
   padding-bottom: 1em;
 }
 
-/* line 302, ../sass/_page.scss */
+/* line 297, ../sass/_page.scss */
 .field-name-field-resource-vend-desc {
   padding-bottom: 15px;
 }
 
-/* line 306, ../sass/_page.scss */
+/* line 301, ../sass/_page.scss */
 body.node-type-contact .field-name-field-contact-groups {
   position: absolute;
   right: 50%;
@@ -8709,12 +8703,12 @@ body.node-type-contact .field-name-field-contact-groups {
 /* -----------------------------------------
    Individual fields
 ----------------------------------------- */
-/* line 315, ../sass/_page.scss */
+/* line 310, ../sass/_page.scss */
 .st_sharethis {
   font-size: 0.867em;
 }
 
-/* line 319, ../sass/_page.scss */
+/* line 314, ../sass/_page.scss */
 .more-link {
   background: #10b7e3;
   -moz-border-radius: 5px;
@@ -8731,7 +8725,7 @@ body.node-type-contact .field-name-field-contact-groups {
   width: 105px;
 }
 
-/* line 334, ../sass/_page.scss */
+/* line 329, ../sass/_page.scss */
 .more-link a {
   color: #fff;
   text-decoration: none;
@@ -8740,7 +8734,7 @@ body.node-type-contact .field-name-field-contact-groups {
 /* -----------------------------------------
    Front page specific
 ----------------------------------------- */
-/* line 342, ../sass/_page.scss */
+/* line 337, ../sass/_page.scss */
 .front #content .entry-content h2, .front #content .entry-content label, .front #content > article:not(.node-contact) .entry-content .field-label,
 .front #content .entry-content .content-article .field-label,
 .content-article .front #content .entry-content .field-label,
@@ -8763,32 +8757,32 @@ body.page-user .profile .front #content .entry-content .field-label, .front #con
   padding-bottom: 20px;
 }
 
-/* line 348, ../sass/_page.scss */
+/* line 343, ../sass/_page.scss */
 .front #content > article .field-item {
   border: 0;
 }
 
-/* line 352, ../sass/_page.scss */
+/* line 347, ../sass/_page.scss */
 .front .submitted {
   display: none;
 }
 
-/* line 357, ../sass/_page.scss */
+/* line 352, ../sass/_page.scss */
 .front #content .view-Blog ul {
   padding-left: 0;
 }
-/* line 361, ../sass/_page.scss */
+/* line 356, ../sass/_page.scss */
 .front #content .view-Blog .views-field-title a {
   font-size: 24px;
   line-height: 30px;
 }
-/* line 366, ../sass/_page.scss */
+/* line 361, ../sass/_page.scss */
 .front #content .view-Blog .views-field-created {
   color: #ef482d;
   font-size: 20px;
 }
 
-/* line 372, ../sass/_page.scss */
+/* line 367, ../sass/_page.scss */
 .front #content .view-Blog .more-link {
   background: #10b7e3;
   -moz-border-radius: 5px;
@@ -8803,7 +8797,7 @@ body.page-user .profile .front #content .entry-content .field-label, .front #con
   text-align: center;
   width: 130px;
 }
-/* line 386, ../sass/_page.scss */
+/* line 381, ../sass/_page.scss */
 .front #content .view-Blog .more-link a {
   color: #fff;
   text-decoration: none;
@@ -8812,7 +8806,7 @@ body.page-user .profile .front #content .entry-content .field-label, .front #con
 /* -----------------------------------------
    Views
 ----------------------------------------- */
-/* line 397, ../sass/_page.scss */
+/* line 392, ../sass/_page.scss */
 #block-views-contacts-by-group-block {
   background: #f7f7f7;
   border-bottom: 5px solid #efefef;
@@ -8827,7 +8821,7 @@ body.page-user .profile .front #content .entry-content .field-label, .front #con
 /* -----------------------------------------
    UI Elements
 ----------------------------------------- */
-/* line 409, ../sass/_page.scss */
+/* line 404, ../sass/_page.scss */
 .button:hover, #content > article:not(.node-contact) .collapsed legend a:hover,
 #content > article:not(.node-contact) .collapsible legend a:hover,
 .content-article .collapsed legend a:hover,
@@ -8883,32 +8877,32 @@ body.page-user .profile .collapsible legend a:focus {
   background: #877f77;
 }
 
-/* line 414, ../sass/_page.scss */
+/* line 409, ../sass/_page.scss */
 #breadcrumb {
   height: 30px;
   padding-top: 7px;
   padding-left: 30px;
 }
 
-/* line 420, ../sass/_page.scss */
+/* line 415, ../sass/_page.scss */
 ul.pagination {
   margin-top: 15px;
   text-align: left;
 }
-/* line 423, ../sass/_page.scss */
+/* line 418, ../sass/_page.scss */
 ul.pagination li {
   float: none;
   display: inline-block;
   margin: 0;
 }
-/* line 428, ../sass/_page.scss */
+/* line 423, ../sass/_page.scss */
 ul.pagination li .first {
   padding-left: 0;
   margin-left: 0;
 }
 
 /* Tab styling */
-/* line 437, ../sass/_page.scss */
+/* line 432, ../sass/_page.scss */
 div.drupal_tabs {
   background: #dddddd;
   overflow: auto;
@@ -8918,7 +8912,7 @@ div.drupal_tabs {
   -webkit-border-radius: 6px;
 }
 
-/* line 443, ../sass/_page.scss */
+/* line 438, ../sass/_page.scss */
 dl.tabs.primary,
 dl.tabs.secondary {
   border-style: none;
@@ -8926,19 +8920,19 @@ dl.tabs.secondary {
   padding: 0;
 }
 
-/* line 447, ../sass/_page.scss */
+/* line 442, ../sass/_page.scss */
 dl.tabs.primary {
   float: left;
 }
 
-/* line 451, ../sass/_page.scss */
+/* line 446, ../sass/_page.scss */
 dl.tabs.primary dd {
   display: inline;
   margin: 0;
   padding: 0;
 }
 
-/* line 455, ../sass/_page.scss */
+/* line 450, ../sass/_page.scss */
 dl.tabs.primary dd a {
   background: white;
   border-style: none;
@@ -8954,20 +8948,20 @@ dl.tabs.primary dd a {
   text-decoration: none;
 }
 
-/* line 462, ../sass/_page.scss */
+/* line 457, ../sass/_page.scss */
 dl.tabs.primary dd a:hover,
 dl.tabs.primary dd a:active {
   background: #877f77;
   color: white;
 }
 
-/* line 467, ../sass/_page.scss */
+/* line 462, ../sass/_page.scss */
 dl.tabs.primary dd.active a {
   background: #877f77;
   color: white;
 }
 
-/* line 471, ../sass/_page.scss */
+/* line 466, ../sass/_page.scss */
 dl.tabs.secondary {
   border-top: 1px solid white;
   clear: both;
@@ -8978,7 +8972,7 @@ dl.tabs.secondary {
   top: 4px;
 }
 
-/* line 475, ../sass/_page.scss */
+/* line 470, ../sass/_page.scss */
 dl.tabs.secondary dd {
   border-style: none;
   display: block;
@@ -8987,7 +8981,7 @@ dl.tabs.secondary dd {
   padding: 6px 0;
 }
 
-/* line 479, ../sass/_page.scss */
+/* line 474, ../sass/_page.scss */
 dl.tabs.secondary dd a {
   border-bottom-style: none;
   border-right: 1px solid white;
@@ -9001,7 +8995,7 @@ dl.tabs.secondary dd a {
 /* -----------------------------------------
    Forms
 ----------------------------------------- */
-/* line 489, ../sass/_page.scss */
+/* line 484, ../sass/_page.scss */
 .standard-form .button, #user-login .button,
 #search-form .button, .standard-form #content > article:not(.node-contact) .collapsed legend a, #content > article:not(.node-contact) .collapsed legend .standard-form a, #user-login #content > article:not(.node-contact) .collapsed legend a, #content > article:not(.node-contact) .collapsed legend #user-login a,
 #search-form #content > article:not(.node-contact) .collapsed legend a,
@@ -9128,7 +9122,7 @@ body.page-user .profile .collapsible legend #search-form a {
 
 /* Tabs Styles */
 /* line 742, ../sass/_views.scss */
-/* line 503, ../sass/_page.scss */
+/* line 498, ../sass/_page.scss */
 .page-organizations dl.primary,
 .page-licenses-products dl.primary,
 .page-licenses dl.primary {
@@ -9138,7 +9132,7 @@ body.page-user .profile .collapsible legend #search-form a {
 }
 
 /* line 750, ../sass/_views.scss */
-/* line 512, ../sass/_page.scss */
+/* line 507, ../sass/_page.scss */
 .page-organizations dl.tabs.primary dd,
 .page-licenses-products dl.tabs.primary dd,
 .page-licenses dl.tabs.primary dd {
@@ -9148,7 +9142,7 @@ body.page-user .profile .collapsible legend #search-form a {
 }
 
 /* line 758, ../sass/_views.scss */
-/* line 521, ../sass/_page.scss */
+/* line 516, ../sass/_page.scss */
 .page-organizations div.drupal_tabs,
 .page-licenses-products div.drupal_tabs,
 .page-licenses div.drupal_tabs {
@@ -9163,7 +9157,7 @@ body.page-user .profile .collapsible legend #search-form a {
 }
 
 /* line 772, ../sass/_views.scss */
-/* line 535, ../sass/_page.scss */
+/* line 530, ../sass/_page.scss */
 .page-organizations dl.tabs.primary,
 .page-licenses-products dl.tabs.primary,
 .page-licenses dl.tabs.primary {
@@ -9178,13 +9172,13 @@ body.page-user .profile .collapsible legend #search-form a {
 }
 
 /* line 784, ../sass/_views.scss */
-/* line 547, ../sass/_page.scss */
+/* line 542, ../sass/_page.scss */
 li.btn {
   width: 168px;
 }
 
 /* line 791, ../sass/_views.scss */
-/* line 554, ../sass/_page.scss */
+/* line 549, ../sass/_page.scss */
 .page-organizations dl.tabs.primary dd a,
 .page-licenses-products dl.tabs.primary dd a,
 .page-licenses dl.tabs.primary dd a {
@@ -9204,7 +9198,7 @@ li.btn {
 }
 
 /* line 809, ../sass/_views.scss */
-/* line 573, ../sass/_page.scss */
+/* line 568, ../sass/_page.scss */
 .page-organizations dl.tabs.primary dd.active a,
 .page-licenses-products dl.tabs.primary dd.active a,
 .page-licenses dl.tabs.primary dd.active a {
@@ -9213,7 +9207,7 @@ li.btn {
 }
 
 /* line 816, ../sass/_views.scss */
-/* line 581, ../sass/_page.scss */
+/* line 576, ../sass/_page.scss */
 .page-organizations dl.tabs.primary dd a:hover,
 .page-licenses-products dl.tabs.primary dd a:hover,
 .page-licenses dl.tabs.primary dd a:hover {
@@ -9224,34 +9218,34 @@ li.btn {
 /* -----------------------------------------
    Term Landing Pages (Committee pages)
 ----------------------------------------- */
-/* line 590, ../sass/_page.scss */
+/* line 585, ../sass/_page.scss */
 .vocabulary-groups {
   border-bottom: 1px dotted #dddddd;
 }
 
-/* line 594, ../sass/_page.scss */
+/* line 589, ../sass/_page.scss */
 .image-right, .image-right img {
   float: right;
   padding: 0 0 10px 10px;
 }
-/* line 598, ../sass/_page.scss */
+/* line 593, ../sass/_page.scss */
 .image-right:after, .image-right img:after {
   content: '';
   clear: both;
 }
 
-/* line 604, ../sass/_page.scss */
+/* line 599, ../sass/_page.scss */
 .image-left, .image-left img {
   float: left;
   padding: 0 10px 10px 0;
 }
-/* line 608, ../sass/_page.scss */
+/* line 603, ../sass/_page.scss */
 .image-left:after, .image-left img:after {
   content: '';
   clear: both;
 }
 
-/* line 614, ../sass/_page.scss */
+/* line 609, ../sass/_page.scss */
 ul li .image-left {
   padding: 10px 30px 10px 0;
 }
