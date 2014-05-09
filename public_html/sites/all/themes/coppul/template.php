@@ -13,9 +13,9 @@
  * Implements template_preprocess_field().
  * This way we can theme any field with its own function
  */
-function ehlbc_preprocess_field(&$variables) {
+function coppul_preprocess_field(&$variables) {
   // Allow for separate theming functions:
-  $function = 'ehlbc_preprocess_field__' . $variables['element']['#field_name'];
+  $function = 'coppul_preprocess_field__' . $variables['element']['#field_name'];
   if (function_exists($function)) {
     $function($variables);
   }
@@ -33,7 +33,7 @@ function ehlbc_preprocess_field(&$variables) {
       foreach ($variables['element']['#items'] as $key => $item) {
         $attachment = array();
         $attachment_details = '';
-        $download_url = file_create_url($item['uri']); 
+        $download_url = file_create_url($item['uri']);
         $attachment['items'][] = sprintf($format, t('Description'), $item['description']);
         $attachment['items'][] = sprintf($format, t('File path/name'), $download_url);
         $attachment['items'][] = sprintf($format, t('Filesize'), format_size($item['filesize']));
@@ -112,22 +112,22 @@ function ehlbc_preprocess_field(&$variables) {
       break;
     case 'field_trial_active':
       if ($variables['element']['#items'][0]['value'] === 'N') {
-        $variables['items'][0]['#markup'] = t('<strong><span class="notice">Please Note</span>: This Renewal is not currently active. This documentation is for reference only.</strong>'); 
+        $variables['items'][0]['#markup'] = t('<strong><span class="notice">Please Note</span>: This Renewal is not currently active. This documentation is for reference only.</strong>');
       }
       break;
     case 'field_trial_deadline':
       $variables['items'][0]['#markup'] = preg_replace('/<span[^>]+>([^>]+)<\/span>/', '<div class="deadline"><strong>*** ' . t('Response Deadline') . ': $1 ***</strong></div>', $variables['items'][0]['#markup']);
       break;
   }
-} // ehlbc_preprocess_field()
+} // coppul_preprocess_field()
 
 
 /**
  * Implements template_preprocess_node().
  */
-function ehlbc_preprocess_node(&$variables){
+function coppul_preprocess_node(&$variables){
   switch ($variables['type']) {
-    case 'license': 
+    case 'license':
       break;
 
     case 'resource':
@@ -198,7 +198,7 @@ function ehlbc_preprocess_node(&$variables){
       }
       // Also, deal with the license term stuff:
       $variables['content']['field_trial_begins']['#title'] = t('Subscription Information');
-      $variables['content']['field_trial_begins'][0]['#markup'] = t('<strong>License Term</strong>: !start - !end', array('!start' => $variables['content']['field_trial_begins'][0]['#markup'], '!end' => $variables['content']['field_trial_ends'][0]['#markup'])); 
+      $variables['content']['field_trial_begins'][0]['#markup'] = t('<strong>License Term</strong>: !start - !end', array('!start' => $variables['content']['field_trial_begins'][0]['#markup'], '!end' => $variables['content']['field_trial_ends'][0]['#markup']));
       $variables['content']['field_trial_ends']['#access'] = FALSE;
 
 
@@ -230,14 +230,14 @@ function ehlbc_preprocess_node(&$variables){
 
      break;
   }
-} // ehlbc_preprocess_node()
+} // coppul_preprocess_node()
 
 
 /**
  * Implements template_preprocess_page().
  */
-function ehlbc_preprocess_page(&$variables) {
-  
+function coppul_preprocess_page(&$variables) {
+
   if($variables['page']['content']['system_main']['#account']) {
     $uid = $variables['page']['content']['system_main']['#account']->uid;
     $profiles = profile2_load_by_user($uid);
@@ -255,13 +255,13 @@ function ehlbc_preprocess_page(&$variables) {
 
   drupal_add_js('http://w.sharethis.com/button/buttons.js', 'external');
   drupal_add_js('stLight.options({publisher:"4e1667cf-8007-473e-96b5-3eda0d97f1fb"});', 'inline');
-} // ehlbc_preprocess_page()
+} // coppul_preprocess_page()
 
 
 /**
  * Implements template_preprocess_views_view().
  */
-function ehlbc_preprocess_views_view(&$variables) {
+function coppul_preprocess_views_view(&$variables) {
   // Pick a view, any view...
   switch ($variables['view']->name) {
     // We only care about the events view at this time:
@@ -289,10 +289,9 @@ function ehlbc_preprocess_views_view(&$variables) {
         if ($duplicates_found) {
           // Set the current value of rows to the value of the view re-rendered with the
           // altered result array:
-          $variables['rows'] = $variables['view']->style_plugin->render($variables['view']->result); 
+          $variables['rows'] = $variables['view']->style_plugin->render($variables['view']->result);
         }
       }
       break;
   }
-} // ehlbc_preprocess_views_view()
-
+} // coppul_preprocess_views_view()
