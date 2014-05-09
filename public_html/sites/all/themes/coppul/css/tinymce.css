@@ -8176,15 +8176,16 @@ body.node-type-trial-renewal body#tinymce .front #content .entry-content .field-
 body.page-user .profile .front #content .entry-content .field-name-body .field-label {
   background-color: rgba(0, 0, 0, 0.75);
   color: white;
-  padding: 1.9rem;
-  width: 56%;
-  top: 43%;
+  padding: 2.6rem;
+  width: 59%;
+  top: 41%;
   line-height: 3.8rem;
-  font-size: 2.8rem;
+  font-size: 2.6rem;
+  font-weight: normal;
   position: absolute;
 }
 
-/* line 516, ../sass/_block.scss */
+/* line 517, ../sass/_block.scss */
 #block-block-12, #block-block-13, #block-block-14 {
   background-color: #e4e2e2;
   width: 31%;
@@ -8193,7 +8194,7 @@ body.page-user .profile .front #content .entry-content .field-name-body .field-l
   padding: 2.2rem 1.2rem 2.2rem 2.2rem;
   float: left;
 }
-/* line 524, ../sass/_block.scss */
+/* line 525, ../sass/_block.scss */
 #block-block-12 h2, #block-block-12 #content label, #content #block-block-12 label,
 #block-block-12 .profile label,
 .profile #block-block-12 label,
@@ -8303,22 +8304,22 @@ body.page-user .profile #block-block-14 .field-label {
   padding-left: 2.6rem;
   background: transparent url("/sites/all/themes/coppul/images/icon-browse-resources.png") top left no-repeat;
 }
-/* line 533, ../sass/_block.scss */
+/* line 534, ../sass/_block.scss */
 #block-block-12 .block-content p, #block-block-13 .block-content p, #block-block-14 .block-content p {
   font-size: 1.6rem;
   line-height: 2.4rem;
   margin-bottom: 0;
 }
-/* line 540, ../sass/_block.scss */
+/* line 541, ../sass/_block.scss */
 #block-block-12:after, #block-block-13:after, #block-block-14:after {
   box-sizing: border-box;
 }
 
-/* line 545, ../sass/_block.scss */
+/* line 546, ../sass/_block.scss */
 #block-block-13 {
   margin: 0 3rem;
 }
-/* line 547, ../sass/_block.scss */
+/* line 548, ../sass/_block.scss */
 #block-block-13 h2, #block-block-13 #content label, #content #block-block-13 label,
 #block-block-13 .profile label,
 .profile #block-block-13 label,
@@ -8358,7 +8359,7 @@ body.page-user .profile #block-block-13 .field-label {
   background-image: url("/sites/all/themes/coppul/images/icon-member-info.png");
 }
 
-/* line 554, ../sass/_block.scss */
+/* line 555, ../sass/_block.scss */
 #block-block-14 h2, #block-block-14 #content label, #content #block-block-14 label,
 #block-block-14 .profile label,
 .profile #block-block-14 label,
@@ -8397,18 +8398,18 @@ body.page-user .profile #block-block-14 .field-label {
   background-image: url("/sites/all/themes/coppul/images/icon-discover.png");
 }
 
-/* line 559, ../sass/_block.scss */
+/* line 560, ../sass/_block.scss */
 #block-block-12 {
   margin-bottom: 3.5rem;
   float: right;
 }
-/* line 562, ../sass/_block.scss */
+/* line 563, ../sass/_block.scss */
 #block-block-12:after {
   clear: both;
   content: " ";
   display: table;
 }
-/* line 568, ../sass/_block.scss */
+/* line 569, ../sass/_block.scss */
 #block-block-12 h2, #block-block-12 #content label, #content #block-block-12 label,
 #block-block-12 .profile label,
 .profile #block-block-12 label,
@@ -8447,7 +8448,7 @@ body.page-user .profile #block-block-12 .field-label {
   padding-left: 3.2rem;
 }
 
-/* line 573, ../sass/_block.scss */
+/* line 574, ../sass/_block.scss */
 #block-views-blog-block-6 {
   clear: both;
 }

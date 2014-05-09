@@ -7714,26 +7714,25 @@ nav .foundation-menu {
 #access ul.menu > li > a {
   line-height: 4.3rem;
   color: white;
-  font-weight: bold;
 }
-/* line 33, ../sass/_nav.scss */
+/* line 32, ../sass/_nav.scss */
 #access ul.menu > li > a:hover {
   color: #11b7e2;
 }
-/* line 36, ../sass/_nav.scss */
+/* line 35, ../sass/_nav.scss */
 #access ul.menu > li ul {
   margin-bottom: 0;
 }
-/* line 37, ../sass/_nav.scss */
+/* line 36, ../sass/_nav.scss */
 #access ul.menu > li .flyout {
   display: none;
 }
-/* line 40, ../sass/_nav.scss */
+/* line 39, ../sass/_nav.scss */
 #access ul.menu > li.has-flyout > a:first-child {
   padding-right: 4.3rem;
   position: relative;
 }
-/* line 43, ../sass/_nav.scss */
+/* line 42, ../sass/_nav.scss */
 #access ul.menu > li.has-flyout > a:first-child:after {
   content: "";
   display: block;
@@ -7745,7 +7744,7 @@ nav .foundation-menu {
   right: 2.15rem;
   top: 1.85rem;
 }
-/* line 50, ../sass/_nav.scss */
+/* line 49, ../sass/_nav.scss */
 #access ul.menu > li.has-flyout > a.flyout-toggle {
   position: absolute;
   right: 0;
@@ -7754,11 +7753,11 @@ nav .foundation-menu {
   z-index: 2;
   display: block;
 }
-/* line 59, ../sass/_nav.scss */
+/* line 58, ../sass/_nav.scss */
 #access ul.menu > li.has-flyout.is-touch > a:first-child {
   padding-right: 5.5rem;
 }
-/* line 65, ../sass/_nav.scss */
+/* line 64, ../sass/_nav.scss */
 #access ul.menu > li > a:first-child {
   position: relative;
   padding: 0 1.9rem;
@@ -7767,20 +7766,20 @@ nav .foundation-menu {
   font-size: 1.6rem;
   font-family: "source_sans_prosemibold", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 }
-/* line 73, ../sass/_nav.scss */
+/* line 72, ../sass/_nav.scss */
 #access ul.menu > li > input {
   margin: 0 1rem;
 }
-/* line 75, ../sass/_nav.scss */
+/* line 74, ../sass/_nav.scss */
 #access ul.menu.vertical {
   height: auto;
   margin-top: 0;
 }
-/* line 79, ../sass/_nav.scss */
+/* line 78, ../sass/_nav.scss */
 #access ul.menu.vertical > li {
   float: none;
 }
-/* line 81, ../sass/_nav.scss */
+/* line 80, ../sass/_nav.scss */
 #access ul.menu.vertical > li.has-flyout > a:first-child:after {
   content: "";
   display: block;
@@ -7789,23 +7788,23 @@ nav .foundation-menu {
   border: solid 0.4rem;
   border-color: transparent transparent transparent #e6e6e6;
 }
-/* line 84, ../sass/_nav.scss */
+/* line 83, ../sass/_nav.scss */
 #access ul.menu.vertical > li .flyout {
   left: 100%;
   top: -0.1rem;
 }
-/* line 87, ../sass/_nav.scss */
+/* line 86, ../sass/_nav.scss */
 #access ul.menu.vertical > li .flyout.right {
   left: auto;
   right: 100%;
 }
 
-/* line 97, ../sass/_nav.scss */
+/* line 96, ../sass/_nav.scss */
 #access ul.menu li ul {
   padding: 0;
   list-style: none;
 }
-/* line 102, ../sass/_nav.scss */
+/* line 101, ../sass/_nav.scss */
 #access ul.menu li ul li a {
   display: block;
   font-size: 18px;
@@ -7813,23 +7812,23 @@ nav .foundation-menu {
   line-height: 1;
   padding: 1.65rem 2.15rem;
 }
-/* line 112, ../sass/_nav.scss */
+/* line 111, ../sass/_nav.scss */
 #access ul.menu li ul li.active {
   margin-top: 0;
 }
-/* line 114, ../sass/_nav.scss */
+/* line 113, ../sass/_nav.scss */
 #access ul.menu li ul li.active a {
   height: auto;
   margin: 0;
   position: static;
   top: 0;
 }
-/* line 124, ../sass/_nav.scss */
+/* line 123, ../sass/_nav.scss */
 #access ul.menu li ul ul.flyout, #access ul.menu li ul #access ul.menu li ul {
   padding: 0;
   list-style: none;
 }
-/* line 129, ../sass/_nav.scss */
+/* line 128, ../sass/_nav.scss */
 #access ul.menu li ul ul.flyout li a, #access ul.menu li ul #access ul.menu li ul li a {
   display: block;
   font-size: 18px;
@@ -7837,11 +7836,11 @@ nav .foundation-menu {
   line-height: 1;
   padding: 1.65rem 2.15rem;
 }
-/* line 139, ../sass/_nav.scss */
+/* line 138, ../sass/_nav.scss */
 #access ul.menu li ul ul.flyout li.active, #access ul.menu li ul #access ul.menu li ul li.active {
   margin-top: 0;
 }
-/* line 141, ../sass/_nav.scss */
+/* line 140, ../sass/_nav.scss */
 #access ul.menu li ul ul.flyout li.active a, #access ul.menu li ul #access ul.menu li ul li.active a {
   height: auto;
   margin: 0;
@@ -10998,15 +10997,16 @@ body.node-type-trial-renewal article .front #content .entry-content .field-name-
 body.page-user .profile .front #content .entry-content .field-name-body .field-label, .front #content .entry-content .field-name-body .view-organizations table caption, .view-organizations table .front #content .entry-content .field-name-body caption {
   background-color: rgba(0, 0, 0, 0.75);
   color: white;
-  padding: 1.9rem;
-  width: 56%;
-  top: 43%;
+  padding: 2.6rem;
+  width: 59%;
+  top: 41%;
   line-height: 3.8rem;
-  font-size: 2.8rem;
+  font-size: 2.6rem;
+  font-weight: normal;
   position: absolute;
 }
 
-/* line 516, ../sass/_block.scss */
+/* line 517, ../sass/_block.scss */
 #block-block-12, #block-block-13, #block-block-14 {
   background-color: #e4e2e2;
   width: 31%;
@@ -11015,7 +11015,7 @@ body.page-user .profile .front #content .entry-content .field-name-body .field-l
   padding: 2.2rem 1.2rem 2.2rem 2.2rem;
   float: left;
 }
-/* line 524, ../sass/_block.scss */
+/* line 525, ../sass/_block.scss */
 #block-block-12 h2, #block-block-12 #content label, #content #block-block-12 label,
 #block-block-12 .profile label,
 .profile #block-block-12 label,
@@ -11083,22 +11083,22 @@ body.page-user .profile #block-block-14 .field-label, #block-block-14 .view-orga
   padding-left: 2.6rem;
   background: transparent url("/sites/all/themes/coppul/images/icon-browse-resources.png") top left no-repeat;
 }
-/* line 533, ../sass/_block.scss */
+/* line 534, ../sass/_block.scss */
 #block-block-12 .block-content p, #block-block-13 .block-content p, #block-block-14 .block-content p {
   font-size: 1.6rem;
   line-height: 2.4rem;
   margin-bottom: 0;
 }
-/* line 540, ../sass/_block.scss */
+/* line 541, ../sass/_block.scss */
 #block-block-12:after, #block-block-13:after, #block-block-14:after {
   box-sizing: border-box;
 }
 
-/* line 545, ../sass/_block.scss */
+/* line 546, ../sass/_block.scss */
 #block-block-13 {
   margin: 0 3rem;
 }
-/* line 547, ../sass/_block.scss */
+/* line 548, ../sass/_block.scss */
 #block-block-13 h2, #block-block-13 #content label, #content #block-block-13 label,
 #block-block-13 .profile label,
 .profile #block-block-13 label,
@@ -11124,7 +11124,7 @@ body.page-user .profile #block-block-13 .field-label, #block-block-13 .view-orga
   background-image: url("/sites/all/themes/coppul/images/icon-member-info.png");
 }
 
-/* line 554, ../sass/_block.scss */
+/* line 555, ../sass/_block.scss */
 #block-block-14 h2, #block-block-14 #content label, #content #block-block-14 label,
 #block-block-14 .profile label,
 .profile #block-block-14 label,
@@ -11149,18 +11149,18 @@ body.page-user .profile #block-block-14 .field-label, #block-block-14 .view-orga
   background-image: url("/sites/all/themes/coppul/images/icon-discover.png");
 }
 
-/* line 559, ../sass/_block.scss */
+/* line 560, ../sass/_block.scss */
 #block-block-12 {
   margin-bottom: 3.5rem;
   float: right;
 }
-/* line 562, ../sass/_block.scss */
+/* line 563, ../sass/_block.scss */
 #block-block-12:after {
   clear: both;
   content: " ";
   display: table;
 }
-/* line 568, ../sass/_block.scss */
+/* line 569, ../sass/_block.scss */
 #block-block-12 h2, #block-block-12 #content label, #content #block-block-12 label,
 #block-block-12 .profile label,
 .profile #block-block-12 label,
@@ -11185,7 +11185,7 @@ body.page-user .profile #block-block-12 .field-label, #block-block-12 .view-orga
   padding-left: 3.2rem;
 }
 
-/* line 573, ../sass/_block.scss */
+/* line 574, ../sass/_block.scss */
 #block-views-blog-block-6 {
   clear: both;
 }
