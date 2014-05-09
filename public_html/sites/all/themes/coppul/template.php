@@ -118,6 +118,16 @@ function coppul_preprocess_field(&$variables) {
     case 'field_trial_deadline':
       $variables['items'][0]['#markup'] = preg_replace('/<span[^>]+>([^>]+)<\/span>/', '<div class="deadline"><strong>*** ' . t('Response Deadline') . ': $1 ***</strong></div>', $variables['items'][0]['#markup']);
       break;
+
+    case 'field_resources_content_types':
+        if(count($variables['element']['#items']) > 0) {
+          $content_types = array();
+          foreach($variables['element']['#items'] as $item) {
+            array_push($content_types, $item['value']);
+          }
+          $variables['items'] = array(implode(', ', $content_types));
+        }
+      break;
   }
 } // coppul_preprocess_field()
 
