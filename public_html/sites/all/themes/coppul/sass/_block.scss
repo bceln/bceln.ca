@@ -502,6 +502,7 @@
 .front #content .entry-content .field-name-body {
   position:relative;
   h2 {
+    background-color: rgb(0,0,0);
     background-color: rgba(0,0,0,0.75);
     color: $white;
     padding: rem(2.6);
@@ -511,6 +512,15 @@
     font-size: rem(2.6);
     font-weight: normal;
     position:absolute;
+
+    @include mq(lte2) {
+      position: relative;
+      width: auto;
+      font-size: rem(1.8);
+      margin-bottom: 0;
+      padding: rem(1);
+      line-height: 1;
+    }
   }
 }
 
@@ -521,6 +531,12 @@
   position: relative;
   padding: rem(2.2) rem(1.2) rem(2.2) rem(2.2);
   float: left;
+
+  @include mq(lte2) {
+    float: none;
+    width: 100%;
+    margin-bottom: rem(0.5);
+  }
 
   h2 {
     font-size: rem(2.2);
@@ -548,6 +564,11 @@
   h2 {
     padding-left: rem(4);
     background-image: url('/sites/all/themes/coppul/images/icon-member-info.png');
+  }
+
+  @include mq(lte2) {
+    margin-right: 0;
+    margin-left: 0;
   }
 }
 

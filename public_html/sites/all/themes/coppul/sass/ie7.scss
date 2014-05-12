@@ -8,3 +8,51 @@ $ie: 7;
 @import "app";
 
 .view-resources .views-exposed-form { margin-top: 0;}
+
+.front #content .entry-content .field-name-body {
+  h2 {
+    background-color: #000;
+  }
+}
+
+body {
+  margin:0;
+  padding:0;
+}
+
+.group-license a.fieldset-title {
+    background: $mainColor;
+    color: $white;
+    border-bottom: 1px solid $gray_2;
+    -moz-border-radius: rem(.5);
+    -webkit-border-radius: rem(.5);
+    border-radius: rem(.5);
+    border-left-style: none;
+    border-right-style: none;
+    border-top: 1px solid $gray_3;
+    padding: rem(.5) rem(.8);
+}
+
+#content article,
+.content-article {
+  .field-label {
+    @extend h2;
+    color: $orange;
+    font-size: rem(2);
+    margin-top: 0;
+    margin-bottom: rem(1.5);
+  }
+  .collapsed,
+  .collapsible {
+    legend {
+      background: transparent;
+      a {
+        color: $white;
+        font-weight: bold;
+        text-align: center;
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+    }
+  }
+}

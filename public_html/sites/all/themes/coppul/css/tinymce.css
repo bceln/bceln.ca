@@ -5804,6 +5804,7 @@ body#tinymce ul {
 article label,
 body#tinymce label {
   margin-top: 0;
+  font-weight: normal;
   /*
   color: $secondaryColor;
   font-size: rem(1.7);
@@ -5812,25 +5813,25 @@ body#tinymce label {
   */
 }
 
-/* line 140, ../sass/_typography.scss */
+/* line 141, ../sass/_typography.scss */
 #content article ul.links, #content body#tinymce ul.links {
   padding-left: 0;
 }
 
-/* line 144, ../sass/_typography.scss */
+/* line 145, ../sass/_typography.scss */
 aside p {
   font-style: inherit;
   font-size: 1.5rem;
 }
 
-/* line 149, ../sass/_typography.scss */
+/* line 150, ../sass/_typography.scss */
 #main section .block-title {
   font-size: 1.9rem;
   color: #3a3a3a;
   font-weight: bold;
 }
 
-/* line 157, ../sass/_typography.scss */
+/* line 158, ../sass/_typography.scss */
 #sidebar-right .block h2, #sidebar-right .block #content label, #content #sidebar-right .block label,
 #sidebar-right .block .profile label,
 .profile #sidebar-right .block label,
@@ -5871,12 +5872,12 @@ body.page-user .profile #sidebar-right .block .field-label {
   font-size: 1em;
   font-weight: bold;
 }
-/* line 164, ../sass/_typography.scss */
+/* line 165, ../sass/_typography.scss */
 #sidebar-right .block ul {
   padding: 0 0 0.25em 1em;
 }
 
-/* line 172, ../sass/_typography.scss */
+/* line 173, ../sass/_typography.scss */
 #sidebar-left .block h2, #sidebar-left .block #content label, #content #sidebar-left .block label,
 #sidebar-left .block .profile label,
 .profile #sidebar-left .block label,
@@ -5924,7 +5925,7 @@ body.page-user .profile #sidebar-left .block .field-label {
 /* -----------------------------------------
    Block typography:
 ----------------------------------------- */
-/* line 212, ../sass/_typography.scss */
+/* line 213, ../sass/_typography.scss */
 .block h2, .block #content label, #content .block label,
 .block .profile label,
 .profile .block label,
@@ -5963,7 +5964,7 @@ body.page-user .profile .block .field-label,
 .block h3 {
   margin: 0 0 1rem;
 }
-/* line 216, ../sass/_typography.scss */
+/* line 217, ../sass/_typography.scss */
 .block h3 {
   clear: both;
   color: #2a2724;
@@ -5974,7 +5975,7 @@ body.page-user .profile .block .field-label,
 /* -----------------------------------------
    Individual fields
 ----------------------------------------- */
-/* line 229, ../sass/_typography.scss */
+/* line 230, ../sass/_typography.scss */
 .front #content .entry-content .field-name-body h2, .front #content .entry-content .field-name-body label, .front #content > article:not(.node-contact) .entry-content .field-name-body .field-label, .front #content > body#tinymce:not(.node-contact) .entry-content .field-name-body .field-label,
 .front #content .entry-content .field-name-body .content-article .field-label,
 .content-article .front #content .entry-content .field-name-body .field-label,
@@ -6007,7 +6008,7 @@ body.page-user .profile .front #content .entry-content .field-name-body .field-l
   font-size: 3.5rem;
 }
 
-/* line 234, ../sass/_typography.scss */
+/* line 235, ../sass/_typography.scss */
 .field-name-field-trial-deadline {
   font-size: 1.8rem;
   text-align: center;
@@ -6016,7 +6017,7 @@ body.page-user .profile .front #content .entry-content .field-name-body .field-l
 /* -----------------------------------------
    UI Elements (pagination, breadcrumbs etc.)
 ----------------------------------------- */
-/* line 245, ../sass/_typography.scss */
+/* line 246, ../sass/_typography.scss */
 #content > article:not(.node-contact) .field-label, #content > body#tinymce:not(.node-contact) .field-label,
 .content-article .field-label,
 body.node-type-resource article .field-label,
@@ -6037,7 +6038,7 @@ body.page-user .profile .field-label {
   margin-top: 0;
   margin-bottom: 1.5rem;
 }
-/* line 254, ../sass/_typography.scss */
+/* line 255, ../sass/_typography.scss */
 #content > article:not(.node-contact) .collapsed legend, #content > body#tinymce:not(.node-contact) .collapsed legend,
 #content > article:not(.node-contact) .collapsible legend,
 #content > body#tinymce:not(.node-contact) .collapsible legend,
@@ -6071,7 +6072,7 @@ body.node-type-trial-renewal body#tinymce .collapsible legend,
 body.page-user .profile .collapsible legend {
   background: transparent;
 }
-/* line 256, ../sass/_typography.scss */
+/* line 257, ../sass/_typography.scss */
 #content > article:not(.node-contact) .collapsed legend a, #content > body#tinymce:not(.node-contact) .collapsed legend a,
 #content > article:not(.node-contact) .collapsible legend a,
 #content > body#tinymce:not(.node-contact) .collapsible legend a,
@@ -6110,7 +6111,7 @@ body.page-user .profile .collapsible legend a {
   text-transform: uppercase;
 }
 
-/* line 267, ../sass/_typography.scss */
+/* line 268, ../sass/_typography.scss */
 .notice {
   color: #f00;
 }
@@ -6118,17 +6119,17 @@ body.page-user .profile .collapsible legend a {
 /* -----------------------------------------
     Views
 ----------------------------------------- */
-/* line 296, ../sass/_typography.scss */
+/* line 297, ../sass/_typography.scss */
 .view a {
   text-decoration: none;
 }
-/* line 300, ../sass/_typography.scss */
+/* line 301, ../sass/_typography.scss */
 .view .row {
   margin-bottom: 1rem;
   margin-top: 1rem;
 }
 
-/* line 307, ../sass/_typography.scss */
+/* line 308, ../sass/_typography.scss */
 #block-views-contacts-by-group-block h2.block-title, #block-views-contacts-by-group-block #content label.block-title, #content #block-views-contacts-by-group-block label.block-title,
 #block-views-contacts-by-group-block .profile label.block-title,
 .profile #block-views-contacts-by-group-block label.block-title,
@@ -6166,7 +6167,7 @@ body.node-type-trial-renewal body#tinymce #block-views-contacts-by-group-block .
 body.page-user .profile #block-views-contacts-by-group-block .block-title.field-label {
   color: black;
 }
-/* line 311, ../sass/_typography.scss */
+/* line 312, ../sass/_typography.scss */
 #block-views-contacts-by-group-block h3 {
   font-size: 1.2rem;
   margin-bottom: 1rem;
@@ -6177,7 +6178,7 @@ body.page-user .profile #block-views-contacts-by-group-block .block-title.field-
 /* -----------------------------------------
    Forms
 ----------------------------------------- */
-/* line 326, ../sass/_typography.scss */
+/* line 327, ../sass/_typography.scss */
 .search-results dt a {
   text-decoration: underline;
 }
@@ -6357,11 +6358,17 @@ div[class^=print-] * {
   right: 0;
   left: 0;
 }
+@media only screen and (max-width: 46.65666em) {
+  /* line 116, ../sass/_page.scss */
+  #footer {
+    padding: 2rem;
+  }
+}
 
 /* -----------------------------------------
    Common spacings
 ----------------------------------------- */
-/* line 140, ../sass/_page.scss */
+/* line 144, ../sass/_page.scss */
 #sidebar-right .block {
   margin-bottom: 3rem;
 }
@@ -6369,7 +6376,7 @@ div[class^=print-] * {
 /* -----------------------------------------
    Generic content type formatting
 ----------------------------------------- */
-/* line 150, ../sass/_page.scss */
+/* line 154, ../sass/_page.scss */
 #content > article:not(.node-contact) .columns:last-child, #content > body#tinymce:not(.node-contact) .columns:last-child,
 .content-article .columns:last-child,
 body.node-type-resource article .columns:last-child,
@@ -6387,7 +6394,7 @@ body.node-type-trial-renewal body#tinymce .columns:last-child,
 body.page-user .profile .columns:last-child {
   float: left;
 }
-/* line 152, ../sass/_page.scss */
+/* line 156, ../sass/_page.scss */
 #content > article:not(.node-contact) .field-item:not(.field-type-list-text):not(.field-type-node-reference), #content > body#tinymce:not(.node-contact) .field-item:not(.field-type-list-text):not(.field-type-node-reference),
 .content-article .field-item:not(.field-type-list-text):not(.field-type-node-reference),
 body.node-type-resource article .field-item:not(.field-type-list-text):not(.field-type-node-reference),
@@ -6406,7 +6413,7 @@ body.page-user .profile .field-item:not(.field-type-list-text):not(.field-type-n
   border-bottom: 1px solid #b9b9b9;
   position: relative;
 }
-/* line 157, ../sass/_page.scss */
+/* line 161, ../sass/_page.scss */
 #content > article:not(.node-contact) .field-item:not(.field-type-list-text):not(.field-type-node-reference):before, #content > body#tinymce:not(.node-contact) .field-item:not(.field-type-list-text):not(.field-type-node-reference):before,
 .content-article .field-item:not(.field-type-list-text):not(.field-type-node-reference):before,
 body.node-type-resource article .field-item:not(.field-type-list-text):not(.field-type-node-reference):before,
@@ -6430,7 +6437,7 @@ body.page-user .profile .field-item:not(.field-type-list-text):not(.field-type-n
   right: 0;
   left: 0;
 }
-/* line 168, ../sass/_page.scss */
+/* line 172, ../sass/_page.scss */
 #content > article:not(.node-contact) .field-item, #content > body#tinymce:not(.node-contact) .field-item,
 .content-article .field-item,
 body.node-type-resource article .field-item,
@@ -6449,7 +6456,7 @@ body.page-user .profile .field-item {
   margin-bottom: 2rem;
   padding-bottom: 1rem;
 }
-/* line 173, ../sass/_page.scss */
+/* line 177, ../sass/_page.scss */
 #content > article:not(.node-contact) .field-name-field-private-note, #content > body#tinymce:not(.node-contact) .field-name-field-private-note,
 .content-article .field-name-field-private-note,
 body.node-type-resource article .field-name-field-private-note,
@@ -6469,7 +6476,7 @@ body.page-user .profile .field-name-field-private-note {
   border-bottom-style: none;
   padding: 1em;
 }
-/* line 180, ../sass/_page.scss */
+/* line 184, ../sass/_page.scss */
 #content > article:not(.node-contact) .field-name-field-vendor-info, #content > body#tinymce:not(.node-contact) .field-name-field-vendor-info,
 #content > article:not(.node-contact) .field-name-field-blog-categories,
 #content > body#tinymce:not(.node-contact) .field-name-field-blog-categories,
@@ -6503,7 +6510,7 @@ body.node-type-trial-renewal body#tinymce .field-name-field-blog-categories,
 body.page-user .profile .field-name-field-blog-categories {
   border-bottom: none;
 }
-/* line 184, ../sass/_page.scss */
+/* line 188, ../sass/_page.scss */
 #content > article:not(.node-contact) div[class^=field-group-simple-div], #content > body#tinymce:not(.node-contact) div[class^=field-group-simple-div],
 .content-article div[class^=field-group-simple-div],
 body.node-type-resource article div[class^=field-group-simple-div],
@@ -6521,7 +6528,7 @@ body.node-type-trial-renewal body#tinymce div[class^=field-group-simple-div],
 body.page-user .profile div[class^=field-group-simple-div] {
   margin-bottom: 2rem;
 }
-/* line 186, ../sass/_page.scss */
+/* line 190, ../sass/_page.scss */
 #content > article:not(.node-contact) div[class^=field-group-simple-div] .field-item:not(.field-name-field-resource-vend-desc), #content > body#tinymce:not(.node-contact) div[class^=field-group-simple-div] .field-item:not(.field-name-field-resource-vend-desc),
 .content-article div[class^=field-group-simple-div] .field-item:not(.field-name-field-resource-vend-desc),
 body.node-type-resource article div[class^=field-group-simple-div] .field-item:not(.field-name-field-resource-vend-desc),
@@ -6541,7 +6548,7 @@ body.page-user .profile div[class^=field-group-simple-div] .field-item:not(.fiel
   margin-bottom: 2rem;
   padding-bottom: 0;
 }
-/* line 191, ../sass/_page.scss */
+/* line 195, ../sass/_page.scss */
 #content > article:not(.node-contact) div[class^=field-group-simple-div] .field-item:not(.field-name-field-resource-vend-desc):before, #content > body#tinymce:not(.node-contact) div[class^=field-group-simple-div] .field-item:not(.field-name-field-resource-vend-desc):before,
 .content-article div[class^=field-group-simple-div] .field-item:not(.field-name-field-resource-vend-desc):before,
 body.node-type-resource article div[class^=field-group-simple-div] .field-item:not(.field-name-field-resource-vend-desc):before,
@@ -6559,7 +6566,7 @@ body.node-type-trial-renewal body#tinymce div[class^=field-group-simple-div] .fi
 body.page-user .profile div[class^=field-group-simple-div] .field-item:not(.field-name-field-resource-vend-desc):before {
   border-bottom: none;
 }
-/* line 197, ../sass/_page.scss */
+/* line 201, ../sass/_page.scss */
 #content > article:not(.node-contact) fieldset, #content > body#tinymce:not(.node-contact) fieldset,
 .content-article fieldset,
 body.node-type-resource article fieldset,
@@ -6584,7 +6591,7 @@ body.page-user .profile fieldset {
   margin-bottom: 0;
   padding: 2rem;
 }
-/* line 201, ../sass/_page.scss */
+/* line 205, ../sass/_page.scss */
 #content > article:not(.node-contact) .collapsed, #content > body#tinymce:not(.node-contact) .collapsed,
 .content-article .collapsed,
 body.node-type-resource article .collapsed,
@@ -6604,7 +6611,7 @@ body.page-user .profile .collapsed {
   border: none;
   padding-bottom: 1em;
 }
-/* line 209, ../sass/_page.scss */
+/* line 213, ../sass/_page.scss */
 #content > article:not(.node-contact) .collapsed legend, #content > body#tinymce:not(.node-contact) .collapsed legend,
 #content > article:not(.node-contact) .collapsible legend,
 #content > body#tinymce:not(.node-contact) .collapsible legend,
@@ -6638,7 +6645,7 @@ body.node-type-trial-renewal body#tinymce .collapsible legend,
 body.page-user .profile .collapsible legend {
   margin-left: -2.2rem;
 }
-/* line 211, ../sass/_page.scss */
+/* line 215, ../sass/_page.scss */
 #content > article:not(.node-contact) .collapsed legend a, #content > body#tinymce:not(.node-contact) .collapsed legend a,
 #content > article:not(.node-contact) .collapsible legend a,
 #content > body#tinymce:not(.node-contact) .collapsible legend a,
@@ -6684,12 +6691,12 @@ body.page-user .profile .collapsible legend a {
 /* -----------------------------------------
    Content Types
 ----------------------------------------- */
-/* line 235, ../sass/_page.scss */
+/* line 239, ../sass/_page.scss */
 body.node-type-resource .help {
   font-size: 1.1rem;
   margin-top: 0.5rem;
 }
-/* line 239, ../sass/_page.scss */
+/* line 243, ../sass/_page.scss */
 body.node-type-resource #return-res {
   background: url("../images/return-resources.png") no-repeat right 0;
   font-size: 1.2rem;
@@ -6699,39 +6706,45 @@ body.node-type-resource #return-res {
   right: 1.5rem;
   top: 5.2rem;
 }
-/* line 247, ../sass/_page.scss */
+/* line 251, ../sass/_page.scss */
 body.node-type-resource #return-res a {
   color: #8c8b89;
   display: block;
   padding: 5px 40px 0 0;
 }
+@media only screen and (max-width: 46.65666em) {
+  /* line 243, ../sass/_page.scss */
+  body.node-type-resource #return-res {
+    text-indent: -999rem;
+  }
+}
 
-/* line 265, ../sass/_page.scss */
+/* line 273, ../sass/_page.scss */
 body.page-user .profile .row-container {
   border: 1px solid #dddddd;
   padding: 2rem 0;
 }
-/* line 268, ../sass/_page.scss */
+/* line 276, ../sass/_page.scss */
 body.page-user .profile .row-container .row {
   margin: 0 auto;
   width: 90rem;
 }
-/* line 273, ../sass/_page.scss */
+/* line 281, ../sass/_page.scss */
 body.page-user .profile .row-container .one .field-item {
   border-bottom-style: none;
 }
 
-/* line 280, ../sass/_page.scss */
+/* line 288, ../sass/_page.scss */
 body.node-type-contact .node .field-item {
   padding-bottom: 1em;
 }
 
-/* line 297, ../sass/_page.scss */
+/* line 305, ../sass/_page.scss */
 .field-name-field-resource-vend-desc {
   padding-bottom: 15px;
 }
 
-/* line 301, ../sass/_page.scss */
+/* line 309, ../sass/_page.scss */
 body.node-type-contact .field-name-field-contact-groups {
   position: absolute;
   right: 50%;
@@ -6741,12 +6754,12 @@ body.node-type-contact .field-name-field-contact-groups {
 /* -----------------------------------------
    Individual fields
 ----------------------------------------- */
-/* line 310, ../sass/_page.scss */
+/* line 318, ../sass/_page.scss */
 .st_sharethis {
   font-size: 0.867em;
 }
 
-/* line 314, ../sass/_page.scss */
+/* line 322, ../sass/_page.scss */
 .more-link {
   background: #10b7e3;
   -moz-border-radius: 5px;
@@ -6763,7 +6776,7 @@ body.node-type-contact .field-name-field-contact-groups {
   width: 105px;
 }
 
-/* line 329, ../sass/_page.scss */
+/* line 337, ../sass/_page.scss */
 .more-link a {
   color: #fff;
   text-decoration: none;
@@ -6772,7 +6785,7 @@ body.node-type-contact .field-name-field-contact-groups {
 /* -----------------------------------------
    Front page specific
 ----------------------------------------- */
-/* line 337, ../sass/_page.scss */
+/* line 345, ../sass/_page.scss */
 .front #content .entry-content h2, .front #content .entry-content label, .front #content > article:not(.node-contact) .entry-content .field-label, .front #content > body#tinymce:not(.node-contact) .entry-content .field-label,
 .front #content .entry-content .content-article .field-label,
 .content-article .front #content .entry-content .field-label,
@@ -6807,32 +6820,32 @@ body.page-user .profile .front #content .entry-content .field-label {
   padding-bottom: 20px;
 }
 
-/* line 343, ../sass/_page.scss */
+/* line 351, ../sass/_page.scss */
 .front #content > article .field-item, .front #content > body#tinymce .field-item {
   border: 0;
 }
 
-/* line 347, ../sass/_page.scss */
+/* line 355, ../sass/_page.scss */
 .front .submitted {
   display: none;
 }
 
-/* line 352, ../sass/_page.scss */
+/* line 360, ../sass/_page.scss */
 .front #content .view-Blog ul {
   padding-left: 0;
 }
-/* line 356, ../sass/_page.scss */
+/* line 364, ../sass/_page.scss */
 .front #content .view-Blog .views-field-title a {
   font-size: 2.4rem;
   line-height: 3rem;
 }
-/* line 361, ../sass/_page.scss */
+/* line 369, ../sass/_page.scss */
 .front #content .view-Blog .views-field-created {
   color: #ef482d;
   font-size: 2rem;
 }
 
-/* line 367, ../sass/_page.scss */
+/* line 375, ../sass/_page.scss */
 .front #content .view-Blog .more-link {
   background: #10b7e3;
   -moz-border-radius: 5px;
@@ -6847,7 +6860,7 @@ body.page-user .profile .front #content .entry-content .field-label {
   text-align: center;
   width: 130px;
 }
-/* line 381, ../sass/_page.scss */
+/* line 389, ../sass/_page.scss */
 .front #content .view-Blog .more-link a {
   color: #fff;
   text-decoration: none;
@@ -6856,7 +6869,7 @@ body.page-user .profile .front #content .entry-content .field-label {
 /* -----------------------------------------
    Views
 ----------------------------------------- */
-/* line 392, ../sass/_page.scss */
+/* line 400, ../sass/_page.scss */
 #block-views-contacts-by-group-block {
   background: #f7f7f7;
   border-bottom: 0.5rem solid #efefef;
@@ -6871,7 +6884,7 @@ body.page-user .profile .front #content .entry-content .field-label {
 /* -----------------------------------------
    UI Elements
 ----------------------------------------- */
-/* line 404, ../sass/_page.scss */
+/* line 412, ../sass/_page.scss */
 .button:hover, #content > article:not(.node-contact) .collapsed legend a:hover, #content > body#tinymce:not(.node-contact) .collapsed legend a:hover,
 #content > article:not(.node-contact) .collapsible legend a:hover,
 #content > body#tinymce:not(.node-contact) .collapsible legend a:hover,
@@ -6966,32 +6979,32 @@ body.page-user .profile .collapsible legend a:focus {
   background: #877f77;
 }
 
-/* line 409, ../sass/_page.scss */
+/* line 417, ../sass/_page.scss */
 #breadcrumb {
   height: 3rem;
   padding-top: 0.7rem;
   padding-left: 3rem;
 }
 
-/* line 415, ../sass/_page.scss */
+/* line 423, ../sass/_page.scss */
 ul.pagination {
   margin-top: 15px;
   text-align: left;
 }
-/* line 418, ../sass/_page.scss */
+/* line 426, ../sass/_page.scss */
 ul.pagination li {
   float: none;
   display: inline-block;
   margin: 0;
 }
-/* line 423, ../sass/_page.scss */
+/* line 431, ../sass/_page.scss */
 ul.pagination li .first {
   padding-left: 0;
   margin-left: 0;
 }
 
 /* Tab styling */
-/* line 432, ../sass/_page.scss */
+/* line 440, ../sass/_page.scss */
 div.drupal_tabs {
   background: #dddddd;
   overflow: auto;
@@ -7001,7 +7014,7 @@ div.drupal_tabs {
   -webkit-border-radius: 6px;
 }
 
-/* line 438, ../sass/_page.scss */
+/* line 446, ../sass/_page.scss */
 dl.tabs.primary,
 dl.tabs.secondary {
   border-style: none;
@@ -7009,19 +7022,19 @@ dl.tabs.secondary {
   padding: 0;
 }
 
-/* line 442, ../sass/_page.scss */
+/* line 450, ../sass/_page.scss */
 dl.tabs.primary {
   float: left;
 }
 
-/* line 446, ../sass/_page.scss */
+/* line 454, ../sass/_page.scss */
 dl.tabs.primary dd {
   display: inline;
   margin: 0;
   padding: 0;
 }
 
-/* line 450, ../sass/_page.scss */
+/* line 458, ../sass/_page.scss */
 dl.tabs.primary dd a {
   background: white;
   border-style: none;
@@ -7037,20 +7050,20 @@ dl.tabs.primary dd a {
   text-decoration: none;
 }
 
-/* line 457, ../sass/_page.scss */
+/* line 465, ../sass/_page.scss */
 dl.tabs.primary dd a:hover,
 dl.tabs.primary dd a:active {
   background: #877f77;
   color: white;
 }
 
-/* line 462, ../sass/_page.scss */
+/* line 470, ../sass/_page.scss */
 dl.tabs.primary dd.active a {
   background: #877f77;
   color: white;
 }
 
-/* line 466, ../sass/_page.scss */
+/* line 474, ../sass/_page.scss */
 dl.tabs.secondary {
   border-top: 1px solid white;
   clear: both;
@@ -7061,7 +7074,7 @@ dl.tabs.secondary {
   top: 4px;
 }
 
-/* line 470, ../sass/_page.scss */
+/* line 478, ../sass/_page.scss */
 dl.tabs.secondary dd {
   border-style: none;
   display: block;
@@ -7070,7 +7083,7 @@ dl.tabs.secondary dd {
   padding: 6px 0;
 }
 
-/* line 474, ../sass/_page.scss */
+/* line 482, ../sass/_page.scss */
 dl.tabs.secondary dd a {
   border-bottom-style: none;
   border-right: 1px solid white;
@@ -7084,7 +7097,7 @@ dl.tabs.secondary dd a {
 /* -----------------------------------------
    Forms
 ----------------------------------------- */
-/* line 484, ../sass/_page.scss */
+/* line 492, ../sass/_page.scss */
 .standard-form .button, #user-login .button,
 #search-form .button, .standard-form #content > article:not(.node-contact) .collapsed legend a, #content > article:not(.node-contact) .collapsed legend .standard-form a, #user-login #content > article:not(.node-contact) .collapsed legend a, #content > article:not(.node-contact) .collapsed legend #user-login a,
 #search-form #content > article:not(.node-contact) .collapsed legend a,
@@ -7291,7 +7304,7 @@ body.page-user .profile .collapsible legend #search-form a {
 
 /* Tabs Styles */
 /* line 742, ../sass/_views.scss */
-/* line 498, ../sass/_page.scss */
+/* line 506, ../sass/_page.scss */
 .page-organizations dl.primary,
 .page-licenses-products dl.primary,
 .page-licenses dl.primary {
@@ -7301,7 +7314,7 @@ body.page-user .profile .collapsible legend #search-form a {
 }
 
 /* line 750, ../sass/_views.scss */
-/* line 507, ../sass/_page.scss */
+/* line 515, ../sass/_page.scss */
 .page-organizations dl.tabs.primary dd,
 .page-licenses-products dl.tabs.primary dd,
 .page-licenses dl.tabs.primary dd {
@@ -7311,7 +7324,7 @@ body.page-user .profile .collapsible legend #search-form a {
 }
 
 /* line 758, ../sass/_views.scss */
-/* line 516, ../sass/_page.scss */
+/* line 524, ../sass/_page.scss */
 .page-organizations div.drupal_tabs,
 .page-licenses-products div.drupal_tabs,
 .page-licenses div.drupal_tabs {
@@ -7326,7 +7339,7 @@ body.page-user .profile .collapsible legend #search-form a {
 }
 
 /* line 772, ../sass/_views.scss */
-/* line 530, ../sass/_page.scss */
+/* line 538, ../sass/_page.scss */
 .page-organizations dl.tabs.primary,
 .page-licenses-products dl.tabs.primary,
 .page-licenses dl.tabs.primary {
@@ -7341,13 +7354,13 @@ body.page-user .profile .collapsible legend #search-form a {
 }
 
 /* line 784, ../sass/_views.scss */
-/* line 542, ../sass/_page.scss */
+/* line 550, ../sass/_page.scss */
 li.btn {
   width: 168px;
 }
 
 /* line 791, ../sass/_views.scss */
-/* line 549, ../sass/_page.scss */
+/* line 557, ../sass/_page.scss */
 .page-organizations dl.tabs.primary dd a,
 .page-licenses-products dl.tabs.primary dd a,
 .page-licenses dl.tabs.primary dd a {
@@ -7367,7 +7380,7 @@ li.btn {
 }
 
 /* line 809, ../sass/_views.scss */
-/* line 568, ../sass/_page.scss */
+/* line 576, ../sass/_page.scss */
 .page-organizations dl.tabs.primary dd.active a,
 .page-licenses-products dl.tabs.primary dd.active a,
 .page-licenses dl.tabs.primary dd.active a {
@@ -7376,7 +7389,7 @@ li.btn {
 }
 
 /* line 816, ../sass/_views.scss */
-/* line 576, ../sass/_page.scss */
+/* line 584, ../sass/_page.scss */
 .page-organizations dl.tabs.primary dd a:hover,
 .page-licenses-products dl.tabs.primary dd a:hover,
 .page-licenses dl.tabs.primary dd a:hover {
@@ -7387,34 +7400,34 @@ li.btn {
 /* -----------------------------------------
    Term Landing Pages (Committee pages)
 ----------------------------------------- */
-/* line 585, ../sass/_page.scss */
+/* line 593, ../sass/_page.scss */
 .vocabulary-groups {
   border-bottom: 1px dotted #dddddd;
 }
 
-/* line 589, ../sass/_page.scss */
+/* line 597, ../sass/_page.scss */
 .image-right, .image-right img {
   float: right;
   padding: 0 0 1rem 1rem;
 }
-/* line 593, ../sass/_page.scss */
+/* line 601, ../sass/_page.scss */
 .image-right:after, .image-right img:after {
   content: '';
   clear: both;
 }
 
-/* line 599, ../sass/_page.scss */
+/* line 607, ../sass/_page.scss */
 .image-left, .image-left img {
   float: left;
   padding: 0 1rem 1rem 0;
 }
-/* line 603, ../sass/_page.scss */
+/* line 611, ../sass/_page.scss */
 .image-left:after, .image-left img:after {
   content: '';
   clear: both;
 }
 
-/* line 609, ../sass/_page.scss */
+/* line 617, ../sass/_page.scss */
 ul li .image-left {
   padding: 1rem 3rem 1rem 0;
 }
@@ -8174,6 +8187,7 @@ body.node-type-trial-renewal article .front #content .entry-content .field-name-
 body.node-type-trial-renewal body#tinymce .front #content .entry-content .field-name-body .field-label,
 .front #content .entry-content .field-name-body body.page-user .profile .field-label,
 body.page-user .profile .front #content .entry-content .field-name-body .field-label {
+  background-color: black;
   background-color: rgba(0, 0, 0, 0.75);
   color: white;
   padding: 2.6rem;
@@ -8184,8 +8198,47 @@ body.page-user .profile .front #content .entry-content .field-name-body .field-l
   font-weight: normal;
   position: absolute;
 }
+@media only screen and (max-width: 46.65666em) {
+  /* line 504, ../sass/_block.scss */
+  .front #content .entry-content .field-name-body h2, .front #content .entry-content .field-name-body label, .front #content > article:not(.node-contact) .entry-content .field-name-body .field-label, .front #content > body#tinymce:not(.node-contact) .entry-content .field-name-body .field-label,
+  .front #content .entry-content .field-name-body .content-article .field-label,
+  .content-article .front #content .entry-content .field-name-body .field-label,
+  .front #content .entry-content .field-name-body body.node-type-resource article .field-label,
+  body.node-type-resource article .front #content .entry-content .field-name-body .field-label,
+  .front #content .entry-content .field-name-body body.node-type-resource body#tinymce .field-label,
+  body.node-type-resource body#tinymce .front #content .entry-content .field-name-body .field-label,
+  .front #content .entry-content .field-name-body body.node-type-organization article .field-label,
+  body.node-type-organization article .front #content .entry-content .field-name-body .field-label,
+  .front #content .entry-content .field-name-body body.node-type-organization body#tinymce .field-label,
+  body.node-type-organization body#tinymce .front #content .entry-content .field-name-body .field-label,
+  .front #content .entry-content .field-name-body body.node-type-event article .field-label,
+  body.node-type-event article .front #content .entry-content .field-name-body .field-label,
+  .front #content .entry-content .field-name-body body.node-type-event body#tinymce .field-label,
+  body.node-type-event body#tinymce .front #content .entry-content .field-name-body .field-label,
+  .front #content .entry-content .field-name-body body.node-type-vendor article .field-label,
+  body.node-type-vendor article .front #content .entry-content .field-name-body .field-label,
+  .front #content .entry-content .field-name-body body.node-type-vendor body#tinymce .field-label,
+  body.node-type-vendor body#tinymce .front #content .entry-content .field-name-body .field-label,
+  .front #content .entry-content .field-name-body body.node-type-license article .field-label,
+  body.node-type-license article .front #content .entry-content .field-name-body .field-label,
+  .front #content .entry-content .field-name-body body.node-type-license body#tinymce .field-label,
+  body.node-type-license body#tinymce .front #content .entry-content .field-name-body .field-label,
+  .front #content .entry-content .field-name-body body.node-type-trial-renewal article .field-label,
+  body.node-type-trial-renewal article .front #content .entry-content .field-name-body .field-label,
+  .front #content .entry-content .field-name-body body.node-type-trial-renewal body#tinymce .field-label,
+  body.node-type-trial-renewal body#tinymce .front #content .entry-content .field-name-body .field-label,
+  .front #content .entry-content .field-name-body body.page-user .profile .field-label,
+  body.page-user .profile .front #content .entry-content .field-name-body .field-label {
+    position: relative;
+    width: auto;
+    font-size: 1.8rem;
+    margin-bottom: 0;
+    padding: 1rem;
+    line-height: 1;
+  }
+}
 
-/* line 517, ../sass/_block.scss */
+/* line 527, ../sass/_block.scss */
 #block-block-12, #block-block-13, #block-block-14 {
   background-color: #e4e2e2;
   width: 31%;
@@ -8194,7 +8247,15 @@ body.page-user .profile .front #content .entry-content .field-name-body .field-l
   padding: 2.2rem 1.2rem 2.2rem 2.2rem;
   float: left;
 }
-/* line 525, ../sass/_block.scss */
+@media only screen and (max-width: 46.65666em) {
+  /* line 527, ../sass/_block.scss */
+  #block-block-12, #block-block-13, #block-block-14 {
+    float: none;
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+}
+/* line 541, ../sass/_block.scss */
 #block-block-12 h2, #block-block-12 #content label, #content #block-block-12 label,
 #block-block-12 .profile label,
 .profile #block-block-12 label,
@@ -8304,22 +8365,22 @@ body.page-user .profile #block-block-14 .field-label {
   padding-left: 2.6rem;
   background: transparent url("/sites/all/themes/coppul/images/icon-browse-resources.png") top left no-repeat;
 }
-/* line 534, ../sass/_block.scss */
+/* line 550, ../sass/_block.scss */
 #block-block-12 .block-content p, #block-block-13 .block-content p, #block-block-14 .block-content p {
   font-size: 1.6rem;
   line-height: 2.4rem;
   margin-bottom: 0;
 }
-/* line 541, ../sass/_block.scss */
+/* line 557, ../sass/_block.scss */
 #block-block-12:after, #block-block-13:after, #block-block-14:after {
   box-sizing: border-box;
 }
 
-/* line 546, ../sass/_block.scss */
+/* line 562, ../sass/_block.scss */
 #block-block-13 {
   margin: 0 3rem;
 }
-/* line 548, ../sass/_block.scss */
+/* line 564, ../sass/_block.scss */
 #block-block-13 h2, #block-block-13 #content label, #content #block-block-13 label,
 #block-block-13 .profile label,
 .profile #block-block-13 label,
@@ -8358,8 +8419,15 @@ body.page-user .profile #block-block-13 .field-label {
   padding-left: 4rem;
   background-image: url("/sites/all/themes/coppul/images/icon-member-info.png");
 }
+@media only screen and (max-width: 46.65666em) {
+  /* line 562, ../sass/_block.scss */
+  #block-block-13 {
+    margin-right: 0;
+    margin-left: 0;
+  }
+}
 
-/* line 555, ../sass/_block.scss */
+/* line 576, ../sass/_block.scss */
 #block-block-14 h2, #block-block-14 #content label, #content #block-block-14 label,
 #block-block-14 .profile label,
 .profile #block-block-14 label,
@@ -8398,18 +8466,18 @@ body.page-user .profile #block-block-14 .field-label {
   background-image: url("/sites/all/themes/coppul/images/icon-discover.png");
 }
 
-/* line 560, ../sass/_block.scss */
+/* line 581, ../sass/_block.scss */
 #block-block-12 {
   margin-bottom: 3.5rem;
   float: right;
 }
-/* line 563, ../sass/_block.scss */
+/* line 584, ../sass/_block.scss */
 #block-block-12:after {
   clear: both;
   content: " ";
   display: table;
 }
-/* line 569, ../sass/_block.scss */
+/* line 590, ../sass/_block.scss */
 #block-block-12 h2, #block-block-12 #content label, #content #block-block-12 label,
 #block-block-12 .profile label,
 .profile #block-block-12 label,
@@ -8448,7 +8516,7 @@ body.page-user .profile #block-block-12 .field-label {
   padding-left: 3.2rem;
 }
 
-/* line 574, ../sass/_block.scss */
+/* line 595, ../sass/_block.scss */
 #block-views-blog-block-6 {
   clear: both;
 }

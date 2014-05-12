@@ -31,7 +31,7 @@
 
   // Hide the main nav
   #access{  @include mq(lte2) { display: none!important;} }
-  
+
   // Show the mobile nav trigger
   #mobile-nav-trigger {
     display: none;
@@ -61,23 +61,27 @@
   li { list-style: none;}
   li a {
     display: block;
-    background-color: green;
+    background-color: $black;
 
     color: $white;
     font-size: rem(2.8);
     font-weight: normal;
-    border: rem(0.1) solid darken(green, 10%);
+    border: rem(0.1) solid lighten($black, 10%);
     line-height: 1.1;
     padding: rem(1);
     @include box-shadow(rgba(0, 0, 0, 0.8) 0px 3px 10px);
 
-    &:hover, 
+    &:hover,
     &:focus,
     &:active{
       text-decoration: none;
-      background:green;
-      border: rem(0.1) solid darken(green, 10%);
+      background:$blue-highlight;
+      border: rem(0.1) solid lighten($blue-highlight, 10%);
     }
+  }
+
+  h2 {
+    display: none;
   }
 }
 
@@ -85,5 +89,3 @@
   background: #000;
   background: rgba(0, 0, 0, 0.8);
 }
-
-

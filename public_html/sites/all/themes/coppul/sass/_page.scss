@@ -131,6 +131,10 @@
     left: 0;
   }
 
+  @include mq(lte2) {
+    padding: rem(2);
+  }
+
 }
 
 /* -----------------------------------------
@@ -248,6 +252,10 @@ body.node-type-resource {
       color: $gray_8;
       display: block;
       padding: 5px 40px 0 0;
+    }
+
+    @include mq(lte2) {
+      text-indent: -999rem;
     }
   }
 }

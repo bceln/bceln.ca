@@ -7,8 +7,22 @@ $ie: 8;
 // customized and optimized to work with IE7
 @import "app";
 
+body {
+  margin:0;
+  padding:0;
+}
+
+#block-re-utilities-utility-nav {
+  margin-top: -18px;
+}
+
+#block-block-11 {
+  top: -48px;
+}
+
 .group-license a.fieldset-title {
-    background: $gray_1;
+    background: $mainColor;
+    color: $white;
     border-bottom: 1px solid $gray_2;
     -moz-border-radius: rem(.5);
     -webkit-border-radius: rem(.5);
@@ -17,4 +31,28 @@ $ie: 8;
     border-right-style: none;
     border-top: 1px solid $gray_3;
     padding: rem(.5) rem(.8);
+}
+
+#content article,
+.content-article {
+  .field-label {
+    @extend h2;
+    color: $orange;
+    font-size: rem(2);
+    margin-top: 0;
+    margin-bottom: rem(1.5);
+  }
+  .collapsed,
+  .collapsible {
+    legend {
+      background: transparent;
+      a {
+        color: $white;
+        font-weight: bold;
+        text-align: center;
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+    }
+  }
 }
