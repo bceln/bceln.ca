@@ -22,6 +22,7 @@ files[] = plugins/FeedsOPMLParser.inc
 files[] = plugins/FeedsParser.inc
 files[] = plugins/FeedsPlugin.inc
 files[] = plugins/FeedsProcessor.inc
+files[] = plugins/FeedsProfile2Processor.inc
 files[] = plugins/FeedsSimplePieParser.inc
 files[] = plugins/FeedsSitemapParser.inc
 files[] = plugins/FeedsSyndicationParser.inc

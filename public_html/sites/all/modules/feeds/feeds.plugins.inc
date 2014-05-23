@@ -153,6 +153,19 @@ function _feeds_feeds_plugins() {
       'path' => $path,
     ),
   );
+  if (module_exists('profile2')) {
+    $info['FeedsProfile2Processor'] = array(
+      'name' => 'User Profile processor',
+      'description' => 'Create user profiles.',
+      'help' => 'Create user profiles from parsed content.',
+      'handler' => array(
+        'parent' => 'FeedsProcessor',
+        'class' => 'FeedsProfile2Processor',
+        'file' => 'FeedsProfile2Processor.inc',
+        'path' => $path,
+      ),
+    );
+  }
   if (module_exists('taxonomy')) {
     $info['FeedsTermProcessor'] = array(
       'name' => 'Taxonomy term processor',
