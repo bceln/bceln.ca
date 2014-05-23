@@ -11089,6 +11089,70 @@ body.page-user .profile .front #content .entry-content .field-name-body .field-l
   }
 }
 /* line 541, ../sass/_block.scss */
+#block-block-12 h2.block-title, #block-block-12 #content label.block-title, #content #block-block-12 label.block-title,
+#block-block-12 .profile label.block-title,
+.profile #block-block-12 label.block-title,
+#block-block-12 article label.block-title,
+article #block-block-12 label.block-title, #block-block-12 #content > article:not(.node-contact) .block-title.field-label, #content > article:not(.node-contact) #block-block-12 .block-title.field-label,
+#block-block-12 .content-article .block-title.field-label,
+.content-article #block-block-12 .block-title.field-label,
+#block-block-12 body.node-type-resource article .block-title.field-label,
+body.node-type-resource article #block-block-12 .block-title.field-label,
+#block-block-12 body.node-type-organization article .block-title.field-label,
+body.node-type-organization article #block-block-12 .block-title.field-label,
+#block-block-12 body.node-type-event article .block-title.field-label,
+body.node-type-event article #block-block-12 .block-title.field-label,
+#block-block-12 body.node-type-vendor article .block-title.field-label,
+body.node-type-vendor article #block-block-12 .block-title.field-label,
+#block-block-12 body.node-type-license article .block-title.field-label,
+body.node-type-license article #block-block-12 .block-title.field-label,
+#block-block-12 body.node-type-trial-renewal article .block-title.field-label,
+body.node-type-trial-renewal article #block-block-12 .block-title.field-label,
+#block-block-12 body.page-user .profile .block-title.field-label,
+body.page-user .profile #block-block-12 .block-title.field-label, #block-block-12 .view-organizations table caption.block-title, .view-organizations table #block-block-12 caption.block-title, #block-block-13 h2.block-title, #block-block-13 #content label.block-title, #content #block-block-13 label.block-title,
+#block-block-13 .profile label.block-title,
+.profile #block-block-13 label.block-title,
+#block-block-13 article label.block-title,
+article #block-block-13 label.block-title, #block-block-13 #content > article:not(.node-contact) .block-title.field-label, #content > article:not(.node-contact) #block-block-13 .block-title.field-label,
+#block-block-13 .content-article .block-title.field-label,
+.content-article #block-block-13 .block-title.field-label,
+#block-block-13 body.node-type-resource article .block-title.field-label,
+body.node-type-resource article #block-block-13 .block-title.field-label,
+#block-block-13 body.node-type-organization article .block-title.field-label,
+body.node-type-organization article #block-block-13 .block-title.field-label,
+#block-block-13 body.node-type-event article .block-title.field-label,
+body.node-type-event article #block-block-13 .block-title.field-label,
+#block-block-13 body.node-type-vendor article .block-title.field-label,
+body.node-type-vendor article #block-block-13 .block-title.field-label,
+#block-block-13 body.node-type-license article .block-title.field-label,
+body.node-type-license article #block-block-13 .block-title.field-label,
+#block-block-13 body.node-type-trial-renewal article .block-title.field-label,
+body.node-type-trial-renewal article #block-block-13 .block-title.field-label,
+#block-block-13 body.page-user .profile .block-title.field-label,
+body.page-user .profile #block-block-13 .block-title.field-label, #block-block-13 .view-organizations table caption.block-title, .view-organizations table #block-block-13 caption.block-title, #block-block-14 h2.block-title, #block-block-14 #content label.block-title, #content #block-block-14 label.block-title,
+#block-block-14 .profile label.block-title,
+.profile #block-block-14 label.block-title,
+#block-block-14 article label.block-title,
+article #block-block-14 label.block-title, #block-block-14 #content > article:not(.node-contact) .block-title.field-label, #content > article:not(.node-contact) #block-block-14 .block-title.field-label,
+#block-block-14 .content-article .block-title.field-label,
+.content-article #block-block-14 .block-title.field-label,
+#block-block-14 body.node-type-resource article .block-title.field-label,
+body.node-type-resource article #block-block-14 .block-title.field-label,
+#block-block-14 body.node-type-organization article .block-title.field-label,
+body.node-type-organization article #block-block-14 .block-title.field-label,
+#block-block-14 body.node-type-event article .block-title.field-label,
+body.node-type-event article #block-block-14 .block-title.field-label,
+#block-block-14 body.node-type-vendor article .block-title.field-label,
+body.node-type-vendor article #block-block-14 .block-title.field-label,
+#block-block-14 body.node-type-license article .block-title.field-label,
+body.node-type-license article #block-block-14 .block-title.field-label,
+#block-block-14 body.node-type-trial-renewal article .block-title.field-label,
+body.node-type-trial-renewal article #block-block-14 .block-title.field-label,
+#block-block-14 body.page-user .profile .block-title.field-label,
+body.page-user .profile #block-block-14 .block-title.field-label, #block-block-14 .view-organizations table caption.block-title, .view-organizations table #block-block-14 caption.block-title {
+  display: none;
+}
+/* line 545, ../sass/_block.scss */
 #block-block-12 h2, #block-block-12 #content label, #content #block-block-12 label,
 #block-block-12 .profile label,
 .profile #block-block-12 label,
@@ -11150,28 +11214,92 @@ body.node-type-license article #block-block-14 .field-label,
 body.node-type-trial-renewal article #block-block-14 .field-label,
 #block-block-14 body.page-user .profile .field-label,
 body.page-user .profile #block-block-14 .field-label, #block-block-14 .view-organizations table caption, .view-organizations table #block-block-14 caption {
-  font-size: 2.2rem;
+  font-size: 1.9rem;
   line-height: 3rem;
   margin-bottom: 1.2rem;
   padding-left: 2.6rem;
   background: transparent url("/sites/all/themes/coppul/images/icon-browse-resources.png") top left no-repeat;
 }
-/* line 550, ../sass/_block.scss */
+/* line 552, ../sass/_block.scss */
+#block-block-12 h2 a, #block-block-12 #content label a, #content #block-block-12 label a,
+#block-block-12 .profile label a,
+.profile #block-block-12 label a,
+#block-block-12 article label a,
+article #block-block-12 label a, #block-block-12 #content > article:not(.node-contact) .field-label a, #content > article:not(.node-contact) #block-block-12 .field-label a,
+#block-block-12 .content-article .field-label a,
+.content-article #block-block-12 .field-label a,
+#block-block-12 body.node-type-resource article .field-label a,
+body.node-type-resource article #block-block-12 .field-label a,
+#block-block-12 body.node-type-organization article .field-label a,
+body.node-type-organization article #block-block-12 .field-label a,
+#block-block-12 body.node-type-event article .field-label a,
+body.node-type-event article #block-block-12 .field-label a,
+#block-block-12 body.node-type-vendor article .field-label a,
+body.node-type-vendor article #block-block-12 .field-label a,
+#block-block-12 body.node-type-license article .field-label a,
+body.node-type-license article #block-block-12 .field-label a,
+#block-block-12 body.node-type-trial-renewal article .field-label a,
+body.node-type-trial-renewal article #block-block-12 .field-label a,
+#block-block-12 body.page-user .profile .field-label a,
+body.page-user .profile #block-block-12 .field-label a, #block-block-12 .view-organizations table caption a, .view-organizations table #block-block-12 caption a, #block-block-13 h2 a, #block-block-13 #content label a, #content #block-block-13 label a,
+#block-block-13 .profile label a,
+.profile #block-block-13 label a,
+#block-block-13 article label a,
+article #block-block-13 label a, #block-block-13 #content > article:not(.node-contact) .field-label a, #content > article:not(.node-contact) #block-block-13 .field-label a,
+#block-block-13 .content-article .field-label a,
+.content-article #block-block-13 .field-label a,
+#block-block-13 body.node-type-resource article .field-label a,
+body.node-type-resource article #block-block-13 .field-label a,
+#block-block-13 body.node-type-organization article .field-label a,
+body.node-type-organization article #block-block-13 .field-label a,
+#block-block-13 body.node-type-event article .field-label a,
+body.node-type-event article #block-block-13 .field-label a,
+#block-block-13 body.node-type-vendor article .field-label a,
+body.node-type-vendor article #block-block-13 .field-label a,
+#block-block-13 body.node-type-license article .field-label a,
+body.node-type-license article #block-block-13 .field-label a,
+#block-block-13 body.node-type-trial-renewal article .field-label a,
+body.node-type-trial-renewal article #block-block-13 .field-label a,
+#block-block-13 body.page-user .profile .field-label a,
+body.page-user .profile #block-block-13 .field-label a, #block-block-13 .view-organizations table caption a, .view-organizations table #block-block-13 caption a, #block-block-14 h2 a, #block-block-14 #content label a, #content #block-block-14 label a,
+#block-block-14 .profile label a,
+.profile #block-block-14 label a,
+#block-block-14 article label a,
+article #block-block-14 label a, #block-block-14 #content > article:not(.node-contact) .field-label a, #content > article:not(.node-contact) #block-block-14 .field-label a,
+#block-block-14 .content-article .field-label a,
+.content-article #block-block-14 .field-label a,
+#block-block-14 body.node-type-resource article .field-label a,
+body.node-type-resource article #block-block-14 .field-label a,
+#block-block-14 body.node-type-organization article .field-label a,
+body.node-type-organization article #block-block-14 .field-label a,
+#block-block-14 body.node-type-event article .field-label a,
+body.node-type-event article #block-block-14 .field-label a,
+#block-block-14 body.node-type-vendor article .field-label a,
+body.node-type-vendor article #block-block-14 .field-label a,
+#block-block-14 body.node-type-license article .field-label a,
+body.node-type-license article #block-block-14 .field-label a,
+#block-block-14 body.node-type-trial-renewal article .field-label a,
+body.node-type-trial-renewal article #block-block-14 .field-label a,
+#block-block-14 body.page-user .profile .field-label a,
+body.page-user .profile #block-block-14 .field-label a, #block-block-14 .view-organizations table caption a, .view-organizations table #block-block-14 caption a {
+  color: #2a2724;
+}
+/* line 558, ../sass/_block.scss */
 #block-block-12 .block-content p, #block-block-13 .block-content p, #block-block-14 .block-content p {
   font-size: 1.6rem;
   line-height: 2.4rem;
   margin-bottom: 0;
 }
-/* line 557, ../sass/_block.scss */
+/* line 565, ../sass/_block.scss */
 #block-block-12:after, #block-block-13:after, #block-block-14:after {
   box-sizing: border-box;
 }
 
-/* line 562, ../sass/_block.scss */
+/* line 570, ../sass/_block.scss */
 #block-block-13 {
   margin: 0 3rem;
 }
-/* line 564, ../sass/_block.scss */
+/* line 572, ../sass/_block.scss */
 #block-block-13 h2, #block-block-13 #content label, #content #block-block-13 label,
 #block-block-13 .profile label,
 .profile #block-block-13 label,
@@ -11197,14 +11325,14 @@ body.page-user .profile #block-block-13 .field-label, #block-block-13 .view-orga
   background-image: url("/sites/all/themes/coppul/images/icon-member-info.png");
 }
 @media only screen and (max-width: 46.65666em) {
-  /* line 562, ../sass/_block.scss */
+  /* line 570, ../sass/_block.scss */
   #block-block-13 {
     margin-right: 0;
     margin-left: 0;
   }
 }
 
-/* line 576, ../sass/_block.scss */
+/* line 584, ../sass/_block.scss */
 #block-block-14 h2, #block-block-14 #content label, #content #block-block-14 label,
 #block-block-14 .profile label,
 .profile #block-block-14 label,
@@ -11229,18 +11357,18 @@ body.page-user .profile #block-block-14 .field-label, #block-block-14 .view-orga
   background-image: url("/sites/all/themes/coppul/images/icon-discover.png");
 }
 
-/* line 581, ../sass/_block.scss */
+/* line 589, ../sass/_block.scss */
 #block-block-12 {
   margin-bottom: 3.5rem;
   float: right;
 }
-/* line 584, ../sass/_block.scss */
+/* line 592, ../sass/_block.scss */
 #block-block-12:after {
   clear: both;
   content: " ";
   display: table;
 }
-/* line 590, ../sass/_block.scss */
+/* line 598, ../sass/_block.scss */
 #block-block-12 h2, #block-block-12 #content label, #content #block-block-12 label,
 #block-block-12 .profile label,
 .profile #block-block-12 label,
@@ -11265,7 +11393,7 @@ body.page-user .profile #block-block-12 .field-label, #block-block-12 .view-orga
   padding-left: 3.2rem;
 }
 
-/* line 595, ../sass/_block.scss */
+/* line 603, ../sass/_block.scss */
 #block-views-blog-block-6 {
   clear: both;
 }
