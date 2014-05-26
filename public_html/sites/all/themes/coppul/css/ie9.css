@@ -10414,12 +10414,6 @@ body.page-user .profile #block-views-committee-members-block .block-title.field-
   margin: 0px;
 }
 
-/* line 30, ../sass/_block.scss */
-.block-search {
-  width: 200px;
-  float: right;
-}
-
 /* Admin menu block */
 /* line 38, ../sass/_block.scss */
 #block-menu-menu-authenticated {

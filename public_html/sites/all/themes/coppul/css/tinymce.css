@@ -7501,12 +7501,6 @@ ul li .image-left {
   margin: 0px;
 }
 
-/* line 30, ../sass/_block.scss */
-.block-search {
-  width: 200px;
-  float: right;
-}
-
 /* Admin menu block */
 /* line 38, ../sass/_block.scss */
 #block-menu-menu-authenticated {
