@@ -63,19 +63,19 @@
         <?php
           // Manually render location field here--because Drupal sucks?
           //
-          // It should be possible, using the node, $organization, to 
-          // either render the field_location field directly, or at 
-          // least to pass the node object through 
-          // node_prepare_content() and then render the field. None of 
-          // this works in this context for some reason. Consequently, 
-          // we do it manually: 
+          // It should be possible, using the node, $organization, to
+          // either render the field_location field directly, or at
+          // least to pass the node object through
+          // node_prepare_content() and then render the field. None of
+          // this works in this context for some reason. Consequently,
+          // we do it manually:
         ?>
         <div class="field-label"><?php print t('Address'); ?>:</div>
         <div class="location vcard">
           <div class="adr">
-            <span class="fn"></span> 
-            <div class="street-address"><?php print $location['street']; ?></div> 
-            <span class="locality"><?php print $location['city']; ?> <?php print $location['province'] ?></span> 
+            <span class="fn"></span>
+            <div class="street-address"><?php print $location['street']; ?></div>
+            <span class="locality"><?php print $location['city']; ?> <?php print $location['province'] ?></span>
             <span class="postal-code"><?php print $location['postal_code']; ?></span>
             <div class="country-name"><?php print $location['country_name']; ?></div>
           </div> <!-- // close adr -->
@@ -86,4 +86,3 @@
   <?php endforeach;?>
   <?php print render($user_profile); ?>
 </div>
-
