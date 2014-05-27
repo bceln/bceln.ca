@@ -5653,12 +5653,11 @@ body#tinymce h1 {
   font-size: 3.2rem;
   line-height: 8rem;
   text-align: left;
-  text-transform: capitalize;
   font-weight: 600;
   font-style: normal;
   color: #3a3a3b;
 }
-/* line 91, ../sass/_typography.scss */
+/* line 90, ../sass/_typography.scss */
 #content h2, #content label, #content > article:not(.node-contact) .field-label, #content > body#tinymce:not(.node-contact) .field-label,
 #content .content-article .field-label,
 .content-article #content .field-label,
@@ -5770,7 +5769,7 @@ body.page-user .profile body#tinymce .field-label {
   font-style: normal;
   color: #323334;
 }
-/* line 103, ../sass/_typography.scss */
+/* line 102, ../sass/_typography.scss */
 #content h3,
 .profile h3,
 article h3,
@@ -5782,7 +5781,7 @@ body#tinymce h3 {
   font-style: normal;
   line-height: 4.5rem;
 }
-/* line 112, ../sass/_typography.scss */
+/* line 111, ../sass/_typography.scss */
 #content h4,
 .profile h4,
 article h4,
@@ -5791,14 +5790,14 @@ body#tinymce h4 {
   font-weight: bold;
   text-transform: uppercase;
 }
-/* line 122, ../sass/_typography.scss */
+/* line 121, ../sass/_typography.scss */
 #content ul,
 .profile ul,
 article ul,
 body#tinymce ul {
   padding-left: 40px;
 }
-/* line 127, ../sass/_typography.scss */
+/* line 126, ../sass/_typography.scss */
 #content label,
 .profile label,
 article label,
@@ -5813,25 +5812,25 @@ body#tinymce label {
   */
 }
 
-/* line 141, ../sass/_typography.scss */
+/* line 140, ../sass/_typography.scss */
 #content article ul.links, #content body#tinymce ul.links {
   padding-left: 0;
 }
 
-/* line 145, ../sass/_typography.scss */
+/* line 144, ../sass/_typography.scss */
 aside p {
   font-style: inherit;
   font-size: 1.5rem;
 }
 
-/* line 150, ../sass/_typography.scss */
+/* line 149, ../sass/_typography.scss */
 #main section .block-title {
   font-size: 1.9rem;
   color: #3a3a3a;
   font-weight: bold;
 }
 
-/* line 158, ../sass/_typography.scss */
+/* line 157, ../sass/_typography.scss */
 #sidebar-right .block h2, #sidebar-right .block #content label, #content #sidebar-right .block label,
 #sidebar-right .block .profile label,
 .profile #sidebar-right .block label,
@@ -5872,12 +5871,12 @@ body.page-user .profile #sidebar-right .block .field-label {
   font-size: 1em;
   font-weight: bold;
 }
-/* line 165, ../sass/_typography.scss */
+/* line 164, ../sass/_typography.scss */
 #sidebar-right .block ul {
   padding: 0 0 0.25em 1em;
 }
 
-/* line 173, ../sass/_typography.scss */
+/* line 172, ../sass/_typography.scss */
 #sidebar-left .block h2, #sidebar-left .block #content label, #content #sidebar-left .block label,
 #sidebar-left .block .profile label,
 .profile #sidebar-left .block label,
@@ -5925,7 +5924,7 @@ body.page-user .profile #sidebar-left .block .field-label {
 /* -----------------------------------------
    Block typography:
 ----------------------------------------- */
-/* line 213, ../sass/_typography.scss */
+/* line 212, ../sass/_typography.scss */
 .block h2, .block #content label, #content .block label,
 .block .profile label,
 .profile .block label,
@@ -5964,7 +5963,7 @@ body.page-user .profile .block .field-label,
 .block h3 {
   margin: 0 0 1rem;
 }
-/* line 217, ../sass/_typography.scss */
+/* line 216, ../sass/_typography.scss */
 .block h3 {
   clear: both;
   color: #2a2724;
@@ -5975,7 +5974,7 @@ body.page-user .profile .block .field-label,
 /* -----------------------------------------
    Individual fields
 ----------------------------------------- */
-/* line 230, ../sass/_typography.scss */
+/* line 229, ../sass/_typography.scss */
 .front #content .entry-content .field-name-body h2, .front #content .entry-content .field-name-body label, .front #content > article:not(.node-contact) .entry-content .field-name-body .field-label, .front #content > body#tinymce:not(.node-contact) .entry-content .field-name-body .field-label,
 .front #content .entry-content .field-name-body .content-article .field-label,
 .content-article .front #content .entry-content .field-name-body .field-label,
@@ -6008,7 +6007,7 @@ body.page-user .profile .front #content .entry-content .field-name-body .field-l
   font-size: 3.5rem;
 }
 
-/* line 235, ../sass/_typography.scss */
+/* line 234, ../sass/_typography.scss */
 .field-name-field-trial-deadline {
   font-size: 1.8rem;
   text-align: center;
@@ -6017,7 +6016,7 @@ body.page-user .profile .front #content .entry-content .field-name-body .field-l
 /* -----------------------------------------
    UI Elements (pagination, breadcrumbs etc.)
 ----------------------------------------- */
-/* line 246, ../sass/_typography.scss */
+/* line 245, ../sass/_typography.scss */
 #content > article:not(.node-contact) .field-label, #content > body#tinymce:not(.node-contact) .field-label,
 .content-article .field-label,
 body.node-type-resource article .field-label,
@@ -6038,7 +6037,7 @@ body.page-user .profile .field-label {
   margin-top: 0;
   margin-bottom: 1.5rem;
 }
-/* line 255, ../sass/_typography.scss */
+/* line 254, ../sass/_typography.scss */
 #content > article:not(.node-contact) .collapsed legend, #content > body#tinymce:not(.node-contact) .collapsed legend,
 #content > article:not(.node-contact) .collapsible legend,
 #content > body#tinymce:not(.node-contact) .collapsible legend,
@@ -6072,7 +6071,7 @@ body.node-type-trial-renewal body#tinymce .collapsible legend,
 body.page-user .profile .collapsible legend {
   background: transparent;
 }
-/* line 257, ../sass/_typography.scss */
+/* line 256, ../sass/_typography.scss */
 #content > article:not(.node-contact) .collapsed legend a, #content > body#tinymce:not(.node-contact) .collapsed legend a,
 #content > article:not(.node-contact) .collapsible legend a,
 #content > body#tinymce:not(.node-contact) .collapsible legend a,
@@ -6111,7 +6110,7 @@ body.page-user .profile .collapsible legend a {
   text-transform: uppercase;
 }
 
-/* line 268, ../sass/_typography.scss */
+/* line 267, ../sass/_typography.scss */
 .notice {
   color: #f00;
 }
@@ -6119,17 +6118,17 @@ body.page-user .profile .collapsible legend a {
 /* -----------------------------------------
     Views
 ----------------------------------------- */
-/* line 297, ../sass/_typography.scss */
+/* line 296, ../sass/_typography.scss */
 .view a {
   text-decoration: none;
 }
-/* line 301, ../sass/_typography.scss */
+/* line 300, ../sass/_typography.scss */
 .view .row {
   margin-bottom: 1rem;
   margin-top: 1rem;
 }
 
-/* line 308, ../sass/_typography.scss */
+/* line 307, ../sass/_typography.scss */
 #block-views-contacts-by-group-block h2.block-title, #block-views-contacts-by-group-block #content label.block-title, #content #block-views-contacts-by-group-block label.block-title,
 #block-views-contacts-by-group-block .profile label.block-title,
 .profile #block-views-contacts-by-group-block label.block-title,
@@ -6167,7 +6166,7 @@ body.node-type-trial-renewal body#tinymce #block-views-contacts-by-group-block .
 body.page-user .profile #block-views-contacts-by-group-block .block-title.field-label {
   color: black;
 }
-/* line 312, ../sass/_typography.scss */
+/* line 311, ../sass/_typography.scss */
 #block-views-contacts-by-group-block h3 {
   font-size: 1.2rem;
   margin-bottom: 1rem;
@@ -6178,7 +6177,7 @@ body.page-user .profile #block-views-contacts-by-group-block .block-title.field-
 /* -----------------------------------------
    Forms
 ----------------------------------------- */
-/* line 327, ../sass/_typography.scss */
+/* line 326, ../sass/_typography.scss */
 .search-results dt a {
   text-decoration: underline;
 }
