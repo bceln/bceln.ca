@@ -56,20 +56,20 @@ function cogito_html_head_alter(&$variables) {
   }
   // If it's just not available, display a message to the user:
   else {
-    drupal_set_message(t('The Foundation framework could not be found. In order to use the Cogito theme, you must download the framework from !foundation-url, and extract it to <em>sites/all/libraries/foundation</em> (if the !libraries-module is installed) or to %foundation-theme-path.', 
+    drupal_set_message(t('The Foundation framework could not be found. In order to use the Cogito theme, you must download the framework from !foundation-url, and extract it to <em>sites/all/libraries/foundation</em> (if the !libraries-module is installed) or to %foundation-theme-path.',
       array(
-        '!foundation-url' => l(t('the Foundation project page'), 'http://foundation.zurb.com'), 
-        '!libraries-module' => l(t('7.x-1.x version of the Libraries module'), 'http://drupal.org/project/libraries'), 
+        '!foundation-url' => l(t('the Foundation project page'), 'http://foundation.zurb.com'),
+        '!libraries-module' => l(t('7.x-1.x version of the Libraries module'), 'http://drupal.org/project/libraries'),
         '%foundation-theme-path' => $path_to_cogito . '/foundation')
       ), 'error');
   }
-  
+
   // Add conditional stylesheets for lesser browsers
   $maxIE = 9; //the top version of IE that we make exceptions for
-  drupal_add_css( drupal_get_path('theme', $theme) . '/css/app.css', 
-    array('group' => CSS_THEME, 
+  drupal_add_css( drupal_get_path('theme', $theme) . '/css/app.css',
+    array('group' => CSS_THEME,
       'browsers' => array(
-      'IE' => 'gte IE '. $maxIE, 
+      'IE' => 'gte IE '. $maxIE,
       'preprocess' => TRUE
       )
       )
@@ -77,10 +77,10 @@ function cogito_html_head_alter(&$variables) {
 
   for ($i = 6; $i <= $maxIE; $i++){
     if( is_file( DRUPAL_ROOT . '/' . drupal_get_path('theme', $theme) . '/ie'.$i.'.css') ){
-      drupal_add_css( drupal_get_path('theme', $theme) . '/ie'.$i.'.css', array('group' => CSS_THEME, 'browsers' => array('IE' => 'IE '. $i, '!IE' => FALSE), 'preprocess' => FALSE));  
+      drupal_add_css( drupal_get_path('theme', $theme) . '/ie'.$i.'.css', array('group' => CSS_THEME, 'browsers' => array('IE' => 'IE '. $i, '!IE' => FALSE), 'preprocess' => FALSE));
     }
     elseif( is_file( DRUPAL_ROOT . '/' . drupal_get_path('theme', $theme) . '/css/ie'.$i.'.css') ){
-      drupal_add_css( drupal_get_path('theme', $theme) . '/css/ie'.$i.'.css', array('group' => CSS_THEME, 'browsers' => array('IE' => 'IE '. $i, '!IE' => FALSE), 'preprocess' => FALSE));  
+      drupal_add_css( drupal_get_path('theme', $theme) . '/css/ie'.$i.'.css', array('group' => CSS_THEME, 'browsers' => array('IE' => 'IE '. $i, '!IE' => FALSE), 'preprocess' => FALSE));
     }
   }
 
@@ -92,7 +92,22 @@ function cogito_html_head_alter(&$variables) {
   // CSS
   // drupal_add_css($foundation_path . '/stylesheets/foundation.css', array('media' => 'all'));
   // JS
-  drupal_add_js($foundation_path . '/javascripts/foundation.min.js', array('type' => 'file'));
+  drupal_add_js($foundation_path . '/javascripts/modernizr.foundation.js', array('type' => 'file'));
+  drupal_add_js($foundation_path . '/javascripts/jquery.foundation.accordion.js', array('type' => 'file'));
+  //drupal_add_js($foundation_path . '/javascripts/jquery.foundation.alerts.js', array('type' => 'file'));
+  drupal_add_js($foundation_path . '/javascripts/jquery.foundation.buttons.js', array('type' => 'file'));
+  drupal_add_js($foundation_path . '/javascripts/jquery.foundation.clearing.js', array('type' => 'file'));
+  drupal_add_js($foundation_path . '/javascripts/jquery.foundation.forms.js', array('type' => 'file'));
+  //drupal_add_js($foundation_path . '/javascripts/jquery.foundation.joyride.js', array('type' => 'file'));
+  //drupal_add_js($foundation_path . '/javascripts/jquery.foundation.magellan.js', array('type' => 'file'));
+  //drupal_add_js($foundation_path . '/javascripts/jquery.foundation.mediaQueryToggle.js', array('type' => 'file'));
+  drupal_add_js($foundation_path . '/javascripts/jquery.foundation.navigation.js', array('type' => 'file'));
+  drupal_add_js($foundation_path . '/javascripts/jquery.foundation.orbit.js', array('type' => 'file'));
+  drupal_add_js($foundation_path . '/javascripts/jquery.foundation.reveal.js', array('type' => 'file'));
+  drupal_add_js($foundation_path . '/javascripts/jquery.foundation.tabs.js', array('type' => 'file'));
+  //drupal_add_js($foundation_path . '/javascripts/jquery.foundation.tooltips.js', array('type' => 'file'));
+  drupal_add_js($foundation_path . '/javascripts/jquery.foundation.topbar.js', array('type' => 'file'));
+  //drupal_add_js($foundation_path . '/javascripts/jquery.foundation.placeholder.js', array('type' => 'file'));
 
   if (_cogito_safe_settings('default_favicon')) {
     foreach ($variables as $key => $value) {
@@ -225,7 +240,7 @@ function cogito_preprocess_node(&$variables) {
         else {
           $variables['region'][$region_name] .= render($context_blocks);
         }
-        
+
       }
       if (!empty($normal_blocks)) {
         if (!isset($variables['region'][$region_name])){
@@ -255,7 +270,7 @@ function cogito_preprocess_page(&$variables) {
   if ( module_exists('search') ){
     $search_form = drupal_get_form('search_form');
     $search_box = drupal_render($search_form);
-    $variables['search_box'] = $search_box;  
+    $variables['search_box'] = $search_box;
   }
   else {
     $variables['search_box'] = "";
@@ -582,7 +597,7 @@ function cogito_pager($variables) {
 /**
  * Implements theme_menu_link().
  */
-function cogito_menu_link__main_menu($variables) {  
+function cogito_menu_link__main_menu($variables) {
   // Store some values that'll be used more than once:
 
   $current_path = current_path();
@@ -592,9 +607,9 @@ function cogito_menu_link__main_menu($variables) {
   if ($current_path == $element['#href'] || (drupal_is_front_page() && $element['#href'] == '<front>')) {
     $element['#attributes']['class'][] = 'active';
   }
-  
+
   $output = l($element['#title'], $element['#href'], $element['#localized_options']);
-  
+
   // Classes for the list item:
   $element['#attributes']['class'][] = 'dropdown';
 
@@ -604,7 +619,7 @@ function cogito_menu_link__main_menu($variables) {
   // Attributes for the link itself:
   $element['#localized_options']['attributes']['data-toggle'] = 'dropdown';
   $element['#localized_options']['attributes']['class'][] = 'dropdown-toggle';
-  
+
   // Render the element--but do it differently:
 
   if (!empty($element['#below'])){
