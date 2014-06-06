@@ -602,15 +602,27 @@ li.btn {
     content: '';
     clear: both;
   }
+
+  figcaption {
+    text-align: right;
+    font-style: italic;
+    padding: 0 rem(1) rem(0.5) 0;
+  }
 }
 
 .image-left, .image-left img {
   float: left;
-  padding: 0 rem(1) rem(1) 0;
+  padding: 0 rem(1) rem(0.5) 0;
 
   &:after {
     content: '';
     clear: both;
+  }
+
+  figcaption {
+    text-align: right;
+    font-style: italic;
+    padding: 0 rem(1) rem(0.5) 0;
   }
 }
 

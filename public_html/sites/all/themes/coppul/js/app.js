@@ -76,4 +76,17 @@
       $('.front .field-name-body img').hide().eq(random).show();
     }
   }
+
+  // Add an image caption if there is an alt attribute
+  Drupal.behaviors.imageCaption = {
+    attach: function(context) {
+      $("#content .entry-content img").each(function(index) {
+        if($(this).attr('alt') != '') {
+          $(this).wrap('<figure class="' + $(this).attr('class') + '" />').after($('<figcaption>', {text: this.alt}));
+          $(this).removeClass(this.class);
+        }
+      });
+    }
+  }
+
 })(jQuery);

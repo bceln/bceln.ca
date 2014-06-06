@@ -7414,19 +7414,31 @@ li.btn {
   content: '';
   clear: both;
 }
+/* line 606, ../sass/_page.scss */
+.image-right figcaption, .image-right img figcaption {
+  text-align: right;
+  font-style: italic;
+  padding: 0 1rem 0.5rem 0;
+}
 
-/* line 607, ../sass/_page.scss */
+/* line 613, ../sass/_page.scss */
 .image-left, .image-left img {
   float: left;
-  padding: 0 1rem 1rem 0;
+  padding: 0 1rem 0.5rem 0;
 }
-/* line 611, ../sass/_page.scss */
+/* line 617, ../sass/_page.scss */
 .image-left:after, .image-left img:after {
   content: '';
   clear: both;
 }
+/* line 622, ../sass/_page.scss */
+.image-left figcaption, .image-left img figcaption {
+  text-align: right;
+  font-style: italic;
+  padding: 0 1rem 0.5rem 0;
+}
 
-/* line 617, ../sass/_page.scss */
+/* line 629, ../sass/_page.scss */
 ul li .image-left {
   padding: 1rem 3rem 1rem 0;
 }
