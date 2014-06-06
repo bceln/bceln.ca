@@ -103,7 +103,7 @@ function coppul_preprocess_field(&$variables) {
     case 'field_resources_generic_url':
       // There's a help message as part of the field--insert it here:
       $variables['items'][0]['#suffix'] = '<div class="help">'
-                 . l(t("Why can't I connect to the database?"), 'node/114')
+                 . l(t("Why can't I connect to the database?"), 'node/1239')
                  . '</div>';
       break;
     // Trial-renewal fields:
