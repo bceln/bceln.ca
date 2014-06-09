@@ -1,11 +1,12 @@
-name = GMap Taxonomy Markers
-description = Taxonomy based markers
+name = Gmap Style Bubbles
+description = A module that lets you add more styles to your gmap popup bubbles.
 package = Location
 core = 7.x
-dependencies[] = taxonomy
+
+project = gmap_style_bubbles
 dependencies[] = gmap
-files[] = gmap_taxonomy.module
-files[] = gmap_taxonomy.views.inc
+dependencies[] = libraries (2.x)
+
 
 ; Information added by Drupal.org packaging script on 2014-03-10
 version = "7.x-2.9"

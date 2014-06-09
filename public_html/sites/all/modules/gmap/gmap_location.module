@@ -440,7 +440,7 @@ function gmap_location_admin_settings() {
     '#default_value' => $temp['macro'],
     '#size' => 50,
     '#maxlength' => 500,
-    '#description' => t('The gmap macro where the user information will be diplayed on.'),
+    '#description' => t('The GMap macro to be used when displaying user information. See the <a href="http://drupal.org/documentation/modules/gmap/macros">documentation on GMap macros</a>.'),
   );
   $form['user']['gmap_user_map']['header'] = array(
     '#type' => 'textarea',
@@ -509,7 +509,7 @@ function gmap_location_admin_settings() {
     '#default_value' => $temp['macro'],
     '#size' => 50,
     '#maxlength' => 500,
-    '#description' => t('The gmap macro where the node information will be diplayed on.'),
+    '#description' => t('The GMap macro which will be used to display the node information. See the <a href="http://drupal.org/documentation/modules/gmap/macros">documentation on GMap macros</a>.'),
   );
   $form['node']['gmap_node_map']['header'] = array(
     '#type' => 'textarea',
@@ -742,7 +742,7 @@ function _gmap_location_block_view($nid) {
       $map['latitude'] = $markers[0]['latitude'];
       $map['longitude'] = $markers[0]['longitude'];
       $map['markers'] = $markers;
-      $block['subject'] = t('Location');
+      $block['subject'] = t('Location', array(), array('context' => 'geolocation'));
       $element = array(
         '#type' => 'gmap',
         '#gmap_settings' => $map,
@@ -839,7 +839,7 @@ function theme_gmap_location_infowindow_node(&$vars) {
   // directory and add theme_hook_gmapnodelabel($node, $location) to it.
   // Be sure to enable your 'flexinode_#.module'.
   return '<div class="gmapnodelabel gmapnodelabel-' . drupal_clean_css_identifier($node->type) .
-    '">' . strtr(drupal_render(node_view($node, 'teaser')), "'\n\r", '"  ') . '</div>'; // make sure it all goes on one line.
+  '">' . strtr(drupal_render(node_view($node, 'teaser')), "'\n\r", '"  ') . '</div>'; // make sure it all goes on one line.
 }
 
 /**

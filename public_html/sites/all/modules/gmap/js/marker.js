@@ -8,7 +8,12 @@
 Drupal.gmap.addHandler('gmap', function (elem) {
     var obj = this;
 
-    var infowindow = new google.maps.InfoWindow();
+    if (obj.vars.styleBubble && obj.vars.styleBubble.enableBubbleStyle == 1) {
+        var infowindow = new InfoBubble(obj.vars.styleBubble.styleBubbleOptions);
+    }
+    else {
+        var infowindow = new google.maps.InfoWindow();
+    }
 
     obj.bind('init', function () {
         if (obj.vars.behavior.autozoom) {
@@ -82,7 +87,7 @@ Drupal.gmap.addHandler('gmap', function (elem) {
             // If there was a callback, prefix that.
             // (If there wasn't, marker.rmt was the FULL path.)
             if (obj.vars.rmtcallback) {
-                uri = obj.vars.rmtcallback + '/' + marker.rmt;
+                uri = Drupal.settings.basePath + Drupal.settings.pathPrefix + obj.vars.rmtcallback + '/' + marker.rmt;
             }
             // @Bevan: I think it makes more sense to do it in this order.
             // @Bevan: I don't like your choice of variable btw, seems to me like

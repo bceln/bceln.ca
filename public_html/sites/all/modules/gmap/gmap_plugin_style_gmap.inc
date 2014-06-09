@@ -31,9 +31,11 @@ class gmap_plugin_style_gmap extends views_plugin_style {
     $options['latfield'] = array('default' => '');
     $options['lonfield'] = array('default' => '');
     $options['markerfield'] = array('default' => '');
+    $options['geofield'] = array('default' => '');
 
     $options['enablermt'] = array('default' => FALSE);
     $options['rmtfield'] = array('default' => '');
+    $options['rmtfieldraw'] = array('default' => TRUE);
     $options['rmtcallback'] = array('default' => '');
 
     $options['center_on_nodearg'] = array('default' => 0);
@@ -199,6 +201,12 @@ class gmap_plugin_style_gmap extends views_plugin_style {
         elseif ($this->options['datasource'] == 'fields') {
           $lat = isset($row->{$lat_field}[0]['raw']['value']) ? (float) $row->{$lat_field}[0]['raw']['value'] : NULL;
           $lon = isset($row->{$lon_field}[0]['raw']['value']) ? (float) $row->{$lon_field}[0]['raw']['value'] : NULL;
+
+          // Field is Location CCK
+          if (!$lat || !$lon) {
+            $lat = isset($row->{$lat_field}[0]['raw']['latitude']) ? $row->{$lat_field}[0]['raw']['latitude'] : NULL;
+            $lon = isset($row->{$lon_field}[0]['raw']['longitude']) ? $row->{$lon_field}[0]['raw']['longitude'] : NULL;
+          }
         }
 
         // $row->nid is present in node views, views without node as the base table must include the nid field,
@@ -237,7 +245,7 @@ class gmap_plugin_style_gmap extends views_plugin_style {
           }
           elseif ($this->options['markers'] == 'field') {
 
-            if (!empty($row->{$marker_field})) {
+            if (!empty($row->{$marker_field}) && !empty($row->{$marker_field}[0]['raw']['value'])) {
               $markername = $row->{$marker_field}[0]['raw']['value'];
             }
           }
@@ -275,7 +283,12 @@ class gmap_plugin_style_gmap extends views_plugin_style {
 
           // RMT mode.
           if ($this->options['enablermt']) {
-            $marker['rmt'] = $row->{$rmt_field};
+            if ($this->options['rmtfieldraw']) {
+              $marker['rmt'] = $row->{$rmt_field};
+            }
+            else {
+              $marker['rmt'] = $this->rendered_fields[$row_index][$rmt_field_obj->field];
+            }
           }
           elseif (!empty($defaults['markermode'])) {
             // Marker mode: popup.
@@ -326,8 +339,8 @@ class gmap_plugin_style_gmap extends views_plugin_style {
 
     $field_options = array();
     $fields = $this->display->handler->get_handlers('field');
-    foreach ($fields as $id => $handler) {
-      $field_options[$id] = $handler->ui_name(FALSE);
+    foreach ($fields as $handler) {
+      $field_options[$handler->options['id']] = (!empty($handler->options['label'])) ? $handler->options['label'] : $handler->options['id'];
     }
 
     $argument_options = array();
@@ -341,8 +354,7 @@ class gmap_plugin_style_gmap extends views_plugin_style {
       '#title' => t('Macro'),
       '#rows' => 3,
       '#default_value' => $this->options['macro'],
-      '#description' => t('Enter a macro. If left unchanged, it takes the default settings from <a href="!link">/admin/config/services/gmap</a>',
-        array('!link' => url('admin/config/services/gmap'))),
+      '#description' => t('Enter a macro. If left unchanged, it takes the default settings from <a href="!link">/admin/config/services/gmap</a>. See the <a href="http://drupal.org/documentation/modules/gmap/macros">documentation on GMap macros</a>.', array('!link' => url('admin/config/services/gmap'))),
     );
 
     $form['datasource'] = array(
@@ -436,6 +448,13 @@ class gmap_plugin_style_gmap extends views_plugin_style {
       '#options' => $field_options,
       '#default_value' => $this->options['rmtfield'],
       '#process' => array('ctools_dependent_process'),
+      '#dependency' => array('edit-style-options-enablermt' => array(TRUE)),
+    );
+    $form['rmtfieldraw'] = array(
+      '#type' => 'checkbox',
+      '#title' => t('Use raw value of RMT field'),
+      '#description' => t('You can use a raw value of the RMT field or a displayed value, the displayed value is different from the raw value if the field output is rewrited in the field settings.'),
+      '#default_value' => $this->options['rmtfieldraw'],
       '#dependency' => array('edit-style-options-enablermt' => array(TRUE)),
     );
     $form['rmtcallback'] = array(

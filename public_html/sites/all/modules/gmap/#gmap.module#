@@ -1064,7 +1064,7 @@ function gmap_get_marker_titles($reset = FALSE) {
     }
   }
 
-  module_load_include('inc', 'gmap', 'gmap_markerinfo');
+  require_once(drupal_get_path('module', 'gmap') . '/gmap_markerinfo.inc');
   $titles = _gmap_get_marker_titles();
   cache_set('gmap_marker_titles', $titles, 'cache');
   return $titles;
@@ -1086,7 +1086,7 @@ function gmap_get_icondata($reset = FALSE) {
   }
 
   if ($reset || !$icons) {
-    module_load_include('inc', 'gmap', 'gmap_markerinfo');
+    require_once(drupal_get_path('module', 'gmap') . '/gmap_markerinfo.inc');
     $icons = _gmap_get_icondata();
   }
   cache_set('gmap_icondata', $icons, 'cache');
