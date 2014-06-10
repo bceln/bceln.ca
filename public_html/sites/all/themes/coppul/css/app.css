@@ -9248,27 +9248,29 @@ li.btn {
 .image-right figcaption, .image-right img figcaption {
   text-align: right;
   font-style: italic;
+  font-size: 1.5rem;
   padding: 0 1rem 0.5rem 0;
 }
 
-/* line 613, ../sass/_page.scss */
+/* line 614, ../sass/_page.scss */
 .image-left, .image-left img {
   float: left;
   padding: 0 1rem 0.5rem 0;
 }
-/* line 617, ../sass/_page.scss */
+/* line 618, ../sass/_page.scss */
 .image-left:after, .image-left img:after {
   content: '';
   clear: both;
 }
-/* line 622, ../sass/_page.scss */
+/* line 623, ../sass/_page.scss */
 .image-left figcaption, .image-left img figcaption {
   text-align: right;
   font-style: italic;
+  font-size: 1.5rem;
   padding: 0 1rem 0.5rem 0;
 }
 
-/* line 629, ../sass/_page.scss */
+/* line 631, ../sass/_page.scss */
 ul li .image-left {
   padding: 1rem 3rem 1rem 0;
 }
