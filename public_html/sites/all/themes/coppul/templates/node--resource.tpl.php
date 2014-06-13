@@ -51,6 +51,7 @@
     endif; ?>
     <?php /* field_resources_license */ ?>
     <?php
+      drupal_add_library('system', 'drupal.collapse');
       print theme('fieldset', array(
         'element' => array(
           '#attributes' => array(
