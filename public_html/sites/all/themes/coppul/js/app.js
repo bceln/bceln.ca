@@ -82,8 +82,10 @@
     attach: function(context) {
       $("#content .entry-content img").each(function(index) {
         if($(this).attr('alt') != '') {
-          $(this).wrap('<figure class="' + $(this).attr('class') + '" />').after($('<figcaption>', {text: this.alt}));
-          $(this).removeClass(this.class);
+        var alt = $(this).alt;
+          $(this).wrap('<figure class="' + $(this).attr('class') + '" />').after($('<figcaption>', {text: alt}));
+        var cla = $(this).class;
+          $(this).removeClass(cla);
         }
       });
     }
