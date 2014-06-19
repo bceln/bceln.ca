@@ -594,16 +594,20 @@ li.btn {
   border-bottom: 1px dotted $gray_6;
 }
 
-.image-right, .image-right img {
+.image-right {
   float: right;
   padding: 0 0 rem(1) rem(1);
-
+  
+  img {
+  	padding: 0 0 rem(1) rem(1);
+  }
+	
   &:after {
     content: '';
     clear: both;
   }
 
-  figcaption {
+  .caption {
     text-align: right;
     font-style: italic;
     font-size: rem(1.5);
@@ -611,16 +615,20 @@ li.btn {
   }
 }
 
-.image-left, .image-left img {
+.image-left {
   float: left;
   padding: 0 rem(1) rem(0.5) 0;
+  
+  img {
+  	padding: 0 rem(1) rem(0.5) 0;
+  }
 
   &:after {
     content: '';
     clear: both;
   }
 
-  figcaption {
+  .caption {
     text-align: right;
     font-style: italic;
     font-size: rem(1.5);

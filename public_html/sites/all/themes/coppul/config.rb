@@ -1,5 +1,7 @@
+gem 'modular-scale', '=1.0.6'
 gem 'zurb-foundation', '=3.2.5'
 require 'zurb-foundation'
+require 'modular-scale'
 ##
 ## This file is only needed for Compass/Sass integration. If you are not using
 ## Compass, you may safely ignore or delete this file.

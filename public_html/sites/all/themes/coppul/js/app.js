@@ -82,10 +82,10 @@
     attach: function(context) {
       $("#content .entry-content img").each(function(index) {
         if($(this).attr('alt') != '') {
-        var alt = $(this).alt;
-          $(this).wrap('<figure class="' + $(this).attr('class') + '" />').after($('<figcaption>', {text: alt}));
-        var cla = $(this).class;
-          $(this).removeClass(cla);
+        	var alt = this.alt;
+        	var c_attribute = $(this).attr('class');
+          $(this).wrap('<div class="' + $(this).attr('class') + '" />').after($('<div>', {text: alt}).addClass('caption'));
+          $(this).removeClass(c_attribute);
         }
       });
     }
