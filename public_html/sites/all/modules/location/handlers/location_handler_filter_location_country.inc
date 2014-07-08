@@ -53,13 +53,15 @@ class location_handler_filter_location_country extends views_handler_filter_in_o
         if (!empty($this->options['expose']['optional']) && (empty($default_value) || !empty($this->options['expose']['reduce']))) {
           $default_value = 'All';
         }
-        else if (empty($default_value)) {
-          $keys = array_keys($options);
-          $default_value = array_shift($keys);
-        }
         else {
-          $copy = $default_value;
-          $default_value = array_shift($copy);
+          if (empty($default_value)) {
+            $keys = array_keys($options);
+            $default_value = array_shift($keys);
+          }
+          else {
+            $copy = $default_value;
+            $default_value = array_shift($copy);
+          }
         }
       }
     }
@@ -122,7 +124,7 @@ class location_handler_filter_location_country extends views_handler_filter_in_o
 
       if (isset($value)) {
         $this->value = $value;
-        if (empty($this->always_multiple) && empty($this->options['expose']['multiple'])) {
+        if (empty($this->always_multiple) && empty($this->options['expose']['multiple']) && !is_array($value)) {
           $this->value = array($value);
         }
       }

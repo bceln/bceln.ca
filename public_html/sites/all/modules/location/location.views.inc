@@ -71,6 +71,9 @@ function location_views_handlers() {
       'location_handler_sort_location_distance' => array(
         'parent' => 'views_handler_sort',
       ),
+      'location_handler_sort_location_country' => array(
+        'parent' => 'views_handler_sort',
+      ),
 //      'location_handler_relationship_location_distance' => array(
 //        'parent' => 'views_handler_relationship',
 //      ),
@@ -93,12 +96,12 @@ function location_views_data() {
   // Define the base group of this table. Fields that don't
   // have a group defined will go into this field by default.
 
-  $data['location']['table']['group'] = t('Location');
+  $data['location']['table']['group'] = t('Location', array(), array('context' => 'geolocation'));
 
   // Advertise this table as a possible base table
   $data['location']['table']['base'] = array(
     'field' => 'lid',
-    'title' => t('Location'),
+    'title' => t('Location', array(), array('context' => 'geolocation')),
     'help' => t('Locations are addresses and map coordinates.'),
     'weight' => -10,
   );
@@ -279,8 +282,7 @@ function location_views_data() {
       'handler' => 'location_handler_filter_location_country',
     ),
     'sort' => array(
-      'handler' => 'views_handler_sort',
-      // TODO: needs handler to sort by name, not code
+      'handler' => 'location_handler_sort_location_country',
     ),
   );
 
@@ -375,7 +377,7 @@ function location_views_data() {
   );
 
 
-  $data['location_instance']['table']['group'] = t('Location');
+  $data['location_instance']['table']['group'] = t('Location', array(), array('context' => 'geolocation'));
 
   $data['location_instance']['table']['join'] = array(
     'location' => array(
@@ -516,7 +518,7 @@ function location_views_proximity_get_reference_location($view, $options) {
     case 'static':
     case 'latlon_gmap':
       // Validate actual values
-      if ( !empty( $options['latitude'] ) && !empty( $options['longitude'] ) ) {
+      if (!empty($options['latitude']) && !empty($options['longitude'])) {
         $coordinates['latitude'] = (float) $options['latitude'];
         $coordinates['longitude'] = (float) $options['longitude'];
       }
@@ -530,6 +532,15 @@ function location_views_proximity_get_reference_location($view, $options) {
               $coordinates['latitude'] = (float) $coords['latitude'];
               $coordinates['longitude'] = (float) $coords['longitude'];
             }
+          }
+        }
+      }
+      // If at this stage we don't have coordinates then check for a distance contextual filter
+      if (!count($coordinates) && !empty($view->argument) && !empty($argument->value['latitude']) && !empty($argument->value['longitude'])) {
+        foreach ($view->argument as $argument) {
+          if ($argument->table == 'location' && $argument->field == 'distance') {
+            $coordinates['latitude'] = (float) $argument->value['latitude'];
+            $coordinates['longitude'] = (float) $argument->value['longitude'];
           }
         }
       }
@@ -560,7 +571,7 @@ function location_views_proximity_get_reference_location($view, $options) {
       break;
     case 'nid_arg':
       if ($nodehandler = $view->display_handler->get_handler('argument', $options['nid_arg'])) {
-        $nid = $nodehandler->get_value();
+        $nid = $nodehandler->get_value(NULL);
         if ($nid && is_numeric($nid) && $tempnode = node_load($nid)) {
           $field_name = $options['nid_loc_field'];
           if ($field_name == 'node') {
@@ -588,7 +599,7 @@ function location_views_proximity_get_reference_location($view, $options) {
     case 'uid_arg':
       if ($userhandler = $view->display_handler->get_handler('argument', $options['uid_arg'])) {
         $uid = $userhandler->get_value();
-        if ($uid && is_numeric($uid) && $tempuser = user_load(array('uid' => $uid))) {
+        if ($uid && is_numeric($uid) && $tempuser = user_load($uid)) {
           $coordinates['latitude'] = (float) $tempuser->location['latitude'];
           $coordinates['longitude'] = (float) $tempuser->location['longitude'];
         }
