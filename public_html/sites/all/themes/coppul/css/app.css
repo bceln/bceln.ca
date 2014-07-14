@@ -7848,6 +7848,13 @@ nav .foundation-menu {
   top: 0;
 }
 
+@-moz-document url-prefix() {
+  /* line 154, ../sass/_nav.scss */
+  dl.sub-nav {
+    margin: 0;
+  }
+}
+
 /* CSS for jQuery Orbit Plugin 1.4.0
  * Maintained for Foundation. foundation.zurb.com
  * Free to use under the MIT license.
