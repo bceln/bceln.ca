@@ -45,6 +45,16 @@
         selclass = '.' + this.id + '_sel';
         $(selclass).moveSelectionTo($(unselclass));
       });
+      if (typeof Drupal.settings.multiselect !== 'undefined' && Drupal.settings.multiselect.widths != '') {
+        var widths = Drupal.settings.multiselect.widths + 'px';
+        var label_change_px = Drupal.settings.multiselect.widths - 95; // How much right margin?
+        var label_container_change_px = 2 * Drupal.settings.multiselect.widths + 75; // How wide should the label container box be?
+        var label_change = label_change_px + 'px';
+        var label_container_change = label_container_change_px + 'px';
+        $('.multiselect_available, select.multiselect_unsel, select.multiselect_sel').css('width', widths);
+        $('.multiselect_labels .label_selected').css('margin-right', label_change);
+        $('.multiselect_labels').css('width', label_container_change);
+      }
     }
   };
 })(jQuery);

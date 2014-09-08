@@ -25,6 +25,32 @@ function multiselect_help($path, $arg) {
 }
 
 /**
+ * Implements hook_menu().
+ */
+function multiselect_menu() {
+  $items['admin/config/content/multiselect'] = array(
+    'title' => t('Multiselect'),
+    'description' => t('Configure how multiselect fields are displayed to content editors.'),
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('multiselect_settings'),
+    'file' => 'multiselect.admin.inc',
+    'access arguments' => array('administer site configuration'),
+    'type' => MENU_NORMAL_ITEM
+  );
+  return $items;
+}
+
+/**
+ * Implements hook_init().
+ */
+function multiselect_init() {
+  $multiselect_widths = variable_get('multiselect_widths');
+  if (!empty($multiselect_widths)) {
+    drupal_add_js(array('multiselect' => array('widths' => $multiselect_widths)), 'setting');
+  }
+}
+
+/**
  * Implements hook_form_alter().
  */
 function multiselect_form_alter(&$form, &$form_state, $form_id) {
@@ -57,7 +83,7 @@ function multiselect_field_widget_info() {
   return array(
     'multiselect' => array(
       'label' => t('Multiselect'),
-      'field types' => array('list', 'list_text', 'list_number', 'node_reference', 'taxonomy_term_reference', 'user_reference'),
+      'field types' => array('list', 'list_text', 'list_number', 'node_reference', 'taxonomy_term_reference', 'user_reference', 'entityreference'),
       'behaviors' => array(
         'multiple values' => FIELD_BEHAVIOR_CUSTOM,
         'default value' => FIELD_BEHAVIOR_CUSTOM,
@@ -86,11 +112,23 @@ function multiselect_field_widget_form(&$form, &$form_state, $field, $instance, 
   // Prepare the list of options.
   $options = _options_get_options($field, $instance, $properties, NULL, NULL);
 
+  // Remove all tags from values. Very useful for views displays.
+  $options = array_map("strip_tags", $options);
+
   // Put current field values in shape.
   $default_value = _options_storage_to_form($items, $options, $value_key, $properties);
   /* END copy from options.module */
 
   $widget = _multiselect_build_widget_code($options, $items, $element, $required);
+  //for each selected item ($items are in delta order still), we unset the item from $options (which is in nid/tid order)
+  //then just re-append it to the bottom of the options array, in order of $items, this fools the FAPI and retains order on edit
+  foreach ($items as $item) {
+    if (isset($options[$item[$value_key]])) {
+      $val = $options[$item[$value_key]];
+      unset($options[$item[$value_key]]);
+      $options[$item[$value_key]] = $val;
+    }
+  }
 
   // Build the basic select box using Form API.
   $element += array(
@@ -109,8 +147,34 @@ function multiselect_field_widget_form(&$form, &$form_state, $field, $instance, 
     '#value_key' => $value_key,
     '#element_validate' => array('options_field_widget_validate'),
     '#properties' => $properties,
+    '#after_build' => array('_multiselect_after_build'),
   );
 
+   // Attach CSS and Javascript for this widget.
+   $module_path = drupal_get_path('module', 'multiselect');
+   $element['#attached'] = array(
+     'css' => array($module_path . '/multiselect.css'),
+     'js' => array($module_path . '/multiselect.js'),
+   );
+
+  return $element;
+}
+
+/**
+ * After_build callback for this widget.
+ */
+function _multiselect_after_build($element, $form_state) {
+  $value_key = $element['#columns'][0];
+  $items = array();
+
+  if (isset($form_state['values'][$element['#field_name']][LANGUAGE_NONE])) {
+    foreach ($form_state['values'][$element['#field_name']][LANGUAGE_NONE] as $nid) {
+      $items[] = array($value_key => $nid);
+    }
+  }
+
+  $widget = _multiselect_build_widget_code($element['#options'], $items, $element, $element['#required']);
+  $element['#prefix'] = $widget['prefix_pre'] . $widget['prefix_options'] . $widget['prefix_post'];
   return $element;
 }
 
@@ -156,11 +220,6 @@ function _multiselect_html_for_box_options($options) {
  * return $widget = an array of html items and values for use in the final presentation of widget.
  */
 function _multiselect_build_widget_code($options, $items, $element, $required = FALSE) {
-  // Insert Javascript and CSS for this widget.
-  $path = drupal_get_path('module', 'multiselect');
-  drupal_add_js($path . '/multiselect.js');
-  drupal_add_css($path . '/multiselect.css');
-
   // For this specific widget, HTML should be filtered out and entities left unencoded.
   // See content_allowed_values / content_filter_xss / filter_xss.
   _multiselect_allowed_values_filter_html($options);
@@ -182,6 +241,9 @@ function _multiselect_build_widget_code($options, $items, $element, $required = 
       }
       elseif (is_array($value) && array_key_exists('uid', $value)) { // With CCK, it's an array. User ref
         $selected_options[$value['uid']] = $value['uid'];
+      }
+      elseif (is_array($value) && array_key_exists('target_id', $value)) { // Handle Entity Reference.
+        $selected_options[$value['target_id']] = $value['target_id'];
       }
       elseif (array_key_exists($value, $options)) { // With FAPI, it's not.
         $selected_options[$value] = $options[$value];
