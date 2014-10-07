@@ -1,12 +1,8 @@
-name = Metatag: Views
-description = Provides Metatag integration within the Views interface.
+name = Metatag: Facebook
+description = "Provides support for Facebook's custom meta tags."
 package = SEO
 core = 7.x
-
 dependencies[] = metatag
-dependencies[] = views
-
-files[] = metatag_views_plugin_display_extender_metatags.inc
 
 ; Information added by Drupal.org packaging script on 2014-10-05
 version = "7.x-1.2"
