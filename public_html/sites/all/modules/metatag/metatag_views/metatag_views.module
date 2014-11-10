@@ -9,7 +9,7 @@
  * Implements hook_views_api().
  */
 function metatag_views_views_api() {
-  return array('api' => 3);
+  return array('api' => 3.0);
 }
 
 /**
@@ -82,6 +82,10 @@ function metatag_views_page_alter(&$page) {
 
     // Load the meta tags for this view.
     $metatags = $view->display_handler->get_option('metatags');
+    if (!is_array($metatags) || empty($metatags)) {
+      $metatags = array();
+    }
+
     // If meta tags were found but they're not nested for the language, fix it.
     // This leaves some possibility for future versions to support translation.
     if (!empty($metatags) && !isset($metatags[LANGUAGE_NONE])) {
