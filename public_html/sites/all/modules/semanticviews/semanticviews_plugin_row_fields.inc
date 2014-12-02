@@ -13,6 +13,9 @@
  * @ingroup views_row_plugins
  */
 class semanticviews_plugin_row_fields extends views_plugin_row {
+  /**
+   * Set default options.
+   */
   function option_definition() {
     $options = parent::option_definition();
     $options['skip_blank'] = array('default' => FALSE);
@@ -31,6 +34,9 @@ class semanticviews_plugin_row_fields extends views_plugin_row {
     $form['semantic_html'] = array(
       '#tree' => TRUE,
     );
+    $form['semantic_html']['help'] = array(
+      '#markup' => t('These settings will override each Fields "Style Settings".')
+    );
     foreach ($this->display->handler->get_handlers('field') as $field => $handler) {
       if (!$handler->options['exclude']) {
         $default_value = (isset($this->options['semantic_html'][$field]) && is_array($this->options['semantic_html'][$field])) ? $this->options['semantic_html'][$field] : array(
@@ -43,7 +49,7 @@ class semanticviews_plugin_row_fields extends views_plugin_row {
           '#title' => $handler->label() ? $handler->label() : $handler->ui_name(),
           '#type' => 'fieldset',
           '#attributes' => array(
-            'class' => 'clear-block',
+            'class' => array('clearfix'),
           ),
         );
         $form['semantic_html'][$field]['element_type'] = array(

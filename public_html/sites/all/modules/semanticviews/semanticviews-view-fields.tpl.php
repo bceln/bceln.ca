@@ -1,6 +1,6 @@
 <?php
 /**
- * @file semanticviews-view-fields.tpl.php
+ * @file
  * Default simple view template to display all the fields as a row. The template
  * outputs a full row by looping through the $fields array, printing the field's
  * HTML element (as configured in the UI) and the class attributes. If a label
@@ -28,19 +28,19 @@
 ?>
 <?php foreach ($fields as $id => $field): ?>
 
-  <?php if ($field->element_type): ?>
+  <?php if (!empty($field->element_type)): ?>
     <<?php print $field->element_type; ?><?php print drupal_attributes($field->attributes); ?>>
   <?php endif; ?>
 
-    <?php if ($field->label): ?>
+    <?php if (!empty($field->label)): ?>
 
-      <?php if ($field->label_element_type): ?>
+      <?php if (!empty($field->label_element_type)): ?>
         <<?php print $field->label_element_type; ?><?php print drupal_attributes($field->label_attributes); ?>>
       <?php endif; ?>
 
           <?php print $field->label; ?>:
 
-      <?php if ($field->label_element_type): ?>
+      <?php if (!empty($field->label_element_type)): ?>
         </<?php print $field->label_element_type; ?>>
       <?php endif; ?>
 
@@ -48,7 +48,7 @@
 
       <?php print $field->content; ?>
 
-  <?php if ($field->element_type): ?>
+  <?php if (!empty($field->element_type)): ?>
     </<?php print $field->element_type; ?>>
   <?php endif; ?>
 

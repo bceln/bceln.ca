@@ -1,7 +1,10 @@
 <?php
 /**
- * @file semanticviews.theme.inc
- * TODO: Enter file description here.
+ * @file
+ * Theme for Semantic Views.
+ *
+ * Holds template preprocess for Views Field and Views Rows.
+ * @see semanticviews_views_plugins()
  */
 
 /**
@@ -29,7 +32,20 @@ function template_preprocess_semanticviews_view_fields(&$vars) {
 
       $object->handler = &$view->field[$id];
 
-      $semantic_html = $vars['options']['semantic_html'][$id];
+      // If Semantic Views: Fields settings havn't been saved with new fields
+      // this is not set and then add empty array with no values.
+      if (isset($vars['options']['semantic_html'][$id])) {
+        $semantic_html = $vars['options']['semantic_html'][$id];
+      }
+      else {
+        // Default empty values.
+        $semantic_html = array(
+          'element_type' => '',
+          'class' => '',
+          'label_element_type' => '',
+          'label_class' => ''
+        );
+      }
 
       // Field content
       $object->element_type = check_plain($semantic_html['element_type']);
@@ -51,7 +67,6 @@ function template_preprocess_semanticviews_view_fields(&$vars) {
       $vars['fields'][$id] = $object;
     }
   }
-
 }
 
 /**
@@ -85,51 +100,58 @@ function template_preprocess_semanticviews_view_unformatted(&$vars) {
   }
   $striping = count($stripes);
 
-  // Get alias tokens.
-  $tokens = semanticviews_get_alias_tokens($view);
+  // When grouping fields row index doesn't reset in each group so we have to do it manually,
+  // otherwise "last_every_nth" may work incorrect.
+  $index_in_group = 0;
 
   foreach ($vars['rows'] as $id => $row) {
-    // Get token replacements.
-    $replacements = semanticviews_get_token_replacements($view->result[$id], $tokens);
-    // Add replacement for the row number.
-    $replacements['#'] = $id;
-
     $vars['row_attributes'][$id] = array();
     $classes = array();
-    if ($vars['options']['row']['class']) {
-      $classes[] = strtr($vars['options']['row']['class'], $replacements);
+
+    if ($row_class = $view->style_plugin->tokenize_class($id, $vars['options']['row']['class'])) {
+      $classes[] = $row_class;
     }
+
     if ($vars['options']['row']['first_class']) {
       // The FIRST class attribute can be used in two ways. When the "last every
       // nth" option is specified, the FIRST attribute is added to the class in
       // those intervals. This could be useful for grid designs where the first
       // unit in a row needs a zero width margin.
-      if (($last_every_nth && $id % $last_every_nth == 0) ||
-         // Otherwise when last every nth is not set, the FIRST class is added
-         // to the first row in the pager set.
-         (!$last_every_nth && $id == 0)) {
-        $classes[] = strtr($vars['options']['row']['first_class'], $replacements);
+      if (($last_every_nth && $index_in_group % $last_every_nth == 0) ||
+        // Otherwise when last every nth is not set, the FIRST class is added
+        // to the first row in the pager set.
+        (!$last_every_nth && $index_in_group == 0)) {
+        if ($class = $view->style_plugin->tokenize_class($id, $vars['options']['row']['first_class'])) {
+          $classes[] = $class;
+        }
       }
     }
+
     if ($vars['options']['row']['last_class']) {
       // The LAST class attribute can be used in two ways. When the "last every
       // nth" option is specified, the LAST attribute is added to the class in
       // those intervals. This could be useful for grid designs where the last
       // unit in a row needs a zero width margin.
-      if (($last_every_nth && ($id + 1) % $last_every_nth == 0) ||
-         // Otherwise when last every nth is not set, the LAST class is added
-         // to the last row in the pager set.
-         (!$last_every_nth && ($id + 1) == count($vars['rows']))) {
-        $classes[] = strtr($vars['options']['row']['last_class'], $replacements);
+      if (($last_every_nth && ($index_in_group + 1) % $last_every_nth == 0) ||
+        // Otherwise when last every nth is not set, the LAST class is added
+        // to the last row in the pager set.
+        (!$last_every_nth && ($index_in_group + 1) == count($vars['rows']))) {
+        if ($class = $view->style_plugin->tokenize_class($id, $vars['options']['row']['last_class'])) {
+          $classes[] = $class;
+        }
       }
     }
 
     if ($striping) {
-      $classes[] = strtr($stripes[$id % $striping], $replacements);
+      if ($class = $view->style_plugin->tokenize_class($id, $stripes[$id % $striping])) {
+        $classes[] = $class;
+      }
     }
 
     if (!empty($classes)) {
       $vars['row_attributes'][$id]['class'] = implode(' ', $classes);
     }
+
+    $index_in_group++;
   }
 }

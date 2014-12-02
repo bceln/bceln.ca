@@ -1,7 +1,11 @@
 <?php
+/**
+ * @file
+ * Views Fields and Rows styles declaration.
+ */
 
 /**
- * Implementation of hook_views_plugins().
+ * Implements hook_views_plugins().
  */
 function semanticviews_views_plugins() {
   return array(
@@ -22,7 +26,7 @@ function semanticviews_views_plugins() {
     ),
     'row' => array(
       'semanticviews_fields' => array(
-        'title' => t('Semantic Views : Fields'),
+        'title' => t('Semantic Views: Fields'),
         'help' => t('Displays the fields with an optional template.'),
         'handler' => 'semanticviews_plugin_row_fields',
         'theme' => 'semanticviews_view_fields',
