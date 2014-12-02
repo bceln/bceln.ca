@@ -35,6 +35,11 @@ Bugs fixed since 6.x-1.0:
 = #1399178 by jordojuice, sgabe | chaloum: Fixed Ajax error when trying to use
   the sign up link in a view.
 = #1513076 by sgabe | grendzy: Fixed phptemplate_HOOK is obsolete.
+= #1670868 by crantok: Fixed content type token in confirmation email subject.
+= #1452920 by BTMash, pezia | flightrisk: Fixed fatal error caused by undefined
+  date_field_get_sql_handler function.
+= #1216890 by scottrigby: Fixed 'Edit signup' button should not be displayed if
+  there are no form elements to edit.
 
 New features since 6.x-1.0:
 = #1112496 by BTMash: Added Show signup in the display ui for a node type.
@@ -567,7 +572,7 @@ Bug fixes since 5.x-2.4:
   "Signup settings" fieldset should be added to node forms or not.
 = #219678 by dww: Changed email notification to event owner to omit
   "Date/Time: [Untimed]" if the event has no time.
-= #290740 by deviantintegral and dww: If 'site_mail' is undefined, 
+= #290740 by deviantintegral and dww: If 'site_mail' is undefined,
   use the 'sendmail_from' PHP ini setting as the fall-back value for
   the From address in e-mails sent by this module.
 = #278739 by dww: Fixed incorrect start date on signup administration

@@ -296,7 +296,7 @@ function _signup_date_reminder_sql($content_type) {
   // Figure out what TZ we want to do the date comparisons in.
   $compare_tz = $field['settings']['tz_handling'] == 'none' ? date_default_timezone() : 'UTC';
   // Get a DateAPI SQL handler class for this field.
-  $handler = date_field_get_sql_handler($field, $compare_tz);
+  $handler = _signup_get_sql_handler($field, $compare_tz);
 
   // Find the current time in the appropriate TZ for this field.
   $now_date = date_now($compare_tz);
@@ -333,6 +333,46 @@ function _signup_date_reminder_sql($content_type) {
 }
 
 /**
+ * Generates a Date API SQL handler for the given date field.
+ *
+ * The handler will be set up to make the correct timezone adjustments
+ * for the field settings.
+ *
+ * @param array $field
+ *   The $field array.
+ * @param string $compare_tz
+ *   The timezone used for comparison values in the SQL.
+ */
+function _signup_get_sql_handler($field, $compare_tz = NULL) {
+  module_load_include('inc', 'date_api', 'date_api_sql');
+
+  $db_info = date_api_database_info($field);
+
+  // Create a DateAPI SQL handler class for this field type.
+  $handler = new date_sql_handler($field['type']);
+
+  // If this date field stores a timezone in the DB, tell the handler about it.
+  if ($field['settings']['tz_handling'] == 'date') {
+    $handler->db_timezone_field = $db_info['columns']['timezone']['column'];
+  }
+  else {
+    $handler->db_timezone = date_get_timezone_db($field['settings']['tz_handling']);
+  }
+
+  if (empty($compare_tz)) {
+    $compare_tz = date_get_timezone($field['settings']['tz_handling']);
+  }
+  $handler->local_timezone = $compare_tz;
+
+  // Now that the handler is properly initialized, force the DB
+  // to use UTC so no timezone conversions get added to things like
+  // NOW() or FROM_UNIXTIME().
+  $handler->set_db_timezone();
+
+  return $handler;
+}
+
+/**
  *
  * @return Array of SQL clauses for cron auto-close query builder.
  */
@@ -344,7 +384,7 @@ function _signup_date_autoclose_sql($content_type) {
   // Figure out what TZ we want to do the date comparisons in.
   $compare_tz = $field['settings']['tz_handling'] == 'none' ? date_default_timezone() : 'UTC';
   // Get a DateAPI SQL handler class for this field.
-  $handler = date_field_get_sql_handler($field, $compare_tz);
+  $handler = _signup_get_sql_handler($field, $compare_tz);
 
   // Compute a string representing the moment when signups should start
   // auto-closing.  If the field has no TZ handling, we just want to grab the

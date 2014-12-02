@@ -1466,7 +1466,7 @@ function signup_send_confirmation_mail($signup, $node) {
   }
   $node_type_name = node_type_get_name($node->type);
   $params = array(
-    'subject' => token_replace('Signup confirmation for [node:content-type]: [node:title]', array('node' => $node, 'signup' => $signup)),
+    'subject' => token_replace('Signup confirmation for [node:type-name]: [node:title]', array('node' => $node, 'signup' => $signup)),
     'body' => token_replace($node->signup_confirmation_email, array('node' => $node, 'signup' => $signup, 'global' => NULL)),
     'node' => $node,
     'signup' => $signup,

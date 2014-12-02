@@ -100,8 +100,9 @@ function signup_edit_form($form, &$form_state, $signup, $type) {
   }
   $form['elements'] += $site_form;
 
-  // Add the appropriate buttons based on permissions.
-  if ($can_edit) {
+  // Add the appropriate buttons based on permissions, but do not display the
+  // edit button, if there are no form elements to edit.
+  if ($can_edit && !empty($site_form)) {
     $form['elements']['save'] = array(
       '#type' => 'submit',
       '#value' => t('Save'),
