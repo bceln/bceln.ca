@@ -1,2 +1,6 @@
 public_html/sites/*/settings.php
 public_html/sites/*/files
+error_log
+/private
+/tmp
+
