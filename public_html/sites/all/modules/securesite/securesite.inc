@@ -69,7 +69,8 @@ function _securesite_digest_auth($edit) {
   global $user;
   $realm = variable_get('securesite_realm', variable_get('site_name', 'Drupal'));
   $header = _securesite_digest_validate($status, array('data' => $_SERVER['PHP_AUTH_DIGEST'], 'method' => $_SERVER['REQUEST_METHOD'], 'uri' => request_uri(), 'realm' => $realm));
-  $account = user_load(array('name' => $edit['name'], 'status' => 1));
+  $users = user_load_multiple(array(), array('name' => $edit['name'], 'status' => 1));
+  $account = reset($users);
   if (empty($account->uid)) {
     // Not a registered user. See if we have guest user credentials.
     switch ($status) {
@@ -160,6 +161,12 @@ function _securesite_digest_validate(&$status, $edit = array()) {
  * Perform plain authentication.
  */
 function _securesite_plain_auth($edit) {
+  // We cant set username to be a required field so we check here if it is empty
+  if (empty($edit['name'])) {
+    drupal_set_message(t('Unrecognized user name and/or password.'), 'error');
+    _securesite_dialog(securesite_type_get());
+  }
+
   $users = user_load_multiple(array(), array('name' => $edit['name'], 'status' => 1));
   $account = reset($users);
   if (empty($account->uid)) {
@@ -210,10 +217,13 @@ function _securesite_user_login($edit, $account) {
     // Clear the guest session.
     unset($_SESSION['securesite_guest']);
     
+    // Always redirect to prevent access denied errors
+    $path = $_GET['q'];
     // Prevent a log-in/log-out loop by redirecting off the log-out page.
     if ($_GET['q'] == 'user/logout') {
-      drupal_goto();
+      $path = '';
     }
+    drupal_goto($path);
   }
   else {
     _securesite_denied(t('You have not been authorized to log in to secured pages.'));
@@ -269,7 +279,8 @@ function _securesite_denied($message) {
     drupal_set_message(filter_xss($message), 'error');
     
     // Theme and display output
-    print theme('securesite_page');
+    $content = _securesite_dialog_page();
+    print theme('securesite_page', array('content' => $content));
     
     // Exit
     module_invoke_all('exit');
@@ -338,7 +349,7 @@ function _securesite_dialog($type) {
     }
     // The password reset function doesn't work well if it doesn't have all the
     // required parameters or if the UID parameter isn't valid
-    if (count($args) < 5 || user_load(array('uid' => $args[2], 'status' => 1)) == FALSE) {
+    if (count($args) < 5 || count(user_load_multiple(array(), array('uid' => $args[2], 'status' => 1))) == 0) {
       $error = t('You have tried to use an invalid one-time log-in link.');
       $reset = variable_get('securesite_reset_form', t('Enter your user name or e-mail address.'));
       if (empty($reset)) {

@@ -28,6 +28,7 @@ function securesite_disable() {
  * Implements hook_uninstall().
  */
 function securesite_uninstall() {
+  drupal_load("module", "securesite");
   if (in_array(SECURESITE_DIGEST, variable_get('securesite_type', array(SECURESITE_BASIC)))) {
     $script = variable_get('securesite_password_script', drupal_get_path('module', 'securesite') . '/digest_md5/stored_passwords.php');
     $realm = variable_get('securesite_realm', variable_get('site_name', 'Drupal'));

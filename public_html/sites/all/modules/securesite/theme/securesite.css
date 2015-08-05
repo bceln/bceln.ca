@@ -18,6 +18,10 @@ body {
   color: black;
 }
 
+#logo img {
+  max-width: 30em;
+}
+
 a:link, a:visited {
   text-decoration: none;
 }

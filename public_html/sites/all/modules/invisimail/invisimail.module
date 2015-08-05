@@ -1,8 +1,6 @@
 <?php
-// $Id: invisimail.module,v 1.3.4.17.2.19 2011/01/06 05:08:42 crell Exp $
 
 define('INVISIMAIL_MAILTO_ASCII', '&#109;&#97;&#105;&#108;&#116;&#111;&#58;');
-
 /**
  * @file
  * This module provides a filter that will search content for email addresses
@@ -266,7 +264,7 @@ function invisimail_encode_string($string, $encoder_id, array $settings = array(
       watchdog('invisimail', 'preg_replace_callback failed on first pass with preg_last_error() of !code with pattern %pattern on text: !text',
             array(
               '!code'=>$error_code,
-              '%pattern' => check_plain($pattern_diff_link_text),
+              '%pattern' => check_plain($patterns['same_link']),
               '!text' => check_plain($phrase),
             ),
             WATCHDOG_ERROR,
@@ -277,7 +275,7 @@ function invisimail_encode_string($string, $encoder_id, array $settings = array(
       watchdog('invisimail', 'preg_replace_callback failed on second pass with preg_last_error() of !code with pattern %pattern on text: !text',
             array(
               '!code'=>$error_code,
-              '%pattern' => check_plain($pattern_same_link_text),
+              '%pattern' => check_plain($patterns['diff_link']),
               '!text' => check_plain($phrase),
             ),
             WATCHDOG_ERROR,
@@ -446,12 +444,12 @@ function invisimail_field_formatter_settings_summary($field, $instance, $view_mo
 
   $summary = '';
 
-  if ($display['type'] == 'invisimail') {
+  if ($display['module'] == 'invisimail') {
     $encoder = invisimail_get_encoder($settings['encoder']);
     $summary = t('Email addresses will be encoded using the %encoder encoder.', array('%encoder' => $encoder['label']));
   }
 
-  return t('Hello world');
+  return $summary;
 }
 
 // ---------- Implementations of the core engine ---------- //
@@ -502,7 +500,7 @@ function invisimail_encoder_html_entities_settings($form, &$form_state, $setting
 function invisimail_encoder_html_entities_encode($string, $settings = array(), $is_link = FALSE) {
   $encode = invisimail_encode_html($string);
 
-  if ($settings['link'] && !$is_link) {
+  if (isset($settings['link']) && $settings['link'] && !$is_link) {
     $encode = '<a href="' . INVISIMAIL_MAILTO_ASCII . "$encode\">$encode</a>";
   }
 
@@ -551,7 +549,7 @@ function invisimail_encoder_js_entities_encode($string, $settings = array(), $is
     return $encode;
   }
 
-  if ($settings['link']) {
+  if (isset($settings['link']) && $settings['link']) {
     $mailto = INVISIMAIL_MAILTO_ASCII;
     $encode = "<a href=\"{$mailto}{$encode}\">{$encode}</a>";
   }
