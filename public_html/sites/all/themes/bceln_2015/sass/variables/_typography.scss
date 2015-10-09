@@ -1,12 +1,11 @@
 $space-width: 0.2222em;
   
 // Base size and height
-$font-size: 18px;
+$font-size: 17px;
 $line-height: 1.5em;
   
 // Font families
-$font-source-sans-pro: 'Source Sans Pro', sans-serif;
-$font-georgia: Georgia,Times,Times New Roman,serif;
+$font-source-lato:'Lato', sans-serif;
   
 // Font sizes
 $fz-h1: 48px;
@@ -15,11 +14,13 @@ $fz-h3: 24px;
 $fz-h4: 24px;
 $fz-h5: 18px;
 $fz-h6: 20px;
-  
+
+// Menu
+$fz-menu:20px;
+$line-height-menu:22px;  
   
 // Font weights
 $fw-light:     300;
 $fw-normal:    400;
 $fw-semi-bold: 600;
-$fw-bold:      700;
-
+$fw-bold:      900;

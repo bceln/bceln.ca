@@ -1,0 +1,13 @@
+
+body {
+  font-family: $font-source-lato;
+  font-size: $font-size;
+  line-height: $line-height;
+  color: $color-txt;
+}
+#block-menu-block-2 .menu-block-2 li a{
+	font-size: $fz-menu;
+    line-height: $line-height-menu;
+    color: $color-menu-item;
+	font-weight:$fw-bold;
+}
