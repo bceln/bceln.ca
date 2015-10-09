@@ -1,11 +1,30 @@
 // Import variables, abstractions, base styles and components.
 // Uncomment the next lines and adjust them to your needs.
-//@import "variables/{YOUR FILE NAME HERE}";
-//@import "abstractions/{YOUR FILE NAME HERE}";
-@import "base/base.scss";
-//@import "components/{YOUR FILE NAME HERE}";
- 
- 
- 
- 
- 
+/* -- Variables -- */
+@import "variables/colors";
+@import "variables/grid";
+@import "variables/typography";
+  
+/* -- Abstraction -- */
+@import "abstractions/layout";
+//@import "abstractions/typography";
+//@import "abstractions/components";
+  
+/* -- Base -- */
+@import "base/layout";
+//@import "base/lists";
+//@import "base/typography";
+//@import "base/forms";
+  
+/* -- Components -- */
+//@import "components/navigation";
+//@import "components/jquery";
+//@import "components/layout";
+//@import "components/blocks";
+//@import "components/nodes";
+//@import "components/views";
+
+
+
+
+

@@ -1,0 +1,35 @@
+/*
+ * We are using a Singularity grid of 16 columns with split gutters.
+ *
+ * Default layout details:
+ *  - mobile:  One sigle column, sidebar drops bellow main content, gutters 15px (15 / 60 = 0.25 = 1/4).
+ *  - tablet:  Main content is 10 columns wide, right sidebar is 6, gutters unchanged.
+ *  - desktop: Main content is 12 columns wide, right sidebar is 4, gutters 20px (20 / 60 = 0.3 = 1/3).
+ *
+ * For more info go to: https://github.com/at-import/Singularity/wiki/Creating-Grids
+ *
+ */
+@import "breakpoint";
+@import "singularitygs";
+@import "singularitygs/helpers/clearfix"; // for some reason this wasn't called from inside singularity
+  
+$tablet-layout: 768px;
+$desktop-layout: 992px;
+$max-width-layout: 1266px;
+ 
+@include add-grid(12 at $tablet-layout);
+  
+@include add-gutter-style('split');
+@include add-gutter(1/4);
+@include add-gutter(1/3 at $desktop-layout);
+  
+/* Uncomment bellow content to visualize the grid */
+
+// Be sure to enable debug mode for your grid visualization so show up:
+//@include sgs-change('debug', true);
+//
+//.l-main {
+//  @include background-grid($color: blue);
+//}
+//
+//

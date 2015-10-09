@@ -1,5 +1,5 @@
 name = BCELN 2015
-description = Please provide a description for your theme.
+description = BCELN Custom theme by Affinity Bridge.
 base theme = omega
 screenshot = screenshot.png
 engine = phptemplate

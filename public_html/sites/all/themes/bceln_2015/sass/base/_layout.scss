@@ -1,0 +1,34 @@
+//
+// Main Content
+// =================================  
+.l-header{
+    @include clearfix;
+    @include grid-container;
+}
+
+//
+// Main Content
+// =================================
+.l-main {
+  @include clearfix;
+  @include grid-container;
+}
+
+.l-content {
+  @include breakpoint($tablet-layout) {
+    @include grid-span(10, 1);
+  }
+  
+  @include breakpoint($desktop-layout) {
+    @include grid-span(12, 1);
+  }
+  
+  body.no-sidebars & {
+    @include breakpoint($tablet-layout) {
+      @include grid-span(16, 1);
+    }
+  }
+}
+  
+  
+ 
