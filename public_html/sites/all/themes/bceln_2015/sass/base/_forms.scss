@@ -1,0 +1,47 @@
+//
+// Branding's Search Form
+// =================================
+
+.search-block-form {
+	.form-item-search-block-form{
+		background-color:$grey-medium;
+	    height: 30px;
+	    width: 170px;
+		display:inline-block;
+		border:0px;
+	}
+	#edit-search-block-form--2{
+//	    width: 170px;
+//		border:none;
+//		background-color:$grey-medium;
+//	    height: 30px;
+//		padding:0px;
+	}
+	.form-item-search-block-form{
+		.form-text {
+			border:none;
+			font-size:17px;
+			padding:2px;
+			background-color:$grey-medium;
+		    height: 26px;
+		    width: 170px;
+		}
+	}
+	.form-actions {
+		background:$dark-cyan;
+	    height: 26px;
+	    padding: 2px;
+	    display: inline-block;
+		
+		.form-submit {
+		    background: url("../images/mag.png") no-repeat -1px -5px;
+		    cursor: pointer;
+		    border: none;
+		    width: 26px;
+		    height: 31px;
+		    padding: 0px;
+		    font-size: 0px;
+		}
+	}
+
+}

@@ -82,6 +82,35 @@ body {
   color: #712C76;
   font-weight: 900; }
 
+.search-block-form .form-item-search-block-form {
+  background-color: #E9E9E9;
+  height: 30px;
+  width: 170px;
+  display: inline-block;
+  border: 0px; }
+
+.search-block-form .form-item-search-block-form .form-text {
+  border: none;
+  font-size: 17px;
+  padding: 2px;
+  background-color: #E9E9E9;
+  height: 26px;
+  width: 170px; }
+
+.search-block-form .form-actions {
+  background: #008499;
+  height: 26px;
+  padding: 2px;
+  display: inline-block; }
+  .search-block-form .form-actions .form-submit {
+    background: url("../images/mag.png") no-repeat -1px -5px;
+    cursor: pointer;
+    border: none;
+    width: 26px;
+    height: 31px;
+    padding: 0px;
+    font-size: 0px; }
+
 /* -- Components -- */
 .l-branding:before {
   content: '';
