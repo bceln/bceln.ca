@@ -17,19 +17,9 @@ $tablet-layout: 768px;
 $desktop-layout: 992px;
 $max-width-layout: 1266px;
  
-@include add-grid(12 at $tablet-layout);
+@include add-grid(12);
   
 @include add-gutter-style('split');
-@include add-gutter(1/4);
-@include add-gutter(1/3 at $desktop-layout);
+@include add-gutter(15/39);
   
 /* Uncomment bellow content to visualize the grid */
-
-// Be sure to enable debug mode for your grid visualization so show up:
-//@include sgs-change('debug', true);
-//
-//.l-main {
-//  @include background-grid($color: blue);
-//}
-//
-//
