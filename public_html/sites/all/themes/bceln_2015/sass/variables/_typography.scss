@@ -9,16 +9,27 @@ $font-source-lato:'Lato', sans-serif;
   
 // Font sizes
 $fz-h1: 48px;
-$fz-h2: 38px;
-$fz-h3: 24px;
+$fz-h2-large:26px;
+$fz-h2: 18px;
+$fz-h3: 17px;
 $fz-h4: 24px;
 $fz-h5: 18px;
 $fz-h6: 20px;
+$fz-small: 14px;
+$fz-ex-small: 12px;
+
+//READ MORE , SEE MORE
+$fz-read-more: 12px;
 
 // Menu
 $fz-menu:20px;
 $line-height-menu:22px;  
-  
+
+// Footer
+$fz-menu-footer:16px;  
+$line-height-footer:18px;
+$line-height-footer-menu:19px;
+
 // Font weights
 $fw-light:     300;
 $fw-normal:    400;

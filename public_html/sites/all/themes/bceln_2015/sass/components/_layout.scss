@@ -1,12 +1,3 @@
-//
-// Page
-// =================================
-.l-region--header{
-	background:$violet-dark-gradiant;
-
-}
-
-
 
 //
 // Branding AND Branding Region
@@ -63,39 +54,37 @@
     float: right;
     display: block;
     margin-bottom: 37px;
-	};
+};
+.l-branding:after{
+	content: '';
+	height: 23px;
+	background-color: #CEB6D0;
+	display: block;
+	right: 0px;
+	bottom: 0px;
+	@include grid-span(7,4);		
+	position: absolute;
+	margin-right: 1.15741%;
+	width:63.55%;
+};  
 
 //
-// Header Region
+// Header Region 
 // =================================
-.l-branding:after{
-    content: '';
-    height: 23px;
-    background-color: #CEB6D0;
-    display: block;
-    right: 0px;
-    bottom: 0px;
-	@include grid-span(7,4);		
-    position: absolute;
-    margin-right: 1.15741%;
-	width:63.55%;
-		};  
+
 
 .l-region--header{
-//	height:310px;
+	background:$violet-dark-gradiant;
 	position:relative;
-
 	#block-boxes-homepage{
 	    @include clearfix;
 	    @include grid-container;
-		
 		.block__content{
 			background: -webkit-linear-gradient(left, $violet-dark-gradiant , $violet-light-gradiant, $violet-dark-gradiant); /* For Safari 5.1 to 6.0 */
 			background: -o-linear-gradient(right, $violet-dark-gradiant, $violet-light-gradiant, $violet-dark-gradiant); /* For Opera 11.1 to 12.0 */
 			background: -moz-linear-gradient(right, $violet-dark-gradiant, $violet-light-gradiant, $violet-dark-gradiant); /* For Firefox 3.6 to 15 */
 			background: linear-gradient(to right, $violet-dark-gradiant , $violet-light-gradiant, $violet-dark-gradiant); /* Standard syntax */
 		}
-
 		#boxes-box-homepage{
 		
 	    background: url("../images/header-bg.png") no-repeat;
@@ -111,18 +100,23 @@
 			h3{
 				color:$white;
 				font-size:30px;
-
 			    font-weight: $fw-semi-bold;
 			    line-height: 30px;
-
 			}
 			.learn-more-header {
-			    padding: 4px 10px;
+                @include fontello-icon('\e800','after') {
+                   font-size: 1.0em;
+                   margin-left: 0.3em;
+                   margin-right: 0;
+                   position: relative;
+				   color:$orange;
+				   cursor:pointer;
+                 }
+			    padding: 4px 14px;
 			    background-color: $violet-dark;
 			    font-size: 16px;
 			    margin-left: 20px;
-			    padding-right: 20px;
-				
+			    padding-right: 10px;
 				a {
 				    color: $orange;
 				    text-decoration: none;
@@ -132,7 +126,6 @@
 			}
 		}	
 	}
-	
 }
 //
 // Content
@@ -148,5 +141,94 @@
     display: block;
 	bottom:-23px;
 	left:0px;
-    margin-bottom: 37px;
+    margin-bottom: 40px;
 };
+.l-content{
+	
+}
+//
+// Footer
+// =================================
+.l-footer{
+	position:relative;
+	.site-logo{
+	    position: absolute;
+	    top: 37px;
+	}
+	.footer-first-wrapper{
+		background:$violet-dark-gradiant;
+	}
+	.l-region--footer-first{
+	    @include grid-container;
+	    @include clearfix;
+		background: -webkit-linear-gradient(left, $violet-dark-gradiant , $violet-light-gradiant, $violet-dark-gradiant); /* For Safari 5.1 to 6.0 */
+		background: -o-linear-gradient(right, $violet-dark-gradiant, $violet-light-gradiant, $violet-dark-gradiant); /* For Opera 11.1 to 12.0 */
+		background: -moz-linear-gradient(right, $violet-dark-gradiant, $violet-light-gradiant, $violet-dark-gradiant); /* For Firefox 3.6 to 15 */
+		background: linear-gradient(to right, $violet-dark-gradiant , $violet-light-gradiant, $violet-dark-gradiant); /* Standard syntax */
+		padding:30px 0px;
+			#block-menu-menu-about-bc-eln{
+		    @include grid-span(2, 1);
+		}
+		#block-menu-menu-licensing{
+		    @include grid-span(2, 3);
+		}
+		#block-menu-menu-partner-libraries{
+		    @include grid-span(2, 5);
+		}
+		#block-menu-menu-services-initiatives{
+		    @include grid-span(4, 7);
+		}
+		#block-boxes-newsletter{
+		    @include grid-span(2, 11);
+		    @include clearfix;
+		}
+	}
+	.l-region--footer-second{
+	    @include grid-container;
+	    @include clearfix;
+		padding:30px 0px;
+		position:relative;
+		#block-block-15{
+		    @include grid-span(2, 5);
+			padding-bottom: 45px;
+			.block__content{
+				font-size:$fz-small;
+				line-height:$line-height-footer;
+				
+			}
+		}
+		#block-block-16{
+		    @include grid-span(2, 7);
+			.block__content{
+				font-size:$fz-small;
+				line-height:$line-height-footer;
+			}
+		}
+		#block-block-10,.block-menu-menu-footer, #block-menu-menu-footer{
+		    position: absolute;
+		    bottom: 5px;
+			.block__content{
+				font-size:$fz-ex-small;
+			}
+		}
+		#block-menu-menu-footer {
+			left:384px;
+			ul.menu li :after{
+			    content: '|';
+			    margin: 0 5px;;
+				clear:both;
+			};
+			
+			ul.menu li{
+			    display: inline;
+				a{
+					color:$grey-dark;
+					text-decoration:underline;
+					font-size:$fz-ex-small;
+				}
+			}
+		}
+		
+	}
+
+}

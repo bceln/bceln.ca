@@ -1,13 +1,110 @@
-
 body {
-  font-family: $font-source-lato;
-  font-size: $font-size;
-  line-height: $line-height;
-  color: $color-txt;
+    font-family: $font-source-lato;
+    font-size: $font-size;
+    line-height: $line-height;
+    color: $color-txt;
 }
-#block-menu-block-2 .menu-block-2 li a{
-	font-size: $fz-menu;
-    line-height: $line-height-menu;
-    color: $color-menu-item;
-	font-weight:$fw-bold;
+  
+  
+//
+// Links
+// =================================
+a {
+  color: $color-link;
+  text-decoration: none;
+  
+  &:hover,
+  &:focus {
+    color: $color-link-hover;
+  }
+  
+  &.active {
+    color: $color-link; // override system style
+  }
+}
+  
+  
+//
+// Headings
+// =================================
+h1, h2, h3, h4, h5, h6 {
+  color: $white;
+  @include font-weight($fw-bold);
+  margin-bottom: 10px;
+}
+  
+h1 {
+  font-size: $fz-h1;
+  line-height: 1.1em;
+  margin-bottom: 30px;
+}
+  
+h2 {
+  font-size: $fz-h2;
+  line-height: 1.1em;
+}
+  
+h3 {
+  font-size: $fz-h3;
+  line-height: 1.1em;
+}
+  
+h4 {
+  font-size: $fz-h4;
+}
+  
+h5 {
+  font-size: $fz-h5;
+  text-transform: uppercase;
+}
+  
+h6 {
+  font-size: $fz-h6;
+}
+  
+  
+//
+// Semantic Tags
+// =================================
+em {
+  font-style: italic;
+}
+  
+strong {
+  @include font-weight($fw-bold);
+}
+
+//
+// Highlighted text
+// =================================
+.highlighted-text {
+  @include highlighted-text();
+}
+//
+// h2
+//
+h2{
+	font-size:$fz-h2-large;
+	color:$white;
+//	text-transform:uppercase;
+	
+}
+h2 a{
+	color:$violet-dark;
+	
+}
+//
+//H3 links
+//
+.field__item h3 a, .view-id-Blog h4 a{	
+	color:$violet-dark;
+	font-size:$fz-h3;
+	@include fontello-icon('\e800') {
+       font-size: 1.0em;
+       margin-left: 0.3em;
+       margin-right: 0;
+       position: relative;
+	   color:$orange;
+	   cursor:pointer;
+	}
 }

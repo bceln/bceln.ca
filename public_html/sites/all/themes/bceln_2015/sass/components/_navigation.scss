@@ -1,9 +1,49 @@
 //
+// Node links
+// =================================
+.field--name-node-link .field__items a,  .more-link a{
+	@include fontello-icon('\e800','after') {
+       font-size: 1.0em;
+       margin-left: 0.3em;
+       margin-right: 0;
+       position: relative;
+	   color:$orange;
+	   cursor:pointer;
+	}
+}
+
+.field--name-node-link .field__items, .more-link{
+
+	a{
+		color:$dark-cyan;
+		text-transform:uppercase;
+		font-weight:600;
+		font-size:$fz-read-more;
+	}
+}
+
+
+//
 // Main Menu
 // =================================
-
+#block-menu-block-2 .menu-block-2 li a{
+	font-size: $fz-menu;
+    line-height: $line-height-menu;
+    color: $color-menu-item;
+	font-weight:$fw-bold;
+}
 
 //
 // Menus in Footer First
 // =================================
+.block--menu h2{
+	font-size:$fz-h2;
+	color:$white;
+}
+.menu .leaf {
+    list-style-image: none;
+    list-style-type: none;
+	font-size:$fz-menu-footer;
+	line-height:$line-height-footer-menu;
+}
 

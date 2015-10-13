@@ -6,7 +6,6 @@
 //    @include grid-container;
 }
 .l-footer{
-  background:blue;
   @include clearfix;
 }
 .l-branding{
@@ -14,9 +13,7 @@
     @include grid-container;  
 }
 .l-region--branding{
-    @include grid-span(12, 1);
-	background:cyan;	
-	
+    @include grid-span(12, 1);	
 }
 //
 // Main Content
@@ -26,12 +23,10 @@
   @include grid-container;  
 }
 .l-region--sidebar-second{
-	background:green;
     @include grid-span(3, 10);
 }
 .l-content {
     @include grid-span(9, 1);
-	background:yellow;
 }
 
   body.no-sidebars 
