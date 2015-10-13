@@ -68,44 +68,68 @@
 //
 // Header Region
 // =================================
+.l-branding:after{
+    content: '';
+    height: 23px;
+    background-color: #CEB6D0;
+    display: block;
+    right: 0px;
+    bottom: 0px;
+	@include grid-span(7,4);		
+    position: absolute;
+    margin-right: 1.15741%;
+	width:63.55%;
+		};  
+
 .l-region--header{
 //	height:310px;
 	position:relative;
-	
-	#block-boxes-homepage--2{
+
+	#block-boxes-homepage{
 	    @include clearfix;
 	    @include grid-container;
+		
 		.block__content{
 			background: -webkit-linear-gradient(left, $violet-dark-gradiant , $violet-light-gradiant, $violet-dark-gradiant); /* For Safari 5.1 to 6.0 */
 			background: -o-linear-gradient(right, $violet-dark-gradiant, $violet-light-gradiant, $violet-dark-gradiant); /* For Opera 11.1 to 12.0 */
 			background: -moz-linear-gradient(right, $violet-dark-gradiant, $violet-light-gradiant, $violet-dark-gradiant); /* For Firefox 3.6 to 15 */
 			background: linear-gradient(to right, $violet-dark-gradiant , $violet-light-gradiant, $violet-dark-gradiant); /* Standard syntax */
 		}
-		#boxes-box-homepage:before{
-				    content: '';
-				    height: 23px;
-				    background-color:$violet-light;
-				    width: 65.1%;
-				    margin-left: 0;
-					clear:none;
-				    display: block;
-					position:absolute;
-					top:-23px;
-					right:0px;
-				    margin-bottom: 37px;
-				};  
+
 		#boxes-box-homepage{
 		
 	    background: url("../images/header-bg.png") no-repeat;
 	    height: 312px;
 	    position: relative;
 	    @include grid-span(12,1);
-		
-		
 		}
 		.boxes-box-content{
 			position:absolute;
-			
+		    top: 34%;
+		    left: 13%;
+		    max-width: 870px;
+			h3{
+				color:$white;
+				font-size:30px;
+
+			    font-weight: $fw-semi-bold;
+			    line-height: 30px;
+
+			}
+			.learn-more-header {
+			    padding: 4px 10px;
+			    background-color: $violet-dark;
+			    font-size: 16px;
+			    margin-left: 20px;
+			    padding-right: 20px;
+				
+				a {
+				    color: $orange;
+				    text-decoration: none;
+				    text-transform: uppercase;
+					
+				}
+			}
 		}	
 	}
 	

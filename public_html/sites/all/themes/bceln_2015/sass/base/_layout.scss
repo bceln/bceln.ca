@@ -34,6 +34,10 @@
 	background:yellow;
 }
 
+  body.no-sidebars 
+  .l-content{
+      @include grid-span(12, 1);  	
+    }
 //.l-content {
 //  @include breakpoint($tablet-layout) {
 //
