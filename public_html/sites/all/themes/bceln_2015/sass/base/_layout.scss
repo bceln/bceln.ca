@@ -15,6 +15,7 @@
 .l-region--branding{
     @include grid-span(12, 1);	
 }
+
 //
 // Main Content
 // =================================
@@ -28,31 +29,10 @@
 .l-content {
     @include grid-span(9, 1);
 }
+body.no-sidebars 
+.l-content{
+  @include grid-span(12, 1);  	
+}
 
-  body.no-sidebars 
-  .l-content{
-      @include grid-span(12, 1);  	
-    }
-//.l-content {
-//  @include breakpoint($tablet-layout) {
-//
-//  }
-//  .l-region--sidebar-second{
-////      @include grid-span(3, 9);
-//	background:red;
-//
-//  }
-//
-//  @include breakpoint($desktop-layout) {
-//    @include grid-span(12, 1);
-//  }
-
-//  body.no-sidebars & {
-//    @include breakpoint($tablet-layout) {
-//      @include grid-span(16, 1);
-//    }
-//  }
-//}
-//
   
  

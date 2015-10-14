@@ -60,15 +60,18 @@
 	content: '';
 	height: 23px;
 	background-color: #CEB6D0;
-	display: block;
+	display: none;
 	right: 0px;
 	bottom: 0px;
-	@include grid-span(7,4);		
 	position: absolute;
 	margin-right: 1.15741%;
-	width:63.55%;
 };  
-
+@include breakpoint($max-width-layout){
+	.l-branding:after{
+		width:63.55%;
+		display: block;
+	}
+}
 //
 // Header Region 
 // =================================
@@ -95,14 +98,14 @@
 		}
 		.boxes-box-content{
 			position:absolute;
-		    top: 34%;
-		    left: 13%;
-		    max-width: 870px;
+		    top: 15%;
+		    left: 8%;
+		    width: 85%;
 			h3{
 				color:$white;
-				font-size:30px;
+				font-size:24px;
 			    font-weight: $fw-semi-bold;
-			    line-height: 30px;
+			    line-height: 24px;
 			}
 			.learn-more-header {
                 @include fontello-icon('\e800','after') {
@@ -126,6 +129,21 @@
 				}
 			}
 		}	
+		@include breakpoint($tablet-layout){
+			.boxes-box-content{
+				position:absolute;
+			    top: 30%;
+			    left: 13%;
+			    max-width: 870px;
+				h3{
+					color:$white;
+					font-size:30px;
+				    line-height: 30px;
+				}
+				
+			}
+			
+		}
 	}
 }
 //
@@ -135,7 +153,7 @@
     content: '';
     height: 23px;
     background-color:$violet-light;
-    width: 880px;
+    width: 100%;
     margin-right: 1.15741%;
     margin-left: 0;
 	clear:both;
@@ -144,17 +162,111 @@
 	left:0px;
     margin-bottom: 40px;
 };
+@include breakpoint(880px) {
+	.l-content:before{
+	    width: 880px;
+	}
+}
 .l-content{
-	
+	#block-views-services-block{
+		margin-bottom:110px;
+		.views-view-grid{
+			.col-1{
+				padding-bottom:20px;
+	         	@include grid-span(12, 1);
+				.group-left{
+					@include grid-span(6,1);
+				}
+				.group-right{
+					@include grid-span(6,7);					
+				}
+			 	@include breakpoint($tablet-layout) {
+					padding-bottom:0px;
+					
+		         	@include grid-span(12, 1);
+					.group-left{
+						@include grid-span(4,3);
+					}
+					.group-right{
+						@include grid-span(6,6);
+					}
+			  	}
+			 	@include breakpoint($desktop-layout) {
+					padding-bottom:0px;
+					@include grid-span(6,1);
+					.group-left{
+						@include grid-span(4,1);
+					}
+					.group-right{
+						@include grid-span(8,5);					
+					}
+			  	}
+			}
+			.col-2{
+				padding-bottom:20px;
+	         	@include grid-span(12, 1);
+				.group-left{
+					@include grid-span(6,1);
+				}
+				.group-right{
+					@include grid-span(6,7);					
+				}
+			 	@include breakpoint($tablet-layout) {
+					padding-bottom:0px;
+		         	@include grid-span(12, 1);
+					.group-left{
+						@include grid-span(4,3);
+					}
+					.group-right{
+						@include grid-span(6,6);					
+					}
+			  	}
+   			 	@include breakpoint($desktop-layout) {
+					padding-bottom:0px;
+   					@include grid-span(6,7);
+					.group-left{
+						@include grid-span(4,1);
+					}
+					.group-right{
+						@include grid-span(8,5);					
+					}
+   			  	}
+
+
+			}
+		}
+	}
+	#block-views-trials-block-2{
+		@include grid-span(12,1);
+		@include breakpoint($desktop-layout){
+			@include grid-span(4,1);
+		}
+	}
+	#block-views-blog-block-6{
+		@include grid-span(12,1);
+		@include breakpoint($desktop-layout){
+			@include grid-span(4,5);
+		}
+	}
+	#block-views-blog-block-7{
+		@include grid-span(12,1);
+		@include breakpoint($desktop-layout){
+			@include grid-span(4,9);
+		}
+	}
 }
 //
 // Footer
 // =================================
 .l-footer{
 	position:relative;
-	.site-logo{
-	    position: absolute;
-	    top: 37px;
+	.site-logo-footer{
+		display:none;
+	}
+	@include breakpoint($desktop-layout) {
+		.site-logo-footer{
+			display:block;
+		}
 	}
 	.footer-first-wrapper{
 		background:$violet-dark-gradiant;
@@ -167,49 +279,56 @@
 		background: -moz-linear-gradient(right, $violet-dark-gradiant, $violet-light-gradiant, $violet-dark-gradiant); /* For Firefox 3.6 to 15 */
 		background: linear-gradient(to right, $violet-dark-gradiant , $violet-light-gradiant, $violet-dark-gradiant); /* Standard syntax */
 		padding:30px 0px;
+		#block-menu-menu-about-bc-eln,#block-menu-menu-licensing,
+		#block-menu-menu-partner-libraries,#block-menu-menu-services-initiatives,
+		#block-boxes-newsletter {
+		    @include grid-span(12, 1);
+			padding-bottom:20px;
+		}
+	 	@include breakpoint($tablet-layout) {
 			#block-menu-menu-about-bc-eln{
-		    @include grid-span(2, 1);
-		}
-		#block-menu-menu-licensing{
-		    @include grid-span(2, 3);
-		}
-		#block-menu-menu-partner-libraries{
-		    @include grid-span(2, 5);
-		}
-		#block-menu-menu-services-initiatives{
-		    @include grid-span(4, 7);
-		}
-		#block-boxes-newsletter{
-		    @include grid-span(2, 11);
-		    @include clearfix;
-		}
+			    @include grid-span(2, 1);
+			}
+			#block-menu-menu-licensing{
+			    @include grid-span(2, 3);
+			}
+			#block-menu-menu-partner-libraries{
+			    @include grid-span(2, 5);
+			}
+			#block-menu-menu-services-initiatives{
+			    @include grid-span(4, 7);
+			}
+			#block-boxes-newsletter{
+			    @include grid-span(2, 11);
+			}
+	  	}
 	}
+	
 	.l-region--footer-second{
 	    @include grid-container;
 	    @include clearfix;
 		padding:30px 0px;
 		position:relative;
+		//responsive layout
 		#block-block-15{
-		    @include grid-span(2, 5);
 			padding-bottom: 45px;
 			.block__content{
 				font-size:$fz-small;
 				line-height:$line-height-footer;
-				
 			}
 		}
 		#block-block-16{
-		    @include grid-span(2, 7);
 			.block__content{
 				font-size:$fz-small;
 				line-height:$line-height-footer;
 			}
 		}
-		#block-block-10,.block-menu-menu-footer, #block-menu-menu-footer{
+		#block-block-10, #block-menu-menu-footer{
 		    position: absolute;
 		    bottom: 5px;
 			.block__content{
 				font-size:$fz-ex-small;
+				line-height:$line-height-footer;
 			}
 		}
 		#block-menu-menu-footer {
@@ -219,7 +338,9 @@
 			    margin: 0 5px;;
 				clear:both;
 			};
-			
+			ul.menu li.last :after{
+			    content: '';
+			};
 			ul.menu li{
 			    display: inline;
 				a{
@@ -229,7 +350,21 @@
 				}
 			}
 		}
-		
+		#block-block-15, #block-block-16,#block-menu-menu-footer{
+		    @include grid-span(12, 1);
+		}
+		#block-block-10, #block-menu-menu-footer{
+			display:none;
+		}
+		@include breakpoint($tablet-layout) {
+			#block-block-16{
+			    @include grid-span(2, 7);
+			}
+			#block-block-15{
+			    @include grid-span(2, 5);
+			}
+
+		}
 	}
 
 }

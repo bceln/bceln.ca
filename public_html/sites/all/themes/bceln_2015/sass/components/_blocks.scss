@@ -1,0 +1,46 @@
+
+
+#block-views-blog-block-6,#block-views-trials-block-2,#block-views-blog-block-7{
+	
+	h2.block__title{
+		background: url('../images/block-head.png') no-repeat scroll top left;
+		width: 325px;
+		height: 39px;
+		font-size:$fz-h3;
+		padding:0 15px ;
+		padding-top:15px;
+		margin-bottom:0px;
+		text-transform:uppercase;
+		font-weight:$fw-semi-bold;
+		position: absolute;
+	    top: -25px;
+	}
+	.block__content{
+		margin-bottom:35px;
+		.view-content{
+			margin-bottom:50px;
+		}
+	}
+	.block__content > div{
+		background:$grey-light;
+		margin-left:1px;
+		border-bottom:2px solid $orange;
+		padding-top:80px;
+	}
+}
+//General overriders
+#block-views-blog-block-7{
+	.block__content{
+		.view-content{
+			margin-bottom:0px;
+		}
+		.field--name-body{
+				margin-bottom:50px;
+		}
+	}
+}
+
+
+//
+//GENERAL 
+//
