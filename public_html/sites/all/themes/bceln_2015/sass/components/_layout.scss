@@ -307,7 +307,7 @@
 	.l-region--footer-second{
 	    @include grid-container;
 	    @include clearfix;
-		padding:30px 0px;
+		padding:30px 10px;
 		position:relative;
 		//responsive layout
 		#block-block-15{
@@ -332,7 +332,7 @@
 			}
 		}
 		#block-menu-menu-footer {
-			left:384px;
+			left:393px;
 			ul.menu li :after{
 			    content: '|';
 			    margin: 0 5px;;
@@ -350,7 +350,7 @@
 				}
 			}
 		}
-		#block-block-15, #block-block-16,#block-menu-menu-footer{
+		#block-block-15, #block-block-16{
 		    @include grid-span(12, 1);
 		}
 		#block-block-10, #block-menu-menu-footer{

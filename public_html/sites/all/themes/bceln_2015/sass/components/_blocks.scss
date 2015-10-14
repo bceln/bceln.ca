@@ -2,8 +2,6 @@
 //
 //GENERAL styles for homepage Blocks
 //
-
-
 #block-views-blog-latest-news,#block-views-trials-offers-renewals,#block-views-blog-connect-newsletter-block,#block-boxes-partner-libraries-home{
 	margin-top:40px;
 	.more-link{
@@ -60,7 +58,7 @@
 		
 	}
 }
-//General overriders
+//verriders
 #block-boxes-partner-libraries-home{
 	margin-top: 70px;
 	@include grid-span(12,1);
@@ -112,9 +110,14 @@
 	}
 }
 .view-organizations{
-@include grid-span(12,1);
-
-
+	@include grid-span(12,1);
+	margin-bottom:50px;
+	.view-content {
+		 .views-row{
+			 float: left;
+			 margin-right:5px;
+		 }
+	}
 }
 #boxes-box-partner_libraries_home.boxes-box{
 	border:none !important;
