@@ -21,8 +21,8 @@
 		}
 		#block-menu-block-2 {
 			position:absolute;
-			right: 1%;
-		    top: 60px;
+			right: 3%;
+		    top: 83px;
 			.menu-name-main-menu{
 				ul.menu {
 				    list-style-type: none;
@@ -30,9 +30,10 @@
 				    padding: 0;
 				
 					li {
-					    margin-right: 65px;
-					    width: 65px;
+					    margin-right: 20px;
+					    width: 120px;
 					    display: inline-block;
+					    text-align: center;
 						a {
 							text-decoration:none;
 						}

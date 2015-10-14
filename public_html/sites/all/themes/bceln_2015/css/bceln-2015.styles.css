@@ -287,16 +287,17 @@ h2 a {
     top: 20px; }
   .l-branding .l-region--branding #block-menu-block-2 {
     position: absolute;
-    right: 1%;
-    top: 60px; }
+    right: 3%;
+    top: 83px; }
     .l-branding .l-region--branding #block-menu-block-2 .menu-name-main-menu ul.menu {
       list-style-type: none;
       margin: 0;
       padding: 0; }
       .l-branding .l-region--branding #block-menu-block-2 .menu-name-main-menu ul.menu li {
-        margin-right: 65px;
-        width: 65px;
-        display: inline-block; }
+        margin-right: 20px;
+        width: 120px;
+        display: inline-block;
+        text-align: center; }
         .l-branding .l-region--branding #block-menu-block-2 .menu-name-main-menu ul.menu li a {
           text-decoration: none; }
 
