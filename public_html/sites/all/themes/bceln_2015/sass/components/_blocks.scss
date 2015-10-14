@@ -4,7 +4,7 @@
 //
 
 
-#block-views-blog-block-6,#block-views-trials-block-2,#block-views-blog-block-7,#block-boxes-partner-libraries-home{
+#block-views-blog-latest-news,#block-views-trials-offers-renewals,#block-views-blog-connect-newsletter-block,#block-boxes-partner-libraries-home{
 	margin-top:40px;
 	.more-link{
 		text-align: left;
@@ -32,17 +32,17 @@
 	h2.block__title{
 		background: url('../images/block-head-repeat.png') top left;
 		background-repeat: repeat-x;
-		width: 290px;
+		width: 82%;
 		height: 64px;
 		font-size:$fz-h3;
 		padding:0 15px ;
 		padding-top:25px;
-		margin-left:26px;
 		margin-bottom:0px;
 		text-transform:uppercase;
 		font-weight:$fw-semi-bold;
 		position: absolute;
 	    top: -25px;
+		left: 22px;
 	}
 	.block__content{
 		margin-bottom:35px;
@@ -52,9 +52,8 @@
 	}
 	.block__content > div{
 		padding-left:23px;
-		padding-left:33px;
-		background:$grey-light;
-		margin-left:4px;
+		padding-right:33px;
+		background:$grey-light;		
 		border-bottom:2px solid $orange;
 		padding-top:70px;
 		padding-bottom:20px;
@@ -62,14 +61,72 @@
 	}
 }
 //General overriders
-#block-boxes-partner-libraries-home, .view-organizations{
+#block-boxes-partner-libraries-home{
+	margin-top: 70px;
 	@include grid-span(12,1);
+	.boxes-box-content{
+		a{
+			font-weight:$fw-semi-bold;
+			color:$violet-dark;
+		}
+		h2:before{
+			background: url('../images/block-header-bg-before.png') no-repeat scroll top left;
+			width: 22px;
+			height: 64px;
+			content: '';
+		    display: block;
+			position:absolute;
+			top:0px;
+			left:-22px;
+		}
+		h2:after{
+			background: url('../images/block-header-bg-after.png') no-repeat scroll top left;
+			width: 26px;
+			height: 64px;
+			content: '';
+		    display: block;
+			position:absolute;
+			top:0px;
+			right:-26px;
+		};
+		h2{
+			background: url('../images/block-head-repeat.png') top left;
+			background-repeat: repeat-x;
+			width: 82%;
+			height: 64px;
+			font-size:$fz-h3;
+			padding:0 15px ;
+			padding-top:25px;
+			margin-bottom:0px;
+			text-transform:uppercase;
+			font-weight:$fw-semi-bold;
+			position: absolute;
+		    top: -25px;
+			left:22px;
+		}
+		@include breakpoint($desktop-layout){
+			h2{
+				width: 95%;
+			}
+		}
+	}
 }
+.view-organizations{
+@include grid-span(12,1);
 
-#block-views-blog-block-7{
+
+}
+#boxes-box-partner_libraries_home.boxes-box{
+	border:none !important;
+	background:$white !important;
+}
+#block-boxes-partner-libraries-home .block__content {
+	margin-bottom: 15px;
+}
+#block-views-blog-connect-newsletter-block{
 	.block__content{
 		.view-content{
-			margin-bottom:0px;
+			margin-bottom:30px;
 		}
 		.field--name-body{
 				margin-bottom:50px;
