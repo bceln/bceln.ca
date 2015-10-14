@@ -417,7 +417,7 @@ h2 a {
     width: 880px; } }
 
 .l-content #block-views-services-block {
-  margin-bottom: 110px; }
+  margin-bottom: 60px; }
   .l-content #block-views-services-block .views-view-grid .col-1 {
     padding-bottom: 20px;
     width: 97.68519%;
@@ -702,29 +702,61 @@ h2 a {
         margin-left: 34.49074%;
         clear: none; } }
 
-#block-views-blog-block-6 h2.block__title, #block-views-trials-block-2 h2.block__title, #block-views-blog-block-7 h2.block__title {
-  background: url("../images/block-head.png") no-repeat scroll top left;
-  width: 325px;
-  height: 39px;
-  font-size: 17px;
-  padding: 0 15px;
-  padding-top: 15px;
-  margin-bottom: 0px;
-  text-transform: uppercase;
-  font-weight: 600;
-  position: absolute;
-  top: -25px; }
+#block-views-blog-block-6, #block-views-trials-block-2, #block-views-blog-block-7, #block-boxes-partner-libraries-home {
+  margin-top: 40px; }
+  #block-views-blog-block-6 .more-link, #block-views-trials-block-2 .more-link, #block-views-blog-block-7 .more-link, #block-boxes-partner-libraries-home .more-link {
+    text-align: left; }
+  #block-views-blog-block-6 h2.block__title:before, #block-views-trials-block-2 h2.block__title:before, #block-views-blog-block-7 h2.block__title:before, #block-boxes-partner-libraries-home h2.block__title:before {
+    background: url("../images/block-header-bg-before.png") no-repeat scroll top left;
+    width: 22px;
+    height: 64px;
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0px;
+    left: -22px; }
+  #block-views-blog-block-6 h2.block__title:after, #block-views-trials-block-2 h2.block__title:after, #block-views-blog-block-7 h2.block__title:after, #block-boxes-partner-libraries-home h2.block__title:after {
+    background: url("../images/block-header-bg-after.png") no-repeat scroll top left;
+    width: 26px;
+    height: 64px;
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0px;
+    right: -26px; }
+  #block-views-blog-block-6 h2.block__title, #block-views-trials-block-2 h2.block__title, #block-views-blog-block-7 h2.block__title, #block-boxes-partner-libraries-home h2.block__title {
+    background: url("../images/block-head-repeat.png") top left;
+    background-repeat: repeat-x;
+    width: 290px;
+    height: 64px;
+    font-size: 17px;
+    padding: 0 15px;
+    padding-top: 25px;
+    margin-left: 26px;
+    margin-bottom: 0px;
+    text-transform: uppercase;
+    font-weight: 600;
+    position: absolute;
+    top: -25px; }
+  #block-views-blog-block-6 .block__content, #block-views-trials-block-2 .block__content, #block-views-blog-block-7 .block__content, #block-boxes-partner-libraries-home .block__content {
+    margin-bottom: 35px; }
+    #block-views-blog-block-6 .block__content .view-content, #block-views-trials-block-2 .block__content .view-content, #block-views-blog-block-7 .block__content .view-content, #block-boxes-partner-libraries-home .block__content .view-content {
+      margin-bottom: 50px; }
+  #block-views-blog-block-6 .block__content > div, #block-views-trials-block-2 .block__content > div, #block-views-blog-block-7 .block__content > div, #block-boxes-partner-libraries-home .block__content > div {
+    padding-left: 23px;
+    padding-left: 33px;
+    background: #F6F6F6;
+    margin-left: 4px;
+    border-bottom: 2px solid #ffad00;
+    padding-top: 70px;
+    padding-bottom: 20px; }
 
-#block-views-blog-block-6 .block__content, #block-views-trials-block-2 .block__content, #block-views-blog-block-7 .block__content {
-  margin-bottom: 35px; }
-  #block-views-blog-block-6 .block__content .view-content, #block-views-trials-block-2 .block__content .view-content, #block-views-blog-block-7 .block__content .view-content {
-    margin-bottom: 50px; }
-
-#block-views-blog-block-6 .block__content > div, #block-views-trials-block-2 .block__content > div, #block-views-blog-block-7 .block__content > div {
-  background: #F6F6F6;
-  margin-left: 1px;
-  border-bottom: 2px solid #ffad00;
-  padding-top: 80px; }
+#block-boxes-partner-libraries-home, .view-organizations {
+  width: 97.68519%;
+  float: right;
+  margin-left: 0;
+  margin-right: 1.15741%;
+  clear: none; }
 
 #block-views-blog-block-7 .block__content .view-content {
   margin-bottom: 0px; }
