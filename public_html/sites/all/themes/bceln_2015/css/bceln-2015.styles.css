@@ -577,7 +577,7 @@ h2 a {
           margin-left: 1.15741%;
           clear: none; }
         .l-content #block-views-services-block .views-view-grid .col-1 .group-right {
-          width: 64.35185%;
+          width: 56.01852%;
           float: right;
           margin-left: 0;
           margin-right: 1.15741%;
@@ -636,7 +636,7 @@ h2 a {
           margin-left: 1.15741%;
           clear: none; }
         .l-content #block-views-services-block .views-view-grid .col-2 .group-right {
-          width: 64.35185%;
+          width: 56.01852%;
           float: right;
           margin-left: 0;
           margin-right: 1.15741%;
@@ -648,6 +648,13 @@ h2 a {
   margin-left: 0;
   margin-right: 1.15741%;
   clear: none; }
+  @media (min-width: 768px) {
+    .l-content #block-views-trials-offers-renewals {
+      width: 47.68519%;
+      float: left;
+      margin-right: -100%;
+      margin-left: 1.15741%;
+      clear: none; } }
   @media (min-width: 992px) {
     .l-content #block-views-trials-offers-renewals {
       width: 31.01852%;
@@ -679,6 +686,20 @@ h2 a {
   @media (min-width: 992px) {
     .l-content #block-views-blog-connect-newsletter-block {
       width: 31.01852%;
+      float: right;
+      margin-left: 0;
+      margin-right: 1.15741%;
+      clear: none; } }
+
+.l-content #block-views-blog-mobile-news-letter {
+  width: 97.68519%;
+  float: right;
+  margin-left: 0;
+  margin-right: 1.15741%;
+  clear: none; }
+  @media (min-width: 768px) {
+    .l-content #block-views-blog-mobile-news-letter {
+      width: 47.68519%;
       float: right;
       margin-left: 0;
       margin-right: 1.15741%;
@@ -809,11 +830,11 @@ h2 a {
       .l-footer .l-region--footer-second #block-block-10, .l-footer .l-region--footer-second #block-menu-menu-footer {
         visibility: visible; } }
 
-#block-views-blog-latest-news, #block-views-trials-offers-renewals, #block-views-blog-connect-newsletter-block, #block-boxes-partner-libraries-home {
+#block-views-blog-latest-news, #block-views-trials-offers-renewals, #block-views-blog-connect-newsletter-block, #block-boxes-partner-libraries-home, #block-views-blog-mobile-news-letter {
   margin-top: 40px; }
-  #block-views-blog-latest-news .more-link, #block-views-trials-offers-renewals .more-link, #block-views-blog-connect-newsletter-block .more-link, #block-boxes-partner-libraries-home .more-link {
+  #block-views-blog-latest-news .more-link, #block-views-trials-offers-renewals .more-link, #block-views-blog-connect-newsletter-block .more-link, #block-boxes-partner-libraries-home .more-link, #block-views-blog-mobile-news-letter .more-link {
     text-align: left; }
-  #block-views-blog-latest-news h2.block__title:before, #block-views-trials-offers-renewals h2.block__title:before, #block-views-blog-connect-newsletter-block h2.block__title:before, #block-boxes-partner-libraries-home h2.block__title:before {
+  #block-views-blog-latest-news h2.block__title:before, #block-views-trials-offers-renewals h2.block__title:before, #block-views-blog-connect-newsletter-block h2.block__title:before, #block-boxes-partner-libraries-home h2.block__title:before, #block-views-blog-mobile-news-letter h2.block__title:before {
     background: url("../images/block-header-bg-before.png") no-repeat scroll top left;
     width: 22px;
     height: 64px;
@@ -822,7 +843,7 @@ h2 a {
     position: absolute;
     top: 0px;
     left: -22px; }
-  #block-views-blog-latest-news h2.block__title:after, #block-views-trials-offers-renewals h2.block__title:after, #block-views-blog-connect-newsletter-block h2.block__title:after, #block-boxes-partner-libraries-home h2.block__title:after {
+  #block-views-blog-latest-news h2.block__title:after, #block-views-trials-offers-renewals h2.block__title:after, #block-views-blog-connect-newsletter-block h2.block__title:after, #block-boxes-partner-libraries-home h2.block__title:after, #block-views-blog-mobile-news-letter h2.block__title:after {
     background: url("../images/block-header-bg-after.png") no-repeat scroll top left;
     width: 26px;
     height: 64px;
@@ -831,7 +852,7 @@ h2 a {
     position: absolute;
     top: 0px;
     right: -26px; }
-  #block-views-blog-latest-news h2.block__title, #block-views-trials-offers-renewals h2.block__title, #block-views-blog-connect-newsletter-block h2.block__title, #block-boxes-partner-libraries-home h2.block__title {
+  #block-views-blog-latest-news h2.block__title, #block-views-trials-offers-renewals h2.block__title, #block-views-blog-connect-newsletter-block h2.block__title, #block-boxes-partner-libraries-home h2.block__title, #block-views-blog-mobile-news-letter h2.block__title {
     background: url("../images/block-head-repeat.png") top left;
     background-repeat: repeat-x;
     width: 82%;
@@ -845,11 +866,11 @@ h2 a {
     position: absolute;
     top: -25px;
     left: 22px; }
-  #block-views-blog-latest-news .block__content, #block-views-trials-offers-renewals .block__content, #block-views-blog-connect-newsletter-block .block__content, #block-boxes-partner-libraries-home .block__content {
+  #block-views-blog-latest-news .block__content, #block-views-trials-offers-renewals .block__content, #block-views-blog-connect-newsletter-block .block__content, #block-boxes-partner-libraries-home .block__content, #block-views-blog-mobile-news-letter .block__content {
     margin-bottom: 35px; }
-    #block-views-blog-latest-news .block__content .view-content, #block-views-trials-offers-renewals .block__content .view-content, #block-views-blog-connect-newsletter-block .block__content .view-content, #block-boxes-partner-libraries-home .block__content .view-content {
+    #block-views-blog-latest-news .block__content .view-content, #block-views-trials-offers-renewals .block__content .view-content, #block-views-blog-connect-newsletter-block .block__content .view-content, #block-boxes-partner-libraries-home .block__content .view-content, #block-views-blog-mobile-news-letter .block__content .view-content {
       margin-bottom: 50px; }
-  #block-views-blog-latest-news .block__content > div, #block-views-trials-offers-renewals .block__content > div, #block-views-blog-connect-newsletter-block .block__content > div, #block-boxes-partner-libraries-home .block__content > div {
+  #block-views-blog-latest-news .block__content > div, #block-views-trials-offers-renewals .block__content > div, #block-views-blog-connect-newsletter-block .block__content > div, #block-boxes-partner-libraries-home .block__content > div, #block-views-blog-mobile-news-letter .block__content > div {
     padding-left: 23px;
     padding-right: 33px;
     background: #F6F6F6;
@@ -946,5 +967,25 @@ h2 a {
     color: #FFF;
     font-size: 18px;
     font-weight: 600; }
+
+#block-views-blog-mobile-news-letter {
+  display: block; }
+
+#block-views-trials-offers-renewals {
+  display: block; }
+
+#block-views-blog-latest-news {
+  display: none; }
+
+#block-views-blog-connect-newsletter-block {
+  display: none; }
+
+@media (min-width: 992px) {
+  #block-views-blog-mobile-news-letter {
+    display: none; }
+  #block-views-blog-latest-news {
+    display: block; }
+  #block-views-blog-connect-newsletter-block {
+    display: block; } }
 
 /*# sourceMappingURL=bceln-2015.styles.css.map */

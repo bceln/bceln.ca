@@ -1,0 +1,28 @@
+//ALL HOME PAGE SPECIFIC STZYLES GO HERE
+
+//Responsive turn on and off for blocks
+#block-views-blog-mobile-news-letter{
+	display:block;
+}
+#block-views-trials-offers-renewals{
+	display:block;
+	
+}
+#block-views-blog-latest-news{
+	display:none;
+}
+#block-views-blog-connect-newsletter-block{
+	display:none;
+}
+@include breakpoint($desktop-layout){
+	#block-views-blog-mobile-news-letter{
+		display:none;
+	}
+	#block-views-blog-latest-news{
+		display:block;
+	}
+	#block-views-blog-connect-newsletter-block{
+		display:block;
+	}
+
+}
