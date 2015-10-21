@@ -3,54 +3,45 @@
 // =================================
 
 .search-block-form {
-	.form-item-search-block-form{
-		background-color:$grey-medium;
-	    height: 30px;
-	    width: 170px;
-		display:inline-block;
-		border:0px;
-	}
-	#edit-search-block-form--2{
-//	    width: 170px;
-//		border:none;
-//		background-color:$grey-medium;
-//	    height: 30px;
-//		padding:0px;
-	}
-	.form-item-search-block-form{
-		.form-text {
-			border:none;
-			font-size:17px;
-			padding:2px;
+	.container-inline{
+		position:relative;
+		.form-item-search-block-form{
 			background-color:$grey-medium;
-		    height: 26px;
+			padding:2px 0px 6px 5px;
 		    width: 170px;
+		    margin-right: 0px;
+			display:inline-block;
+			border:0px;
+		}
+		.form-item-search-block-form{
+			.form-text {
+				border:none;
+				font-size:17px;
+				padding:2px;
+				background-color:$grey-medium;
+			    width: 166px;
+				padding:4px 0px;
+			}
+		}
+		.form-actions {
+			cursor:pointer;
+			@include fontello-icon('\e801','before') {
+			   font-size: 1.3em;
+			   cursor: pointer;
+			   color:$white;
+			   position:absolute;
+			   right: 0px;
+			   top: 9px;
+			   z-index:200;
+			 }
+			.form-submit {
+				border:none;
+			    height: 36px;
+			    overflow: hidden;
+			    text-indent: -9999px;
+			    width: 30px;
+				background:$dark-cyan;
+			}
 		}
 	}
-	.form-actions {
-		height: 26px;
-		padding: 2px;
-		display: inline-block;
-		cursor:pointer;
-		background:$dark-cyan;			
-		@include fontello-icon('\e801','after') {
-		   font-size: 1.0em;
-		   cursor: pointer;
-		   color:$white;
-		   position:relative;
-		 }
-		.form-submit {
-		    cursor: pointer;
-		    border: none;
-		    padding: 0px;
-		    font-size: 0px;
-		    position: absolute;
-		    width: 27px;
-		    height: 30px;
-		    top: 0px;
-		    right: 0px;
-			background:$dark-cyan;			
-		}
-	}
-
 }

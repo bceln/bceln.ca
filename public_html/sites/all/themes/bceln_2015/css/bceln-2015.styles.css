@@ -18,7 +18,7 @@
 /* Uncomment bellow content to visualize the grid */
 /* -- Abstraction -- */
 /* Integrating Fontello in our code */
-.field__item h3 a::before, .view-id-Blog h4 a::before, .search-block-form .form-actions::after, .field--name-node-link .field__items a::after, .more-link a::after, .responsive-menus.responsified span.toggler::before, .l-region--header #block-boxes-homepage .boxes-box-content .learn-more-header::after, #boxes-box-newsletter .boxes-box-content .news-letter-icon::before {
+.field__item h3 a::before, .view-id-Blog h4 a::before, .search-block-form .container-inline .form-actions::before, .field--name-node-link .field__items a::after, .more-link a::after, .responsive-menus.responsified span.toggler::before, .l-region--header #block-boxes-homepage .boxes-box-content .learn-more-header::after, #boxes-box-newsletter .boxes-box-content .news-letter-icon::before {
   font-family: "fontello";
   font-style: normal;
   font-weight: normal;
@@ -193,48 +193,47 @@ h2 a {
     color: #ffad00;
     cursor: pointer; }
 
-.search-block-form .form-item-search-block-form {
-  background-color: #E9E9E9;
-  height: 30px;
-  width: 170px;
-  display: inline-block;
-  border: 0px; }
-
-.search-block-form .form-item-search-block-form .form-text {
-  border: none;
-  font-size: 17px;
-  padding: 2px;
-  background-color: #E9E9E9;
-  height: 26px;
-  width: 170px; }
-
-.search-block-form .form-actions {
-  height: 26px;
-  padding: 2px;
-  display: inline-block;
-  cursor: pointer;
-  background: #008499; }
-  .search-block-form .form-actions::after {
-    font-size: 1.0em;
-    cursor: pointer;
-    color: #FFF;
-    position: relative;
-    content: "";
-    font-size: 1.0em;
-    cursor: pointer;
-    color: #FFF;
-    position: relative; }
-  .search-block-form .form-actions .form-submit {
-    cursor: pointer;
+.search-block-form .container-inline {
+  position: relative; }
+  .search-block-form .container-inline .form-item-search-block-form {
+    background-color: #E9E9E9;
+    padding: 2px 0px 6px 5px;
+    width: 170px;
+    margin-right: 0px;
+    display: inline-block;
+    border: 0px; }
+  .search-block-form .container-inline .form-item-search-block-form .form-text {
     border: none;
-    padding: 0px;
-    font-size: 0px;
-    position: absolute;
-    width: 27px;
-    height: 30px;
-    top: 0px;
-    right: 0px;
-    background: #008499; }
+    font-size: 17px;
+    padding: 2px;
+    background-color: #E9E9E9;
+    width: 166px;
+    padding: 4px 0px; }
+  .search-block-form .container-inline .form-actions {
+    cursor: pointer; }
+    .search-block-form .container-inline .form-actions::before {
+      font-size: 1.3em;
+      cursor: pointer;
+      color: #FFF;
+      position: absolute;
+      right: 0px;
+      top: 9px;
+      z-index: 200;
+      content: "";
+      font-size: 1.3em;
+      cursor: pointer;
+      color: #FFF;
+      position: absolute;
+      right: 0px;
+      top: 9px;
+      z-index: 200; }
+    .search-block-form .container-inline .form-actions .form-submit {
+      border: none;
+      height: 36px;
+      overflow: hidden;
+      text-indent: -9999px;
+      width: 30px;
+      background: #008499; }
 
 /* -- Components -- */
 .field--name-node-link .field__items a::after, .more-link a::after {
@@ -829,6 +828,9 @@ h2 a {
         clear: none; }
       .l-footer .l-region--footer-second #block-block-10, .l-footer .l-region--footer-second #block-menu-menu-footer {
         visibility: visible; } }
+
+.block {
+  position: relative; }
 
 #block-views-blog-latest-news, #block-views-trials-offers-renewals, #block-views-blog-connect-newsletter-block, #block-boxes-partner-libraries-home, #block-views-blog-mobile-news-letter {
   margin-top: 40px; }
