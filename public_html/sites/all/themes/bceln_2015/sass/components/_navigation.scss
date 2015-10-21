@@ -34,6 +34,43 @@
 }
 
 //
+// Main Menu overrides for responsive menu
+// =================================
+.responsive-menus.responsified {
+	
+	span.toggler {
+		background:$violet-dark;
+		box-shadow: none;
+		color:$white;
+	    border-radius: 0;
+	    box-shadow: none;
+		float:right;
+		padding:8px 4px;
+		@include fontello-icon('\e808') {
+		   font-size: 1.7em;
+		   cursor: pointer;
+		   color:$white;
+		   position:relative;
+		   margin-right:10px;
+		 }
+	}
+	.responsive-menus-simple {
+	    top: 50px !important;
+		background: #333;
+	    border-bottom-right-radius: 0;
+	    border-bottom-left-radius: 0;
+	    box-shadow: none;
+		li a{
+		background:$violet-dark;
+		color:$white !important;
+//		border-bottom:1px solid ;
+		}
+	}
+}
+
+
+
+//
 // Menus in Footer First
 // =================================
 .block--menu h2{
@@ -46,4 +83,6 @@
 	font-size:$fz-menu-footer;
 	line-height:$line-height-footer-menu;
 }
+
+
 

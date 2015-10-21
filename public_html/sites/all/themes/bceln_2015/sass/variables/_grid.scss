@@ -16,7 +16,8 @@
 $tablet-layout: 768px;
 $desktop-layout: 992px;
 $max-width-layout: 1266px;
- 
+$max-width-menu: 1111px;
+  
 @include add-grid(12);
   
 @include add-gutter-style('split');

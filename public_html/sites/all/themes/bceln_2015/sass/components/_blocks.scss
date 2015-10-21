@@ -136,4 +136,24 @@
 		}
 	}
 }
-
+//
+//footer Blocks
+//
+#boxes-box-newsletter .boxes-box-content{
+	background:$dark-cyan;
+	padding:5px 15px;
+	.news-letter-icon{
+		@include fontello-icon('\e802') {
+		   font-size: 1.0em;
+		   cursor: pointer;
+		   color:$orange;
+		   position:relative;
+		   margin-right:10px;
+		 }
+	}
+	.news-letter-text{
+		color:$white;
+		font-size:$fz-h2;
+		font-weight:$fw-semi-bold;
+	}
+}

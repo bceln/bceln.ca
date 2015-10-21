@@ -28,18 +28,18 @@
 		}
 	}
 	.form-actions {
-	    height: 26px;
-	    padding: 2px;
-	    display: inline-block;
-	   cursor:pointer;
+		height: 26px;
+		padding: 2px;
+		display: inline-block;
+		cursor:pointer;
 		background:$dark-cyan;			
-			@include fontello-icon('\e801','after') {
-			   font-size: 1.0em;
-   		       cursor: pointer;
-			   color:$white;
-			   position:relative;
-			 }
-			 .form-submit {
+		@include fontello-icon('\e801','after') {
+		   font-size: 1.0em;
+		   cursor: pointer;
+		   color:$white;
+		   position:relative;
+		 }
+		.form-submit {
 		    cursor: pointer;
 		    border: none;
 		    padding: 0px;
