@@ -911,7 +911,6 @@ h2 a {
   #block-boxes-partner-libraries-home .boxes-box-content h2 {
     background: url("../images/block-head-repeat.png") top left;
     background-repeat: repeat-x;
-    width: 82%;
     height: 64px;
     font-size: 17px;
     padding: 0 15px;
@@ -921,7 +920,11 @@ h2 a {
     font-weight: 600;
     position: absolute;
     top: -25px;
-    left: 22px; }
+    left: 22px;
+    width: 84%; }
+  @media (min-width: 768px) {
+    #block-boxes-partner-libraries-home .boxes-box-content h2 {
+      width: 92%; } }
   @media (min-width: 992px) {
     #block-boxes-partner-libraries-home .boxes-box-content h2 {
       width: 95%; } }

@@ -96,7 +96,6 @@
 		h2{
 			background: url('../images/block-head-repeat.png') top left;
 			background-repeat: repeat-x;
-			width: 82%;
 			height: 64px;
 			font-size:$fz-h3;
 			padding:0 15px ;
@@ -107,6 +106,12 @@
 			position: absolute;
 		    top: -25px;
 			left:22px;
+			width: 84%;
+		}
+		@include breakpoint($tablet-layout){
+			h2{
+				width: 92%;
+			}
 		}
 		@include breakpoint($desktop-layout){
 			h2{
