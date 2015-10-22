@@ -31,7 +31,13 @@
 ?>
 <?php if ($content): ?>
   <div<?php print $attributes; ?>>
+  	<div id='site-logo-footer'><a href="/" title="Home" rel="home" class="site-logo site-logo-footer">
+		<img src="/sites/all/themes/bceln_2015/images/logo.png" alt="Home"></a>
+	</div>
     <?php print $content; ?>
-	<a href="/" title="Home" rel="home" class="site-logo site-logo-footer"><img src="/sites/all/themes/bceln_2015/images/logo.png" alt="Home"></a>
+	<div id='support-bc'>
+		<p>Supported by:</p>
+		<img src="/sites/all/themes/bceln_2015/images/bc.png" alt="Supported by British Cloumbia">
+	</div>
   </div>
 <?php endif; ?>

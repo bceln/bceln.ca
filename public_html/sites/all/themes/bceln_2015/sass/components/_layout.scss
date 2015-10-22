@@ -20,7 +20,7 @@
 		#block-search-form {
 		    position: absolute;
 		    right: 1.15741%;
-		    top: 168px;
+		    top: 164px;
 		    z-index: 500;
 		}
 		#block-menu-block-2 {
@@ -256,7 +256,6 @@
 // =================================
 
 //Mobile
-
 .l-content:before{
 	display:none;
 };
@@ -383,14 +382,6 @@
 // =================================
 .l-footer{
 	position:relative;
-	.site-logo-footer{
-		display:none;
-	}
-	@include breakpoint($desktop-layout) {
-		.site-logo-footer{
-			display:block;
-		}
-	}
 	.footer-first-wrapper{
 		background:$violet-dark-gradiant;
 	}
@@ -403,12 +394,69 @@
 		background: linear-gradient(to right, $violet-dark-gradiant , $violet-light-gradiant, $violet-dark-gradiant); /* Standard syntax */
 		padding:30px 0px;
 		#block-menu-menu-about-bc-eln,#block-menu-menu-licensing,
-		#block-menu-menu-partner-libraries,#block-menu-menu-services-initiatives,
-		#block-boxes-newsletter {
-		    @include grid-span(12, 1);
-			padding-bottom:20px;
+		#block-menu-menu-partner-libraries,#block-menu-menu-services-initiatives {
+			padding-bottom:15px;
 		}
+		//MOBILE FOOTER LAYOUT
+		//END ROWS
+		 #block-menu-menu-licensing ,#block-menu-menu-services-initiatives {
+			 @include layout($gutter:2) {
+		  	   @include grid-span(6, 7, $output-style: 'float');
+		   	}
+		}
+		 #block-menu-menu-licensing, #block-menu-menu-services-initiatives {
+			 @include layout($gutter: 2) {			
+		  	 	@include float-span(6, 'last');
+		   	}
+		}
+		//Start ROWS
+		#block-menu-menu-about-bc-eln,#block-menu-menu-partner-libraries{
+		 @include layout($gutter: 2) {			
+				@include grid-span(6, 1, $output-style: 'float');
+				  clear: both;
+			  }
+		}
+		#block-menu-menu-about-bc-eln ,#block-menu-menu-partner-libraries {
+			@include layout($gutter: 2) {			
+				@include float-span(6, 'first');
+			}
+		}
+		#block-boxes-newsletter{
+   		 @include layout($gutter: 2) {			
+			 @include grid-span(12, 1, $output-style: 'float');
+ 			 clear: both;
+		  }
+		}
+		#block-boxes-newsletter {
+			 @include layout($gutter: 2) {			
+		  	   @include float-span(12, 'first');
+  	 		}
+		}
+
+		//TABLET FOOTER LAYOUT
 	 	@include breakpoint($tablet-layout) {
+			#block-menu-menu-about-bc-eln{
+			    @include grid-span(3, 1);
+			}
+			#block-menu-menu-licensing{
+			    @include grid-span(3, 4);
+			}
+			#block-menu-menu-partner-libraries{
+			    @include grid-span(3, 7);
+			}
+			#block-menu-menu-services-initiatives{
+ 		  	   @include grid-span(3, 10, $output-style: 'float');
+	  	 		@include float-span(3, 'last');
+				
+			}
+			#block-boxes-newsletter{
+   			 @include layout($gutter: 3) {	
+				 @include grid-span(6,4);
+     	 		}
+	 			 clear: both;
+			}
+	  	}
+	 	@include breakpoint($desktop-layout) {
 			#block-menu-menu-about-bc-eln{
 			    @include grid-span(2, 1);
 			}
@@ -422,7 +470,8 @@
 			    @include grid-span(4, 7);
 			}
 			#block-boxes-newsletter{
-			    @include grid-span(2, 11);
+			    @include grid-span(3,10);
+			    margin-top: 30px;
 			}
 	  	}
 	}
@@ -433,29 +482,17 @@
 		padding:30px 10px;
 		position:relative;
 		//responsive layout
-		#block-block-15{
-			padding-bottom: 45px;
+		#block-block-15, #block-block-16,#block-block-10, #block-menu-menu-footer{
 			.block__content{
 				font-size:$fz-small;
 				line-height:$line-height-footer;
 			}
 		}
-		#block-block-16{
-			.block__content{
-				font-size:$fz-small;
-				line-height:$line-height-footer;
-			}
-		}
-		#block-block-10, #block-menu-menu-footer{
-		    position: absolute;
-		    bottom: 5px;
-			.block__content{
-				font-size:$fz-ex-small;
-				line-height:$line-height-footer;
-			}
+		#support-bc p{
+			font-size:$fz-small;
+			line-height:$line-height-footer;	
 		}
 		#block-menu-menu-footer {
-			left:393px;
 			ul.menu li :after{
 			    content: '|';
 			    margin: 0 5px;;
@@ -473,21 +510,59 @@
 				}
 			}
 		}
-		#block-block-15, #block-block-16{
-		    @include grid-span(12, 1);
+		//Mobile Layout
+		#site-logo-footer{
+			@include layout($gutter: 2) {
+				@include grid-span(12, 1, $output-style: 'float');
+				@include float-span(12, 'last');
+			}
 		}
-		#block-block-10, #block-menu-menu-footer{
-			visibility:hidden;
+		#block-block-15{
+			@include layout($gutter: 2) {
+				@include grid-span(10,3);				
+			}
 		}
-		@include breakpoint($tablet-layout) {
-			#block-block-16{
-			    @include grid-span(2, 7);
+		#block-block-16{
+			margin-top:10px;
+			margin-bottom:20px;
+			@include layout($gutter: 2) {
+				@include grid-span(10,3);
+				
+			}
+		}
+		#support-bc{
+			display: inline-block;
+		    text-align: center;
+			@include layout($gutter: 2) {
+				@include grid-span(12,1);
+			}
+		}
+		#block-block-10 ,#block-menu-menu-footer{
+			position:absolute;
+			bottom:25px;
+		}
+		#block-menu-menu-footer{
+			bottom:5px;
+		}
+		@include breakpoint($tablet-layout){
+			#block-block-10 ,#block-menu-menu-footer{
+				position:absolute;
+				bottom:5px;
+			}
+			#block-menu-menu-footer{
+				left:458px;
+			}
+			#site-logo-footer{
+				@include grid-span(5,1);				
 			}
 			#block-block-15{
-			    @include grid-span(2, 5);
+				@include grid-span(2,6);				
 			}
-			#block-block-10, #block-menu-menu-footer{
-				visibility:visible;
+			#block-block-16{
+				@include grid-span(2,8);
+			}
+			#support-bc{
+				@include grid-span(2,11);
 			}
 		}
 	}
