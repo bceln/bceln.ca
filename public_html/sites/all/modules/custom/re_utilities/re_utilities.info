@@ -1,4 +1,3 @@
-;$Id$
 name = "RE Utilities"
 description = "Creating the Utilities Nav across the site"
 package = "Raised Eyebrow Custom Modules"
