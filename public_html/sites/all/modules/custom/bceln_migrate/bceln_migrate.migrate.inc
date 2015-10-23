@@ -13,14 +13,15 @@ function bceln_migrate_migrate_api() {
       ],
     ],
     'migrations' => [
-      'license_import' => [
-        'class_name' => 'Bceln_Migrate_Node_License',
-        'description' => t('Import licenses'),
-        'destination_type' => 'license',
+      'vendor_import' => [
+        'class_name' => 'Bceln_Migrate_Node_Vendor',
+        'description' => t('Import vendors'),
+        'destination_type' => 'vendor',
         'default_uid' => Bceln_Migrate_Config::getDefaultUid(),
         'dependencies' => [],
         'group_name' => 'initial_csv',
       ],
+
       'organization_import' => [
         'class_name' => 'Bceln_Migrate_Node_Organization',
         'description' => t('Import organizations'),
@@ -29,25 +30,33 @@ function bceln_migrate_migrate_api() {
         'dependencies' => [],
         'group_name' => 'initial_csv',
       ],
+
       'resource_import' => [
         'class_name' => 'Bceln_Migrate_Node_Resource',
         'description' => t('Import resources'),
         'destination_type' => 'resource',
         'default_uid' => Bceln_Migrate_Config::getDefaultUid(),
-        'dependencies' => [],
+        'dependencies' => [
+          'vendor_import',
+          'organization_import', // for field_organization_ref (via subscriptions.csv)
+        ],
         'group_name' => 'initial_csv',
       ],
+
+      'license_import' => [
+        'class_name' => 'Bceln_Migrate_Node_License',
+        'description' => t('Import licenses'),
+        'destination_type' => 'license',
+        'default_uid' => Bceln_Migrate_Config::getDefaultUid(),
+        'dependencies' => [
+          'resource_import',
+        ],
+        'group_name' => 'initial_csv',
+      ],
+
       'user_import' => [
         'class_name' => 'Bceln_Migrate_User',
         'description' => t('Import vendors'),
-        'dependencies' => [],
-        'group_name' => 'initial_csv',
-      ],
-      'vendor_import' => [
-        'class_name' => 'Bceln_Migrate_Node_Vendor',
-        'description' => t('Import vendors'),
-        'destination_type' => 'vendor',
-        'default_uid' => Bceln_Migrate_Config::getDefaultUid(),
         'dependencies' => [],
         'group_name' => 'initial_csv',
       ],

@@ -20,6 +20,43 @@ class Bceln_Migrate_Node_Resource extends Bceln_Migrate_Abstract {
     );
 
     $this->addFieldMapping('title', 'db_name');
+
+    $this->addFieldMapping('field_private_note', 'notes');
+    // $this->addFieldMapping('field_private_note:format', '');
+
+    $this->addFieldMapping('field_resource_content_producer', 'content_producer');
+
+    $this->addFieldMapping('field_resources_chron_coverage', 'chron_coverage');
+
+    $this->addFieldMapping('field_resources_usage_stats', 'usage_stats');
+    // $this->addFieldMapping('field_resources_usage_stats:format', '');
+
+    $this->addFieldMapping('field_resources_generic_url', 'more_info');
+    // $this->addFieldMapping('field_resources_generic_url:title', '');
+    // $this->addFieldMapping('field_resources_generic_url:attributes', '');
+    // $this->addFieldMapping('field_resources_generic_url:language', '');
+
+    $this->addFieldMapping('field_resource_vendor_ref', 'vendor_id')->sourceMigration('vendor_import');
+
+    // from subscriptions.csv
+    // $this->addFieldMapping('field_organization_ref', '');
+
+    $this->addFieldMapping('field_resources_note_subscribers', 'subscrib_notes');
+    // $this->addFieldMapping('field_resources_note_subscribers:format', '');
+
+    $this->addFieldMapping('field_resources_multi_consortial', 'multiconsort_note');
+    // $this->addFieldMapping('field_resources_multi_consortial:format', '');
+
+    $this->addFieldMapping('field_content_types', 'content_types');
+    // $this->addFieldMapping('field_content_types:source_type', '');
+    // $this->addFieldMapping('field_content_types:create_term', '');
+    // $this->addFieldMapping('field_content_types:ignore_case', '');
+
+    $this->addFieldMapping('field_title_lists', 'title_lists');
+    // $this->addFieldMapping('field_title_lists:title', '');
+    // $this->addFieldMapping('field_title_lists:attributes', '');
+    // $this->addFieldMapping('field_title_lists:language', '');
+
     // $this->addFieldMapping('uid', '');
     // $this->addFieldMapping('created', '');
     // $this->addFieldMapping('changed', '');
@@ -36,36 +73,12 @@ class Bceln_Migrate_Node_Resource extends Bceln_Migrate_Abstract {
     // $this->addFieldMapping('body', '');
     // $this->addFieldMapping('body:summary', '');
     // $this->addFieldMapping('body:format', '');
-    $this->addFieldMapping('field_private_note', 'notes');
-    // $this->addFieldMapping('field_private_note:format', '');
     // $this->addFieldMapping('field_resource_vend_desc', '');
     // $this->addFieldMapping('field_resource_vend_desc:title', '');
     // $this->addFieldMapping('field_resource_vend_desc:attributes', '');
     // $this->addFieldMapping('field_resource_vend_desc:language', '');
-    $this->addFieldMapping('field_resource_content_producer', 'content_producer');
-    $this->addFieldMapping('field_resources_chron_coverage', 'chron_coverage');
-    $this->addFieldMapping('field_resources_usage_stats', 'usage_stats');
-    // $this->addFieldMapping('field_resources_usage_stats:format', '');
-    $this->addFieldMapping('field_resources_generic_url', 'more_info');
-    // $this->addFieldMapping('field_resources_generic_url:title', '');
-    // $this->addFieldMapping('field_resources_generic_url:attributes', '');
-    // $this->addFieldMapping('field_resources_generic_url:language', '');
-    $this->addFieldMapping('field_resource_vendor_ref', 'vendor_id'); // needs mapping
-    // $this->addFieldMapping('field_organization_ref', '');
-    $this->addFieldMapping('field_resources_note_subscribers', 'subscrib_notes');
-    // $this->addFieldMapping('field_resources_note_subscribers:format', '');
-    $this->addFieldMapping('field_resources_multi_consortial', 'multiconsort_note');
-    // $this->addFieldMapping('field_resources_multi_consortial:format', '');
-    $this->addFieldMapping('field_content_types', 'content_types');
-    // $this->addFieldMapping('field_content_types:source_type', '');
-    // $this->addFieldMapping('field_content_types:create_term', '');
-    // $this->addFieldMapping('field_content_types:ignore_case', '');
     // $this->addFieldMapping('field_platform', '');
     // $this->addFieldMapping('field_platform:format', '');
-    $this->addFieldMapping('field_title_lists', 'title_lists');
-    // $this->addFieldMapping('field_title_lists:title', '');
-    // $this->addFieldMapping('field_title_lists:attributes', '');
-    // $this->addFieldMapping('field_title_lists:language', '');
     // $this->addFieldMapping('field_access', '');
     // $this->addFieldMapping('field_access:source_type', '');
     // $this->addFieldMapping('field_access:create_term', '');

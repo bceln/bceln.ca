@@ -20,6 +20,7 @@ class Bceln_Migrate_User extends Bceln_Migrate_Abstract {
     );
 
     $this->addFieldMapping('mail', 'email');
+
     // $this->addFieldMapping('name', '');
     // $this->addFieldMapping('pass', '');
     // $this->addFieldMapping('status', '');

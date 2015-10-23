@@ -19,6 +19,38 @@ class Bceln_Migrate_Node_License extends Bceln_Migrate_Abstract {
       MigrateDestinationNode::getKeySchema()
     );
 
+    $this->addFieldMapping('field_license_eres_text', 'ereserves_txt');
+    // $this->addFieldMapping('field_license_eres_text:format', '');
+
+    $this->addFieldMapping('field_license_ill_txt', 'ill_txt');
+    // $this->addFieldMapping('field_license_ill_txt:format', '');
+
+    $this->addFieldMapping('field_license_archival_txt', 'archival_txt');
+    // $this->addFieldMapping('field_license_archival_txt:format', '');
+
+    $this->addFieldMapping('field_private_note', 'general');
+    // $this->addFieldMapping('field_private_note:format', '');
+
+    $this->addFieldMapping('field_license_ereserves', 'ereserves');
+    $this->addFieldMapping('field_license_ill', 'ill');
+    $this->addFieldMapping('field_license_archival', 'archival');
+    $this->addFieldMapping('field_resource', 'db_id')->sourceMigration('resource_import');
+
+    $this->addFieldMapping('field_licence_begins', 'begins');
+    // $this->addFieldMapping('field_licence_begins:timezone', '');
+    // $this->addFieldMapping('field_licence_begins:rrule', '');
+    // $this->addFieldMapping('field_licence_begins:to', '');
+
+    $this->addFieldMapping('field_licence_ends', 'ends');
+    // $this->addFieldMapping('field_licence_ends:timezone', '');
+    // $this->addFieldMapping('field_licence_ends:rrule', '');
+    // $this->addFieldMapping('field_licence_ends:to', '');
+
+    $this->addFieldMapping('field_url', 'url_1');
+    $this->addFieldMapping('field_url:title', 'url_1_format');
+    // $this->addFieldMapping('field_url:attributes', '');
+    // $this->addFieldMapping('field_url:language', '');
+
     // $this->addFieldMapping('title', '');
     // $this->addFieldMapping('uid', '');
     // $this->addFieldMapping('created', '');
@@ -36,14 +68,6 @@ class Bceln_Migrate_Node_License extends Bceln_Migrate_Abstract {
     // $this->addFieldMapping('body', '');
     // $this->addFieldMapping('body:summary', '');
     // $this->addFieldMapping('body:format', '');
-    $this->addFieldMapping('field_license_eres_text', 'ereserves_txt');
-    // $this->addFieldMapping('field_license_eres_text:format', '');
-    $this->addFieldMapping('field_license_ill_txt', 'ill_txt');
-    // $this->addFieldMapping('field_license_ill_txt:format', '');
-    $this->addFieldMapping('field_license_archival_txt', 'archival_txt');
-    // $this->addFieldMapping('field_license_archival_txt:format', '');
-    $this->addFieldMapping('field_private_note', 'general');
-    // $this->addFieldMapping('field_private_note:format', '');
     // $this->addFieldMapping('field_attachments', '');
     // $this->addFieldMapping('field_attachments:file_class', '');
     // $this->addFieldMapping('field_attachments:preserve_files', '');
@@ -54,22 +78,6 @@ class Bceln_Migrate_Node_License extends Bceln_Migrate_Abstract {
     // $this->addFieldMapping('field_attachments:urlencode', '');
     // $this->addFieldMapping('field_attachments:description', '');
     // $this->addFieldMapping('field_attachments:display', '');
-    $this->addFieldMapping('field_license_ereserves', 'ereserves');
-    $this->addFieldMapping('field_license_ill', 'ill');
-    $this->addFieldMapping('field_license_archival', 'archival');
-    $this->addFieldMapping('field_resource', 'db_id'); // mapping necessary
-    $this->addFieldMapping('field_licence_begins', 'begins');
-    // $this->addFieldMapping('field_licence_begins:timezone', '');
-    // $this->addFieldMapping('field_licence_begins:rrule', '');
-    // $this->addFieldMapping('field_licence_begins:to', '');
-    $this->addFieldMapping('field_licence_ends', 'ends');
-    // $this->addFieldMapping('field_licence_ends:timezone', '');
-    // $this->addFieldMapping('field_licence_ends:rrule', '');
-    // $this->addFieldMapping('field_licence_ends:to', '');
-    $this->addFieldMapping('field_url', 'url_1');
-    $this->addFieldMapping('field_url:title', 'url_1_format');
-    // $this->addFieldMapping('field_url:attributes', '');
-    // $this->addFieldMapping('field_url:language', '');
     // $this->addFieldMapping('field_resources_multiyear_cont', '');
     // $this->addFieldMapping('field_resources_multiyear_cont:timezone', '');
     // $this->addFieldMapping('field_resources_multiyear_cont:rrule', '');

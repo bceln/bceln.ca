@@ -20,6 +20,12 @@ class Bceln_Migrate_Node_Vendor extends Bceln_Migrate_Abstract {
     );
 
     $this->addFieldMapping('title', 'inst_name');
+
+    $this->addFieldMapping('field_vendor_url', 'inst_url');
+    // $this->addFieldMapping('field_vendor_url:title', '');
+    // $this->addFieldMapping('field_vendor_url:attributes', '');
+    // $this->addFieldMapping('field_vendor_url:language', '');
+
     // $this->addFieldMapping('uid', '');
     // $this->addFieldMapping('created', '');
     // $this->addFieldMapping('changed', '');
@@ -33,10 +39,6 @@ class Bceln_Migrate_Node_Vendor extends Bceln_Migrate_Abstract {
     // $this->addFieldMapping('translate', '');
     // $this->addFieldMapping('revision_uid', '');
     // $this->addFieldMapping('is_new', '');
-    $this->addFieldMapping('field_vendor_url', 'inst_url');
-    // $this->addFieldMapping('field_vendor_url:title', '');
-    // $this->addFieldMapping('field_vendor_url:attributes', '');
-    // $this->addFieldMapping('field_vendor_url:language', '');
     // $this->addFieldMapping('field_private_note', '');
     // $this->addFieldMapping('field_private_note:format', '');
     // $this->addFieldMapping('path', '');

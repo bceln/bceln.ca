@@ -20,6 +20,38 @@ class Bceln_Migrate_Node_Organization extends Bceln_Migrate_Abstract {
     );
 
     $this->addFieldMapping('title', 'inst_name');
+
+    $this->addFieldMapping('field_org_nlc_code', 'nlc_code');
+
+    $this->addFieldMapping('field_org_url', 'inst_url');
+    // $this->addFieldMapping('field_org_url:title', '');
+    // $this->addFieldMapping('field_org_url:attributes', '');
+    // $this->addFieldMapping('field_org_url:language', '');
+
+    // $this->addFieldMapping('field_location', '');
+    $this->addFieldMapping('field_location:name', 'inst_name');
+    $this->addFieldMapping('field_location:street', 'street');
+    // $this->addFieldMapping('field_location:additional', '');
+    $this->addFieldMapping('field_location:city', 'city');
+    $this->addFieldMapping('field_location:province', 'prov');
+    $this->addFieldMapping('field_location:postal_code', 'postal_code');
+    // $this->addFieldMapping('field_location:country', '');
+    // $this->addFieldMapping('field_location:latitude', '');
+    // $this->addFieldMapping('field_location:longitude', '');
+    // $this->addFieldMapping('field_location:source', '');
+    // $this->addFieldMapping('field_location:is_primary', '');
+
+    $this->addFieldMapping('field_org_short_name', 'short_name');
+
+    $this->addFieldMapping('field_sharebc_code', 'iol_code');
+
+    $this->addFieldMapping('field_membership_type', 'membership');
+
+    // from ip_addresses.csv
+    // $this->addFieldMapping('field_org_ip', '');
+
+    // $this->addFieldMapping('field_org_ip_last_update', ''); // ??
+
     // $this->addFieldMapping('uid', '');
     // $this->addFieldMapping('created', '');
     // $this->addFieldMapping('changed', '');
@@ -33,32 +65,11 @@ class Bceln_Migrate_Node_Organization extends Bceln_Migrate_Abstract {
     // $this->addFieldMapping('translate', '');
     // $this->addFieldMapping('revision_uid', '');
     // $this->addFieldMapping('is_new', '');
-    $this->addFieldMapping('field_org_nlc_code', 'nlc_code');
-    // $this->addFieldMapping('field_org_ip_last_update', '');
-    // $this->addFieldMapping('field_org_ip', '');
-    $this->addFieldMapping('field_org_url', 'inst_url');
-    // $this->addFieldMapping('field_org_url:title', '');
-    // $this->addFieldMapping('field_org_url:attributes', '');
-    // $this->addFieldMapping('field_org_url:language', '');
     // $this->addFieldMapping('field_private_note', '');
     // $this->addFieldMapping('field_private_note:format', '');
-    // $this->addFieldMapping('field_location', '');
-    $this->addFieldMapping('field_location:name', 'inst_name');
-    $this->addFieldMapping('field_location:street', 'street');
-    // $this->addFieldMapping('field_location:additional', '');
-    $this->addFieldMapping('field_location:city', 'city');
-    $this->addFieldMapping('field_location:province', 'prov');
-    $this->addFieldMapping('field_location:postal_code', 'postal_code');
-    // $this->addFieldMapping('field_location:country', '');
-    // $this->addFieldMapping('field_location:latitude', '');
-    // $this->addFieldMapping('field_location:longitude', '');
-    // $this->addFieldMapping('field_location:source', '');
-    // $this->addFieldMapping('field_location:is_primary', '');
-    $this->addFieldMapping('field_org_short_name', 'short_name');
     // $this->addFieldMapping('field_institution_type', '');
     // $this->addFieldMapping('field_public_or_private', '');
     // $this->addFieldMapping('field_fte', '');
-    $this->addFieldMapping('field_sharebc_code', 'iol_code');
     // $this->addFieldMapping('field_org_logo_thumbnail', '');
     // $this->addFieldMapping('field_org_logo_thumbnail:file_class', '');
     // $this->addFieldMapping('field_org_logo_thumbnail:preserve_files', '');
@@ -69,7 +80,6 @@ class Bceln_Migrate_Node_Organization extends Bceln_Migrate_Abstract {
     // $this->addFieldMapping('field_org_logo_thumbnail:urlencode', '');
     // $this->addFieldMapping('field_org_logo_thumbnail:alt', '');
     // $this->addFieldMapping('field_org_logo_thumbnail:title', '');
-    $this->addFieldMapping('field_membership_type', 'membership');
     // $this->addFieldMapping('path', '');
     // $this->addFieldMapping('comment', '');
 
