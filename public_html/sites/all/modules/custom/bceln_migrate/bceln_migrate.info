@@ -6,6 +6,7 @@ php = 5.4
 
 dependencies[] = migrate (>=7.x-2.8)
 dependencies[] = migrate_ui
+dependencies[] = migrate_extras (>=7.x-2.5)
 
 files[] = lib/Bceln/Migrate/Abstract.php
 files[] = lib/Bceln/Migrate/Config.php
