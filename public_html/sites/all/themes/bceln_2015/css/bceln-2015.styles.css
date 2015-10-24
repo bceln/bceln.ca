@@ -197,43 +197,50 @@ h2 a {
   position: relative; }
   .search-block-form .container-inline .form-item-search-block-form {
     background-color: #E9E9E9;
-    padding: 2px 0px 6px 5px;
-    width: 170px;
+    width: 169px;
     margin-right: 0px;
     display: inline-block;
     border: 0px; }
   .search-block-form .container-inline .form-item-search-block-form .form-text {
     border: none;
-    font-size: 17px;
-    padding: 2px;
+    font-size: 22px;
+    line-height: 35px;
     background-color: #E9E9E9;
-    width: 166px;
-    padding: 4px 0px; }
+    width: 165px;
+    padding: 0;
+    padding-right: 8px;
+    padding-bottom: 1px; }
   .search-block-form .container-inline .form-actions {
     cursor: pointer; }
     .search-block-form .container-inline .form-actions::before {
-      font-size: 1.3em;
+      cursor: pointer;
+      position: absolute;
+      right: 0px;
+      top: 7px;
+      z-index: 200;
+      font-size: 1.45em;
       cursor: pointer;
       color: #FFF;
       position: absolute;
-      right: 0px;
-      top: 9px;
       z-index: 200;
       content: "";
-      font-size: 1.3em;
+      cursor: pointer;
+      position: absolute;
+      right: 0px;
+      top: 7px;
+      z-index: 200;
+      font-size: 1.45em;
       cursor: pointer;
       color: #FFF;
       position: absolute;
-      right: 0px;
-      top: 9px;
       z-index: 200; }
     .search-block-form .container-inline .form-actions .form-submit {
       border: none;
-      height: 36px;
       overflow: hidden;
       text-indent: -9999px;
-      width: 30px;
-      background: #008499; }
+      width: 35px;
+      background: #008499;
+      padding: 14px 2px 9px; }
 
 /* -- Components -- */
 .field--name-node-link .field__items a::after, .more-link a::after {
@@ -934,11 +941,11 @@ h2 a {
 .block {
   position: relative; }
 
-#block-views-blog-latest-news, #block-views-trials-offers-renewals, #block-views-blog-connect-newsletter-block, #block-boxes-partner-libraries-home, #block-views-blog-mobile-news-letter {
+.l-main .block {
   margin-top: 40px; }
-  #block-views-blog-latest-news .more-link, #block-views-trials-offers-renewals .more-link, #block-views-blog-connect-newsletter-block .more-link, #block-boxes-partner-libraries-home .more-link, #block-views-blog-mobile-news-letter .more-link {
+  .l-main .block .more-link {
     text-align: left; }
-  #block-views-blog-latest-news h2.block__title:before, #block-views-trials-offers-renewals h2.block__title:before, #block-views-blog-connect-newsletter-block h2.block__title:before, #block-boxes-partner-libraries-home h2.block__title:before, #block-views-blog-mobile-news-letter h2.block__title:before {
+  .l-main .block h2.block__title:before {
     background: url("../images/block-header-bg-before.png") no-repeat scroll top left;
     width: 22px;
     height: 64px;
@@ -947,7 +954,7 @@ h2 a {
     position: absolute;
     top: 0px;
     left: -22px; }
-  #block-views-blog-latest-news h2.block__title:after, #block-views-trials-offers-renewals h2.block__title:after, #block-views-blog-connect-newsletter-block h2.block__title:after, #block-boxes-partner-libraries-home h2.block__title:after, #block-views-blog-mobile-news-letter h2.block__title:after {
+  .l-main .block h2.block__title:after {
     background: url("../images/block-header-bg-after.png") no-repeat scroll top left;
     width: 26px;
     height: 64px;
@@ -956,7 +963,7 @@ h2 a {
     position: absolute;
     top: 0px;
     right: -26px; }
-  #block-views-blog-latest-news h2.block__title, #block-views-trials-offers-renewals h2.block__title, #block-views-blog-connect-newsletter-block h2.block__title, #block-boxes-partner-libraries-home h2.block__title, #block-views-blog-mobile-news-letter h2.block__title {
+  .l-main .block h2.block__title {
     background: url("../images/block-head-repeat.png") top left;
     background-repeat: repeat-x;
     width: 82%;
@@ -970,17 +977,19 @@ h2 a {
     position: absolute;
     top: -25px;
     left: 22px; }
-  #block-views-blog-latest-news .block__content, #block-views-trials-offers-renewals .block__content, #block-views-blog-connect-newsletter-block .block__content, #block-boxes-partner-libraries-home .block__content, #block-views-blog-mobile-news-letter .block__content {
+  .l-main .block .block__content {
     margin-bottom: 35px; }
-    #block-views-blog-latest-news .block__content .view-content, #block-views-trials-offers-renewals .block__content .view-content, #block-views-blog-connect-newsletter-block .block__content .view-content, #block-boxes-partner-libraries-home .block__content .view-content, #block-views-blog-mobile-news-letter .block__content .view-content {
+    .l-main .block .block__content .view-content {
       margin-bottom: 50px; }
-  #block-views-blog-latest-news .block__content > div, #block-views-trials-offers-renewals .block__content > div, #block-views-blog-connect-newsletter-block .block__content > div, #block-boxes-partner-libraries-home .block__content > div, #block-views-blog-mobile-news-letter .block__content > div {
+  .l-main .block .block__content > div {
     padding-left: 23px;
     padding-right: 33px;
     background: #F6F6F6;
     border-bottom: 2px solid #ffad00;
     padding-top: 70px;
     padding-bottom: 20px; }
+  .l-main .block .view-id-services {
+    background: #FFF !important; }
 
 #block-boxes-partner-libraries-home {
   margin-top: 70px;

@@ -8,63 +8,72 @@
 .block{
 	position:relative;
 }
-#block-views-blog-latest-news,#block-views-trials-offers-renewals,#block-views-blog-connect-newsletter-block,#block-boxes-partner-libraries-home,#block-views-blog-mobile-news-letter{
-	margin-top:40px;
-	.more-link{
-		text-align: left;
-	}
-	h2.block__title:before{
-		background: url('../images/block-header-bg-before.png') no-repeat scroll top left;
-		width: 22px;
-		height: 64px;
-		content: '';
-	    display: block;
-		position:absolute;
-		top:0px;
-		left:-22px;
-	}
-	h2.block__title:after{
-		background: url('../images/block-header-bg-after.png') no-repeat scroll top left;
-		width: 26px;
-		height: 64px;
-		content: '';
-	    display: block;
-		position:absolute;
-		top:0px;
-		right:-26px;
-	};
-	h2.block__title{
-		background: url('../images/block-head-repeat.png') top left;
-		background-repeat: repeat-x;
-		width: 82%;
-		height: 64px;
-		font-size:$fz-h3;
-		padding:0 15px ;
-		padding-top:25px;
-		margin-bottom:0px;
-		text-transform:uppercase;
-		font-weight:$fw-semi-bold;
-		position: absolute;
-	    top: -25px;
-		left: 22px;
-	}
-	.block__content{
-		margin-bottom:35px;
-		.view-content{
-			margin-bottom:50px;
+//main body and side bar blocks 
+.l-main{
+	.block{
+		margin-top:40px;
+		.more-link{
+			text-align: left;
+		}
+		h2.block__title:before{
+			background: url('../images/block-header-bg-before.png') no-repeat scroll top left;
+			width: 22px;
+			height: 64px;
+			content: '';
+		    display: block;
+			position:absolute;
+			top:0px;
+			left:-22px;
+		}
+		h2.block__title:after{
+			background: url('../images/block-header-bg-after.png') no-repeat scroll top left;
+			width: 26px;
+			height: 64px;
+			content: '';
+		    display: block;
+			position:absolute;
+			top:0px;
+			right:-26px;
+		};
+		h2.block__title{
+			background: url('../images/block-head-repeat.png') top left;
+			background-repeat: repeat-x;
+			width: 82%;
+			height: 64px;
+			font-size:$fz-h3;
+			padding:0 15px ;
+			padding-top:25px;
+			margin-bottom:0px;
+			text-transform:uppercase;
+			font-weight:$fw-semi-bold;
+			position: absolute;
+		    top: -25px;
+			left: 22px;
+		}
+		.block__content{
+			margin-bottom:35px;
+			.view-content{
+				margin-bottom:50px;
+			}
+		}
+		.block__content > div{
+			padding-left:23px;
+			padding-right:33px;
+			background:$grey-light;		
+			border-bottom:2px solid $orange;
+			padding-top:70px;
+			padding-bottom:20px;
+		
+		}
+		//override for main homepage block
+		.view-id-services {
+			background:$white !important;		
 		}
 	}
-	.block__content > div{
-		padding-left:23px;
-		padding-right:33px;
-		background:$grey-light;		
-		border-bottom:2px solid $orange;
-		padding-top:70px;
-		padding-bottom:20px;
-		
-	}
 }
-//verriders
+
+
+//Specific block verriders
 #block-boxes-partner-libraries-home{
 	margin-top: 70px;
 	@include grid-span(12,1);

@@ -7,40 +7,44 @@
 		position:relative;
 		.form-item-search-block-form{
 			background-color:$grey-medium;
-			padding:2px 0px 6px 5px;
-		    width: 170px;
+		    width: 169px;
 		    margin-right: 0px;
 			display:inline-block;
 			border:0px;
 		}
 		.form-item-search-block-form{
-			.form-text {
-				border:none;
-				font-size:17px;
-				padding:2px;
-				background-color:$grey-medium;
-			    width: 166px;
-				padding:4px 0px;
+			.form-text {	
+				border: none;
+			    font-size: 22px;
+			    line-height: 35px;
+			    background-color: #E9E9E9;
+			    width: 165px;
+			    padding: 0;
+			    padding-right: 8px;
+			    padding-bottom: 1px;
 			}
 		}
 		.form-actions {
 			cursor:pointer;
 			@include fontello-icon('\e801','before') {
-			   font-size: 1.3em;
-			   cursor: pointer;
-			   color:$white;
-			   position:absolute;
-			   right: 0px;
-			   top: 9px;
-			   z-index:200;
+		       cursor: pointer;
+		       position: absolute;
+		       right: 0px;
+		       top: 7px;
+		       z-index: 200;
+		       font-size: 1.45em;
+		       cursor: pointer;
+		       color: #FFF;
+		       position: absolute;
+		       z-index: 200;
 			 }
 			.form-submit {
 				border:none;
-			    height: 36px;
 			    overflow: hidden;
 			    text-indent: -9999px;
-			    width: 30px;
+			    width: 35px;
 				background:$dark-cyan;
+			    padding: 14px 2px 9px;
 			}
 		}
 	}
