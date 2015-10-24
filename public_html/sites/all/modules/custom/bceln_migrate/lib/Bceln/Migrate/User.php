@@ -6,8 +6,12 @@ class Bceln_Migrate_User extends Bceln_Migrate_Abstract {
   }
 
   public function __construct($arguments = []) {
+    $this->extraSourceFields = [
+      'full_name' => t('Concatenated first_name and last_name from prepareRow()'),
+    ];
     parent::__construct($arguments);
   	$this->destination = new MigrateDestinationUser();
+  	$this->dealWithPathAuto();    
     $this->map = new MigrateSQLMap($this->machineName,
       [
         'contact_id' => [
@@ -20,15 +24,15 @@ class Bceln_Migrate_User extends Bceln_Migrate_Abstract {
     );
 
     $this->addFieldMapping('mail', 'email');
+    $this->addFieldMapping('name', 'full_name')->dedupe('users', 'name'); // @see Bceln_Migrate_User::prepareRow()
+    $this->addFieldMapping('status')->defaultValue(1);
+    $this->addFieldMapping('role_names')->defaultValue(['members']);
 
-    // $this->addFieldMapping('name', '');
     // $this->addFieldMapping('pass', '');
-    // $this->addFieldMapping('status', '');
     // $this->addFieldMapping('created', '');
     // $this->addFieldMapping('access', '');
     // $this->addFieldMapping('login', '');
     // $this->addFieldMapping('roles', '');
-    // $this->addFieldMapping('role_names', '');
     // $this->addFieldMapping('picture', '');
     // $this->addFieldMapping('signature', '');
     // $this->addFieldMapping('signature_format', '');
@@ -41,8 +45,8 @@ class Bceln_Migrate_User extends Bceln_Migrate_Abstract {
     // $this->addFieldMapping('path', '');
 
     $this->addUnmigratedSources([
-      'last_name',
-      'first_name',
+      'last_name', // @see Bceln_Migrate_User::prepareRow()
+      'first_name', // @see Bceln_Migrate_User::prepareRow()
       'title',
       'phone',
       'fax',
@@ -54,14 +58,14 @@ class Bceln_Migrate_User extends Bceln_Migrate_Abstract {
 
     $this->addUnmigratedDestinations([
       // 'mail',
-      'name',
+      // 'name',
       'pass',
-      'status',
+      // 'status',
       'created',
       'access',
       'login',
       'roles',
-      'role_names',
+      // 'role_names',
       'picture',
       'signature',
       'signature_format',
@@ -182,5 +186,21 @@ class Bceln_Migrate_User extends Bceln_Migrate_Abstract {
       'metatag_twitter:label2',
       'metatag_twitter:data2',
     ]);
+  }
+
+  public function prepareRow($row) {
+    // Always include this fragment at the beginning of every prepareRow()
+    // implementation, so parent classes can ignore rows.
+    if (parent::prepareRow($row) === FALSE) {
+      return FALSE;
+    }
+
+    // Do not import users when their email address is already in the system.
+    $already_existing_user = user_load_by_mail(trim($row->email));
+    if (isset($already_existing_user->uid)) {
+      return FALSE;
+    }
+
+    $row->full_name = $row->first_name . ' ' . $row->last_name;
   }
 }

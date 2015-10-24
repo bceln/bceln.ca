@@ -8,6 +8,7 @@ class Bceln_Migrate_Node_License extends Bceln_Migrate_Abstract {
   public function __construct($arguments = []) {
     parent::__construct($arguments);
   	$this->destination = new MigrateDestinationNode('license');
+  	$this->dealWithPathAuto();    
     $this->map = new MigrateSQLMap($this->machineName,
       [
         'licence_id' => [
@@ -37,12 +38,12 @@ class Bceln_Migrate_Node_License extends Bceln_Migrate_Abstract {
     $this->addFieldMapping('field_resource', 'db_id')->sourceMigration('resource_import');
 
     $this->addFieldMapping('field_licence_begins', 'begins');
-    // $this->addFieldMapping('field_licence_begins:timezone', '');
+    $this->addFieldMapping('field_licence_begins:timezone')->defaultValue('America/Vancouver');
     // $this->addFieldMapping('field_licence_begins:rrule', '');
     // $this->addFieldMapping('field_licence_begins:to', '');
 
     $this->addFieldMapping('field_licence_ends', 'ends');
-    // $this->addFieldMapping('field_licence_ends:timezone', '');
+    $this->addFieldMapping('field_licence_ends:timezone')->defaultValue('America/Vancouver');
     // $this->addFieldMapping('field_licence_ends:rrule', '');
     // $this->addFieldMapping('field_licence_ends:to', '');
 
@@ -143,11 +144,11 @@ class Bceln_Migrate_Node_License extends Bceln_Migrate_Abstract {
       // 'field_license_archival',
       // 'field_resource',
       // 'field_licence_begins',
-      'field_licence_begins:timezone',
+      // 'field_licence_begins:timezone',
       'field_licence_begins:rrule',
       'field_licence_begins:to',
       // 'field_licence_ends',
-      'field_licence_ends:timezone',
+      // 'field_licence_ends:timezone',
       'field_licence_ends:rrule',
       'field_licence_ends:to',
       // 'field_url',
@@ -270,5 +271,31 @@ class Bceln_Migrate_Node_License extends Bceln_Migrate_Abstract {
       'metatag_twitter:data2',
       'comment',
     ]);
+  }
+
+
+  public function prepareRow($row) {
+    // Always include this fragment at the beginning of every prepareRow()
+    // implementation, so parent classes can ignore rows.
+    if (parent::prepareRow($row) === FALSE) {
+      return FALSE;
+    }
+
+    $remap = [
+      'field_license_ereserves' => 'ereserves',
+      'field_license_ill' => 'ill',
+      'field_license_archival' => 'archival',
+    ];
+    foreach ($remap as $drupal_field => $csv_field) {
+      $field_info = field_info_field($drupal_field);
+      $allowed_values = $field_info['settings']['allowed_values'];
+      $key = array_search($row->$csv_field, $allowed_values);
+      if (FALSE !== $key) {
+        $row->$csv_field = $key;
+      }
+      else if (in_array($row->$csv_field, ['NA', 'NULL'])) {
+        $row->$csv_field = '';
+      }
+    }
   }
 }

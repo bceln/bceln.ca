@@ -56,8 +56,18 @@ function bceln_migrate_migrate_api() {
 
       'user_import' => [
         'class_name' => 'Bceln_Migrate_User',
-        'description' => t('Import vendors'),
+        'description' => t('Import users'),
         'dependencies' => [],
+        'group_name' => 'initial_csv',
+      ],
+
+      'profile_import' => [
+        'class_name' => 'Bceln_Migrate_Profile',
+        'description' => t('Import user profiles'),
+        'dependencies' => [
+          'user_import',
+          'organization_import',
+        ],
         'group_name' => 'initial_csv',
       ],
     ],

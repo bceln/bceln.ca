@@ -8,6 +8,7 @@ class Bceln_Migrate_Node_Organization extends Bceln_Migrate_Abstract {
   public function __construct($arguments = []) {
     parent::__construct($arguments);
   	$this->destination = new MigrateDestinationNode('organization');
+  	$this->dealWithPathAuto();    
     $this->map = new MigrateSQLMap($this->machineName,
       [
         'inst_id' => [
@@ -260,5 +261,20 @@ class Bceln_Migrate_Node_Organization extends Bceln_Migrate_Abstract {
       'metatag_twitter:data2',
       'comment',
     ]);
+  }
+
+  public function prepareRow($row) {
+    // Always include this fragment at the beginning of every prepareRow()
+    // implementation, so parent classes can ignore rows.
+    if (parent::prepareRow($row) === FALSE) {
+      return FALSE;
+    }
+
+    $field_info_membership_type = field_info_field('field_membership_type');
+    $allowed_values = $field_info_membership_type['settings']['allowed_values'];
+    $key = array_search($row->membership, $allowed_values);
+    if (FALSE !== $key) {
+      $row->membership = $key;
+    }
   }
 }

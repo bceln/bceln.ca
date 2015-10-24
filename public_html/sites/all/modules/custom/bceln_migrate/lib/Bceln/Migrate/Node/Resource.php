@@ -8,6 +8,7 @@ class Bceln_Migrate_Node_Resource extends Bceln_Migrate_Abstract {
   public function __construct($arguments = []) {
     parent::__construct($arguments);
   	$this->destination = new MigrateDestinationNode('resource');
+  	$this->dealWithPathAuto();    
     $this->map = new MigrateSQLMap($this->machineName,
       [
         'db_id' => [
@@ -47,10 +48,10 @@ class Bceln_Migrate_Node_Resource extends Bceln_Migrate_Abstract {
     $this->addFieldMapping('field_resources_multi_consortial', 'multiconsort_note');
     // $this->addFieldMapping('field_resources_multi_consortial:format', '');
 
-    $this->addFieldMapping('field_content_types', 'content_types');
+    $this->addFieldMapping('field_content_types', 'content_types')->separator(',');
     // $this->addFieldMapping('field_content_types:source_type', '');
-    // $this->addFieldMapping('field_content_types:create_term', '');
-    // $this->addFieldMapping('field_content_types:ignore_case', '');
+    $this->addFieldMapping('field_content_types:create_term')->defaultValue(TRUE);
+    $this->addFieldMapping('field_content_types:ignore_case')->defaultValue(TRUE);
 
     $this->addFieldMapping('field_title_lists', 'title_lists');
     // $this->addFieldMapping('field_title_lists:title', '');
@@ -140,8 +141,8 @@ class Bceln_Migrate_Node_Resource extends Bceln_Migrate_Abstract {
       'field_resources_multi_consortial:format',
       // 'field_content_types',
       'field_content_types:source_type',
-      'field_content_types:create_term',
-      'field_content_types:ignore_case',
+      // 'field_content_types:create_term',
+      // 'field_content_types:ignore_case',
       'field_platform',
       'field_platform:format',
       // 'field_title_lists',
@@ -264,5 +265,17 @@ class Bceln_Migrate_Node_Resource extends Bceln_Migrate_Abstract {
       'metatag_twitter:data2',
       'comment',
     ]);
+  }
+
+  public function prepareRow($row) {
+    // Always include this fragment at the beginning of every prepareRow()
+    // implementation, so parent classes can ignore rows.
+    if (parent::prepareRow($row) === FALSE) {
+      return FALSE;
+    }
+
+    if ('#N/A' == trim($row->title_lists)) {
+      $row->title_lists = '';
+    }
   }
 }

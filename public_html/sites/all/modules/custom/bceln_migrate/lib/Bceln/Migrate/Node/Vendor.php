@@ -8,6 +8,7 @@ class Bceln_Migrate_Node_Vendor extends Bceln_Migrate_Abstract {
   public function __construct($arguments = []) {
     parent::__construct($arguments);
   	$this->destination = new MigrateDestinationNode('vendor');
+  	$this->dealWithPathAuto();    
     $this->map = new MigrateSQLMap($this->machineName,
       [
         'inst_id' => [
