@@ -277,5 +277,10 @@ class Bceln_Migrate_Node_Resource extends Bceln_Migrate_Abstract {
     if ('#N/A' == trim($row->title_lists)) {
       $row->title_lists = '';
     }
+
+    // This data row might have an empty ID. In that case, provide a FAKE id.
+    if (('PsycCRITIQUES' == trim($row->db_name)) && empty($row->db_id)) {
+      $row->db_id = 1337;
+    }
   }
 }
