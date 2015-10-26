@@ -96,15 +96,20 @@ h2 a{
 //
 //H3 links
 //
-.field__item h3 a, .view-id-Blog h4 a{	
-	color:$violet-dark;
-	font-size:$fz-h3;
-	@include fontello-icon('\e800') {
-       font-size: 1.0em;
-       margin-left: 0.3em;
-       margin-right: 0;
-       position: relative;
-	   color:$orange;
-	   cursor:pointer;
+
+.field__item h3, .view-id-Blog h4 {	
+	margin-bottom:3px !important;
+	a {
+		color:$violet-dark;
+		font-size:$fz-h3;
+		font-weight:$fw-normal-thik;
+		@include fontello-icon('\e800') {
+	       font-size: 1.0em;
+	       margin-left: 0.3em;
+	       margin-right: 0;
+	       position: relative;
+		   color:$orange;
+		   cursor:pointer;
+		}
 	}
 }

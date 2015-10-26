@@ -72,8 +72,6 @@
 		}
 	}
 }
-
-
 //Specific block verriders
 #block-boxes-partner-libraries-home{
 	margin-top: 70px;
@@ -162,7 +160,6 @@
 //
 //footer Blocks
 //
-
 #boxes-box-newsletter {
     margin: 0px 31px;
 	.boxes-box-content{
@@ -187,5 +184,15 @@
 			font-size:$fz-h2;
 			font-weight:$fw-semi-bold;
 		}
+	}
+}
+//General Overrides
+.block__content .views-row {
+	margin-bottom:10px;
+}
+.views-row strong {
+    @include font-weight($fw-normal);
+	span.date-display-single {
+	    margin-left: 21px;
 	}
 }
