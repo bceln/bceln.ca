@@ -293,7 +293,7 @@ class Bceln_Migrate_Node_License extends Bceln_Migrate_Abstract {
       if (FALSE !== $key) {
         $row->$csv_field = $key;
       }
-      else if (in_array($row->$csv_field, ['NA', 'NULL'])) {
+      else if (in_array(trim($row->$csv_field), ['NA', 'NULL'])) {
         $row->$csv_field = '';
       }
     }
