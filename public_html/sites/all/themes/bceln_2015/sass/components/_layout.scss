@@ -581,10 +581,11 @@
 				left:458px;
 			}
 			#site-logo-footer{
-				@include grid-span(5,1);				
+				@include grid-span(5,1);		
+				margin-bottom:40px;				
 			}
 			#block-block-15{
-				@include grid-span(2,6);				
+				@include grid-span(2,6);
 			}
 			#block-block-16{
 				@include grid-span(2,8);

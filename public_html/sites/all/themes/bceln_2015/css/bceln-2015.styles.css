@@ -970,7 +970,8 @@ h2 a {
         float: left;
         margin-right: -100%;
         margin-left: 1.15741%;
-        clear: none; }
+        clear: none;
+        margin-bottom: 40px; }
       .l-footer .l-region--footer-second #block-block-15 {
         width: 14.35185%;
         float: left;
