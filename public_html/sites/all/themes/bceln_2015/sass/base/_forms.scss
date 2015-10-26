@@ -26,19 +26,24 @@
 		}
 		.form-actions {
 			cursor:pointer;
-			@include fontello-icon('\e801','before') {
+			@include fontello-icon('\e801','after') {
 		       cursor: pointer;
 		       position: absolute;
-		       right: 0px;
-		       top: 7px;
+		       right: 3px;
+		       top: 8px;
 		       z-index: 200;
-		       font-size: 1.45em;
+		       font-size: 20px;
 		       cursor: pointer;
-		       color: #FFF;
+		       color: $white;
 		       position: absolute;
 		       z-index: 200;
 			 }
+			 .form-submit:hover{
+ 				background:$orange;
+			 	
+			 }
 			.form-submit {
+				cursor:pointer;
 				border:none;
 			    overflow: hidden;
 			    text-indent: -9999px;

@@ -287,10 +287,23 @@
 				padding-bottom:20px;
 	         	@include grid-span(12, 1);
 				.group-left{
-					@include grid-span(2,1);
+		         	@include grid-span(12, 1);
+					text-align:center;
 				}
 				.group-right{
-					@include grid-span(8,5);					
+		         	@include grid-span(12, 1);
+					text-align:center;
+				}
+				@include breakpoint(625px) {
+		         	@include grid-span(12, 1);
+					.group-left{
+						text-align:left;
+						@include grid-span(2,1);
+					}
+					.group-right{
+						text-align:left;
+						@include grid-span(8,5);					
+					}
 				}
 			 	@include breakpoint($tablet-layout) {
 					padding-bottom:0px;
@@ -318,12 +331,27 @@
 				padding-bottom:20px;
 	         	@include grid-span(12, 1);
 				.group-left{
-					@include grid-span(2,1);
+		         	@include grid-span(12, 1);
+					text-align:center;
+					
 				}
 				.group-right{
-					@include grid-span(8,5);					
+		         	@include grid-span(12, 1);
+					text-align:center;
+					
 				}
-			 	@include breakpoint($tablet-layout) {
+				@include breakpoint(625px){
+		         	@include grid-span(12, 1);
+					.group-left{
+						@include grid-span(2,1);
+						text-align:left;
+					}
+					.group-right{
+						text-align:left;
+						@include grid-span(8,5);					
+					}
+				}
+				@include breakpoint($tablet-layout) {
 					padding-bottom:0px;
 		         	@include grid-span(12, 1);
 					.group-left{

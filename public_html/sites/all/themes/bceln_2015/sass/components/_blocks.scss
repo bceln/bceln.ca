@@ -62,12 +62,13 @@
 			background:$grey-light;		
 			border-bottom:2px solid $orange;
 			padding-top:70px;
-			padding-bottom:20px;
-		
+			padding-bottom:20px;		
 		}
 		//override for main homepage block
 		.view-id-services {
 			background:$white !important;		
+			border:none !important;
+			padding-top:20px !important;
 		}
 	}
 }
@@ -140,8 +141,10 @@
 	}
 }
 #boxes-box-partner_libraries_home.boxes-box{
-	border:none !important;
-	background:$white !important;
+	@include breakpoint($tablet-layout){
+		background:$white !important;
+		border:none !important;
+	}
 }
 #block-boxes-partner-libraries-home .block__content {
 	margin-bottom: 15px;
@@ -159,26 +162,30 @@
 //
 //footer Blocks
 //
-#boxes-box-newsletter .boxes-box-content{
-	background:$dark-cyan;
-	text-align: center;
-	a{
-	    display: inline-block;
-		padding:10px;
-	}
-	.news-letter-icon{
-		@include fontello-icon('\e802') {
-		   font-size: 1.0em;
-		   cursor: pointer;
-		   color:$orange;
-		   position:relative;
-		   margin-right:10px;
-		 }
-	}
-	.news-letter-text{
-		float:right;
-		color:$white;
-		font-size:$fz-h2;
-		font-weight:$fw-semi-bold;
+
+#boxes-box-newsletter {
+    margin: 0px 31px;
+	.boxes-box-content{
+		background:$dark-cyan;
+		text-align: center;
+		a{
+		    display: inline-block;
+			padding:10px;
+		}
+		.news-letter-icon{
+			@include fontello-icon('\e802') {
+			   font-size: 1.0em;
+			   cursor: pointer;
+			   color:$orange;
+			   position:relative;
+			   margin-right:10px;
+			 }
+		}
+		.news-letter-text{
+			float:right;
+			color:$white;
+			font-size:$fz-h2;
+			font-weight:$fw-semi-bold;
+		}
 	}
 }
