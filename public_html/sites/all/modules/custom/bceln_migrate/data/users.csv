@@ -1,0 +1,357 @@
+contact_id,last_name,first_name,title,phone,fax,email,last_updated,inst_id,description
+1116,Castellanos,Victor,"Account Manager, Western Region US and Canada",(425) 338-4471,(301) 961-6708,vcastellanos@csa.com,10/27/05 11:11,67,Mobile tel. 1-425-293-3727
+990,Long,Kristina,Programmer,778.782.3037,,klong@sfu.ca,10/8/10 13:42,23,Lead GODOT developer
+6,Ashcroft,Susan,Collections Librarian,604.527.5189,604.527.5193,ashcrofts@douglascollege.ca,1/19/12 17:06,7,
+1238,Graebner,Carla,Reference Librarian,778.782.6881,,cgraebne@sfu.ca,7/7/08 12:34,23,
+10,MacDonald,Tim,"Librarian, Western Region",250.624.6054 x5714,250.624.2572,tmacdonald@nwcc.bc.ca,10/26/12 9:07,18,
+1457,Charlesworth,Carrie,"Assistant to the Director, Learning Services",250-370-3612,250-370-3904,charlesc@camosun.bc.ca,3/4/15 16:15,2,
+1356,Lew,Shirley,"Director, Library & Learning Centre","604.871.7000, ext. 7007",,slew@vcc.ca,6/22/15 16:08,30,
+1394,Cruickshank,Diane,Reference and Instruction Librarian,"604.504.7441, loc.4790",604.853.0796,Diane.Cruickshank@ufv.ca,3/11/14 17:25,27,
+26,Cossentine,Anne,"Librarian, Penticton Campus",250.492.4305 x 3224,250.490.3954,acossentine@okanagan.bc.ca,1/9/15 13:57,19,
+1367,Burns,Chris,Research Support & Data Services Librarian,604.599.3198,,chris.burns@kpu.ca,10/3/13 10:42,11,
+1241,Beringer,Larissa,"Art, Design and Media Librarian",604.630.4547,,lberinger@ecuad.ca,9/3/10 12:39,8,
+47,Goshulak,Ted,University Librarian,604.513.2121 x3905,604.513.2063,tgosh@twu.ca,7/17/07 15:57,25,
+51,Guenther,Mary Anne,Coordinator of Library Services,250.334.5001,250.334.5291,maryanne.guenther@nic.bc.ca,10/13/10 12:20,17,
+52,Haddad,April,Institute Librarian,604.528.5594,604.528.5593,ahaddad@jibc.bc.ca,7/17/07 17:24,10,
+1007,Kirchner,Joy,"Librarian, Collections, Licenses & Digital Scholarship",604.827.3644,604.822.3201,kirchner@interchange.ubc.ca,9/29/10 16:37,32,
+59,Hughes,Lynn,"Library Technician, Copyright",250.489.2751 x 3407,250.489.8256,hughes@cotr.bc.ca,10/13/10 12:01,5,
+1450,Atkinson,Tim,University Librarian,250.740.6331,,Tim.Atkinson@viu.ca,2/18/15 13:53,14,
+1260,MacDougall,Mary-Anne,Information Services Librarian,604.504.7441 loc.4410,604-853-0796,MaryAnne.MacDougall@ufv.ca,7/14/14 16:23,27,
+63,O'Kelly,Tony,"Librarian, Computing and Academic Studies",604.432.8764,604.430.5443,tokelly@bcit.ca,9/29/10 11:30,1,
+1242,Jardine,Marjory,"Librarian, Reference & Instruction",604.528.5592,,mjardine@jibc.ca,5/20/09 11:47,10,
+78,MacKinnon,Merilee,Construction Trades & Technologies Librarian and Reference Coordinator,604.432.8647,604.430.5443,merilee_mackinnon@bcit.ca,9/29/10 11:27,1,
+82,McGrath,Kat,Technical Services Librarian,604.822.5476,604.822.3201,kmcgrath@interchg.ubc.ca,10/7/10 12:01,32,
+1300,Mitchell,Marjorie,Learning Services Librarian,(250) 807-9147,(250) 807-8057,marjorie.mitchell@ubc.ca,9/13/10 16:15,32,
+89,Mundle,Todd,University Librarian,604.599.3400,,Todd.Mundle@kpu.ca,9/23/13 17:21,11,
+1364,Gallilee,Patty,"Associate University Librarian, Collections & Scholarly Communication",778.782.3263,778.782.3023,plg@sfu.ca,11/19/13 9:21,23,
+90,Myers,Sidney,Technical Services Librarian,604.986.1911,604.984.1728,smyers@capilanou.ca,7/24/08 14:56,3,
+1276,Villavicencio,George,Systems Librarian,604.986.1911 ext. 2143,,gvillavi@capilanou.ca,8/14/09 16:32,3,
+1387,Caron,Brian,Librarian,604.683.8360,604.683.8689,bcaron@columbiacollege.bc.ca,12/4/12 14:01,6,NULL
+1442,de Haan,Ali,,"604.915.9607, x.2215",778.331.8268,ali.dehaan@ucanwest.ca,7/21/14 11:39,95,
+95,Daniels,Caroline,"Systems, Web and Interlibrary Loans Librarian",(604) 599-3036,(604) 599-2532,caroline.daniels@kpu.ca,9/25/13 11:51,11,rubyinfo@telus.net - eln_staff listserv
+99,Plett,Kathy,Library Director,250.562.2131 x 5298,250.561.5845,plett@cnc.bc.ca,10/11/07 9:10,4,
+1440,McCabe,Kealin,,250-960-6473,,Kealin.McCabe@unbc.ca,10/8/14 9:50,28,
+1189,Bebbington,Tina,Information Services Librarian,250.721.8252,250.721.8235,bebbingt@uvic.ca,8/22/08 16:49,29,
+1190,Howard,Jerry,NULL,1.800.343.0064 x4964,NULL,support@ovid.com,9/29/06 11:45,76,Include Jerry's name in subject line
+1388,Ableson,Serena,Public Service Librarian,250.370.3606,250.370.3624,ablesons@camosun.ca,2/28/13 17:04,2,
+112,Swanson,Penny,Head of Cataloguing,778.782.3184,778.782.3023,pswanson@sfu.ca,10/8/10 14:43,23,
+116,Tyner,Ross,Director of Library Services,250.762.5445 x4665,250.862.5609,rhtyner@okanagan.bc.ca,12/23/09 15:09,19,
+1458,Lee,Alex,Library Assistant,778-782-3915,778-782-4908,afl2@sfu.ca,3/18/15 15:05,23,NULL
+119,Zwierciadlowski,Danuta,eResources and Journals Librarian,(604) 844-3807,(604) 844-3801,danutaz@ecuad.ca,10/8/10 10:57,8,
+124,Wilson,Patti,Collections Librarian,604.864.4696,604.853.8055,patti.wilson@ufv.ca,1/29/14 17:06,27,
+126,Winter,David,Borrower Services Librarian,604.822.6721,604.822.3893,david.winter@ubc.ca,9/27/10 9:31,32,
+21,Cocchia,Anita,Executive Director,778.782.7004<br>cell: 778.839.3496,,anitac@eln.bc.ca,6/3/15 15:11,33,"<LI>BC ELN governance
+<LI>Budget and financial planning
+<LI>Inter-consortial cooperation
+<LI>License negotiations
+<LI>Strategic planning
+<LI>e-HLbc coordination including communications, licensing, and governance</li>"
+1434,Kleiv,Sue,Acquisitions Technician-in-Charge,604.864-4651,604.853.0796,sue.kleiv@ufv.ca,3/11/14 17:28,27,NULL
+1217,Newyear-Ramirez,Jo Anne,"Associate University Librarian, Collections",604.822.2740,604.822.3893,joanne.newyear-ramirez@ubc.ca,10/7/10 12:42,32,
+1235,Bruce,Randy,CIO,604-412-7657,,rbruce@bccampus.ca,10/7/10 14:57,81,
+113,Bengtson,Jonathan,University Librarian,250-721-8211,250.721.8215,bengtson@uvic.ca,1/16/12 17:55,29,
+77,van de Voort,Colleen,,604.599.2090,604.599.3202,colleen.vandevoort@kpu.ca,10/22/13 17:04,11,
+1398,,Fort St. John Campus Library,,250-787-6213,250-785-1294,fsj-lib@nlc.bc.ca,10/29/13 16:49,16,
+38,Fairey,Elaine,AUL Learning & Research Services,778.782.3252,778.782.3023,efairey@sfu.ca,10/2/14 10:17,23,
+1437,Foster,Patricia,Senior Circulation & Reserve Assistant,604.822.5585,604.822.5596,patricia.foster@ubc.ca,7/10/14 16:06,32,
+132,Duguid,Monica,Library Assistant,(604)844-3077,(604)844-3801,mduguid@ecuad.ca,3/19/14 14:45,8,
+133,Martens,Melanie,Copyright Officer,250.391.2652,250.391.2594,melanie.martens@royalroads.ca,7/4/07 15:40,21,
+134,Dansereau,Mari Anne,Interlibrary Loan and Media Technician,604.432.8619,604.435.9641,mdansere@bcit.ca,5/5/10 15:37,1,
+1273,Stopforth,Sylvia,Assistant Librarian and Archivist,604-513-2121 x3903,604-513-2063,stopfort@twu.ca,9/23/13 16:31,25,
+1422,Padilla,Elizabeth,"Digital Projects Librarian, Historical Records Archivist",604.456.1276,604.430.5443,epadilla@bcit.ca,10/29/13 15:40,1,
+145,Marotz,Karen,"Head, Belzberg Library",778.782.5054,(604) 291-5052,marotz@sfu.ca,7/4/12 17:10,23,
+147,Brennan,Paula,Interlibrary Loans,604.864.4678,604.853.0796,paula.brennan@ufv.ca,10/8/10 11:24,27,
+1321,Cotie,Kate,"Director,  Strategic Policy and Initiatives",250.387.6197,250.387.0878,Kate.Cotie@gov.bc.ca,11/7/14 12:50,91,
+1328,Stathers,Kim,Librarian/Archivist,,,Kim.Stathers@unbc.ca,6/11/14 17:37,28,
+159,Dujmovich,Christine-Louise,"Librarian, Reference and Electronic Resources",604.528.5597,604.528.5593,cdujmovich@jibc.ca,2/1/13 11:47,10,
+161,Hooft,Robert,"Video Bookings, Interlibrary Loans, Overdues",604.528.5598,604.528.5593,rhooft@jibc.bc.ca,10/13/10 12:06,10,
+1222,Rauschenberger,Mike,"Library Technician, Cataloguing",(250) 624-6054 x5705,(250) 624-2572,MRauschenberger@nwcc.bc.ca,10/18/10 11:58,18,
+1460,Li,Connie,Public Services Technician,604 527-5179,NULL,lico@douglascollege.ca,4/24/15 16:02,7,NULL
+169,Lambert,Jennifer,Librarian,250.370.3605,250.370.3624,lambert@camosun.bc.ca,9/29/10 15:09,2,
+181,Jordan,Mark,Head of Library Systems,778.782.5753,778.782.3023,mjordan@sfu.ca,10/8/10 13:38,23,
+183,Babec,Christine,Associate Librarian,604.528.5595,604.528.5593,cbabec@jibc.ca,5/8/15 12:00,10,
+1290,Schmid,Taryn,"Librarian, Salmon Arm Campus",250.832.2126 x8253,250.804.8852,tschmid@okanagan.bc.ca,1/9/15 13:56,19,
+197,Romanko,Patti,Instructional Services Librarian,604.527.5183,604.527.5193,romankop@doulgascollege.ca,1/23/12 15:58,7,
+1224,Pepper,David,Director of Library Services,604.432.8360,604.434.1585,david_pepper@bcit.ca,10/1/07 8:47,1,
+206,de Souza,Yvonne,Head Librarian,604.683.8360,604.683.8689,ydesouza@columbiacollege.bc.ca,10/8/10 16:21,6,
+1414,Wilson,Allan,University Librarian,"250.960.6612, ext. 5497",,Allan.Wilson@unbc.ca,9/9/13 11:15,28,
+1432,Cormier,Ivan,Client Services Assistant,"250.753.3245, Local 2379",NULL,ivan.cormier@viu.ca,2/21/14 15:39,14,NULL
+213,Kearn,Jerry,Audio-Visual Technician,867.668.8847,867.668.8808,jkearn@yukoncollege.yk.ca,7/4/07 16:40,31,
+214,Mathenia,Brenda,University Librarian,250.828.5305,250.828.5313,bmathenia@tru.ca,8/1/13 16:53,26,
+1320,McLachlan,Doug,Senior Instructional Officer & Dean of Instruction,,,mclachlan@cotr.bc.ca,12/15/10 15:53,5,
+1250,Liu,Ying,Information Services Librarian,250.721.8277,250.721.8235,yingliu@uvic.ca,8/25/08 9:24,29,NULL
+218,Curry,Gail,"Data, Map and Government Information Librarian",250.960.6607,250.960.6610,curryg@unbc.ca,5/25/12 17:05,28,
+692,Curtis,Alison,"Coordinator, Collection Development",(604) 323-5465,(604) 323-5512,acurtis@langara.bc.ca,1/27/14 15:00,12,
+697,Dutchak,Kathleen,Systems Librarian,604.453.4041,604.430.5443,kdutchak@bcit.ca,2/18/10 15:32,1,
+698,Crema,Leonora,"Assistant University Librarian, Planning & Community Relations / Head, Borrower Services",604.822.8473,604.822.3893,leonora.crema@ubc.ca,6/28/11 13:58,32,
+699,Sekhon,Gill,Acquisitions Assistant,604.412.7513,604.430.5443,gsekhon@bcit.ca,7/4/07 16:13,1,
+1467,,E-Resource Unit,,,,esource@uvic.ca,7/16/15 11:27,29,
+704,Lampreau,Jessie,Library Technician,250.371.5984,250.828.5313,jlampreau@tru.ca,3/29/12 14:57,26,
+705,Konkle,Carol,Interlibrary Loans & Reserves Technician,"604.504.7441, x4218",604.853.0796,carol.konkle@ufv.ca,11/3/10 11:12,27,
+1339,Schachter,Debbie,"Director, Learning Resources",604-527-5182,604-527-5193,schachterd@douglascollege.ca,9/25/14 13:13,7,
+707,Rowlatt,Todd,"Department Head, Library Public Services","604.871.7000, ext. 7319",604.443.8329,trowlatt@vcc.ca,2/1/13 10:02,30,
+1178,Kehoe,Inba,Copyright Officer,250.472.5017,250.721.8235,ikehoe@uvic.ca,10/12/10 11:22,29,
+709,Hamakawa,Korinne,Client Support,778.782.7003,,korinnem@eln.bc.ca,9/7/13 17:34,33,"<li>Accounts Payable and Receivable
+<LI>Resource Sharing Statistics
+<LI>Troubleshooting outages and other operational problems with the licensed research databases and BC Union databases
+<LI>Updates to mailing lists, web site, and IP addresses"
+1152,Dolsen,Claire,ILL Clerk,250.370.3625,250.370.3624,dolsen@camosun.bc.ca,7/4/07 17:20,2,
+887,Annis,Eleanor,Catalogue Librarian,250.960.6617,250.960.6610,eleanor.annis@unbc.ca,9/9/13 11:16,28,
+888,Haggarty,Penny,Collections Librarian,250.828.5303,250.828.5313,phaggarty@tru.ca,7/17/07 16:10,26,
+890,Taylor,Donald,"Information Resources Specialist, Reference and Resource Development",(604) 586-6017,(604) 586-5237,donald_taylor@sfu.ca,7/15/03 13:07,24,
+1465,Smith,Tracie,"Reference Coordinator, Information Services Librarian",250.721.8251,250.721.8235,tracies@uvic.ca,6/11/15 17:51,29,
+995,MacDonald,James,Digital Initiatives Librarian,250.960.6601,250.960.6610,James.MacDonald@unbc.ca,5/12/15 11:26,28,
+896,Yee,Brenda,Technical Services Librarian,250.562.2131 x5394,250.561.5845,yee@cnc.bc.ca,7/25/08 11:06,4,
+897,Sauve,Jennifer,"Coordinator, Public Services Librarian",250-562-2131 x5297,250.561.5845,sauvej@cnc.bc.ca,10/21/11 11:29,4,
+1420,Cook,Sarah,Library Assistant,250.391.2595,250.391.2594,sarah.1cook@royalroads.ca,9/23/13 17:17,21,NULL
+1282,Wilke,Melanie,Library Coordinator,250.635.6511 x5259,250.635.1594,mwilke@nwcc.bc.ca,11/22/13 14:40,18,
+901,Searle,Brent,Library Systems Manager,(604) 323-5541,(604) 323-5512,bsearle@langara.bc.ca,8/5/04 11:15,12,
+905,Blackburn,Jean,User Experience Coordinator,(250) 753-3245 x2091,(250) 740-6473,Jean.Blackburn@viu.ca,7/15/14 16:35,14,
+907,Purcell,Michael,Systems Librarian,250.828.5021,250.828.5313,mpurcell@tru.ca,3/6/13 14:40,26,
+908,Wong,Joyce,Coordinator of User Experience,(604) 323-5047,(604) 323-5512,joyce.wong@langara.bc.ca,1/27/14 15:24,12,
+1427,Afonso,Mary,,604.323.5553,604.323.5512,mafonso@langara.bc.ca,1/27/14 16:22,12,
+1431,Challenger,Kate,"Manager, Loan Services","250.740.6330, ext. 2273",,kate.challenger@viu.ca,2/21/14 15:34,14,
+911,,All ILL Staff,,,,ill@vcc.ca,7/15/03 13:07,30,
+918,Systems,Library,,778.782.4706,778.782.3023,lib-sys@sfu.ca,10/8/10 14:48,23,
+920,Cooley,Ken,Associate University Librarian,250.721.6088,250.721.8240,kcooley@uvic.ca,7/24/08 14:24,29,
+1411,Abernethy,Joe,Library Coordinator,250-378-3302,,jabernethy@nvit.bc.ca,8/19/13 11:17,15,
+922,Franklin,Jennifer,Video Advisor,(250) 740-6336,(250) 740-6473,Jennifer.Franklin@viu.ca,9/5/08 16:37,14,
+1155,Pfeil,Angela,,,,apfeil@tutor.com,3/6/06 14:19,70,
+924,Matsuba,Linda,Business Programs Librarian and Collections Coordinator,604.451.6825,604.430.5443,linda_matsuba@bcit.ca,7/15/14 16:33,1,
+925,Ferrinho,Ana Maria,"Librarian, Health Sciences Programs",604.432.8546,604.430.5443,aferrinh@bcit.ca,6/24/13 12:05,1,
+1452,Farrell,Adam,"Director, Library, Information, Technology, & Instructional Services","604.430.5111, x132",604.430.5119,adam.farrell@acsenda.com,2/5/15 16:07,98,
+1365,Cottrell,Dianne,NULL,604.986.1911,NULL,dcottrel@capilanou.ca,5/17/12 12:16,3,NULL
+928,Ivaz,Goran,Systems Administrator,604.432.8793,604.430.5443,givaz@bcit.ca,7/4/07 16:17,1,
+1004,Blair,Bill,Music and Media Librarian,250.472.5025,250.721.8235,blairw@uvic.ca,7/4/07 16:19,29,
+933,,ILL Staff,,,,bcs@selkirk.ca,7/17/08 10:45,22,
+1160,Clarke,Margie,Librarian,250.370.4533,250.370.4640,clarkem@camosun.bc.ca,9/29/10 15:04,2,
+1298,Lee,Leva,"Manager, Open Education Resources and BC Educational Technology Users Group (ETUG)",,,llee@bccampus.ca,10/1/14 9:42,81,
+943,McCue,Rich,Systems Administrator,250.472.4716,250.472.4174,rmccue@law.uvic.ca,7/4/07 16:33,29,
+945,Davidoff,Elaine,Public Services,250.365.1229,250.365.7259,edavidoff@selkirk.ca,10/15/10 13:42,22,
+948,Robinson,Glen,Interlibrary Loans Technician,604.527.5197,604.527.5193,robinsong@douglascollege.ca,10/19/10 14:38,7,
+1118,Paskett,Dan,NULL,NULL,NULL,dpaskett@csa.com,10/27/05 11:23,50,NULL
+1203,Bertulli,Mary,"Library Assistant, ILL & Document Delivery",250.960.6460,,Mary.Bertulli@unbc.ca,5/10/13 16:58,28,
+955,Smith,Brenda,Distance and Document Delivery Librarian,250.828.5098,250.828.5313,brsmith@tru.ca,10/8/10 16:16,26,
+960,Cook,Michele,"Librarian, Eastern Region",250.847.4461 x5836,250.847.4568,mcook@nwcc.bc.ca,7/17/07 16:54,18,
+961,Nelson,Katy,,250.721.8272,250.721.8215,katnel@uvic.ca,6/11/15 17:52,29,
+962,Mackenzie,Scott,Loans,778.782.5596,778.782.4908,smackena@sfu.ca,7/29/14 15:20,23,
+1451,Sim,Rachel,,778-782-3036,,olol_support@eln.bc.ca,5/6/15 13:49,33,
+964,Sigalet,Jennifer,"Librarian, Vernon Campus Library",250.545.7291 x2249,250.804.8852,jsigalet@okanagan.bc.ca,1/9/15 13:56,19,
+1424,Bryce,Shauna,Senior Library Technician,604-898-8053,,shauna.bryce@questu.ca,12/10/13 15:38,84,
+1191,NULL,Ariel Help Desk,NULL,1.800.422.4633,NULL,ariel@infotrieve.com,10/13/06 10:56,77,NULL
+980,Colenbrander,Hilde,cIRcle Coordinator,604.822.4283,604.822.9122,hilde@interchange.ubc.ca,9/29/10 16:31,32,
+1340,Cossarini,Danielle,Librarian,250-365-1382,,dcossarini@selkirk.ca,8/7/12 17:24,22,
+985,Giacomello,Margaret,Library Supervisor,(604) 599-2684,(604) 599-2532,margaret.giacomello@kpu.ca,10/3/13 10:55,11,
+986,Petrachenko,Lisa,Electronic Resources Librarian,250.721.8249,,lmiles@uvic.ca,7/4/07 16:29,29,
+992,Holbrook,Todd,Library Systems Consultant,778.782.3948,,todd_holbrook@sfu.ca,10/8/10 13:34,23,"GODOT developer, esp. full text linking"
+996,Goertz,Gretchen,Technical Services & Research Librarian,604.527.5259,604.527.5193,goertzg@douglascollege.ca,6/5/15 11:51,7,
+1001,Kargut,Sigrid,AV Collection and Instruction Librarian,604.599.2378,604.599.2106,sigrid.kargut@kpu.ca,10/3/13 10:58,11,
+1002,Vose,Sharon,Administrative Assistant,604.513.2121 x3902,,vose@twu.ca,7/17/07 15:58,25,
+1003,Westby,Karen,"Library Technician, Cataloguing",250.638.5407 x5257,250.635.1594,kwestby@nwcc.bc.ca,12/9/09 16:36,18,
+1005,Holloway,Kathie,Audiovisual/Circulation Technician,(604) 599-2092,(604) 599-2106,kathie.holloway@kpu.ca,10/3/13 10:57,11,
+1006,Dobrikova,Viera,Media Acquisition,604.871.7386,"604.871.7000, ext. 7446",vdobrikova@vcc.ca,9/12/12 10:34,30,
+1211,Croft,Rosie,University Librarian,250.391.2699,,rosie.croft@royalroads.ca,11/1/13 15:50,21,
+1132,Martin,Carmen,Library Technician,250.562.2131 x5296,250.561.5845,martinc@cnc.bc.ca,10/21/11 11:33,4,
+1016,,COTR Interlibrary Loans,,250.489.2751 x3410,250.489.8256,ill@cotr.bc.ca,3/4/13 18:16,5,
+1400,Young,Martin,Senior Advisor,250-387-2347,,Martin.Young@gov.bc.ca,5/16/14 16:19,37,
+1010,Kasatkin,Katherine,Library Technician,250.923.9787,250.923.9786,ill@nic.bc.ca,5/27/15 17:08,17,
+1444,Hallman,Jocelyn,Teaching and Learning Librarian,604-986-1911 (ext. 2108),NULL,jocelynhallman@capilanou.ca,8/5/14 11:20,3,NULL
+1334,Andres,Anne,Associate Librarian,"604.853.3567, ext. 334",604.853.3063,Anne.Andres@columbiabc.edu,7/14/14 16:08,92,
+1335,Bodnar,Mark,Liaison Librarian - Business,778.782.3044,,mbodnar@sfu.ca,6/15/11 15:10,23,
+1226,Brander,Lin,Graduate Studies Librarian,(604) 432-8922,(604) 430-5443,Lin_Brander@bcit.ca,9/29/10 11:19,1,
+1310,Jantzi,Leanna,Electronic Resources Librarian,604.986.1911 x 2111,,leannajantzi@capilanou.ca,11/27/12 9:44,3,
+1247,Currie,Gregg,College Librarian,250.365.7292 ext 263,250.365.7259,gcurrie@selkirk.ca,10/15/10 13:39,22,
+1288,Raworth,Rebecca,"Liaison Librarian, Health Information Sciences",250-721-8269,250-721-8235,raworthr@uvic.ca,4/29/10 16:56,29,
+1329,,Media Booking Office - Vancouver Campus,,604.822.8685,604.822.6465,mediabkg@interchange.ubc.ca,12/17/13 12:03,32,
+1011,,VIU Library Interlibrary Loans,,(250) 753-3245 ext. 2396,(250) 740-6473,ill@viu.ca,12/14/12 15:56,14,
+1445,Karli,Selena,Reference and Instruction Librarian,"604.504.7441, loc.4790",604-853-0796,Selena.Karli@ufv.ca,9/8/14 16:14,27,NULL
+1221,Ramirez,Rue,Assistant University Librarian for Information Systems and Technology,604-822-5241,604-822-3201,rue.ramirez@ubc.ca,9/7/07 14:15,32,
+1012,Whittam,Liz,"Library Assistant, Interlibrary Loans",604.822.6596,604.822.0833,liz.whittam@ubc.ca,10/7/10 14:03,32,
+1013,Lazar,Tom,ILL/External Media,"604.871.7000, ext. 8772",604.443.8617,tlazar@vcc.ca,9/12/12 10:47,30,
+1407,Weigel,Brandon,Librarian,778.782.5419<br>cell: 604.401.1794,,brandonw@eln.bc.ca,6/3/15 15:11,33,"<li>AskAway virtual reference service coordination including statistical analysis, scheduling, training, and communication
+<li>Collaborative Institutional Repository support
+<li>BC ELN database trials, renewals, and licensing support</li>"
+1115,Terry,Brian,"Manager, News & Periodicals, Government and 3rd Party Production",1-800-387-2689 x2023,(416) 362-6161,bterry@micromedia.ca,10/27/05 10:02,58,Contact for Canadian Research Index.
+1018,Brouwer,Shawn,Circulation Coordinator,604.513.2023,,brouwer@twu.ca,7/17/07 15:56,25,
+1419,McLeod,Norman,Library Assistant,"250.391.2600, ext 4224",250.391.2594,norman.macleod@royalroads.ca,9/23/13 17:15,21,NULL
+1022,Flewelling,Debra,Emerging Technologies Librarian,604.527.5190,604.527.5193,flewellingd@douglascollege.ca,1/19/12 15:57,7,
+1111,Haydock,Jane,Acquisitions and Serials Technician,867.668.8872,867.688.8808,jhaydock@yukoncollege.yk.ca,10/11/07 9:01,31,
+1025,Lee,Shirley,"Assistant Librarian, Acquisitions and Systems",604.513.2121 ext. 3914,604.513.2063,shirley.lee@twu.ca,10/12/10 11:52,25,
+1027,Godbout,Karen,Serials Technician,250.365.1229,250.365.7259,kgodbout@selkirk.ca,9/9/10 11:09,22,
+1032,Owen,Brian,Associate University Librarian,778.782.7095,778.782.3023,brian_owen@sfu.ca,2/12/15 11:33,23,
+1315,James,Sarah,Public Services Technician,250.365.7292 x229,,sjames@selkirk.ca,9/27/10 9:47,22,
+1331,Adam,Sheryl,Librarian,604.822.1485,604.822.9122,sheryl.adam@ubc.ca,7/10/14 10:47,32,
+1279,Sifton,Daniel,Coordinator Library Automation and Technical Services,250-753-3245 x2444,250-740-6443,Daniel.Sifton@viu.ca,9/21/09 14:52,14,
+1357,Burton,Melody,Deputy University Librarian,604.822.4903,604.822.3242,melody.burton@ubc.ca,12/17/13 11:47,32,
+1040,Djokic,Mirela,Librarian,(604) 599-3199,(604) 599-2540,mirela.djokic@kpu.ca,9/25/13 11:29,11,
+1352,Baranieski,Melinda,Public Services Librarian,"604.871.7000, ext. 7343",,mbaranieski@vcc.ca,9/12/12 10:33,30,
+1216,Lew,Judy,Administrative Coordinator,604.291.3976,604.291.4242,judy_lew@sfu.ca,7/18/07 12:12,72,NULL
+1146,Durno,John,"Coordinator, Information Technology Services",250.472.5069,250.721.8215,jdurno@uvic.ca,7/4/07 16:28,29,
+1044,Yap,Derek,Cataloguing Librarian,867.668.8769,867.668.8808,dyap@yukoncollege.yk.ca,7/4/07 16:42,31,
+1048,Avery,Karen,,250.853.3614,,kavery@uvic.ca,1/21/13 14:26,29,
+1050,Cia,Patricia,Department Chair,(604) 323-5243,(604) 323-5512,pcia@langara.bc.ca,1/10/12 14:32,12,
+1362,Makarewicz,Grace,University Librarian,604.986.1911 ext. 3660,,gracemakarewicz@capilanou.ca,1/24/12 10:26,3,
+1421,Burris,Michael,Executive Director,604.437.8441,604 437 8410,michael.burris@interlinklibraries.ca,10/2/13 10:24,96,NULL
+1354,Guillou,Christian,Serials and Computer Services Librarian,604.527.5184,604.527.5193,guillouc@douglascollege.ca,1/18/12 17:28,7,
+1134,McKinney,Bijan,Product Manager,(310) 445-3076,(310) 445-3003,bmckinney@infotrieve.com,10/13/06 10:32,71,
+1399,Sampson,Trina,Library Technician,250-828-5308,,tsampson@tru.ca,3/4/13 18:14,26,
+1263,Hall,Karin,Collections Development Librarian,604.986.1911 x2164,604.984.1728,khall@capilanou.ca,8/27/10 14:10,3,
+1265,Seymour,Keith,Canadian Sales Manager,1.888.473.6077 cell: 514.605.3885,450.473.4464,keith.seymour@bowker.com,1/21/09 16:56,50,
+1323,Rashid,Shahida,Manager of Library Services,250.489.8293,,srashid@cotr.bc.ca,4/6/11 10:12,5,
+1251,Brendle-Moczuk,Daniel,Geography / Maps / Social Sciences Data Librarian,250.853.3619,250.721.8235,danielbm@uvic.ca,5/24/12 12:44,29,
+1074,NULL,CSA,NULL,1-800-843-7751 x5,NULL,support@csa.com,10/6/05 14:50,50,NULL
+1081,Sandercock,Pat,,1-866-685-5722,,pat.sandercock@il.proquest.com,10/7/05 12:10,58,Contact for missing databases in WilsonWeb profile.
+1082,Kness,Lisa,,1-800-387-2689 x2583,,lisa.kness@micromedia.ca,10/27/05 9:43,58,Contact for missing databases in WilsonWeb profile.
+1083,Peckover,Rachel,,401.331.2014 x125,401.331.2015,rachel.peckover@ingenta.com,6/13/07 10:34,56,
+1084,NULL,Ingenta,NULL,NULL,NULL,librarysupport@ingenta.com,10/7/05 10:05,56,NULL
+1085,,SerialsSolutions,,1-866-737-4257 ext. 4,(206) 525-9066,clients@serialssolutions.com,10/7/05 10:43,66,
+1086,,Johns Hopkins University Press,,(410) 516-6989,(410) 516-6968,muse@press.jhu.edu,9/19/08 13:39,68,"Visit this page to send a troubleshooting querry.  Select Request Technical Help.
+
+http://muse.jhu.edu/about/contact.html"
+1089,Langedyk,Robert,,1-800-387-2689 x2582,,rlangedy@micromedia.ca,10/7/05 12:23,58,Troubleshooting for Micromedia databases only (i.e. check the domain in the URL).
+1093,,RefWorks,,,,support@refworks.com,8/9/06 10:20,50,
+1322,Goncalves,Aline,Information Literacy/Reference Librarian,867.668.8727,,agoncalves@yukoncollege.yk.ca,8/29/11 11:24,31,
+1192,,Langara Interlibrary Loans,,(604) 323-5458,(604) 323-5512,ill@langara.bc.ca,1/27/14 15:00,12,
+1098,Conroy,Diane,,,,Dconroy@wiley.com,10/7/05 14:05,63,
+1099,Wilson,Jennifer,NULL,1-800-387-2689 x4370,NULL,jwilson@micromedia.ca,10/7/05 14:24,58,Contact for Micromedia databases (check for micromedia in the URL).
+1271,Mussell,Jessica,"Librarian, Instruction and Resource Sharing",250.391.2600 ext. 4128,,jessica.mussell@RoyalRoads.ca,10/8/10 11:14,21,
+1102,Kornfeld,Judy,Reference Librarian,(604) 323-5466,(604) 323-5512,jkornfeld@langara.bc.ca,8/11/08 14:22,12,
+1285,Kalachinskaya,Olga,Access Services Librarian,604-527-5181,,kalachinskayao@douglas.bc.ca,10/15/10 13:53,7,
+1311,Compeau,Heather,Education Librarian,604.504.7441 x2431,604.792.8550,heather.compeau@ufv.ca,8/30/10 13:34,27,
+1229,Harrison,Sybil,Director of Learning Services,(250) 370-3604,(250) 370-3624,harrisons@camosun.bc.ca,1/31/13 13:22,2,
+1108,Seaborn,Jill,Library and Bookshop,250.365.1438,250.365.7259,jseaborn@selkirk.ca,10/15/10 13:42,22,
+1109,Empey,Heather,Collections & Acquisitions Librarian,250.960.6468,250.960.6610,Heather.Empey@unbc.ca,5/10/13 16:57,28,
+1377,Jorgensen,Kris,"Librarian, Systems & Technical Services",250.391.260 ext. 4241,,kris.jorgensen@royalroads.ca,10/29/13 17:10,21,
+1361,Gick,Natalie,"Associated University Librarian, Administrative Services",778.782.3266,fax: 778.782.3023,ngick@sfu.ca,1/12/12 10:17,23,NULL
+1114,Rogers,Linda,Librarian,(604) 599-2540,(604) 599-2644,Linda.rogers@kpu.ca,10/3/13 10:43,11,
+1122,Clayton,Tina,A-Plus Services/Product Specialist,1-800-843-8482,(972) 991-6061,clayton@amigos.org,10/27/05 11:45,46,Direct tel. no. (972) 851-8000 ext.102
+1123,Hughes,David,,01243 770240,,dhughes@wiley.co.uk,10/27/05 11:48,63,Vendor for Encyclopedia of Life Sciences.
+1125,Stelling,Jen,Cooperative Services Librarian,1-800-342-3353,(518) 432-4346,stellingj@nylink.suny.edu,9/27/07 11:06,69,
+1126,Sahm,Tatiana,NULL,NULL,NULL,sahmt@nylink.suny.edu,10/27/05 11:59,69,NULL
+1127,Turajski,Nate,NULL,1-866-737-4257 x16,(206) 525-9066,nate@serialssolutions.com,10/27/05 12:07,66,NULL
+1129,Brier,Rachel,NULL,NULL,NULL,RBrier@TUTOR.com,10/27/05 12:20,70,NULL
+1131,Chaput,Louise,"Library Technician, Circulation",250.638.5407,250.635.1594,lchaput@nwcc.bc.ca,10/18/10 11:52,18,
+1249,Vasquez,Edward,"Programmer Analyst, Library Systems",604.822.4981,604.822.3893,edward.vasquez@ubc.ca,10/7/10 13:44,32,
+1135,Hinton,Karen,Training & Information Specialist,(865) 712-5440 cell,NULL,khinton@csa.com,11/10/05 12:14,50,NULL
+1137,Lanza,Yuri,,604-291-5376,604-291-4242,lanza@sfu.ca,11/10/05 13:25,72,
+1138,,American Psychological Association,,1-800-347-2722,(202) 336-6123,psycinfo@apa.org,4/10/06 14:02,73,
+1142,Schuetze,Scott,NULL,NULL,NULL,scott@serialssolutions.com,12/15/05 11:47,66,NULL
+1143,Durno,John,NULL,NULL,NULL,johnd@eln.bc.ca,12/16/05 10:27,75,NULL
+1144,Durno,John,NULL,NULL,NULL,jdurno@sfu.ca,12/16/05 10:28,75,NULL
+1269,,Dawson Creek Campus Library,,(250) 784-7533,(250) 784-7567,dc-lib@nlc.bc.ca,3/25/09 9:36,16,
+1147,Parent,Ingrid,University Librarian,604.827.3486,604.822.3893,ingrid.parent@ubc.ca,11/26/10 11:22,32,"Harry Young <harry.young@ubc.ca>, is Ingrid's assistant - on eln-steercom"
+1324,Valencia,Claudia,Reference/Interlibrary Loan Assistant,"250.762.5445, x4293",,cvalencia@okanagan.bc.ca,3/1/11 12:12,19,
+1401,Chadwick,Eleanor,Library Technician,250.923.9785,250.923.9786,eleanor.chadwick@nic.bc.ca,6/20/13 17:21,17,NULL
+1151,Smith,Debbie,Library Resources Technician,(604) 599-2258,(604) 599-2106,Debbie.Smith@kpu.ca,10/3/13 11:00,11,
+1158,Posada,John Paul,Senior Technical Support Engineer,1-800-343-0064 x179<br>or (781) 769-8763,,JPosada@Ovid.com,4/7/06 14:56,76,
+1159,,OVID,,,,support@ovid.com,10/6/06 11:09,76,Jerry Howard
+1161,Matthews,Mary,Reference Librarian,604.777.6137,604.777.6138,matthewsm@douglascollege.ca,1/23/12 15:51,7,
+1162,Vernon,Ryan,Technical Services Librarian,(604) 323-5460,(604) 323-5512,rvernon@langara.bc.ca,1/27/14 15:01,12,
+1163,Turcotte,Dawna,Regional Librarian,250.785.6981 / 1.866.463.6652 ext. 2012,250.785.1294,Librarian@nlc.bc.ca,7/15/14 16:40,16,
+1164,Wong,Sandra,Electronic Resources Librarian,778.782.3269,778.782.3023,swongj@sfu.ca,10/8/10 14:48,23,
+1165,Bell,Colleen,Information Literacy and Web Services Librarian,604.504.7441 x4396,604.853.8055,colleen.bell@ufv.ca,10/29/08 11:41,27,
+1166,Taylor,Sally,"Reference Librarian, Woodward Biomedical Library",604.822.6638,604.822.5596,sally.taylor@ubc.ca,7/4/07 17:18,32,
+1167,Gordon,Carol,Infoline Librarian,250.721.6161,250.721.6233,cjgordon@uvic.ca,7/4/07 16:31,29,
+1168,,ILL,,,,ill@camosun.bc.ca,5/18/06 10:51,2,
+1169,Webb,Debbie,Interlibrary Loans,250.370.3625,250.370.3624,ill@camosun.bc.ca,7/4/07 17:20,2,
+1171,Saklikar,Nina,Systems Librarian,778.782.5861,778.782.3023,nsaklika@sfu.ca,4/24/07 12:38,23,
+1172,Roberts,Sylvia,"Liaison Librarian, Communications and Contemporary Arts",778.782.7417,778.782.6926,sroberts@sfu.ca,9/27/10 11:05,23,
+1173,Mullane,Ruth,Library Resources Technician,"604-599-2274, x6026",,Ruth.Mullane@kpu.ca,10/3/13 11:02,11,
+1223,Smith,Emily,Student Success Centre / Library Coordinator,250.378.3332,,esmith@nvit.bc.ca,8/28/12 10:32,15,
+1181,Ma,Ophelia,Reference Librarian,604.323.5527,,oma@langara.bc.ca,10/19/10 14:10,12,
+1464,Robertson,Megan,WriteAway Master Tutor,778.782.9404,NULL,waoffice@eln.bc.ca,5/6/15 18:25,33,NULL
+1244,Birkenes,Richard,"Library Technician, Resource Sharing",604.323.5458,604.323.5512,rbirkenes@langara.bc.ca,1/27/14 15:00,12,
+1184,Engman,Eva,"Librarian, Collections and Cataloguing",250.762.5445 X 4490,250.862.5609,eengman@okanagan.bc.ca,10/18/10 12:40,19,
+1463,Armstrong,Sheldon,E-Resources & Acquisitions Librarian,604.822.5300,,sheldon.armstrong@ubc.ca,5/27/15 11:36,32,
+1186,Nishimura,Sunni,Coordinator,778.782.6937<br>cell: 778.237.6276,,sunnin@eln.bc.ca,6/3/15 15:12,33,"<li>Resource sharing including union databases, interlibrary loans</li>
+<li>Collaborative Institutional Repository coordination
+<li>BC ELN database trials, renewals, and licensing support</li>"
+1433,Leprette,Hannah,Library Technician,250-724-8760,250-724-8780,Hannah.leprette@nic.bc.ca,3/10/14 14:38,17,NULL
+1267,Landis,Sian,Systems Librarian,"250.365.1229/1.888.953.1133, x229",250.365.7259,slandis@selkirk.ca,10/15/10 13:45,22,
+1351,Richardson,Allison,Public Services and Electronic Resources Librarian,604.598.6040,604.599.3202,Allison.Richardson@kpu.ca,9/20/13 17:18,11,
+1187,Russell,Pia,Teaching and Learning Librarian,250.721.8259,250.721.8235,prussell@uvic.ca,8/22/08 16:52,29,
+1459,Kenkelt,Theresa,Public Services Technician,604 527-5186,,kenkelt@douglascollege.ca,4/24/15 16:02,7,
+1326,Penhorwood,Jan,Public Services Librarian,(604) 599-3236,,Jan.Penhorwood@kpu.ca,10/3/13 10:43,11,
+1327,Miller,Katherine,Reference Librarian,604.822.0295,604.822.5596,katherine.miller@ubc.ca,2/18/11 14:05,32,NULL
+1228,Meredith,Will,Librarian,(250) 391.2600 x4433,(250).391.2594,will.meredith@royalroads.ca,10/8/10 11:13,21,
+1259,Palmer,Leigh Anne,"On leave to Dec. 14, 2015",,,leighannep@ehlbc.ca,10/7/14 12:22,33,"<LI>e-HLbc coordination including communications, licensing, and governance</li>
+<li>BC ELN licensing including negotiation and planning</li>
+<li>e-HLbc licensing including negotiation and planning</li>"
+1220,Bede,Gilbert,Systems Librarian,(250) 762.5445 x4751,(250) 862.5609,gbede@okanagan.bc.ca,8/24/07 8:37,19,
+1212,McFarland,Dana,e-Resources Librarian,250.740.6332,250.740.6473,Dana.McFarland@viu.ca,4/20/09 15:07,14,
+1234,Dixon,Duncan,"Assistant Librarian, Reference and Information Literacy",604.513.2121 x3923,604.513.2063,Duncan.Dixon@twu.ca,4/15/11 12:02,25,
+1312,LeGood,Heather,Media Reservations,604.864.4667,604.853.0796,heather.legood@ufv.ca,1/10/13 13:03,27,
+1438,Neame,Simon,"Associate University Librarian & Director, Irving K. Barber Learning Centre",(604) 822-3096,(604) 822-3242,simon.neame@ubc.ca,7/10/14 11:04,32,NULL
+1248,Ward,Michelle,"Librarian, Kelowna Campus Librarian","250.762.5445,  x4749",,mward@okanagan.bc.ca,1/9/15 13:56,19,
+1330,Rodrique,Jaella,Library Assistant,604.822.6363,604.822.9122,jaella.rodrique@ubc.ca,8/17/11 10:39,32,
+1257,Wallsten,Venessa,University Librarian,604.898.8052,,venessa.wallsten@questu.ca,1/7/09 12:22,84,
+1258,Takishita,Faith,Reference Librarian,"250.753.3245, loc. 2268",250.740.6473,Faith.Takishita@viu.ca,9/5/08 16:47,14,
+1309,Harrison,Ben,Reference & Instruction Librarian,"250.762.5445, x.4257",,bharrison@okanagan.bc.ca,9/23/14 15:25,19,
+1284,Taylor,Judy,Technical Services Supervisor,604.599.3102,604.599.3102,judy.taylor@kpu.ca,10/3/13 10:42,11,
+1286,Weidman,Bev,Library Services Assistant,250.782.5251,,bweidman@nlc.bc.ca,10/18/10 11:49,16,
+1375,Siemens,Ruth,Technical Services Supervisor,604.986.1911 ext. 2165,,libraryacquisitions@capilanou.ca,5/10/13 17:07,3,
+1417,Lovitt,James,Instructional and Regional Services Librarian,250.562.2131 x5396,,lovittj@cnc.bc.ca,10/8/13 16:22,4,
+1277,Marsden,Scott,Library Division Manager,604-681-5815 x210 &nbsp; <b>Skype:</b> Scott_Librarian,604-681-5819,s.marsden@alexandercollege.ca,10/29/13 15:31,87,
+1306,Janyk,Roen,Web Services Librarian,250-762-5445 x.4660,250-862-5609,rjanyk@okanagan.bc.ca,8/24/10 10:33,19,
+1314,Rout,James,"Associate Vice-President, Learning Services + Information Technologies",604.844.3835,,jrout@ecuad.ca,11/12/13 12:44,8,
+1308,Alekson,Tania,Instruction & Web Librarian,604.986.1911 x2141,604.984.1728,talekson@capilanou.ca,10/22/12 10:15,3,
+1384,Kuzmina,Elena,Public Services,604.871.7000 ext 8346,,ekuzmina@vcc.ca,11/13/13 14:10,30,
+1436,Shortridge,Corinne,E-Resources & Access Library Assistant,604.822.4192,,corinne.shortridge@ubc.ca,6/26/14 14:49,32,
+1338,Morin,Sue,"Library Technician, Reference & Systems","250-489-2751, ex.3501",,smorin@cotr.bc.ca,5/12/15 11:25,5,
+1341,Nilsen,Christina,Borrower and Data Services Librarian,250-852-7287,,cnilsen@tru.ca,7/14/14 16:59,26,
+1342,White,Nicole,Reseach Commons Coordinator,778.782.3268,,ngjertse@sfu.ca,7/25/12 10:00,23,
+1343,Woodcock,Linda,Technical Services and Public Services Librarian,604.599.2450,,Linda.Woodcock@kpu.ca,9/25/13 11:52,11,
+1345,Lawson,Emma,"Librarian, Electronic Resources",604.323.5464,,elawson@langara.bc.ca,9/6/11 9:50,12,
+1346,Feng,Vivian,"Coordinator, Reference & Instruction",604.323.5346,,vfeng@langara.bc.ca,8/29/12 11:21,12,
+1349,Yousefi,Baharak,Head of Fraser Library,778.782.7417,,byousefi@sfu.ca,7/4/12 17:09,23,
+1353,Coopman,Hila,,"604.871.7000, ext. 8550",,hcoopman@vcc.ca,9/12/12 10:47,30,
+1358,Brinkerhoff,Celia,Public Services Librarian,604.599.3235,604.599.3202,Celia.Brinkerhoff@kpu.ca,9/25/13 11:51,11,
+1454,Iwanchuk,Andre,"Reference Librarian, Liaison for Geography",778.782.9704,,aiwanchu@sfu.ca,2/12/15 11:31,23,
+1412,Yuen,Vera,Media Bookings/ILL,778.782.3342,778.782.4908,vyuen@sfu.ca,8/22/13 14:23,23,NULL
+1413,Bancroft,Jennifer,Librarian,778.782.7002<br>cell: 778.938.7541,,jenniferb@eln.bc.ca,6/3/15 15:12,33,"<li>e-HLbc support including communications, marketing, and membership recruitment</li>
+<li>e-HLbc database trials, renewals, and licensing support</li>
+<li>BC ELN database trials, renewals, and licensing support</li>"
+1415,Hopton,Leah,Project Coordinator,778.782.9573<br>cell: 604.230.2251,,leahh@eln.bc.ca,6/3/15 15:12,33,"<LI>BC ELN communications including communiques, biannual progress reports, and annual reports
+<LI>Consortial assessment activities
+<LI>WriteAway online writing support coordination including scheduling, training and communications"
+1363,Epps,Linda,College Librarian,250-378-3303,,lepps@nvit.bc.ca,3/19/12 17:16,15,
+1368,Philip,Brenda,Circulation and Data Services Librarian,604.504.7441 x 4191,604.853.0796,brenda.philip@ufv.ca,11/2/12 17:11,27,
+1455,Grace,Deirdre,"Librarian, Manufacturing, & Industrial Mechanical",604-451-6961,NULL,Deirdre_Grace@bcit.ca,2/19/15 11:05,99,NULL
+1370,Matthews,Kathleen,Library Data Services Librarian / Subject Librarian / Research & Development Librarian,250-721-8271,,kmatthew@uvic.ca,2/19/15 11:06,29,
+1371,Lesack,Paul,Data Services Assistant,604 822-5587,NULL,paul.lesack@ubc.ca,5/23/12 16:46,32,NULL
+1372,Brittnacher,Tom,Geographic Information Systems Librarian,604.827.4450,,tombritt@interchange.ubc.ca,2/19/15 9:29,32,
+1373,Luebbe,Mary,Data Services Libarian,604 822-6742,,mluebbe@interchange.ubc.ca,5/23/12 17:04,32,
+1374,Reed,Kathleen,Assessment and Data Librarian,250.753.3245 x2271,250.618.3375,kathleen.reed@viu.ca,5/28/12 15:49,14,NULL
+1379,Dale,Denise,Reference Services Coordinator and Archives,604.599.2999,,Denise.Dale@kpu.ca,10/3/13 10:50,11,
+1380,Neeley,Kathryn,Librarian,604.898.8050,,kathryn.neeley@questu.ca,10/22/13 16:43,84,
+1381,Hodgins,Margaret,Vernon Campus Librarian,"250.545.7291, x.2249",,mhodgins@okanagan.bc.ca,9/18/13 10:01,19,
+1449,Posteraro,Trinity,Administrative Assistant to University Librarian,250.960.6600,,trinity.posteraro@unbc.ca,10/29/14 13:40,28,
+1385,Samborski,Dalene,"Media Bookings, Library",604.983.7509,,dsambors@capilanou.ca,12/14/12 15:43,3,
+1386,Gallant,Lynette,Public Services Librarian,250-334-5097,,Lynette.Gallant@nic.bc.ca,6/20/13 17:19,17,
+1395,Buie,Janice,"Library Assistant, Client Services","250.753.3245, ext. 2201",250.740.6473,janice.buie@viu.ca,1/10/13 13:17,14,
+1390,,Fort Nelson Campus Library,,,,fn-lib@nlc.bc.ca,12/14/12 15:36,16,
+1391,Willson,Lindsay,Public Services/Business Liaison Librarian,250.762.5445 x.4624,,lwillson@okanagan.bc.ca,1/10/13 13:01,19,
+1392,NULL,Media Bookings,NULL,778.782.3116,778.782.4908,media@sfu.ca,12/14/12 15:47,23,NULL
+1393,Potter-Smith,John,Library - Audiovisual Technician,604-599-2405,604-599-2106,John.Potter-Smith@kpu.ca,10/3/13 10:58,11,
+1396,Hodgson,Janine,Circulation Services Supervisor,604.986.1911 x2106,604.984.1728,jhodgson@capilanou.ca,1/14/13 16:48,3,NULL
+1397,Vera,Mari Paz,Assistant Department Head,604.871.7000 ext 8652,,mavera@vcc.ca,2/1/13 10:42,30,
+1466,Larkins,Lisa,e-Resources Licensing Specialist,604.822.0903,,lisa.larkins@ubc.ca,7/16/15 9:41,32,
+1403,Harvey,Elizabeth,Library Technician,250.334.5070,250.334.5291,elizabeth.harvey@nic.bc.ca,6/20/13 17:24,17,NULL
+1404,Kropninski,Sherry,Library Technician,250.724.8717,250.724.8780,sherry.kropninski@nic.bc.ca,6/20/13 17:25,17,NULL
+1405,Ternes,Sonya,Library Technician,250.334.4231,250.334.5000 ext. 4231,sonya.ternes@nic.bc.ca,6/20/13 17:26,17,NULL
+1406,Turner,Robin,Library Technician,250.334.5002,250.334.5291,robin.turner@nic.bc.ca,6/20/13 17:27,17,NULL
+1428,Jensen,Annie,Communications Librarian,604.323.5386,604.323.5512,ajensen@langara.bc.ca,5/12/14 13:44,12,
+1409,Bonsor,Nelda,Client Services Assistant,NULL,NULL,nelda.bonsor@viu.ca,7/18/13 10:57,14,NULL
+1461,Joo,Young,Public Services Technician,604 527-5196,NULL,yjoo1@douglascollege.ca,4/24/15 16:04,99,NULL
+1423,Webb,Hillary,Systems and Technical Services Librarian,604-630-4567 ext 4567,,hillarywebb@ecuad.ca,10/29/13 16:41,8,
+1425,Whitehouse,Karen,Media Services - Okanagan Campus,250.807.9116,250.807.9155,media.ok@ubc.ca,12/17/13 12:08,32,
+1426,Janke,Robert,Learning Services Librarian,250.807.9109,250.807.8003,Robert.Janke@ubc.ca,12/17/13 12:09,32,
+1429,Whyte,Janet,Communications Librarian,604.323.5457,604.323.5512,jwhyte@langara.bc.ca,7/16/14 15:59,12,
+1430,Isaac,Kim,University Librarian,(604) 864-4696,(604) 853-8055,Kim.Isaac@ufv.ca,2/24/14 13:55,27,
+1435,Gaynor,Kathy,Reference and Web Services Librarian,250.377.6055,250.852.7658,kgaynor@tru.ca,7/14/14 16:07,26,
+1439,Rollins,Caron,Associate Law Librarian,250.721.8566,250.472.4174,crollins@uvic.ca,7/11/14 17:28,29,
+1441,Bryan,Gwenda,"Librarian, Electronic Resources",250 ñ 370-3610,,bryang@camosun.bc.ca,7/14/14 16:46,2,
+1446,Warkentin,Martin,Copyright Librarian,"604.504.7441, loc.4460",604-853-0796,martin.warkentin@ufv.ca,9/8/14 16:15,27,
+1447,Hoffman,Cameron,,250.740.6335,,Cameron.Hoffman@viu.ca,1/13/15 10:12,14,
+1448,Bird,Gwen,University Librarian & Dean of Libraries,778.782.3265,778.782.3023,gbird@sfu.ca,10/2/14 17:39,23,
+1462,Newton,Cortney,Library Technician,250.489.8288,NULL,cnewton@cotr.bc.ca,4/29/15 14:49,5,NULL

@@ -1,0 +1,4 @@
+<?php
+
+// This file is intentionally left blank.
+// The only hook implementation is in bceln_migrate.migrate.inc
