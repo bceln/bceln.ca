@@ -6,6 +6,9 @@ class Bceln_Migrate_Node_Organization extends Bceln_Migrate_Abstract {
   }
 
   public function __construct($arguments = []) {
+    $this->extraSourceFields = [
+      'ip_addresses' => t('IP Addresses looked up in prepareRow()'),
+    ];
     parent::__construct($arguments);
   	$this->destination = new MigrateDestinationNode('organization');
   	$this->dealWithPathAuto();    
@@ -48,8 +51,7 @@ class Bceln_Migrate_Node_Organization extends Bceln_Migrate_Abstract {
 
     $this->addFieldMapping('field_membership_type', 'membership');
 
-    // from ip_addresses.csv
-    // $this->addFieldMapping('field_org_ip', '');
+    $this->addFieldMapping('field_org_ip', 'ip_addresses'); // from ip_addresses.csv
 
     // $this->addFieldMapping('field_org_ip_last_update', ''); // ??
 
@@ -114,7 +116,7 @@ class Bceln_Migrate_Node_Organization extends Bceln_Migrate_Abstract {
       'is_new',
       // 'field_org_nlc_code',
       'field_org_ip_last_update',
-      'field_org_ip',
+      // 'field_org_ip',
       // 'field_org_url',
       'field_org_url:title',
       'field_org_url:attributes',
@@ -276,5 +278,7 @@ class Bceln_Migrate_Node_Organization extends Bceln_Migrate_Abstract {
     if (FALSE !== $key) {
       $row->membership = $key;
     }
+
+    $row->ip_addresses = Bceln_Migrate_IpAddress::getIpAddressesByInstId($row->inst_id);
   }
 }

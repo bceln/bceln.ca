@@ -1,0 +1,36 @@
+<?php
+
+/**
+ * Implements hook_requirements().
+ */
+function league_csv_requirements($phase) {
+  $requirements = [];
+
+  // Ensure translations don't break during installation.
+  $t = get_t();
+  $title = $t('The League\Csv Composer package');
+
+  if ('runtime' == $phase) {
+    if (($library = libraries_detect('league_csv')) && !empty($library['installed'])) {
+      // The League\Csv Composer package is installed. Awesome!
+      // var_dump($library);exit;
+      $requirements['league_csv'] = [
+        'title' => $title,
+        'description' => $t('Found version %version of the <em>League\Csv</em> Composer package.', ['%version' => $library['version']]),
+        'severity' => REQUIREMENT_OK,
+        'value' => $t('Found'),
+      ];
+    }
+    else {
+      // Something went wrong. :(
+      $requirements['league_csv'] = [
+        'title' => $title,
+        'description' => $library['error message'], // This contains a detailed (localized) error message.
+        'severity' => REQUIREMENT_ERROR,
+        'value' => $library['error'], // This contains a short status code of what went wrong, such as 'not found'.
+      ];
+    }
+  }
+
+  return $requirements;
+}

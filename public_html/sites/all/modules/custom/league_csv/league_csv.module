@@ -1,0 +1,86 @@
+<?php
+
+use League\Csv\Reader as Reader;
+
+/**
+ * Implements hook_libraries_info().
+ */
+function league_csv_libraries_info() {
+  return [
+    'league_csv' => [
+      'name' => 'The League\Csv Composer package',
+      'vendor url' => 'http://csv.thephpleague.com/',
+      'download url' => 'https://github.com/thephpleague/csv',
+      'path' => '',
+      'version arguments' => [
+        'file' => 'CHANGELOG.md',
+        'pattern' => '{## (\d+\.\d+\.\d+) - \d\d\d\d-\d\d-\d\d}',
+        'lines' => 9,
+        'cols' => 50,
+      ],
+      'files' => [
+        'php' => [
+          'src/AbstractCsv.php',
+          'src/Config/Controls.php',
+          'src/Config/Output.php',
+          'src/Exception/InvalidRowException.php',
+          'src/Modifier/MapIterator.php',
+          'src/Modifier/QueryFilter.php',
+          'src/Modifier/RowFilter.php',
+          'src/Modifier/StreamFilter.php',
+          'src/Plugin/ColumnConsistencyValidator.php',
+          'src/Plugin/ForbiddenNullValuesValidator.php',
+          'src/Plugin/SkipNullValuesFormatter.php',
+          'src/Reader.php',
+          'src/Writer.php',
+        ],
+      ],
+      'callbacks' => [
+        'pre-load' => [
+          // "Manually" pre-load PHP traits since Drupal 7 doesn't know about traits.
+          'league_csv_libraries_preload_callback',
+        ],
+      ],
+    ],
+  ];
+}
+
+function league_csv_libraries_preload_callback(array $library, $version = NULL, $variant = NULL) {
+  // "Manually" pre-load PHP traits since Drupal 7 doesn't know about traits.
+  $path = $library['library path'];
+  $files_with_traits = [
+    'Config/Controls.php',
+    'Config/Output.php',
+    'Modifier/QueryFilter.php',
+    'Modifier/RowFilter.php',
+    'Modifier/StreamFilter.php',
+  ];
+  foreach ($files_with_traits as $file_name) {
+    require_once $path . '/src/' . $file_name;
+  }
+}
+
+function league_csv_library_load() {
+  if (($library = libraries_load('league_csv')) && !empty($library['loaded'])) {
+    return TRUE;
+  }
+  else {
+    watchdog('league_csv', 'Error loading the League\Csv Composer package.', [], WATCHDOG_ERROR);
+    return FALSE;
+  }
+}
+
+function league_csv_load_with_header($full_file_name) {
+  if (league_csv_library_load()) {
+    try {
+      return Reader::createFromPath($full_file_name)->fetchAssoc();
+    }
+    catch (Exception $e) {
+      watchdog_exception('league_csv', $e);
+      return [];
+    }
+  }
+  else {
+    return [];
+  }
+}
