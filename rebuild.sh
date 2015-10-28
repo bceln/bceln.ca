@@ -22,8 +22,8 @@ function ensureCurrentUserIsOwner() {
 }
 
 # Try moving ./public_html/sites/default/files to ./assets/files if it is still an actual directory.
-if [ -d ./public_html/sites/default/files ]; then
-  # Drupal files directory is still a directory and NOT a symlink to ./assets/files
+if [ -d ./public_html/sites/default/files -a ! -h ./public_html/sites/default/files ]; then
+  # Drupal files directory is still a directory AND NOT a symlink (to ./assets/files)
   if [ -d ./assets/files ]; then
     echo "Error: Unable to move directory ./public_html/sites/default/files to ./assets/files because ./assets/files is a directory already. Aborting so that this can be taken care of."
     exit 1
@@ -50,8 +50,8 @@ if [ -d ./public_html/sites/default/files ]; then
 fi
 
 # Try moving ./public_html/sites/default/settings.php to ./assets/settings.php if it is still an actual file.
-if [ -f ./public_html/sites/default/settings.php ]; then
-  # settings.php is still a regular file and NOT a symlink to ./assets/settings.php
+if [ -f ./public_html/sites/default/settings.php -a ! -h ./public_html/sites/default/settings.php ]; then
+  # settings.php is still a regular file AND NOT a symlink (to ./assets/settings.php)
   if [ -f ./assets/settings.php ]; then
     echo "Error: Unable to move directory ./public_html/sites/default/settings.php to ./assets/settings.php because ./assets/settings.php is a regular file already. Aborting so that this can be taken care of."
     exit 1
