@@ -129,33 +129,14 @@ if [ $LAST_RETURN_VALUE -ne 0 ]; then
 fi
 cd $BASEDIR
 
-exit
-
-ln -s public_html/sites/default/files
-mv old_public_html/sites/default/files public_html/sites/default/files
-
-LAST_RETURN_VALUE=$?
-if [ $LAST_RETURN_VALUE -ne 0 ]; then
-  echo "Error: There was a problem with moving 'old_public_html/sites/default/files' to 'public_html/sites/default/files'. Manual cleanup required to prevent data loss."
-  exit 1
-fi
-
-mv old_public_html/sites/default/settings.php public_html/sites/default/settings.php
-
-LAST_RETURN_VALUE=$?
-if [ $LAST_RETURN_VALUE -ne 0 ]; then
-  echo "Error: There was a problem with moving 'old_public_html/sites/default/settings.php' to 'public_html/sites/default/settings.php'. Manual cleanup required to prevent data loss."
-  exit 1
-fi
-
 # Last double-check before deleting old_public_html.
-if [ -d old_public_html/sites/default/files ]; then
+if [ -d ./old_public_html/sites/default/files -a ! -h ./old_public_html/sites/default/files ]; then
   echo "Error: 'old_public_html/sites/default/files' still exists and is a directory, not a symlink. It seems that it could not get moved to the proper destination. Manual cleanup required to prevent data loss."
   exit 1
 fi
 
 # Last double-check before deleting old_public_html.
-if [ -f old_public_html/sites/default/settings.php ]; then
+if [ -f ./old_public_html/sites/default/settings.php -a ! -h ./old_public_html/sites/default/settings.php ]; then
   echo "Error: 'old_public_html/sites/default/settings.php' still exists and is a regular file, not a symlink. It seems that it could not get moved to the proper destination. Manual cleanup required to prevent data loss."
   exit 1
 fi
