@@ -162,6 +162,11 @@ fi
 
 rm -rf old_public_html
 
+cd public_html/sites/default
+ln -s ../../../assets/files/ files
+ln -s ../../../assets/settings.php settings.php
+cd $BASEDIR
+
 cd public_html
 
 # sync DB to new code, but no auto-confirmation commandline switch ( "--yes" )
