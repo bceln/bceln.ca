@@ -10,7 +10,6 @@ clear.php
 images2/PHC_VCHA_combo_80x465.jpg
 licenses
 opengraph.png
-profiles/re_profile
 sites/all/drush
 sites/all/modules/custom
 sites/all/modules/re_custom

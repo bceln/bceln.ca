@@ -121,7 +121,7 @@ php --process-code '$x = trim(preg_replace("/\s*#.*\$/", "", $argn)); if ($x) pr
 done
 
 cd $BASEDIR/public_html/sites/all/libraries/league_csv
-composer install --no-dev
+composer install --no-dev --no-autoloader
 LAST_RETURN_VALUE=$?
 if [ $LAST_RETURN_VALUE -ne 0 ]; then
   echo "Error: There was a problem running 'composer install' for league_csv library."
