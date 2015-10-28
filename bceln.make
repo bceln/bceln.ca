@@ -4,7 +4,7 @@
 
 core = 7.x
 api = 2
-projects[drupal] = 7.38
+projects[drupal] = 7.41
 
 
 ; Modules
@@ -32,10 +32,11 @@ projects[context_reaction_theme][type] = module
 projects[context_reaction_theme][download][type] = file
 projects[context_reaction_theme][download][url] = http://cgit.drupalcode.org/context_reaction_theme/snapshot/9e119e080b3f61df50c9190ba69fea5f9b141579.tar.gz
 
-projects[ctools] = 1.7
+projects[ctools] = 1.9
 projects[custom_search] = 1.18
 projects[date] = 2.9
 projects[devel] = 1.5
+projects[diff] = 3.2
 projects[disable_term_node_listings] = 1.2
 projects[ds] = 2.11
 projects[editablefields] = 1.0-alpha2
@@ -51,14 +52,14 @@ projects[field_group_multiple] = 1.0-beta3
 projects[field_permissions] = 1.0-beta2
 projects[getid3] = 1.0
 projects[gmap] = 2.9
-projects[google_analytics] = 1.4
+projects[google_analytics] = 2.1
 projects[honeypot] = 1.21
 projects[imagefield_crop] = 1.1
 projects[imce] = 1.9
 projects[imce_wysiwyg] = 1.0
 projects[invisimail] = 1.2
 projects[job_scheduler] = 2.0-alpha3
-projects[jquery_update] = 2.6
+projects[jquery_update] = 2.7
 projects[libraries] = 2.2
 projects[link] = 1.3
 projects[location] = 3.6
