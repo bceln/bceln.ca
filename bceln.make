@@ -142,3 +142,7 @@ libraries[s3-php5-curl][download][url] = https://github.com/tpyo/amazon-s3-php-c
 ; league/csv 7.1.2 (Composer library)
 libraries[league_csv][download][type] = get
 libraries[league_csv][download][url] = https://github.com/thephpleague/csv/archive/7.1.2.zip
+
+; Chosen 1.4.2
+libraries[chosen][download][type] = get
+libraries[chosen][download][url] = https://github.com/harvesthq/chosen/releases/download/1.4.2/chosen_v1.4.2.zip
