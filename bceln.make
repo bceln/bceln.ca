@@ -52,6 +52,7 @@ projects[field_permissions] = 1.0-beta2
 projects[getid3] = 1.0
 projects[gmap] = 2.9
 projects[google_analytics] = 1.4
+projects[honeypot] = 1.21
 projects[imagefield_crop] = 1.1
 projects[imce] = 1.9
 projects[imce_wysiwyg] = 1.0
