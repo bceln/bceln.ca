@@ -24,7 +24,6 @@ projects[cck_select_other][download][url] = http://cgit.drupalcode.org/cck_selec
 
 projects[chosen] = 2.0-beta4
 projects[ckeditor] = 1.16
-projects[cmf] = 1.x-dev
 projects[content_access] = 1.2-beta2
 projects[context] = 3.6
 
@@ -128,7 +127,7 @@ libraries[foundation][download][url] = http://foundation5.zurb.com/cdn/releases/
 
 ; Amazon S3 PHP Class 0.5.0-dev
 libraries[s3-php5-curl][download][type] = get
-libraries[s3-php5-curl][download][url] = https://github.com/tpyo/amazon-s3-php-class/archive/390ea1a454456d27784fa01264d34ed13c57a95a.zip
+libraries[s3-php5-curl][download][url] = https://github.com/tpyo/amazon-s3-php-class/archive/485257794e8960314f4a8ea9259d1b76817f9cd6.zip
 
 ; league/csv 7.1.2 (Composer library)
 libraries[league_csv][download][type] = get
