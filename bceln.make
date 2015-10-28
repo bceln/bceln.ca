@@ -117,13 +117,21 @@ projects[startupgrowth_lite] = 1.0
 
 ; Libraries
 
+; - apparently not in use anymore
+; - the version in git differs from upstream considerably
+; - in consequence, remove this from git and stop downloading it
+; - just leave this here as reference
 ; TinyMCE 3.3.8
-libraries[tinymce][download][type] = get
-libraries[tinymce][download][url] = https://github.com/tinymce/tinymce/archive/3.3.8.zip
+;libraries[tinymce][download][type] = get
+;libraries[tinymce][download][url] = https://github.com/tinymce/tinymce/archive/3.3.8.zip
 
+; - apparently not in use anymore
+; - the version in git differs from upstream considerably
+; - in consequence, remove this from git and stop downloading it
+; - just leave this here as reference
 ; Zurb Foundation 3.2.5
-libraries[foundation][download][type] = get
-libraries[foundation][download][url] = http://foundation5.zurb.com/cdn/releases/foundation-3.2.5.zip
+;libraries[foundation][download][type] = get
+;libraries[foundation][download][url] = http://foundation5.zurb.com/cdn/releases/foundation-3.2.5.zip
 
 ; Amazon S3 PHP Class 0.5.0-dev
 libraries[s3-php5-curl][download][type] = get
