@@ -23,6 +23,7 @@ class Bceln_Migrate_Node_Resource extends Bceln_Migrate_Abstract {
       MigrateDestinationNode::getKeySchema()
     );
 
+    $this->addFieldMapping('field_legacy_id', 'db_id');
     $this->addFieldMapping('title', 'db_name');
 
     $this->addFieldMapping('field_private_note', 'notes');

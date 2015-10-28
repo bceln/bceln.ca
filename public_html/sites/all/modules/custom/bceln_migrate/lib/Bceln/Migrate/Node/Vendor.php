@@ -20,6 +20,7 @@ class Bceln_Migrate_Node_Vendor extends Bceln_Migrate_Abstract {
       MigrateDestinationNode::getKeySchema()
     );
 
+    $this->addFieldMapping('field_legacy_id', 'inst_id');
     $this->addFieldMapping('title', 'inst_name');
 
     $this->addFieldMapping('field_vendor_url', 'inst_url');

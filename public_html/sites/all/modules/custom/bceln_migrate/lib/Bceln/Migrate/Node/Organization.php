@@ -23,6 +23,7 @@ class Bceln_Migrate_Node_Organization extends Bceln_Migrate_Abstract {
       MigrateDestinationNode::getKeySchema()
     );
 
+    $this->addFieldMapping('field_legacy_id', 'inst_id');
     $this->addFieldMapping('title', 'inst_name');
 
     $this->addFieldMapping('field_org_nlc_code', 'nlc_code');
