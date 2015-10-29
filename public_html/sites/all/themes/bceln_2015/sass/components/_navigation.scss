@@ -84,5 +84,13 @@
 	line-height:$line-height-footer-menu;
 }
 
-
+#block-menu-menu-footer:before{
+    display: block;
+    content: 'Site by ';
+    left: -42px;
+    top: 1px;
+    position: absolute;
+    font-size: 12px;
+    color: #333333;
+};
 

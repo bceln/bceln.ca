@@ -571,14 +571,18 @@
 		}
 		#block-menu-menu-footer{
 			bottom:5px;
+			left:65px;
 		}
 		@include breakpoint($tablet-layout){
 			#block-block-10 ,#block-menu-menu-footer{
 				position:absolute;
-				bottom:5px;
+			    bottom: 18px;
+			    left: 30px;
 			}
 			#block-menu-menu-footer{
-				left:458px;
+				left:437px;
+			    bottom: 15px;
+				
 			}
 			#site-logo-footer{
 				@include grid-span(5,1);		
