@@ -20,6 +20,7 @@ class Bceln_Migrate_Node_License extends Bceln_Migrate_Abstract {
       MigrateDestinationNode::getKeySchema()
     );
 
+    $this->addFieldMapping('field_legacy_id', 'licence_id');
     $this->addFieldMapping('field_license_eres_text', 'ereserves_txt');
     // $this->addFieldMapping('field_license_eres_text:format', '');
 
@@ -293,7 +294,7 @@ class Bceln_Migrate_Node_License extends Bceln_Migrate_Abstract {
       if (FALSE !== $key) {
         $row->$csv_field = $key;
       }
-      else if (in_array($row->$csv_field, ['NA', 'NULL'])) {
+      else if (in_array(trim($row->$csv_field), ['NA', 'NULL'])) {
         $row->$csv_field = '';
       }
     }

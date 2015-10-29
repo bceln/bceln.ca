@@ -20,6 +20,7 @@ class Bceln_Migrate_Profile extends Bceln_Migrate_Abstract {
       MigrateDestinationProfile2::getKeySchema()
     );
 
+    $this->addFieldMapping('field_legacy_id', 'contact_id');
     $this->addFieldMapping('uid', 'contact_id')->sourceMigration('user_import');
     $this->addFieldMapping('revision_uid', 'contact_id')->sourceMigration('user_import');
     $this->addFieldMapping('field_contact_last_name', 'last_name');

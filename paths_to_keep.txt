@@ -1,0 +1,19 @@
+# This file contains the paths of all files and directories which should get
+# checked out from the git repo again after rebuilding the whole Drupal
+# directory from scratch.
+#
+# See rebuild.sh for how this is used.
+
+FirePHPCore
+apple-touch-icon.png
+clear.php
+images2/PHC_VCHA_combo_80x465.jpg
+licenses
+opengraph.png
+sites/all/drush
+sites/all/modules/custom
+sites/all/modules/re_custom
+sites/all/themes/bceln_2015
+sites/all/themes/cogito
+sites/all/themes/coppul
+sites/all/themes_bak

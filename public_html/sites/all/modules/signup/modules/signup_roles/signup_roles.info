@@ -3,9 +3,3 @@ description = "Allows the site to grant one or more roles to users who sign up f
 dependencies[] = signup
 package = Signup
 core = 7.x
-; Information added by Drupal.org packaging script on 2014-01-22
-version = "7.x-1.x-dev"
-core = "7.x"
-project = "signup"
-datestamp = "1390351105"
-

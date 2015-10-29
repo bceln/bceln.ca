@@ -6,6 +6,9 @@ class Bceln_Migrate_Node_Resource extends Bceln_Migrate_Abstract {
   }
 
   public function __construct($arguments = []) {
+    $this->extraSourceFields = [
+      'subscriptions' => t('Subscribed Organizations looked up in prepareRow()'),
+    ];
     parent::__construct($arguments);
   	$this->destination = new MigrateDestinationNode('resource');
   	$this->dealWithPathAuto();    
@@ -20,6 +23,7 @@ class Bceln_Migrate_Node_Resource extends Bceln_Migrate_Abstract {
       MigrateDestinationNode::getKeySchema()
     );
 
+    $this->addFieldMapping('field_legacy_id', 'db_id');
     $this->addFieldMapping('title', 'db_name');
 
     $this->addFieldMapping('field_private_note', 'notes');
@@ -39,8 +43,7 @@ class Bceln_Migrate_Node_Resource extends Bceln_Migrate_Abstract {
 
     $this->addFieldMapping('field_resource_vendor_ref', 'vendor_id')->sourceMigration('vendor_import');
 
-    // from subscriptions.csv
-    // $this->addFieldMapping('field_organization_ref', '');
+    $this->addFieldMapping('field_organization_ref', 'subscriptions')->sourceMigration('organization_import'); // from subscriptions.csv
 
     $this->addFieldMapping('field_resources_note_subscribers', 'subscrib_notes');
     // $this->addFieldMapping('field_resources_note_subscribers:format', '');
@@ -134,7 +137,7 @@ class Bceln_Migrate_Node_Resource extends Bceln_Migrate_Abstract {
       'field_resources_generic_url:attributes',
       'field_resources_generic_url:language',
       // 'field_resource_vendor_ref',
-      'field_organization_ref',
+      // 'field_organization_ref',
       // 'field_resources_note_subscribers',
       'field_resources_note_subscribers:format',
       // 'field_resources_multi_consortial',
@@ -282,5 +285,7 @@ class Bceln_Migrate_Node_Resource extends Bceln_Migrate_Abstract {
     if (('PsycCRITIQUES' == trim($row->db_name)) && empty($row->db_id)) {
       $row->db_id = 1337;
     }
+
+    $row->subscriptions = Bceln_Migrate_Subscription::getSubscriptionsByDbId($row->db_id);
   }
 }

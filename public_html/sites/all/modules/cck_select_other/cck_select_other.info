@@ -12,10 +12,3 @@ files[] = views/cck_select_other_handler_filter.inc
 core = 7.x
 php = 5.x
 
-
-; Information added by drupal.org packaging script on 2013-09-30
-version = "7.x-1.1+3-dev"
-core = "7.x"
-project = "cck_select_other"
-datestamp = "1380557839"
-
