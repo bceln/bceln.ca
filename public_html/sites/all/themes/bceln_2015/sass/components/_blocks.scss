@@ -1,9 +1,7 @@
 
 //
-//GENERAL styles for homepage Blocks
+//GENERAL styles for homepage Blocks as well as header and footer
 //
-
-
 //fix needed for firefox and safari
 .block{
 	position:relative;
@@ -194,5 +192,41 @@
     @include font-weight($fw-normal);
 	span.date-display-single {
 	    margin-left: 21px;
+	}
+}
+
+//
+//Block title #block-block-17 replacing the front page #block-boxes-homepage in non front pages 
+//
+
+#block-block-17 {
+	position: relative;
+	h2.title-header-region{
+	    text-transform: uppercase;
+	    font-weight: 600;
+	    font-size: 22px;
+		margin-bottom:0px;
+		padding:13px;
+		margin-left:0;
+	}
+	@include breakpoint($tablet-layout){
+		h2.title-header-region{
+			margin-left:24%;
+			padding:22px;			
+		}
+	}
+}
+@include breakpoint($tablet-layout){
+	#block-block-17:before {
+		opacity:0.7;
+		top: -19px;
+	    left: 2%;
+	    content: '';
+	    width: 215px;
+	    height: 140px;
+	    display: block;
+	    position: absolute;
+	    background:url("../images/header-bg-small.png") no-repeat;
+	    z-index: 10000;
 	}
 }

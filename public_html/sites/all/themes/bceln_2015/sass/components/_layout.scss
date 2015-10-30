@@ -149,7 +149,7 @@
 	    width: 97.68519%;
 	    margin-right: 1.15741%;
 	};
-	.l-branding:after{
+	.front .l-branding:after{
 		content: '';
 		height: 23px;
 		background-color: #CEB6D0;
@@ -166,8 +166,9 @@
 		display: block;
 	}
 }
+
 //
-// Header Region 
+// Header Region FOR FRONT PAGE 
 // =================================
 .l-region--header{
 	background:$violet-dark-gradiant;
@@ -180,21 +181,22 @@
 	.boxes-box-content{
 		display:none;
 	}
+	#block-boxes-homepage, #block-block-17{
+	    @include clearfix;
+	    @include grid-container;
+		.block__content{
+			background: -webkit-linear-gradient(left, $violet-dark-gradiant , $violet-light-gradiant, $violet-dark-gradiant); /* For Safari 5.1 to 6.0 */
+			background: -o-linear-gradient(right, $violet-dark-gradiant, $violet-light-gradiant, $violet-dark-gradiant); /* For Opera 11.1 to 12.0 */
+			background: -moz-linear-gradient(right, $violet-dark-gradiant, $violet-light-gradiant, $violet-dark-gradiant); /* For Firefox 3.6 to 15 */
+			background: linear-gradient(to right, $violet-dark-gradiant , $violet-light-gradiant, $violet-dark-gradiant); /* Standard syntax */
+		}
+	}
 	@include breakpoint($tablet-layout){
 		.boxes-box-content{
 			display:block;
 		}
 		#block-boxes-homepage{
-		    @include clearfix;
-		    @include grid-container;
-			.block__content{
-				background: -webkit-linear-gradient(left, $violet-dark-gradiant , $violet-light-gradiant, $violet-dark-gradiant); /* For Safari 5.1 to 6.0 */
-				background: -o-linear-gradient(right, $violet-dark-gradiant, $violet-light-gradiant, $violet-dark-gradiant); /* For Opera 11.1 to 12.0 */
-				background: -moz-linear-gradient(right, $violet-dark-gradiant, $violet-light-gradiant, $violet-dark-gradiant); /* For Firefox 3.6 to 15 */
-				background: linear-gradient(to right, $violet-dark-gradiant , $violet-light-gradiant, $violet-dark-gradiant); /* Standard syntax */
-			}
 			#boxes-box-homepage{
-		
 		    background: url("../images/header-bg.png") no-repeat;
 		    height: 312px;
 		    position: relative;
@@ -252,15 +254,15 @@
 	}
 }
 //
-// Content
+// Content FRONT
 // =================================
 
 //Mobile
-.l-content:before{
+.front .l-content:before{
 	display:none;
 };
 @include breakpoint($tablet-layout) {
-	.l-content:before{
+	.front .l-content:before{
 	    content: '';
 	    height: 23px;
 	    background-color:$violet-light;
@@ -274,11 +276,11 @@
 	};
 }
 @include breakpoint(880px) {
-	.l-content:before{
+	.front .l-content:before{
 	    width: 880px;
 	}
 }
-.l-content{
+.front .l-content{
 	#block-views-services-block{
 		margin-top:40px;
 		margin-bottom:60px;;
