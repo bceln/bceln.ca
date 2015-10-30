@@ -24,15 +24,36 @@
   @include grid-container;  
 }
 .l-region--sidebar-second{
-    @include grid-span(3, 10);
+    @include grid-span(12,1);
+	background:$grey-light;
 }
 .l-content {
-    @include grid-span(9, 1);
+    @include grid-span(12, 1);
+}
+@include breakpoint($tablet-layout){
+	.l-region--sidebar-second{
+	    @include grid-span(4, 9);
+	}
+	.l-content {
+	    @include grid-span(8, 1);
+	}
+}
+@include breakpoint($desktop-layout){
+	.l-region--sidebar-second{
+	    @include grid-span(3, 10);
+	}
+	.l-content {
+	    @include grid-span(9, 1);
+	}
 }
 body.no-sidebars 
 .l-content{
   @include grid-span(12, 1);  	
 }
 
+//fix needed for firefox and safari
+.block{
+	position:relative;
+}
 
  

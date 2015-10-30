@@ -37,6 +37,7 @@ h1 {
   font-size: $fz-h1;
   line-height: 1.1em;
   margin-bottom: 30px;
+  color:$grey-dark;
 }
   
 h2 {
@@ -85,18 +86,15 @@ strong {
 //
 h2{
 	font-size:$fz-h2-large;
-	color:$white;
-//	text-transform:uppercase;
-	
+	color:$white;	
 }
 h2 a{
 	color:$violet-dark;
-	
 }
+
 //
 //H3 links
 //
-
 .field__item h3, .view-id-Blog h4 {	
 	margin-bottom:3px !important;
 	a {
@@ -112,4 +110,14 @@ h2 a{
 		   cursor:pointer;
 		}
 	}
+}
+.l-region--sidebar-second .block h2.block__title{
+	color:$grey-dark;
+	font-size:$fz-h3;
+	padding:0 15px ;
+	padding-top:25px;
+	margin-bottom:0px;
+	text-transform:uppercase;
+	font-weight:$fw-bold;
+	padding-bottom:25px;
 }

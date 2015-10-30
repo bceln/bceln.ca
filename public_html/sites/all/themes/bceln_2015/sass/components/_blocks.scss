@@ -2,12 +2,9 @@
 //
 //GENERAL styles for homepage Blocks as well as header and footer
 //
-//fix needed for firefox and safari
-.block{
-	position:relative;
-}
-//main body and side bar blocks 
-.l-main{
+
+//COntent body Excluding side bar blocks 
+.l-content {
 	.block{
 		margin-top:40px;
 		.more-link{
@@ -198,7 +195,6 @@
 //
 //Block title #block-block-17 replacing the front page #block-boxes-homepage in non front pages 
 //
-
 #block-block-17 {
 	position: relative;
 	h2.title-header-region{
