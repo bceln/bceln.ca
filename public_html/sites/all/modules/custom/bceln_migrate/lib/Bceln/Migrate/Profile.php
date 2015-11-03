@@ -6,6 +6,9 @@ class Bceln_Migrate_Profile extends Bceln_Migrate_Abstract {
   }
 
   public function __construct($arguments = []) {
+    $this->extraSourceFields = [
+      'group_names' => t('User group names looked up in prepareRow()'),
+    ];
     parent::__construct($arguments);
   	$this->destination = new MigrateDestinationProfile2('contact');
   	$this->dealWithPathAuto();    
@@ -33,6 +36,11 @@ class Bceln_Migrate_Profile extends Bceln_Migrate_Abstract {
     $this->addFieldMapping('field_private_note', 'description');
     // $this->addFieldMapping('field_private_note:format', '');
 
+    $this->addFieldMapping('field_contact_groups', 'group_names');
+    // $this->addFieldMapping('field_contact_groups:source_type', '');
+    $this->addFieldMapping('field_contact_groups:create_term')->defaultValue(TRUE);
+    $this->addFieldMapping('field_contact_groups:ignore_case')->defaultValue(TRUE);
+
     // $this->addFieldMapping('language', '');
     // $this->addFieldMapping('field_contact_photo', '');
     // $this->addFieldMapping('field_contact_photo:file_class', '');
@@ -44,10 +52,6 @@ class Bceln_Migrate_Profile extends Bceln_Migrate_Abstract {
     // $this->addFieldMapping('field_contact_photo:urlencode', '');
     // $this->addFieldMapping('field_contact_photo:alt', '');
     // $this->addFieldMapping('field_contact_photo:title', '');
-    // $this->addFieldMapping('field_contact_groups', '');
-    // $this->addFieldMapping('field_contact_groups:source_type', '');
-    // $this->addFieldMapping('field_contact_groups:create_term', '');
-    // $this->addFieldMapping('field_contact_groups:ignore_case', '');
     // $this->addFieldMapping('field_contact_skype_address', '');
     // $this->addFieldMapping('path', '');
 
@@ -83,14 +87,24 @@ class Bceln_Migrate_Profile extends Bceln_Migrate_Abstract {
       // 'field_contact_jobtitle',
       // 'field_contact_phone',
       // 'field_contact_first_name',
-      'field_contact_groups',
-      'field_contact_groups:source_type',
-      'field_contact_groups:create_term',
-      'field_contact_groups:ignore_case',
+      // 'field_contact_groups',
+      // 'field_contact_groups:source_type',
+      // 'field_contact_groups:create_term',
+      // 'field_contact_groups:ignore_case',
       'field_contact_skype_address',
       // 'field_private_note',
       'field_private_note:format',
       'path',
     ]);
+  }
+
+  public function prepareRow($row) {
+    // Always include this fragment at the beginning of every prepareRow()
+    // implementation, so parent classes can ignore rows.
+    if (parent::prepareRow($row) === FALSE) {
+      return FALSE;
+    }
+
+    $row->group_names = Bceln_Migrate_Group::getGroupNamesByContactId($row->contact_id);
   }
 }

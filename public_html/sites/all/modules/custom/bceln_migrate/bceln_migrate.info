@@ -11,6 +11,7 @@ dependencies[] = league_csv
 
 files[] = lib/Bceln/Migrate/Abstract.php
 files[] = lib/Bceln/Migrate/Config.php
+files[] = lib/Bceln/Migrate/Group.php
 files[] = lib/Bceln/Migrate/IpAddress.php
 files[] = lib/Bceln/Migrate/Node/License.php
 files[] = lib/Bceln/Migrate/Node/Organization.php
