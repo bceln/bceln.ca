@@ -88,7 +88,7 @@ class Bceln_Migrate_Profile extends Bceln_Migrate_Abstract {
       // 'field_contact_phone',
       // 'field_contact_first_name',
       // 'field_contact_groups',
-      // 'field_contact_groups:source_type',
+      'field_contact_groups:source_type',
       // 'field_contact_groups:create_term',
       // 'field_contact_groups:ignore_case',
       'field_contact_skype_address',
