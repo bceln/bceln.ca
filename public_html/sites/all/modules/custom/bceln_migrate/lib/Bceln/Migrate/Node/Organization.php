@@ -33,7 +33,7 @@ class Bceln_Migrate_Node_Organization extends Bceln_Migrate_Abstract {
     // $this->addFieldMapping('field_org_url:attributes', '');
     // $this->addFieldMapping('field_org_url:language', '');
 
-    // $this->addFieldMapping('field_location', '');
+    $this->addFieldMapping('field_location')->defaultValue('TRUE');
     $this->addFieldMapping('field_location:name', 'inst_name');
     $this->addFieldMapping('field_location:street', 'street');
     // $this->addFieldMapping('field_location:additional', '');
@@ -124,7 +124,7 @@ class Bceln_Migrate_Node_Organization extends Bceln_Migrate_Abstract {
       'field_org_url:language',
       'field_private_note',
       'field_private_note:format',
-      'field_location',
+      // 'field_location',
       // 'field_location:name',
       // 'field_location:street',
       'field_location:additional',
