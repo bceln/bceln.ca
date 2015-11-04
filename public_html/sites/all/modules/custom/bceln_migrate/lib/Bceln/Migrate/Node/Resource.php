@@ -26,8 +26,9 @@ class Bceln_Migrate_Node_Resource extends Bceln_Migrate_Abstract {
     $this->addFieldMapping('field_legacy_id', 'db_id');
     $this->addFieldMapping('title', 'db_name');
 
-    $this->addFieldMapping('field_private_note', 'notes');
-    // $this->addFieldMapping('field_private_note:format', '');
+    $this->addFieldMapping('body', 'notes');
+    // $this->addFieldMapping('body:summary', '');
+    // $this->addFieldMapping('body:format', '');
 
     $this->addFieldMapping('field_resource_content_producer', 'content_producer');
 
@@ -74,9 +75,8 @@ class Bceln_Migrate_Node_Resource extends Bceln_Migrate_Abstract {
     // $this->addFieldMapping('translate', '');
     // $this->addFieldMapping('revision_uid', '');
     // $this->addFieldMapping('is_new', '');
-    // $this->addFieldMapping('body', '');
-    // $this->addFieldMapping('body:summary', '');
-    // $this->addFieldMapping('body:format', '');
+    // $this->addFieldMapping('field_private_note', '');
+    // $this->addFieldMapping('field_private_note:format', '');
     // $this->addFieldMapping('field_resources_generic_url', '');
     // $this->addFieldMapping('field_resources_generic_url:title', '');
     // $this->addFieldMapping('field_resources_generic_url:attributes', '');
@@ -119,10 +119,10 @@ class Bceln_Migrate_Node_Resource extends Bceln_Migrate_Abstract {
       'translate',
       'revision_uid',
       'is_new',
-      'body',
+      // 'body',
       'body:summary',
       'body:format',
-      // 'field_private_note',
+      'field_private_note',
       'field_private_note:format',
       // 'field_resource_vend_desc',
       'field_resource_vend_desc:title',
