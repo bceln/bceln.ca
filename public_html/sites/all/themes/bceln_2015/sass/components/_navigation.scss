@@ -95,7 +95,7 @@
 };
 
 //
-//IN THIS SECTION MENU BLOCK
+//IN THIS SECTION MENU BLOCK 1 
 // =================================
 #block-menu-block-1{
 	padding-left: 23px;
@@ -106,9 +106,9 @@
 		padding-bottom:8px;
 		padding-left:8px;
 		a{
-		    font-size: 18px;
+		    font-size: $fz-mid;
 		    line-height: 25px;
-		    color: #712C76;
+		    color: $violet-dark;
 		    font-weight: 800;
 	   		@include fontello-icon('\e800','before') {
 				font-size: 0.8em;
@@ -128,4 +128,65 @@
 	 }
 	
 	
+}
+//
+//IN THIS SECTION MENU BLOCK 2 
+// =================================
+#block-menu-block-2 {
+	position:absolute;
+    top: 22px;
+	width:100%;
+	.menu-name-main-menu{
+		ul.menu {
+		    list-style-type: none;
+		    margin: 0;
+		    padding: 0;
+			
+			li {
+			    padding: 10px 5px;
+			    width: 120px;
+			    display: inline-block;
+			    text-align: center;
+				a {
+					text-decoration:none;
+				}
+			}
+			li.active-trail {
+				background:$violet-super-super-light;
+			}
+		}
+	}
+}
+
+//
+//BreadCrumb
+// =================================
+ul.breadcrumb {
+	margin-top:25px;
+	margin-left:10px;
+	li{
+	    font-size: $fz-small;
+	    line-height: 25px;
+	    color: $violet-dark !important;
+	    font-weight: $fw-bold;
+		display: inline-block;
+   		@include fontello-icon('/','after') {
+			font-size: 0.8em;
+		    font-weight: $fw-bold;
+			margin-left: 0.3em;
+			margin-right: 0;
+			position: relative;
+			color:$grey-dark;
+			cursor:pointer;
+   		}
+		a{
+		    font-size: $fz-small;
+		    line-height: 25px;
+		    color: $violet-dark !important;
+		    font-weight: $fw-bold;
+		}
+	}
+	li.last:after {
+		content: '';
+	}; 
 }

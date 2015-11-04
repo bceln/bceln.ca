@@ -23,28 +23,6 @@
 		    top: 164px;
 		    z-index: 500;
 		}
-		#block-menu-block-2 {
-			position:absolute;
-		    top: 22px;
-			width:100%;
-			.menu-name-main-menu{
-				ul.menu {
-				    list-style-type: none;
-				    margin: 0;
-				    padding: 0;
-				
-					li {
-					    margin-right: 20px;
-					    width: 120px;
-					    display: inline-block;
-					    text-align: center;
-						a {
-							text-decoration:none;
-						}
-					}
-				}
-			}
-		}
 	}
 	//Tablet
 	@include breakpoint($tablet-layout){
@@ -67,7 +45,7 @@
 				position:absolute;
 				right: 1.15741%;
 			    top: 22px;
-				width:739px;
+				width:772px;
 				.menu-name-main-menu{
 					ul.menu {
 					    list-style-type: none;
@@ -75,7 +53,7 @@
 					    padding: 0;
 				
 						li {
-						    margin-right: 20px;
+						    margin-right: 10px;
 						    width: 120px;
 						    display: inline-block;
 						    text-align: center;
@@ -107,7 +85,7 @@
 			#block-menu-block-2 {
 				position:absolute;
 				right: 3%;
-			    top: 83px;
+			    top: 77px;
 				.menu-name-main-menu{
 					ul.menu {
 					    list-style-type: none;
@@ -149,7 +127,7 @@
 	    width: 97.68519%;
 	    margin-right: 1.15741%;
 	};
-	.front .l-branding:after{
+	.l-branding:after{
 		content: '';
 		height: 23px;
 		background-color: #CEB6D0;
@@ -170,7 +148,7 @@
 //
 // Header Region FOR FRONT PAGE 
 // =================================
-.l-region--header{
+.wrap-header{
 	background:$violet-dark-gradiant;
 	position:relative;
 	//mobile Layout
@@ -181,7 +159,7 @@
 	.boxes-box-content{
 		display:none;
 	}
-	#block-boxes-homepage, #block-block-17{
+	#block-boxes-homepage, #block-re-utilities-section-nav{
 	    @include clearfix;
 	    @include grid-container;
 		.block__content{
@@ -231,7 +209,6 @@
 					    color: $orange;
 					    text-decoration: none;
 					    text-transform: uppercase;
-					
 					}
 				}
 			}	
@@ -246,7 +223,6 @@
 						font-size:30px;
 					    line-height: 30px;
 					}
-				
 				}
 			
 			}
@@ -602,4 +578,7 @@
 		}
 	}
 
+}
+.not-front .l-branding:after{
+	display:none;
 }

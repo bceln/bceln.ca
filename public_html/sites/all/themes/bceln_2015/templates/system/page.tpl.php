@@ -92,7 +92,7 @@
       <?php print render($page['branding']); ?>
     </div>
 
-    <?php print render($page['header']); ?>
+    <div class="wrap-header"><?php print render($page['header']); ?></div>
     <?php print render($page['navigation']); ?>
   </header>
 

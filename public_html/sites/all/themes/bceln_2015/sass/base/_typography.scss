@@ -111,6 +111,40 @@ h2 a{
 		}
 	}
 }
+.field-group-div.collapsible h3{
+	background-color:$grey-light;
+	padding:7px 5px;
+	@include fontello-icon('\e807') {
+     font-size: 1.0em;
+     margin-left: 0.3em;
+     margin-right: 0;
+     position: relative;
+	   color:$dark-cyan;
+	   cursor:pointer;
+	}
+	a{
+		padding-left:5px;
+		color:$violet-dark;
+	}
+	a:hover {
+		color:$violet-dark !important;
+	};
+}
+.field-group-div.collapsed.collapsible h3,  .field-group-div.collapsed.collapsible h3{
+	@include fontello-icon('\e806') {
+       font-size: 1.0em;
+       margin-left: 0.3em;
+       margin-right: 0;
+       position: relative;
+	   color:$dark-cyan;
+   	   cursor:pointer;
+	}
+	.field-group-format-toggler a:before{
+		content:'';
+		margin-left:0px;
+	}
+}
+
 .l-region--sidebar-second .block h2.block__title{
 	color:$grey-dark;
 	font-size:$fz-h3;

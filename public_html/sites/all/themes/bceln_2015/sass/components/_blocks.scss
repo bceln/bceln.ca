@@ -195,34 +195,89 @@
 //
 //Block title #block-block-17 replacing the front page #block-boxes-homepage in non front pages 
 //
-#block-block-17 {
+#block-re-utilities-section-nav {
 	position: relative;
-	h2.title-header-region{
-	    text-transform: uppercase;
-	    font-weight: 600;
-	    font-size: 22px;
+	
+	.block__content{
+		color:$white;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 22px;
 		margin-bottom:0px;
 		padding:13px;
 		margin-left:0;
+		z-index:1000;
 	}
+	
 	@include breakpoint($tablet-layout){
-		h2.title-header-region{
-			margin-left:24%;
-			padding:22px;			
-		}
-	}
-}
-@include breakpoint($tablet-layout){
-	#block-block-17:before {
-		opacity:0.7;
-		top: -19px;
+		&:before {
+			opacity:0.7;
+			top: -6px;
 	    left: 2%;
 	    content: '';
 	    width: 215px;
 	    height: 140px;
 	    display: block;
 	    position: absolute;
-	    background:url("../images/header-bg-small.png") no-repeat;
-	    z-index: 10000;
+	    background:url("../images/header-bg-small-small.png") no-repeat;
+	    z-index: 0;
+		}
+	.block__content{
+			margin-left:65px;
+			padding:22px;
+			z-index:10000;			
+		}
 	}
+	@include breakpoint(1111px){
+		.block__content{
+			margin-left:94px !important;
+			z-index:10000;			
+		}
+		&:before {
+		    background:url("../images/header-bg-small.png") no-repeat;
+			top: -19px;
+		}
+	}
+}
+
+
+//
+//IN THIS SECTION GENERIC BLOCKS Within l-region--sidebar-second
+// =================================
+
+.l-region--sidebar-second{
+	.block{
+		padding-left: 23px;
+	    padding-right: 33px;
+	    padding-top: 70px;
+	    padding-bottom: 20px;
+		h2.block__title{
+			
+		}
+	    ul.menu li {
+			padding-bottom:8px;
+			padding-left:8px;
+			a{
+			    font-size: $fz-mid;
+			    line-height: 25px;
+			    color: $violet-dark;
+			    font-weight: 800;
+		   		@include fontello-icon('\e800','before') {
+					font-size: 0.8em;
+					margin-left: 0.3em;
+					margin-right: 0;
+					position: relative;
+					color:$orange;
+					cursor:pointer;
+		   		}
+			}
+	    }
+		 ul.menu li a.active-trail{
+			 color:$grey-dark !important;
+		 }
+		 ul.menu li a.active-trail:hover{
+			 color:$grey-dark !important;
+		 }
+	}
+
 }

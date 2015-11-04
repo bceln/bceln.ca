@@ -12,6 +12,10 @@ function re_utilities_block_info() {
       'info' => t('Utility Nav'),
       'cache' => DRUPAL_NO_CACHE,
   );
+  $blocks['section-nav'] = array(
+      'info' => t('Section Nav'),
+      'cache' => DRUPAL_NO_CACHE,
+  );
 
   return $blocks;
 }
@@ -19,16 +23,31 @@ function re_utilities_block_info() {
 /**
  * Implements hook_block_view().
  */
-function re_utilities_block_view($block_name = '') {
-  if ($block_name == 'utility_nav') {
-
-    $block = array(
-        'subject' => null,
-        'content' => re_utilities_block_content(),
-    );
-
-    return $block;
+function re_utilities_block_view($delta = '') {
+	$block = array();
+	
+  switch ($delta) {
+  	case 'utility_nav':
+	    $block = array(
+	        'subject' => null,
+	        'content' => re_utilities_block_content(),
+	    );
+		  break;
+		case 'section-nav':
+	    $block = array(
+	        'subject' => null,
+	        'content' => re_section_nav_block_content(),
+	    );
+		break;
   }
+
+  return $block;
+}
+
+function re_section_nav_block_content(){
+	$trail = menu_get_active_trail();
+	
+	return $trail[1][title];
 }
 
 function re_utilities_block_content() {
