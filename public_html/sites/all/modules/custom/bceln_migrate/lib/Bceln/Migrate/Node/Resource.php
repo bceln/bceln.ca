@@ -36,10 +36,10 @@ class Bceln_Migrate_Node_Resource extends Bceln_Migrate_Abstract {
     $this->addFieldMapping('field_resources_usage_stats', 'usage_stats');
     // $this->addFieldMapping('field_resources_usage_stats:format', '');
 
-    $this->addFieldMapping('field_resources_generic_url', 'more_info');
-    // $this->addFieldMapping('field_resources_generic_url:title', '');
-    // $this->addFieldMapping('field_resources_generic_url:attributes', '');
-    // $this->addFieldMapping('field_resources_generic_url:language', '');
+    $this->addFieldMapping('field_resource_vend_desc', 'more_info');
+    // $this->addFieldMapping('field_resource_vend_desc:title', '');
+    // $this->addFieldMapping('field_resource_vend_desc:attributes', '');
+    // $this->addFieldMapping('field_resource_vend_desc:language', '');
 
     $this->addFieldMapping('field_resource_vendor_ref', 'vendor_id')->sourceMigration('vendor_import');
 
@@ -77,10 +77,10 @@ class Bceln_Migrate_Node_Resource extends Bceln_Migrate_Abstract {
     // $this->addFieldMapping('body', '');
     // $this->addFieldMapping('body:summary', '');
     // $this->addFieldMapping('body:format', '');
-    // $this->addFieldMapping('field_resource_vend_desc', '');
-    // $this->addFieldMapping('field_resource_vend_desc:title', '');
-    // $this->addFieldMapping('field_resource_vend_desc:attributes', '');
-    // $this->addFieldMapping('field_resource_vend_desc:language', '');
+    // $this->addFieldMapping('field_resources_generic_url', '');
+    // $this->addFieldMapping('field_resources_generic_url:title', '');
+    // $this->addFieldMapping('field_resources_generic_url:attributes', '');
+    // $this->addFieldMapping('field_resources_generic_url:language', '');
     // $this->addFieldMapping('field_platform', '');
     // $this->addFieldMapping('field_platform:format', '');
     // $this->addFieldMapping('field_access', '');
@@ -124,7 +124,7 @@ class Bceln_Migrate_Node_Resource extends Bceln_Migrate_Abstract {
       'body:format',
       // 'field_private_note',
       'field_private_note:format',
-      'field_resource_vend_desc',
+      // 'field_resource_vend_desc',
       'field_resource_vend_desc:title',
       'field_resource_vend_desc:attributes',
       'field_resource_vend_desc:language',
@@ -132,7 +132,7 @@ class Bceln_Migrate_Node_Resource extends Bceln_Migrate_Abstract {
       // 'field_resources_chron_coverage',
       // 'field_resources_usage_stats',
       'field_resources_usage_stats:format',
-      // 'field_resources_generic_url',
+      'field_resources_generic_url',
       'field_resources_generic_url:title',
       'field_resources_generic_url:attributes',
       'field_resources_generic_url:language',
