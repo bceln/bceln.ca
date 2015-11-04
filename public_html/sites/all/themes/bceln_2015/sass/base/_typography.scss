@@ -91,7 +91,26 @@ h2{
 h2 a{
 	color:$violet-dark;
 }
-
+//
+// Field Group H2's
+// =================================
+.field-group-div{
+	h2 {
+		margin:25px 0px;
+		background-color:$violet-super-super-light;
+		padding:3px 30px;
+		span{
+			text-transform:uppercase;
+			color:$grey-dark;
+			font-weight:$fw-bold;
+			font-size:$fz-h5;
+		}
+	}
+}
+.field-group-div .field--type-text-long > .field__items:first-of-type ,
+.field-group-div .field--type-node-reference > .field__items:first-of-type{
+	margin:32px;
+}
 //
 //H3 links
 //
@@ -100,18 +119,18 @@ h2 a{
 	a {
 		color:$violet-dark;
 		font-size:$fz-h3;
-		font-weight:$fw-normal-thik;
+//		font-weight:$fw-normal-thik;
 		@include fontello-icon('\e800') {
-	       font-size: 1.0em;
-	       margin-left: 0.3em;
-	       margin-right: 0;
-	       position: relative;
-		   color:$orange;
-		   cursor:pointer;
+			font-size: 1.0em;
+			margin-left: 0.3em;
+			margin-right: 0;
+			position: relative;
+			color:$orange;
+			cursor:pointer;
 		}
 	}
 }
-.field-group-div.collapsible h3{
+.field-group-div.collapsible h3, .field-group-format-title h3{
 	background-color:$grey-light;
 	padding:7px 5px;
 	@include fontello-icon('\e807') {
@@ -129,22 +148,21 @@ h2 a{
 	a:hover {
 		color:$violet-dark !important;
 	};
-}
-.field-group-div.collapsed.collapsible h3,  .field-group-div.collapsed.collapsible h3{
-	@include fontello-icon('\e806') {
-       font-size: 1.0em;
-       margin-left: 0.3em;
-       margin-right: 0;
-       position: relative;
-	   color:$dark-cyan;
-   	   cursor:pointer;
-	}
 	.field-group-format-toggler a:before{
-		content:'';
-		margin-left:0px;
+		display:none;
 	}
 }
+.field-group-div.collapsed.collapsible h3,.collapsed.field-group-format-title h3{
+	@include fontello-icon('\e806') {
+		font-size: 1.0em;
+		margin-left: 0.3em;
+		margin-right: 0;
+		position: relative;
+		color:$dark-cyan;
+		cursor:pointer;
+	}
 
+}
 .l-region--sidebar-second .block h2.block__title{
 	color:$grey-dark;
 	font-size:$fz-h3;
@@ -154,4 +172,10 @@ h2 a{
 	text-transform:uppercase;
 	font-weight:$fw-bold;
 	padding-bottom:25px;
+}
+a.field-group-format-title{
+	color:$violet-dark;
+}
+.field-group-format-wrapper{
+	margin:27px;	
 }

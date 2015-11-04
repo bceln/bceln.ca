@@ -18,7 +18,7 @@
 /* Uncomment bellow content to visualize the grid */
 /* -- Abstraction -- */
 /* Integrating Fontello in our code */
-.field__item h3 a::before, .view-id-Blog h4 a::before, .field-group-div.collapsible h3::before, .field-group-div.collapsed.collapsible h3::before, .search-block-form .container-inline .form-actions::after, .field--name-node-link .field__items a::after, .more-link a::after, .responsive-menus.responsified span.toggler::before, #block-menu-block-1 ul.menu li a::before, ul.breadcrumb li::after, .wrap-header #block-boxes-homepage .boxes-box-content .learn-more-header::after, #boxes-box-newsletter .boxes-box-content .news-letter-icon::before, .l-region--sidebar-second .block ul.menu li a::before {
+.field__item h3 a::before, .view-id-Blog h4 a::before, .field-group-div.collapsible h3::before, .field-group-format-title h3::before, .field-group-div.collapsed.collapsible h3::before, .collapsed.field-group-format-title h3::before, .search-block-form .container-inline .form-actions::after, .field--name-node-link .field__items a::after, .more-link a::after, .responsive-menus.responsified span.toggler::before, #block-menu-block-1 ul.menu li a::before, ul.breadcrumb li::after, .wrap-header #block-boxes-homepage .boxes-box-content .learn-more-header::after, #boxes-box-newsletter .boxes-box-content .news-letter-icon::before, .l-region--sidebar-second .block ul.menu li a::before {
   font-family: "fontello";
   font-style: normal;
   font-weight: normal;
@@ -208,12 +208,25 @@ h2 {
 h2 a {
   color: #712C76; }
 
+.field-group-div h2 {
+  margin: 25px 0px;
+  background-color: #e8dae8;
+  padding: 3px 30px; }
+  .field-group-div h2 span {
+    text-transform: uppercase;
+    color: #333333;
+    font-weight: 900;
+    font-size: 18px; }
+
+.field-group-div .field--type-text-long > .field__items:first-of-type,
+.field-group-div .field--type-node-reference > .field__items:first-of-type {
+  margin: 32px; }
+
 .field__item h3, .view-id-Blog h4 {
   margin-bottom: 3px !important; }
   .field__item h3 a, .view-id-Blog h4 a {
     color: #712C76;
-    font-size: 17px;
-    font-weight: 500; }
+    font-size: 17px; }
     .field__item h3 a::before, .view-id-Blog h4 a::before {
       font-size: 1.0em;
       margin-left: 0.3em;
@@ -229,10 +242,10 @@ h2 a {
       color: #ffad00;
       cursor: pointer; }
 
-.field-group-div.collapsible h3 {
+.field-group-div.collapsible h3, .field-group-format-title h3 {
   background-color: #F6F6F6;
   padding: 7px 5px; }
-  .field-group-div.collapsible h3::before {
+  .field-group-div.collapsible h3::before, .field-group-format-title h3::before {
     font-size: 1.0em;
     margin-left: 0.3em;
     margin-right: 0;
@@ -246,13 +259,15 @@ h2 a {
     position: relative;
     color: #008499;
     cursor: pointer; }
-  .field-group-div.collapsible h3 a {
+  .field-group-div.collapsible h3 a, .field-group-format-title h3 a {
     padding-left: 5px;
     color: #712C76; }
-  .field-group-div.collapsible h3 a:hover {
+  .field-group-div.collapsible h3 a:hover, .field-group-format-title h3 a:hover {
     color: #712C76 !important; }
+  .field-group-div.collapsible h3 .field-group-format-toggler a:before, .field-group-format-title h3 .field-group-format-toggler a:before {
+    display: none; }
 
-.field-group-div.collapsed.collapsible h3::before, .field-group-div.collapsed.collapsible h3::before {
+.field-group-div.collapsed.collapsible h3::before, .collapsed.field-group-format-title h3::before {
   font-size: 1.0em;
   margin-left: 0.3em;
   margin-right: 0;
@@ -267,10 +282,6 @@ h2 a {
   color: #008499;
   cursor: pointer; }
 
-.field-group-div.collapsed.collapsible h3 .field-group-format-toggler a:before, .field-group-div.collapsed.collapsible h3 .field-group-format-toggler a:before {
-  content: '';
-  margin-left: 0px; }
-
 .l-region--sidebar-second .block h2.block__title {
   color: #333333;
   font-size: 17px;
@@ -280,6 +291,12 @@ h2 a {
   text-transform: uppercase;
   font-weight: 900;
   padding-bottom: 25px; }
+
+a.field-group-format-title {
+  color: #712C76; }
+
+.field-group-format-wrapper {
+  margin: 27px; }
 
 .search-block-form .container-inline {
   position: relative; }
