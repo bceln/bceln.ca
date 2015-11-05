@@ -36,7 +36,7 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
   font-size: $fz-h1;
   line-height: 1.1em;
-  margin-bottom: 30px;
+  margin: 40px 0px 30px 0px;
   color:$grey-dark;
 }
   
@@ -98,7 +98,7 @@ h2 a{
 	h2 {
 		margin:25px 0px;
 		background-color:$violet-super-super-light;
-		padding:3px 30px;
+		padding:3px 2.5%;
 		span{
 			text-transform:uppercase;
 			color:$grey-dark;
@@ -106,10 +106,6 @@ h2 a{
 			font-size:$fz-h5;
 		}
 	}
-}
-.field-group-div .field--type-text-long > .field__items:first-of-type ,
-.field-group-div .field--type-node-reference > .field__items:first-of-type{
-	margin:32px;
 }
 //
 //H3 links
@@ -175,7 +171,4 @@ h2 a{
 }
 a.field-group-format-title{
 	color:$violet-dark;
-}
-.field-group-format-wrapper{
-	margin:27px;	
 }

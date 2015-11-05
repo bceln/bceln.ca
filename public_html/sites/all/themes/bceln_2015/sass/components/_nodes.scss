@@ -1,0 +1,58 @@
+.node{
+	.field-group-format-wrapper{
+		margin:15px 25px 15px 35px;
+	}
+	.node-container-indent{
+	 @include layout($gutter:2) {
+  	   @include grid-span(12, 1);
+			 clear:both;
+   	}
+	}
+	.field{
+	  @include clearfix;
+	  @include grid-container;  
+	}
+	.field__label{
+		font-size:$fz-mid;
+	  @include font-weight($fw-bold);
+		text-transform:uppercase;
+	}
+//	SUBSCRIPTION TERM Display
+	.sub-term-label{
+	    background: $grey-medium;
+			margin:20px 0px;
+		h2{
+			display:inline-block;
+		  line-height: 1.4em;
+			margin:0px;
+			padding-right:20px;
+			font-size:$fz-h6;
+			
+		}
+		h2.not-main-label{
+			background:$grey-medium;
+		}
+		.field{
+			padding-left:10px;
+			display:inline-block;
+		}
+	}
+	//Orginizations
+	.orginization-links-only{
+		margin-bottom:20px;
+		li.views-row  a{
+			color:$violet-dark;
+			@include fontello-icon('\e800') {
+	       font-size: 1.0em;
+	       margin-left: 0.3em;
+	       margin-right: 0;
+	       position: relative;
+			   color:$orange;
+			   cursor:pointer;
+			}
+		}
+	}
+	.end-of-node{
+		height:40px;
+	}
+}

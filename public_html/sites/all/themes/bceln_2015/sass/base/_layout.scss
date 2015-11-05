@@ -25,7 +25,10 @@
 }
 .l-region--sidebar-second{
     @include grid-span(12,1);
-	background:$grey-light;
+	  background: -webkit-linear-gradient(left, $grey-light , $white); /* For Safari 5.1 to 6.0 */
+	  background: -o-linear-gradient(right, $grey-light,  $white); /* For Opera 11.1 to 12.0 */
+	  background: -moz-linear-gradient(right, $grey-light,  $white); /* For Firefox 3.6 to 15 */
+	  background: linear-gradient(to right, $grey-light ,  $white); /* Standard syntax */
 }
 .l-content {
     @include grid-span(12, 1);
@@ -55,5 +58,7 @@ body.no-sidebars
 .block{
 	position:relative;
 }
-
+.clear-both{
+	clear:both;
+}
  
