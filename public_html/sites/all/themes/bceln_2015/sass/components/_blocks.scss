@@ -3,8 +3,8 @@
 //GENERAL styles for homepage Blocks as well as header and footer
 //
 
-//COntent body Excluding side bar blocks 
-.l-content {
+//Content body ONLY in front page 
+.front .l-content {
 	.block{
 		margin-top:40px;
 		.more-link{
@@ -159,7 +159,6 @@
     margin: 0px 31px;
 	.boxes-box-content{
 		background:$dark-cyan;
-		text-align: center;
 		a{
 		    display: inline-block;
 			padding:10px;
@@ -193,7 +192,7 @@
 }
 
 //
-//Block title #block-block-17 replacing the front page #block-boxes-homepage in non front pages 
+//Block title #block-re-utilities-section-nav replacing the front page #block-boxes-homepage in non front pages 
 //
 #block-re-utilities-section-nav {
 	position: relative;
@@ -252,26 +251,37 @@
 	    padding-top: 70px;
 	    padding-bottom: 20px;
 		h2.block__title{
-			
+			background-color:$violet-super-super-light;
+			text-align: center;
+			padding: 9px 20px;
+			margin-bottom:25px;
 		}
 	    ul.menu li {
 			padding-bottom:8px;
 			padding-left:8px;
+			text-align:left;
+			
 			a{
-			    font-size: $fz-mid;
 			    line-height: 25px;
 			    color: $violet-dark;
-			    font-weight: 800;
+			    font-weight: $fw-semi-bold;
 		   		@include fontello-icon('\e800','before') {
-					font-size: 0.8em;
-					margin-left: 0.3em;
-					margin-right: 0;
-					position: relative;
-					color:$orange;
-					cursor:pointer;
+						font-size: 0.8em;
+						margin-left: 0.3em;
+						margin-right: 0;
+						position: relative;
+						color:$orange;
+						cursor:pointer;
 		   		}
-			}
+				}
 	    }
+			.block__content{
+		    padding: 0 5px;
+			}
+			.block__content > div{
+				border-bottom:2px solid $orange;
+				padding-bottom:20px;		
+			}
 		 ul.menu li a.active-trail{
 			 color:$grey-dark !important;
 		 }
@@ -280,4 +290,45 @@
 		 }
 	}
 
+}
+
+
+//
+//IN THIS SECTION <sidebar second's FIRST  IN THIS SECTION MENU BLOCK
+// =================================
+#block-menu-block-1{
+		padding-left: 23px;
+		padding-right: 33px;
+		padding-top: 70px;
+		padding-bottom: 20px;
+		h2.block__title{
+			background-color:transparent !important;
+			text-align: left;
+			padding: 0 0 20px 13px;
+			margin-bottom:0px;
+		}
+    ul.menu li {
+		padding-bottom:8px;
+		padding-left:8px;
+		a{
+		    font-size: $fz-mid;
+		    line-height: 25px;
+		    color: $violet-super-super-light;
+		    font-weight: 800;
+	   		@include fontello-icon('\e800','before') {
+				font-size: 0.8em;
+				margin-left: 0.3em;
+				margin-right: 0;
+				position: relative;
+				color:$orange;
+				cursor:pointer;
+	   		}
+		}
+    }
+	 ul.menu li a.active-trail{
+		 color:$grey-dark !important;
+	 }
+	 ul.menu li a.active-trail:hover{
+		 color:$grey-dark !important;
+	 }	
 }

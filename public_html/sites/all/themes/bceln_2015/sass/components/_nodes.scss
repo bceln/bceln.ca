@@ -1,8 +1,8 @@
 .node{
-	.field-group-format-wrapper{
-		margin:15px 25px 15px 35px;
-	}
-	.node-container-indent{
+	margin-bottom:40px;
+//	Please not that for overview's resourses the display suite is rendering the view
+//	and that is wy the class .node-container-indent really didnt apply
+	.node-container-indent, .overview-resources .field-group-format-wrapper{
 	 @include layout($gutter:2) {
   	   @include grid-span(12, 1);
 			 clear:both;
@@ -16,6 +16,10 @@
 		font-size:$fz-mid;
 	  @include font-weight($fw-bold);
 		text-transform:uppercase;
+		margin:25px 0px 10px 0px;
+	}
+	.field--label-inline .field__label{
+		margin:0px;
 	}
 //	SUBSCRIPTION TERM Display
 	.sub-term-label{
@@ -54,5 +58,14 @@
 	}
 	.end-of-node{
 		height:40px;
+		border-bottom:2px solid $violet-super-super-light;
+		margin-bottom:20px;
 	}
+//	Special Modifications
+.overview-resources{
+	.fieldgroup-effects-processed{
+		clear:both;
+		margin:15px 0px 10px 0px;
+	}
+}
 }
