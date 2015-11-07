@@ -2,10 +2,14 @@
 	margin-bottom:40px;
 //	Please not that for overview's resourses the display suite is rendering the view
 //	and that is wy the class .node-container-indent really didnt apply
-	.node-container-indent, .overview-resources .field-group-format-wrapper{
+.field-group-div {
+	clear:both;
+}
+	.node-container-indent, .overview-resources .field-group-format-wrapper, .field-group-format-wrapper{
 	 @include layout($gutter:2) {
   	   @include grid-span(12, 1);
 			 clear:both;
+	     margin-bottom: 20px;
    	}
 	}
 	.field{
@@ -34,6 +38,7 @@
 			
 		}
 		h2.not-main-label{
+			padding-right:0px;
 			background:$grey-medium;
 		}
 		.field{

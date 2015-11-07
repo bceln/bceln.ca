@@ -276,10 +276,13 @@
 				}
 	    }
 			.block__content{
-		    padding: 0 5px;
+//		    padding: 0 5px;
+				border-bottom:2px solid $orange;
+
 			}
 			.block__content > div{
-				border-bottom:2px solid $orange;
+				width:90%;
+				margin :0 auto;
 				padding-bottom:20px;		
 			}
 		 ul.menu li a.active-trail{
@@ -309,17 +312,23 @@
 		}
     ul.menu li {
 		padding-bottom:8px;
-		padding-left:8px;
+		padding-left:22px;
+		display:block;
+		position:relative;
+		padding-bottom:15px;
 		a{
 		    font-size: $fz-mid;
-		    line-height: 25px;
-		    color: $violet-super-super-light;
+		    line-height: 15px;
+		    color: $violet-dark;
 		    font-weight: 800;
 	   		@include fontello-icon('\e800','before') {
 				font-size: 0.8em;
 				margin-left: 0.3em;
 				margin-right: 0;
-				position: relative;
+				position: absolute;
+				left:-2px;
+				top:3px;
+				font-size:$fz-h2;
 				color:$orange;
 				cursor:pointer;
 	   		}

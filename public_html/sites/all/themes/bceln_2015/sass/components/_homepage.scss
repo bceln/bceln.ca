@@ -17,6 +17,10 @@
 .view-organizations{
 	display:none;
 }
+//RESPONSIVE MENU BUG FIX
+.responsive-menus-0-0{
+	width:100% !important;
+}
 @include breakpoint($tablet-layout){
 	.view-organizations{
 		display:block;
