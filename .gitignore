@@ -4,4 +4,4 @@ public_html/sites/*/files
 error_log
 /private
 /tmp
-
+public_html/.htaccess
