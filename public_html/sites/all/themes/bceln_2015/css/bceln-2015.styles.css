@@ -18,7 +18,7 @@
 /* Uncomment bellow content to visualize the grid */
 /* -- Abstraction -- */
 /* Integrating Fontello in our code */
-.field__item h3 a::before, .field__items h3 a::before, .field-group-div.collapsible h3::before, .field-group-format-title h3::before, .field-group-div.collapsed.collapsible h3::before, .collapsed.field-group-format-title h3::before, .search-block-form .container-inline .form-actions::after, .field--name-node-link .field__items a::after, .more-link a::after, .responsive-menus.responsified span.toggler::before, ul.breadcrumb li::after, .wrap-header #block-boxes-homepage .boxes-box-content .learn-more-header::after, #boxes-box-newsletter .boxes-box-content .news-letter-icon::before, .l-region--sidebar-second .block ul.menu li a::before, #block-menu-block-1 ul.menu li a::before, .node .orginization-links-only li.views-row a::before {
+.field__item h3 a::before, .field__items h3 a::before, .field-group-div.collapsible h3::before, .field-group-format-title h3::before, .field-group-div.collapsed.collapsible h3::before, .collapsed.field-group-format-title h3::before, .search-block-form .container-inline .form-actions::after, form .views-submit-button::after, .field--name-node-link .field__items a::after, .more-link a::after, .responsive-menus.responsified span.toggler::before, ul.breadcrumb li::after, .wrap-header #block-boxes-homepage .boxes-box-content .learn-more-header::after, #boxes-box-newsletter .boxes-box-content .news-letter-icon::before, .l-region--sidebar-second .block ul.menu li a::before, #block-menu-block-1 ul.menu li a::before, .node .orginization-links-only li.views-row a::before {
   font-family: "fontello";
   font-style: normal;
   font-weight: normal;
@@ -348,6 +348,65 @@ a.field-group-format-title {
     .search-block-form .container-inline .form-actions .form-submit:hover {
       background: #ffad00; }
     .search-block-form .container-inline .form-actions .form-submit {
+      cursor: pointer;
+      border: none;
+      overflow: hidden;
+      text-indent: -9999px;
+      width: 35px;
+      background: #008499;
+      padding: 14px 2px 9px; }
+
+form {
+  position: relative; }
+  form .views-exposed-form .views-exposed-widget {
+    padding-right: 3px;
+    padding-left: 10px; }
+  form .views-exposed-form .views-widget-filter-keys {
+    padding-top: 5px; }
+  form .form-type-textfield input {
+    background-color: #E9E9E9;
+    width: 169px;
+    margin-right: 0px;
+    display: inline-block;
+    border: 0px;
+    font-size: 22px;
+    line-height: 35px;
+    background-color: #E9E9E9;
+    width: 165px;
+    padding: 0;
+    padding-right: 8px;
+    padding-bottom: 1px; }
+  form .views-submit-button {
+    padding-left: 0px !important;
+    padding-top: 4px !important;
+    margin-top: 8px;
+    cursor: pointer;
+    position: relative; }
+    form .views-submit-button::after {
+      cursor: pointer;
+      position: absolute;
+      right: 8px;
+      top: 30px;
+      z-index: 200;
+      font-size: 20px;
+      cursor: pointer;
+      color: #FFF;
+      position: absolute;
+      z-index: 200;
+      content: "";
+      cursor: pointer;
+      position: absolute;
+      right: 8px;
+      top: 30px;
+      z-index: 200;
+      font-size: 20px;
+      cursor: pointer;
+      color: #FFF;
+      position: absolute;
+      z-index: 200; }
+    form .views-submit-button .form-submit:hover {
+      background: #ffad00; }
+    form .views-submit-button .form-submit {
       cursor: pointer;
       border: none;
       overflow: hidden;
