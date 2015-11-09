@@ -314,17 +314,14 @@ a.field-group-format-title {
     background-color: #E9E9E9;
     width: 169px;
     margin-right: 0px;
-    display: inline-block;
-    border: 0px; }
+    display: inline-block; }
   .search-block-form .container-inline .form-item-search-block-form .form-text {
     border: none;
     font-size: 22px;
     line-height: 35px;
     background-color: #E9E9E9;
     width: 165px;
-    padding: 0;
-    padding-right: 8px;
-    padding-bottom: 1px; }
+    padding: 0 8px 1px 3px; }
   .search-block-form .container-inline .form-actions {
     cursor: pointer; }
     .search-block-form .container-inline .form-actions::after {
@@ -377,9 +374,7 @@ form {
     line-height: 35px;
     background-color: #E9E9E9;
     width: 165px;
-    padding: 0;
-    padding-right: 8px;
-    padding-bottom: 1px; }
+    padding: 0 8px 1px 3px; }
   form .views-submit-button {
     padding-left: 0px !important;
     padding-top: 4px !important;

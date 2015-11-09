@@ -7,21 +7,18 @@
 		position:relative;
 		.form-item-search-block-form{
 			background-color:$grey-medium;
-		    width: 169px;
-		    margin-right: 0px;
+			width: 169px;
+			margin-right: 0px;
 			display:inline-block;
-			border:0px;
 		}
 		.form-item-search-block-form{
 			.form-text {	
 				border: none;
-			    font-size: 22px;
-			    line-height: 35px;
-			    background-color: #E9E9E9;
-			    width: 165px;
-			    padding: 0;
-			    padding-right: 8px;
-			    padding-bottom: 1px;
+				font-size: 22px;
+				line-height: 35px;
+				background-color: #E9E9E9;
+				width: 165px;
+				padding:0 8px 1px 3px;
 			}
 		}
 		.form-actions {
@@ -82,9 +79,7 @@ form{
     line-height: 35px;
     background-color: #E9E9E9;
     width: 165px;
-    padding: 0;
-    padding-right: 8px;
-    padding-bottom: 1px;
+		padding:0 8px 1px 3px;
 	}
 	.views-submit-button{
 		padding-left:0px !important;
