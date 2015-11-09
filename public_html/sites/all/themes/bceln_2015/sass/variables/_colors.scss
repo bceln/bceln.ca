@@ -18,10 +18,11 @@ $dark-cyan: #008499; // Read More and See More colors, Magnifying Box BG
 $orange: #ffad00;   // Learn More text
   
 /* -- greys -- */
-$grey-light:  #F6F6F6; // Secondary titles front page blocks BG
+$grey-light:  #F6F6F6; // Secondary titles front page blocks BG :: TABLES ODD ROWS
+$gray-table:  #EAEAEA; //Tables Even Rows
 $grey-medium: #E9E9E9; // Secondary titles front page blocks BG, Search Box BG
 $grey-dark:   #333333; // Main Content Text Color
-  
+$tabs-color:  #d2bdd4; //Active tabs and their border color 
   
 /* -- adding some meaning to colors -- */
 $color-txt: $grey-dark;

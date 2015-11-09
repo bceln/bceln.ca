@@ -1,0 +1,49 @@
+//$grey-light:  #F6F6F6; // Secondary titles front page blocks BG :: TABLES ODD ROWS
+//$gray-table:#EAEAEA; //Tables Even Rows
+table{
+	margin:40px 0px;
+	th, td{
+		padding:10px 30px;
+		border:2px solid $white;
+	  font-size: $fz-mid;
+		
+		a{
+			color:$violet-dark;
+			font-size:$fz-h4;
+		}
+	}
+	thead{
+		tr{
+			th{
+				background:$violet-super-super-light;
+				color:$grey-dark;
+			  font-size: $fz-mid;
+			  color: $grey-dark;
+				text-transform:uppercase;
+				font-weight:$fw-bold;
+				a{
+					color:$grey-dark;
+				  font-size: $fz-mid;
+					text-transform:uppercase;
+					font-weight:$fw-bold;
+				}
+				a.active{
+					color:$grey-dark;
+				}
+			}
+		}
+	}
+	tbody{
+		tr.odd{
+			td{
+				background-color:$grey-light;
+				
+			}
+			tr.even{
+				td{
+					background-color:$gray-table;
+				}
+			}
+		}
+	}
+}
