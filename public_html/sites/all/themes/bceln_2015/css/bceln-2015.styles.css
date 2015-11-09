@@ -18,7 +18,7 @@
 /* Uncomment bellow content to visualize the grid */
 /* -- Abstraction -- */
 /* Integrating Fontello in our code */
-.field__item h3 a::before, .field__items h3 a::before, .field-group-div.collapsible h3::before, .field-group-format-title h3::before, .field-group-div.collapsed.collapsible h3::before, .collapsed.field-group-format-title h3::before, .search-block-form .container-inline .form-actions::after, form .views-submit-button::after, .field--name-node-link .field__items a::after, .more-link a::after, .responsive-menus.responsified span.toggler::before, ul.breadcrumb li::after, .wrap-header #block-boxes-homepage .boxes-box-content .learn-more-header::after, #boxes-box-newsletter .boxes-box-content .news-letter-icon::before, .l-region--sidebar-second .block ul.menu li a::before, #block-menu-block-1 ul.menu li a::before, .node .orginization-links-only li.views-row a::before {
+.field__item h3 a::before, .field__items h3 a::before, .field-group-div.collapsible h3 a::before, .field-group-format-title h3 a::before, .field-group-div.collapsed.collapsible h3 a::before, .collapsed.field-group-format-title h3 a::before, .search-block-form .container-inline .form-actions::after, form .views-submit-button::after, .field--name-node-link .field__items a::after, .more-link a::after, .responsive-menus.responsified span.toggler::before, ul.breadcrumb li::after, .wrap-header #block-boxes-homepage .boxes-box-content .learn-more-header::after, #boxes-box-newsletter .boxes-box-content .news-letter-icon::before, .l-region--sidebar-second .block ul.menu li a::before, #block-menu-block-1 ul.menu li a::before, .node .orginization-links-only li.views-row a::before {
   font-family: "fontello";
   font-style: normal;
   font-weight: normal;
@@ -251,45 +251,49 @@ h2 a {
       color: #ffad00;
       cursor: pointer; }
 
-.field-group-div.collapsible h3, .field-group-format-title h3 {
+.field-group-div.collapsible h3 a, .field-group-format-title h3 a {
   background-color: #F6F6F6;
   padding: 7px 5px; }
-  .field-group-div.collapsible h3::before, .field-group-format-title h3::before {
+  .field-group-div.collapsible h3 a::before, .field-group-format-title h3 a::before {
     font-size: 1.0em;
     margin-left: 0.3em;
     margin-right: 0;
     position: relative;
     color: #008499;
     cursor: pointer;
+    padding-right: 7px;
     content: "";
     font-size: 1.0em;
     margin-left: 0.3em;
     margin-right: 0;
     position: relative;
     color: #008499;
-    cursor: pointer; }
-  .field-group-div.collapsible h3 a, .field-group-format-title h3 a {
+    cursor: pointer;
+    padding-right: 7px; }
+  .field-group-div.collapsible h3 a a, .field-group-format-title h3 a a {
     padding-left: 5px;
     color: #712C76; }
-  .field-group-div.collapsible h3 a:hover, .field-group-format-title h3 a:hover {
+  .field-group-div.collapsible h3 a a:hover, .field-group-format-title h3 a a:hover {
     color: #712C76 !important; }
-  .field-group-div.collapsible h3 .field-group-format-toggler a:before, .field-group-format-title h3 .field-group-format-toggler a:before {
+  .field-group-div.collapsible h3 a .field-group-format-toggler a:before, .field-group-format-title h3 a .field-group-format-toggler a:before {
     display: none; }
 
-.field-group-div.collapsed.collapsible h3::before, .collapsed.field-group-format-title h3::before {
+.field-group-div.collapsed.collapsible h3 a::before, .collapsed.field-group-format-title h3 a::before {
   font-size: 1.0em;
   margin-left: 0.3em;
   margin-right: 0;
   position: relative;
   color: #008499;
   cursor: pointer;
+  padding-right: 7px;
   content: "";
   font-size: 1.0em;
   margin-left: 0.3em;
   margin-right: 0;
   position: relative;
   color: #008499;
-  cursor: pointer; }
+  cursor: pointer;
+  padding-right: 7px; }
 
 .l-region--sidebar-second .block h2.block__title {
   color: #333333;
@@ -1612,9 +1616,9 @@ ul.breadcrumb {
     clear: both;
     margin: 15px 0px 10px 0px; }
 
-.view-id-Blog h4 {
+h4.h4-field--name-title {
   margin-bottom: 3px !important; }
-  .view-id-Blog h4 a {
+  h4.h4-field--name-title a {
     color: #333333;
     font-size: 17px; }
 

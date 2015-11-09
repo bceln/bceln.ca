@@ -130,7 +130,7 @@ h2 a{
 		}
 	}
 }
-.field-group-div.collapsible h3, .field-group-format-title h3{
+.field-group-div.collapsible h3 a, .field-group-format-title h3 a {
 	background-color:$grey-light;
 	padding:7px 5px;
 	@include fontello-icon('\e807') {
@@ -140,6 +140,7 @@ h2 a{
      position: relative;
 	   color:$dark-cyan;
 	   cursor:pointer;
+     padding-right: 7px;
 	}
 	a{
 		padding-left:5px;
@@ -152,7 +153,7 @@ h2 a{
 		display:none;
 	}
 }
-.field-group-div.collapsed.collapsible h3,.collapsed.field-group-format-title h3{
+.field-group-div.collapsed.collapsible h3 a,.collapsed.field-group-format-title h3 a{
 	@include fontello-icon('\e806') {
 		font-size: 1.0em;
 		margin-left: 0.3em;
@@ -160,6 +161,8 @@ h2 a{
 		position: relative;
 		color:$dark-cyan;
 		cursor:pointer;
+    padding-right: 7px;
+		
 	}
 
 }
