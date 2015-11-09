@@ -1,39 +1,40 @@
 //ALL HOME PAGE SPECIFIC STZYLES GO HERE
 
 //Responsive turn on and off for blocks
-#block-views-blog-mobile-news-letter{
-	display:block;
+#block-views-blog-mobile-news-letter {
+	display: block;
 }
-#block-views-trials-offers-renewals{
-	display:block;
-	
+#block-views-trials-offers-renewals {
+	display: block;
 }
-#block-views-blog-latest-news{
-	display:none;
+#block-views-blog-latest-news {
+	display: none;
 }
-#block-views-blog-connect-newsletter-block{
-	display:none;
+#block-views-blog-connect-newsletter-block {
+	display: none;
 }
-.view-organizations{
-	display:none;
+.view-organizations {
+	display: none;
 }
 //RESPONSIVE MENU BUG FIX
-.responsive-menus-0-0{
-	width:100% !important;
+.responsive-menus-0-0 {
+	width: 100% !important;
 }
-@include breakpoint($tablet-layout){
-	.view-organizations{
-		display:block;
+@include breakpoint($tablet-layout) {
+	.view-organizations {
+		display: block;
 	}
+
 }
-@include breakpoint($desktop-layout){
-	#block-views-blog-mobile-news-letter{
-		display:none;
+@include breakpoint($desktop-layout) {
+	#block-views-blog-mobile-news-letter {
+		display: none;
 	}
-	#block-views-blog-latest-news{
-		display:block;
+	#block-views-blog-latest-news {
+		display: block;
 	}
-	#block-views-blog-connect-newsletter-block{
-		display:block;
+	#block-views-blog-connect-newsletter-block {
+		display: block;
 	}
+
 }

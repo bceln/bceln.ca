@@ -1,64 +1,66 @@
 //
 // Main Content
 // =================================  
-.l-header{
-    @include clearfix;
-//    @include grid-container;
+.l-header {
+	@include clearfix;
+	//    @include grid-container;
 }
-.l-footer{
-  @include clearfix;
+.l-footer {
+	@include clearfix;
 }
-.l-branding{
-    @include clearfix;
-    @include grid-container;  
+.l-branding {
+	@include clearfix;
+	@include grid-container;
 }
-.l-region--branding{
-    @include grid-span(12, 1);	
+.l-region--branding {
+	@include grid-span(12, 1);
 }
 
 //
 // Main Content
 // =================================
 .l-main {
-  @include clearfix;
-  @include grid-container;  
+	@include clearfix;
+	@include grid-container;
 }
-.l-region--sidebar-second{
-    @include grid-span(12,1);
-	  background: -webkit-linear-gradient(left, $grey-light , $white); /* For Safari 5.1 to 6.0 */
-	  background: -o-linear-gradient(right, $grey-light,  $white); /* For Opera 11.1 to 12.0 */
-	  background: -moz-linear-gradient(right, $grey-light,  $white); /* For Firefox 3.6 to 15 */
-	  background: linear-gradient(to right, $grey-light ,  $white); /* Standard syntax */
+.l-region--sidebar-second {
+	@include grid-span(12,1);
+	background: -webkit-linear-gradient(left, $grey-light , $white); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(right, $grey-light,  $white); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(right, $grey-light,  $white); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(to right, $grey-light ,  $white); /* Standard syntax */
 }
 .l-content {
-    @include grid-span(12, 1);
+	@include grid-span(12, 1);
 }
-@include breakpoint($tablet-layout){
-	.l-region--sidebar-second{
-	    @include grid-span(4, 9);
+@include breakpoint($tablet-layout) {
+	.l-region--sidebar-second {
+		@include grid-span(4, 9);
 	}
 	.l-content {
-	    @include grid-span(8, 1);
+		@include grid-span(8, 1);
 	}
+
 }
-@include breakpoint($desktop-layout){
-	.l-region--sidebar-second{
-	    @include grid-span(3, 10);
+@include breakpoint($desktop-layout) {
+	.l-region--sidebar-second {
+		@include grid-span(3, 10);
 	}
 	.l-content {
-	    @include grid-span(9, 1);
+		@include grid-span(9, 1);
 	}
+
 }
 body.no-sidebars 
-.l-content{
-  @include grid-span(12, 1);  	
+.l-content {
+	@include grid-span(12, 1);
 }
 
 //fix needed for firefox and safari
-.block{
-	position:relative;
+.block {
+	position: relative;
 }
-.clear-both{
-	clear:both;
+.clear-both {
+	clear: both;
 }
  

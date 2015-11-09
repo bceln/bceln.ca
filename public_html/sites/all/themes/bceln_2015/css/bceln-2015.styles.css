@@ -159,13 +159,13 @@ body {
   color: #333333; }
 
 a {
-  color: #CCB2CD;
+  color: #712C76;
   text-decoration: none; }
   a:hover,
   a:focus {
     color: #ffad00 !important; }
   a.active {
-    color: #CCB2CD; }
+    color: #712C76; }
 
 h1, h2, h3, h4, h5, h6 {
   color: #FFF;
@@ -937,6 +937,8 @@ ul.breadcrumb {
 
 .l-footer {
   position: relative; }
+  .l-footer a {
+    color: #CCB2CD; }
   .l-footer .footer-first-wrapper {
     background: #4C1E4F; }
   .l-footer .l-region--footer-first {
@@ -1298,7 +1300,8 @@ ul.breadcrumb {
 #boxes-box-newsletter {
   margin: 0px 31px; }
   #boxes-box-newsletter .boxes-box-content {
-    background: #008499; }
+    background: #008499;
+    text-align: center; }
     #boxes-box-newsletter .boxes-box-content a {
       display: inline-block;
       padding: 10px; }
@@ -1569,32 +1572,32 @@ ul.breadcrumb {
   clear: none;
   clear: both; }
 
-table {
+.not-front table {
   margin: 40px 0px; }
-  table th, table td {
+  .not-front table th, .not-front table td {
     padding: 10px 30px;
     border: 2px solid #FFF;
     font-size: 16px; }
-    table th a, table td a {
+    .not-front table th a, .not-front table td a {
       color: #712C76;
       font-size: 18px; }
-  table thead tr th {
+  .not-front table thead tr th {
     background: #e8dae8;
     color: #333333;
     font-size: 16px;
     color: #333333;
     text-transform: uppercase;
     font-weight: 900; }
-    table thead tr th a {
+    .not-front table thead tr th a {
       color: #333333;
       font-size: 16px;
       text-transform: uppercase;
       font-weight: 900; }
-    table thead tr th a.active {
+    .not-front table thead tr th a.active {
       color: #333333; }
-  table tbody tr.odd td {
+  .not-front table tbody tr.odd td {
     background-color: #F6F6F6; }
-  table tbody tr.odd tr.even td {
+  .not-front table tbody tr.odd tr.even td {
     background-color: #EAEAEA; }
 
 /*# sourceMappingURL=bceln-2015.styles.css.map */

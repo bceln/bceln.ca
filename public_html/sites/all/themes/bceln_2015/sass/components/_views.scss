@@ -1,21 +1,23 @@
-.view-id-Blog h4 {	
-	margin-bottom:3px !important;
+.view-id-Blog h4 {
+	margin-bottom: 3px !important;
 	a {
-		color:$grey-dark;
-		font-size:$fz-h3;
+		color: $grey-dark;
+		font-size: $fz-h3;
 	}
-	
+
 }
 .node--news {
-	.post-date{
-		font-size:$fz-small;
-    line-height: 12px;
-    padding-bottom: 5px;
+	.post-date {
+		font-size: $fz-small;
+		line-height: 12px;
+		padding-bottom: 5px;
 	}
 	.read-more-blog {
- 	 @include layout($gutter:1/2) {
-   	   @include grid-span(12, 1);
- 			 clear:both;
-    	}
+		@include layout($gutter:1/2) {
+			@include grid-span(12, 1);
+			clear: both;
+		}
+
 	}
+
 }

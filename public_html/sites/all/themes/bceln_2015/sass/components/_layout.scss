@@ -3,131 +3,145 @@
 // Branding AND Branding Region
 // =================================
 
-.l-branding{
-	position:relative;
-    height: 157px;
+.l-branding {
+	position: relative;
+	height: 157px;
 	
 	//Mobile
-	.site-logo{
-		margin-left:20%;
-		position:absolute;
-	    margin-top: 53px;
-
+	.site-logo {
+		margin-left: 20%;
+		position: absolute;
+		margin-top: 53px;
 	}
 	.l-region--branding {
-		width:100%;
-		margin-right:0px;
+		width: 100%;
+		margin-right: 0px;
 		#block-search-form {
-		    position: absolute;
-		    right: 1.15741%;
-		    top: 164px;
-		    z-index: 500;
+			position: absolute;
+			right: 1.15741%;
+			top: 164px;
+			z-index: 500;
 		}
+
 	}
 	//Tablet
-	@include breakpoint($tablet-layout){
-		.site-logo{
-			margin-left:17px;
-			position:absolute;
-		    margin-top: 82px;
-			img{
-			    width: 260px;
+	@include breakpoint($tablet-layout) {
+		.site-logo {
+			margin-left: 17px;
+			position: absolute;
+			margin-top: 82px;
+			img {
+				width: 260px;
 			}
+
 		}
 		.l-region--branding {
 			#block-search-form {
 				position: absolute;
-			    right: 1.15741%;
-			    top: 90px;
+				right: 1.15741%;
+				top: 90px;
 			}
 			#block-menu-block-2 {
 				right: 1.15741%;
-				position:absolute;
+				position: absolute;
 				right: 1.15741%;
-			    top: 22px;
-				width:772px;
-				.menu-name-main-menu{
+				top: 22px;
+				width: 772px;
+				.menu-name-main-menu {
 					ul.menu {
-					    list-style-type: none;
-					    margin: 0;
-					    padding: 0;
+						list-style-type: none;
+						margin: 0;
+						padding: 0;
 				
 						li {
-						    margin-right: 10px;
-						    width: 120px;
-						    display: inline-block;
-						    text-align: center;
+							margin-right: 10px;
+							width: 120px;
+							display: inline-block;
+							text-align: center;
 							a {
-								text-decoration:none;
+								text-decoration: none;
 							}
+
 						}
+
 					}
+
 				}
+
 			}
+
 		}
+
 	}
 	//MAX Width of MENU is 1111px where the menu colapses into the logo
-	@include breakpoint($max-width-menu){
-		.site-logo{
-			margin-left:17px;
-			position:absolute;
-		    margin-top: 47px;
-			img{
-			    width: 100%;
+	@include breakpoint($max-width-menu) {
+		.site-logo {
+			margin-left: 17px;
+			position: absolute;
+			margin-top: 47px;
+			img {
+				width: 100%;
 			}
+
 		}
 		.l-region--branding {
 			#block-search-form {
 				position: absolute;
-			    right: 1.15741%;
-			    top: 20px;
+				right: 1.15741%;
+				top: 20px;
 			}
 			#block-menu-block-2 {
-				position:absolute;
+				position: absolute;
 				right: 3%;
-			    top: 77px;
-				.menu-name-main-menu{
+				top: 77px;
+				.menu-name-main-menu {
 					ul.menu {
-					    list-style-type: none;
-					    margin: 0;
-					    padding: 0;
+						list-style-type: none;
+						margin: 0;
+						padding: 0;
 				
 						li {
-						    margin-right: 20px;
-						    width: 120px;
-						    display: inline-block;
-						    text-align: center;
+							margin-right: 20px;
+							width: 120px;
+							display: inline-block;
+							text-align: center;
 							a {
-								text-decoration:none;
+								text-decoration: none;
 							}
+
 						}
+
 					}
+
 				}
+
 			}
+
 		}
+
 	}
-
-
 
 }
 .l-branding:before {
-    content: '';
-    height: 7px;
-    background-color: $yellow;
-    width: 100%;
-    margin-right: 0px;
-    margin-left: 0;
-	clear:none;
-    float: right;
-    display: block;
-    margin-bottom: 37px;
-};
-@include breakpoint($tablet-layout){
+	content: '';
+	height: 7px;
+	background-color: $yellow;
+	width: 100%;
+	margin-right: 0px;
+	margin-left: 0;
+	clear: none;
+	float: right;
+	display: block;
+	margin-bottom: 37px;
+}
+;
+@include breakpoint($tablet-layout) {
 	.l-branding:before {
-	    width: 97.68519%;
-	    margin-right: 1.15741%;
-	};
-	.l-branding:after{
+		width: 97.68519%;
+		margin-right: 1.15741%;
+	}
+	;
+	.l-branding:after {
 		content: '';
 		height: 23px;
 		background-color: #CEB6D0;
@@ -136,264 +150,289 @@
 		bottom: 0px;
 		position: absolute;
 		margin-right: 1.15741%;
-	};  
+	}
+	;
 }
-@include breakpoint($max-width-layout){
-	.l-branding:after{
-		width:63.55%;
+@include breakpoint($max-width-layout) {
+	.l-branding:after {
+		width: 63.55%;
 		display: block;
 	}
+
 }
 
 //
 // Header Region FOR FRONT PAGE 
 // =================================
-.wrap-header{
-	background:$violet-dark-gradiant;
-	position:relative;
+.wrap-header {
+	background: $violet-dark-gradiant;
+	position: relative;
 	//mobile Layout
-	#boxes-box-homepage{
-		height:50px;
-		background:$violet-dark;
+	#boxes-box-homepage {
+		height: 50px;
+		background: $violet-dark;
 	}
-	.boxes-box-content{
-		display:none;
+	.boxes-box-content {
+		display: none;
 	}
-	#block-boxes-homepage, #block-re-utilities-section-nav{
-	    @include clearfix;
-	    @include grid-container;
-		.block__content{
+	#block-boxes-homepage, #block-re-utilities-section-nav {
+		@include clearfix;
+		@include grid-container;
+		.block__content {
 			background: -webkit-linear-gradient(left, $violet-dark-gradiant , $violet-light-gradiant, $violet-dark-gradiant); /* For Safari 5.1 to 6.0 */
 			background: -o-linear-gradient(right, $violet-dark-gradiant, $violet-light-gradiant, $violet-dark-gradiant); /* For Opera 11.1 to 12.0 */
 			background: -moz-linear-gradient(right, $violet-dark-gradiant, $violet-light-gradiant, $violet-dark-gradiant); /* For Firefox 3.6 to 15 */
 			background: linear-gradient(to right, $violet-dark-gradiant , $violet-light-gradiant, $violet-dark-gradiant); /* Standard syntax */
 		}
+
 	}
-	@include breakpoint($tablet-layout){
-		.boxes-box-content{
-			display:block;
+	@include breakpoint($tablet-layout) {
+		.boxes-box-content {
+			display: block;
 		}
-		#block-boxes-homepage{
-			#boxes-box-homepage{
-		    background: url("../images/header-bg.png") no-repeat;
-		    height: 312px;
-		    position: relative;
-		    @include grid-span(12,1);
+		#block-boxes-homepage {
+			#boxes-box-homepage {
+				background: url("../images/header-bg.png") no-repeat;
+				height: 312px;
+				position: relative;
+				@include grid-span(12,1);
 			}
-			.boxes-box-content{
-				position:absolute;
-			    top: 15%;
-			    left: 8%;
-			    width: 85%;
-				h3{
-					color:$white;
-					font-size:24px;
-				    font-weight: $fw-semi-bold;
-				    line-height: 24px;
+			.boxes-box-content {
+				position: absolute;
+				top: 15%;
+				left: 8%;
+				width: 85%;
+				h3 {
+					color: $white;
+					font-size: 24px;
+					font-weight: $fw-semi-bold;
+					line-height: 24px;
 				}
 				.learn-more-header {
-	                @include fontello-icon('\e800','after') {
-	                   font-size: 1.0em;
-	                   margin-left: 0.3em;
-	                   margin-right: 0;
-	                   position: relative;
-					   color:$orange;
-					   cursor:pointer;
-	                 }
-				    padding: 4px 14px;
-				    background-color: $violet-dark;
-				    font-size: 16px;
-				    margin-left: 20px;
-				    padding-right: 10px;
+					@include fontello-icon('\e800','after') {
+						font-size: 1.0em;
+						margin-left: 0.3em;
+						margin-right: 0;
+						position: relative;
+						color: $orange;
+						cursor: pointer;
+					}
+					padding: 4px 14px;
+					background-color: $violet-dark;
+					font-size: 16px;
+					margin-left: 20px;
+					padding-right: 10px;
 					a {
-					    color: $orange;
-					    text-decoration: none;
-					    text-transform: uppercase;
+						color: $orange;
+						text-decoration: none;
+						text-transform: uppercase;
 					}
+
 				}
-			}	
-			@include breakpoint($tablet-layout){
-				.boxes-box-content{
-					position:absolute;
-				    top: 30%;
-				    left: 13%;
-				    max-width: 870px;
-					h3{
-						color:$white;
-						font-size:30px;
-					    line-height: 30px;
-					}
-				}
-			
+
 			}
+			@include breakpoint($tablet-layout) {
+				.boxes-box-content {
+					position: absolute;
+					top: 30%;
+					left: 13%;
+					max-width: 870px;
+					h3 {
+						color: $white;
+						font-size: 30px;
+						line-height: 30px;
+					}
+
+				}
+
+			}
+
 		}
+
 	}
+
 }
 //
 // Content FRONT
 // =================================
 
 //Mobile
-.front .l-content:before{
-	display:none;
-};
+.front .l-content:before {
+	display: none;
+}
+;
 @include breakpoint($tablet-layout) {
-	.front .l-content:before{
-	    content: '';
-	    height: 23px;
-	    background-color:$violet-light;
-	    width: 100%;
-	    margin-right: 1.15741%;
-	    margin-left: 0;
-		clear:both;
-	    display: block;
-		bottom:-23px;
-		left:0px;
-	};
+	.front .l-content:before {
+		content: '';
+		height: 23px;
+		background-color: $violet-light;
+		width: 100%;
+		margin-right: 1.15741%;
+		margin-left: 0;
+		clear: both;
+		display: block;
+		bottom: -23px;
+		left: 0px;
+	}
+	;
 }
 @include breakpoint(880px) {
-	.front .l-content:before{
-	    width: 880px;
+	.front .l-content:before {
+		width: 880px;
 	}
+
 }
-.front .l-content{
-	#block-views-services-block{
-		margin-top:40px;
-		margin-bottom:60px;;
-		.views-view-grid{
-			.col-1{
-				padding-bottom:20px;
-	         	@include grid-span(12, 1);
-				.group-left{
-		         	@include grid-span(12, 1);
-					text-align:center;
+.front .l-content {
+	#block-views-services-block {
+		margin-top: 40px;
+		margin-bottom: 60px;;
+		.views-view-grid {
+			.col-1 {
+				padding-bottom: 20px;
+				@include grid-span(12, 1);
+				.group-left {
+					@include grid-span(12, 1);
+					text-align: center;
 				}
-				.group-right{
-		         	@include grid-span(12, 1);
-					text-align:center;
+				.group-right {
+					@include grid-span(12, 1);
+					text-align: center;
 				}
 				@include breakpoint(625px) {
-		         	@include grid-span(12, 1);
-					.group-left{
-						text-align:left;
+					@include grid-span(12, 1);
+					.group-left {
+						text-align: left;
 						@include grid-span(2,1);
 					}
-					.group-right{
-						text-align:left;
-						@include grid-span(8,5);					
+					.group-right {
+						text-align: left;
+						@include grid-span(8,5);
 					}
-				}
-			 	@include breakpoint($tablet-layout) {
-					padding-bottom:0px;
-					
-		         	@include grid-span(12, 1);
-					.group-left{
-						@include grid-span(2,2);
-					}
-					.group-right{
-						@include grid-span(8,5);					
-					}
-			  	}
-			 	@include breakpoint($desktop-layout) {
-					padding-bottom:0px;
-					@include grid-span(6,1);
-					.group-left{
-						@include grid-span(4,1);
-					}
-					.group-right{
-						@include grid-span(7,6);					
-					}
-			  	}
-			}
-			.col-2{
-				padding-bottom:20px;
-	         	@include grid-span(12, 1);
-				.group-left{
-		         	@include grid-span(12, 1);
-					text-align:center;
-					
-				}
-				.group-right{
-		         	@include grid-span(12, 1);
-					text-align:center;
-					
-				}
-				@include breakpoint(625px){
-		         	@include grid-span(12, 1);
-					.group-left{
-						@include grid-span(2,1);
-						text-align:left;
-					}
-					.group-right{
-						text-align:left;
-						@include grid-span(8,5);					
-					}
+
 				}
 				@include breakpoint($tablet-layout) {
-					padding-bottom:0px;
-		         	@include grid-span(12, 1);
-					.group-left{
+					padding-bottom: 0px;
+					
+					@include grid-span(12, 1);
+					.group-left {
 						@include grid-span(2,2);
 					}
-					.group-right{
-						@include grid-span(8,5);					
+					.group-right {
+						@include grid-span(8,5);
 					}
-			  	}
-   			 	@include breakpoint($desktop-layout) {
-					padding-bottom:0px;
-   					@include grid-span(6,7);
-					.group-left{
+
+				}
+				@include breakpoint($desktop-layout) {
+					padding-bottom: 0px;
+					@include grid-span(6,1);
+					.group-left {
 						@include grid-span(4,1);
 					}
-					.group-right{
-						@include grid-span(7,6);					
+					.group-right {
+						@include grid-span(7,6);
 					}
-   			  	}
 
+				}
 
 			}
+			.col-2 {
+				padding-bottom: 20px;
+				@include grid-span(12, 1);
+				.group-left {
+					@include grid-span(12, 1);
+					text-align: center;
+				}
+				.group-right {
+					@include grid-span(12, 1);
+					text-align: center;
+				}
+				@include breakpoint(625px) {
+					@include grid-span(12, 1);
+					.group-left {
+						@include grid-span(2,1);
+						text-align: left;
+					}
+					.group-right {
+						text-align: left;
+						@include grid-span(8,5);
+					}
+
+				}
+				@include breakpoint($tablet-layout) {
+					padding-bottom: 0px;
+					@include grid-span(12, 1);
+					.group-left {
+						@include grid-span(2,2);
+					}
+					.group-right {
+						@include grid-span(8,5);
+					}
+
+				}
+				@include breakpoint($desktop-layout) {
+					padding-bottom: 0px;
+					@include grid-span(6,7);
+					.group-left {
+						@include grid-span(4,1);
+					}
+					.group-right {
+						@include grid-span(7,6);
+					}
+
+				}
+
+			}
+
 		}
+
 	}
-	#block-views-trials-offers-renewals{
+	#block-views-trials-offers-renewals {
 		@include grid-span(12,1);
-		@include breakpoint($tablet-layout){
+		@include breakpoint($tablet-layout) {
 			@include grid-span(6,1);
 		}
-		@include breakpoint($desktop-layout){
+		@include breakpoint($desktop-layout) {
 			@include grid-span(4,1);
 		}
+
 	}
-	#block-views-blog-latest-news{
+	#block-views-blog-latest-news {
 		@include grid-span(12,1);
-		@include breakpoint($desktop-layout){
+		@include breakpoint($desktop-layout) {
 			@include grid-span(4,5);
 		}
+
 	}
-	#block-views-blog-connect-newsletter-block{
+	#block-views-blog-connect-newsletter-block {
 		@include grid-span(12,1);
-		@include breakpoint($desktop-layout){
+		@include breakpoint($desktop-layout) {
 			@include grid-span(4,9);
 		}
+
 	}
-	#block-views-blog-mobile-news-letter{
+	#block-views-blog-mobile-news-letter {
 		@include grid-span(12,1);
-		@include breakpoint($tablet-layout){
+		@include breakpoint($tablet-layout) {
 			@include grid-span(6,7);
 		}
 
 	}
+
 }
 //
 // Footer
 // =================================
-.l-footer{
-	position:relative;
-	.footer-first-wrapper{
-		background:$violet-dark-gradiant;
+.l-footer {
+	a{
+		color:$violet-super-light ;
 	}
-	.l-region--footer-first{
-	    @include grid-container;
-	    @include clearfix;
+	position: relative;
+	.footer-first-wrapper {
+		background: $violet-dark-gradiant;
+	}
+	.l-region--footer-first {
+		@include grid-container;
+		@include clearfix;
 		background: -webkit-linear-gradient(left, $violet-dark-gradiant , $violet-light-gradiant, $violet-dark-gradiant); /* For Safari 5.1 to 6.0 */
 		background: -o-linear-gradient(right, $violet-dark-gradiant, $violet-light-gradiant, $violet-dark-gradiant); /* For Opera 11.1 to 12.0 */
 		background: -moz-linear-gradient(right, $violet-dark-gradiant, $violet-light-gradiant, $violet-dark-gradiant); /* For Firefox 3.6 to 15 */
@@ -401,184 +440,201 @@
 		padding:30px 0px;
 		#block-menu-menu-about-bc-eln,#block-menu-menu-licensing,
 		#block-menu-menu-partner-libraries,#block-menu-menu-services-initiatives {
-			padding-bottom:15px;
+			padding-bottom: 15px;
 		}
 		//MOBILE FOOTER LAYOUT
 		//END ROWS
-		 #block-menu-menu-licensing ,#block-menu-menu-services-initiatives {
-			 @include layout($gutter:2) {
-		  	   @include grid-span(6, 7, $output-style: 'float');
-		   	}
+		#block-menu-menu-licensing ,#block-menu-menu-services-initiatives {
+			@include layout($gutter:2) {
+				@include grid-span(6, 7, $output-style: 'float');
+			}
+
 		}
-		 #block-menu-menu-licensing, #block-menu-menu-services-initiatives {
-			 @include layout($gutter: 2) {			
-		  	 	@include float-span(6, 'last');
-		   	}
+		#block-menu-menu-licensing, #block-menu-menu-services-initiatives {
+			@include layout($gutter: 2) {
+				@include float-span(6, 'last');
+			}
+
 		}
 		//Start ROWS
-		#block-menu-menu-about-bc-eln,#block-menu-menu-partner-libraries{
-		 @include layout($gutter: 2) {			
+		#block-menu-menu-about-bc-eln,#block-menu-menu-partner-libraries {
+			@include layout($gutter: 2) {
 				@include grid-span(6, 1, $output-style: 'float');
-				  clear: both;
-			  }
+				clear: both;
+			}
+
 		}
 		#block-menu-menu-about-bc-eln ,#block-menu-menu-partner-libraries {
-			@include layout($gutter: 2) {			
+			@include layout($gutter: 2) {
 				@include float-span(6, 'first');
 			}
-		}
-		#block-boxes-newsletter{
-   		 @include layout($gutter: 2) {			
-			 @include grid-span(12, 1, $output-style: 'float');
- 			 clear: both;
-		  }
+
 		}
 		#block-boxes-newsletter {
-			 @include layout($gutter: 2) {			
-		  	   @include float-span(12, 'first');
-  	 		}
+			@include layout($gutter: 2) {
+				@include grid-span(12, 1, $output-style: 'float');
+				clear: both;
+			}
+
+		}
+		#block-boxes-newsletter {
+			@include layout($gutter: 2) {
+				@include float-span(12, 'first');
+			}
+
 		}
 
 		//TABLET FOOTER LAYOUT
-	 	@include breakpoint($tablet-layout) {
-			#block-menu-menu-about-bc-eln{
-			    @include grid-span(3, 1);
+		@include breakpoint($tablet-layout) {
+			#block-menu-menu-about-bc-eln {
+				@include grid-span(3, 1);
 			}
-			#block-menu-menu-licensing{
-			    @include grid-span(3, 4);
+			#block-menu-menu-licensing {
+				@include grid-span(3, 4);
 			}
-			#block-menu-menu-partner-libraries{
-			    @include grid-span(3, 7);
+			#block-menu-menu-partner-libraries {
+				@include grid-span(3, 7);
 			}
-			#block-menu-menu-services-initiatives{
- 		  	   @include grid-span(3, 10, $output-style: 'float');
-	  	 		@include float-span(3, 'last');
-				
+			#block-menu-menu-services-initiatives {
+				@include grid-span(3, 10, $output-style: 'float');
+				@include float-span(3, 'last');
 			}
-			#block-boxes-newsletter{
-   			 @include layout($gutter: 3) {	
-				 @include grid-span(6,4);
-     	 		}
-	 			 clear: both;
+			#block-boxes-newsletter {
+				@include layout($gutter: 3) {
+					@include grid-span(6,4);
+				}
+				clear: both;
 			}
-	  	}
-	 	@include breakpoint($desktop-layout) {
-			#block-menu-menu-about-bc-eln{
-			    @include grid-span(2, 1);
+
+		}
+		@include breakpoint($desktop-layout) {
+			#block-menu-menu-about-bc-eln {
+				@include grid-span(2, 1);
 			}
-			#block-menu-menu-licensing{
-			    @include grid-span(2, 3);
+			#block-menu-menu-licensing {
+				@include grid-span(2, 3);
 			}
-			#block-menu-menu-partner-libraries{
-			    @include grid-span(2, 5);
+			#block-menu-menu-partner-libraries {
+				@include grid-span(2, 5);
 			}
-			#block-menu-menu-services-initiatives{
-			    @include grid-span(4, 7);
+			#block-menu-menu-services-initiatives {
+				@include grid-span(4, 7);
 			}
-			#block-boxes-newsletter{
-			    @include grid-span(3,10);
-			    margin-top: 30px;
+			#block-boxes-newsletter {
+				@include grid-span(3,10);
+				margin-top: 30px;
 			}
-	  	}
+
+		}
+
 	}
 	
-	.l-region--footer-second{
-	    @include grid-container;
-	    @include clearfix;
-		padding:30px 10px;
-		position:relative;
+	.l-region--footer-second {
+		@include grid-container;
+		@include clearfix;
+		padding: 30px 10px;
+		position: relative;
 		//responsive layout
-		#block-block-15, #block-block-16,#block-block-10, #block-menu-menu-footer{
-			.block__content{
-				font-size:$fz-small;
-				line-height:$line-height-footer;
+		#block-block-15, #block-block-16,#block-block-10, #block-menu-menu-footer {
+			.block__content {
+				font-size: $fz-small;
+				line-height: $line-height-footer;
 			}
+
 		}
-		#support-bc p{
-			font-size:$fz-small;
-			line-height:$line-height-footer;	
+		#support-bc p {
+			font-size: $fz-small;
+			line-height: $line-height-footer;
 		}
 		#block-menu-menu-footer {
-			ul.menu li :after{
-			    content: '|';
-			    margin: 0 5px;;
-				clear:both;
-			};
-			ul.menu li.last :after{
-			    content: '';
-			};
-			ul.menu li{
-			    display: inline;
-				a{
-					color:$grey-dark;
-					text-decoration:underline;
-					font-size:$fz-ex-small;
-				}
+			ul.menu li :after {
+				content: '|';
+				margin: 0 5px;;
+				clear: both;
 			}
+			;
+			ul.menu li.last :after {
+				content: '';
+			}
+			;
+			ul.menu li {
+				display: inline;
+				a {
+					color: $grey-dark;
+					text-decoration: underline;
+					font-size: $fz-ex-small;
+				}
+
+			}
+
 		}
 		//Mobile Layout
-		#site-logo-footer{
+		#site-logo-footer {
 			@include layout($gutter: 2) {
 				@include grid-span(12, 1, $output-style: 'float');
 				@include float-span(12, 'last');
 			}
+
 		}
-		#block-block-15{
-			@include layout($gutter: 2) {
-				@include grid-span(10,3);				
-			}
-		}
-		#block-block-16{
-			margin-top:10px;
-			margin-bottom:20px;
+		#block-block-15 {
 			@include layout($gutter: 2) {
 				@include grid-span(10,3);
-				
 			}
+
 		}
-		#support-bc{
+		#block-block-16 {
+			margin-top: 10px;
+			margin-bottom: 20px;
+			@include layout($gutter: 2) {
+				@include grid-span(10,3);
+			}
+
+		}
+		#support-bc {
 			display: inline-block;
-		    text-align: center;
+			text-align: center;
 			@include layout($gutter: 2) {
 				@include grid-span(12,1);
 			}
+
 		}
-		#block-block-10 ,#block-menu-menu-footer{
-			position:absolute;
-			bottom:25px;
+		#block-block-10 ,#block-menu-menu-footer {
+			position: absolute;
+			bottom: 25px;
 		}
-		#block-menu-menu-footer{
-			bottom:5px;
-			left:65px;
+		#block-menu-menu-footer {
+			bottom: 5px;
+			left: 65px;
 		}
-		@include breakpoint($tablet-layout){
-			#block-block-10 ,#block-menu-menu-footer{
-				position:absolute;
-			    bottom: 18px;
-			    left: 30px;
+		@include breakpoint($tablet-layout) {
+			#block-block-10 ,#block-menu-menu-footer {
+				position: absolute;
+				bottom: 18px;
+				left: 30px;
 			}
-			#block-menu-menu-footer{
-				left:437px;
-			    bottom: 15px;
-				
+			#block-menu-menu-footer {
+				left: 437px;
+				bottom: 15px;
 			}
-			#site-logo-footer{
-				@include grid-span(5,1);		
-				margin-bottom:40px;				
+			#site-logo-footer {
+				@include grid-span(5,1);
+				margin-bottom: 40px;
 			}
-			#block-block-15{
+			#block-block-15 {
 				@include grid-span(2,6);
 			}
-			#block-block-16{
+			#block-block-16 {
 				@include grid-span(2,8);
 			}
-			#support-bc{
+			#support-bc {
 				@include grid-span(2,11);
 			}
+
 		}
+
 	}
 
 }
-.not-front .l-branding:after{
-	display:none;
+.not-front .l-branding:after {
+	display: none;
 }

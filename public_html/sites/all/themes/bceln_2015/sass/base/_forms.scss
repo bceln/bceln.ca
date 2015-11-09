@@ -3,54 +3,57 @@
 // =================================
 
 .search-block-form {
-	.container-inline{
-		position:relative;
-		.form-item-search-block-form{
-			background-color:$grey-medium;
-		    width: 169px;
-		    margin-right: 0px;
-			display:inline-block;
-			border:0px;
+	.container-inline {
+		position: relative;
+		.form-item-search-block-form {
+			background-color: $grey-medium;
+			width: 169px;
+			margin-right: 0px;
+			display: inline-block;
+			border: 0px;
 		}
-		.form-item-search-block-form{
-			.form-text {	
+		.form-item-search-block-form {
+			.form-text {
 				border: none;
-			    font-size: 22px;
-			    line-height: 35px;
-			    background-color: #E9E9E9;
-			    width: 165px;
-			    padding: 0;
-			    padding-right: 8px;
-			    padding-bottom: 1px;
+				font-size: 22px;
+				line-height: 35px;
+				background-color: #E9E9E9;
+				width: 165px;
+				padding: 0;
+				padding-right: 8px;
+				padding-bottom: 1px;
 			}
+
 		}
 		.form-actions {
-			cursor:pointer;
+			cursor: pointer;
 			@include fontello-icon('\e801','after') {
-		       cursor: pointer;
-		       position: absolute;
-		       right: 3px;
-		       top: 8px;
-		       z-index: 200;
-		       font-size: 20px;
-		       cursor: pointer;
-		       color: $white;
-		       position: absolute;
-		       z-index: 200;
-			 }
-			 .form-submit:hover{
- 				background:$orange;
-			 	
-			 }
-			.form-submit {
-				cursor:pointer;
-				border:none;
-			    overflow: hidden;
-			    text-indent: -9999px;
-			    width: 35px;
-				background:$dark-cyan;
-			    padding: 14px 2px 9px;
+				cursor: pointer;
+				position: absolute;
+				right: 3px;
+				top: 8px;
+				z-index: 200;
+				font-size: 20px;
+				cursor: pointer;
+				color: $white;
+				position: absolute;
+				z-index: 200;
 			}
+			.form-submit:hover {
+				background: $orange;
+			}
+			.form-submit {
+				cursor: pointer;
+				border: none;
+				overflow: hidden;
+				text-indent: -9999px;
+				width: 35px;
+				background: $dark-cyan;
+				padding: 14px 2px 9px;
+			}
+
 		}
+
 	}
+
 }

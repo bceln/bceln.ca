@@ -1,76 +1,81 @@
-.node{
-	margin-bottom:40px;
-//	Please not that for overview's resourses the display suite is rendering the view
-//	and that is wy the class .node-container-indent really didnt apply
-.field-group-div {
-	clear:both;
-}
-	.node-container-indent, .overview-resources .field-group-format-wrapper, .field-group-format-wrapper{
-	 @include layout($gutter:2) {
-  	   @include grid-span(12, 1);
-			 clear:both;
-	     margin-bottom: 20px;
-   	}
+.node {
+	margin-bottom: 40px;
+	//	Please not that for overview's resourses the display suite is rendering the view
+	//	and that is wy the class .node-container-indent really didnt apply
+	.field-group-div {
+		clear: both;
 	}
-	.field{
-	  @include clearfix;
-	  @include grid-container;  
-	}
-	.field__label{
-		font-size:$fz-mid;
-	  @include font-weight($fw-bold);
-		text-transform:uppercase;
-		margin:25px 0px 10px 0px;
-	}
-	.field--label-inline .field__label{
-		margin:0px;
-	}
-//	SUBSCRIPTION TERM Display
-	.sub-term-label{
-	    background: $grey-medium;
-			margin:20px 0px;
-		h2{
-			display:inline-block;
-		  line-height: 1.4em;
-			margin:0px;
-			padding-right:20px;
-			font-size:$fz-h6;
-			
+	.node-container-indent, .overview-resources .field-group-format-wrapper, .field-group-format-wrapper {
+		@include layout($gutter:2) {
+			@include grid-span(12, 1);
+			clear: both;
+			margin-bottom: 20px;
 		}
-		h2.not-main-label{
-			padding-right:0px;
-			background:$grey-medium;
+
+	}
+	.field {
+		@include clearfix;
+		@include grid-container;
+	}
+	.field__label {
+		font-size: $fz-mid;
+		@include font-weight($fw-bold);
+		text-transform: uppercase;
+		margin: 25px 0px 10px 0px;
+	}
+	.field--label-inline .field__label {
+		margin: 0px;
+	}
+	//	SUBSCRIPTION TERM Display
+	.sub-term-label {
+		background: $grey-medium;
+		margin: 20px 0px;
+		h2 {
+			display: inline-block;
+			line-height: 1.4em;
+			margin: 0px;
+			padding-right: 20px;
+			font-size: $fz-h6;
 		}
-		.field{
-			padding-left:10px;
-			display:inline-block;
+		h2.not-main-label {
+			padding-right: 0px;
+			background: $grey-medium;
 		}
+		.field {
+			padding-left: 10px;
+			display: inline-block;
+		}
+
 	}
 	//Orginizations
-	.orginization-links-only{
-		margin-bottom:20px;
-		li.views-row  a{
-			color:$violet-dark;
+	.orginization-links-only {
+		margin-bottom: 20px;
+		li.views-row  a {
+			color: $violet-dark;
 			@include fontello-icon('\e800') {
-	       font-size: 1.0em;
-	       margin-left: 0.3em;
-	       margin-right: 0;
-	       position: relative;
-			   color:$orange;
-			   cursor:pointer;
+				font-size: 1.0em;
+				margin-left: 0.3em;
+				margin-right: 0;
+				position: relative;
+				color: $orange;
+				cursor: pointer;
 			}
+
 		}
+
 	}
-	.end-of-node{
-		height:40px;
-		border-bottom:2px solid $violet-super-super-light;
-		margin-bottom:20px;
+	.end-of-node {
+		height: 40px;
+		border-bottom: 2px solid $violet-super-super-light;
+		margin-bottom: 20px;
 	}
-//	Special Modifications
-.overview-resources{
-	.fieldgroup-effects-processed{
-		clear:both;
-		margin:15px 0px 10px 0px;
+	//	Special Modifications
+	.overview-resources {
+		.fieldgroup-effects-processed {
+			clear: both;
+			margin: 15px 0px 10px 0px;
+		}
+
 	}
-}
+
 }
