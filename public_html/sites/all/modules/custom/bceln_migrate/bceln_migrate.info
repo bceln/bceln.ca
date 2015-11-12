@@ -19,4 +19,5 @@ files[] = lib/Bceln/Migrate/Node/Resource.php
 files[] = lib/Bceln/Migrate/Node/Vendor.php
 files[] = lib/Bceln/Migrate/Profile.php
 files[] = lib/Bceln/Migrate/Subscription.php
+files[] = lib/Bceln/Migrate/TextFormat.php
 files[] = lib/Bceln/Migrate/User.php
