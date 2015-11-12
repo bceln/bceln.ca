@@ -81,6 +81,9 @@
 .block--menu h2 {
 	font-size: $fz-h2;
 	color: $white;
+  background: none;
+  padding: 0px;
+  margin: 0px 0px 7px 0px;
 }
 .menu .leaf {
 	list-style-image: none;
@@ -137,7 +140,7 @@
 //BreadCrumb
 // =================================
 ul.breadcrumb {
-	margin-top: 25px;
+	margin-top: 45px;
 	margin-left: 10px;
 	li {
 		font-size: $fz-small;
@@ -162,10 +165,11 @@ ul.breadcrumb {
 		}
 
 	}
-	li.last:after {
-		content: '';
+	li:last-child{
+		&:after{
+			content: '' !important;
+		}
 	}
-	;
 }
 
 //TABS

@@ -1,5 +1,58 @@
-//The tables need to not apply to the front page as the services block has its own style alredy;
-.not-front table {
+//Regular tables
+table{
+	margin: 40px 0px;
+		thead {
+			tr {
+				th {
+					padding: 10px 30px;
+					border: 2px solid $white;
+					font-size: $fz-mid;
+					background: $violet-super-super-light;
+					color: $grey-dark;
+					font-size: $fz-mid;
+					color: $grey-dark;
+					text-transform: uppercase;
+					font-weight: $fw-bold;
+					a {
+						font-size: $fz-mid;
+						color: $grey-dark;
+						font-size: $fz-mid;
+						text-transform: uppercase;
+						font-weight: $fw-bold;
+					}
+					a.active {
+						color: $grey-dark;
+					}
+
+				}
+
+			}
+		}
+		tbody {
+			tr:nth-child(even) {
+				td {
+					padding: 10px 30px;
+					border: 2px solid $white;
+					font-size: $fz-mid;
+					background-color: $gray-table;
+				}
+			}
+			tr:nth-child(odd) {
+				td {
+					padding: 10px 30px;
+					border: 2px solid $white;
+					font-size: $fz-mid;
+					background-color: $grey-light;
+				}
+			}
+
+		}
+
+}
+
+
+//Tables generated from views
+.not-front table.views-table {
 	margin: 40px 0px;
 	th, td {
 		padding: 10px 30px;
@@ -53,3 +106,5 @@
 	}
 
 }
+
+

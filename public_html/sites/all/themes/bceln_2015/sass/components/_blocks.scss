@@ -41,6 +41,7 @@
 			padding-top: 25px;
 			margin-bottom: 0px;
 			text-transform: uppercase;
+			color:$white !important;
 			font-weight: $fw-semi-bold;
 			position: absolute;
 			top: -25px;
@@ -100,7 +101,6 @@
 			top: 0px;
 			right: -26px;
 		}
-		;
 		h2 {
 			background: url('../images/block-head-repeat.png') top left;
 			background-repeat: repeat-x;
@@ -110,7 +110,7 @@
 			padding-top: 25px;
 			margin-bottom: 0px;
 			text-transform: uppercase;
-			font-weight: $fw-semi-bold;
+		  @include font-weight($fw-semi-bold);
 			position: absolute;
 			top: -25px;
 			left: 22px;

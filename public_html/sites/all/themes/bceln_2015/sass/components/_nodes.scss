@@ -6,10 +6,9 @@
 		clear: both;
 	}
 	.node-container-indent, .overview-resources .field-group-format-wrapper, .field-group-format-wrapper {
-		@include layout($gutter:2) {
+		@include layout($gutter:2.5) {
 			@include grid-span(12, 1);
 			clear: both;
-			margin-bottom: 20px;
 		}
 
 	}
@@ -77,5 +76,11 @@
 		}
 
 	}
-
+	
+}
+//Services
+.view-services h2{
+	background:none ;
+  text-transform: none ;
+	margin:0px;
 }

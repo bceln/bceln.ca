@@ -18,7 +18,7 @@
 /* Uncomment bellow content to visualize the grid */
 /* -- Abstraction -- */
 /* Integrating Fontello in our code */
-.field__item h3 a::before, .field__items h3 a::before, .field-group-div.collapsible h3 a::before, .field-group-format-title h3 a::before, .field-group-div.collapsed.collapsible h3 a::before, .collapsed.field-group-format-title h3 a::before, .search-block-form .container-inline .form-actions::after, form .views-submit-button::after, .field--name-node-link .field__items a::after, .more-link a::after, .responsive-menus.responsified span.toggler::before, ul.breadcrumb li::after, .wrap-header #block-boxes-homepage .boxes-box-content .learn-more-header::after, #boxes-box-newsletter .boxes-box-content .news-letter-icon::before, .l-region--sidebar-second .block ul.menu li a::before, #block-menu-block-1 ul.menu li a::before, .node .orginization-links-only li.views-row a::before {
+.field__item h3 a::before, .field__items h3 a::before, .field-group-div.collapsible h3 a::before, .field-group-format-title h3 a::before, .field-group-div.collapsed.collapsible h3 a::before, .collapsed.field-group-format-title h3 a::before, blockquote p::before, .field__items ul li::before, .search-block-form .container-inline .form-actions::after, form .views-submit-button::after, .field--name-node-link .field__items a::after, .more-link a::after, .responsive-menus.responsified span.toggler::before, ul.breadcrumb li::after, .wrap-header #block-boxes-homepage .boxes-box-content .learn-more-header::after, #boxes-box-newsletter .boxes-box-content .news-letter-icon::before, .l-region--sidebar-second .block ul.menu li a::before, #block-menu-block-1 ul.menu li a::before, .node .orginization-links-only li.views-row a::before {
   font-family: "fontello";
   font-style: normal;
   font-weight: normal;
@@ -179,6 +179,12 @@ h1 {
   color: #333333; }
 
 h2 {
+  margin: 25px 0px;
+  background-color: #e8dae8;
+  padding: 8px 3%;
+  text-transform: uppercase;
+  color: #333333;
+  font-weight: 900;
   font-size: 18px;
   line-height: 1.1em; }
 
@@ -189,11 +195,13 @@ h3 {
 h4, h4 a {
   font-size: 18px;
   color: #333333;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  padding: 8px 0; }
 
 h5 {
   font-size: 18px;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  padding: 8px 0; }
 
 h6 {
   font-size: 20px; }
@@ -210,17 +218,9 @@ strong {
   line-height: 1.5em;
   margin-bottom: 1.1em; }
 
-h2 {
-  font-size: 26px;
-  color: #FFF; }
-
-h2 a {
-  color: #712C76; }
-
 .field-group-div h2 {
   margin: 25px 0px;
-  background-color: #e8dae8;
-  padding: 3px 2.5%; }
+  background-color: #e8dae8; }
   .field-group-div h2 span {
     text-transform: uppercase;
     color: #333333;
@@ -251,8 +251,12 @@ h2 a {
       color: #ffad00;
       cursor: pointer; }
 
-.field-group-div.collapsible h3 a, .field-group-format-title h3 a {
+.field-group-div.collapsible h3, .field-group-format-title h3 {
   background-color: #F6F6F6;
+  padding: 8px 0;
+  margin-bottom: 5px; }
+
+.field-group-div.collapsible h3 a, .field-group-format-title h3 a {
   padding: 7px 5px; }
   .field-group-div.collapsible h3 a::before, .field-group-format-title h3 a::before {
     font-size: 1.0em;
@@ -261,7 +265,7 @@ h2 a {
     position: relative;
     color: #008499;
     cursor: pointer;
-    padding-right: 7px;
+    padding-right: 5px;
     content: "";
     font-size: 1.0em;
     margin-left: 0.3em;
@@ -269,7 +273,7 @@ h2 a {
     position: relative;
     color: #008499;
     cursor: pointer;
-    padding-right: 7px; }
+    padding-right: 5px; }
   .field-group-div.collapsible h3 a a, .field-group-format-title h3 a a {
     padding-left: 5px;
     color: #712C76; }
@@ -285,7 +289,7 @@ h2 a {
   position: relative;
   color: #008499;
   cursor: pointer;
-  padding-right: 7px;
+  padding-right: 5px;
   content: "";
   font-size: 1.0em;
   margin-left: 0.3em;
@@ -293,7 +297,7 @@ h2 a {
   position: relative;
   color: #008499;
   cursor: pointer;
-  padding-right: 7px; }
+  padding-right: 5px; }
 
 .l-region--sidebar-second .block h2.block__title {
   color: #333333;
@@ -307,6 +311,58 @@ h2 a {
 
 a.field-group-format-title {
   color: #712C76; }
+
+blockquote p {
+  position: relative;
+  margin: 20px 0;
+  font-style: italic;
+  padding-left: 30px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  border-left: 4px solid #ccc;
+  background-position: middle left;
+  background-repeat: no-repeat;
+  text-indent: 23px; }
+  blockquote p::before {
+    font-size: 1.0em;
+    color: #ffad00;
+    position: absolute;
+    left: 5px;
+    top: 7px;
+    margin-right: 10px;
+    content: "";
+    font-size: 1.0em;
+    color: #ffad00;
+    position: absolute;
+    left: 5px;
+    top: 7px;
+    margin-right: 10px; }
+
+.field__items ul li {
+  position: relative;
+  padding-left: 3%; }
+  .field__items ul li::before {
+    font-size: 1.7em;
+    padding-top: 4px;
+    margin-right: 0;
+    position: absolute;
+    color: #ffad00;
+    left: -3px;
+    top: -4px;
+    content: "";
+    font-size: 1.7em;
+    padding-top: 4px;
+    margin-right: 0;
+    position: absolute;
+    color: #ffad00;
+    left: -3px;
+    top: -4px; }
+
+.field__items ol {
+  list-style-type: decimal;
+  padding-left: 3%; }
+  .field__items ol li {
+    list-style-type: decimal; }
 
 .search-block-form .container-inline {
   position: relative; }
@@ -475,7 +531,10 @@ form {
 
 .block--menu h2 {
   font-size: 18px;
-  color: #FFF; }
+  color: #FFF;
+  background: none;
+  padding: 0px;
+  margin: 0px 0px 7px 0px; }
 
 .menu .leaf {
   list-style-image: none;
@@ -511,7 +570,7 @@ form {
       background: #e8dae8; }
 
 ul.breadcrumb {
-  margin-top: 25px;
+  margin-top: 45px;
   margin-left: 10px; }
   ul.breadcrumb li {
     font-size: 12px;
@@ -540,8 +599,8 @@ ul.breadcrumb {
       line-height: 25px;
       color: #712C76 !important;
       font-weight: 900; }
-  ul.breadcrumb li.last:after {
-    content: ''; }
+  ul.breadcrumb li:last-child:after {
+    content: '' !important; }
 
 .tabs {
   border-bottom: 6px solid #d2bdd4; }
@@ -765,6 +824,16 @@ ul.breadcrumb {
 .front .l-content #block-views-services-block {
   margin-top: 40px;
   margin-bottom: 60px; }
+  .front .l-content #block-views-services-block h2 {
+    background-color: none;
+    padding: 0px;
+    margin: 0px;
+    margin-bottom: 5px;
+    background: none; }
+    .front .l-content #block-views-services-block h2 a {
+      color: #712C76;
+      font-size: 26px;
+      text-transform: none; }
   .front .l-content #block-views-services-block .views-view-grid .col-1 {
     padding-bottom: 20px;
     width: 97.68519%;
@@ -1261,6 +1330,7 @@ ul.breadcrumb {
     padding-top: 25px;
     margin-bottom: 0px;
     text-transform: uppercase;
+    color: #FFF !important;
     font-weight: 600;
     position: absolute;
     top: -25px;
@@ -1319,6 +1389,8 @@ ul.breadcrumb {
     margin-bottom: 0px;
     text-transform: uppercase;
     font-weight: 600;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
     position: absolute;
     top: -25px;
     left: 22px;
@@ -1548,13 +1620,12 @@ ul.breadcrumb {
   .node .field-group-div {
     clear: both; }
   .node .node-container-indent, .node .overview-resources .field-group-format-wrapper, .node .field-group-format-wrapper {
-    width: 94.44444%;
+    width: 94.04762%;
     float: right;
     margin-left: 0;
-    margin-right: 2.77778%;
+    margin-right: 2.97619%;
     clear: none;
-    clear: both;
-    margin-bottom: 20px; }
+    clear: both; }
   .node .field {
     margin-left: auto;
     margin-right: auto;
@@ -1611,6 +1682,11 @@ ul.breadcrumb {
     clear: both;
     margin: 15px 0px 10px 0px; }
 
+.view-services h2 {
+  background: none;
+  text-transform: none;
+  margin: 0px; }
+
 h4.h4-field--name-title {
   margin-bottom: 3px !important; }
   h4.h4-field--name-title a {
@@ -1630,32 +1706,63 @@ h4.h4-field--name-title {
   clear: none;
   clear: both; }
 
-.not-front table {
+table {
   margin: 40px 0px; }
-  .not-front table th, .not-front table td {
+  table thead tr th {
     padding: 10px 30px;
     border: 2px solid #FFF;
-    font-size: 16px; }
-    .not-front table th a, .not-front table td a {
-      color: #712C76;
-      font-size: 18px; }
-  .not-front table thead tr th {
+    font-size: 16px;
     background: #e8dae8;
     color: #333333;
     font-size: 16px;
     color: #333333;
     text-transform: uppercase;
     font-weight: 900; }
-    .not-front table thead tr th a {
+    table thead tr th a {
+      font-size: 16px;
       color: #333333;
       font-size: 16px;
       text-transform: uppercase;
       font-weight: 900; }
-    .not-front table thead tr th a.active {
+    table thead tr th a.active {
       color: #333333; }
-  .not-front table tbody tr.odd td {
+  table tbody tr:nth-child(even) td {
+    padding: 10px 30px;
+    border: 2px solid #FFF;
+    font-size: 16px;
+    background-color: #EAEAEA; }
+  table tbody tr:nth-child(odd) td {
+    padding: 10px 30px;
+    border: 2px solid #FFF;
+    font-size: 16px;
     background-color: #F6F6F6; }
-  .not-front table tbody tr.odd tr.even td {
+
+.not-front table.views-table {
+  margin: 40px 0px; }
+  .not-front table.views-table th, .not-front table.views-table td {
+    padding: 10px 30px;
+    border: 2px solid #FFF;
+    font-size: 16px; }
+    .not-front table.views-table th a, .not-front table.views-table td a {
+      color: #712C76;
+      font-size: 18px; }
+  .not-front table.views-table thead tr th {
+    background: #e8dae8;
+    color: #333333;
+    font-size: 16px;
+    color: #333333;
+    text-transform: uppercase;
+    font-weight: 900; }
+    .not-front table.views-table thead tr th a {
+      color: #333333;
+      font-size: 16px;
+      text-transform: uppercase;
+      font-weight: 900; }
+    .not-front table.views-table thead tr th a.active {
+      color: #333333; }
+  .not-front table.views-table tbody tr.odd td {
+    background-color: #F6F6F6; }
+  .not-front table.views-table tbody tr.odd tr.even td {
     background-color: #EAEAEA; }
 
 /*# sourceMappingURL=bceln-2015.styles.css.map */

@@ -41,6 +41,12 @@ h1 {
 }
   
 h2 {
+	margin:25px 0px;
+	background-color:$violet-super-super-light;
+	padding:8px 3%;
+	text-transform:uppercase;
+	color:$grey-dark;
+	@include font-weight($fw-bold);
   font-size: $fz-h2;
   line-height: 1.1em;
 }
@@ -54,13 +60,15 @@ h4, h4 a {
   font-size: $fz-h4;
   color: $grey-dark;
 	text-transform:uppercase;
+	padding:8px 0;
 }
   
 h5 {
   font-size: $fz-h5;
   text-transform: uppercase;
+	padding:8px 0;
+	
 }
-  
 h6 {
   font-size: $fz-h6;
 }
@@ -83,16 +91,7 @@ strong {
 .highlighted-text {
   @include highlighted-text();
 }
-//
-// h2
-//
-h2{
-	font-size:$fz-h2-large;
-	color:$white;	
-}
-h2 a{
-	color:$violet-dark;
-}
+
 //
 // Field Group H2's
 // =================================
@@ -100,7 +99,6 @@ h2 a{
 	h2 {
 		margin:25px 0px;
 		background-color:$violet-super-super-light;
-		padding:3px 2.5%;
 		span{
 			text-transform:uppercase;
 			color:$grey-dark;
@@ -130,8 +128,13 @@ h2 a{
 		}
 	}
 }
-.field-group-div.collapsible h3 a, .field-group-format-title h3 a {
+.field-group-div.collapsible h3 ,.field-group-format-title h3{
 	background-color:$grey-light;
+	padding:8px 0;
+	margin-bottom:5px;
+	
+}
+.field-group-div.collapsible h3 a, .field-group-format-title h3 a {
 	padding:7px 5px;
 	@include fontello-icon('\e807') {
      font-size: 1.0em;
@@ -140,7 +143,7 @@ h2 a{
      position: relative;
 	   color:$dark-cyan;
 	   cursor:pointer;
-     padding-right: 7px;
+     padding-right: 5px;
 	}
 	a{
 		padding-left:5px;
@@ -161,7 +164,7 @@ h2 a{
 		position: relative;
 		color:$dark-cyan;
 		cursor:pointer;
-    padding-right: 7px;
+    padding-right: 5px;
 		
 	}
 
@@ -179,3 +182,46 @@ h2 a{
 a.field-group-format-title{
 	color:$violet-dark;
 }
+blockquote p{
+	position:relative;
+	margin:20px 0;
+	font-style:italic;
+  padding-left: 30px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  border-left: 4px solid #ccc;
+  background-position: middle left;
+  background-repeat: no-repeat;
+  text-indent: 23px;
+	@include fontello-icon('\e804') {
+		font-size: 1.0em;
+		color: $orange;
+		position: absolute;
+		left:5px;
+		top:7px;
+		margin-right: 10px;
+	}
+}
+.field__items ul{
+	li{
+		position:relative;
+		padding-left:3%;
+		@include fontello-icon('\e809') {
+			font-size: 1.7em;
+			padding-top:4px;
+			margin-right: 0;
+			position: absolute;
+			color: $orange;
+	    left: -3px;
+	    top: -4px;
+		}
+	}
+}
+.field__items ol{
+	    list-style-type: decimal;
+			padding-left:3%;
+	li{
+    list-style-type: decimal;
+		}
+	}
+  
