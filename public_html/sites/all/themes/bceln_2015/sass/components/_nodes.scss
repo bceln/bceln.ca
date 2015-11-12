@@ -5,6 +5,12 @@
 	.field-group-div {
 		clear: both;
 	}
+	.collapsible .field-group-format-wrapper {
+		margin-bottom: 20px;
+	}
+	.group-partners .view {
+		margin-bottom: 25px;
+	}
 	.node-container-indent, .overview-resources .field-group-format-wrapper, .field-group-format-wrapper {
 		@include layout($gutter:2.5) {
 			@include grid-span(12, 1);
@@ -76,11 +82,17 @@
 		}
 
 	}
-	
+
 }
 //Services
-.view-services h2{
-	background:none ;
-  text-transform: none ;
-	margin:0px;
+.view-services h2 {
+	background: none ;
+	text-transform: none ;
+	margin: 0px;
+}
+.node.view-mode-full > div {
+	margin-bottom: 15px;
+}
+.node.view-mode-full > .date-space {
+	line-height: 35px;
 }

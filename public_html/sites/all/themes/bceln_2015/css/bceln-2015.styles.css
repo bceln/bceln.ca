@@ -18,7 +18,7 @@
 /* Uncomment bellow content to visualize the grid */
 /* -- Abstraction -- */
 /* Integrating Fontello in our code */
-.field__item h3 a::before, .field__items h3 a::before, .field-group-div.collapsible h3 a::before, .field-group-format-title h3 a::before, .field-group-div.collapsed.collapsible h3 a::before, .collapsed.field-group-format-title h3 a::before, blockquote p::before, .field__items ul li::before, .search-block-form .container-inline .form-actions::after, form .views-submit-button::after, .field--name-node-link .field__items a::after, .more-link a::after, .responsive-menus.responsified span.toggler::before, ul.breadcrumb li::after, .wrap-header #block-boxes-homepage .boxes-box-content .learn-more-header::after, #boxes-box-newsletter .boxes-box-content .news-letter-icon::before, .l-region--sidebar-second .block ul.menu li a::before, #block-menu-block-1 ul.menu li a::before, .node .orginization-links-only li.views-row a::before {
+.field__item h3 a::before, .field__items h3 a::before, .field-group-div.collapsible h3 a::before, .field-group-format-title h3 a::before, .field-group-div.collapsed.collapsible h3 a::before, .collapsed.field-group-format-title h3 a::before, blockquote p::before, .field__items ul li::before, .search-block-form .container-inline .form-actions::after, form .views-submit-button::after, .field--name-node-link .field__items a::after, .more-link a::after, .responsive-menus.responsified span.toggler::before, ul.breadcrumb li::after, .wrap-header #block-boxes-homepage .boxes-box-content .learn-more-header::after, #boxes-box-newsletter .boxes-box-content .news-letter-icon::before, .l-region--sidebar-second .block ul.menu li a::before, #block-menu-block-1 ul.menu li a::before, .node .orginization-links-only li.views-row a::before, .view-display-id-block_2 .views-row::before {
   font-family: "fontello";
   font-style: normal;
   font-weight: normal;
@@ -265,7 +265,7 @@ strong {
     position: relative;
     color: #008499;
     cursor: pointer;
-    padding-right: 5px;
+    padding-right: 8px;
     content: "";
     font-size: 1.0em;
     margin-left: 0.3em;
@@ -273,7 +273,7 @@ strong {
     position: relative;
     color: #008499;
     cursor: pointer;
-    padding-right: 5px; }
+    padding-right: 8px; }
   .field-group-div.collapsible h3 a a, .field-group-format-title h3 a a {
     padding-left: 5px;
     color: #712C76; }
@@ -289,7 +289,7 @@ strong {
   position: relative;
   color: #008499;
   cursor: pointer;
-  padding-right: 5px;
+  padding-right: 8px;
   content: "";
   font-size: 1.0em;
   margin-left: 0.3em;
@@ -297,7 +297,7 @@ strong {
   position: relative;
   color: #008499;
   cursor: pointer;
-  padding-right: 5px; }
+  padding-right: 8px; }
 
 .l-region--sidebar-second .block h2.block__title {
   color: #333333;
@@ -420,15 +420,13 @@ form {
     padding-left: 10px; }
   form .views-exposed-form .views-widget-filter-keys {
     padding-top: 5px; }
-  form .form-type-textfield input {
+  form input[type="text"], form input[type="password"] {
     background-color: #E9E9E9;
-    width: 169px;
     margin-right: 0px;
     display: inline-block;
     border: 0px;
     font-size: 22px;
     line-height: 35px;
-    background-color: #E9E9E9;
     width: 165px;
     padding: 0 8px 1px 3px; }
   form .views-submit-button {
@@ -469,6 +467,26 @@ form {
       width: 35px;
       background: #008499;
       padding: 14px 2px 9px; }
+
+.user-login .form-item, .user-login .form-actions {
+  display: inline-block;
+  padding-right: 20px; }
+
+.user-login .form-actions.form-wrapper {
+  position: relative; }
+
+.user-login .form-submit {
+  background-color: #712C76;
+  margin-right: 0px;
+  display: inline-block;
+  border: 0px;
+  font-size: 22px;
+  line-height: 35px;
+  padding: 0 8px;
+  color: #ffad00;
+  cursor: pointer;
+  position: absolute;
+  top: -35px; }
 
 /* -- Components -- */
 .field--name-node-link .field__items a::after, .more-link a::after {
@@ -1298,6 +1316,9 @@ ul.breadcrumb {
 .not-front .l-branding:after {
   display: none; }
 
+.hide-block-title h2.block-title {
+  display: none; }
+
 .front .l-content .block {
   margin-top: 40px; }
   .front .l-content .block .more-link {
@@ -1350,6 +1371,12 @@ ul.breadcrumb {
     background: #FFF !important;
     border: none !important;
     padding-top: 20px !important; }
+
+.front .l-content .field__items ul li {
+  padding-left: 30px; }
+
+.front .l-content .view-content {
+  margin-top: 20px; }
 
 #block-boxes-partner-libraries-home {
   margin-top: 70px;
@@ -1585,6 +1612,9 @@ ul.breadcrumb {
   #block-menu-block-1 ul.menu li a.active-trail:hover {
     color: #333333 !important; }
 
+.view .node {
+  margin-bottom: 10px; }
+
 #block-views-blog-mobile-news-letter {
   display: block; }
 
@@ -1619,6 +1649,10 @@ ul.breadcrumb {
   margin-bottom: 40px; }
   .node .field-group-div {
     clear: both; }
+  .node .collapsible .field-group-format-wrapper {
+    margin-bottom: 20px; }
+  .node .group-partners .view {
+    margin-bottom: 25px; }
   .node .node-container-indent, .node .overview-resources .field-group-format-wrapper, .node .field-group-format-wrapper {
     width: 94.04762%;
     float: right;
@@ -1687,6 +1721,12 @@ ul.breadcrumb {
   text-transform: none;
   margin: 0px; }
 
+.node.view-mode-full > div {
+  margin-bottom: 15px; }
+
+.node.view-mode-full > .date-space {
+  line-height: 35px; }
+
 h4.h4-field--name-title {
   margin-bottom: 3px !important; }
   h4.h4-field--name-title a {
@@ -1706,9 +1746,31 @@ h4.h4-field--name-title {
   clear: none;
   clear: both; }
 
-table {
+.view-display-id-block_2 {
+  position: relative; }
+  .view-display-id-block_2 .views-row {
+    position: relative;
+    padding-left: 3%; }
+    .view-display-id-block_2 .views-row::before {
+      font-size: 1.7em;
+      padding-top: 4px;
+      margin-right: 0;
+      position: absolute;
+      color: #ffad00;
+      left: -3px;
+      top: -4px;
+      content: "";
+      font-size: 1.7em;
+      padding-top: 4px;
+      margin-right: 0;
+      position: absolute;
+      color: #ffad00;
+      left: -3px;
+      top: -4px; }
+
+.node table {
   margin: 40px 0px; }
-  table thead tr th {
+  .node table thead tr th {
     padding: 10px 30px;
     border: 2px solid #FFF;
     font-size: 16px;
@@ -1718,20 +1780,20 @@ table {
     color: #333333;
     text-transform: uppercase;
     font-weight: 900; }
-    table thead tr th a {
+    .node table thead tr th a {
       font-size: 16px;
       color: #333333;
       font-size: 16px;
       text-transform: uppercase;
       font-weight: 900; }
-    table thead tr th a.active {
+    .node table thead tr th a.active {
       color: #333333; }
-  table tbody tr:nth-child(even) td {
+  .node table tbody tr:nth-child(even) td {
     padding: 10px 30px;
     border: 2px solid #FFF;
     font-size: 16px;
     background-color: #EAEAEA; }
-  table tbody tr:nth-child(odd) td {
+  .node table tbody tr:nth-child(odd) td {
     padding: 10px 30px;
     border: 2px solid #FFF;
     font-size: 16px;

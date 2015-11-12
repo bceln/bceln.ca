@@ -70,7 +70,12 @@
 		}
 
 	}
-
+.field__items ul li {
+	   padding-left: 30px;
+}
+.view-content{
+	margin-top:20px;
+}
 }
 //Specific block verriders
 #block-boxes-partner-libraries-home {
@@ -368,3 +373,7 @@
 	}
 
 }
+.view .node{
+	    margin-bottom: 10px;
+}
+
