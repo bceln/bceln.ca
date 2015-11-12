@@ -28,14 +28,14 @@ class Bceln_Migrate_Node_Resource extends Bceln_Migrate_Abstract {
 
     $this->addFieldMapping('body', 'notes');
     // $this->addFieldMapping('body:summary', '');
-    // $this->addFieldMapping('body:format', '');
+    $this->addFieldMapping('body:format')->defaultValue(Bceln_Migrate_TextFormat::getTextFormatIdByName('Full HTML (with editor)'));
 
     $this->addFieldMapping('field_resource_content_producer', 'content_producer');
 
     $this->addFieldMapping('field_resources_chron_coverage', 'chron_coverage');
 
     $this->addFieldMapping('field_resources_usage_stats', 'usage_stats');
-    // $this->addFieldMapping('field_resources_usage_stats:format', '');
+    $this->addFieldMapping('field_resources_usage_stats:format')->defaultValue(Bceln_Migrate_TextFormat::getTextFormatIdByName('Full HTML (with editor)'));
 
     $this->addFieldMapping('field_resource_vend_desc', 'more_info');
     // $this->addFieldMapping('field_resource_vend_desc:title', '');
@@ -121,7 +121,7 @@ class Bceln_Migrate_Node_Resource extends Bceln_Migrate_Abstract {
       'is_new',
       // 'body',
       'body:summary',
-      'body:format',
+      // 'body:format',
       'field_private_note',
       'field_private_note:format',
       // 'field_resource_vend_desc',
@@ -131,7 +131,7 @@ class Bceln_Migrate_Node_Resource extends Bceln_Migrate_Abstract {
       // 'field_resource_content_producer',
       // 'field_resources_chron_coverage',
       // 'field_resources_usage_stats',
-      'field_resources_usage_stats:format',
+      // 'field_resources_usage_stats:format',
       'field_resources_generic_url',
       'field_resources_generic_url:title',
       'field_resources_generic_url:attributes',
