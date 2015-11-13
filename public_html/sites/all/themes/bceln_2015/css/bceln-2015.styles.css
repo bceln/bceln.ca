@@ -18,7 +18,7 @@
 /* Uncomment bellow content to visualize the grid */
 /* -- Abstraction -- */
 /* Integrating Fontello in our code */
-.field__item h3 a::before, .field__items h3 a::before, .field-group-div.collapsible h3 a::before, .field-group-format-title h3 a::before, .field-group-div.collapsed.collapsible h3 a::before, .collapsed.field-group-format-title h3 a::before, blockquote p::before, .item-list ul li::before, .search-block-form .container-inline .form-actions::after, form .views-submit-button::after, .field--name-node-link .field__items a::after, .more-link a::after, .responsive-menus.responsified span.toggler::before, ul.breadcrumb li::after, .wrap-header #block-boxes-homepage .boxes-box-content .learn-more-header::after, #boxes-box-newsletter .boxes-box-content .news-letter-icon::before, .l-region--sidebar-second .block ul.menu li a::before, #block-menu-block-1 ul.menu li a::before, .node .orginization-links-only li.views-row a::before, #block-views-blog-connect-newsletter-block ul li::before, .view-organizations ul li::before, .l-region--sidebar-second .view-display-id-offers_renewals .field__items h3 a::before, .l-region--sidebar-second .view-events .field__items h3 a::before {
+.field__item h3 a::before, .field__items h3 a::before, .field-group-div.collapsible h3 a::before, .field-group-format-title h3 a::before, .field-group-div.collapsed.collapsible h3 a::before, .collapsed.field-group-format-title h3 a::before, blockquote p::before, .node ul li::before, .search-block-form .container-inline .form-actions::after, form .views-submit-button::after, .user-login-form ul li::before, .field--name-node-link .field__items a::after, .more-link a::after, .responsive-menus.responsified span.toggler::before, ul.breadcrumb li::after, .wrap-header #block-boxes-homepage .boxes-box-content .learn-more-header::after, #boxes-box-newsletter .boxes-box-content .news-letter-icon::before, .l-region--sidebar-second .block ul.menu li a::before, #block-menu-block-1 ul.menu li a::before, .node .orginization-links-only li.views-row a::before, #block-views-blog-connect-newsletter-block ul li::before, .view-organizations ul li::before, .l-region--sidebar-second .view-display-id-offers_renewals .field__items h3 a::before, .l-region--sidebar-second .view-events .field__items h3 a::before {
   font-family: "fontello";
   font-style: normal;
   font-weight: normal;
@@ -338,10 +338,10 @@ blockquote p {
     top: 7px;
     margin-right: 10px; }
 
-.item-list ul li {
+.node ul li {
   position: relative;
   padding-left: 3%; }
-  .item-list ul li::before {
+  .node ul li::before {
     font-size: 1.7em;
     padding-top: 4px;
     margin-right: 0;
@@ -507,7 +507,12 @@ form {
   cursor: pointer;
   position: absolute;
   top: 25px;
-  right: 20px; }
+  left: 400px; }
+
+.user-login-form ul li {
+  padding-left: 0px; }
+  .user-login-form ul li::before {
+    content: ""; }
 
 /* -- Components -- */
 .field--name-node-link .field__items a::after, .more-link a::after {
