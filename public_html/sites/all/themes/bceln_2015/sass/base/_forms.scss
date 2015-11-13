@@ -124,6 +124,9 @@ form {
 	}
 	.form-actions.form-wrapper {
 		position: relative;
+		display: inline-block;
+		padding-right: 20px;
+		
 	}
 	.form-submit {
 		background-color: $violet-dark;
@@ -139,4 +142,26 @@ form {
 		top: -35px;
 	}
 
+}
+.user-login-form{
+	.form-item  {
+		position: relative;
+		display: inline-block;
+		padding-right: 20px;
+		
+	}
+	.form-submit {
+		background-color: $violet-dark;
+		margin-right: 0px;
+		display: inline-block;
+		border: 0px;
+		font-size: 22px;
+		line-height: 35px;
+		padding: 0 8px;
+		color: $orange;
+		cursor: pointer;
+		position: absolute;
+    top: 25px;
+    right: 20px;
+	}
 }

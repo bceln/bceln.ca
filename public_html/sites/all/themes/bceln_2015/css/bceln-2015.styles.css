@@ -18,7 +18,7 @@
 /* Uncomment bellow content to visualize the grid */
 /* -- Abstraction -- */
 /* Integrating Fontello in our code */
-.field__item h3 a::before, .field__items h3 a::before, .field-group-div.collapsible h3 a::before, .field-group-format-title h3 a::before, .field-group-div.collapsed.collapsible h3 a::before, .collapsed.field-group-format-title h3 a::before, blockquote p::before, .field__items ul li::before, .search-block-form .container-inline .form-actions::after, form .views-submit-button::after, .field--name-node-link .field__items a::after, .more-link a::after, .responsive-menus.responsified span.toggler::before, ul.breadcrumb li::after, .wrap-header #block-boxes-homepage .boxes-box-content .learn-more-header::after, #boxes-box-newsletter .boxes-box-content .news-letter-icon::before, .l-region--sidebar-second .block ul.menu li a::before, #block-menu-block-1 ul.menu li a::before, .node .orginization-links-only li.views-row a::before, .view-display-id-block_2 .views-row::before {
+.field__item h3 a::before, .field__items h3 a::before, .field-group-div.collapsible h3 a::before, .field-group-format-title h3 a::before, .field-group-div.collapsed.collapsible h3 a::before, .collapsed.field-group-format-title h3 a::before, blockquote p::before, .item-list ul li::before, .search-block-form .container-inline .form-actions::after, form .views-submit-button::after, .field--name-node-link .field__items a::after, .more-link a::after, .responsive-menus.responsified span.toggler::before, ul.breadcrumb li::after, .wrap-header #block-boxes-homepage .boxes-box-content .learn-more-header::after, #boxes-box-newsletter .boxes-box-content .news-letter-icon::before, .l-region--sidebar-second .block ul.menu li a::before, #block-menu-block-1 ul.menu li a::before, .node .orginization-links-only li.views-row a::before, #block-views-blog-connect-newsletter-block ul li::before, .view-organizations ul li::before, .l-region--sidebar-second .view-display-id-offers_renewals .field__items h3 a::before, .l-region--sidebar-second .view-events .field__items h3 a::before {
   font-family: "fontello";
   font-style: normal;
   font-weight: normal;
@@ -338,10 +338,10 @@ blockquote p {
     top: 7px;
     margin-right: 10px; }
 
-.field__items ul li {
+.item-list ul li {
   position: relative;
   padding-left: 3%; }
-  .field__items ul li::before {
+  .item-list ul li::before {
     font-size: 1.7em;
     padding-top: 4px;
     margin-right: 0;
@@ -358,10 +358,10 @@ blockquote p {
     left: -3px;
     top: -4px; }
 
-.field__items ol {
+.node--full ol {
   list-style-type: decimal;
   padding-left: 3%; }
-  .field__items ol li {
+  .node--full ol li {
     list-style-type: decimal; }
 
 .search-block-form .container-inline {
@@ -473,7 +473,9 @@ form {
   padding-right: 20px; }
 
 .user-login .form-actions.form-wrapper {
-  position: relative; }
+  position: relative;
+  display: inline-block;
+  padding-right: 20px; }
 
 .user-login .form-submit {
   background-color: #712C76;
@@ -487,6 +489,25 @@ form {
   cursor: pointer;
   position: absolute;
   top: -35px; }
+
+.user-login-form .form-item {
+  position: relative;
+  display: inline-block;
+  padding-right: 20px; }
+
+.user-login-form .form-submit {
+  background-color: #712C76;
+  margin-right: 0px;
+  display: inline-block;
+  border: 0px;
+  font-size: 22px;
+  line-height: 35px;
+  padding: 0 8px;
+  color: #ffad00;
+  cursor: pointer;
+  position: absolute;
+  top: 25px;
+  right: 20px; }
 
 /* -- Components -- */
 .field--name-node-link .field__items a::after, .more-link a::after {
@@ -1746,27 +1767,48 @@ h4.h4-field--name-title {
   clear: none;
   clear: both; }
 
-.view-display-id-block_2 {
-  position: relative; }
-  .view-display-id-block_2 .views-row {
-    position: relative;
-    padding-left: 3%; }
-    .view-display-id-block_2 .views-row::before {
-      font-size: 1.7em;
-      padding-top: 4px;
-      margin-right: 0;
-      position: absolute;
-      color: #ffad00;
-      left: -3px;
-      top: -4px;
-      content: "";
-      font-size: 1.7em;
-      padding-top: 4px;
-      margin-right: 0;
-      position: absolute;
-      color: #ffad00;
-      left: -3px;
-      top: -4px; }
+#block-views-blog-connect-newsletter-block ul li {
+  position: relative;
+  padding-left: 20px; }
+  #block-views-blog-connect-newsletter-block ul li::before {
+    font-size: 1.7em;
+    padding-top: 4px;
+    margin-right: 0;
+    position: absolute;
+    color: #ffad00;
+    left: -13px;
+    top: -4px;
+    content: "";
+    font-size: 1.7em;
+    padding-top: 4px;
+    margin-right: 0;
+    position: absolute;
+    color: #ffad00;
+    left: -13px;
+    top: -4px; }
+
+.view .field__item h3 a, .view .field__items h3 a {
+  padding-left: 7px; }
+
+.view-organizations ul li::before {
+  content: ""; }
+
+.l-region--sidebar-second .view-display-id-offers_renewals .field__items h3 a::before, .l-region--sidebar-second .view-events .field__items h3 a::before {
+  font-size: 1.0em;
+  margin-left: 0.3em;
+  margin-right: 0;
+  position: absolute;
+  left: 15px;
+  color: #ffad00;
+  cursor: pointer;
+  content: "";
+  font-size: 1.0em;
+  margin-left: 0.3em;
+  margin-right: 0;
+  position: absolute;
+  left: 15px;
+  color: #ffad00;
+  cursor: pointer; }
 
 .node table {
   margin: 40px 0px; }

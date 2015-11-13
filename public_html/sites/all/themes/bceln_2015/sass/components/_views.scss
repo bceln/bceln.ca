@@ -21,20 +21,48 @@ h4.h4-field--name-title{
 	}
 
 }
-.view-display-id-block_2 {
-	
-	position:relative;
-	.views-row{
-		position:relative;
-		padding-left:3%;
-		@include fontello-icon('\e809') {
-			font-size: 1.7em;
-			padding-top:4px;
-			margin-right: 0;
-			position: absolute;
-			color: $orange;
-	    left: -3px;
-	    top: -4px;
+#block-views-blog-connect-newsletter-block{
+  ul{
+ 		li{
+	 		position:relative;
+	 		padding-left:20px;
+	 		@include fontello-icon('\e809') {
+	 			font-size: 1.7em;
+	 			padding-top:4px;
+	 			margin-right: 0;
+	 			position: absolute;
+	 			color: $orange;
+	 	    left: -13px;
+	 	    top: -4px;
+ 		}
+ 	}
+ }
+}
+.view{
+	.field__item h3 a, .field__items h3 a{
+		padding-left: 7px;
 	}
 }
+.view-organizations {
+	 ul{
+		li{
+			@include fontello-icon('') {
+			}
+		}
+	}
+}
+.l-region--sidebar-second {
+	.view-display-id-offers_renewals, .view-events{
+		.field__items h3 a{
+			@include fontello-icon('\e800') {
+				font-size: 1.0em;
+				margin-left: 0.3em;
+				margin-right: 0;
+				position: absolute;
+				left: 15px;
+				color:$orange;
+				cursor:pointer;
+			}
+		}
+	}
 }
