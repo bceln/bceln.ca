@@ -257,7 +257,14 @@ ul.breadcrumb {
 	}
 	
 }
+ul.dropdown {
+	padding-left: 0;
 
+	li {			
+		margin: 0px;
+	  @include fontello-icon('','before') {}			
+	}
+}
 .l-region--footer-first, .l-region--footer-second{
 	ul {
 		padding-left: 0;
