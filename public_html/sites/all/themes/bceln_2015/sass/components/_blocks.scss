@@ -1,9 +1,40 @@
+//
+// GENERAL Style applying to blocks
+// =================================
+
 
 //
-//GENERAL styles for homepage Blocks as well as header and footer
-//
+// Style By region
+// =================================
 
-//Content body ONLY in front page 
+/* ----- Sidebar ----- */
+.l-region--sidebar-second {
+	
+	> .block:first-child {
+		margin-top: 70px;
+		margin-bottom: 90px;
+		
+	}
+
+	.block {
+		margin: 0 25px 40px 25px;
+
+	}
+
+	.block__title {
+		background-color: $violet-super-super-light;
+		text-align: center;
+		padding: 9px 20px;
+		margin: 0;
+	}
+	
+	.block__content {
+		border-bottom: 2px solid $orange;
+		padding: 20px 15px;
+	}
+}
+
+/* ----- Front page content ----- */
 .front .l-content {
 	.block {
 		margin-top: 40px;
@@ -77,7 +108,27 @@
 	margin-top:20px;
 }
 }
-//Specific block verriders
+
+//
+// Style By type
+// =================================
+#block-menu-block-1 {
+
+	.block__title {
+		background-color: transparent !important;
+		text-align: left;
+		padding: 0 0 20px 13px;
+		margin-bottom: 0px;
+	}
+}
+
+
+//
+// Individual
+// =================================
+
+//ONLY front page 
+
 #block-boxes-partner-libraries-home {
 	margin-top: 70px;
 	@include grid-span(12,1);
@@ -109,13 +160,14 @@
 		h2 {
 			background: url('../images/block-head-repeat.png') top left;
 			background-repeat: repeat-x;
+			color:$white;
 			height: 64px;
 			font-size: $fz-h3;
 			padding: 0 15px ;
 			padding-top: 25px;
 			margin-bottom: 0px;
 			text-transform: uppercase;
-		  @include font-weight($fw-semi-bold);
+		  @include font-weight($fw-bold);
 			position: absolute;
 			top: -25px;
 			left: 22px;
@@ -132,18 +184,6 @@
 				width: 95%;
 			}
 
-		}
-
-	}
-
-}
-.front .view-organizations {
-	@include grid-span(12,1);
-	margin-bottom: 50px;
-	.view-content {
-		.views-row {
-			float: left;
-			margin-right: 5px;
 		}
 
 	}
@@ -171,9 +211,7 @@
 	}
 
 }
-//
 //footer Blocks
-//
 #boxes-box-newsletter {
 	margin: 0px 31px;
 	.boxes-box-content {
@@ -203,18 +241,6 @@
 	}
 
 }
-//General Overrides
-.block__content .views-row {
-	margin-bottom: 10px;
-}
-.views-row strong {
-	@include font-weight($fw-normal);
-	span.date-display-single {
-		margin-left: 21px;
-	}
-
-}
-
 //
 //Block title #block-re-utilities-section-nav replacing the front page #block-boxes-homepage in non front pages 
 //
@@ -265,115 +291,25 @@
 	}
 
 }
-
-
-//
-//IN THIS SECTION GENERIC BLOCKS Within l-region--sidebar-second
-// =================================
-
-.l-region--sidebar-second {
-	.block {
-		padding-left: 23px;
-		padding-right: 33px;
-		padding-top: 70px;
-		padding-bottom: 20px;
-		h2.block__title {
-			background-color: $violet-super-super-light;
-			text-align: center;
-			padding: 9px 20px;
-			margin-bottom: 25px;
-		}
-		ul.menu li {
-			padding-bottom: 8px;
-			padding-left: 8px;
-			text-align: left;
-			
-			a {
-				line-height: 25px;
-				color: $violet-dark;
-				font-weight: $fw-semi-bold;
-				@include fontello-icon('\e800','before') {
-					font-size: 0.8em;
-					margin-left: 0.3em;
-					margin-right: 0;
-					position: relative;
-					color: $orange;
-					cursor: pointer;
-				}
-
-			}
-
-		}
-		.block__content {
-			//		    padding: 0 5px;
-			border-bottom: 2px solid $orange;
-		}
-		.block__content > div {
-			width: 90%;
-			margin :0 auto;
-			padding-bottom: 20px;
-		}
-		ul.menu li a.active-trail {
-			color: $grey-dark !important;
-		}
-		ul.menu li a.active-trail:hover {
-			color: $grey-dark !important;
-		}
-
-	}
-
+#block-views-blog-connect-newsletter-block{
+  ul{
+ 		li{
+	 		position:relative;
+	 		padding-left:20px;
+	 		@include fontello-icon('\e809') {
+	 			font-size: 1.7em;
+	 			padding-top:4px;
+	 			margin-right: 0;
+	 			position: absolute;
+	 			color: $orange;
+	 	    left: -13px;
+	 	    top: -4px;
+ 		}
+ 	}
+ }
 }
-
-
 //
 //IN THIS SECTION <sidebar second's FIRST  IN THIS SECTION MENU BLOCK
 // =================================
-#block-menu-block-1 {
-	padding-left: 23px;
-	padding-right: 33px;
-	padding-top: 70px;
-	padding-bottom: 20px;
-	h2.block__title {
-		background-color: transparent !important;
-		text-align: left;
-		padding: 0 0 20px 13px;
-		margin-bottom: 0px;
-	}
-	ul.menu li {
-		padding-bottom: 8px;
-		padding-left: 22px;
-		display: block;
-		position: relative;
-		padding-bottom: 15px;
-		a {
-			font-size: $fz-mid;
-			line-height: 15px;
-			color: $violet-dark;
-			font-weight: 800;
-			@include fontello-icon('\e800','before') {
-				font-size: 0.8em;
-				margin-left: 0.3em;
-				margin-right: 0;
-				position: absolute;
-				left: -2px;
-				top: 3px;
-				font-size: $fz-h2;
-				color: $orange;
-				cursor: pointer;
-			}
 
-		}
-
-	}
-	ul.menu li a.active-trail {
-		color: $grey-dark !important;
-	}
-	ul.menu li a.active-trail:hover {
-		color: $grey-dark !important;
-	}
-
-}
-.view .node{
-	    margin-bottom: 10px;
-}
 

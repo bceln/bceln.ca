@@ -26,6 +26,43 @@
 
 
 //
+// Module Menu Block
+// =================================
+.l-region--sidebar-second .block--menu-block {
+
+	ul.menu {
+		padding-left: 2rem;
+		
+		li {			
+		  @include fontello-icon('\e800','before') {
+			  color: $orange;
+				font-size: $fz-mid;
+				left: -1.8rem;
+				position: absolute;
+				top: 0.32em;
+			}
+			margin-bottom: 10px;
+		  position: relative;
+			text-align: left;
+		  
+		
+			a {
+				line-height: 25px;
+				color: $violet-dark;
+				font-weight: $fw-semi-bold;
+			
+				&.active-trail {
+					color: $grey-dark !important;
+				}
+				&.active-trail:hover {
+					color: $grey-dark !important;
+				}
+			}
+		}
+	}
+}
+
+//
 // Main Menu
 // =================================
 #block-menu-block-2 .menu-block-2 li a {
@@ -143,6 +180,7 @@ ul.breadcrumb {
 	margin-top: 45px;
 	margin-left: 10px;
 	li {
+	  @include fontello-icon('','before') {}			
 		font-size: $fz-small;
 		line-height: 25px;
 		color: $violet-dark !important;
@@ -174,7 +212,12 @@ ul.breadcrumb {
 
 //TABS
 .tabs {
-	border-bottom: 6px solid $tabs-color;
+		li {			
+			margin: 0px;
+	    margin-right: 10px;
+		  @include fontello-icon('','before') {}			
+		}
+		border-bottom: 6px solid $tabs-color;
 	li.active {
 		a {
 			background: $tabs-color !important;
@@ -199,4 +242,30 @@ ul.breadcrumb {
 
 	}
 
+}
+
+
+.l-region--branding{
+	ul {
+		padding-left: 2rem;
+	
+		li {			
+		  @include fontello-icon('','before') {
+			
+			}			
+		}
+	}
+	
+}
+
+.l-region--footer-first, .l-region--footer-second{
+	ul {
+		padding-left: 0;
+	
+		li {			
+			margin: 0px;
+		  @include fontello-icon('','before') {}			
+		}
+	}
+	
 }

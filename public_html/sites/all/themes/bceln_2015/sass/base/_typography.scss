@@ -30,7 +30,6 @@ a {
 h1, h2, h3, h4, h5, h6 {
   color: $white;
   @include font-weight($fw-bold);
-  margin-bottom: 10px;
 }
   
 h1 {
@@ -60,7 +59,6 @@ h4, h4 a {
   font-size: $fz-h4;
   color: $grey-dark;
 	text-transform:uppercase;
-	padding:8px 0;
 }
   
 h5 {
@@ -169,16 +167,6 @@ strong {
 	}
 
 }
-.l-region--sidebar-second .block h2.block__title{
-	color:$grey-dark;
-	font-size:$fz-h3;
-	padding:0 15px ;
-	padding-top:25px;
-	margin-bottom:0px;
-	text-transform:uppercase;
-	font-weight:$fw-bold;
-	padding-bottom:25px;
-}
 a.field-group-format-title{
 	color:$violet-dark;
 }
@@ -202,25 +190,41 @@ blockquote p{
 		margin-right: 10px;
 	}
 }
-.node ul{
-	li{
-		position:relative;
-		padding-left:3%;
-		@include fontello-icon('\e809') {
-			font-size: 1.7em;
-			padding-top:4px;
-			margin-right: 0;
-			position: absolute;
-			color: $orange;
-	    left: -3px;
-	    top: -4px;
-		}
-	}
-}
  .node--full ol{
 	    list-style-type: decimal;
 			padding-left:3%;
 	li{
     list-style-type: decimal;
 		}
+}
+
+ul {
+	padding-left: 2rem;
+	
+	li {			
+	  @include fontello-icon('\e809','before') {
+		  color: $orange;
+			font-size: 1.5em;
+			left: -1.8rem;
+			position: absolute;
+			top: 0.08em;
+		}
+		margin-bottom: 10px;
+	  position: relative;
+		text-align: left;
+	  
+	
+		a {
+			line-height: 25px;
+			color: $violet-dark;
+			font-weight: $fw-semi-bold;
+		
+			&.active-trail {
+				color: $grey-dark !important;
+			}
+			&.active-trail:hover {
+				color: $grey-dark !important;
+			}
+		}
+	}
 }

@@ -1,4 +1,4 @@
-h4.h4-field--name-title{
+.h4-field--name-title{
 	margin-bottom: 3px !important;
 	a {
 		color: $grey-dark;
@@ -21,29 +21,13 @@ h4.h4-field--name-title{
 	}
 
 }
-#block-views-blog-connect-newsletter-block{
-  ul{
- 		li{
-	 		position:relative;
-	 		padding-left:20px;
-	 		@include fontello-icon('\e809') {
-	 			font-size: 1.7em;
-	 			padding-top:4px;
-	 			margin-right: 0;
-	 			position: absolute;
-	 			color: $orange;
-	 	    left: -13px;
-	 	    top: -4px;
- 		}
- 	}
- }
-}
-.view{
-	.field__item h3 a, .field__items h3 a{
-		padding-left: 7px;
-	}
-}
-.view-organizations {
+
+//.view{
+//	.field__item h3 a, .field__items h3 a{
+//		padding-left: 7px;
+//	}
+//}
+.view-organizations, .view-events {
 	 ul{
 		li{
 			@include fontello-icon('') {
@@ -51,18 +35,26 @@ h4.h4-field--name-title{
 		}
 	}
 }
-.l-region--sidebar-second {
-	.view-display-id-offers_renewals, .view-events{
-		.field__items h3 a{
-			@include fontello-icon('\e800') {
-				font-size: 1.0em;
-				margin-left: 0.3em;
-				margin-right: 0;
-				position: absolute;
-				left: 15px;
-				color:$orange;
-				cursor:pointer;
-			}
-		}
+.view .node{
+	    margin-bottom: 10px;
+}
+
+.views-row strong {
+	@include font-weight($fw-normal);
+	span.date-display-single {
+		margin-left: 21px;
 	}
+
+}
+.front .view-organizations {
+	@include grid-span(12,1);
+	margin-bottom: 50px;
+	.view-content {
+		.views-row {
+			float: left;
+			margin-right: 5px;
+		}
+
+	}
+
 }
