@@ -376,37 +376,35 @@ ul {
   .search-block-form .container-inline .form-actions {
     cursor: pointer; }
     .search-block-form .container-inline .form-actions::after {
-      cursor: pointer;
-      position: absolute;
-      right: 3px;
-      top: 8px;
-      z-index: 200;
-      font-size: 20px;
+      background: #008499;
       cursor: pointer;
       color: #FFF;
+      font-size: 20px;
       position: absolute;
-      z-index: 200;
+      padding: 8px;
+      right: -10px;
+      top: 0px;
+      z-index: 1;
       content: "";
-      cursor: pointer;
-      position: absolute;
-      right: 3px;
-      top: 8px;
-      z-index: 200;
-      font-size: 20px;
+      background: #008499;
       cursor: pointer;
       color: #FFF;
+      font-size: 20px;
       position: absolute;
-      z-index: 200; }
-    .search-block-form .container-inline .form-actions .form-submit:hover {
-      background: #ffad00; }
+      padding: 8px;
+      right: -10px;
+      top: 0px;
+      z-index: 1; }
     .search-block-form .container-inline .form-actions .form-submit {
-      cursor: pointer;
       border: none;
+      background: transparent;
+      cursor: pointer;
       overflow: hidden;
       text-indent: -9999px;
-      width: 35px;
-      background: #008499;
-      padding: 14px 2px 9px; }
+      width: 29px;
+      padding: 14px 0px 9px 0px;
+      position: relative;
+      z-index: 2; }
 
 form {
   position: relative; }
@@ -427,41 +425,42 @@ form {
   form .views-submit-button {
     padding-left: 0px !important;
     padding-top: 4px !important;
-    margin-top: 8px;
+    margin-top: 29px;
     cursor: pointer;
     position: relative; }
     form .views-submit-button::after {
-      cursor: pointer;
-      position: absolute;
-      right: 8px;
-      top: 30px;
-      z-index: 200;
-      font-size: 20px;
+      background: #008499;
       cursor: pointer;
       color: #FFF;
+      font-size: 20px;
       position: absolute;
-      z-index: 200;
+      padding: 8px;
+      right: -10px;
+      top: 0px;
+      z-index: 1;
       content: "";
-      cursor: pointer;
-      position: absolute;
-      right: 8px;
-      top: 30px;
-      z-index: 200;
-      font-size: 20px;
+      background: #008499;
       cursor: pointer;
       color: #FFF;
+      font-size: 20px;
       position: absolute;
-      z-index: 200; }
-    form .views-submit-button .form-submit:hover {
-      background: #ffad00; }
+      padding: 8px;
+      right: -10px;
+      top: 0px;
+      z-index: 1; }
+    form .views-submit-button #edit-submit-resources {
+      margin-top: 0px;
+      padding: 11px 0px 8px 3px; }
     form .views-submit-button .form-submit {
-      cursor: pointer;
       border: none;
+      background: transparent;
+      cursor: pointer;
       overflow: hidden;
       text-indent: -9999px;
-      width: 35px;
-      background: #008499;
-      padding: 14px 2px 9px; }
+      width: 29px;
+      padding: 14px 0px 9px 0px;
+      position: relative;
+      z-index: 2; }
 
 .user-login .form-item, .user-login .form-actions {
   display: inline-block;
@@ -509,6 +508,22 @@ form {
   .user-login-form ul li::before {
     content: ""; }
 
+.l-content #edit-submit {
+  width: 36px;
+  height: 36px;
+  text-indent: -9999px;
+  background: #008499 url(../images/icon-search-35x35.png) 1px 2px no-repeat;
+  /* path to your image */
+  border: none;
+  margin: 0 0 0 0px;
+  padding: 14px;
+  color: transparent;
+  text-transform: capitalize;
+  /* This is the IE hack :P  */ }
+
+.not-front .search-form {
+  margin-bottom: 20px; }
+
 /* -- Components -- */
 .field--name-node-link .field__items a::after, .more-link a::after {
   font-size: 1.0em;
@@ -553,10 +568,6 @@ form {
       line-height: 25px;
       color: #712C76;
       font-weight: 600; }
-      .l-region--sidebar-second .block--menu-block ul.menu li a.active-trail {
-        color: #333333 !important; }
-      .l-region--sidebar-second .block--menu-block ul.menu li a.active-trail:hover {
-        color: #333333 !important; }
 
 #block-menu-block-2 .menu-block-2 li a {
   font-size: 20px;
@@ -594,6 +605,15 @@ form {
   .responsive-menus.responsified .responsive-menus-simple li a {
     background: #712C76;
     color: #FFF !important; }
+
+.l-region--footer-first a {
+  line-height: 25px;
+  color: #712C76;
+  font-weight: 600; }
+  .l-region--footer-first a.active-trail {
+    color: #ffad00 !important; }
+  .l-region--footer-first a.active-trail:hover {
+    color: #ffad00 !important; }
 
 .block--menu h2 {
   font-size: 18px;

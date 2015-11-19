@@ -25,30 +25,30 @@
 		.form-actions {
 			cursor: pointer;
 			@include fontello-icon('\e801','after') {
-				cursor: pointer;
-				position: absolute;
-				right: 3px;
-				top: 8px;
-				z-index: 200;
-				font-size: 20px;
+		    background: $dark-cyan;
 				cursor: pointer;
 				color: $white;
+				font-size: 20px;				
 				position: absolute;
-				z-index: 200;
-			}
-			.form-submit:hover {
-				background: $orange;
+				padding:8px;
+				right: -10px;
+				top: 0px;
+				z-index: 1;
 			}
 			.form-submit {
-				cursor: pointer;
 				border: none;
+				background: transparent;
+				cursor: pointer;
 				overflow: hidden;
 				text-indent: -9999px;
-				width: 35px;
-				background: $dark-cyan;
-				padding: 14px 2px 9px;
+				width: 29px;
+				padding:14px 0px 9px 0px;
+				position:relative;
+				z-index:2;
 			}
-
+//			.form-actions:hover::after {
+//				background: $orange;
+//			}
 		}
 
 	}
@@ -86,32 +86,36 @@ form {
 	.views-submit-button {
 		padding-left: 0px !important;
 		padding-top: 4px !important;
-		margin-top: 8px;
+		margin-top: 29px;
 		cursor: pointer;
 		position: relative;
 		@include fontello-icon('\e801','after') {
-			cursor: pointer;
-			position: absolute;
-			right: 8px;
-			top: 30px;
-			z-index: 200;
-			font-size: 20px;
+	    background: $dark-cyan;
 			cursor: pointer;
 			color: $white;
+			font-size: 20px;				
 			position: absolute;
-			z-index: 200;
+			padding:8px;
+			right: -10px;
+			top: 0px;
+			z-index: 1;
+
 		}
-		.form-submit:hover {
-			background: $orange;
+		#edit-submit-resources{
+			margin-top:0px;
+	    padding: 11px 0px 8px 3px;
 		}
+	
 		.form-submit {
-			cursor: pointer;
 			border: none;
+			background: transparent;
+			cursor: pointer;
 			overflow: hidden;
 			text-indent: -9999px;
-			width: 35px;
-			background: $dark-cyan;
-			padding: 14px 2px 9px;
+			width: 29px;
+			padding:14px 0px 9px 0px;
+			position:relative;
+			z-index:2;
 		}
 
 	}
@@ -170,4 +174,19 @@ form {
 		}
 	}
 
+}
+//Submit btn on the page :: licensed-resources/alphabetically
+.l-content #edit-submit {
+	width: 36px;
+  height: 36px;
+  text-indent: -9999px;
+  background: $dark-cyan url(../images/icon-search-35x35.png) 1px 2px no-repeat; /* path to your image */
+  border: none;
+  margin: 0 0 0 0px;
+  padding: 14px;
+  color: transparent;
+  text-transform: capitalize;  /* This is the IE hack :P  */
+}
+.not-front .search-form{
+	margin-bottom:20px;
 }

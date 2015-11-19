@@ -50,13 +50,6 @@
 				line-height: 25px;
 				color: $violet-dark;
 				font-weight: $fw-semi-bold;
-			
-				&.active-trail {
-					color: $grey-dark !important;
-				}
-				&.active-trail:hover {
-					color: $grey-dark !important;
-				}
 			}
 		}
 	}
@@ -115,6 +108,20 @@
 //
 // Menus in Footer First
 // =================================
+.l-region--footer-first{
+	a {
+		line-height: 25px;
+		color: $violet-dark;
+		font-weight: $fw-semi-bold;
+	
+		&.active-trail {
+			color: $orange !important;
+		}
+		&.active-trail:hover {
+			color: $orange !important;
+		}
+	}
+}
 .block--menu h2 {
 	font-size: $fz-h2;
 	color: $white;
