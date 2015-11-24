@@ -175,6 +175,12 @@
 	.boxes-box-content {
 		display: none;
 	}
+	#block-boxes-homepage{
+		background: -webkit-linear-gradient(left, $violet-dark-gradiant , $violet-light-gradiant, $violet-dark-gradiant); /* For Safari 5.1 to 6.0 */
+		background: -o-linear-gradient(right, $violet-dark-gradiant, $violet-light-gradiant, $violet-dark-gradiant); /* For Opera 11.1 to 12.0 */
+		background: -moz-linear-gradient(right, $violet-dark-gradiant, $violet-light-gradiant, $violet-dark-gradiant); /* For Firefox 3.6 to 15 */
+		background: linear-gradient(to right, $violet-dark-gradiant , $violet-light-gradiant, $violet-dark-gradiant); /* Standard syntax */
+	}
 	#block-boxes-homepage, #block-re-utilities-section-nav {
 		@include clearfix;
 		@include grid-container;
@@ -453,6 +459,9 @@
 		#block-menu-menu-about-bc-eln,#block-menu-menu-licensing,
 		#block-menu-menu-partner-libraries,#block-menu-menu-services-initiatives {
 			padding-bottom: 15px;
+			.block__title{
+				    text-transform: capitalize !important;
+			}
 		}
 		//MOBILE FOOTER LAYOUT
 		//END ROWS
@@ -574,7 +583,8 @@
 				a {
 					color: $grey-dark;
 					text-decoration: underline;
-					font-size: $fz-ex-small;
+					font-weight:400;
+					font-size: 12px;
 				}
 
 			}
@@ -616,7 +626,7 @@
 		}
 		#block-menu-menu-footer {
 			bottom: 5px;
-			left: 65px;
+			left: 74px;
 		}
 		@include breakpoint($tablet-layout) {
 			#block-block-10 ,#block-menu-menu-footer {
@@ -625,8 +635,8 @@
 				left: 30px;
 			}
 			#block-menu-menu-footer {
-				left: 388px;
-				bottom: 13px;
+				left: 412px;
+				bottom: 16px;
 			}
 			#site-logo-footer {
 				@include grid-span(5,1);

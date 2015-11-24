@@ -1,3 +1,31 @@
+(function($,sr){
+
+  // debouncing function from John Hann
+  // http://unscriptable.com/index.php/2009/03/20/debouncing-javascript-methods/
+  var debounce = function (func, threshold, execAsap) {
+      var timeout;
+
+      return function debounced () {
+          var obj = this, args = arguments;
+          function delayed () {
+              if (!execAsap)
+                  func.apply(obj, args);
+              timeout = null;
+          };
+
+          if (timeout)
+              clearTimeout(timeout);
+          else if (execAsap)
+              func.apply(obj, args);
+
+          timeout = setTimeout(delayed, threshold || 100);
+      };
+  }
+  // smartresize 
+  jQuery.fn[sr] = function(fn){  return fn ? this.bind('resize', debounce(fn)) : this.trigger(sr); };
+
+})(jQuery,'smartresize');
+
 (function ($) {
 
   /**
@@ -14,6 +42,27 @@
     // Create an anchor element with jQuery.
     return $('<a href="' + path + '" title="' + title + '">' + title + '</a>');
   };
+
+  // Drupal.theme.prototype.blockHeightAdjsut = function (firstBlockId, secondBlockId, thirdBlockId) {
+  //   // Sets the hight of all three blocks to be the same
+  // 		console.log('here');
+  // 		var h1,h2,h3;
+  // 		hightOne = $(firstBlockId + ' .block__content > div');
+  // 		heightTwo = $(secondBlockId + ' .block__content > div');
+  // 		heightThree = $(thirdBlockId + ' .block__content > div');
+  // 		if(hightOne >= heightTwo && hightOne >= heightThree){// height 1 bigger than the other 2
+  // 				$(secondBlockId + ' .block__content > div').height(hightOne);
+  // 				$(thirdBlockId + ' .block__content > div').height(hightOne);
+  // 			}
+  // 			else if (hightTwo >= heightOne && hightTwo >= heightThree){//Height 2 bigger than the other 2
+  // 				$(firstBlockId + ' .block__content > div').height(hightTwo);
+  // 				$(thirdBlockId + ' .block__content > div').height(hightTwo);
+  // 			}
+  // 			else {//Height 3 bigger than the other 2
+  // 				$(firstBlockId + ' .block__content > div').height(hightThree);
+  // 				$(thirdBlockId + ' .block__content > div').height(hightThree);
+  // 			}
+  // };
 
   /**
    * Behaviors are Drupal's way of applying JavaScript to a page. In short, the
@@ -54,6 +103,37 @@
         // The anchor is then appended to the current element.
         $anchor.appendTo(this);
       });
+    }
+  };
+  Drupal.behaviors.blockHeightAdjust= {
+    attach: function (context, settings) {
+			//kepping home page blocks all at the same height
+			$(window).smartresize(function(){
+				var h1,h2,h3;
+				hightOne = $('#block-views-trials-offers-renewals .block__content > div').height();
+				heightTwo = $('#block-views-blog-latest-news .block__content > div').height();
+				heightThree = $('#block-views-blog-connect-newsletter-block .block__content > div').height(); 
+				
+				if(hightOne > heightTwo) {
+					$('#block-views-blog-latest-news .block__content > div').height(heightOne);
+					} 
+					else{
+						$('#block-views-trials-offers-renewals .block__content > div').height(heightTwo);
+				}
+				
+				if(hightOne > heightThree) {
+						$('#block-views-blog-connect-newsletter-block .block__content > div').height(hightOne);
+					} 
+					else{
+						$('#block-views-trials-offers-renewals .block__content > div').height(heightThree);
+				}
+				if(heightTwo > heightThree) {
+						 $('#block-views-blog-connect-newsletter-block .block__content > div').height(heightTwo);
+					}
+					else{
+						$('#block-views-blog-latest-news .block__content > div').height(heightThree);
+				}
+			});
     }
   };
 

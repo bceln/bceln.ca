@@ -6,7 +6,11 @@
 		clear: both;
 	}
 	.collapsible .field-group-format-wrapper {
-		margin-bottom: 20px;
+		
+		margin: 20px;
+		.field--label-inline{
+		    margin-bottom: 18px;
+		}
 	}
 	.group-partners .view {
 		margin-bottom: 25px;
@@ -24,7 +28,7 @@
 	}
 	.field__label {
 		font-size: $fz-mid;
-		@include font-weight($fw-bold);
+		@include font-weight($fw-semi-bold);
 		text-transform: uppercase;
 		margin: 25px 0px 10px 0px;
 	}

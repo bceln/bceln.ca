@@ -111,10 +111,10 @@ strong {
 .field__item h3, .field__items h3 {	
 	margin-bottom:3px !important;
 	a {
-		padding-left:22px;
 		color:$violet-dark;
 		font-size:$fz-h3;
     display: block;
+		padding-left:22px;
 		@include fontello-icon('\e800') {
 			font-size: 1.0em;
 			margin-left: 0.3em;
@@ -181,14 +181,16 @@ blockquote p{
   background-position: middle left;
   background-repeat: no-repeat;
   text-indent: 23px;
-	@include fontello-icon('\e804') {
-		font-size: 1.0em;
+	
+	@include fontello-icon('"') {
+		font-size: 2.0em;
 		color: $orange;
 		position: absolute;
 		left:5px;
 		top:7px;
 		margin-right: 10px;
 	}
+	
 }
  .node--full ol{
 	    list-style-type: decimal;

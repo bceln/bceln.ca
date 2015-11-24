@@ -65,7 +65,7 @@
 		h2.block__title {
 			background: url('../images/block-head-repeat.png') top left;
 			background-repeat: repeat-x;
-			width: 82%;
+			width: 62%;
 			height: 64px;
 			font-size: $fz-h3;
 			padding: 0 15px ;
@@ -81,7 +81,7 @@
 		.block__content {
 			margin-bottom: 35px;
 			.view-content {
-				margin-bottom: 50px;
+				margin-bottom: 20px;
 			}
 
 		}
@@ -92,6 +92,7 @@
 			border-bottom: 2px solid $orange;
 			padding-top: 70px;
 			padding-bottom: 20px;
+			margin-top:17px;
 		}
 		//override for main homepage block
 		.view-id-services {
@@ -131,6 +132,20 @@
 
 #block-boxes-partner-libraries-home {
 	margin-top: 70px;
+	position:relative;
+  &:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: -25px;
+		height:44px;
+	  background: -webkit-linear-gradient(#E9E9E9, #F6F6F6); /* For Safari 5.1 to 6.0 */
+	  background: -o-linear-gradient(#E9E9E9, #F6F6F6); /* For Opera 11.1 to 12.0 */
+	  background: -moz-linear-gradient(#E9E9E9, #F6F6F6); /* For Firefox 3.6 to 15 */
+	  background: linear-gradient(#E9E9E9, #F6F6F6); /* Standard syntax */
+    right: 0;
+    left: 0;
+  }
 	@include grid-span(12,1);
 	.boxes-box-content {
 		a {
@@ -189,12 +204,13 @@
 	}
 
 }
+
+
 #boxes-box-partner_libraries_home.boxes-box {
 	@include breakpoint($tablet-layout) {
 		background: $white !important;
 		border: none !important;
 	}
-
 }
 #block-boxes-partner-libraries-home .block__content {
 	margin-bottom: 15px;
@@ -202,10 +218,17 @@
 #block-views-blog-connect-newsletter-block {
 	.block__content {
 		.view-content {
-			margin-bottom: 30px;
+			margin-bottom: 28px;
+		}
+		ul{
+			li{
+		    margin-bottom: 4px;
+		    font-size: 15px;
+			}
+				padding-left:20px;
 		}
 		.field--name-body {
-			margin-bottom: 50px;
+//			margin-bottom: 50px;
 		}
 
 	}
@@ -213,13 +236,13 @@
 }
 //footer Blocks
 #boxes-box-newsletter {
-	margin: 0px 31px;
+	margin: 0px 45px;
 	.boxes-box-content {
 		background: $dark-cyan;
 		text-align: center;
 		a {
 			display: inline-block;
-			padding: 10px;
+			padding: 5px;
 		}
 		.news-letter-icon {
 			@include fontello-icon('\e802') {
@@ -232,9 +255,9 @@
 
 		}
 		.news-letter-text {
-			float: right;
 			color: $white;
-			font-size: $fz-h2;
+			font-size: 14px;
+			line-height:15px;
 			font-weight: $fw-semi-bold;
 		}
 
