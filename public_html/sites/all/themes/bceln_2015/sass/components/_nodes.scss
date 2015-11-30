@@ -27,8 +27,8 @@
 		@include grid-container;
 	}
 	.field__label {
-		font-size: $fz-mid;
-		@include font-weight($fw-semi-bold);
+		font-size: $fz-mid-small;
+		@include font-weight($fw-bold);
 		text-transform: uppercase;
 		margin: 25px 0px 10px 0px;
 	}
