@@ -137,7 +137,7 @@ class Bceln_Migrate_Node_License extends Bceln_Migrate_Abstract {
       'body:summary',
       'body:format',
       // 'field_license_eres_text',
-      'field_license_eres_text:format',
+      // 'field_license_eres_text:format',
       // 'field_license_ill_txt',
       'field_license_ill_txt:format',
       // 'field_license_archival_txt',
