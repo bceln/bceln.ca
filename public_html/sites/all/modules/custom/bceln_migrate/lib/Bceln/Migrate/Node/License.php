@@ -25,7 +25,7 @@ class Bceln_Migrate_Node_License extends Bceln_Migrate_Abstract {
 
     $this->addFieldMapping('field_legacy_id', 'licence_id');
     $this->addFieldMapping('field_license_eres_text', 'ereserves_txt');
-    // $this->addFieldMapping('field_license_eres_text:format', '');
+    $this->addFieldMapping('field_license_eres_text:format')->defaultValue(Bceln_Migrate_TextFormat::getTextFormatIdByName('Full HTML (with editor)'));
 
     $this->addFieldMapping('field_license_ill_txt', 'ill_txt');
     // $this->addFieldMapping('field_license_ill_txt:format', '');
