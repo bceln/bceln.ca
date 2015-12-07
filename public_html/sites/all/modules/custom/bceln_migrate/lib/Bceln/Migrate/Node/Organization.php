@@ -38,7 +38,7 @@ class Bceln_Migrate_Node_Organization extends Bceln_Migrate_Abstract {
     $this->addFieldMapping('field_location:street', 'street');
     // $this->addFieldMapping('field_location:additional', '');
     $this->addFieldMapping('field_location:city', 'city');
-    $this->addFieldMapping('field_location:province', 'prov');
+    // $this->addFieldMapping('field_location:province', 'prov');
     $this->addFieldMapping('field_location:postal_code', 'postal_code');
     // $this->addFieldMapping('field_location:country', '');
     // $this->addFieldMapping('field_location:latitude', '');
@@ -129,7 +129,7 @@ class Bceln_Migrate_Node_Organization extends Bceln_Migrate_Abstract {
       // 'field_location:street',
       'field_location:additional',
       // 'field_location:city',
-      // 'field_location:province',
+      'field_location:province',
       // 'field_location:postal_code',
       'field_location:country',
       'field_location:latitude',

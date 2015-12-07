@@ -49,6 +49,7 @@ class Bceln_Migrate_Node_Vendor extends Bceln_Migrate_Abstract {
     $this->addUnmigratedSources([
       // 'inst_name',
       // 'inst_url',
+      'inst_type',
     ]);
 
     $this->addUnmigratedDestinations([

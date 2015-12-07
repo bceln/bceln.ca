@@ -147,7 +147,6 @@ class Bceln_Migrate_Node_Resource extends Bceln_Migrate_Abstract {
       // 'field_content_types:create_term',
       // 'field_content_types:ignore_case',
       'field_platform',
-      'field_platform:format',
       // 'field_title_lists',
       'field_title_lists:title',
       'field_title_lists:attributes',

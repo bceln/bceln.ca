@@ -6,6 +6,9 @@ class Bceln_Migrate_Node_License extends Bceln_Migrate_Abstract {
   }
 
   public function __construct($arguments = []) {
+    $this->extraSourceFields = [
+      'license_filename' => t('File name looked up in prepareRow()'),
+    ];
     parent::__construct($arguments);
   	$this->destination = new MigrateDestinationNode('license');
   	$this->dealWithPathAuto();    
@@ -52,6 +55,17 @@ class Bceln_Migrate_Node_License extends Bceln_Migrate_Abstract {
     $this->addFieldMapping('field_url:title', 'url_1_format');
     // $this->addFieldMapping('field_url:attributes', '');
     // $this->addFieldMapping('field_url:language', '');
+
+    $this->addFieldMapping('field_attachments', 'license_filename');
+    $this->addFieldMapping('field_attachments:file_class')->defaultValue('MigrateFileUri');
+    // $this->addFieldMapping('field_attachments:preserve_files', '');
+    $this->addFieldMapping('field_attachments:destination_dir')->defaultValue('public://license');
+    // $this->addFieldMapping('field_attachments:destination_file', '');
+    $this->addFieldMapping('field_attachments:file_replace')->defaultValue(FILE_EXISTS_REPLACE);
+    $this->addFieldMapping('field_attachments:source_dir')->defaultValue(Bceln_Migrate_Config::getFullLicenseFileDirectoryName());
+    // $this->addFieldMapping('field_attachments:urlencode', '');
+    // $this->addFieldMapping('field_attachments:description', '');
+    // $this->addFieldMapping('field_attachments:display', '');
 
     // $this->addFieldMapping('title', '');
     // $this->addFieldMapping('uid', '');
@@ -130,13 +144,13 @@ class Bceln_Migrate_Node_License extends Bceln_Migrate_Abstract {
       'field_license_archival_txt:format',
       // 'field_private_note',
       'field_private_note:format',
-      'field_attachments',
-      'field_attachments:file_class',
+      // 'field_attachments',
+      // 'field_attachments:file_class',
       'field_attachments:preserve_files',
-      'field_attachments:destination_dir',
+      // 'field_attachments:destination_dir',
       'field_attachments:destination_file',
-      'field_attachments:file_replace',
-      'field_attachments:source_dir',
+      // 'field_attachments:file_replace',
+      // 'field_attachments:source_dir',
       'field_attachments:urlencode',
       'field_attachments:description',
       'field_attachments:display',
@@ -298,5 +312,7 @@ class Bceln_Migrate_Node_License extends Bceln_Migrate_Abstract {
         $row->$csv_field = '';
       }
     }
+
+    $row->license_filename = Bceln_Migrate_File::getFileNameByLicenseId($row->licence_id);
   }
 }

@@ -26,4 +26,13 @@ class Bceln_Migrate_Config {
 
     return $dataDirectory . '/' . $fileName;
   }
+
+  static public function getFullLicenseFileDirectoryName() {
+    $modulePath = drupal_get_path('module', static::getModuleName());
+    $defaultLicenseFileDirectory = variable_get('file_public_path', 'sites/default/files') . '/bceln_migrate_license_file_directory';
+    $varName = static::getModuleName() . '_license_file_directory';
+    $licenseFileDirectory = variable_get($varName, $defaultLicenseFileDirectory);
+
+    return rtrim($licenseFileDirectory, '/');
+  }
 }
