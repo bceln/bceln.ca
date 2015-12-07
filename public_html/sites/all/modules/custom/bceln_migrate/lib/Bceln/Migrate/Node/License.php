@@ -27,14 +27,16 @@ class Bceln_Migrate_Node_License extends Bceln_Migrate_Abstract {
     $this->addFieldMapping('field_license_eres_text', 'ereserves_txt');
     $this->addFieldMapping('field_license_eres_text:format')->defaultValue(Bceln_Migrate_TextFormat::getTextFormatIdByName('Full HTML (with editor)'));
 
+    $this->addFieldMapping('body:format')->defaultValue(Bceln_Migrate_TextFormat::getTextFormatIdByName('Full HTML (with editor)'));
+
     $this->addFieldMapping('field_license_ill_txt', 'ill_txt');
-    // $this->addFieldMapping('field_license_ill_txt:format', '');
+    $this->addFieldMapping('field_license_ill_txt:format')->defaultValue(Bceln_Migrate_TextFormat::getTextFormatIdByName('Full HTML (with editor)'));
 
     $this->addFieldMapping('field_license_archival_txt', 'archival_txt');
-    // $this->addFieldMapping('field_license_archival_txt:format', '');
+    $this->addFieldMapping('field_license_archival_txt:format')->defaultValue(Bceln_Migrate_TextFormat::getTextFormatIdByName('Full HTML (with editor)'));
 
     $this->addFieldMapping('field_private_note', 'general');
-    // $this->addFieldMapping('field_private_note:format', '');
+    $this->addFieldMapping('field_private_note:format')->defaultValue(Bceln_Migrate_TextFormat::getTextFormatIdByName('Full HTML (with editor)'));
 
     $this->addFieldMapping('field_license_ereserves', 'ereserves');
     $this->addFieldMapping('field_license_ill', 'ill');
@@ -135,15 +137,15 @@ class Bceln_Migrate_Node_License extends Bceln_Migrate_Abstract {
       'is_new',
       'body',
       'body:summary',
-      'body:format',
+      // 'body:format',
       // 'field_license_eres_text',
       // 'field_license_eres_text:format',
       // 'field_license_ill_txt',
-      'field_license_ill_txt:format',
+      // 'field_license_ill_txt:format',
       // 'field_license_archival_txt',
-      'field_license_archival_txt:format',
+      // 'field_license_archival_txt:format',
       // 'field_private_note',
-      'field_private_note:format',
+      // 'field_private_note:format',
       // 'field_attachments',
       // 'field_attachments:file_class',
       'field_attachments:preserve_files',

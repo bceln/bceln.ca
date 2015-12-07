@@ -34,7 +34,7 @@ class Bceln_Migrate_Profile extends Bceln_Migrate_Abstract {
     $this->addFieldMapping('field_contact_first_name', 'first_name');
 
     $this->addFieldMapping('field_private_note', 'description');
-    // $this->addFieldMapping('field_private_note:format', '');
+    $this->addFieldMapping('field_private_note:format')->defaultValue(Bceln_Migrate_TextFormat::getTextFormatIdByName('Full HTML (with editor)'));
 
     $this->addFieldMapping('field_contact_groups', 'group_names');
     // $this->addFieldMapping('field_contact_groups:source_type', '');
@@ -93,7 +93,7 @@ class Bceln_Migrate_Profile extends Bceln_Migrate_Abstract {
       // 'field_contact_groups:ignore_case',
       'field_contact_skype_address',
       // 'field_private_note',
-      'field_private_note:format',
+      // 'field_private_note:format',
       'path',
     ]);
   }

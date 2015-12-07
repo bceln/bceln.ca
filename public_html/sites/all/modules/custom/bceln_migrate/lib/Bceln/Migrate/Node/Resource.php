@@ -47,10 +47,10 @@ class Bceln_Migrate_Node_Resource extends Bceln_Migrate_Abstract {
     $this->addFieldMapping('field_organization_ref', 'subscriptions')->sourceMigration('organization_import'); // from subscriptions.csv
 
     $this->addFieldMapping('field_resources_note_subscribers', 'subscrib_notes');
-    // $this->addFieldMapping('field_resources_note_subscribers:format', '');
+    $this->addFieldMapping('field_resources_note_subscribers:format')->defaultValue(Bceln_Migrate_TextFormat::getTextFormatIdByName('Full HTML (with editor)'));
 
     $this->addFieldMapping('field_resources_multi_consortial', 'multiconsort_note');
-    // $this->addFieldMapping('field_resources_multi_consortial:format', '');
+    $this->addFieldMapping('field_resources_multi_consortial:format')->defaultValue(Bceln_Migrate_TextFormat::getTextFormatIdByName('Full HTML (with editor)'));
 
     $this->addFieldMapping('field_content_types', 'content_types')->separator(',');
     // $this->addFieldMapping('field_content_types:source_type', '');
@@ -61,6 +61,9 @@ class Bceln_Migrate_Node_Resource extends Bceln_Migrate_Abstract {
     // $this->addFieldMapping('field_title_lists:title', '');
     // $this->addFieldMapping('field_title_lists:attributes', '');
     // $this->addFieldMapping('field_title_lists:language', '');
+
+    $this->addFieldMapping('field_platform:format')->defaultValue(Bceln_Migrate_TextFormat::getTextFormatIdByName('Full HTML (with editor)'));
+    $this->addFieldMapping('field_private_note:format')->defaultValue(Bceln_Migrate_TextFormat::getTextFormatIdByName('Full HTML (with editor)'));
 
     // $this->addFieldMapping('uid', '');
     // $this->addFieldMapping('created', '');
@@ -76,13 +79,11 @@ class Bceln_Migrate_Node_Resource extends Bceln_Migrate_Abstract {
     // $this->addFieldMapping('revision_uid', '');
     // $this->addFieldMapping('is_new', '');
     // $this->addFieldMapping('field_private_note', '');
-    // $this->addFieldMapping('field_private_note:format', '');
     // $this->addFieldMapping('field_resources_generic_url', '');
     // $this->addFieldMapping('field_resources_generic_url:title', '');
     // $this->addFieldMapping('field_resources_generic_url:attributes', '');
     // $this->addFieldMapping('field_resources_generic_url:language', '');
     // $this->addFieldMapping('field_platform', '');
-    // $this->addFieldMapping('field_platform:format', '');
     // $this->addFieldMapping('field_access', '');
     // $this->addFieldMapping('field_access:source_type', '');
     // $this->addFieldMapping('field_access:create_term', '');
@@ -123,7 +124,7 @@ class Bceln_Migrate_Node_Resource extends Bceln_Migrate_Abstract {
       'body:summary',
       // 'body:format',
       'field_private_note',
-      'field_private_note:format',
+      // 'field_private_note:format',
       // 'field_resource_vend_desc',
       'field_resource_vend_desc:title',
       'field_resource_vend_desc:attributes',
@@ -139,14 +140,15 @@ class Bceln_Migrate_Node_Resource extends Bceln_Migrate_Abstract {
       // 'field_resource_vendor_ref',
       // 'field_organization_ref',
       // 'field_resources_note_subscribers',
-      'field_resources_note_subscribers:format',
+      // 'field_resources_note_subscribers:format',
       // 'field_resources_multi_consortial',
-      'field_resources_multi_consortial:format',
+      // 'field_resources_multi_consortial:format',
       // 'field_content_types',
       'field_content_types:source_type',
       // 'field_content_types:create_term',
       // 'field_content_types:ignore_case',
       'field_platform',
+      // 'field_platform:format',
       // 'field_title_lists',
       'field_title_lists:title',
       'field_title_lists:attributes',

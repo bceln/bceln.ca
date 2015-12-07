@@ -46,6 +46,8 @@ class Bceln_Migrate_Node_Organization extends Bceln_Migrate_Abstract {
     // $this->addFieldMapping('field_location:source', '');
     // $this->addFieldMapping('field_location:is_primary', '');
 
+    $this->addFieldMapping('field_private_note:format')->defaultValue(Bceln_Migrate_TextFormat::getTextFormatIdByName('Full HTML (with editor)'));
+
     $this->addFieldMapping('field_org_short_name', 'short_name');
 
     $this->addFieldMapping('field_sharebc_code', 'iol_code');
@@ -70,7 +72,6 @@ class Bceln_Migrate_Node_Organization extends Bceln_Migrate_Abstract {
     // $this->addFieldMapping('revision_uid', '');
     // $this->addFieldMapping('is_new', '');
     // $this->addFieldMapping('field_private_note', '');
-    // $this->addFieldMapping('field_private_note:format', '');
     // $this->addFieldMapping('field_institution_type', '');
     // $this->addFieldMapping('field_public_or_private', '');
     // $this->addFieldMapping('field_fte', '');
@@ -123,7 +124,7 @@ class Bceln_Migrate_Node_Organization extends Bceln_Migrate_Abstract {
       'field_org_url:attributes',
       'field_org_url:language',
       'field_private_note',
-      'field_private_note:format',
+      // 'field_private_note:format',
       // 'field_location',
       // 'field_location:name',
       // 'field_location:street',
