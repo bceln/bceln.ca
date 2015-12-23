@@ -18,7 +18,7 @@
 /* Uncomment bellow content to visualize the grid */
 /* -- Abstraction -- */
 /* Integrating Fontello in our code */
-.field__item h3 a::before, .field__items h3 a::before, .field-group-div.collapsible h3 a::before, .field-group-format-title h3 a::before, .field-group-div.collapsed.collapsible h3 a::before, .collapsed.field-group-format-title h3 a::before, blockquote p::before, ul li::before, .search-block-form .container-inline .form-actions::after, form .views-submit-button::after, .user-login-form ul li::before, .field--name-node-link .field__items a::after, .more-link a::after, .l-region--sidebar-second .block--menu-block ul.menu li::before, .responsive-menus.responsified span.toggler::before, ul.breadcrumb li::before, ul.breadcrumb li::after, .tabs li::before, .l-region--branding ul li::before, ul.dropdown li::before, .l-region--footer-first ul li::before, .l-region--footer-second ul li::before, .wrap-header #block-boxes-homepage .boxes-box-content .learn-more-header::after, #boxes-box-newsletter .boxes-box-content .news-letter-icon::before, #block-views-blog-connect-newsletter-block ul li::before, .node .orginization-links-only li.views-row a::before, .view-organizations ul li::before, .view-events ul li::before {
+.field__item h3 a::before, .field__items h3 a::before, .field-group-div.collapsible h3 a::before, .field-group-format-title h3 a::before, .field-group-div.collapsed.collapsible h3 a::before, .collapsed.field-group-format-title h3 a::before, blockquote p::before, .node ul li::before, .search-block-form .container-inline .form-actions::after, form .views-submit-button::after, .user-login-form ul li::before, .field--name-node-link .field__items a::after, .more-link a::after, .l-region--sidebar-second .block--menu-block ul.menu li::before, .responsive-menus.responsified span.toggler::before, ul.breadcrumb li::before, ul.breadcrumb li::after, .tabs li::before, .l-region--branding ul li::before, ul.dropdown li::before, .l-region--footer-first ul li::before, .l-region--footer-second ul li::before, .wrap-header #block-boxes-homepage .boxes-box-content .learn-more-header::after, #boxes-box-newsletter .boxes-box-content .news-letter-icon::before, #block-views-blog-connect-newsletter-block ul li::before, .node .orginization-links-only li.views-row a::before, .view-organizations ul li::before, .view-events ul li::before {
   font-family: "fontello";
   font-style: normal;
   font-weight: normal;
@@ -332,13 +332,13 @@ blockquote p {
   .node--full ol li {
     list-style-type: decimal; }
 
-ul {
+.node ul {
   padding-left: 2rem; }
-  ul li {
+  .node ul li {
     margin-bottom: 10px;
     position: relative;
     text-align: left; }
-    ul li::before {
+    .node ul li::before {
       color: #ffad00;
       font-size: 1.5em;
       left: -1.8rem;
@@ -350,13 +350,13 @@ ul {
       left: -1.8rem;
       position: absolute;
       top: 0.08em; }
-    ul li a {
+    .node ul li a {
       line-height: 25px;
       color: #712C76;
       font-weight: 600; }
-      ul li a.active-trail {
+      .node ul li a.active-trail {
         color: #333333 !important; }
-      ul li a.active-trail:hover {
+      .node ul li a.active-trail:hover {
         color: #333333 !important; }
 
 .search-block-form .container-inline {
@@ -548,6 +548,9 @@ form {
 
 .l-region--sidebar-second .block--menu-block ul.menu {
   padding-left: 2rem; }
+  .l-region--sidebar-second .block--menu-block ul.menu .expanded {
+    list-style-type: none;
+    list-style-image: none; }
   .l-region--sidebar-second .block--menu-block ul.menu li {
     margin-bottom: 10px;
     position: relative;
@@ -1669,6 +1672,9 @@ ul.dropdown {
     color: #ffad00;
     left: -13px;
     top: -4px; }
+
+#block-views-events-block-1 ul.list-inline {
+  padding-left: 0px; }
 
 #block-views-blog-mobile-news-letter {
   display: block; }

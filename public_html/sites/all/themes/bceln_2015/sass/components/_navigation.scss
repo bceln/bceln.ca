@@ -32,7 +32,10 @@
 
 	ul.menu {
 		padding-left: 2rem;
-		
+		.expanded{
+				list-style-type:none;
+				list-style-image:none;
+			}
 		li {			
 		  @include fontello-icon('\e800','before') {
 			  color: $orange;
