@@ -29,18 +29,16 @@
 // Module Menu Block
 // =================================
 .l-region--sidebar-second .block--menu-block {
+	
 
 	ul.menu {
 		padding-left: 2rem;
-		.expanded{
-				list-style-type:none;
-				list-style-image:none;
-			}
+		
 		li {			
 		  @include fontello-icon('\e800','before') {
 			  color: $orange;
 				font-size: $fz-mid;
-				left: -1.8rem;
+				left: -1.4rem;
 				position: absolute;
 				top: 0.32em;
 			}
@@ -55,6 +53,13 @@
 				font-weight: $fw-semi-bold;
 			}
 		}
+	}
+}
+.l-region--sidebar-second .block--views{
+	.field__item h3 a::before, .field__items h3 a::before {
+
+	    left: 7px;
+
 	}
 }
 
@@ -167,7 +172,7 @@
 				padding: 10px 5px;
 				width: 120px;
 				display: inline-block;
-				text-align: center;
+				text-align: right !important ;
 				a {
 					text-decoration: none;
 				}

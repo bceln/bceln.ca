@@ -121,8 +121,15 @@
 		padding: 0 0 20px 13px;
 		margin-bottom: 0px;
 	}
-}
 
+}
+#block-views-events-block-1 {
+	
+	.field__item h3 a, .field__items h3 a {
+	    padding-left: 17px;
+			font-weight: 600;
+	}
+}
 
 //
 // Individual
@@ -256,14 +263,31 @@
 		}
 		.news-letter-text {
 			color: $white;
-			font-size: 14px;
-			line-height:15px;
+			font-size: 17px;
+	    display: inline-block;
+    	line-height: 18px;
 			font-weight: $fw-semi-bold;
 		}
 
 	}
-
+	@include breakpoint($desktop-layout) {
+		.boxes-box-content{
+			text-align:left;
+		}
+		.news-letter-icon {
+	    display: inline-block;
+			@include fontello-icon('\e802') {
+				float:left;
+			}
+		}
+		.news-letter-text {
+			width:150px;
+	    display: inline-block;
+		
+		}
+	}
 }
+
 //
 //Block title #block-re-utilities-section-nav replacing the front page #block-boxes-homepage in non front pages 
 //
@@ -335,8 +359,4 @@
 //Up comming events<sidebar second's FIRST  IN THIS SECTION MENU BLOCK
 // =================================
 
-#block-views-events-block-1{
-	ul.list-inline{
-		padding-left:0px;
-	}
-}
+

@@ -18,7 +18,7 @@
 /* Uncomment bellow content to visualize the grid */
 /* -- Abstraction -- */
 /* Integrating Fontello in our code */
-.field__item h3 a::before, .field__items h3 a::before, .field-group-div.collapsible h3 a::before, .field-group-format-title h3 a::before, .field-group-div.collapsed.collapsible h3 a::before, .collapsed.field-group-format-title h3 a::before, blockquote p::before, .node ul li::before, .search-block-form .container-inline .form-actions::after, form .views-submit-button::after, .user-login-form ul li::before, .field--name-node-link .field__items a::after, .more-link a::after, .l-region--sidebar-second .block--menu-block ul.menu li::before, .responsive-menus.responsified span.toggler::before, ul.breadcrumb li::before, ul.breadcrumb li::after, .tabs li::before, .l-region--branding ul li::before, ul.dropdown li::before, .l-region--footer-first ul li::before, .l-region--footer-second ul li::before, .wrap-header #block-boxes-homepage .boxes-box-content .learn-more-header::after, #boxes-box-newsletter .boxes-box-content .news-letter-icon::before, #block-views-blog-connect-newsletter-block ul li::before, .node .orginization-links-only li.views-row a::before, .view-organizations ul li::before, .view-events ul li::before {
+.field__item h3 a::before, .field__items h3 a::before, .field-group-div.collapsible h3 a::before, .field-group-format-title h3 a::before, .field-group-div.collapsed.collapsible h3 a::before, .collapsed.field-group-format-title h3 a::before, blockquote p::before, .node ul li::before, .search-block-form .container-inline .form-actions::after, form .views-submit-button::after, .user-login-form ul li::before, .field--name-node-link .field__items a::after, .more-link a::after, .l-region--sidebar-second .block--menu-block ul.menu li::before, .responsive-menus.responsified span.toggler::before, ul.breadcrumb li::before, ul.breadcrumb li::after, .tabs li::before, .l-region--branding ul li::before, ul.dropdown li::before, .l-region--footer-first ul li::before, .l-region--footer-second ul li::before, .wrap-header #block-boxes-homepage .boxes-box-content .learn-more-header::after, #boxes-box-newsletter .boxes-box-content .news-letter-icon::before, #boxes-box-newsletter .news-letter-icon::before, #block-views-blog-connect-newsletter-block ul li::before, .node .orginization-links-only li.views-row a::before, .view-organizations ul li::before, .view-events ul li::before {
   font-family: "fontello";
   font-style: normal;
   font-weight: normal;
@@ -548,9 +548,6 @@ form {
 
 .l-region--sidebar-second .block--menu-block ul.menu {
   padding-left: 2rem; }
-  .l-region--sidebar-second .block--menu-block ul.menu .expanded {
-    list-style-type: none;
-    list-style-image: none; }
   .l-region--sidebar-second .block--menu-block ul.menu li {
     margin-bottom: 10px;
     position: relative;
@@ -558,19 +555,22 @@ form {
     .l-region--sidebar-second .block--menu-block ul.menu li::before {
       color: #ffad00;
       font-size: 16px;
-      left: -1.8rem;
+      left: -1.4rem;
       position: absolute;
       top: 0.32em;
       content: "";
       color: #ffad00;
       font-size: 16px;
-      left: -1.8rem;
+      left: -1.4rem;
       position: absolute;
       top: 0.32em; }
     .l-region--sidebar-second .block--menu-block ul.menu li a {
       line-height: 25px;
       color: #712C76;
       font-weight: 600; }
+
+.l-region--sidebar-second .block--views .field__item h3 a::before, .l-region--sidebar-second .block--views .field__items h3 a::before {
+  left: 7px; }
 
 #block-menu-block-2 .menu-block-2 li a {
   font-size: 20px;
@@ -652,7 +652,7 @@ form {
       padding: 10px 5px;
       width: 120px;
       display: inline-block;
-      text-align: center; }
+      text-align: right !important; }
       #block-menu-block-2 .menu-name-main-menu ul.menu li a {
         text-decoration: none; }
     #block-menu-block-2 .menu-name-main-menu ul.menu li.active-trail {
@@ -1511,6 +1511,10 @@ ul.dropdown {
   padding: 0 0 20px 13px;
   margin-bottom: 0px; }
 
+#block-views-events-block-1 .field__item h3 a, #block-views-events-block-1 .field__items h3 a {
+  padding-left: 17px;
+  font-weight: 600; }
+
 #block-boxes-partner-libraries-home {
   margin-top: 70px;
   position: relative;
@@ -1614,9 +1618,22 @@ ul.dropdown {
       margin-right: 10px; }
     #boxes-box-newsletter .boxes-box-content .news-letter-text {
       color: #FFF;
-      font-size: 14px;
-      line-height: 15px;
+      font-size: 17px;
+      display: inline-block;
+      line-height: 18px;
       font-weight: 600; }
+  @media (min-width: 992px) {
+    #boxes-box-newsletter .boxes-box-content {
+      text-align: left; }
+    #boxes-box-newsletter .news-letter-icon {
+      display: inline-block; }
+      #boxes-box-newsletter .news-letter-icon::before {
+        float: left;
+        content: "";
+        float: left; }
+    #boxes-box-newsletter .news-letter-text {
+      width: 150px;
+      display: inline-block; } }
 
 #block-re-utilities-section-nav {
   position: relative; }
@@ -1672,9 +1689,6 @@ ul.dropdown {
     color: #ffad00;
     left: -13px;
     top: -4px; }
-
-#block-views-events-block-1 ul.list-inline {
-  padding-left: 0px; }
 
 #block-views-blog-mobile-news-letter {
   display: block; }
