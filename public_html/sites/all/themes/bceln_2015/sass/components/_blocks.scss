@@ -243,46 +243,51 @@
 }
 //footer Blocks
 #boxes-box-newsletter {
-	margin: 0px 45px;
+	margin: 0px auto;
 	.boxes-box-content {
 		background: $dark-cyan;
 		text-align: center;
+		width: auto;
 		a {
 			display: inline-block;
-			padding: 5px;
+				padding: 12px;
 		}
 		.news-letter-icon {
 			@include fontello-icon('\e802') {
-				font-size: 1.3em;
+				font-size: 1.14em;
 				cursor: pointer;
 				color: $orange;
 				position: relative;
-				margin-right: 15px;
+				margin: 3px 0px 0px 0px;
+		    padding-left: 8px;
+		    text-shadow: 0px 3px 17px #713775, 3px 0px 17px #713775;
+				float:left;
+				
 			}
 
 		}
 		.news-letter-text {
 			color: $white;
-			font-size: 17px;
-	    display: inline-block;
+			font-size: 18px;
+	    display: block;
     	line-height: 18px;
 			font-weight: $fw-semi-bold;
+			text-align: center;
 		}
 
 	}
 	@include breakpoint($desktop-layout) {
 		.boxes-box-content{
-			text-align:left;
+			width: 200px;
 		}
 		.news-letter-icon {
 	    display: inline-block;
 			@include fontello-icon('\e802') {
-				float:left;
 			}
 		}
 		.news-letter-text {
 			width:145px;
-	    display: inline-block;
+	    display: inline-block !important;
 		
 		}
 	}

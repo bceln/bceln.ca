@@ -168,15 +168,19 @@ form {
     top: 25px;
     left: 400px;
 	}
-	ul li{
-		padding-left:0px;
-		@include fontello-icon('') {
+	ul {
+		padding-left: 0px;
+		li{
+			padding-left:0px;
+			@include fontello-icon('') {
+				display:none;
+			}
 		}
 	}
 
 }
 //Submit btn on the page :: licensed-resources/alphabetically
-.l-content #edit-submit {
+.l-content .view #edit-submit {
 	width: 36px;
   height: 36px;
   text-indent: -9999px;

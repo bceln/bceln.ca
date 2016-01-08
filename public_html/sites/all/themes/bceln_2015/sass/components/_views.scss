@@ -26,6 +26,7 @@
 	 ul{
 		li{
 			@include fontello-icon('') {
+				display:none;
 			}
 		}
 	}

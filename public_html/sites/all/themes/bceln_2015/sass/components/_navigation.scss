@@ -172,7 +172,7 @@
 				padding: 10px 5px;
 				width: 120px;
 				display: inline-block;
-				text-align: right !important ;
+				text-align: center;
 				a {
 					text-decoration: none;
 				}
@@ -266,7 +266,7 @@ ul.breadcrumb {
 	
 		li {			
 		  @include fontello-icon('','before') {
-			
+				display:none;
 			}			
 		}
 	}
@@ -277,7 +277,7 @@ ul.dropdown {
 
 	li {			
 		margin: 0px;
-	  @include fontello-icon('','before') {}			
+	  @include fontello-icon('','before') {display:none;}			
 	}
 }
 .l-region--footer-first, .l-region--footer-second{
@@ -286,7 +286,7 @@ ul.dropdown {
 	
 		li {			
 			margin: 0px;
-		  @include fontello-icon('','before') {}			
+		  @include fontello-icon('','before') {display:none;}			
 		}
 	}
 	
