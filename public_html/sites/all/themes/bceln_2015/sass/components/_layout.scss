@@ -9,7 +9,7 @@
 	
 	//Mobile
 	.site-logo {
-		margin-left: 20%;
+		margin-left: 3%;
 		position: absolute;
 		margin-top: 53px;
 	}
@@ -21,6 +21,9 @@
 			right: 1.15741%;
 			top: 164px;
 			z-index: 500;
+			#edit-search-block-form--2{
+				display:none;
+			}
 		}
 
 	}
@@ -40,6 +43,9 @@
 				position: absolute;
 				right: 1.15741%;
 				top: 90px;
+				#edit-search-block-form--2{
+					display:block;
+				}
 			}
 			#block-menu-block-2 {
 				right: 1.15741%;

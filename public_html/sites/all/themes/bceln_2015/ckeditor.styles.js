@@ -26,9 +26,9 @@ if(typeof(CKEDITOR) !== 'undefined') {
             { name : 'Preformatted Text', element : 'pre' },
             { name : 'Address'			, element : 'address' },
             */
-
-            { name : 'Blue Title'		, element : 'h3', styles : { 'color' : 'Blue' } },
-            { name : 'Red Title'		, element : 'h3', styles : { 'color' : 'Red' } },
+            //
+            // { name : 'Blue Title'		, element : 'h3', styles : { 'color' : 'Blue' } },
+            // { name : 'Red Title'		, element : 'h3', styles : { 'color' : 'Red' } },
 
             /* Inline Styles */
 
@@ -43,26 +43,26 @@ if(typeof(CKEDITOR) !== 'undefined') {
             { name : 'Superscript'		, element : 'sup' },
             */
 
-            { name : 'Marker: Yellow'	, element : 'span', styles : { 'background-color' : 'Yellow' } },
-            { name : 'Marker: Green'	, element : 'span', styles : { 'background-color' : 'Lime' } },
-
-            { name : 'Big'				, element : 'big' },
-            { name : 'Small'			, element : 'small' },
-            { name : 'Typewriter'		, element : 'tt' },
-
-            { name : 'Computer Code'	, element : 'code' },
-            { name : 'Keyboard Phrase'	, element : 'kbd' },
-            { name : 'Sample Text'		, element : 'samp' },
-            { name : 'Variable'			, element : 'var' },
-
-            { name : 'Deleted Text'		, element : 'del' },
-            { name : 'Inserted Text'	, element : 'ins' },
-
-            { name : 'Cited Work'		, element : 'cite' },
-            { name : 'Inline Quotation'	, element : 'q' },
-
-            { name : 'Language: RTL'	, element : 'span', attributes : { 'dir' : 'rtl' } },
-            { name : 'Language: LTR'	, element : 'span', attributes : { 'dir' : 'ltr' } },
+            // { name : 'Marker: Yellow'	, element : 'span', styles : { 'background-color' : 'Yellow' } },
+            // { name : 'Marker: Green'	, element : 'span', styles : { 'background-color' : 'Lime' } },
+            //
+            // { name : 'Big'				, element : 'big' },
+            // { name : 'Small'			, element : 'small' },
+            // { name : 'Typewriter'		, element : 'tt' },
+            //
+            // { name : 'Computer Code'	, element : 'code' },
+            // { name : 'Keyboard Phrase'	, element : 'kbd' },
+            // { name : 'Sample Text'		, element : 'samp' },
+            // { name : 'Variable'			, element : 'var' },
+            //
+            // { name : 'Deleted Text'		, element : 'del' },
+            // { name : 'Inserted Text'	, element : 'ins' },
+            //
+            // { name : 'Cited Work'		, element : 'cite' },
+            // { name : 'Inline Quotation'	, element : 'q' },
+            //
+            // { name : 'Language: RTL'	, element : 'span', attributes : { 'dir' : 'rtl' } },
+            // { name : 'Language: LTR'	, element : 'span', attributes : { 'dir' : 'ltr' } },
 
             /* Object Styles */
 
@@ -71,7 +71,7 @@ if(typeof(CKEDITOR) !== 'undefined') {
                     element : 'img',
                     attributes :
                     {
-                            'style' : 'padding: 5px; margin-right: 5px;float:left',
+                            'style' : 'padding: 5px; margin: 0px 20px 10px 0px;float:left',
                             // 'border' : '2',
                             'align' : 'left'
                     }
@@ -82,7 +82,7 @@ if(typeof(CKEDITOR) !== 'undefined') {
                     element : 'img',
                     attributes :
                     {
-                            'style' : 'padding: 5px; margin-left: 5px;float:right',
+                            'style' : 'padding: 5px; margin: 0px 0px 10px 20px;float:right',
                             // 'border' : '2',
                             'align' : 'right'
                     }

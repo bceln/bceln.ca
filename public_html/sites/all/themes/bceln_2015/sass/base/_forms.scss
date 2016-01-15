@@ -2,6 +2,34 @@
 // Branding's Search Form
 // =================================
 
+#search-form{
+	.form-item-keys{
+		position:relative;
+		cursor: pointer;
+		@include fontello-icon('\e801','after') {
+	    background: $dark-cyan;
+			cursor: pointer;
+			color: $white;
+			font-size: 20px;				
+			position: absolute;
+			padding:8px;
+			right: -36px;
+			top: -8px;
+			z-index: 1;
+		}
+	}
+	#edit-submit{
+		border: none;
+		background: transparent;
+		cursor: pointer;
+		overflow: hidden;
+		text-indent: -9999px;
+		width: 29px;
+		padding:14px 0px 9px 0px;
+		position:relative;
+		z-index:2;
+	}
+}
 .search-block-form {
 	.container-inline {
 		position: relative;
@@ -22,7 +50,7 @@
 			}
 
 		}
-		.form-actions {
+		.form-actions{
 			cursor: pointer;
 			@include fontello-icon('\e801','after') {
 		    background: $dark-cyan;
@@ -46,9 +74,6 @@
 				position:relative;
 				z-index:2;
 			}
-//			.form-actions:hover::after {
-//				background: $orange;
-//			}
 		}
 
 	}
