@@ -1911,6 +1911,9 @@ ul.dropdown {
   line-height: 1.1em !important;
   margin-bottom: 10px; }
 
+.views-exposed-widget .description {
+  display: none; }
+
 .node table {
   margin: 40px 0px; }
   .node table thead tr th {
