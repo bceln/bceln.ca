@@ -166,10 +166,21 @@ function multiselect_field_widget_form(&$form, &$form_state, $field, $instance, 
 function _multiselect_after_build($element, $form_state) {
   $value_key = $element['#columns'][0];
   $items = array();
-
   if (isset($form_state['values'][$element['#field_name']][LANGUAGE_NONE])) {
     foreach ($form_state['values'][$element['#field_name']][LANGUAGE_NONE] as $nid) {
       $items[] = array($value_key => $nid);
+    }
+  }
+  else if (module_exists('field_collection')) {
+    $field_info = field_info_field($element['#field_name']);
+    $bundle = $field_info['bundles']['field_collection_item'][0];
+    foreach ($form_state['values'][$bundle][LANGUAGE_NONE] as $field) {
+      $field_name = $element['#field_name'];
+      if (is_array($field) && isset($field[$field_name])) {
+        foreach ($field[$field_name][LANGUAGE_NONE] as $nid) {
+          $items[] = array($value_key => $nid);
+        }
+      }
     }
   }
 
@@ -230,7 +241,19 @@ function _multiselect_build_widget_code($options, $items, $element, $required = 
   // Add selected items to the array first
   if (is_array($items)) {
     foreach ($items as $key => $value) {
-      if (is_array($value) && array_key_exists('value', $value)) { // With CCK, it's an array.
+      if (is_array($value['value']) && array_key_exists('value', $value['value'])) { // Field collections have them nested.
+        $selected_options[$value['value']['value']] = $value['value']['value'];
+      }
+      elseif (is_array($value['value']) && array_key_exists('tid', $value['value'])) { // Field collections have them nested. Taxonomy
+        $selected_options[$value['value']['tid']] = $value['value']['tid'];
+      }
+      elseif (is_array($value['value']) && array_key_exists('nid', $value['value'])) { // Field collections have them nested. Node ref
+        $selected_options[$value['value']['nid']] = $value['value']['nid'];
+      }
+      elseif (is_array($value['value']) && array_key_exists('uid', $value['value'])) { // Field collections have them nested. User ref
+        $selected_options[$value['value']['uid']] = $value['value']['uid'];
+      }
+      elseif (is_array($value) && array_key_exists('value', $value)) { // With CCK, it's an array.
         $selected_options[$value['value']] = $value['value'];
       }
       elseif (is_array($value) && array_key_exists('tid', $value)) { // With CCK, it's an array. Taxonomy

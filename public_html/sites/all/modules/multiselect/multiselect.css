@@ -17,6 +17,10 @@ select.multiselect_sel {
 	float: right;
 	margin-right: 145px;
 }
+td .multiselect_labels .label_selected { /* Fix for field collection display */
+  float: none;
+  padding-left: 300px;
+}
 /* FIELDS */
 .multiselect_available {
 	float: left;
@@ -69,10 +73,20 @@ li.multiselect_add {
   background: url(images/remove.png) no-repeat;
   background-position: 0 0;
 }
-.multiselect_add a:hover {background-position: -33px 0px;}
-.multiselect_add a:active {background-position: -66px 0px;}
-.multiselect_remove a:hover {background-position: -33px 0px;}
-.multiselect_remove a:active {background-position: -66px 0px;}
+.multiselect_add a:hover,
+.multiselect_add a:focus {
+  background-position: -33px 0px;
+}
+.multiselect_add a:active {
+  background-position: -66px 0px;
+}
+.multiselect_remove a:hover,
+.multiselect_remove a:focus {
+  background-position: -33px 0px;
+}
+.multiselect_remove a:active {
+  background-position: -66px 0px;
+}
 /* FIELD DESCRIPTION */
 .multiselect .description {
 	display: block;
