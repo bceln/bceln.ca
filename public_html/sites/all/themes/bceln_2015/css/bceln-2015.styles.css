@@ -664,7 +664,7 @@ form {
   padding: 0px;
   margin: 0px 0px 7px 0px; }
 
-.menu .leaf {
+.menu .leaf, .menu .collapsed {
   list-style-image: none;
   list-style-type: none;
   font-size: 16px;
@@ -738,7 +738,9 @@ ul.breadcrumb {
     margin: 0px;
     margin-right: 10px; }
     .tabs li::before {
-      content: ""; }
+      display: none;
+      content: "";
+      display: none; }
   .tabs li.active a {
     background: #712C76 !important; }
   .tabs li a {
