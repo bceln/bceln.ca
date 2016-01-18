@@ -611,6 +611,9 @@ form {
 .l-region--sidebar-second .block--views .field__item h3 a::before, .l-region--sidebar-second .block--views .field__items h3 a::before {
   left: 7px; }
 
+.l-region--sidebar-second #block-views-events-block-1 .field__item h3 a::before, .l-region--sidebar-second #block-views-events-block-1 .field__items h3 a::before {
+  left: -7px; }
+
 #block-menu-block-2 .menu-block-2 li a {
   font-size: 20px;
   line-height: 22px;

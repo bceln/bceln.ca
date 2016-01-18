@@ -57,10 +57,16 @@
 }
 .l-region--sidebar-second .block--views{
 	.field__item h3 a::before, .field__items h3 a::before {
-
 	    left: 7px;
-
 	}
+}
+.l-region--sidebar-second {
+	#block-views-events-block-1{
+		.field__item h3 a::before, .field__items h3 a::before {
+		    left: -7px;
+		}
+	}
+	
 }
 
 //
