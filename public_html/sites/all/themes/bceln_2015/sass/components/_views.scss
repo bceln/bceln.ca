@@ -72,3 +72,103 @@
 .views-exposed-widget .description{
 	display:none;
 }
+.page-services{
+	.views-view-grid {
+		.col-1 {
+			padding-bottom: 20px;
+			@include grid-span(12, 1);
+			.group-left {
+				@include grid-span(12, 1);
+				text-align: center;
+			}
+			.group-right {
+				@include grid-span(12, 1);
+				text-align: center;
+			}
+			@include breakpoint(625px) {
+				@include grid-span(12, 1);
+				.group-left {
+					text-align: left;
+					@include grid-span(2,1);
+				}
+				.group-right {
+					text-align: left;
+					@include grid-span(8,5);
+				}
+
+			}
+			@include breakpoint($tablet-layout) {
+				padding-bottom: 0px;
+				
+				@include grid-span(12, 1);
+				.group-left {
+					@include grid-span(2,2);
+				}
+				.group-right {
+					@include grid-span(8,5);
+				}
+
+			}
+			@include breakpoint($desktop-layout) {
+				padding-bottom: 0px;
+				@include grid-span(6,1);
+				.group-left {
+					@include grid-span(4,1);
+				}
+				.group-right {
+					@include grid-span(7,6);
+				}
+
+			}
+
+		}
+		.col-2 {
+			padding-bottom: 20px;
+			@include grid-span(12, 1);
+			.group-left {
+				@include grid-span(12, 1);
+				text-align: center;
+			}
+			.group-right {
+				@include grid-span(12, 1);
+				text-align: center;
+			}
+			@include breakpoint(625px) {
+				@include grid-span(12, 1);
+				.group-left {
+					@include grid-span(2,1);
+					text-align: left;
+				}
+				.group-right {
+					text-align: left;
+					@include grid-span(8,5);
+				}
+
+			}
+			@include breakpoint($tablet-layout) {
+				padding-bottom: 0px;
+				@include grid-span(12, 1);
+				.group-left {
+					@include grid-span(2,2);
+				}
+				.group-right {
+					@include grid-span(8,5);
+				}
+
+			}
+			@include breakpoint($desktop-layout) {
+				padding-bottom: 0px;
+				@include grid-span(6,7);
+				.group-left {
+					@include grid-span(4,1);
+				}
+				.group-right {
+					@include grid-span(7,6);
+				}
+
+			}
+
+		}
+
+	}
+}

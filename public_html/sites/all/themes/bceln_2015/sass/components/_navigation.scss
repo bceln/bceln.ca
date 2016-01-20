@@ -51,6 +51,9 @@
 				line-height: 25px;
 				color: $violet-dark;
 				font-weight: $fw-semi-bold;
+				&.active{
+					color:$yellow ;
+				}
 			}
 		}
 	}
