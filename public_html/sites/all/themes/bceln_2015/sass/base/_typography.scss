@@ -82,7 +82,9 @@ em {
 strong {
   @include font-weight($fw-bold);
 }
-
+p{
+	    margin-bottom: 15px;
+}
 //
 // Highlighted text
 // =================================
@@ -108,24 +110,27 @@ strong {
 //
 //H3 links
 //
-.field__item h3, .field__items h3 {	
-	margin-bottom:3px !important;
-	a {
-		color:$violet-dark;
-		font-size:$fz-h3;
-    display: block;
-		padding-left:22px;
-		@include fontello-icon('\e800') {
-			font-size: 1.0em;
-			margin-left: 0.3em;
-			margin-right: 0;
-			position: absolute;
-			left: 0px;
-			color:$orange;
-			cursor:pointer;
+.l-content{
+	.field__item h3, .field__items h3 {	
+		margin-bottom:3px !important;
+		a {
+			color:$violet-dark;
+			font-size:$fz-h3;
+	    display: block;
+			padding-left:22px;
+			@include fontello-icon('\e800') {
+				font-size: 1.0em;
+				margin-left: 0.3em;
+				margin-right: 0;
+				position: absolute;
+				left: 0px;
+				color:$orange;
+				cursor:pointer;
+			}
 		}
 	}
 }
+
 .field-group-div.collapsible h3 ,.field-group-format-title h3{
 	background-color:$grey-light;
 	padding:8px 0;

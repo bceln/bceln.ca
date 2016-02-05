@@ -18,7 +18,7 @@
 /* Uncomment bellow content to visualize the grid */
 /* -- Abstraction -- */
 /* Integrating Fontello in our code */
-.field__item h3 a::before, .field__items h3 a::before, .field-group-div.collapsible h3 a::before, .field-group-format-title h3 a::before, .field-group-div.collapsed.collapsible h3 a::before, .collapsed.field-group-format-title h3 a::before, blockquote p::before, .node ul li::before, #search-form .form-item-keys::after, .search-block-form .container-inline .form-actions::after, form .views-submit-button::after, .user-login-form ul li::before, .field--name-node-link .field__items a::after, .more-link a::after, .l-region--sidebar-second .block--menu-block ul.menu li::before, .responsive-menus.responsified span.toggler::before, ul.breadcrumb li::before, ul.breadcrumb li::after, .tabs li::before, .l-region--branding ul li::before, ul.dropdown li::before, .l-region--footer-first ul li::before, .l-region--footer-second ul li::before, .wrap-header #block-boxes-homepage .boxes-box-content .learn-more-header::after, #block-views-blog-connect-newsletter-block ul li::before, .node .orginization-links-only li.views-row a::before, .view-organizations ul li::before, .view-events ul li::before {
+.l-content .field__item h3 a::before, .l-content .field__items h3 a::before, .field-group-div.collapsible h3 a::before, .field-group-format-title h3 a::before, .field-group-div.collapsed.collapsible h3 a::before, .collapsed.field-group-format-title h3 a::before, blockquote p::before, .node ul li::before, #search-form .form-item-keys::after, .search-block-form .container-inline .form-actions::after, form .views-submit-button::after, .user-login-form ul li::before, .field--name-node-link .field__items a::after, .more-link a::after, .l-region--sidebar-second .block--menu-block ul.menu li::before, .l-region--sidebar-second .block--views .view-content .views-row::before, .responsive-menus.responsified span.toggler::before, ul.breadcrumb li::before, ul.breadcrumb li::after, .tabs li::before, .l-region--branding ul li::before, ul.dropdown li::before, .l-region--footer-first ul li::before, .l-region--footer-second ul li::before, .wrap-header #block-boxes-homepage .boxes-box-content .learn-more-header::after, #block-views-blog-connect-newsletter-block ul li::before, .node .orginization-links-only li.views-row a::before, .view-organizations ul li::before, .view-events ul li::before {
   font-family: "fontello";
   font-style: normal;
   font-weight: normal;
@@ -210,6 +210,9 @@ em {
 strong {
   font-weight: 900; }
 
+p {
+  margin-bottom: 15px; }
+
 .highlighted-text {
   font-size: 17px;
   font-weight: 300;
@@ -225,14 +228,14 @@ strong {
     font-weight: 900;
     font-size: 18px; }
 
-.field__item h3, .field__items h3 {
+.l-content .field__item h3, .l-content .field__items h3 {
   margin-bottom: 3px !important; }
-  .field__item h3 a, .field__items h3 a {
+  .l-content .field__item h3 a, .l-content .field__items h3 a {
     color: #712C76;
     font-size: 17px;
     display: block;
     padding-left: 22px; }
-    .field__item h3 a::before, .field__items h3 a::before {
+    .l-content .field__item h3 a::before, .l-content .field__items h3 a::before {
       font-size: 1.0em;
       margin-left: 0.3em;
       margin-right: 0;
@@ -444,7 +447,7 @@ blockquote p {
 form {
   position: relative; }
   form .views-exposed-form .views-exposed-widget {
-    padding-right: 3px;
+    padding-right: 7px;
     padding-left: 10px; }
   form .views-exposed-form .views-widget-filter-keys {
     padding-top: 5px; }
@@ -460,7 +463,7 @@ form {
   form .views-submit-button {
     padding-left: 0px !important;
     padding-top: 4px !important;
-    margin-top: 29px;
+    margin-top: 24px;
     cursor: pointer;
     position: relative; }
     form .views-submit-button::after {
@@ -470,8 +473,8 @@ form {
       font-size: 20px;
       position: absolute;
       padding: 8px;
-      right: -10px;
-      top: 0px;
+      right: 1px;
+      top: 5px;
       z-index: 1;
       content: "";
       background: #008499;
@@ -480,12 +483,12 @@ form {
       font-size: 20px;
       position: absolute;
       padding: 8px;
-      right: -10px;
-      top: 0px;
+      right: 1px;
+      top: 5px;
       z-index: 1; }
     form .views-submit-button #edit-submit-resources {
       margin-top: 0px;
-      padding: 11px 0px 8px 3px; }
+      padding: 16px 33px 8px 3px; }
     form .views-submit-button .form-submit {
       border: none;
       background: transparent;
@@ -610,11 +613,31 @@ form {
       .l-region--sidebar-second .block--menu-block ul.menu li a.active {
         color: #FFAD00; }
 
-.l-region--sidebar-second .block--views .field__item h3 a::before, .l-region--sidebar-second .block--views .field__items h3 a::before {
-  left: 7px; }
-
-.l-region--sidebar-second #block-views-events-block-1 .field__item h3 a::before, .l-region--sidebar-second #block-views-events-block-1 .field__items h3 a::before, .l-region--sidebar-second #block-views-blog-latest-news .field__item h3 a::before, .l-region--sidebar-second #block-views-blog-latest-news .field__items h3 a::before {
-  left: -7px; }
+.l-region--sidebar-second .block--views .view-content {
+  padding-left: 18px; }
+  .l-region--sidebar-second .block--views .view-content .views-row {
+    margin-bottom: 10px;
+    position: relative;
+    text-align: left; }
+    .l-region--sidebar-second .block--views .view-content .views-row::before {
+      color: #ffad00;
+      font-size: 16px;
+      left: -1.4rem;
+      position: absolute;
+      top: 0.32em;
+      content: "";
+      color: #ffad00;
+      font-size: 16px;
+      left: -1.4rem;
+      position: absolute;
+      top: 0.32em; }
+    .l-region--sidebar-second .block--views .view-content .views-row a {
+      padding-left: 0px !important;
+      line-height: 25px;
+      color: #712C76;
+      font-weight: 600; }
+      .l-region--sidebar-second .block--views .view-content .views-row a.active {
+        color: #FFAD00; }
 
 #block-menu-block-2 .menu-block-2 li a {
   font-size: 20px;
@@ -790,6 +813,27 @@ ul.dropdown {
 .l-branding {
   position: relative;
   height: 157px; }
+  .l-branding:before {
+    content: '';
+    height: 7px;
+    background-color: #FFAD00;
+    width: 100%;
+    margin-right: 0px;
+    margin-left: 0;
+    clear: none;
+    float: right;
+    display: block;
+    margin-bottom: 37px; }
+  .l-branding:after {
+    content: '';
+    height: 23px;
+    background-color: #CEB6D0;
+    left: 446px;
+    bottom: 0px;
+    position: absolute;
+    margin-right: 1.15741%;
+    display: none;
+    width: 63.55%; }
   .l-branding .site-logo {
     margin-left: 3%;
     position: absolute;
@@ -869,35 +913,14 @@ ul.dropdown {
   .l-branding {
     height: 157px; } }
 
-.l-branding:before {
-  content: '';
-  height: 7px;
-  background-color: #FFAD00;
-  width: 100%;
-  margin-right: 0px;
-  margin-left: 0;
-  clear: none;
-  float: right;
-  display: block;
-  margin-bottom: 37px; }
-
 @media (min-width: 768px) {
   .l-branding:before {
     width: 97.68519%;
-    margin-right: 1.15741%; }
-  .l-branding:after {
-    content: '';
-    height: 23px;
-    background-color: #CEB6D0;
-    display: none;
-    right: 0px;
-    bottom: 0px;
-    position: absolute;
     margin-right: 1.15741%; } }
 
-@media (min-width: 1266px) {
+@media (min-width: 768px) {
   .l-branding:after {
-    width: 63.55%;
+    width: 100%;
     display: block; } }
 
 .wrap-header {
@@ -1491,6 +1514,13 @@ ul.dropdown {
 .hide-block-title h2.block-title {
   display: none; }
 
+.page-search.page-search-content .breadcrumb {
+  display: none; }
+
+@media (min-width: 766px) and (max-width: 879px) {
+  #block-block-15 {
+    display: none; } }
+
 /* ----- Sidebar ----- */
 .l-region--sidebar-second > .block:first-child {
   margin-top: 70px;
@@ -1535,7 +1565,7 @@ ul.dropdown {
   .front .l-content .block h2.block__title {
     background: url("../images/block-head-repeat.png") top left;
     background-repeat: repeat-x;
-    width: 62%;
+    min-width: 60%;
     height: 64px;
     font-size: 17px;
     padding: 0 15px;
@@ -1767,7 +1797,7 @@ ul.dropdown {
 
 @media (min-width: 768px) {
   .view-organizations {
-    display: block; } }
+    display: block !important; } }
 
 @media (min-width: 992px) {
   #block-views-blog-mobile-news-letter {
@@ -1783,6 +1813,8 @@ ul.dropdown {
     clear: both; }
   .node .collapsible .field-group-format-wrapper {
     margin: 20px; }
+    .node .collapsible .field-group-format-wrapper .field__label {
+      padding-right: 12px; }
     .node .collapsible .field-group-format-wrapper .field--label-inline {
       margin-bottom: 18px; }
   .node .group-partners .view {

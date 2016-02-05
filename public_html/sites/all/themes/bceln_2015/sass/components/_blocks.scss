@@ -65,7 +65,7 @@
 		h2.block__title {
 			background: url('../images/block-head-repeat.png') top left;
 			background-repeat: repeat-x;
-			width: 62%;
+	    min-width: 60%;
 			height: 64px;
 			font-size: $fz-h3;
 			padding: 0 15px ;

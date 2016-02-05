@@ -26,8 +26,13 @@
 
 })(jQuery,'smartresize');
 
-(function ($) {
 
+
+(function ($) {
+	
+	function isEmpty( el ){
+	      return !$.trim(el.html())
+	}
   /**
    * The recommended way for producing HTML markup through JavaScript is to write
    * theming functions. These are similiar to the theming functions that you might
@@ -87,54 +92,85 @@
    *   Drupal.settings directly you should use this because of potential
    *   modifications made by the Ajax callback that also produced 'context'.
    */
-  Drupal.behaviors.bceln2015ExampleBehavior = {
-    attach: function (context, settings) {
-      // By using the 'context' variable we make sure that our code only runs on
-      // the relevant HTML. Furthermore, by using jQuery.once() we make sure that
-      // we don't run the same piece of code for an HTML snippet that we already
-      // processed previously. By using .once('foo') all processed elements will
-      // get tagged with a 'foo-processed' class, causing all future invocations
-      // of this behavior to ignore them.
-      $('.some-selector', context).once('foo', function () {
-        // Now, we are invoking the previously declared theme function using two
-        // settings as arguments.
-        var $anchor = Drupal.theme('bceln2015ExampleButton', settings.myExampleLinkPath, settings.myExampleLinkTitle);
+	Drupal.behaviors.bceln2015ExampleBehavior = {
+	attach: function (context, settings) {
+	  // By using the 'context' variable we make sure that our code only runs on
+	  // the relevant HTML. Furthermore, by using jQuery.once() we make sure that
+	  // we don't run the same piece of code for an HTML snippet that we already
+	  // processed previously. By using .once('foo') all processed elements will
+	  // get tagged with a 'foo-processed' class, causing all future invocations
+	  // of this behavior to ignore them.
+	  $('.some-selector', context).once('foo', function () {
+	    // Now, we are invoking the previously declared theme function using two
+	    // settings as arguments.
+	    var $anchor = Drupal.theme('bceln2015ExampleButton', settings.myExampleLinkPath, settings.myExampleLinkTitle);
 
-        // The anchor is then appended to the current element.
-        $anchor.appendTo(this);
-      });
-    }
-  };
-  Drupal.behaviors.blockHeightAdjust= {
-    attach: function (context, settings) {
-			//kepping home page blocks all at the same height
-			$(window).smartresize(function(){
-				var h1,h2,h3;
-				hightOne = $('#block-views-trials-offers-renewals .block__content > div').height();
-				heightTwo = $('#block-views-blog-latest-news .block__content > div').height();
-				heightThree = $('#block-views-blog-connect-newsletter-block .block__content > div').height(); 
-				
-				if(hightOne > heightTwo) {
-					$('#block-views-blog-latest-news .block__content > div').height(heightOne);
+	    // The anchor is then appended to the current element.
+	    $anchor.appendTo(this);
+	  });
+	}
+	};
+	Drupal.behaviors.blockHeightAdjust = {
+ 
+	attach: function (context, settings) {
+if($('.front')){
+	var blockHeightAdjust  = function() {
+		var connectNewsBlockHidden = $('#block-views-blog-connect-newsletter-block').css('display') != 'none';
+		var h1,h2,h3, h4;
+		h1 = $('#block-views-trials-offers-renewals .block__content > div').height();
+		h2 = $('#block-views-blog-latest-news .block__content > div').height();
+		h3 = $('#block-views-blog-connect-newsletter-block .block__content > div').height(); 
+		h4 = $('#block-views-blog-mobile-news-letter .block__content > div').height(); 
+		switch(connectNewsBlockHidden){
+			case true : // keep all three height within the final height						
+
+			if(h1 >= h2) {
+				$('#block-views-blog-latest-news .block__content > div').height(h1);
+				} 
+				else{								
+				$('#block-views-trials-offers-renewals .block__content > div').height(h2);
+			}
+			if(h1 >= h3) {
+				$('#block-views-blog-connect-newsletter-block .block__content > div').height(h1);
+				} 
+				else{								
+				$('#block-views-trials-offers-renewals .block__content > div').height(h3);
+			}
+
+			if(h2 >= h3) {
+				$('#block-views-blog-connect-newsletter-block .block__content > div').height(h2);
+				}
+				else{
+				$('#block-views-blog-latest-news .block__content > div').height(h3);
+			}
+
+			break;
+			case false: // exclude the block-views-blog-connect-newsletter-block 's height from calculations and include h4
+				if(h1 >= h4) {
+					$('#block-views-blog-mobile-news-letter .block__content > div').height(h1);
 					} 
 					else{
-						$('#block-views-trials-offers-renewals .block__content > div').height(heightTwo);
+					$('#block-views-trials-offers-renewals .block__content > div').height(h4);
 				}
-				
-				if(hightOne > heightThree) {
-						$('#block-views-blog-connect-newsletter-block .block__content > div').height(hightOne);
-					} 
-					else{
-						$('#block-views-trials-offers-renewals .block__content > div').height(heightThree);
-				}
-				if(heightTwo > heightThree) {
-						 $('#block-views-blog-connect-newsletter-block .block__content > div').height(heightTwo);
-					}
-					else{
-						$('#block-views-blog-latest-news .block__content > div').height(heightThree);
-				}
-			});
-    }
-  };
+				break;
 
+			default:
+				break;
+}
+
+
+};
+//kepping home page blocks all at the same height
+$(window).smartresize(blockHeightAdjust);
+new blockHeightAdjust();	
+}
+	}
+	};
+	Drupal.behaviors.subscriberDetailsHide = {
+		attach: function (context, settings) {
+			if(isEmpty($('.group-subscriber-details .view-display-id-subscriber_details .view-content .views-row '))){
+				$('.collapsible.group-subscriber-details ').hide();
+			}
+		}
+	}
 })(jQuery);

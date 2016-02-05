@@ -94,7 +94,7 @@
 				.group-right {
 					text-align: left;
 					@include grid-span(8,5);
-				}
+				} 
 
 			}
 			@include breakpoint($tablet-layout) {

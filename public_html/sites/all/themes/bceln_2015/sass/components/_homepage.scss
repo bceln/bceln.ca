@@ -25,11 +25,12 @@
 }
 @include breakpoint($tablet-layout) {
 	.view-organizations {
-		display: block;
+		display: block !important;
 	}
 
 }
 @include breakpoint($desktop-layout) {
+
 	#block-views-blog-mobile-news-letter {
 		display: none;
 	}

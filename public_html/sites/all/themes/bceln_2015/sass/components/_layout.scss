@@ -6,6 +6,30 @@
 .l-branding {
 	position: relative;
 	height: 157px;
+	&:before {
+		content: '';
+		height: 7px;
+		background-color: $yellow;
+		width: 100%;
+		margin-right: 0px;
+		margin-left: 0;
+		clear: none;
+		float: right;
+		display: block;
+		margin-bottom: 37px;
+	}
+	&:after {
+		content: '';
+		height: 23px;
+		background-color: #CEB6D0;		
+    left: 446px;
+		bottom: 0px;
+		position: absolute;
+		margin-right: 1.15741%;
+		display:none;
+		width: 63.55%;
+		
+	}
 	//Mobile
 	.site-logo {
 		margin-left: 3%;
@@ -24,6 +48,7 @@
 				display:none;
 			}
 		}
+		
 
 	}
 	//Tablet
@@ -137,44 +162,22 @@
 		height: 157px;
 	}
 }
-.l-branding:before {
-	content: '';
-	height: 7px;
-	background-color: $yellow;
-	width: 100%;
-	margin-right: 0px;
-	margin-left: 0;
-	clear: none;
-	float: right;
-	display: block;
-	margin-bottom: 37px;
-}
-;
+
 @include breakpoint($tablet-layout) {
 	.l-branding:before {
 		width: 97.68519%;
 		margin-right: 1.15741%;
 	}
-	;
-	.l-branding:after {
-		content: '';
-		height: 23px;
-		background-color: #CEB6D0;
-		display: none;
-		right: 0px;
-		bottom: 0px;
-		position: absolute;
-		margin-right: 1.15741%;
-	}
-	;
+
 }
-@include breakpoint($max-width-layout) {
+@include breakpoint($tablet-layout) {
 	.l-branding:after {
-		width: 63.55%;
+		width: 100%;
 		display: block;
 	}
 
 }
+
 
 //
 // Header Region FOR FRONT PAGE 
@@ -679,4 +682,11 @@
 .hide-block-title h2.block-title{
 	display: none;
 }
-
+.page-search.page-search-content .breadcrumb{
+	display:none;
+}
+@include breakpoint(766px 879px){
+  #block-block-15 {
+      display: none;
+  }
+}

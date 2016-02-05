@@ -28,49 +28,69 @@
 //
 // Module Menu Block
 // =================================
-.l-region--sidebar-second .block--menu-block {
-	
+.l-region--sidebar-second {
+	.block--menu-block {
+		ul.menu {
+			padding-left: 2rem;
 
-	ul.menu {
-		padding-left: 2rem;
-		
-		li {			
-		  @include fontello-icon('\e800','before') {
-			  color: $orange;
-				font-size: $fz-mid;
-				left: -1.4rem;
-				position: absolute;
-				top: 0.32em;
+			li {
+			  @include fontello-icon('\e800','before') {
+				  color: $orange;
+					font-size: $fz-mid;
+					left: -1.4rem;
+					position: absolute;
+					top: 0.32em;
+				}
+				margin-bottom: 10px;
+			  position: relative;
+				text-align: left;
+
+
+				a {
+					line-height: 25px;
+					color: $violet-dark;
+					font-weight: $fw-semi-bold;
+					&.active{
+						color:$yellow ;
+					}
+				}
 			}
-			margin-bottom: 10px;
-		  position: relative;
-			text-align: left;
-		  
-		
-			a {
-				line-height: 25px;
-				color: $violet-dark;
-				font-weight: $fw-semi-bold;
-				&.active{
-					color:$yellow ;
+		}
+	}
+	.block--views{
+		.view-content{
+			padding-left: 18px;
+			.views-row  {
+			  @include fontello-icon('\e800','before') {
+				  color: $orange;
+					font-size: $fz-mid;
+					left: -1.4rem;
+					position: absolute;
+					top: 0.32em;
+				}
+				margin-bottom: 10px;
+			  position: relative;
+				text-align: left;
+
+
+				a {
+					padding-left:0px !important;
+					line-height: 25px;
+					color: $violet-dark;
+					font-weight: $fw-semi-bold;
+					&.active{
+						color:$yellow ;
+					}
 				}
 			}
 		}
 	}
 }
-.l-region--sidebar-second .block--views{
-	.field__item h3 a::before, .field__items h3 a::before {
-	    left: 7px;
-	}
-}
-.l-region--sidebar-second {
-	#block-views-events-block-1, #block-views-blog-latest-news{
-		.field__item h3 a::before, .field__items h3 a::before {
-		    left: -7px;
-		}
-	}
-	
-}
+//@-moz-document url-prefix() {
+//  .field__items h3 a{
+//  	padding-left:0px !important;
+//  }
+//}
 
 //
 // Main Menu

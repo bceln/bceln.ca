@@ -89,7 +89,7 @@ form {
 	position: relative;
 	.views-exposed-form {
 		.views-exposed-widget {
-			padding-right: 3px;
+			padding-right: 7px;
 			padding-left: 10px;
 		}
 		.views-widget-filter-keys {
@@ -111,7 +111,7 @@ form {
 	.views-submit-button {
 		padding-left: 0px !important;
 		padding-top: 4px !important;
-		margin-top: 29px;
+		margin-top: 24px;
 		cursor: pointer;
 		position: relative;
 		@include fontello-icon('\e801','after') {
@@ -121,14 +121,14 @@ form {
 			font-size: 20px;				
 			position: absolute;
 			padding:8px;
-			right: -10px;
-			top: 0px;
+	    right: 1px;
+	    top: 5px;
 			z-index: 1;
 
 		}
 		#edit-submit-resources{
 			margin-top:0px;
-	    padding: 11px 0px 8px 3px;
+	    padding: 16px 33px 8px 3px;
 		}
 	
 		.form-submit {
