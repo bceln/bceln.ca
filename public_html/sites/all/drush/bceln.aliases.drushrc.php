@@ -7,6 +7,7 @@ $aliases['prod'] = array(
     'os' => 'Linux',
     'ssh-options' => '-p 2022',
     'path-aliases' => array(
+        '%drush-script' => '/home/bcelnadmin/bin/drush',
         '%dump' => 'bceln-db.sql',
     ),
     'variables' => array(
