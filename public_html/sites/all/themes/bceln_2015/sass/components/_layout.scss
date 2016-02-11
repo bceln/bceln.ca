@@ -22,7 +22,8 @@
 		content: '';
 		height: 23px;
 		background-color: #CEB6D0;		
-    left: 446px;
+    width: calc(100% - 460px) !important;
+    left: calc(1% + 433px);
 		bottom: 0px;
 		position: absolute;
 		margin-right: 1.15741%;
@@ -685,8 +686,10 @@
 .page-search.page-search-content .breadcrumb{
 	display:none;
 }
-@include breakpoint(766px 879px){
-  #block-block-15 {
-      display: none;
+
+@include breakpoint(766px 900px){
+  #site-logo-footer {
+      position:relative !important;
+			float:none !important;
   }
 }

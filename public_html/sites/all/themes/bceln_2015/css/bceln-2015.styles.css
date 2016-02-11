@@ -486,7 +486,7 @@ form {
       right: 1px;
       top: 5px;
       z-index: 1; }
-    form .views-submit-button #edit-submit-resources {
+    form .views-submit-button #edit-submit-resources, form .views-submit-button #edit-submit-profile-contacts {
       margin-top: 0px;
       padding: 16px 33px 8px 3px; }
     form .views-submit-button .form-submit {
@@ -828,7 +828,8 @@ ul.dropdown {
     content: '';
     height: 23px;
     background-color: #CEB6D0;
-    left: 446px;
+    width: calc(100% - 460px) !important;
+    left: calc(1% + 433px);
     bottom: 0px;
     position: absolute;
     margin-right: 1.15741%;
@@ -1517,9 +1518,10 @@ ul.dropdown {
 .page-search.page-search-content .breadcrumb {
   display: none; }
 
-@media (min-width: 766px) and (max-width: 879px) {
-  #block-block-15 {
-    display: none; } }
+@media (min-width: 766px) and (max-width: 900px) {
+  #site-logo-footer {
+    position: relative !important;
+    float: none !important; } }
 
 /* ----- Sidebar ----- */
 .l-region--sidebar-second > .block:first-child {
