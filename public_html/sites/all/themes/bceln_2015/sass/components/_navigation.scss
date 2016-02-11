@@ -322,3 +322,10 @@ ul.dropdown {
 	}
 	
 }
+.links--inline .print_html{
+	&::before {display:none;}	
+	     margin-left: 0px;
+	  a{
+	    font-weight: 500;
+	 }
+} 

@@ -810,6 +810,13 @@ ul.dropdown {
       content: "";
       display: none; }
 
+.links--inline .print_html {
+  margin-left: 0px; }
+  .links--inline .print_html::before {
+    display: none; }
+  .links--inline .print_html a {
+    font-weight: 500; }
+
 .l-branding {
   position: relative;
   height: 157px; }
