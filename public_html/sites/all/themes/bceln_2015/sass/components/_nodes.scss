@@ -5,7 +5,8 @@
 	.field-group-div {
 		clear: both;
 	}
-	.collapsible .field-group-format-wrapper {
+	.collapsible .field-group-format-wrapper,
+	.field--name-field-resource-vendor-ref{
 		.field__label{
 	    padding-right: 12px;
 		}
@@ -13,7 +14,7 @@
 		.field--label-inline{
 		    margin-bottom: 18px;
 		}
-	}
+	} 
 	.group-partners .view {
 		margin-bottom: 25px;
 	}
@@ -22,7 +23,7 @@
 			@include grid-span(12, 1);
 			clear: both;
 		}
-
+ 
 	}
 	.field {
 		@include clearfix;

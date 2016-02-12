@@ -134,9 +134,9 @@ p{
 .field-group-div.collapsible h3 ,.field-group-format-title h3{
 	background-color:$grey-light;
 	padding:8px 0;
-	margin-bottom:5px;
+	margin-bottom:15px;
 	
-}
+} 
 .field-group-div.collapsible h3 a, .field-group-format-title h3 a {
 	padding:7px 5px;
 	@include fontello-icon('\e807') {
