@@ -308,6 +308,7 @@
 
 }
 .front .l-content {
+
 	#block-views-services-block {
 		h2{
 			background-color:none;
@@ -621,6 +622,7 @@
 		#block-block-15 {
 			@include layout($gutter: 2) {
 				@include grid-span(10,3);
+				margin-top:30px;
 			}
 
 		}
@@ -664,6 +666,8 @@
 			}
 			#block-block-15 {
 				@include grid-span(2,6);
+		    margin-top: 0px;
+				
 			}
 			#block-block-16 {
 				@include grid-span(2,8);

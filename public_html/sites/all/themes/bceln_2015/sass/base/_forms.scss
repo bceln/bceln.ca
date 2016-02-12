@@ -59,7 +59,7 @@
 				font-size: 20px;				
 				position: absolute;
 				padding:8px;
-				right: -10px;
+				right: 2px;
 				top: 0px;
 				z-index: 1;
 			}
@@ -69,11 +69,21 @@
 				cursor: pointer;
 				overflow: hidden;
 				text-indent: -9999px;
-				width: 29px;
+				width: 42px;
 				padding:14px 0px 9px 0px;
 				position:relative;
 				z-index:2;
 			}
+			@include breakpoint($tablet-layout) {
+				.form-actions{
+					right: -10px;
+					
+				}
+				.form-submit {
+					width: 39px;
+				}
+			}
+	
 		}
 
 	}

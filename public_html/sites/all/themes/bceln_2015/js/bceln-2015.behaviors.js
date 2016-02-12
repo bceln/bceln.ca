@@ -48,27 +48,6 @@
     return $('<a href="' + path + '" title="' + title + '">' + title + '</a>');
   };
 
-  // Drupal.theme.prototype.blockHeightAdjsut = function (firstBlockId, secondBlockId, thirdBlockId) {
-  //   // Sets the hight of all three blocks to be the same
-  // 		console.log('here');
-  // 		var h1,h2,h3;
-  // 		hightOne = $(firstBlockId + ' .block__content > div');
-  // 		heightTwo = $(secondBlockId + ' .block__content > div');
-  // 		heightThree = $(thirdBlockId + ' .block__content > div');
-  // 		if(hightOne >= heightTwo && hightOne >= heightThree){// height 1 bigger than the other 2
-  // 				$(secondBlockId + ' .block__content > div').height(hightOne);
-  // 				$(thirdBlockId + ' .block__content > div').height(hightOne);
-  // 			}
-  // 			else if (hightTwo >= heightOne && hightTwo >= heightThree){//Height 2 bigger than the other 2
-  // 				$(firstBlockId + ' .block__content > div').height(hightTwo);
-  // 				$(thirdBlockId + ' .block__content > div').height(hightTwo);
-  // 			}
-  // 			else {//Height 3 bigger than the other 2
-  // 				$(firstBlockId + ' .block__content > div').height(hightThree);
-  // 				$(thirdBlockId + ' .block__content > div').height(hightThree);
-  // 			}
-  // };
-
   /**
    * Behaviors are Drupal's way of applying JavaScript to a page. In short, the
    * advantage of Behaviors over a simple 'document.ready()' lies in how it
