@@ -178,8 +178,7 @@ form {
 		padding: 0 8px;
 		color: $orange;
 		cursor: pointer;
-		position: absolute;
-		top: -35px;
+		float:right;
 	}
 
 }
@@ -200,9 +199,17 @@ form {
 		padding: 0 8px;
 		color: $orange;
 		cursor: pointer;
-		position: absolute;
-    top: 25px;
-    left: 400px;
+		float:left;
+		
+
+	}
+	@include breakpoint($tablet-layout) {
+		.form-submit {
+			float:none;
+			position: absolute;
+	    top: 25px;
+	    left: 400px;
+		}
 	}
 	ul {
 		padding-left: 0px;

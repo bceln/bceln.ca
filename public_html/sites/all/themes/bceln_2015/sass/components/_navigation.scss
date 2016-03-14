@@ -329,3 +329,11 @@ ul.dropdown {
 	    font-weight: 500;
 	 }
 } 
+//firefox only code 
+@-moz-document url-prefix() { 
+	#search-form .form-item-keys::after {
+			right:auto;
+	    left: 174px;
+	    top: 39px;
+	}
+}

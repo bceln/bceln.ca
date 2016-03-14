@@ -36,6 +36,9 @@
 		margin-left: 3%;
 		position: absolute;
 		margin-top: 53px;
+		img{
+			width:97%;
+		}
 	}
 	.l-region--branding {
 		width: 100%;
@@ -616,6 +619,9 @@
 			@include layout($gutter: 2) {
 				@include grid-span(12, 1, $output-style: 'float');
 				@include float-span(12, 'last');
+				img{
+					width:99%;
+				}
 			}
 
 		}

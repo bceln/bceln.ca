@@ -1,10 +1,14 @@
-.node {
+.node , .page-user{
 	margin-bottom: 40px;
 	//	Please not that for overview's resourses the display suite is rendering the view
 	//	and that is wy the class .node-container-indent really didnt apply
 	.field-group-div {
 		clear: both;
 	}
+	.field--label-inline .field__label{
+    padding-right: 12px;
+	}
+	
 	.collapsible .field-group-format-wrapper,
 	.field--name-field-resource-vendor-ref{
 		.field__label{
@@ -91,20 +95,4 @@
 	}
 
 }
-//Services
-.view-services h2 {
-	background: none ;
-	text-transform: none ;
-	margin: 0px;
-}
-.node.view-mode-full > div {
-	margin-bottom: 15px;
-}
-.node.view-mode-full > .date-space {
-	line-height: 35px;
-}
-.user-profile-category-profile {
-	.field{
-		margin-bottom:10px;
-	}
-} 
+

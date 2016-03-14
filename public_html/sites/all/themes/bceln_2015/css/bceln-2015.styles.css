@@ -18,7 +18,7 @@
 /* Uncomment bellow content to visualize the grid */
 /* -- Abstraction -- */
 /* Integrating Fontello in our code */
-.l-content .field__item h3 a::before, .l-content .field__items h3 a::before, .field-group-div.collapsible h3 a::before, .field-group-format-title h3 a::before, .field-group-div.collapsed.collapsible h3 a::before, .collapsed.field-group-format-title h3 a::before, blockquote p::before, .node ul li::before, #search-form .form-item-keys::after, .search-block-form .container-inline .form-actions::after, form .views-submit-button::after, .user-login-form ul li::before, .field--name-node-link .field__items a::after, .more-link a::after, .l-region--sidebar-second .block--menu-block ul.menu li::before, .l-region--sidebar-second .block--views .view-content .views-row::before, .responsive-menus.responsified span.toggler::before, ul.breadcrumb li::before, ul.breadcrumb li::after, .tabs li::before, .l-region--branding ul li::before, ul.dropdown li::before, .l-region--footer-first ul li::before, .l-region--footer-second ul li::before, .wrap-header #block-boxes-homepage .boxes-box-content .learn-more-header::after, #block-views-blog-connect-newsletter-block ul li::before, .node .orginization-links-only li.views-row a::before, .view-organizations ul li::before, .view-events ul li::before {
+.l-content .field__item h3 a::before, .l-content .field__items h3 a::before, .field-group-div.collapsible h3 a::before, .field-group-format-title h3 a::before, .field-group-div.collapsed.collapsible h3 a::before, .collapsed.field-group-format-title h3 a::before, blockquote p::before, .node ul li::before, #search-form .form-item-keys::after, .search-block-form .container-inline .form-actions::after, form .views-submit-button::after, .user-login-form ul li::before, .field--name-node-link .field__items a::after, .more-link a::after, .l-region--sidebar-second .block--menu-block ul.menu li::before, .l-region--sidebar-second .block--views .view-content .views-row::before, .responsive-menus.responsified span.toggler::before, ul.breadcrumb li::before, ul.breadcrumb li::after, .tabs li::before, .l-region--branding ul li::before, ul.dropdown li::before, .l-region--footer-first ul li::before, .l-region--footer-second ul li::before, .wrap-header #block-boxes-homepage .boxes-box-content .learn-more-header::after, #block-views-blog-connect-newsletter-block ul li::before, .node .orginization-links-only li.views-row a::before, .page-user .orginization-links-only li.views-row a::before, .view-organizations ul li::before, .view-events ul li::before {
   font-family: "fontello";
   font-style: normal;
   font-weight: normal;
@@ -338,7 +338,7 @@ blockquote p {
 .node ul {
   padding-left: 2rem; }
   .node ul li {
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     position: relative;
     text-align: left; }
     .node ul li::before {
@@ -361,6 +361,12 @@ blockquote p {
         color: #333333 !important; }
       .node ul li a.active-trail:hover {
         color: #333333 !important; }
+
+.node ul li ul li {
+  margin-bottom: 8px; }
+
+.node ul li ul {
+  margin-top: 10px; }
 
 #search-form .form-item-keys {
   position: relative;
@@ -524,8 +530,7 @@ form {
   padding: 0 8px;
   color: #ffad00;
   cursor: pointer;
-  position: absolute;
-  top: -35px; }
+  float: right; }
 
 .user-login-form .form-item {
   position: relative;
@@ -542,9 +547,14 @@ form {
   padding: 0 8px;
   color: #ffad00;
   cursor: pointer;
-  position: absolute;
-  top: 25px;
-  left: 400px; }
+  float: left; }
+
+@media (min-width: 768px) {
+  .user-login-form .form-submit {
+    float: none;
+    position: absolute;
+    top: 25px;
+    left: 400px; } }
 
 .user-login-form ul {
   padding-left: 0px; }
@@ -822,6 +832,12 @@ ul.dropdown {
   .links--inline .print_html a {
     font-weight: 500; }
 
+@-moz-document url-prefix() {
+  #search-form .form-item-keys::after {
+    right: auto;
+    left: 174px;
+    top: 39px; } }
+
 .l-branding {
   position: relative;
   height: 157px; }
@@ -851,6 +867,8 @@ ul.dropdown {
     margin-left: 3%;
     position: absolute;
     margin-top: 53px; }
+    .l-branding .site-logo img {
+      width: 97%; }
   .l-branding .l-region--branding {
     width: 100%;
     margin-right: 0px; }
@@ -1459,6 +1477,8 @@ ul.dropdown {
       float: right;
       margin-left: 0;
       margin-right: 2.77778%; }
+      .l-footer .l-region--footer-second #site-logo-footer img {
+        width: 99%; }
     .l-footer .l-region--footer-second #block-block-15 {
       width: 77.77778%;
       float: right;
@@ -1823,63 +1843,68 @@ ul.dropdown {
   #block-views-blog-connect-newsletter-block {
     display: block; } }
 
-.node {
+.node, .page-user {
   margin-bottom: 40px; }
-  .node .field-group-div {
+  .node .field-group-div, .page-user .field-group-div {
     clear: both; }
+  .node .field--label-inline .field__label, .page-user .field--label-inline .field__label {
+    padding-right: 12px; }
   .node .collapsible .field-group-format-wrapper,
-  .node .field--name-field-resource-vendor-ref {
+  .node .field--name-field-resource-vendor-ref, .page-user .collapsible .field-group-format-wrapper,
+  .page-user .field--name-field-resource-vendor-ref {
     margin: 20px; }
     .node .collapsible .field-group-format-wrapper .field__label,
-    .node .field--name-field-resource-vendor-ref .field__label {
+    .node .field--name-field-resource-vendor-ref .field__label, .page-user .collapsible .field-group-format-wrapper .field__label,
+    .page-user .field--name-field-resource-vendor-ref .field__label {
       padding-right: 12px; }
     .node .collapsible .field-group-format-wrapper .field--label-inline,
-    .node .field--name-field-resource-vendor-ref .field--label-inline {
+    .node .field--name-field-resource-vendor-ref .field--label-inline, .page-user .collapsible .field-group-format-wrapper .field--label-inline,
+    .page-user .field--name-field-resource-vendor-ref .field--label-inline {
       margin-bottom: 18px; }
-  .node .group-partners .view {
+  .node .group-partners .view, .page-user .group-partners .view {
     margin-bottom: 25px; }
-  .node .node-container-indent, .node .overview-resources .field-group-format-wrapper, .node .field-group-format-wrapper {
+  .node .node-container-indent, .node .overview-resources .field-group-format-wrapper, .node .field-group-format-wrapper, .page-user .node-container-indent, .page-user .overview-resources .field-group-format-wrapper, .page-user .field-group-format-wrapper {
     width: 94.04762%;
     float: right;
     margin-left: 0;
     margin-right: 2.97619%;
     clear: none;
     clear: both; }
-  .node .field {
+  .node .field, .page-user .field {
     margin-left: auto;
     margin-right: auto;
     max-width: 1266px; }
-    .node .field:after {
+    .node .field:after, .page-user .field:after {
       content: "";
       display: table;
       clear: both; }
-  .node .field__label {
+  .node .field__label, .page-user .field__label {
     font-size: 14px;
     font-weight: 900;
     text-transform: uppercase;
     margin: 25px 0px 10px 0px; }
-  .node .field--label-inline .field__label {
+  .node .field--label-inline .field__label, .page-user .field--label-inline .field__label {
     margin: 0px; }
-  .node .sub-term-label {
+  .node .sub-term-label, .page-user .sub-term-label {
     background: #E9E9E9;
     margin: 20px 0px; }
-    .node .sub-term-label h2 {
+    .node .sub-term-label h2, .page-user .sub-term-label h2 {
       display: inline-block;
       line-height: 1.4em;
       margin: 0px;
       padding-right: 20px;
       font-size: 20px; }
-    .node .sub-term-label h2.not-main-label {
+    .node .sub-term-label h2.not-main-label, .page-user .sub-term-label h2.not-main-label {
       padding-right: 0px;
       background: #E9E9E9; }
-    .node .sub-term-label .field {
+    .node .sub-term-label .field, .page-user .sub-term-label .field {
       padding-left: 10px;
       display: inline-block; }
-  .node .orginization-links-only {
+  .node .orginization-links-only, .page-user .orginization-links-only {
     margin-bottom: 20px; }
-    .node .orginization-links-only li.views-row a {
+    .node .orginization-links-only li.views-row a, .page-user .orginization-links-only li.views-row a {
       color: #712C76; }
-      .node .orginization-links-only li.views-row a::before {
+      .node .orginization-links-only li.views-row a::before, .page-user .orginization-links-only li.views-row a::before {
         font-size: 1.0em;
         margin-left: 0.3em;
         margin-right: 0;
@@ -1893,27 +1918,13 @@ ul.dropdown {
         position: relative;
         color: #ffad00;
         cursor: pointer; }
-  .node .end-of-node {
+  .node .end-of-node, .page-user .end-of-node {
     height: 40px;
     border-bottom: 2px solid #e8dae8;
     margin-bottom: 20px; }
-  .node .overview-resources .fieldgroup-effects-processed {
+  .node .overview-resources .fieldgroup-effects-processed, .page-user .overview-resources .fieldgroup-effects-processed {
     clear: both;
     margin: 15px 0px 10px 0px; }
-
-.view-services h2 {
-  background: none;
-  text-transform: none;
-  margin: 0px; }
-
-.node.view-mode-full > div {
-  margin-bottom: 15px; }
-
-.node.view-mode-full > .date-space {
-  line-height: 35px; }
-
-.user-profile-category-profile .field {
-  margin-bottom: 10px; }
 
 .h4-field--name-title {
   margin-bottom: 3px !important; }
@@ -2138,6 +2149,21 @@ ul.dropdown {
         margin-left: 0;
         margin-right: 1.15741%;
         clear: none; } }
+
+.view-services h2 {
+  background: none;
+  text-transform: none;
+  margin: 0px;
+  padding-left: 0px; }
+
+.node.view-mode-full > div {
+  margin-bottom: 15px; }
+
+.node.view-mode-full > .date-space {
+  line-height: 35px; }
+
+.user-profile-category-profile .field {
+  margin-bottom: 10px; }
 
 .node table {
   margin: 40px 0px; }
