@@ -147,7 +147,7 @@ new blockHeightAdjust();
 	};
 	Drupal.behaviors.subscriberDetailsHide = {
 		attach: function (context, settings) {
-			if(isEmpty($('.group-subscriber-details .view-display-id-subscriber_details .view-content .views-row '))){
+			if(isEmpty($('.group-subscriber-details .field-group-format-wrapper'))){
 				$('.collapsible.group-subscriber-details ').hide();
 			}
 		}
