@@ -1,0 +1,92 @@
+@mixin font-smoothing() {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+  
+@mixin font-weight($weight) {
+  font-weight: $weight;
+  
+  $need_smooth: (600, 'semi-bold', 700, 'bold');
+  @if index($need_smooth, $weight) {
+    @include font-smoothing();
+  }
+}
+  
+@mixin replace-text-with-image($url, $width, $height, $display: false, $repeat: 'no-repeat') {
+  background-image: url($url);
+  backgroune-repeat: $repeat;
+  @if $display != "false" {
+    display: $display;
+  }
+  height: $height;
+  overflow: hidden;
+  text-indent: -9999px;
+  width: $width;
+}
+  
+/* Integrating Fontello in our code */
+// Default rules for a font icon.
+%fontello-icon-defaults {
+  font-family: "fontello";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  /* opacity: .8; */
+  
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+  
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+  
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: .2em;
+  
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+  
+  /* Font smoothing. That was taken from TWBS */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+  
+/**
+ * Generate font icons via fontello icon fonts.
+ *
+ * @param  $content
+ *   The font icon content value passed as is to css content.
+ *   Example: '\E801' - along with single quotes. Refer to your fontello.css file.
+ * @param  $position
+ *   (optional) The type of the pseudo-element, can be 'before' or 'after'.
+ *   Defaults to 'before'.
+ */
+@mixin fontello-icon($code, $position: 'before') {
+  &::#{$position} {
+    @content;
+    content: '#{$code}';
+    @extend %fontello-icon-defaults;
+    @content;
+  }
+}
+  
+//
+// Highlighted text
+// =================================
+@mixin highlighted-text {
+  font-size: $fz-h3;
+  @include font-weight($fw-light);
+  line-height: 1.5em;
+  margin-bottom: 1.1em;
+  @content;
+}

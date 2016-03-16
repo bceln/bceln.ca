@@ -1,0 +1,192 @@
+.h4-field--name-title{
+	margin-bottom: 3px !important;
+	a {
+		color: $grey-dark;
+		font-size: $fz-h3;
+	}
+
+}
+.node--news {
+	.post-date {
+		font-size: $fz-small;
+		line-height: 12px;
+		padding-bottom: 5px;
+	}
+	.read-more-blog {
+		@include layout($gutter:1/2) {
+			@include grid-span(12, 1);
+			clear: both;
+		}
+
+	}
+
+}
+
+.view-organizations, .view-events {
+	 ul{
+		li{
+			@include fontello-icon('') {
+				display:none;
+			}
+		}
+	}
+}
+.view .node{
+	    margin-bottom: 10px;
+}
+
+.views-row strong {
+	@include font-weight($fw-normal);
+	span.date-display-single {
+		margin-left: 21px;
+	}
+
+}
+.front .view-organizations {
+	@include grid-span(12,1);
+	margin-bottom: 50px;
+	.view-content {
+		.views-row {
+			float: left;
+			margin-right: 5px;
+		}
+
+	}
+
+}
+//view-resources
+
+.vendor-h2 h3 {
+    margin: 25px 0px;
+    background-color: #e8dae8;
+    margin: 25px 0px;
+    background-color: #e8dae8;
+    padding: 8px 3%;
+    text-transform: uppercase;
+    color: #333333 !important;
+    font-size: 18px !important;
+    line-height: 1.1em !important;
+    margin-bottom: 10px;
+		
+}
+.views-exposed-widget .description{
+	display:none;
+}
+.page-services{
+	.views-view-grid {
+		.col-1 {
+			padding-bottom: 20px;
+			@include grid-span(12, 1);
+			.group-left {
+				@include grid-span(12, 1);
+				text-align: center;
+			}
+			.group-right {
+				@include grid-span(12, 1);
+				text-align: center;
+			}
+			@include breakpoint(625px) {
+				@include grid-span(12, 1);
+				.group-left {
+					text-align: left;
+					@include grid-span(2,1);
+				}
+				.group-right {
+					text-align: left;
+					@include grid-span(8,5);
+				} 
+
+			}
+			@include breakpoint($tablet-layout) {
+				padding-bottom: 0px;
+				
+				@include grid-span(12, 1);
+				.group-left {
+					@include grid-span(2,2);
+				}
+				.group-right {
+					@include grid-span(8,5);
+				}
+
+			}
+			@include breakpoint($desktop-layout) {
+				padding-bottom: 0px;
+				@include grid-span(6,1);
+				.group-left {
+					@include grid-span(4,1);
+				}
+				.group-right {
+					@include grid-span(7,6);
+				}
+
+			}
+
+		}
+		.col-2 {
+			padding-bottom: 20px;
+			@include grid-span(12, 1);
+			.group-left {
+				@include grid-span(12, 1);
+				text-align: center;
+			}
+			.group-right {
+				@include grid-span(12, 1);
+				text-align: center;
+			}
+			@include breakpoint(625px) {
+				@include grid-span(12, 1);
+				.group-left {
+					@include grid-span(2,1);
+					text-align: left;
+				}
+				.group-right {
+					text-align: left;
+					@include grid-span(8,5);
+				}
+
+			}
+			@include breakpoint($tablet-layout) {
+				padding-bottom: 0px;
+				@include grid-span(12, 1);
+				.group-left {
+					@include grid-span(2,2);
+				}
+				.group-right {
+					@include grid-span(8,5);
+				}
+
+			}
+			@include breakpoint($desktop-layout) {
+				padding-bottom: 0px;
+				@include grid-span(6,7);
+				.group-left {
+					@include grid-span(4,1);
+				}
+				.group-right {
+					@include grid-span(7,6);
+				}
+
+			}
+
+		}
+
+	}
+}
+//Services
+.view-services h2 {
+	background: none ;
+	text-transform: none ;
+	margin: 0px;
+	padding-left:0px;
+}
+.node.view-mode-full > div {
+	margin-bottom: 15px;
+}
+.node.view-mode-full > .date-space {
+	line-height: 35px;
+}
+.user-profile-category-profile {
+	.field{
+		margin-bottom:10px;
+	}
+} 

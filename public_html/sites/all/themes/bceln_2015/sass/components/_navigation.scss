@@ -1,0 +1,339 @@
+//
+// Node links
+// =================================
+.field--name-node-link .field__items a,  .more-link a {
+	@include fontello-icon('\e800','after') {
+		font-size: 1.0em;
+		margin-left: 0.3em;
+		margin-right: 0;
+		position: relative;
+		color: $orange;
+		cursor: pointer;
+	}
+
+}
+
+.field--name-node-link .field__items, .more-link {
+
+	a {
+		color: $dark-cyan;
+		text-transform: uppercase;
+		font-weight: 600;
+		font-size: $fz-read-more;
+	}
+
+}
+
+
+//
+// Module Menu Block
+// =================================
+.l-region--sidebar-second {
+	.block--menu-block {
+		ul.menu {
+			padding-left: 2rem;
+
+			li {
+			  @include fontello-icon('\e800','before') {
+				  color: $orange;
+					font-size: $fz-mid;
+					left: -1.4rem;
+					position: absolute;
+					top: 0.32em;
+				}
+				margin-bottom: 10px;
+			  position: relative;
+				text-align: left;
+
+
+				a {
+					line-height: 25px;
+					color: $violet-dark;
+					font-weight: $fw-semi-bold;
+					&.active{
+						color:$yellow ;
+					}
+				}
+			}
+		}
+	}
+	.block--views{
+		.view-content{
+			padding-left: 18px;
+			.views-row  {
+			  @include fontello-icon('\e800','before') {
+				  color: $orange;
+					font-size: $fz-mid;
+					left: -1.4rem;
+					position: absolute;
+					top: 0.32em;
+				}
+				margin-bottom: 10px;
+			  position: relative;
+				text-align: left;
+
+
+				a {
+					padding-left:0px !important;
+					line-height: 25px;
+					color: $violet-dark;
+					font-weight: $fw-semi-bold;
+					&.active{
+						color:$yellow ;
+					}
+				}
+			}
+		}
+	}
+}
+//@-moz-document url-prefix() {
+//  .field__items h3 a{
+//  	padding-left:0px !important;
+//  }
+//}
+
+//
+// Main Menu
+// =================================
+#block-menu-block-2 .menu-block-2 li a {
+	font-size: $fz-menu;
+	line-height: $line-height-menu;
+	color: $color-menu-item;
+	font-weight: $fw-bold;
+}
+
+//
+// Main Menu overrides for responsive menu
+// =================================
+.responsive-menus.responsified {
+	
+	span.toggler {
+		background: $violet-dark;
+		box-shadow: none;
+		color: $white;
+		border-radius: 0;
+		box-shadow: none;
+		float: right;
+		padding: 8px 4px;
+		@include fontello-icon('\e808') {
+			font-size: 1.7em;
+			cursor: pointer;
+			color: $white;
+			position: relative;
+			margin-right: 10px;
+		}
+
+	}
+	.responsive-menus-simple {
+		top: 50px !important;
+		background: #333;
+		border-bottom-right-radius: 0;
+		border-bottom-left-radius: 0;
+		box-shadow: none;
+		li a {
+			background: $violet-dark;
+			color: $white !important;
+			//		border-bottom:1px solid ;
+		}
+
+	}
+
+}
+
+
+
+//
+// Menus in Footer First
+// =================================
+.l-region--footer-first{
+	a {
+		line-height: 25px;
+		color: $violet-dark;
+		font-weight: $fw-semi-bold;
+	
+		&.active-trail {
+			color: $orange !important;
+		}
+		&.active-trail:hover {
+			color: $orange !important;
+		}
+	}
+}
+.block--menu h2 {
+	font-size: $fz-h2;
+	color: $white;
+  background: none;
+  padding: 0px;
+  margin: 0px 0px 7px 0px;
+}
+.menu .leaf ,.menu .collapsed,.menu  .expanded{
+	list-style-image: none;
+	list-style-type: none;
+	font-size: $fz-menu-footer;
+	line-height: $line-height-footer-menu;
+}
+
+#block-menu-menu-footer:before {
+	display: block;
+	content: '| Website by ';
+	left: -70px;
+	top: 3px;
+	position: absolute;
+	font-size: $fz-small;
+	color: #333333;
+}
+;
+
+//
+// MENU BLOCK 2 <header Block>
+// =================================
+#block-menu-block-2 {
+	position: absolute;
+	top: 22px;
+	width: 100%;
+	.menu-name-main-menu {
+		ul.menu {
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+			
+			li {
+				padding: 10px 5px;
+				width: 120px;
+				display: inline-block;
+				text-align: center;
+				a {
+					text-decoration: none;
+				}
+
+			}
+			li.active-trail {
+				background: $violet-super-super-light;
+			}
+
+		}
+
+	}
+
+}
+
+//
+//BreadCrumb
+// =================================
+ul.breadcrumb {
+	margin-top: 45px;
+	margin-left: 10px;
+	li {
+	  @include fontello-icon('','before') {}			
+		font-size: $fz-small;
+		line-height: 25px;
+		color: $violet-dark !important;
+		font-weight: $fw-bold;
+		display: inline-block;
+		@include fontello-icon('/','after') {
+			font-size: 0.8em;
+			font-weight: $fw-bold;
+			margin-left: 0.3em;
+			margin-right: 0;
+			position: relative;
+			color: $grey-dark;
+			cursor: pointer;
+		}
+		a {
+			font-size: $fz-small;
+			line-height: 25px;
+			color: $violet-dark !important;
+			font-weight: $fw-bold;
+		}
+
+	}
+	li:last-child{
+		&:after{
+			content: '' !important;
+		}
+	}
+}
+
+//TABS
+.tabs {
+		li {			
+			margin: 0px;
+	    margin-right: 10px;
+		  @include fontello-icon('','before') {
+		  	display:none;
+		  }			
+		}
+		border-bottom: 6px solid $violet-dark;
+	li.active {
+		a {
+			background: $violet-dark !important;
+		}
+
+	}
+	li {
+		a {
+			color: $violet-dark !important;
+			font-size: $fz-mid;
+			text-transform: uppercase;
+			font-weight: $fw-bold;
+			background: -webkit-linear-gradient($violet-super-super-light, $tabs-color); /* For Safari 5.1 to 6.0 */
+			background: -o-linear-gradient($violet-super-super-light, $tabs-color); /* For Opera 11.1 to 12.0 */
+			background: -moz-linear-gradient($violet-super-super-light, $tabs-color); /* For Firefox 3.6 to 15 */
+			background: linear-gradient($violet-super-super-light, $tabs-color); /* Standard syntax */
+			padding:10px 30px;
+		}
+		a.active {
+			color: $white !important;
+		}
+
+	}
+
+}
+
+
+.l-region--branding{
+	ul {
+		padding-left: 2rem;
+	
+		li {			
+		  @include fontello-icon('','before') {
+				display:none;
+			}			
+		}
+	}
+	
+}
+ul.dropdown {
+	padding-left: 0;
+
+	li {			
+		margin: 0px;
+	  @include fontello-icon('','before') {display:none;}			
+	}
+}
+.l-region--footer-first, .l-region--footer-second{
+	ul {
+		padding-left: 0;
+	
+		li {			
+			margin: 0px;
+		  @include fontello-icon('','before') {display:none;}			
+		}
+	}
+	
+}
+.links--inline .print_html{
+	&::before {display:none;}	
+	     margin-left: 0px;
+	  a{
+	    font-weight: 500;
+	 }
+} 
+//firefox only code 
+@-moz-document url-prefix() { 
+	#search-form .form-item-keys::after {
+			right:auto;
+	    left: 174px;
+	    top: 39px;
+	}
+}

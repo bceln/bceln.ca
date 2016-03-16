@@ -1,0 +1,51 @@
+"inst_id","inst_name","membership","street","city","postal_code","inst_url","nlc_code","short_name","iol_code"
+23,"Simon Fraser University","Full member","W.A.C. Bennett Library, 8888 University Drive","Burnaby, BC","V5A 1S6","http://www.lib.sfu.ca/","BVAS","SFU","bvas"
+7,"Douglas College","Full member","Box 2503","New Westminster, BC","V3L 5B2","http://library.douglas.bc.ca","BNWD","Douglas","bnwd"
+28,"University of Northern British Columbia","Full member","3333 University Way","Prince George, BC","V2N 4Z9","http://lib.unbc.ca/","BPGUB","UNBC","bpgu"
+18,"Northwest Community College","Full member","5331 McConnell Avenue","Terrace, BC","V8G 4C2","http://library.nwcc.bc.ca","BTENW","NWCC","bten"
+16,"Northern Lights College","Full member","11401 - 8th Street","Dawson Creek, BC","V1G 4G2","http://nlc.bc.ca/library/","BDCNL","NLC","bdcn"
+21,"Royal Roads University","Full member","2005 Sooke Road","Victoria, BC","V9B 5Y2","http://library.royalroads.ca","BRC","RRU","brcz"
+15,"Nicola Valley Institute of Technology","Full member","4155 Belshaw Street","Merritt, BC","V1K 1R1","http://www.nvit.bc.ca/library/index_new.htm","BMNVI","NVIT","bmn"
+11,"Kwantlen Polytechnic University","Full member","12666 72nd Ave.","Surrey, BC","V3W 2M8","http://www.kwantlen.ca/library/","BSKC","KPU","bskc"
+29,"University of Victoria","Full member","Box 1800","Victoria, BC","V8W 3H5","http://library.uvic.ca/index.html","BVIV","UVic","bviv"
+5,"College of the Rockies","Full member","2700 College Way, Box 8500","Cranbrook, BC","V1C 5L7","http://library.cotr.bc.ca","BCREK","COTR","bcrk"
+32,"University of British Columbia","Full member","1958 Main Mall, UBC","Vancouver, BC","V6T 1Z2","http://www.library.ubc.ca/welcome.html","BVAU","UBC",
+22,"Selkirk College","Full member","301 Frank Beinder Way","Castlegar, BC","V1N 4L3","http://library.selkirk.bc.ca/","BCS","Selkirk","bcs"
+17,"North Island College","Full member","2300 Ryan Road","Courtenay, BC","V9N 8N6","http://library.nic.bc.ca/","BCOMN","NIC","bcom"
+10,"Justice Institute of British Columbia","Full member","715 McBride Boulevard","New Westminster, BC","V3L 5T4","http://www.jibc.ca/library","BVAJI","JIBC","bvaj"
+27,"University of the Fraser Valley","Full member","33844 King Road","Abbotsford, BC","V2S 7M8","http://www.ufv.ca/library.htm","BCLF","UFV","bclf"
+2,"Camosun College","Full member","3100 Foul Bay Road","Victoria, BC","V8P 5J2","http://camosun.ca/services/library/","BVIC","Camosun","bvic"
+1,"British Columbia Institute of Technology","Full member","3700 Willingdon Ave.","Burnaby, BC","V5G 3H2","http://www.bcit.ca/library/","BBIT","BCIT","bbit"
+3,"Capilano University","Full member","2055 Purcell Way","North Vancouver, BC","V7J  3H5","http://www.capilanou.ca/library/","BVAC","Capilano","bvac"
+26,"Thompson Rivers University","Full member","900 McGill Road","Kamloops, BC","V2C 0C8","http://www.tru.ca/library","BKCC","TRU","bkcc"
+14,"Vancouver Island University","Full member","900 5th Avenue","Nanaimo, BC","V9R 5S5","http://www.viu.ca/library/","BNM","VIU","bnm"
+8,"Emily Carr University of Art + Design","Full member","1399 Johnston St.","Vancouver, BC","V6H 3R9","http://www.ecuad.ca/library","BVAVSA","ECUAD","bvae"
+25,"Trinity Western University","Full member","7600 Glover Road","Langley, BC","V2Y 1Y1","http://www.twu.ca/library/","BLTW","TWU","bltw"
+4,"College of New Caledonia","Full member","3330 - 22nd Avenue","Prince George, BC","V2N 1P8","http://www.cnc.bc.ca/Exploring/Services/Library.htm","BPGC","CNC","bpgc"
+31,"Yukon College","Full member","500 College Drive, Box 2799","Whitehorse, Yukon","Y1A 5K4","www.yukoncollege.yk.ca/library","YWC","Yukon","ywc"
+33,"BC Electronic Library Network","Consortium","W.A.C. Bennett Library, Room 7600 <BR>Simon Fraser University, 8888 University Drive","Burnaby, BC","V5A 1S6","http://www.eln.bc.ca",,"BC ELN",
+80,"Greater Victoria Public Library","Other non-member","blah","Victoria","NULL","NULL","NULL","GVPL","NULL"
+81,"BCcampus","Other non-member","200Ñ555 Seymour Street","Vancouver","V6B 3H6","NULL","NULL","BCcampus","NULL"
+36,"Richmond Public Library","Other non-member","100-7700 Minoru Gate","Richmond, BC","V6Y 1R9","http://www.rpl.richmond.bc.ca/","BRI","RPL",
+35,"Public Library Services Branch, Ministry of Education","Other non-member","590 8th Avenue West, 3rd Floor","Vancouver, BC","V5Z 1C5","http://www.bced.gov.bc.ca/pls/",,"PLSB",
+37,"Ministry of Advanced Education","Other non-member","PO Box 9883 Stn Prov Govt","Victoria, BC","V8W 9T6",,,"AVED",
+30,"Vancouver Community College","Full member","1155 East Broadway","Vancouver, B.C.","V5T 4V5","http://library.vcc.ca/","BVAVCC","VCC","bvav"
+91,"Ministry of Advanced Education","Other non-member","PO Box 9059 Stn Prov Govt","Victoria","V8W 9E2","http://www.gov.bc.ca/aved/",,"AVED",
+12,"Langara College","Full member","100 W. 49th Ave.","Vancouver, BC","V5Y 1Z6","http://www.langara.bc.ca/library/","BVAVCL","Langara","bval"
+19,"Okanagan College","Full member","1000 KLO Road","Kelowna, BC","V1Y 4X8","http://www.okanagan.bc.ca/administration/students/library.html","BKOC","OC","bkoc"
+6,"Columbia College","Full member","2nd Floor, 438 Terminal Avenue","Vancouver, BC","V6A 0C1","http://library.columbiacollege.bc.ca/","BBC","Columbia",
+34,"Fraser Valley Regional Library","Other non-member",,,,,,"FVRL",
+38,"Vancouver Public Library","Other non-member",,,,,"BVA","VPL","bva"
+41,"Council of Prairie & Pacific University Libraries","Consortium","2005 Sooke Street","Victoria, BC","V9B 5Y2",,,"COPPUL",
+42,"Canadian Research Knowledge Network","Consortium",,,,,,"CRKN",
+43,"Port Moody Public Library","Other non-member","100 Newport Drive","Port Moody","V3H 3E1",,,"PMPL",
+45,"Surrey Public Library","Other non-member","13742 - 72nd Avenue","Surrey, British Columbia","V3W 2P4","http://www.spl.surrey.bc.ca/default.htm",,"SPL",
+92,"Columbia Bible College","Full member","2940 Clearbrook Road","Abbotsford","V2T 2Z8","http://www.columbiabc.edu/library/index.html","NULL","CBC","NULL"
+79,"Burnaby Public Library","Other non-member","6100 Willingdon Avenue","Burnaby","V5H 4N5","http://www.bpl.burnaby.bc.ca","NULL","BPL","NULL"
+82,"Prince George Public Library","Other non-member","887 Dominion Street","Prince George","V2L 5L1","http://www.lib.pg.bc.ca/","BPG","PGPL","NULL"
+84,"Quest University Canada","Full member","320 University Boulevard","Squamish","V8B 0N8","http://library.questu.ca/",,"Quest",
+86,"Thompson-Nicola Regional District Library System","Other non-member","465 Victoria Street","Kamloops","V2C 2A9","NULL","NULL","TNRD","NULL"
+87,"Alexander College","Full member","#300 - 4680 Kingsway","Burnaby","V5H 4L9","http://www.alexandercollege.ca/library/",,"Alexander",
+95,"University Canada West","Full member","Suite 100 - 626 West Pender Street","Vancouver","V6B 1V9","http://www.ucanwest.ca/community/library-services/",,"UCW",
+96,"Public Library InterLINK","Other non-member","#158 - 5489 Byrne Road","Burnaby","V5J 3J1","http://www.interlinklibraries.ca",,"InterLINK",
+98,"Acsenda School of Management","Full member","9th Floor, 1090 West Pender Street","Vancouver","V6E 2N7","http://www.acsenda.com/",,"Acsenda",

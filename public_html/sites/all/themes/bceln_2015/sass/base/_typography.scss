@@ -1,0 +1,250 @@
+body {
+    font-family: $font-source-lato;
+    font-size: $font-size;
+    line-height: $line-height;
+    color: $color-txt;
+}
+  
+  
+//
+// Links
+// =================================
+a {
+  color: $color-link;
+  text-decoration: none;
+  
+  &:hover,
+  &:focus {
+    color: $color-link-hover !important;
+  }
+  
+  &.active {
+    color: $color-link; // override system style
+  }
+}
+  
+  
+//
+// Headings
+// =================================
+h1, h2, h3, h4, h5, h6 {
+  color: $grey-dark;
+  @include font-weight($fw-bold);
+}
+  
+h1 {
+  font-size: $fz-h1;
+  line-height: 1.1em;
+  margin: 40px 0px 30px 0px;
+  color:$grey-dark;
+}
+  
+h2 {
+	margin:25px 0px;
+	background-color:$violet-super-super-light;
+	padding:8px 3%;
+	text-transform:uppercase;
+	color:$grey-dark;
+	@include font-weight($fw-bold);
+  font-size: $fz-h2;
+  line-height: 1.1em;
+}
+  
+h3 {
+  font-size: $fz-h3;
+  line-height: 1.1em;
+}
+  
+h4, h4 a {
+  font-size: $fz-h4;
+  color: $grey-dark;
+	text-transform:uppercase;
+}
+  
+h5 {
+  font-size: $fz-h5;
+  text-transform: uppercase;
+	padding:8px 0;
+	
+}
+h6 {
+  font-size: $fz-h6;
+}
+  
+  
+//
+// Semantic Tags
+// =================================
+em {
+  font-style: italic;
+}
+  
+strong {
+  @include font-weight($fw-bold);
+}
+p{
+	    margin-bottom: 15px;
+}
+//
+// Highlighted text
+// =================================
+.highlighted-text {
+  @include highlighted-text();
+}
+
+//
+// Field Group H2's
+// =================================
+.field-group-div{
+	h2 {
+		margin:25px 0px;
+		background-color:$violet-super-super-light;
+		span{
+			text-transform:uppercase;
+			color:$grey-dark;
+			font-weight:$fw-bold;
+			font-size:$fz-h5;
+		}
+	}
+}
+//
+//H3 links
+// 
+.l-content{
+	.field--name-body {
+		.field__item h3, .field__items h3 {	
+		margin-bottom:15px !important;
+		}
+	}
+	.field__item h3, .field__items h3 {	
+		margin-bottom:3px !important;
+		a {
+			color:$violet-dark;
+			font-size:$fz-h3;
+	    display: block;
+			padding-left:22px;
+			@include fontello-icon('\e800') {
+				font-size: 1.0em;
+				margin-left: 0.3em;
+				margin-right: 0;
+				position: absolute;
+				left: 0px;
+				color:$orange;
+				cursor:pointer;
+			}
+		}
+	}
+}
+
+.field-group-div.collapsible h3 ,.field-group-format-title h3{
+	background-color:$grey-light;
+	padding:8px 0;
+	margin-bottom:15px;
+	
+} 
+.field-group-div.collapsible h3 a, .field-group-format-title h3 a {
+	padding:7px 5px;
+	@include fontello-icon('\e807') {
+     font-size: 1.0em;
+     margin-left: 0.3em;
+     margin-right: 0;
+     position: relative;
+	   color:$dark-cyan;
+	   cursor:pointer;
+     padding-right: 8px;
+	}
+	a{
+		padding-left:5px;
+		color:$violet-dark;
+	}
+	a:hover {
+		color:$violet-dark !important;
+	};
+	.field-group-format-toggler a:before{
+		display:none;
+	}
+}
+.field-group-div.collapsed.collapsible h3 a,.collapsed.field-group-format-title h3 a{
+	@include fontello-icon('\e806') {
+		font-size: 1.0em;
+		margin-left: 0.3em;
+		margin-right: 0;
+		position: relative;
+		color:$dark-cyan;
+		cursor:pointer;
+    padding-right: 8px;
+		
+	}
+
+}
+a.field-group-format-title{
+	color:$violet-dark;
+}
+blockquote p{
+	position:relative;
+	margin:20px 0;
+	font-style:italic;
+  padding-left: 30px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  border-left: 4px solid #ccc;
+  background-position: middle left;
+  background-repeat: no-repeat;
+  text-indent: 23px;
+	
+	@include fontello-icon('"') {
+		font-size: 2.0em;
+		color: $orange;
+		position: absolute;
+		left:5px;
+		top:7px;
+		margin-right: 10px;
+	}
+	
+}
+ .node--full ol{
+	    list-style-type: decimal;
+			padding-left:3%;
+	li{
+    list-style-type: decimal;
+		}
+}
+.node{
+	ul {
+		padding-left: 2rem;
+	
+		li {			
+		  @include fontello-icon('\e809','before') {
+			  color: $orange;
+				font-size: 1.5em;
+				left: -1.8rem;
+				position: absolute;
+				top: 0.08em;
+			}
+			margin-bottom: 15px;
+		  position: relative;
+			text-align: left;
+	  
+	
+			a {
+				line-height: 25px;
+				color: $violet-dark;
+				font-weight: $fw-semi-bold;
+		
+				&.active-trail {
+					color: $grey-dark !important;
+				}
+				&.active-trail:hover {
+					color: $grey-dark !important;
+				}
+			}
+		}
+	}
+}
+.node ul li ul li {
+	margin-bottom:8px;
+}
+.node ul li ul {
+	margin-top:10px;
+}
+

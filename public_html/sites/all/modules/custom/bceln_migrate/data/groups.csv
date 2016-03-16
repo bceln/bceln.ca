@@ -1,0 +1,19 @@
+"group_id","group_name","public","list"
+"2","Library Directors","Y",
+"3","Collection Development Team","Y","Y"
+"5","Media Resource Team","Y","Y"
+"6","Resource Sharing Team","Y","Y"
+"7","Technical Contacts List","Y","Y"
+"8","Union DB List","Y",NULL
+"9","OutLook List (PS-ILL)","Y","Y"
+"21","AskAway Local Administrators Team","Y","Y"
+"12","Billing Contacts",,
+"15","eln-serv",,"Y"
+"19","AskAway Local Coordinators","Y","Y"
+"20","AskAway Advisory Committee","Y",
+"22","Steering Committee","Y",
+"23","ICIS Data Librarians","Y","Y"
+"24","IR Advisory Committee","Y","N"
+"25","IR Software Selection Committee","Y",NULL
+"26","IR Resource Team","Y","Y"
+"27","Arca Administrators","Y","Y"

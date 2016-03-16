@@ -1,0 +1,239 @@
+//
+// Branding's Search Form
+// =================================
+
+#search-form{
+	.form-item-keys{
+		position:relative;
+		cursor: pointer;
+		@include fontello-icon('\e801','after') {
+	    background: $dark-cyan;
+			cursor: pointer;
+			color: $white;
+			font-size: 20px;				
+			position: absolute;
+			padding:8px;
+			right: -36px;
+			top: -8px;
+			z-index: 1;
+		}
+	}
+	#edit-submit{
+		border: none;
+		background: transparent;
+		cursor: pointer;
+		overflow: hidden;
+		text-indent: -9999px;
+		width: 29px;
+		padding:14px 0px 9px 0px;
+		position:relative;
+		z-index:2;
+	}
+}
+.search-block-form {
+	.container-inline {
+		position: relative;
+		.form-item-search-block-form {
+			background-color: $grey-medium;
+			width: 169px;
+			margin-right: 0px;
+			display: inline-block;
+		}
+		.form-item-search-block-form {
+			.form-text {
+				border: none;
+				font-size: 22px;
+				line-height: 35px;
+				background-color: #E9E9E9;
+				width: 165px;
+				padding: 0 8px 1px 3px;
+			}
+
+		}
+		.form-actions{
+			cursor: pointer;
+			@include fontello-icon('\e801','after') {
+		    background: $dark-cyan;
+				cursor: pointer;
+				color: $white;
+				font-size: 20px;				
+				position: absolute;
+				padding:8px;
+				right: 2px;
+				top: 0px;
+				z-index: 1;
+			}
+			.form-submit {
+				border: none;
+				background: transparent;
+				cursor: pointer;
+				overflow: hidden;
+				text-indent: -9999px;
+				width: 42px;
+				padding:14px 0px 9px 0px;
+				position:relative;
+				z-index:2;
+			}
+			@include breakpoint($tablet-layout) {
+				.form-actions{
+					right: -10px;
+					
+				}
+				.form-submit {
+					width: 39px;
+				}
+			}
+	
+		}
+
+	}
+
+}
+
+//GENERAL
+//
+// Branding's Search Form
+// =================================
+
+form {
+	position: relative;
+	.views-exposed-form {
+		.views-exposed-widget {
+			padding-right: 7px;
+			padding-left: 10px;
+		}
+		.views-widget-filter-keys {
+			padding-top: 5px;
+		}
+
+	}
+	input[type="text"],input[type="password"] {
+		background-color: $grey-medium;
+		margin-right: 0px;
+		display: inline-block;
+		border: 0px;
+		font-size: 22px;
+		line-height: 35px;
+		width: 165px;
+		padding: 0 8px 1px 3px;
+	}
+
+	.views-submit-button {
+		padding-left: 0px !important;
+		padding-top: 4px !important;
+		margin-top: 24px;
+		cursor: pointer;
+		position: relative;
+		@include fontello-icon('\e801','after') {
+	    background: $dark-cyan;
+			cursor: pointer;
+			color: $white;
+			font-size: 20px;				
+			position: absolute;
+			padding:8px;
+	    right: 1px;
+	    top: 5px;
+			z-index: 1;
+
+		}
+		
+		#edit-submit-resources,#edit-submit-profile-contacts{
+			margin-top:0px;
+	    padding: 16px 33px 8px 3px;
+		}
+	
+		.form-submit {
+			border: none;
+			background: transparent;
+			cursor: pointer;
+			overflow: hidden;
+			text-indent: -9999px;
+			width: 29px;
+			padding:14px 0px 9px 0px;
+			position:relative;
+			z-index:2;
+		}
+
+	}
+
+}
+.user-login {
+	.form-item ,.form-actions {
+		display: inline-block;
+		padding-right: 20px;
+	}
+	.form-actions.form-wrapper {
+		position: relative;
+		display: inline-block;
+		padding-right: 20px;
+		
+	}
+	.form-submit {
+		background-color: $violet-dark;
+		margin-right: 0px;
+		display: inline-block;
+		border: 0px;
+		font-size: 22px;
+		line-height: 35px;
+		padding: 0 8px;
+		color: $orange;
+		cursor: pointer;
+		float:right;
+	}
+
+}
+.user-login-form{
+	.form-item  {
+		position: relative;
+		display: inline-block;
+		padding-right: 20px;
+		
+	}
+	.form-submit {
+		background-color: $violet-dark;
+		margin-right: 0px;
+		display: inline-block;
+		border: 0px;
+		font-size: 22px;
+		line-height: 35px;
+		padding: 0 8px;
+		color: $orange;
+		cursor: pointer;
+		float:left;
+		
+
+	}
+	@include breakpoint($tablet-layout) {
+		.form-submit {
+			float:none;
+			position: absolute;
+	    top: 25px;
+	    left: 400px;
+		}
+	}
+	ul {
+		padding-left: 0px;
+		li{
+			padding-left:0px;
+			@include fontello-icon('') {
+				display:none;
+			}
+		}
+	}
+
+}
+//Submit btn on the page :: licensed-resources/alphabetically
+.l-content .view #edit-submit {
+	width: 36px;
+  height: 36px;
+  text-indent: -9999px;
+  background: $dark-cyan url(../images/icon-search-35x35.png) 1px 2px no-repeat; /* path to your image */
+  border: none;
+  margin: 0 0 0 0px;
+  padding: 14px;
+  color: transparent;
+  text-transform: capitalize;  /* This is the IE hack :P  */
+}
+.not-front .search-form{
+	margin-bottom:20px;
+}

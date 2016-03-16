@@ -1,0 +1,7 @@
+name = Drupal wrapper for http://csv.thephpleague.com/
+description = Provides the League\Csv Composer package as a Drupal module.
+package = Libraries
+core = 7.x
+php = 5.4
+
+dependencies[] = libraries (>=7.x-2.2)
