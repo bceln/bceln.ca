@@ -228,6 +228,9 @@ p {
     font-weight: 900;
     font-size: 18px; }
 
+.l-content .field--name-body .field__item h3, .l-content .field--name-body .field__items h3 {
+  margin-bottom: 15px !important; }
+
 .l-content .field__item h3, .l-content .field__items h3 {
   margin-bottom: 3px !important; }
   .l-content .field__item h3 a, .l-content .field__items h3 a {
