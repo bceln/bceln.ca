@@ -148,6 +148,16 @@ new blockHeightAdjust();
 	Drupal.behaviors.subscriberDetailsHide = {
 		attach: function (context, settings) {
 			if(isEmpty($('.group-subscriber-details .field-group-format-wrapper'))){
+				console.log('found1');
+				$('.collapsible.group-subscriber-details ').hide();
+			}
+		}
+	};
+	Drupal.behaviors.termDetailsHide = {
+		attach: function (context, settings) {
+			if(isEmpty($('.group-licence  .field-group-format-wrapper'))){
+				console.log('found2');
+				
 				$('.collapsible.group-subscriber-details ').hide();
 			}
 		}
