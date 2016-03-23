@@ -329,11 +329,130 @@ ul.dropdown {
 	    font-weight: 500;
 	 }
 } 
-//firefox only code 
-@-moz-document url-prefix() { 
-	#search-form .form-item-keys::after {
-			right:auto;
-	    left: 172px;
-	    top: 40px;
+//@-moz-document url-prefix() {
+//	#search-form{
+//		.form-item-keys{
+//			position:relative;
+//			cursor: pointer;
+//			@include fontello-icon('\e801','after') {
+//		    background: $dark-cyan;
+//				cursor: pointer;
+//				color: $white;
+//				font-size: 20px;
+//				position: absolute;
+//				padding-top:2px;
+//				width:41px;
+//				padding:8px;
+//				left: 171px;
+//				line-height:34px;
+//				z-index: 1;
+//			}
+//			#edit-keys{
+//		    display: inline-block;
+//		    font-size: 22px;
+//		    line-height: 35px;
+//		    padding: 0 8px 1px 3px;
+//		    width: 165px;
+//			}
+//		}
+//		#edit-submit{
+//			border: none;
+//			background: transparent;
+//			cursor: pointer;
+//			overflow: hidden;
+//			text-indent: -9999px;
+//			width: 50px;
+//			padding:8px 0 9px;
+//			position:absolute;
+//			z-index:2;
+//		}
+//	}
+//
+//}
+
+
+
+#search-form{
+	.form-item-keys{
+		position:relative;
+		cursor: pointer;
+		display:inline-block;
+		label {
+			@include fontello-icon('\e801','after') {
+				display:inline-block;
+		    background: $dark-cyan;
+				cursor: pointer;
+				color: $white;
+				font-size: 20px;				
+				position: absolute;
+				
+				padding:8px;
+				bottom: 0px;
+				left:172px;
+				z-index: 1;
+			}
+		}
+
+	}
+	#edit-submit{
+		border: none;
+		background: transparent;
+		cursor: pointer;
+		overflow: hidden;
+		text-indent: -9999px;
+		width: 29px;
+		padding:14px 0px 9px 0px;
+		position:relative;
+		z-index:2;
 	}
 }
+
+//@-moz-document url-prefix() {
+//	#search-form{
+//		.form-item-keys{
+//			position:relative;
+//			cursor: pointer;
+//			input{
+//				display:block !important;
+//				position:relative;
+//				@include fontello-icon('\e801','after') {
+//			    background: $dark-cyan;
+//					cursor: pointer;
+//					color: $white;
+//					font-size: 20px;
+//					position: absolute;
+//					padding-top:2px;
+//					width:41px;
+//					padding:8px;
+//					left: 171px;
+//					line-height:34px;
+//					z-index: 1;
+//				}
+//			}
+//
+//			#edit-keys{
+//		    display: inline-block;
+//		    font-size: 22px;
+//		    line-height: 35px;
+//		    padding: 0 8px 1px 3px;
+//		    width: 165px;
+//			}
+//		}
+//		#edit-submit{
+//			border: none;
+//			background: transparent;
+//			cursor: pointer;
+//			overflow: hidden;
+//			text-indent: -9999px;
+//			width: 50px;
+//			padding:8px 0 9px;
+//			position:absolute;
+//			z-index:2;
+//		}
+//	}
+//
+//}
+
+
+
+
