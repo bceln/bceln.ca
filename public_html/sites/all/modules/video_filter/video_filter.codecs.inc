@@ -60,6 +60,15 @@ function video_filter_codec_info() {
     'control_bar_height' => 0,
   );
 
+  $codecs['coub'] = array(
+    'name' => t('Coub'),
+    'sample_url' => 'http://coub.com/view/b7ghv',
+    'callback' => 'video_filter_coub',
+    'html5_callback' => 'video_filter_coub',
+    'regexp' => '/coub\.com\/view\/([a-z0-9]+)/i',
+    'ratio' => 4 / 3,
+  );
+
   $codecs['dailymotion'] = array(
     'name' => t('DailyMotion'),
     'sample_url' => 'http://www.dailymotion.com/video/some_video_title',
@@ -106,6 +115,16 @@ function video_filter_codec_info() {
     'control_bar_height' => 0,
   );
 
+  $codecs['foxnews'] = array(
+    'name' => t('Fox News'),
+    'sample_url' => 'http://video.foxnews.com/v/123456/the-title/',
+    'callback' => 'video_filter_foxnews',
+    'html5_callback' => 'video_filter_foxnews',
+    'regexp' => '/video\.foxnews\.com\/v\/([0-9]+)\/([a-zA-Z0-9\-]+)/i',
+    'ratio' => 466 / 263,
+    'control_bar_height' => 0,
+  );
+
   $codecs['gametrailers'] = array(
     'name' => t('Game Trailers'),
     'sample_url' => 'http://www.gametrailers.com/video/some-title/12345',
@@ -123,6 +142,15 @@ function video_filter_codec_info() {
     'callback' => 'video_filter_gamevideos',
     'regexp' => '/gamevideos\.1up\.com\/video\/id\/([0-9]+)/',
     'ratio' => 500 / 319,
+  );
+
+  $codecs['giphy'] = array(
+    'name' => t('Giphy'),
+    'sample_url' => 'http://giphy.com/gifs/disney-kids-peter-pan-[gif-id]',
+    'callback' => 'video_filter_giphy',
+    'html5_callback' => 'video_filter_giphy',
+    'regexp' => '/giphy\.com\/gifs\/(([a-zA-Z0-9\-]+)\-|)([a-zA-Z0-9]+)/i',
+    'ratio' => 16 / 9,
   );
 
   $codecs['godtube'] = array(
@@ -160,6 +188,16 @@ function video_filter_codec_info() {
     'regexp' => '/metacafe\.com\/watch\/([a-z0-9\-_]+)\/([a-z0-9\-_]+)/i',
     'ratio' => 400 / 313,
     'control_bar_height' => 32,
+  );
+
+  $codecs['mailru'] = array(
+    'name' => t('Mail.Ru'),
+    'sample_url' => 'https://my.mail.ru/v/semenikhin_denis/video/_groupvideo/[video-id].html',
+    'callback' => 'video_filter_mailru',
+    'html5_callback' => 'video_filter_mailru',
+    'regexp' => '/my\.mail\.ru\/v\/(.*)\/([0-9]+)\.html/i',
+    'ratio' => 16 / 9,
+    'control_bar_height' => 0,
   );
 
   $codecs['myspace'] = array(
@@ -203,6 +241,17 @@ function video_filter_codec_info() {
     'ratio' => 800 / 600,
   );
 
+  $codecs['rutube'] = array(
+    'name' => t('Rutube'),
+    'sample_url' => 'http://rutube.ru/video/c80617086143e80ee08f760a2e9cbf43/?pl_type=source&pl_id=8188',
+    'html5_callback' => 'video_filter_rutube',
+    'callback' => 'video_filter_rutube',
+    'regexp' => array(
+      '/rutube\.ru\/(.*)/i',
+    ),
+    'ratio' => 16 / 9,
+  );
+
   $codecs['slideshare'] = array(
     'name' => t('Slideshare'),
     'sample_url' => 'http://slideshare.net/1759622',
@@ -233,6 +282,7 @@ function video_filter_codec_info() {
 
   $codecs['ted'] = array(
     'name' => t('TED'),
+    'sample_url' => 'https://www.ted.com/talks/[story-title]',
     'instructions' => t('Click in Embed and copy the "Link to this talk" link and paste here.'),
     'callback' => 'video_filter_ted',
     'html5_callback' => 'video_filter_ted',
@@ -326,7 +376,7 @@ function video_filter_codec_info() {
       '/youtube\.com\/embed\/([a-z0-9\-_]+)/i',
     ),
     'ratio' => 16 / 9,
-    'control_bar_height' => 25,
+    'control_bar_height' => 0,
   );
 
   $codecs['youtube_playlist'] = array(
@@ -337,7 +387,7 @@ function video_filter_codec_info() {
       '/youtube\.com\/playlist\?list=([a-z0-9\-_]+)/i',
     ),
     'ratio' => 16 / 9,
-    'control_bar_height' => 25,
+    'control_bar_height' => 0,
   );
 
   return $codecs;
@@ -451,6 +501,23 @@ function video_filter_collegehumor($video) {
 }
 
 /**
+ * HTML5 callback for Coub codec.
+ *
+ * @see video_filter_codec_info()
+ */
+function video_filter_coub($video) {
+  $attributes = array(
+    'autostart' => !empty($video['autoplay']) ? 'autoplay=true' : 'autoplay=false',
+    'originalSize' => !empty($video['originalSize']) ? 'originalSize=true' : 'originalSize=false',
+    'startWithHD' => !empty($video['startWithHD']) ? 'startWithHD=true' : 'startWithHD=false',
+    'muted' => !empty($video['muted']) ? 'muted=true' : 'muted=false',
+  );
+  $video['source'] = '//coub.com/embed/' . $video['codec']['matches'][1] . '?' . implode('&', $attributes);
+
+  return video_filter_iframe($video);
+}
+
+/**
  * Callback for DailyMotion codec.
  *
  * @see video_filter_codec_info()
@@ -553,6 +620,17 @@ function video_filter_flickr_video($video) {
 }
 
 /**
+ * Callback for Fox News codec.
+ *
+ * @see video_filter_codec_info()
+ */
+function video_filter_foxnews($video) {
+  $video_id = $video['codec']['matches'][1];
+  $html = '<script type="text/javascript" src="http://video.foxnews.com/v/embed.js?id=' . $video_id . '&w=' . $video['width'] . '&h=' . $video['height'] . '"></script>';
+  return $html;
+}
+
+/**
  * Callback for Game Trailers codec.
  *
  * @see video_filter_codec_info()
@@ -578,6 +656,17 @@ function video_filter_gamevideos($video) {
   $video['source'] = '//gamevideos.1up.com/swf/gamevideos12.swf?embedded=1&amp;fullscreen=1&amp;autoplay=0&amp;src=http://gamevideos.1up.com/do/videoListXML%3Fid%3D' . $video['codec']['matches'][1];
 
   return video_filter_flash($video);
+}
+
+/**
+ * Callback for Giphy codec.
+ *
+ * @see video_filter_codec_info()
+ */
+function video_filter_giphy($video) {
+  $video['source'] = '//giphy.com/embed/' . $video['codec']['matches'][3];
+
+  return video_filter_iframe($video);
 }
 
 /**
@@ -608,7 +697,35 @@ function video_filter_google($video) {
  * @see video_filter_codec_info()
  */
 function video_filter_instagram($video) {
-  $video['source'] = '//www.instagram.com/p/' . $video['codec']['matches'][1] . '/embed';
+  $html = &drupal_static(__FUNCTION__);
+  $id = $video['codec']['matches'][1];
+  if ($cache = cache_get('video_filter_instagram:' . $id)) {
+    $html = $cache->data;
+  }
+  else {
+    $endpoint = 'https://api.instagram.com/oembed';
+    $options = array(
+      'url' => 'http://instagr.am/p/' . $id,
+    );
+    $data = video_filter_oembed_request($endpoint, $options);
+    if (!empty($data['html'])) {
+      $html = $data['html'];
+    } 
+    cache_set('video_filter_instagram:' . $id, $html, 'cache');
+  }
+  return $html;
+}
+
+/**
+ * Callback for Mail.Ru codec.
+ *
+ * @see video_filter_codec_info()
+ */
+function video_filter_mailru($video) {
+  $attributes = array(
+    'autoplay' => !empty($video['autoplay']) ? 'autoplay=' . (int) $video['autoplay'] : '',
+  );
+  $video['source'] = 'https://videoapi.my.mail.ru/videos/embed/v/' . $video['codec']['matches'][1] . '/' . $video['codec']['matches'][2] . '.html?' . implode('&', $attributes);
   return video_filter_iframe($video);
 }
 
@@ -660,6 +777,32 @@ function video_filter_picasa_slideshows($video) {
   $params['flashvars'] = "host=picasaweb.google.com&amp;&amp;feat=flashalbum&amp;RGB=0x000000&amp;feed=http%3A%2F%2Fpicasaweb.google.com%2Fdata%2Ffeed%2Fapi%2Fuser%2F" . $user_name . "%2Falbumid%2F" . $set_id . "%3Falt%3Drss%26kind%3Dphoto%26" . ($video['autoplay'] ? '' : '&amp;noautoplay=1');
 
   return video_filter_flash($video, $params);
+}
+
+/**
+ * Callback for Rutube codec.
+ *
+ * @see video_filter_codec_info()
+ */
+function video_filter_rutube($video) {
+  $attributes = array(
+    'skinColor' => (isset($video['skinColor']) && !empty($video['standardColor'])) ? 'skinColor=' . (string) $video['skinColor'] : '',
+    'sTitle' => (isset($video['sTitle']) && $video['sTitle'] == 1) ? 'sTitle=true' : 'sTitle=false',
+    'sAuthor' => (isset($video['sAuthor']) && $video['sAuthor'] == 1) ? 'sAuthor=true' : 'sAuthor=false',
+    'bmstart' => (isset($video['bmstart']) && $video['bmstart'] > 1) ? 'bmstart=' . (int) $video['bmstart'] : 'bmstart=false',
+  );
+  $endpoint = 'http://rutube.ru/api/oembed';
+  $options = array(
+    'url' => $video['source'],
+    'format' => 'json',
+  );
+  $data = video_filter_oembed_request($endpoint, $options);
+  if (!empty($data['html'])) {
+    if (preg_match('/src="([^"]+)"/', $data['html'], $match)) {
+      $video['source'] = $match[1] . '?' . implode('&', $attributes);
+      return video_filter_iframe($video);
+    }
+  }
 }
 
 /**

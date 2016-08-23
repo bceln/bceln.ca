@@ -145,21 +145,21 @@ new blockHeightAdjust();
 }
 	}
 	};
-	Drupal.behaviors.subscriberDetailsHide = {
-		attach: function (context, settings) {
-			if(isEmpty($('.group-subscriber-details .field-group-format-wrapper'))){
-				console.log('found1');
-				$('.collapsible.group-subscriber-details ').hide();
-			}
-		}
-	};
-	Drupal.behaviors.termDetailsHide = {
-		attach: function (context, settings) {
-			if(isEmpty($('.group-licence  .field-group-format-wrapper'))){
-				console.log('found2');
-				
-				$('.collapsible.group-subscriber-details ').hide();
-			}
-		}
-	}
+
+  Drupal.behaviors.termDetailsHide = {
+    attach: function (context, settings) {
+            if($('.group-licence  .field-group-format-wrapper').html() === ''){
+              $('.collapsible.group-subscriber-details ').hide();
+            }
+						if(($('.group-subscriber-details .field-group-format-wrapper').html() === '')){
+							$('.collapsible.group-subscriber-details ').hide();
+						}
+						if($('.section-offers-renewals .group-subscriber-details .view-organizations .views-row-1').length > 0){
+							if(isEmpty($('.section-offers-renewals .group-subscriber-details .view-organizations .views-row-1'))){
+								console.log('here');
+								$('.collapsible.group-subscriber-details ').hide();
+							}
+						}
+    }
+  }
 })(jQuery);
