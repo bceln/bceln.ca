@@ -71,11 +71,15 @@ function views_revisions_form_alter(&$form, &$form_state, $form_id) {
  */
 function views_revisions_form_submit($form, &$form_state) {
   global $user;
+  if (!isset($form_state['view']->vid) || empty($form_state['view']->vid)) {
+    drupal_set_message(t('There was no vid on the View, so a revision could not be created this time.'), 'warning');
+    return;
+  }
   $revision = $form_state['values']['actions']['views_revisions_revision'];
   if ($revision) {
     $log = $form_state['values']['actions']['views_revisions_log'];
-    $ctools_export_object = ctools_export_load_object('views_view', 'names', array($form_state['view']->name));
-    $data = views_export_view($ctools_export_object[$form_state['view']->name]);
+    $view = views_get_view($form_state['view']->name);
+    $data = views_export_view($view);
     $vrvid = db_insert('views_revisions')->fields(
       array(
         'vid' => $form_state['view']->vid,
@@ -181,3 +185,14 @@ function views_revisions_revision_page($vrvid) {
   return $html;
 }
 
+/**
+ * Implements hook_views_ui_display_top_links_alter().
+ *
+ * Add a views revision link to the views ui top links.
+ */
+function views_revisions_views_ui_display_top_links_alter(&$links, $view, $display_id) {
+  $links['revisions'] = array(
+    'title' => t('view revisions'),
+    'href' => 'admin/structure/views/revisions/' . $view->name,
+  );
+}

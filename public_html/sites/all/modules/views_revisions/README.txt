@@ -17,7 +17,7 @@ When a revision is created, it takes a snapshot of the View BEFORE the changes
 are saved, allowing you to easily roll back to older versions if necessary.
 
 After revisions have been created, click the 'Views Revisions' link located on
-the Views UI to see a list of revisions for that View, for example:
+the Views UI drop down menu to see a list of revisions for that View, for example:
 
   Front Page Views UI:            admin/structure/views/view/frontpage/edit
   Front Page Views Revisions:     admin/structure/views/revisions/frontpage
