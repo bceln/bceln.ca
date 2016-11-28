@@ -7,9 +7,9 @@ dependencies[] = entity
 
 files[] = view_mode_page.test
 
-; Information added by Drupal.org packaging script on 2015-01-23
-version = "7.x-2.4"
+; Information added by Drupal.org packaging script on 2016-10-14
+version = "7.x-2.5"
 core = "7.x"
 project = "view_mode_page"
-datestamp = "1422029583"
+datestamp = "1476462368"
 
